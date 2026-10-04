@@ -33,13 +33,13 @@ async def quests(user: CurrentLearner, db: DbDep, lang: RequestLanguage) -> C.Qu
 
 @router.get("/me/concepts", response_model=C.EXPORTED["ConceptPage"])
 async def concepts(user: CurrentLearner, db: DbDep, lang: RequestLanguage,
-                   cursor: str | None = None, limit: int = 30) -> Any:
+                   cursor: str | None = None, limit: int = profile.PAGE_DEFAULT) -> Any:
     return await profile.concepts(db, user, lang, cursor, limit)
 
 
 @router.get("/glossary", response_model=C.EXPORTED["GlossaryPage"])
 async def glossary(user: CurrentLearner, db: DbDep, lang: RequestLanguage, state: str = "all",
-                   cursor: str | None = None, limit: int = 30) -> Any:
+                   cursor: str | None = None, limit: int = profile.PAGE_DEFAULT) -> Any:
     return await terms.page(db, user, lang, state, cursor, limit)
 
 

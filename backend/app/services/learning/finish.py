@@ -26,7 +26,7 @@ from app.models import (
     User,
 )
 from app.services.adaptive import planner
-from app.services.learning import adaptation, grading, progress, spaced, xp
+from app.services.learning import adaptation, finish_events, grading, progress, spaced, xp
 from app.services.learning.journey import load_view
 from app.services.learning.locking import learner_lock
 from app.services.learning.sessions import SessionIntegrityError
@@ -166,7 +166,7 @@ async def finish(db: AsyncSession, user: User, session_id: str, body: Any) -> di
             "next_step": step.model_dump(mode="json")}).model_dump(mode="json")
         session.status, session.finished_at = "finished", now
         session.duration_ms, session.result_snapshot = duration, result
-        await enqueue(db, event_key=f"session:{session.id}:finished", kind="session.finished",
+        await enqueue(db, event_key=f"session:{session.id}:finished", kind=finish_events.KIND,
                       payload={"session_id": session.id, "user_id": user.id})
         await db.flush()
         return dict(result)

@@ -38,8 +38,8 @@ def give_learner_data(url: str, user_id: str) -> None:
         ("INSERT INTO quests (user_id, local_date, slot, kind, goal, reward_xp) "
          "VALUES ($1, current_date, 1, 'earn_xp', 30, 10)", (user_id,)),
         ("INSERT INTO sessions (id, user_id, kind, mode, feedback_mode, language, variant, items_snapshot, "
-         "served_exercises, contract_revision) VALUES ($2, $1, 'review', 'cards', 'immediate', 'ar', 'explorer', "
-         "'{}', '[]', 10)", (user_id, f"ses_{user_id[4:]}")),
+         "learning_snapshot, served_exercises, contract_revision) VALUES ($2, $1, 'review', 'cards', 'immediate', "
+         "'ar', 'explorer', '{}', '{}', '[]', 10)", (user_id, f"ses_{user_id[4:]}")),
         ("INSERT INTO recitation_checks (id, user_id, surah, ayah, checked_text_sha256, status, passed, words, "
          "summary) VALUES ($2, $1, 1, 1, $3, 'unclear', false, '[]', '{}')",
          (user_id, f"rchk_{user_id[4:]}", "0" * 64)),

@@ -56,6 +56,7 @@ py -3.12 scripts\dev\install_git_hooks.py              # pre-commit public-safet
 | Seed the curriculum structure | `uv run python scripts/seed.py` (units, lesson slots, concept graph; safe to re-run, refuses destructive changes) |
 | Load the contract test curriculum (dev/test DB only) | `uv run python scripts/seed.py --test-curriculum` (publishes the synthetic test lessons through the real pipeline; refused outside dev/test) |
 | Create or re-key a reviewer | `uv run python scripts/create_reviewer.py --email reviewer@example.org --name "Reviewer"` (prompts for the password) |
+| Before `alembic upgrade` past 0003 on a database with old active sessions | `uv run python scripts/abandon_legacy_sessions.py` lists them; add `--confirm` to abandon them (migration 0004 refuses to run otherwise) |
 | After restoring a backup | `uv run python scripts/repurge_deleted_users.py` (purges every deleted account again, before reopening traffic) |
 
 ## What belongs in the repository (D-19)

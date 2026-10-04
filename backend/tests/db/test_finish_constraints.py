@@ -1,13 +1,13 @@
 """Finish-time durability is enforced by PostgreSQL, including cross-session reward claims."""
 
-import pytest
-from sqlalchemy.ext.asyncio import AsyncConnection, AsyncSession
+from datetime import UTC, datetime
 
-from app.models import User
-from app.services.learning import finish
-from app.services.learning.sessions import SessionIntegrityError
+import pytest
+from sqlalchemy.exc import DBAPIError
+from sqlalchemy.ext.asyncio import AsyncConnection
+
 from tests.db import factories as f
-from tests.support.db import SESSION_GUARD, UNIQUE_VIOLATION, expect_sqlstate, run
+from tests.support.db import CHECK_VIOLATION, SESSION_GUARD, UNIQUE_VIOLATION, expect_sqlstate, run, sqlstate
 
 pytestmark = pytest.mark.integration
 
@@ -27,11 +27,14 @@ async def test_private_start_snapshot_cannot_be_rewritten(conn: AsyncConnection)
                           "UPDATE sessions SET learning_snapshot='{}'::jsonb WHERE id=:id", {"id": sid})
 
 
-async def test_legacy_start_state_is_rejected_without_guessing_or_effects(conn: AsyncConnection) -> None:
+async def test_an_active_session_always_has_its_learning_snapshot(conn: AsyncConnection) -> None:
+    # D-76: a snapshot-less active session could never finish truthfully, so the database refuses it;
+    # finished or abandoned rows without one (history from before migration 0003) remain valid.
     state = await f.learning_slice(conn)
-    async with AsyncSession(bind=conn, join_transaction_mode="create_savepoint") as db:
-        with pytest.raises(SessionIntegrityError, match="authoritative"):
-            await finish.finish(db, User(id=state["user_id"]), state["session_id"], {"duration_ms": 0})
-    status = await run(conn, "SELECT status FROM sessions WHERE id=:id", {"id": state["session_id"]})
-    assert status.scalar() == "active"
-    assert (await run(conn, "SELECT count(*) FROM xp_events")).scalar() == 0
+    args = (conn, state["user_id"], state["lesson_id"], state["unit_id"], state["lesson_version_id"])
+    with pytest.raises(DBAPIError) as exc:
+        async with conn.begin_nested():
+            await f.lesson_session(*args, learning_snapshot=None, id="ses_legacy_active")
+    assert sqlstate(exc.value) == CHECK_VIOLATION
+    await f.lesson_session(*args, learning_snapshot=None, status="abandoned",
+                           abandoned_at=datetime(2026, 10, 4, 9, tzinfo=UTC))

@@ -98,6 +98,7 @@ async def lesson_session(conn: AsyncConnection, user_id: str, lesson_id: str, un
     values = {"id": new_id("ses"), "user_id": user_id, "kind": "lesson", "lesson_id": lesson_id,
               "lesson_version_id": lv_id, "unit_id": unit_id, "feedback_mode": "immediate", "language": "en",
               "variant": "explorer", "items_snapshot": {"items": []}, "served_exercises": [],
+              "learning_snapshot": {"mastery": {}, "due": {}, "term_concepts": {}},
               "contract_revision": 10, **overrides}
     return str(await _insert(conn, "sessions", values))
 

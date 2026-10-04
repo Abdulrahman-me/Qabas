@@ -58,8 +58,8 @@ async def test_one_active_session_per_key(conn: AsyncConnection) -> None:
     s = await f.learning_slice(conn)
     await expect_sqlstate(conn, UNIQUE_VIOLATION, """
         INSERT INTO sessions (id, user_id, kind, lesson_id, lesson_version_id, unit_id, feedback_mode, language,
-                              variant, items_snapshot, served_exercises, contract_revision)
-        VALUES (:id, :u, 'lesson', :l, :lv, :unit, 'immediate', 'ar', 'explorer', '{}', '[]', 10)""",
+                              variant, items_snapshot, learning_snapshot, served_exercises, contract_revision)
+        VALUES (:id, :u, 'lesson', :l, :lv, :unit, 'immediate', 'ar', 'explorer', '{}', '{}', '[]', 10)""",
         {"id": new_id("ses"), "u": s["user_id"], "l": s["lesson_id"], "lv": s["lesson_version_id"],
          "unit": s["unit_id"]})
 
@@ -67,8 +67,8 @@ async def test_one_active_session_per_key(conn: AsyncConnection) -> None:
 async def test_review_modes_and_finished_sessions_do_not_collide(conn: AsyncConnection) -> None:
     user_id = await f.user(conn)
     review = """INSERT INTO sessions (id, user_id, kind, mode, feedback_mode, language, variant, items_snapshot,
-                                      served_exercises, contract_revision)
-                VALUES (:id, :u, 'review', :mode, 'immediate', 'en', 'explorer', '{}', '[]', 10)"""
+                                      learning_snapshot, served_exercises, contract_revision)
+                VALUES (:id, :u, 'review', :mode, 'immediate', 'en', 'explorer', '{}', '{}', '[]', 10)"""
     first = new_id("ses")
     await run(conn, review, {"id": first, "u": user_id, "mode": "cards"})
     await run(conn, review, {"id": new_id("ses"), "u": user_id, "mode": "quick"})  # other mode: allowed
@@ -119,8 +119,8 @@ async def test_session_kind_rules(conn: AsyncConnection) -> None:
     s = await f.learning_slice(conn)
     base = {"id": new_id("ses"), "u": s["user_id"], "unit": s["unit_id"]}
     insert = """INSERT INTO sessions (id, user_id, kind, mode, unit_id, feedback_mode, language, variant,
-                                      items_snapshot, served_exercises, contract_revision)
-                VALUES (:id, :u, :kind, :mode, :unit, :fb, 'en', 'explorer', '{}', '[]', 10)"""
+                                      items_snapshot, learning_snapshot, served_exercises, contract_revision)
+                VALUES (:id, :u, :kind, :mode, :unit, :fb, 'en', 'explorer', '{}', '{}', '[]', 10)"""
     await expect_sqlstate(conn, CHECK_VIOLATION, insert, {**base, "kind": "pretest", "mode": None, "fb": "end"})
     await expect_sqlstate(conn, CHECK_VIOLATION, insert, {**base, "kind": "pretest", "mode": "quick", "fb": "none"})
     await expect_sqlstate(conn, CHECK_VIOLATION, insert, {**base, "kind": "review", "mode": None, "fb": "immediate"})

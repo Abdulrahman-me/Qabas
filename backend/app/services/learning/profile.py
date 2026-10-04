@@ -29,10 +29,15 @@ def invalid(field: str) -> ApiError:
     return ApiError(ErrorCode.validation_error, "Invalid query parameter.", {"field": field})
 
 
-def page_args(cursor: str | None, limit: int) -> None:
-    if not 1 <= limit <= 100:
+PAGE_DEFAULT = 20   # API §3.5: limit defaults to 20 ...
+PAGE_MAX = 50       # ... and is at most 50
+
+
+def page_args(cursor: str | None, limit: int, prefix: str) -> None:
+    """Validate list parameters (API §3.5). Cursors are the last item's id, opaque to clients."""
+    if not 1 <= limit <= PAGE_MAX:
         raise invalid("limit")
-    if cursor is not None and (len(cursor) > 200 or not cursor.startswith(("con_", "term_"))):
+    if cursor is not None and (len(cursor) > 200 or not cursor.startswith(prefix)):
         raise invalid("cursor")
 
 
@@ -83,7 +88,7 @@ async def activity(db: AsyncSession, user: User, from_: str | None, to: str | No
 
 
 async def concepts(db: AsyncSession, user: User, lang: str, cursor: str | None, limit: int) -> Any:
-    page_args(cursor, limit)
+    page_args(cursor, limit, "con_")
     query = select(Concept, LearnerConcept).join(LearnerConcept, LearnerConcept.concept_id == Concept.id).where(
         LearnerConcept.user_id == user.id)
     if cursor:

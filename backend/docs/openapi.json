@@ -15738,7 +15738,7 @@
       "name": "limit",
       "required": false,
       "schema": {
-       "default": 30,
+       "default": 20,
        "title": "Limit",
        "type": "integer"
       }
@@ -16188,7 +16188,7 @@
       "name": "limit",
       "required": false,
       "schema": {
-       "default": 30,
+       "default": 20,
        "title": "Limit",
        "type": "integer"
       }

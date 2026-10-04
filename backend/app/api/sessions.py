@@ -62,7 +62,9 @@ FINISH_BODY = {"requestBody": {"required": True, "content": {"application/json":
 
 
 @router.post("/{session_id}/finish", response_model=C.SessionResult, openapi_extra=FINISH_BODY)
-async def finish_session(session_id: str, request: Request, user: CurrentLearner, db: DbDep) -> Any:
+async def finish_session(session_id: str, request: Request, user: CurrentLearner, db: DbDep, redis: RedisDep,
+                         settings: SettingsDep) -> Any:
+    await RateLimiter(redis, settings).hit("session_answer", user.id)  # answers and finish share 120/min (§5.1)
     try:
         body = json.loads(await request.body())
     except (json.JSONDecodeError, UnicodeDecodeError):

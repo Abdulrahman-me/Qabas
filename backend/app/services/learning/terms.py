@@ -11,6 +11,7 @@ from decimal import Decimal
 from typing import Any
 
 from sqlalchemy import func, select
+from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.content import catalog
@@ -68,7 +69,7 @@ async def get_card(db: AsyncSession, user: User, term_id: str, lang: str) -> C.T
 
 
 async def page(db: AsyncSession, user: User, lang: str, state: str, cursor: str | None, limit: int) -> Any:
-    profile.page_args(cursor, limit)
+    profile.page_args(cursor, limit, "term_")
     if state not in ("all", "new", "learning", "mastered"):
         raise profile.invalid("state")
     # Personal glossary contains only encountered terms; explicit new is a valid empty filter.
@@ -85,8 +86,6 @@ async def page(db: AsyncSession, user: User, lang: str, state: str, cursor: str 
 
 
 async def opened(db: AsyncSession, user: User, term_id: str) -> None:
-    from sqlalchemy.dialects.postgresql import insert
-
     async with db.begin():
         if await db.get(Term, term_id) is None:
             raise ApiError(ErrorCode.not_found, "Term was not found.")

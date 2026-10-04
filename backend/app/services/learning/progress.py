@@ -16,12 +16,23 @@ from app.services.learning import xp
 POOL = ("earn_xp", "complete_lessons", "perfect_lesson", "complete_review", "win_challenge", "recite_verse")
 TITLES = {
     "earn_xp": {"ar": "اجمع {goal} جمرة", "en": "Earn {goal} XP"},
-    "complete_lessons": {"ar": "أكمل {goal} من الدروس", "en": "Complete {goal} lessons"},
+    "complete_lessons": {"ar": "أكمل {goal} دروس", "en": "Complete {goal} lessons"},
     "perfect_lesson": {"ar": "أنهِ درساً دون أخطاء", "en": "Finish a lesson without mistakes"},
     "complete_review": {"ar": "أكمل مراجعة", "en": "Complete a review"},
     "win_challenge": {"ar": "فُز بتحدٍ", "en": "Win a challenge"},
     "recite_verse": {"ar": "تدرّب على تلاوة آية", "en": "Recite a verse"},
 }
+
+
+# Goals of one and two read naturally rather than as numerals (API §6.2 example: «أكمل درسين»).
+COUNTED = {("complete_lessons", 1): {"ar": "أكمل درساً", "en": "Complete a lesson"},
+           ("complete_lessons", 2): {"ar": "أكمل درسين", "en": "Complete 2 lessons"}}
+
+
+def quest_title(kind: str, goal: int, lang: str) -> str:
+    """Localized quest title (backend §10.6 templates), agreeing with its number in Arabic and English."""
+    counted = COUNTED.get((kind, goal))
+    return counted[lang] if counted else TITLES[kind][lang].format(goal=goal)
 
 
 async def quests(db: AsyncSession, user: User, day: date) -> list[Quest]:
@@ -99,6 +110,6 @@ async def quest_response(db: AsyncSession, user: User, lang: str, now: datetime)
     resets = max(0, int((midnight.astimezone(UTC) - now).total_seconds()))
     return C.Quests(date=day.isoformat(), resets_in_seconds=resets,
                     items=[C.Quest(quest_id=f"q_{day:%Y%m%d}_{r.slot}", kind=r.kind,
-                                   title=TITLES[r.kind][lang].format(goal=r.goal), progress=r.progress,
+                                   title=quest_title(r.kind, r.goal, lang), progress=r.progress,
                                    goal=r.goal, reward_xp=r.reward_xp, completed=r.completed_at is not None)
                            for r in rows])

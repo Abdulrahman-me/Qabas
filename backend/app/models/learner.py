@@ -155,6 +155,9 @@ class LearningSession(Base):
         CheckConstraint("(status = 'finished') = (finished_at IS NOT NULL AND result_snapshot IS NOT NULL)",
                         name="finished_has_result"),
         CheckConstraint("(status = 'abandoned') = (abandoned_at IS NOT NULL)", name="abandoned_recorded"),
+        # Finish reports from the private start snapshot; an active session without one could never finish
+        # truthfully (migration 0004, decision D-76).
+        CheckConstraint("status <> 'active' OR learning_snapshot IS NOT NULL", name="active_has_learning_snapshot"),
         CheckConstraint("status = 'finished' OR (finished_at IS NULL AND result_snapshot IS NULL "
                         "AND duration_ms IS NULL)", name="result_only_when_finished"),
         CheckConstraint("duration_ms IS NULL OR duration_ms >= 0", name="duration_non_negative"),
