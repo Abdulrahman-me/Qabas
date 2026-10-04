@@ -19,7 +19,7 @@
 | 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | ✅ Done | `phase-3` | CI green (218 passed) |
 | 4 | Content storage, registries, projection and seeding | ✅ Done | `phase-4` | CI green (313 passed); conflict D-38 resolved |
 | 5 | Journey, lessons and session creation | ✅ Done | `phase-5` | CI green (393 passed); planner complete (D-44, D-45) |
-| 6 | Answers: replay-first, evaluators, per-answer adaptation | 🔄 In progress | `phase-6` | 524 passed locally; CI pending |
+| 6 | Answers: replay-first, evaluators, per-answer adaptation | ✅ Done | `phase-6` | CI green (525 passed); 86/86 contract evaluations |
 | 7 | Finish transaction, FSRS, planner, reviews, glossary, stats | ⏳ Not started | `phase-7` | **Milestone A: durable learning slice** |
 | 8 | Content import (Salah reference, Unit 0 drafts), approval-gated publish, staging | ⏳ Not started | `phase-8` | |
 | 9 | Source adapters (tool layer) | ⏳ Not started | `phase-9` | |
@@ -268,7 +268,7 @@ Re-review of BACKEND §6–7, API §3.2/§3.4/§5.9/§6.3–6.5, DATA_MODEL inva
 
 **Tests:** `tests/learning/test_grading.py` (112: all contract evaluation contexts, negatives, categorize reasons, timeouts, identity parsing), `test_answers.py` (15: every lesson type through real sessions equal to the contract evaluations, exact six-decimal mastery across 40 answers, neutral outcomes, retry rules, wrong retry never lowers mastery, authored order, replay with same/changed/malformed bodies, finished/abandoned, ownership/unserved/invalid bodies, assessments recorded without revealing (half-weight pretest), flashcard ratings, quick-review timeouts, four concurrent duplicates → one row, two devices racing the retry, half-up display), `test_misconceptions_and_recitation.py` (4: activation/re-show/resolution/reactivation, retries untouched, recitation binding mismatches, XP once, failed and skipped recitations), plus the untimed-items validation test.
 **Local status:** 524 passed, 1 skipped (role privileges, CI only); ruff and mypy clean; contract suites 595/279/105/382 PASS; OpenAPI regenerated (`POST /v1/sessions/{id}/answers`, contract schemas only); `alembic check` clean (no migration needed).
-**Exit:** the evaluators and the effects landed together, so there is no separate `phase-6.1` checkpoint; CI green; tag `phase-6`.
+**Exit:** the evaluators and the effects landed together, so there is no separate `phase-6.1` checkpoint. ✅ CI green on GitHub (run 37221363500: 525 passed incl. role grants, contract suites green); tagged `phase-6`.
 
 ### Handoff review findings (Phase 6)
 
@@ -628,3 +628,4 @@ Re-review of API §5.7–5.8, §6.5–6.6, §7 (every exercise type and mode), �
 | 2026-10-04 | 5 | Handoff re-reviewed for learner delivery (12 findings F-14–F-25). Built the journey service, the complete planner, guide/reader/session endpoints, assessment and review composition, resume with redaction, abandon and term cards; hardened Phase 4 (D-41, D-42) and corrected the Phase 3 planner (D-44). 392 tests green locally; CI pending. |
 | 2026-10-04 | 5 | ✅ Phase 5 complete: CI green (393 passed incl. role grants; contract suites green); tagged `phase-5`, merged to `main`. |
 | 2026-10-04 | 6 | Handoff re-reviewed for answers, grading, retries, feedback and adaptation (12 findings F-26–F-37). Built replay-first answer handling, all evaluators (86/86 contract evaluations reproduced), per-answer mastery/misconception/recitation-XP effects with a fixed lock order, and recitation binding; fixed two Phase 4 bugs and added the untimed-items rule (D-61). 524 tests green locally; CI pending. |
+| 2026-10-04 | 6 | ✅ Phase 6 complete: CI green (525 passed incl. role grants; contract suites green); tagged `phase-6`, merged to `main`. |
