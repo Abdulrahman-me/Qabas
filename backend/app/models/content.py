@@ -78,7 +78,7 @@ class Source(Timestamps, Base):
     __table_args__ = (
         id_check("id", "src"),
         enum_check("kind", enums.SOURCE_KIND),
-        enum_check("provider", enums.SOURCE_PROVIDER, nullable=True),
+        enum_check("provider", enums.SOURCE_PROVIDER),
         CheckConstraint(f"text_sha256 IS NULL OR text_sha256 ~ '{SHA256_HEX}'", name="text_sha256_format"),
         Index("uq_sources_provider_record", "provider", "provider_record_id", unique=True,
               postgresql_where=sql_text("provider_record_id IS NOT NULL")),
@@ -86,16 +86,36 @@ class Source(Timestamps, Base):
 
     id: Mapped[str] = mapped_column(Text, primary_key=True)
     kind: Mapped[str] = mapped_column(Text)
-    provider: Mapped[str | None] = mapped_column(Text)
+    provider: Mapped[str] = mapped_column(Text)
     provider_record_id: Mapped[str | None] = mapped_column(Text)
     title: Mapped[str] = mapped_column(Text)
     reference: Mapped[str] = mapped_column(Text)
-    excerpt: Mapped[str | None] = mapped_column(Text)
+    excerpt: Mapped[str] = mapped_column(Text)
     url: Mapped[str | None] = mapped_column(Text)
     raw: Mapped[dict[str, Any]] = mapped_column(server_default=sql_text("'{}'::jsonb"))
     text_sha256: Mapped[str | None] = mapped_column(Text)  # digest of the exact cited text (sources §12)
     retrieved_at: Mapped[datetime | None]
     adapter_version: Mapped[str | None] = mapped_column(Text)
+
+
+class CurriculumSlot(Timestamps, Base):
+    """A curriculum position (unit, 0-based index) and the canonical lesson ID that fills it (curriculum
+    document; ``content/curriculum.yaml``). Authoring metadata only: nothing here is learner-facing until a
+    lesson version for the slot is published. A lesson can exist only in a declared slot (composite FK)."""
+
+    __tablename__ = "curriculum_slots"
+    __table_args__ = (
+        id_check("lesson_id", "les"),
+        CheckConstraint("index >= 0", name="index_non_negative"),
+        UniqueConstraint("unit_id", "index", name="uq_curriculum_slots_unit_id_index"),
+        UniqueConstraint("lesson_id", "unit_id", "index", name="uq_curriculum_slots_position"),
+    )
+
+    lesson_id: Mapped[str] = mapped_column(Text, primary_key=True)
+    unit_id: Mapped[str] = mapped_column(ForeignKey("units.id"))
+    index: Mapped[int] = mapped_column(Integer)          # 0-based position in the unit (wire JLesson.index)
+    working_title: Mapped[dict[str, Any]]                # {en, ar?}: curriculum working title, not learner copy
+    focus: Mapped[dict[str, Any] | None]                 # curriculum focus note for the Curriculum Architect
 
 
 class Lesson(Timestamps, Base):
@@ -105,7 +125,10 @@ class Lesson(Timestamps, Base):
     __table_args__ = (
         id_check("id", "les"),
         UniqueConstraint("unit_id", "index", name="uq_lessons_unit_id_index"),
-        CheckConstraint("index >= 1", name="index_positive"),
+        CheckConstraint("index >= 0", name="index_non_negative"),
+        ForeignKeyConstraint(["id", "unit_id", "index"],
+                             ["curriculum_slots.lesson_id", "curriculum_slots.unit_id", "curriculum_slots.index"],
+                             name="fk_lessons_curriculum_slot"),
         enum_check("lesson_type", enums.LESSON_TYPE),
         CheckConstraint("estimated_minutes > 0", name="estimated_minutes_positive"),
         CheckConstraint("xp >= 0", name="xp_non_negative"),
@@ -119,7 +142,7 @@ class Lesson(Timestamps, Base):
 
     id: Mapped[str] = mapped_column(Text, primary_key=True)
     unit_id: Mapped[str] = mapped_column(ForeignKey("units.id"))
-    index: Mapped[int] = mapped_column(Integer)  # curriculum position within the unit; never a prerequisite
+    index: Mapped[int] = mapped_column(Integer)  # 0-based curriculum position within the unit; never a prerequisite
     lesson_type: Mapped[str] = mapped_column(Text)
     estimated_minutes: Mapped[int] = mapped_column(SmallInteger)
     xp: Mapped[int] = mapped_column(SmallInteger, server_default="10")
@@ -139,6 +162,7 @@ class LessonVersion(Base):
         CheckConstraint("version >= 1", name="version_positive"),
         CheckConstraint(f"content_sha256 ~ '{SHA256_HEX}'", name="content_sha256_format"),
         CheckConstraint("contract_revision >= 10", name="contract_revision_supported"),
+        enum_check("origin", enums.CONTENT_ORIGIN),
     )
 
     id: Mapped[uuid.UUID] = mapped_column(UUID, primary_key=True, server_default=func.gen_random_uuid())
@@ -147,6 +171,9 @@ class LessonVersion(Base):
     reviewed_by: Mapped[str | None] = mapped_column(Text)  # reviewer display name shown to learners
     published_at: Mapped[datetime | None]
     run_id: Mapped[str | None] = mapped_column(Text)  # FK to factory_runs added in Phase 12
+    # factory | gold_import | test_fixture. Test-fixture content is publishable only outside staging and
+    # production (app-enforced, D-29) and exists to exercise the real pipeline in automated tests.
+    origin: Mapped[str] = mapped_column(Text)
     plan: Mapped[dict[str, Any]]          # approved LessonPlan
     arc_map: Mapped[dict[str, Any] | None]
     content: Mapped[dict[str, Any]]       # {lang: {variant: {title, subtitle, objectives, blocks, completion, ...}}}
@@ -160,7 +187,8 @@ class Claim(Base):
     __tablename__ = "claims"
     __table_args__ = (
         PrimaryKeyConstraint("lesson_version_id", "id", name="pk_claims"),
-        id_check("id", "clm"),
+        # Claim and sentence ids are authored per lesson version; the contract fixtures use ids such as
+        # "s1"/"c1", so no prefix is enforced here (decision D-33).
         enum_check("status", enums.CLAIM_STATUS),
         enum_check("basis", enums.CLAIM_BASIS),
         CheckConstraint("basis = 'reasoning' OR reasoning IS NULL", name="reasoning_only_for_reasoning_basis"),
@@ -181,7 +209,6 @@ class SentenceRecord(Base):
     __tablename__ = "sentences"
     __table_args__ = (
         PrimaryKeyConstraint("lesson_version_id", "lang", "variant", "id", name="pk_sentences"),
-        id_check("id", "sen"),
         enum_check("lang", enums.LANGUAGE),
         enum_check("variant", enums.VARIANT),
         enum_check("role", enums.SENTENCE_ROLE),

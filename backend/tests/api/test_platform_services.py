@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import asyncio
 import json
-from collections.abc import AsyncIterator
 from datetime import timedelta
 from typing import Any
 
@@ -21,13 +20,6 @@ from app.services.platform.rate_limits import PROFILES, FailureCounter, Limit, R
 from tests.api.helpers import aexecute
 
 pytestmark = pytest.mark.integration
-
-
-@pytest.fixture
-async def resources(integration_settings: Settings, clean_state: None) -> AsyncIterator[Resources]:
-    res = Resources.create(integration_settings)
-    yield res
-    await res.close()
 
 
 async def make_user(url: str, user_id: str = "usr_idem") -> str:

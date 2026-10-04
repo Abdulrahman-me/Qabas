@@ -25,9 +25,12 @@ CONTRACT_REVISION = 10
 if str(CONTRACT_DIR) not in sys.path:
     sys.path.insert(0, str(CONTRACT_DIR))
 
+import contextual  # noqa: E402
+import display_fields  # noqa: E402
 import qabas_contract as models  # noqa: E402
+import review  # noqa: E402
 
-__all__ = ["CONTRACT_REVISION", "SCHEMA_PATH", "exported_schema", "models"]
+__all__ = ["CONTRACT_REVISION", "SCHEMA_PATH", "contextual", "display_fields", "exported_schema", "models", "review"]
 
 
 @cache

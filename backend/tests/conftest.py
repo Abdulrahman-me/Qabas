@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import asyncio
-from collections.abc import Iterator
+from collections.abc import AsyncIterator, Iterator
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
 
@@ -14,6 +14,7 @@ from pydantic import SecretStr
 
 from app.config import Environment, Settings, get_settings
 from app.main import create_app
+from app.runtime import Resources
 from tests.support.db import alembic_config, reset_schema, resolve_test_database_url, truncate_all
 
 CONTRACT_HEADERS = {"Qabas-Contract": "10", "Qabas-Client": "android/1.0.0"}
@@ -95,3 +96,11 @@ def api(integration_settings: Settings, clean_state: None) -> Iterator[TestClien
     with TestClient(create_app(integration_settings), headers=CONTRACT_HEADERS,
                     raise_server_exceptions=False) as test_client:
         yield test_client
+
+
+@pytest.fixture
+async def resources(integration_settings: Settings, clean_state: None) -> AsyncIterator[Resources]:
+    """Real engine/Redis/storage for service-level tests, on an empty test database."""
+    res = Resources.create(integration_settings)
+    yield res
+    await res.close()

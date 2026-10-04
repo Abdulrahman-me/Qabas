@@ -17,7 +17,7 @@
 | 1 | Contract vendoring and service skeleton | ✅ Done | `phase-1`, `phase-1.1` | CI green; repository boundary corrected by D-19 (`phase-1.1`) |
 | 2 | Core database schema and migrations | ✅ Done | `phase-2` | CI green (151 passed incl. role grants) |
 | 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | ✅ Done | `phase-3` | CI green (218 passed) |
-| 4 | Content storage, registries, projection and seeding | ⏳ Not started | `phase-4` | |
+| 4 | Content storage, registries, projection and seeding | 🔄 In progress | `phase-4` | 312 passed locally; CI pending |
 | 5 | Journey, lessons and session creation | ⏳ Not started | `phase-5` | |
 | 6 | Answers: replay-first, evaluators, per-answer adaptation | ⏳ Not started | `phase-6` | |
 | 7 | Finish transaction, FSRS, planner, reviews, glossary, stats | ⏳ Not started | `phase-7` | **Milestone A: durable learning slice** |
@@ -171,19 +171,44 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 
 ## Phase 4 — Content storage, registries, projection and seeding
 
-**Goal:** content can be stored, validated, projected and seeded reproducibly. No learner endpoints yet.
-**Refs:** SEED_AND_IMPORT_REQUIREMENTS §15; BACKEND_HANDOFF §6.5; DATA_MODEL §4.2.
+**Goal:** the production foundation for curriculum and content: what exists, where every lesson sits, how content is stored, validated, versioned and published, and which units learners may enter. No learner endpoints yet.
+**Refs:** SEED_AND_IMPORT_REQUIREMENTS §15; BACKEND_HANDOFF §6.2, §6.5; DATA_MODEL §4.2; FACTORY §13.1–13.7; CURRICULUM_AND_LEARNING_DESIGN; API §5.5c–5.5d, §6.3–6.4.
 
-- [ ] `content/curriculum.yaml`: Units 0–10, `tracks`, lesson slots, concept graph. Titles marked *pending O-12*.
-- [ ] `content/visual_registry.yaml` + `test_registry_parity.py`.
-- [ ] `contract/registries.json` from the template (tiers, achievements, avatars, unit art keys, goal anchors).
-- [ ] Placeholder `referrals.yaml`, `safety_rules.yaml`, `medallions/registry.yaml` (content to be supplied and reviewed).
-- [ ] Stored → public → reviewer projections (`project_term`, explicit nulls, captured bank order, secondary labels, category art).
-- [ ] Publication validators of §6.5 (visual, teach, story, hook, predict, map pins, scoring, scene references, placeholder-media and visual-readiness gate) wrapping `contract/contextual.py` and `scene_check.py`.
-- [ ] Version-aware import core: content digests, a no-op when identical, a new version when changed, never overwriting published or pinned versions.
-- [ ] `scripts/seed.py` (production structure: units, `coming_soon`, bot user, synthetic users only when `SYNTHETIC_LEAGUE_MEMBERS=true`) and `--test-curriculum` (loads `fixtures/curriculum_test/` + `fixtures/scenes/`).
+- [x] **4.1 Curriculum file** `content/curriculum.yaml` (`qabas.curriculum/1`, `review_status: working`, pending O-12): Units 0–10 with tracks (Unit 0 Explorer-only, AD-28), track-framed titles/subtitles in both languages, `art_key`, `pass_percent`, 93 lesson slots (`les_u{U}_l{n}`, working titles, Unit 0 focus notes) and the concept graph. A strict loader (`app/content/curriculum.py`) rejects unknown fields, duplicate units/indices/lesson IDs, non-canonical IDs, gaps in slot numbering, missing track framing, unknown art keys and invalid concept graphs (unknown units or prerequisites, cycles, prerequisites placed later, a prerequisite unavailable in one of the concept's tracks). `scripts/seed.py --check` validates it without a database.
+- [x] **4.2 Curriculum slots** (migration 0002, D-30): `curriculum_slots` table; a lesson can exist only in its slot (composite FK on `(id, unit_id, index)`); positions are 0-based like the contract; one lesson per slot.
+- [x] **4.3 Registries:** `content/visual_registry.yaml` (keys, versions and parameter ranges equal to the contract's `BUILTIN_PARAMS`; per-use proportions equal to API §5.5d, parsed from the vendored spec in `test_registry_parity.py`). `content/registries.json` gains `unit_art` (the compiled art set), `league_tiers` (lantern → beacon → star → dawn, zone 5) and the 8 prototype `achievements` with counters/targets.
+- [x] **4.4 Lesson package** (`app/content/package.py`): one lesson version as contract models: approved `LessonPlan`, Arabic + English variants per track sharing one block skeleton, claims, sentence roles, `arc_map`, exercises with private keys and per-language feedback, glossary, misconception cards and sources. Arabic/English exercises must agree on everything except wording.
+- [x] **4.5 Deterministic validators** (`app/content/validation.py`), all issues reported at once, nothing repaired (D-36): variant/track rules, skeleton and localization parity, sentence roles and supported-claim links, reasoning tools from the plan, `arc_map` order/coverage/techniques (one hook, one summary, story/predict/summary placement), 2–6 graded exercises, a flashcard per introduced concept, 2 pretest + 3 unit-test + 3 duel items, assessment-type exclusions, answer keys via `contextual.validate_answer`, feedback coverage of served IDs, myth framing needs a target, source existence and the 3-content-source budget, glossary/term spans, misconception cards, completion, and the placeholder-media gate (`contextual.placeholder_media_errors`).
+- [x] **4.6 Storage and versioning** (`app/content/store.py`, D-34): `import_package` stores a new **unpublished** version only after placement, concept-registration and validation checks pass. Identical content (same digest) is a no-op; changed content becomes a new version; published versions are immutable (DB triggers). `load_package` rebuilds the exact package (digest-verified). Exercise type/purpose can never change once created (trigger QB006).
+- [x] **4.7 Publication** `publish()`: latest version only; Gate 2 approval bound to the exact content digest by an active reviewer (or `FixtureApproval` for test fixtures in dev/test only, D-29); digest re-verified and content re-validated; prerequisite concepts must already be introduced by a published lesson; scene references must match a published scene version's manifest digest; sources/misconceptions/terms upserted (a conflicting source record is an error); children first, `published_at` last (D-22); lesson metadata, `xp` (D-31) and concept introductions recorded.
+- [x] **4.8 Unit availability** (D-38): a unit stays `coming_soon` until it has a published lesson **and** its published pools can serve both assessments (≥ 6 pretest, ≥ 9 unit-test items).
+- [x] **4.9 Projections** (`app/content/projection.py`): variant choice (New Muslim → Explorer fallback only), learner exercise projection (keys, misconception maps and duel flags never leave the server), session items, reader blocks, session sources with `displayed`/`display_role` and `source_count` (D-35), `counts`, term cards through the contract's `display_fields.project_term`. Verified byte-for-byte against all 34 contract session fixtures (every lesson × language × variant).
+- [x] **4.10 Seeding** `scripts/seed.py`: the production structure (units, slots, concepts; no lesson content); idempotent; refuses to move occupied slots, drop units or concepts in use, or change tracks/index of units with published lessons. `--test-curriculum` (dev/test only) loads the contract's synthetic test curriculum (10 lessons, 3 units + a coming-soon unit) and its scene through the real import → publish pipeline.
+- [~] Placeholder `referrals.yaml`, `safety_rules.yaml`, `medallions/registry.yaml`, bot user and synthetic league users: moved to the phases that consume them (D-37), so no empty production data files are created.
 
-**Exit:** the test curriculum seeds twice with no diff; validators reject the negative fixtures; tag `phase-4`.
+**Tests:** `tests/content/` (94): curriculum file structure and every curriculum error; registry parity; every content rule rejecting the violation it targets; storage round trip; versioning and immutability; approval bound to the digest; fixture origin refused outside dev/test; prerequisites; slot placement; exercise identity; unit availability; projection against the contract sessions; idempotent seeding. DB/API tests updated for slots and `origin`.
+**Local status:** 312 passed, 1 skipped (role privileges, CI only); ruff and mypy clean; contract suites 595/279/105/382 PASS; OpenAPI unchanged; `alembic check` clean; migration round trip verified; production seed applied twice on the dev DB (second run unchanged).
+**Exit:** CI green; tag `phase-4`.
+
+### Handoff review findings (Phase 4)
+
+Re-review of 01_PRODUCT, 06_CONTENT, API §5.5c/5.5d/6.3/6.4, the contract models and helpers, `CHANGES.md`, the review log, the test-curriculum fixtures and generator, the Unit 0 brief and drafts, and the prototype registries and art.
+
+| # | Finding | Handling |
+|---|---|---|
+| F-1 | `JLesson.index` is 0-based in the contract and fixtures; migration 0001 assumed 1-based. | Fixed by migration 0002 (D-30). |
+| F-2 | `JLesson.xp` has no defined derivation; examples show values not derivable from the XP table. | Derived from the fixed XP table (D-31). |
+| F-3 | API examples use unit art keys that are not in the compiled `UnitArt` set. | Only compiled keys are accepted (D-32). |
+| F-4 | Contract fixtures use sentence/claim IDs like `s1`; migration 0001 enforced `sen_`/`clm_`. | Prefix checks dropped (D-33). |
+| F-5 | Fixture sessions list no `sources` while exercises embed evidence. | Embedded evidence is shown by its exercise and not listed; existence still validated (D-35). |
+| F-6 | Seed spec opens a unit at its first published lesson; backend/factory specs require pools ≥ 6/≥ 9 before a unit is publishable. A unit opened earlier would trap learners (pretest/unit test unservable). | Safest interpretation: both conditions (D-38). |
+| F-7 | Test-curriculum prerequisites are lesson-level; the production rule is concept-level. | Each fixture lesson introduces one synthetic concept; lesson prerequisites map to those (D-29). |
+| F-8 | `predict.reveal` is plain `Spans`, so its factual sentences cannot carry sentence IDs or claim links. | Not role-checked; factual reveals must also appear as claim sentences elsewhere. Raised for the factory QA rules (Phase 12). |
+| F-9 | Fixture `estimated_minutes` 5 vs the 6–10 minute guidance. | Guidance, not a constant (factory §13.1); not a validation error. |
+| F-10 | Prototype achievement copy «افز في تحدٍّ مباشر…» is a typo. | Corrected to «فُز» (D-39); the content specialist should confirm. |
+| F-11 | No reviewed unit guides or final Arabic titles (O-12). | Curriculum marked `working` (status documented in the file header); guides absent (D-39). |
+| F-12 | Unit 0 drafts: two-digit IDs, 1-based positions, a non-contract `learner_acts` field and 9 reasoning tools outside the contract enum. | Phase 8 importer; reasoning tools need a human mapping, never a guess (D-40). |
+| F-13 | Contract fixtures use `mock-asset://` media. | Allowed only for `test_fixture` content in dev/test; blocked for real content (D-29). |
 
 ---
 
@@ -194,6 +219,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 
 - [ ] `GET /journey`: track membership, prerequisite access, lesson/unit states, `soft_lock` (prerequisites + transitive `start_with`), `standalone_eligible` (Discover), `unit_test.can_skip`, `current`.
 - [ ] `GET /units/{id}/guide`, `GET /lessons/{id}` (reader projection).
+- [ ] Build on Phase 4: published lessons only; `coming_soon` from D-38; projections from `app/content/projection.py` (variant choice, items, sources, counts, term cards); sessions pin the version rows `publish()` recorded.
 - [ ] `POST /sessions` for `lesson` / `review` (cards, quick) / `pretest` / `unit_test`: access checks (`404`, `409 prerequisite_unmet` with details), existing active session returned, variant choice (New Muslim → Explorer fallback only), composition sizes and pool minimums, serve-time shuffle stored in the snapshot, `served_exercises`/`served_scenes` pinning, `counts`, `sources`/`source_count`, `terms`.
 - [ ] `GET /sessions/{id}` with feedback-mode redaction; `POST /sessions/{id}/abandon`.
 
@@ -224,6 +250,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 **Goal:** complete the durable learning slice (**Milestone A**).
 **Refs:** BACKEND_HANDOFF §6.4, §7.3–7.6, §10.1–10.2, §10.5–10.6; API §6.2, §6.5, §6.7.
 
+- [ ] XP grants follow the fixed table, which also drives the displayed `JLesson.xp` (D-31); keep the two in one place.
 - [ ] `POST /sessions/{id}/finish`: one transaction that stores and replays `SessionResult` (score, layers, `lesson_perfect`, `passed`, `review_items`, `duration_ms` clamp, XP grants, daily activity/streak/daily goal, quest progress and rewards, FSRS updates, term promotions, `unlocked`, `next_step`); pretest/first-post percentages; unit skip.
 - [ ] Outbox events for unreported effects (`session:{id}:finished` → achievements/leagues/metrics consumers, added in their phases).
 - [ ] FSRS service (py-fsrs), card review and quick review selection, `409 nothing_to_review`.
@@ -240,10 +267,11 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 **Goal:** real authored content on live endpoints, plus a staging environment for frontend integration.
 **Refs:** FACTORY §13.6–13.7; SEED_AND_IMPORT; QUALITY §18.1 `test_salah_reference`.
 
-- [ ] `scripts/import_gold.py`: imports into **unpublished** versions; runs all validators.
-- [ ] Minimal publish path: a Gate 2-equivalent `review_decisions` row bound to the content digest → immutable publish (extended in Phase 13).
+- [ ] `scripts/import_gold.py`: builds `LessonPackage`s and calls Phase 4's `import_package(origin="gold_import")`, so all validators, placement and concept checks apply; versions stay **unpublished**.
+- [ ] Concepts for imported lessons are added to `content/curriculum.yaml` first (import refuses unregistered concepts, D-39).
+- [ ] Publish path: Phase 4's `publish(Approval(decision_id))` with a Gate 2-equivalent `review_decisions` row bound to the content digest (extended in Phase 13).
 - [ ] Salah reference: import the four actual-source sessions (fixture `les_u1_l3` → production slot 3.2) with the backend-authored plan, claims, sentence roles, `arc_map`, keys, flashcards, assessment and duel items; `test_salah_reference.py` for 4 language × track combinations (14 steps, 14/13 terms, 12 banks, 8/7/6 counts, `source_count` 4).
-- [ ] Unit 0 drafts: an importer projecting `UNIT_0_CONTENT/lessons/u0_l01…u0_l12.json` (authoring records) and its 20 scene manifests into rev 10 stored content, kept **unpublished**. Scripture placeholders stay flagged until verified insertion (Phase 9) and specialist approval.
+- [ ] Unit 0 drafts (D-40): map two-digit draft IDs to `les_u0_l{n}`, 1-based positions to 0-based, drop `learner_acts` from stored content, and require a human-approved mapping for the 9 non-contract reasoning tools. An importer projecting `UNIT_0_CONTENT/lessons/u0_l01…u0_l12.json` (authoring records) and its 20 scene manifests into rev 10 stored content, kept **unpublished**. Scripture placeholders stay flagged until verified insertion (Phase 9) and specialist approval.
 - [ ] Content locations (D-19): pending drafts are read from git-ignored `backend/.private/content/`; approved content is exported into `backend/content/` (committed) and seeded through the same import pipeline. The importer is the same code in every environment, with no demo path.
 - [ ] Staging environment (native services on the target host) with the test curriculum + reference content, so the frontend can integrate on live data.
 
@@ -340,6 +368,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 - [ ] Animated Scene Author stage targeting the full `qabas.scene/1` grammar (states, beats, focus, tracks, transitions, reduced motion, anchors, asset-bearing layers), with a validator retry loop (`scene.schema.json` + `scene_check.py`).
 - [ ] Scene asset generation (artwork briefs → image provider → audit), checksums, sizes, content-addressed storage.
 - [ ] Preview/inspection: a pluggable `ScenePreviewer` interface. Interim: the existing non-normative preview/review renderer (handoff SVG preview, Unit 0 review canvas) renders frames, the animation preview, the reduced-motion still and fallbacks **for inspection**. When `tools/scene_preview` arrives, it plugs into the same interface. Scene definitions do not change.
+- [ ] `content/medallions/registry.yaml` with real medallion art (D-37).
 - [ ] Scene publishing (`scenes/<id>/v<n>/`, `scene_versions`), capability negotiation, state-aligned fallbacks, `POST …/images/{scene_id}/regenerate`.
 
 **Release gate, not a quality limit:** the handoff requires that a learner-facing scene only uses capabilities a real app build supports (`released` in the production registry, O-02). That gate protects learners on older apps from scenes they can't render. It does not lower authoring quality. Scenes are fully authored, audited and staged now, and they go live as soon as the renderer releases the capabilities.
@@ -369,6 +398,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 
 - [ ] Additive migration: `raqeeb_conversations`, `raqeeb_messages`.
 - [ ] Endpoints: conversations create/list/get, messages (202 + polling), feedback; one `processing` answer per conversation; 75 s timeout; 90 s stalled-message sweeper.
+- [ ] `content/referrals.yaml` and `content/safety_rules.yaml`, authored and reviewed with this phase (D-37).
 - [ ] Pipeline: safety rules → classifier → 8 class strategies → verifier → writer → level service (rewrite / term linking / check) → guard (regenerate once, then abstain) → output mapping; referrals; titles; history window; `suggested_lessons`.
 
 **Tests:** contract-valid messages for all 8 classes (fake LLM), guard rules, `test_untrusted_input`.
@@ -393,9 +423,9 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 **Refs:** BACKEND_HANDOFF §10.3–10.7; API §6.9.
 
 - [ ] Additive migration: `leagues`, `league_tiers`, `learner_tiers`, `league_members`, `achievements`, `learner_achievements`, `friendships`, `friend_invites`.
-- [ ] Leagues: Riyadh-week `week_key`, assignment under an advisory lock, ranking, idempotent week-end promotion beat job, privacy masking, synthetic members behind `SYNTHETIC_LEAGUE_MEMBERS` (P-01).
+- [ ] Leagues: Riyadh-week `week_key`, assignment under an advisory lock, ranking, idempotent week-end promotion beat job, privacy masking, synthetic members behind `SYNTHETIC_LEAGUE_MEMBERS` (P-01), seeded by `scripts/seed.py` (D-37).
 - [ ] Friends: invite codes, accept with brute-force limits, online status, privacy.
-- [ ] Achievements as outbox consumers from authoritative tables; `GET /me/achievements`.
+- [ ] Achievements as outbox consumers from authoritative tables (definitions already in `registries.json`, Phase 4); `GET /me/achievements`.
 
 **Exit:** tag `phase-18`.
 
@@ -407,7 +437,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 
 - [ ] Additive migration: `duels`, `duel_players`, `duel_questions`, `duel_answers`.
 - [ ] `POST /duels`, invitations, accept/decline, get, history; presets `duel`/`group` with `config`; question selection (7/3, no repeats); shared `challenge_points()`.
-- [ ] Deterministic seeded bot; async flow (`async`, `async/next`, `async/answer`), idempotency, 24 h forfeit beat job, expiry jobs.
+- [ ] Bot user seeded by `scripts/seed.py` (D-37). Deterministic seeded bot; async flow (`async`, `async/next`, `async/answer`), idempotency, 24 h forfeit beat job, expiry jobs.
 - [ ] Results transaction: ranking, ties, XP/quests; achievements/leagues through the outbox.
 
 **Tests:** `test_challenge_scoring`, `test_async_duel_idempotency`.
@@ -451,7 +481,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | Dart DTOs generated from our `docs/openapi.json` + round trips (O-01) | Frontend | Integration after 1 |
 | `tools/export_reference_lesson` gold output | Frontend | 8 |
 | `packages/qabas_scene`, `tools/scene_preview`, capability release (O-02) | Flutter renderer owner | 14 (normative preview and go-live only; generation proceeds) |
-| Reviewed curriculum titles, guides, bridges (O-12) | Content specialist | 4 (production seed), 12 |
+| Reviewed curriculum titles, guides, bridges (O-12); unit art for units 4 and 10 (D-32); confirmation of the corrected achievement copy (D-39) | Content specialist / design | 4 (production seed), 12 |
 | Source re-verification, registries, reciter licensing (O-05, O-06) | Content/media | 8, 9, 10 |
 | Product decisions P-01–P-08 | Product owner | Defaults are used until decided |
 
@@ -486,6 +516,18 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | 2026-10-04 | D-26 | Guest display names are generated in the default language (Arabic, e.g. "مسافر ٤٧") since `POST /auth/guest` carries no language; learners can rename themselves (`PATCH /me`, 2–24 printable characters, whitespace collapsed). Unknown time zones, avatars and anchors are `400 validation_error` with `details.field`. | API behavior. |
 | 2026-10-04 | D-27 | Account purge is queued immediately through the outbox (well within the 30-day bound). The users row is kept, anonymized, as the placeholder other users' records point to; private objects live under `users/<id>/` so purge can remove them by prefix; `deletion_jobs` keeps the audit trail and drives `repurge_deleted_users.py`. | Later phases add purge steps (Raqeeb rows and memory, friendships, leagues) to the same consumer. |
 | 2026-10-04 | D-28 | Time-zone validation uses the IANA list shipped with the pinned `tzdata` package (598 zones, minus the `Factory` placeholder) on every platform. CI found that Linux's OS list also accepts `localtime`, which Windows rejected. | Identical validation everywhere. |
+| 2026-10-04 | D-29 | **Content origin and test fixtures.** `lesson_versions.origin` ∈ `factory`, `gold_import`, `test_fixture`. The contract's synthetic test curriculum goes through the real import → validate → publish pipeline, but only with `FixtureApproval`, which is refused unless `ENV` is dev/test. Placeholder media (`mock-asset://`) is accepted only for that content. The fixture's lesson-level prerequisites are expressed as one synthetic concept per lesson (`con_t{u}_{l}`), matching the production concept-level rule. | No demo path: fixtures exercise production code; real content always needs a digest-bound Gate 2 approval. |
+| 2026-10-04 | D-30 | **Lesson positions are 0-based** (`JLesson.index`, fixtures) and live in `curriculum_slots`. Lesson ID `les_u{U}_l{n}` with n = index + 1. Lessons reference their slot by a composite FK on `(id, unit_id, index)`, so a lesson can't exist outside the curriculum or drift from its position. Migration 0002 converts any existing 1-based rows deterministically and backfills slots. | Corrects migration 0001's `index >= 1` (F-1). |
+| 2026-10-04 | D-31 | **Displayed lesson XP** (`JLesson.xp`, undefined in the spec) = what the fixed XP table lets a learner earn: completion 10, +3 perfect lesson when any exercise counts toward accuracy, +3 per `recite_verse`. Stored on `lessons.xp` at publication. | Phase 7 grants must use the same table (F-2). |
+| 2026-10-04 | D-32 | **Unit art keys** must be in the compiled art set (`EXERCISE_ART`, 9 keys). Mapping: unit_0 questions, 1 footprints, 2 starry_sky, 3 prayer_rug, 5 heart, 6 book, 7 compass, 8 lantern, 9 water_drop; units 4 and 10 have none (null) until art is designed. | API example keys are rejected (F-3); frontend/content to confirm. |
+| 2026-10-04 | D-33 | **Claim and sentence IDs** are authored per lesson version with no required prefix (fixtures use `s1`, `c1`); they are scoped by `(lesson_version_id, …)` keys. Migration 0002 drops the 0001 prefix checks. | F-4. |
+| 2026-10-04 | D-34 | **Content storage shape.** `lesson_versions.content` holds the variants, glossary, misconception cards, sources and the ordered exercise version pins (a list, since JSONB loses key order); `plan` and `arc_map` have their own columns; claims and sentence roles are rows. Each exercise version stores the learner fields and feedback per language, and the key only in `answer_key`. Content identity is the SHA-256 of the canonical JSON of the whole package; `load_package` must reproduce it exactly. | Identical re-import is a no-op; any change is a new version. |
+| 2026-10-04 | D-35 | **Session sources** list sources referenced by blocks (evidence, teach evidence, story quotes = `content`) and by `recite_verse` (`activity`). Evidence embedded inside an exercise payload is shown by that exercise and isn't listed, matching every contract session fixture. Validation still requires every referenced source, embedded ones included, to exist, and at most 3 displayed content sources. | F-5. |
+| 2026-10-04 | D-36 | **Invalid content is rejected, never repaired.** Validation reports every issue at once; nothing is synthesized or backfilled (`display_fields.backfill_legacy` is never applied, keys are never derived). | Factory retries and reviewers see complete issue lists. |
+| 2026-10-04 | D-37 | **No empty production data files.** `referrals.yaml`/`safety_rules.yaml` move to Phase 16, `medallions/registry.yaml` to Phase 14, the bot user to Phase 19 and synthetic league members to Phase 18, each created with real content alongside its consumer. | Phase 4 checklist adjusted; later phases updated. |
+| 2026-10-04 | D-38 | **Unit availability (conflict resolved).** SEED_AND_IMPORT §15 opens a unit at its first published lesson; BACKEND §6.2 and FACTORY §13.3 make a unit publishable only when its pools reach ≥ 6 pretest and ≥ 9 unit-test items. Safest interpretation, satisfying both: lessons publish individually, but a unit stays `coming_soon` until it has a published lesson **and** its published pools meet both minimums. Otherwise a learner could enter a unit whose pretest and unit test can't be served and could never complete it. | Recomputed at every publish and seed (`refresh_unit_availability`); the planner never meets an unservable pretest (F-6). |
+| 2026-10-04 | D-39 | **Curriculum file status.** `curriculum.yaml` is `review_status: working` pending O-12: English titles from the curriculum; Arabic titles from the handoff where given, otherwise working translations to be reviewed; no unit guides yet. `concepts` is empty: concepts are registered when an approved plan or a gold import introduces them, and imports refuse unregistered concepts. Registry UI copy typo «افز» corrected to «فُز». | Content specialist to review titles, guides and the corrected copy (F-10, F-11). |
+| 2026-10-04 | D-40 | **Unit 0 draft conflicts** (two-digit IDs, 1-based positions, non-contract `learner_acts`, 9 reasoning tools outside the contract enum) are resolved in the Phase 8 importer. The reasoning tools need a human-approved mapping; the importer will not guess. | Phase 8 checklist updated (F-12). |
 | 2026-10-04 | D-13 | Git HTTPS failed certificate verification with Git's bundled OpenSSL. The repo-local config now sets `http.sslBackend=schannel` (Windows certificate store); global config is untouched. The first push made `phase/0-workspace` GitHub's default branch, so switch the default to `main` when `phase-0` is tagged. | — |
 
 ## Progress log
@@ -504,3 +546,4 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | 2026-10-04 | 3 | Platform controls built: guest/reviewer auth with immediate revocation, rate limits, idempotency keys, outbox relay, S3/local storage, onboarding/profile, account deletion and purge; real worker verified. 214 tests green locally; CI pending. Product progress notes created (git-ignored). |
 | 2026-10-04 | 3 | First CI run failed: Linux accepted `localtime` as a time zone (OS list). Fixed by validating against the `tzdata` package list (D-28); tests extended (`Factory`, `posixrules`, path-like names). |
 | 2026-10-04 | 3 | ✅ Phase 3 complete: CI green (218 passed incl. role grants; contract suites green); tagged `phase-3`, merged to `main`. |
+| 2026-10-04 | 4 | Handoff re-reviewed for curriculum and content rules; 13 findings recorded (F-1–F-13), one genuine conflict resolved (D-38). Built the curriculum file and slots (migration 0002), registries, the lesson package model, deterministic validators, versioned storage, digest-bound publication, unit availability, projections and the seed script. Bugs found and fixed during the build: 1-based lesson index, sentence/claim ID prefixes, JSONB losing exercise order (digest mismatch). 312 tests green locally; CI pending. |

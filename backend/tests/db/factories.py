@@ -49,15 +49,24 @@ async def concept(conn: AsyncConnection, unit_id: str, suffix: str = "a") -> str
                                                  "title": {"en": "Concept"}}))
 
 
-async def lesson(conn: AsyncConnection, unit_id: str, index: int = 1, **overrides: Any) -> str:
-    values = {"id": f"les_t_{unit_id}_{index}", "unit_id": unit_id, "index": index, "lesson_type": "concept",
+async def slot(conn: AsyncConnection, unit_id: str, index: int = 0) -> str:
+    """A curriculum slot; every lesson occupies one (decision D-30)."""
+    values = {"lesson_id": f"les_t_{unit_id}_{index}", "unit_id": unit_id, "index": index,
+              "working_title": {"en": "Slot"}}
+    return str(await _insert(conn, "curriculum_slots", values, returning="lesson_id"))
+
+
+async def lesson(conn: AsyncConnection, unit_id: str, index: int = 0, **overrides: Any) -> str:
+    lesson_id = await slot(conn, unit_id, index)
+    values = {"id": lesson_id, "unit_id": unit_id, "index": index, "lesson_type": "concept",
               "estimated_minutes": 8, **overrides}
     return str(await _insert(conn, "lessons", values))
 
 
 async def lesson_version(conn: AsyncConnection, lesson_id: str, version: int = 1, *, published: bool = False) -> Any:
     content = {"en": {"explorer": {"title": "Lesson", "blocks": []}}}
-    values: dict[str, Any] = {"lesson_id": lesson_id, "version": version, "plan": {"central_question": "Why?"},
+    values: dict[str, Any] = {"lesson_id": lesson_id, "version": version, "origin": "test_fixture",
+                              "plan": {"central_question": "Why?"},
                               "content": content, "content_sha256": digest(content), "contract_revision": 10}
     lv_id = await _insert(conn, "lesson_versions", values)
     if published:

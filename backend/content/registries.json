@@ -1,43 +1,290 @@
 {
-  "_about": "Shared app/server registries (SEED_AND_IMPORT §15). Built from contract/registries.template.json and the Flutter prototype; seed data and validation read only this file. Phase 4 adds league tiers, achievements and unit art.",
+  "_about": "Shared app/server registries (SEED_AND_IMPORT §15). Built from contract/registries.template.json and the Flutter prototype sources; seed data and validation read only this file.",
   "avatars": {
     "_source": "Prototype TravelerAvatar (lib/widgets/brand.dart) is parameterized by hue; keys map to the prototype's sample-traveller hues (lib/data/community.dart), the learner's own hue (0.12) and the coach's (0.58). The app renders an unknown key with the default.",
     "default": "traveler_01",
     "selectable": [
-      {"avatar_key": "traveler_01", "hue": 0.12},
-      {"avatar_key": "traveler_02", "hue": 0.08},
-      {"avatar_key": "traveler_03", "hue": 0.15},
-      {"avatar_key": "traveler_04", "hue": 0.22},
-      {"avatar_key": "traveler_05", "hue": 0.30},
-      {"avatar_key": "traveler_06", "hue": 0.38},
-      {"avatar_key": "traveler_07", "hue": 0.45},
-      {"avatar_key": "traveler_08", "hue": 0.55},
-      {"avatar_key": "traveler_09", "hue": 0.62},
-      {"avatar_key": "traveler_10", "hue": 0.70},
-      {"avatar_key": "traveler_11", "hue": 0.86},
-      {"avatar_key": "traveler_12", "hue": 0.95}
+      {
+        "avatar_key": "traveler_01",
+        "hue": 0.12
+      },
+      {
+        "avatar_key": "traveler_02",
+        "hue": 0.08
+      },
+      {
+        "avatar_key": "traveler_03",
+        "hue": 0.15
+      },
+      {
+        "avatar_key": "traveler_04",
+        "hue": 0.22
+      },
+      {
+        "avatar_key": "traveler_05",
+        "hue": 0.3
+      },
+      {
+        "avatar_key": "traveler_06",
+        "hue": 0.38
+      },
+      {
+        "avatar_key": "traveler_07",
+        "hue": 0.45
+      },
+      {
+        "avatar_key": "traveler_08",
+        "hue": 0.55
+      },
+      {
+        "avatar_key": "traveler_09",
+        "hue": 0.62
+      },
+      {
+        "avatar_key": "traveler_10",
+        "hue": 0.7
+      },
+      {
+        "avatar_key": "traveler_11",
+        "hue": 0.86
+      },
+      {
+        "avatar_key": "traveler_12",
+        "hue": 0.95
+      }
     ],
     "reserved": [
-      {"avatar_key": "traveler_bot", "hue": 0.58, "use": "challenge coach (bot); never selectable"}
+      {
+        "avatar_key": "traveler_bot",
+        "hue": 0.58,
+        "use": "challenge coach (bot); never selectable"
+      }
+    ]
+  },
+  "unit_art": {
+    "_source": "Prototype UnitArt enum (lib/data/models.dart): compiled Flutter drawings, never downloaded. The same set as contract/exercise_art_registry.json. Unknown or null keys render the default art.",
+    "keys": [
+      "starry_sky",
+      "footprints",
+      "water_drop",
+      "prayer_rug",
+      "lantern",
+      "book",
+      "heart",
+      "compass",
+      "questions"
+    ]
+  },
+  "league_tiers": {
+    "_source": "Prototype League enum and titles (lib/data/community.dart); promotion zone = Community.promoteCount.",
+    "tiers": [
+      {
+        "tier_key": "tier_lantern",
+        "index": 0,
+        "name": {
+          "en": "Lantern League",
+          "ar": "دوري القنديل"
+        },
+        "promotion_zone_size": 5,
+        "is_top_tier": false
+      },
+      {
+        "tier_key": "tier_beacon",
+        "index": 1,
+        "name": {
+          "en": "Beacon League",
+          "ar": "دوري المنارة"
+        },
+        "promotion_zone_size": 5,
+        "is_top_tier": false
+      },
+      {
+        "tier_key": "tier_star",
+        "index": 2,
+        "name": {
+          "en": "Star League",
+          "ar": "دوري النجمة"
+        },
+        "promotion_zone_size": 5,
+        "is_top_tier": false
+      },
+      {
+        "tier_key": "tier_dawn",
+        "index": 3,
+        "name": {
+          "en": "Dawn League",
+          "ar": "دوري الفجر"
+        },
+        "promotion_zone_size": 5,
+        "is_top_tier": true
+      }
+    ]
+  },
+  "achievements": {
+    "_source": "Prototype AchievementId/Achievements (lib/data/achievements.dart): keys are the Dart enum names, counters from backend §10.7.",
+    "items": [
+      {
+        "achievement_key": "firstStep",
+        "title": {
+          "en": "First step",
+          "ar": "الخطوة الأولى"
+        },
+        "description": {
+          "en": "Complete your first lesson",
+          "ar": "أكمل درسك الأول"
+        },
+        "counter": "lessons_completed",
+        "target": 1
+      },
+      {
+        "achievement_key": "kindled",
+        "title": {
+          "en": "Kindled",
+          "ar": "أول شعلة"
+        },
+        "description": {
+          "en": "Learn 3 days in a row",
+          "ar": "تعلّم ٣ أيام متتالية"
+        },
+        "counter": "longest_streak",
+        "target": 3
+      },
+      {
+        "achievement_key": "steadyFlame",
+        "title": {
+          "en": "Steady flame",
+          "ar": "شعلة ثابتة"
+        },
+        "description": {
+          "en": "Learn 7 days in a row",
+          "ar": "تعلّم ٧ أيام متتالية"
+        },
+        "counter": "longest_streak",
+        "target": 7
+      },
+      {
+        "achievement_key": "wordKeeper",
+        "title": {
+          "en": "Word keeper",
+          "ar": "حافظ الكلمات"
+        },
+        "description": {
+          "en": "Master 10 words",
+          "ar": "أتقن ١٠ كلمات"
+        },
+        "counter": "terms_mastered",
+        "target": 10
+      },
+      {
+        "achievement_key": "clearSight",
+        "title": {
+          "en": "Clear sight",
+          "ar": "رؤية واضحة"
+        },
+        "description": {
+          "en": "Correct 5 misconceptions",
+          "ar": "صحّح ٥ مفاهيم خاطئة"
+        },
+        "counter": "misconceptions_resolved",
+        "target": 5
+      },
+      {
+        "achievement_key": "unitComplete",
+        "title": {
+          "en": "Unit complete",
+          "ar": "أتممت وحدة"
+        },
+        "description": {
+          "en": "Finish every step of a unit",
+          "ar": "أكمل كل خطوات وحدة"
+        },
+        "counter": "units_completed",
+        "target": 1
+      },
+      {
+        "achievement_key": "seeker",
+        "title": {
+          "en": "Seeker",
+          "ar": "الباحث"
+        },
+        "description": {
+          "en": "Ask Raqeeb 5 questions",
+          "ar": "اسأل رقيب ٥ أسئلة"
+        },
+        "counter": "raqeeb_questions",
+        "target": 5
+      },
+      {
+        "achievement_key": "quickLight",
+        "title": {
+          "en": "Quick light",
+          "ar": "الأسرع"
+        },
+        "description": {
+          "en": "Win a live challenge with friends",
+          "ar": "فُز في تحدٍّ مباشر مع أصدقائك"
+        },
+        "counter": "challenges_won",
+        "target": 1
+      }
     ]
   },
   "guest_names": {
     "_about": "POST /auth/guest display names: a curated word plus a number (backend §5), in the default language (ar).",
-    "ar": ["مسافر", "سالك", "باحث", "رحّال", "قاصد"],
-    "en": ["Traveler", "Wayfarer", "Seeker", "Voyager", "Pilgrim"],
-    "number_range": [1, 99]
+    "ar": [
+      "مسافر",
+      "سالك",
+      "باحث",
+      "رحّال",
+      "قاصد"
+    ],
+    "en": [
+      "Traveler",
+      "Wayfarer",
+      "Seeker",
+      "Voyager",
+      "Pilgrim"
+    ],
+    "number_range": [
+      1,
+      99
+    ]
   },
-  "deleted_learner": {"ar": "متعلم محذوف", "en": "Deleted learner"},
-  "private_member": {"ar": "مسافر", "en": "Traveler"},
+  "deleted_learner": {
+    "ar": "متعلم محذوف",
+    "en": "Deleted learner"
+  },
+  "private_member": {
+    "ar": "مسافر",
+    "en": "Traveler"
+  },
   "goal_anchors": {
     "_about": "Onboarding curiosity choices (User.goal_anchor), from the contract registry template. Bridges are reviewed onboarding copy bundled in the app; the server only validates keys and never uses them for ordering, recommendations, adaptation or inference.",
     "keys": [
-      {"goal_anchor": "does_god_exist", "label_en": "Does God exist?"},
-      {"goal_anchor": "who_is_god", "label_en": "Who is God in Islam?"},
-      {"goal_anchor": "quran_special", "label_en": "What makes the Qur'an special?"},
-      {"goal_anchor": "who_was_muhammad", "label_en": "Who was Muhammad ﷺ?"},
-      {"goal_anchor": "muslim_beliefs", "label_en": "What do Muslims actually believe?"},
-      {"goal_anchor": "why_pray", "label_en": "Why do Muslims pray?"}
+      {
+        "goal_anchor": "does_god_exist",
+        "label_en": "Does God exist?"
+      },
+      {
+        "goal_anchor": "who_is_god",
+        "label_en": "Who is God in Islam?"
+      },
+      {
+        "goal_anchor": "quran_special",
+        "label_en": "What makes the Qur'an special?"
+      },
+      {
+        "goal_anchor": "who_was_muhammad",
+        "label_en": "Who was Muhammad ﷺ?"
+      },
+      {
+        "goal_anchor": "muslim_beliefs",
+        "label_en": "What do Muslims actually believe?"
+      },
+      {
+        "goal_anchor": "why_pray",
+        "label_en": "Why do Muslims pray?"
+      }
     ]
   }
 }

@@ -25,8 +25,10 @@ def give_learner_data(url: str, user_id: str) -> None:
         ("INSERT INTO units (id, index, title, subtitle, tracks) VALUES ('unit_9', 9, '{}', '{}', ARRAY['explorer']) "
          "ON CONFLICT DO NOTHING", ()),
         ("INSERT INTO concepts (id, unit_id, title) VALUES ('con_del', 'unit_9', '{}') ON CONFLICT DO NOTHING", ()),
+        ("INSERT INTO curriculum_slots (lesson_id, unit_id, index, working_title) "
+         "VALUES ('les_del', 'unit_9', 0, '{}') ON CONFLICT DO NOTHING", ()),
         ("INSERT INTO lessons (id, unit_id, index, lesson_type, estimated_minutes) "
-         "VALUES ('les_del', 'unit_9', 1, 'concept', 8) ON CONFLICT DO NOTHING", ()),
+         "VALUES ('les_del', 'unit_9', 0, 'concept', 8) ON CONFLICT DO NOTHING", ()),
         ("INSERT INTO learner_concepts (user_id, concept_id, mastery) VALUES ($1, 'con_del', 0.5)", (user_id,)),
         ("INSERT INTO learner_lessons (user_id, lesson_id, completed_at) VALUES ($1, 'les_del', now())", (user_id,)),
         ("INSERT INTO learner_units (user_id, unit_id, started_at) VALUES ($1, 'unit_9', now())", (user_id,)),

@@ -114,8 +114,10 @@ def test_track_change_keeps_progress(api: TestClient, integration_settings: Sett
     seed_units(url)
     token = guest_token(api)
     user_id = onboard(api, token).user.user_id
+    execute(url, "INSERT INTO curriculum_slots (lesson_id, unit_id, index, working_title) "
+                 "VALUES ('les_u1_l1', 'unit_1', 0, '{}')")
     execute(url, "INSERT INTO lessons (id, unit_id, index, lesson_type, estimated_minutes) "
-                 "VALUES ('les_u1_l1', 'unit_1', 1, 'concept', 8)")
+                 "VALUES ('les_u1_l1', 'unit_1', 0, 'concept', 8)")
     execute(url, "INSERT INTO learner_lessons (user_id, lesson_id, completed_at) VALUES ($1, 'les_u1_l1', now())",
             user_id)
     response = api.patch("/v1/me", json={"track": "new_muslim"}, headers=bearer(token))

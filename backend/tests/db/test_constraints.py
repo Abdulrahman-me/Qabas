@@ -295,8 +295,21 @@ async def test_review_decisions_are_insert_only(conn: AsyncConnection) -> None:
 async def test_one_lesson_per_curriculum_slot(conn: AsyncConnection) -> None:
     unit_id = await f.unit(conn)
     await f.lesson(conn, unit_id, 1)
+    await expect_sqlstate(conn, UNIQUE_VIOLATION, """INSERT INTO curriculum_slots (lesson_id, unit_id, index,
+                          working_title) VALUES ('les_other', :u, 1, '{}')""", {"u": unit_id})
     await expect_sqlstate(conn, UNIQUE_VIOLATION, """INSERT INTO lessons (id, unit_id, index, lesson_type,
                           estimated_minutes) VALUES ('les_other', :u, 1, 'story', 7)""", {"u": unit_id})
+
+
+async def test_lessons_occupy_their_curriculum_slot(conn: AsyncConnection) -> None:
+    unit_id = await f.unit(conn)
+    await f.slot(conn, unit_id, 0)
+    insert = """INSERT INTO lessons (id, unit_id, index, lesson_type, estimated_minutes)
+                VALUES (:l, :u, :i, 'story', 7)"""
+    await expect_sqlstate(conn, FK_VIOLATION, insert, {"l": "les_unslotted", "u": unit_id, "i": 3})
+    await expect_sqlstate(conn, FK_VIOLATION, insert, {"l": f"les_t_{unit_id}_0", "u": unit_id, "i": 2})
+    await expect_sqlstate(conn, CHECK_VIOLATION, """INSERT INTO curriculum_slots (lesson_id, unit_id, index,
+                          working_title) VALUES ('les_neg', :u, -1, '{}')""", {"u": unit_id})
 
 
 async def test_one_completion_record_per_canonical_lesson(conn: AsyncConnection) -> None:

@@ -1,0 +1,33 @@
+# Built-in visual registry (backend §6.5), mirroring the contract: keys, versions and params (API §5.5c,
+# contract BUILTIN_PARAMS) and the proportion (width / height) of each use (API §5.5d).
+# Rendering, loops, mirroring and labels are Flutter's; the backend uses this to validate visuals and pins.
+# tests/content/test_registry_parity.py fails if this file and the contract disagree.
+
+version: 1
+keys:
+  river_house:
+    versions: [1]
+    params: {beat: {type: int, min: 0, max: 3, required: true}}
+    description: "House with palms and a flowing river. beat 0 establishing view; 1 the river as the parable's focus (places and light only, no people); 2 clean-light sparkles; 3 five prayer lights."
+  workplace:
+    versions: [1]
+    params: {}
+    description: "Office with an illustrative wall clock near 12:10 and steam from a cup."
+  day_arc:
+    versions: [1]
+    params: {highlight: {type: int, min: -1, max: 4, required: true}}
+    description: "Sun's path through the day; highlight -1 none, 0..4 dawn, midday, afternoon, sunset, night."
+  pillars:
+    versions: [1]
+    params: {highlight: {type: int, min: 0, max: 4, required: true}}
+    description: "Five pillars with localized labels drawn by Flutter; highlight in canonical order 0 shahada, 1 prayer, 2 zakat, 3 fasting, 4 Hajj."
+
+# width / height per use. A use with a per-key map allows only those keys.
+uses:
+  hook: 1.75
+  story_beat: 1.5
+  teach: {river_house: 1.9, pillars: 1.9, workplace: 1.9, day_arc: 2.1}
+  map_place_hotspots: 1.15
+  categorize_day_arc: 2.8
+  visual_block: 1.75
+  predict: 1.75

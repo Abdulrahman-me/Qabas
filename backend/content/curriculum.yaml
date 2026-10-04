@@ -1,0 +1,314 @@
+# Qabas curriculum: Units 0-10 (01_PRODUCT/CURRICULUM_AND_LEARNING_DESIGN.md, owner-confirmed 2026-10-03).
+#
+# What this file is: the curriculum structure engineers build for: units, track membership, track-framed
+# unit titles/subtitles, lesson slots (curriculum positions with canonical lesson IDs) and the concept graph.
+# It holds no lesson content: a slot becomes learner-facing only when a lesson version for it is approved
+# and published (factory Gate 2 or an approved gold import).
+#
+# Review status: WORKING COPY pending scholarly/curriculum review (O-12). English titles are the curriculum's
+# working titles. Arabic unit titles come from the handoff where it provides them (API examples, the Unit 0
+# authoring brief) and are otherwise working translations; all are replaceable when O-12 approves the copy.
+# Unit guides are authored and reviewed content and stay absent (has_guide = false) until approved.
+#
+# Rules (validated by app/content/curriculum.py; invalid data fails, nothing is repaired):
+#   * unit ids unit_<n>, unique non-negative indices; tracks are explorer and/or new_muslim
+#   * every track a unit serves has a title and subtitle in ar and en
+#   * slot "<unit index>.<n>" has lesson_id les_u<unit index>_l<n>, n = 1.. contiguous; position index = n - 1
+#   * concept prerequisites resolve inside the graph and never form a cycle
+#   * curriculum position orders the Roadmap only; access depends on approved prerequisites (AD-29)
+
+schema: qabas.curriculum/1
+review_status: working
+
+units:
+  - unit_id: unit_0
+    index: 0
+    tracks: [explorer]
+    art_key: questions
+    pass_percent: 80
+    title:
+      ar: {explorer: "ابدأ بسؤال"}
+      en: {explorer: "Start With a Question"}
+    subtitle:
+      ar: {explorer: "أسس قبل الأسئلة الكبرى"}
+      en: {explorer: "Foundations before the big questions"}
+    goal:
+      en: "Build the foundation required before revelation, prophethood and unseen claims are presented for evaluation. Explorers then enter Unit 1."
+    lessons:
+      - slot: "0.1"
+        lesson_id: les_u0_l1
+        working_title: {en: "Do You Have to See It to Know It?", ar: "هل يجب أن تراه لتعرفه؟"}
+        focus: {en: "Observation, evidence/inference and reliable testimony through simple examples"}
+      - slot: "0.2"
+        lesson_id: les_u0_l2
+        working_title: {en: "Could Something Come From Nothing?", ar: "هل يمكن أن يأتي شيء من لا شيء؟"}
+        focus: {en: "The existence question without abstract vocabulary"}
+      - slot: "0.3"
+        lesson_id: les_u0_l3
+        working_title: {en: "Could Something Create Itself?", ar: "هل يمكن أن يخلق شيء نفسه؟"}
+        focus: {en: "An intuitive example that exposes the self-creation problem"}
+      - slot: "0.4"
+        lesson_id: les_u0_l4
+        working_title: {en: "What Would a Creator Be Like?", ar: "كيف يكون الخالق؟"}
+        focus: {en: "Independence, non-dependence, Creator versus creation"}
+      - slot: "0.5"
+        lesson_id: les_u0_l5
+        working_title: {en: "One Creator or Many?", ar: "خالق واحد أم أكثر؟"}
+        focus: {en: "An accessible introduction to divine oneness"}
+      - slot: "0.6"
+        lesson_id: les_u0_l6
+        working_title: {en: "If There Is a Creator, Would We Need Guidance?", ar: "لو كان هناك خالق، فهل نحتاج إلى هداية؟"}
+        focus: {en: "Why reason alone does not answer every question about purpose, worship and the afterlife"}
+      - slot: "0.7"
+        lesson_id: les_u0_l7
+        working_title: {en: "How Could Guidance Reach Us?", ar: "كيف يمكن أن تصل الهداية إلينا؟"}
+        focus: {en: "Revelation and messengers"}
+      - slot: "0.8"
+        lesson_id: les_u0_l8
+        working_title: {en: "How Would We Test a Claim of Revelation?", ar: "كيف نختبر ادّعاء الوحي؟"}
+        focus: {en: "A claimed revelation is examined, not automatically accepted"}
+      - slot: "0.9"
+        lesson_id: les_u0_l9
+        working_title: {en: "The Qur'an's Claim", ar: "ادّعاء القرآن"}
+        focus: {en: "What the Qur'an claims about itself, without assuming the claim is accepted"}
+      - slot: "0.10"
+        lesson_id: les_u0_l10
+        working_title: {en: "How Would We Recognize a Messenger?", ar: "كيف نعرف الرسول؟"}
+        focus: {en: "Questions relevant to a prophethood claim"}
+      - slot: "0.11"
+        lesson_id: les_u0_l11
+        working_title: {en: "Muhammad ﷺ and His Claim", ar: "محمد ﷺ وادّعاؤه"}
+        focus: {en: "The earlier foundations brought together around his claim"}
+      - slot: "0.12"
+        lesson_id: les_u0_l12
+        working_title: {en: "So What Is Islam?", ar: "فما الإسلام إذن؟"}
+        focus: {en: "Creator → One God → Guidance → Revelation → Messenger → Islam"}
+
+  - unit_id: unit_1
+    index: 1
+    tracks: [explorer, new_muslim]
+    art_key: footprints
+    pass_percent: 80
+    title:
+      ar: {explorer: "الخطوة الأولى", new_muslim: "الخطوة الأولى"}
+      en: {explorer: "The First Step", new_muslim: "The First Step"}
+    subtitle:
+      ar: {explorer: "فهم الخطوة الأولى في الإسلام", new_muslim: "خطواتك الأولى مع الله"}
+      en: {explorer: "Understanding the First Step into Islam", new_muslim: "Your First Steps with Allah"}
+    goal:
+      en: "Explorers understand the meaning of the transition; New Muslims understand what entering Islam means personally."
+    lessons:
+      - {slot: "1.1", lesson_id: les_u1_l1, working_title: {en: "What Does Islam Mean?", ar: "ما معنى الإسلام؟"}}
+      - {slot: "1.2", lesson_id: les_u1_l2, working_title: {en: "What Does Worship Really Mean?", ar: "ما معنى العبادة حقاً؟"}}
+      - {slot: "1.3", lesson_id: les_u1_l3, working_title: {en: "La ilaha illa Allah", ar: "لا إله إلا الله"}}
+      - {slot: "1.4", lesson_id: les_u1_l4, working_title: {en: "Muhammad Rasul Allah"}}
+      - {slot: "1.5", lesson_id: les_u1_l5, working_title: {en: "What Changes When Someone Becomes Muslim?"}}
+      - {slot: "1.6", lesson_id: les_u1_l6, working_title: {en: "Mercy, Forgiveness, and a New Beginning"}}
+
+  - unit_id: unit_2
+    index: 2
+    tracks: [explorer, new_muslim]
+    art_key: starry_sky
+    pass_percent: 80
+    title:
+      ar: {explorer: "معرفة الله", new_muslim: "معرفة الله"}
+      en: {explorer: "Knowing Allah", new_muslim: "Knowing Allah"}
+    subtitle:
+      ar: {explorer: "من هو الله في الإسلام؟", new_muslim: "من هو الله في الإسلام؟"}
+      en: {explorer: "Who is God in Islam?", new_muslim: "Who is God in Islam?"}
+    lessons:
+      - {slot: "2.1", lesson_id: les_u2_l1, working_title: {en: "Who Is Allah?", ar: "من هو الله؟"}}
+      - {slot: "2.2", lesson_id: les_u2_l2, working_title: {en: "One and Unique", ar: "واحدٌ لا مثيل له"}}
+      - {slot: "2.3", lesson_id: les_u2_l3, working_title: {en: "The Creator and Sustainer"}}
+      - {slot: "2.4", lesson_id: les_u2_l4, working_title: {en: "Allah's Mercy"}}
+      - {slot: "2.5", lesson_id: les_u2_l5, working_title: {en: "Knowing Allah Through His Names"}}
+      - {slot: "2.6", lesson_id: les_u2_l6, working_title: {en: "Love, Hope, and Trust"}}
+      - {slot: "2.7", lesson_id: les_u2_l7, working_title: {en: "Du'a: Speaking to Allah"}}
+
+  - unit_id: unit_3
+    index: 3
+    tracks: [explorer, new_muslim]
+    art_key: prayer_rug
+    pass_percent: 80
+    title:
+      ar: {explorer: "الصلاة: صلتك اليومية", new_muslim: "الصلاة: صلتك اليومية"}
+      en: {explorer: "Prayer: Your Daily Connection", new_muslim: "Prayer: Your Daily Connection"}
+    subtitle:
+      ar: {explorer: "ما الصلاة وكيف يؤديها المسلمون", new_muslim: "من فهم الصلاة إلى أدائها"}
+      en: {explorer: "What prayer is and how Muslims practise it", new_muslim: "From understanding prayer to performing it"}
+    goal:
+      en: "Explorers learn what prayer is and how Muslims practise it; the New Muslim variant increasingly supports actual performance."
+    lessons:
+      - {slot: "3.1", lesson_id: les_u3_l1, working_title: {en: "Why Do Muslims Pray?"}}
+      - {slot: "3.2", lesson_id: les_u3_l2, working_title: {en: "Five Times a Day"}}
+      - {slot: "3.3", lesson_id: les_u3_l3, working_title: {en: "Getting Ready for Prayer"}}
+      - {slot: "3.4", lesson_id: les_u3_l4, working_title: {en: "Wudu: Step by Step"}}
+      - {slot: "3.5", lesson_id: les_u3_l5, working_title: {en: "Facing the Qiblah"}}
+      - {slot: "3.6", lesson_id: les_u3_l6, working_title: {en: "The Movements of Salah"}}
+      - {slot: "3.7", lesson_id: les_u3_l7, working_title: {en: "What Do We Say in Prayer?"}}
+      - {slot: "3.8", lesson_id: les_u3_l8, working_title: {en: "Al-Fatihah"}}
+      - {slot: "3.9", lesson_id: les_u3_l9, working_title: {en: "A Guided Prayer"}}
+
+  - unit_id: unit_4
+    index: 4
+    tracks: [explorer, new_muslim]
+    art_key: null
+    pass_percent: 80
+    title:
+      ar: {explorer: "أركان الإسلام في الحياة", new_muslim: "أركان الإسلام في الحياة"}
+      en: {explorer: "Living the Five Pillars", new_muslim: "Living the Five Pillars"}
+    subtitle:
+      ar: {explorer: "الأركان الخمسة وكيف تشكّل حياة المسلم", new_muslim: "الأركان الخمسة وكيف تشكّل حياتك"}
+      en: {explorer: "The five pillars and how they shape a Muslim's life", new_muslim: "The five pillars and how they shape your life"}
+    lessons:
+      - {slot: "4.1", lesson_id: les_u4_l1, working_title: {en: "The Five Pillars"}}
+      - {slot: "4.2", lesson_id: les_u4_l2, working_title: {en: "Shahadah Revisited"}}
+      - {slot: "4.3", lesson_id: les_u4_l3, working_title: {en: "Salah Revisited"}}
+      - {slot: "4.4", lesson_id: les_u4_l4, working_title: {en: "Zakah"}}
+      - {slot: "4.5", lesson_id: les_u4_l5, working_title: {en: "Ramadan and Fasting"}}
+      - {slot: "4.6", lesson_id: les_u4_l6, working_title: {en: "Hajj"}}
+      - {slot: "4.7", lesson_id: les_u4_l7, working_title: {en: "One Life, Five Pillars"}}
+
+  - unit_id: unit_5
+    index: 5
+    tracks: [explorer, new_muslim]
+    art_key: heart
+    pass_percent: 80
+    title:
+      ar: {explorer: "بماذا يؤمن المسلمون", new_muslim: "بماذا يؤمن المسلمون"}
+      en: {explorer: "What Muslims Believe", new_muslim: "What Muslims Believe"}
+    subtitle:
+      ar: {explorer: "أركان الإيمان وأثرها في الحياة", new_muslim: "أركان الإيمان وأثرها في الحياة"}
+      en: {explorer: "The pillars of faith and how they shape life", new_muslim: "The pillars of faith and how they shape life"}
+    goal:
+      en: "Divine Decree stays introductory, without advanced theological complexity at this stage."
+    lessons:
+      - {slot: "5.1", lesson_id: les_u5_l1, working_title: {en: "What Is Iman?"}}
+      - {slot: "5.2", lesson_id: les_u5_l2, working_title: {en: "Belief in Allah"}}
+      - {slot: "5.3", lesson_id: les_u5_l3, working_title: {en: "Angels"}}
+      - {slot: "5.4", lesson_id: les_u5_l4, working_title: {en: "Revealed Books"}}
+      - {slot: "5.5", lesson_id: les_u5_l5, working_title: {en: "Messengers"}}
+      - {slot: "5.6", lesson_id: les_u5_l6, working_title: {en: "The Last Day"}}
+      - {slot: "5.7", lesson_id: les_u5_l7, working_title: {en: "Divine Decree"}}
+      - {slot: "5.8", lesson_id: les_u5_l8, working_title: {en: "How Belief Changes Life"}}
+
+  - unit_id: unit_6
+    index: 6
+    tracks: [explorer, new_muslim]
+    art_key: book
+    pass_percent: 80
+    title:
+      ar: {explorer: "القرآن", new_muslim: "القرآن"}
+      en: {explorer: "The Qur'an", new_muslim: "The Qur'an"}
+    subtitle:
+      ar: {explorer: "ما هو، وكيف وصل، وكيف يُعاش معه", new_muslim: "ما هو، وكيف وصل، وكيف تعيش معه"}
+      en: {explorer: "What it is, how it came, and how it is lived with", new_muslim: "What it is, how it came, and how to live with it"}
+    lessons:
+      - {slot: "6.1", lesson_id: les_u6_l1, working_title: {en: "What Is the Qur'an?"}}
+      - {slot: "6.2", lesson_id: les_u6_l2, working_title: {en: "How Revelation Came"}}
+      - {slot: "6.3", lesson_id: les_u6_l3, working_title: {en: "From Revelation to Mushaf"}}
+      - {slot: "6.4", lesson_id: les_u6_l4, working_title: {en: "Surah, Ayah, Juz'"}}
+      - {slot: "6.5", lesson_id: les_u6_l5, working_title: {en: "What Does the Qur'an Talk About?"}}
+      - {slot: "6.6", lesson_id: les_u6_l6, working_title: {en: "Reading and Listening to the Qur'an"}}
+      - {slot: "6.7", lesson_id: les_u6_l7, working_title: {en: "Understanding Before Memorizing"}}
+      - {slot: "6.8", lesson_id: les_u6_l8, working_title: {en: "Living With the Qur'an"}}
+
+  - unit_id: unit_7
+    index: 7
+    tracks: [explorer, new_muslim]
+    art_key: compass
+    pass_percent: 80
+    title:
+      ar: {explorer: "رسالة واحدة وأنبياء كثيرون", new_muslim: "رسالة واحدة وأنبياء كثيرون"}
+      en: {explorer: "One Message, Many Prophets", new_muslim: "One Message, Many Prophets"}
+    subtitle:
+      ar: {explorer: "قصص الأنبياء", new_muslim: "قصص الأنبياء"}
+      en: {explorer: "Stories of the prophets", new_muslim: "Stories of the prophets"}
+    goal:
+      en: "Several prophet-story lessons may become standalone-eligible and appear in Discover, but only after their actual prerequisites are analysed."
+    lessons:
+      - {slot: "7.1", lesson_id: les_u7_l1, working_title: {en: "Why Prophets?", ar: "لماذا الأنبياء؟"}}
+      - {slot: "7.2", lesson_id: les_u7_l2, working_title: {en: "Adam"}}
+      - {slot: "7.3", lesson_id: les_u7_l3, working_title: {en: "Nuh"}}
+      - {slot: "7.4", lesson_id: les_u7_l4, working_title: {en: "Ibrahim"}}
+      - {slot: "7.5", lesson_id: les_u7_l5, working_title: {en: "Musa"}}
+      - {slot: "7.6", lesson_id: les_u7_l6, working_title: {en: "Isa"}}
+      - {slot: "7.7", lesson_id: les_u7_l7, working_title: {en: "One Message"}}
+      - {slot: "7.8", lesson_id: les_u7_l8, working_title: {en: "The Final Messenger"}}
+
+  - unit_id: unit_8
+    index: 8
+    tracks: [explorer, new_muslim]
+    art_key: lantern
+    pass_percent: 80
+    title:
+      ar: {explorer: "حياة محمد ﷺ", new_muslim: "حياة محمد ﷺ"}
+      en: {explorer: "The Life of Muhammad ﷺ", new_muslim: "The Life of Muhammad ﷺ"}
+    subtitle:
+      ar: {explorer: "السيرة: قصة حياة لا قائمة أحداث", new_muslim: "السيرة: قصة حياة لا قائمة أحداث"}
+      en: {explorer: "The Seerah as a life, not a list of events", new_muslim: "The Seerah as a life, not a list of events"}
+    goal:
+      en: "The Seerah is not reduced to a chronological list of battles."
+    lessons:
+      - {slot: "8.1", lesson_id: les_u8_l1, working_title: {en: "Arabia Before the Message"}}
+      - {slot: "8.2", lesson_id: les_u8_l2, working_title: {en: "Muhammad Before Prophethood"}}
+      - {slot: "8.3", lesson_id: les_u8_l3, working_title: {en: "The First Revelation"}}
+      - {slot: "8.4", lesson_id: les_u8_l4, working_title: {en: "The First Muslims"}}
+      - {slot: "8.5", lesson_id: les_u8_l5, working_title: {en: "Opposition and Patience"}}
+      - {slot: "8.6", lesson_id: les_u8_l6, working_title: {en: "The Hijrah"}}
+      - {slot: "8.7", lesson_id: les_u8_l7, working_title: {en: "Building Madinah"}}
+      - {slot: "8.8", lesson_id: les_u8_l8, working_title: {en: "Major Turning Points"}}
+      - {slot: "8.9", lesson_id: les_u8_l9, working_title: {en: "The Character of Muhammad ﷺ"}}
+      - {slot: "8.10", lesson_id: les_u8_l10, working_title: {en: "The Final Years"}}
+
+  - unit_id: unit_9
+    index: 9
+    tracks: [explorer, new_muslim]
+    art_key: water_drop
+    pass_percent: 80
+    title:
+      ar: {explorer: "الإسلام في الحياة اليومية", new_muslim: "الإسلام في الحياة اليومية"}
+      en: {explorer: "Islam in Everyday Life", new_muslim: "Islam in Everyday Life"}
+    subtitle:
+      ar: {explorer: "النية والأخلاق والاختيارات اليومية", new_muslim: "النية والأخلاق والاختيارات اليومية"}
+      en: {explorer: "Intention, character and everyday choices", new_muslim: "Intention, character and everyday choices"}
+    lessons:
+      - {slot: "9.1", lesson_id: les_u9_l1, working_title: {en: "Intention"}}
+      - {slot: "9.2", lesson_id: les_u9_l2, working_title: {en: "Honesty and Trust"}}
+      - {slot: "9.3", lesson_id: les_u9_l3, working_title: {en: "Parents and Family"}}
+      - {slot: "9.4", lesson_id: les_u9_l4, working_title: {en: "Neighbours and Society"}}
+      - {slot: "9.5", lesson_id: les_u9_l5, working_title: {en: "Food and Everyday Choices"}}
+      - {slot: "9.6", lesson_id: les_u9_l6, working_title: {en: "Money, Giving, and Responsibility"}}
+      - {slot: "9.7", lesson_id: les_u9_l7, working_title: {en: "Good Character"}}
+      - {slot: "9.8", lesson_id: les_u9_l8, working_title: {en: "What Happens When I Make a Mistake?"}}
+
+  - unit_id: unit_10
+    index: 10
+    tracks: [explorer, new_muslim]
+    art_key: null
+    pass_percent: 80
+    title:
+      ar: {explorer: "ما بعد الأساسيات", new_muslim: "ما بعد الأساسيات"}
+      en: {explorer: "Beyond the Basics", new_muslim: "Beyond the Basics"}
+    subtitle:
+      ar: {explorer: "أسئلة أعمق بعد الأسس", new_muslim: "أسئلة أعمق بعد الأسس"}
+      en: {explorer: "Deeper questions after the foundations", new_muslim: "Deeper questions after the foundations"}
+    goal:
+      en: "Holds topics that would be epistemically premature early in the Explorer journey (e.g. Al-Isra' wal-Mi'raj)."
+    lessons:
+      - {slot: "10.1", lesson_id: les_u10_l1, working_title: {en: "Life as a Test"}}
+      - {slot: "10.2", lesson_id: les_u10_l2, working_title: {en: "The Seen and the Unseen"}}
+      - {slot: "10.3", lesson_id: les_u10_l3, working_title: {en: "Miracles"}}
+      - {slot: "10.4", lesson_id: les_u10_l4, working_title: {en: "Al-Isra' wal-Mi'raj"}}
+      - {slot: "10.5", lesson_id: les_u10_l5, working_title: {en: "Death and What Comes After"}}
+      - {slot: "10.6", lesson_id: les_u10_l6, working_title: {en: "Patience and Trust During Hardship"}}
+      - {slot: "10.7", lesson_id: les_u10_l7, working_title: {en: "Questions, Doubts, and Seeking Knowledge"}}
+      - {slot: "10.8", lesson_id: les_u10_l8, working_title: {en: "Scholars and Reliable Sources"}}
+      - {slot: "10.9", lesson_id: les_u10_l9, working_title: {en: "Building a Sustainable Journey"}}
+      - {slot: "10.10", lesson_id: les_u10_l10, working_title: {en: "Where Do You Go From Here?"}}
+
+# Concept graph (curriculum document: "units, lesson slots, concepts"). Concepts are registered here as plans
+# are approved (each with the unit it belongs to and its curriculum prerequisites); a lesson can introduce or
+# require only registered concepts, and each concept is introduced by exactly one published lesson.
+# The curriculum document defines no concepts yet, so the graph starts empty.
+concepts: []

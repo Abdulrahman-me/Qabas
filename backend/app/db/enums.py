@@ -69,5 +69,6 @@ DUEL_TYPES = ("multiple_choice", "true_false", "verse_meaning")  # backend §11.
 DUEL_ONLY_TYPES = ("true_false",)                                # API §7.15
 MISCONCEPTION_STATUS = ("inactive", "active", "resolved")        # inactive: evidence below activation (D-21)
 SCENE_STATUS = ("draft", "published")
+CONTENT_ORIGIN = ("factory", "gold_import", "test_fixture")
 SCENE_ASSET_MIME = ("image/svg+xml", "image/webp", "image/png", "image/jpeg")
 FEEDBACK_BY_KIND = {"lesson": "immediate", "review": "immediate", "pretest": "none", "unit_test": "end"}
