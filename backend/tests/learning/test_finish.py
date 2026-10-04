@@ -18,6 +18,7 @@ from app.contract import models as C
 from app.models import User
 from app.runtime import Resources
 from app.services.learning import finish as service
+from app.services.learning import profile
 from tests.api.helpers import execute, query
 from tests.learning.conftest import learner, revise, user_id
 from tests.learning.test_answers import answer, body, exercises, keyed, start
@@ -209,10 +210,14 @@ def test_daily_duration_precision_cap_goal_stats_activity(learn_api: TestClient,
     headers = learner(learn_api)
     uid = user_id(learn_api, headers)
     learn_api.patch("/v1/me", headers=headers, json={"daily_goal_minutes": 5})
+    # One clock for finishing and for reading stats: 40 minutes ahead lets a 30-minute duration survive the
+    # wall-clock clamp, and the stats must read the same local day (near local midnight they would differ).
+    later = datetime.now(UTC) + timedelta(minutes=40)
+    monkeypatch.setattr(service, "utcnow", lambda: later)
+    monkeypatch.setattr(profile, "utcnow", lambda: later)
     for duration in (30000, 30000, 30 * 60000):
         session = start(learn_api, headers, {"kind": "lesson", "lesson_id": "les_t1_0"})
         filled(learn_api, headers, session)
-        monkeypatch.setattr(service, "utcnow", lambda: datetime.now(UTC) + timedelta(minutes=40))
         result = finish(learn_api, headers, session, duration)
     assert result["daily_goal"]["minutes_today"] == 21
     stats = learn_api.get("/v1/me/stats", headers=headers)

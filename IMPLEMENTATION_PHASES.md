@@ -386,6 +386,7 @@ Re-review of 01_PRODUCT (curriculum incl. the 0.1 reference design, content/bran
 | F-61 | The production slot of the Salah reference (3.2 as-is, adapted or merged with 3.1) is open (P-07); the export keeps fixture id `les_u1_l3`. | Part of the completion record (`target_lesson_id`, `decided_by`); blocked until decided. |
 | F-62 | The frontend demo sessions are a mock projection (inside a ZIP, localhost media, scripture replaced by draft notices), not an import source. | The authoring records are the source (D-80). |
 | F-63 | Unit 0's 13 concepts (34 references across the plans) are not in the curriculum graph; registering them is part of the O-12 review. | Blocked (`concept_unregistered`); no draft concept added to the public curriculum (D-87). |
+| F-65 | CI found a Phase 7 test that depended on the time of day: it finished sessions on a clock 40 minutes ahead but read `/me/stats` with the real clock, so within 40 minutes of the learner's local midnight the two disagreed. Product behaviour was correct. | The test now uses one clock for finishing and reading; verified across local midnight. |
 | F-64 | The plan asks for staging with the test curriculum, which D-29 confined to dev/test; a staging host does not exist yet. | D-84 (staging allowed, production never) and D-86 (host is an operations dependency). |
 
 ---
@@ -715,3 +716,4 @@ Re-review of 01_PRODUCT (curriculum incl. the 0.1 reference design, content/bran
 | 2026-10-05 | 7.1 | Independent Phase 7 audit (baseline 556 passed reproduced). Policy and core finish behaviour verified; five defects fixed: pagination limits, finish rate limit, missing `session.finished` consumer, legacy active sessions (migration 0004 guard + CHECK + operator script), quest-title grammar. 561 passed locally; CI pending. |
 | 2026-10-05 | 7.1 | ✅ Phase 7.1 complete: CI green (562 passed incl. role grants; contract suites green); tagged `phase-7.1`, merged to `main`. |
 | 2026-10-05 | 8 | Handoff re-reviewed for real content (12 findings F-53–F-64). Built the gold path (import unpublished → authenticated digest-bound approve+publish), the Unit 0 and Salah converters with typed blocker reports, the pending reasoning-tool mapping, staging support. Real content: 12/12 Unit 0 lessons and the Salah reference correctly blocked; projections proven lossless/valid with stand-ins. CI pending. |
+| 2026-10-05 | 8 | First CI run failed on F-65 (a time-of-day-dependent Phase 7 test, 23:26 Riyadh); fixed with one test clock. |
