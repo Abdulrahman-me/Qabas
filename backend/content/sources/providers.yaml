@@ -1,0 +1,83 @@
+# Provider policy for the source layer (docs/SOURCE_POLICY.md, SOURCE_ADAPTERS §12, decisions D-88..D-97).
+#
+# Every adapter reads its entry here. Nothing is assumed about terms that nobody has confirmed (O-03):
+#   live:   approved  -> production may call the provider;  pending -> only dev/test/staging may (production
+#                        refuses with ProviderNotConfigured until the provider is approved under O-03).
+#   cache:  ttl_days applies only when terms == confirmed; while terms are pending NOTHING is cached
+#           (effective TTL 0). The §12 default is 7 days "unless the provider's terms say otherwise".
+#   role:   authority  -> its records are cited as the source of the evidence;
+#           capability -> it supplies technical data (search hits, audio, timings) that is validated against
+#                         an authority and never cited as the source of scripture text.
+# Changing an entry from pending to approved/confirmed is a reviewed change that names who confirmed it.
+
+schema: qabas.source_providers/1
+providers:
+  quran_com:
+    name: "Quran Foundation (Quran.com) Content API v4"
+    role: [capability]          # search, audio, word timings; its verse text is only cross-checked
+    contract_provider: quran_com
+    adapter: app.sources.providers.quran_foundation
+    credentials: [QURAN_FOUNDATION_CLIENT_ID, QURAN_FOUNDATION_CLIENT_SECRET]
+    live: pending
+    live_confirmed_by: null
+    cache: {ttl_days: 7, terms: pending, confirmed_by: null}
+    notes: "OAuth2 client credentials (O-03). Audio is referenced by URL only; storing or redistributing a clip
+      needs a reciter licence (O-06)."
+
+  quranenc:
+    name: "QuranEnc — Encyclopedia of Translations of the Meanings of the Qur'an"
+    role: [authority]           # approved translations of the meanings (organizers' package, association)
+    contract_provider: quranenc
+    adapter: app.sources.providers.quranenc
+    credentials: []
+    live: pending
+    live_confirmed_by: null
+    cache: {ttl_days: 7, terms: pending, confirmed_by: null}
+
+  hadeethenc:
+    name: "HadeethEnc — Encyclopedia of Translated Prophetic Hadiths"
+    role: [authority]           # translations + explanations of its reviewed hadith cards; display verbatim, credit
+    contract_provider: hadeethenc
+    adapter: app.sources.providers.hadeethenc
+    credentials: []
+    live: pending
+    live_confirmed_by: null
+    cache: {ttl_days: 7, terms: pending, confirmed_by: null}
+
+  islamhouse:
+    name: "IslamHouse API v3"
+    role: [authority]           # articles, fatwas, books (organizers' package, association)
+    contract_provider: islamhouse
+    adapter: app.sources.providers.islamhouse
+    credentials: [ISLAMHOUSE_API_KEY]   # the documented key is public; it is still configuration, not code
+    live: pending
+    live_confirmed_by: null
+    cache: {ttl_days: 7, terms: pending, confirmed_by: null}
+
+  dorar:
+    name: "Dorar (الدرر السنية) hadith encyclopedia via the local Node sidecar"
+    role: [authority]           # hadith text + each muhaddith's verbatim ruling, book and number
+    contract_provider: dorar
+    adapter: app.sources.providers.dorar
+    credentials: []
+    sidecar:
+      repository: "https://github.com/AhmedElTabarani/dorar-hadith-api"
+      revision: "28f2b3bd1fdaad7dd9e41ac1b42e5afce19a3a1f"
+      licence: MIT
+    live: pending
+    live_confirmed_by: null
+    cache: {ttl_days: 7, terms: pending, confirmed_by: null}
+    notes: "The sidecar scrapes dorar.net; Dorar's own terms for automated access are unconfirmed (O-03)."
+
+  tafsir_center:
+    name: "Tafsir Center (مركز تفسير للدراسات القرآنية) MCP over stdio"
+    role: [authority]           # tafsir texts (Mukhtasar first), asbab al-nuzul
+    contract_provider: tafsir_center
+    adapter: app.sources.providers.tafsir_center
+    credentials: [TAFSIR_MCP_COMMAND]
+    # The MCP server package, its tool names and argument names were not delivered with the handoff; the
+    # mapping below is configuration to be confirmed against the real server (O-03). Until then: mock only.
+    tools: {status: pending, get: null, asbab: null}
+    live: pending
+    live_confirmed_by: null
+    cache: {ttl_days: 7, terms: pending, confirmed_by: null}

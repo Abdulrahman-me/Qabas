@@ -1,0 +1,68 @@
+{
+ "recorded_from": "http://127.0.0.1:5077/v1/site/hadith/JIDbtVSz",
+ "recorded_at": "2026-10-04",
+ "request": {
+  "method": "GET",
+  "path": "/v1/site/hadith/JIDbtVSz",
+  "query": {}
+ },
+ "response": {
+  "status": 200,
+  "content_type": "application/json",
+  "body": {
+   "status": "success",
+   "metadata": {
+    "length": 1,
+    "isCached": false
+   },
+   "data": {
+    "hadith": "الأعْمالُ بالنِّيّاتِ [يعني حديث: إنَّما الأعْمالُ بالنِّيّاتِ، وإنَّما لِكُلِّ امْرِئٍ ما نَوَى، فمَن كانَتْ هِجْرَتُهُ إلى دُنْيا يُصِيبُها، أوْ إلى امْرَأَةٍ يَنْكِحُها، فَهِجْرَتُهُ إلى ما هاجَرَ إلَيْهِ.]",
+    "rawi": "[عمر بن الخطاب]",
+    "mohdith": "الزرقاني",
+    "mohdithId": "1122",
+    "book": "مختصر المقاصد",
+    "bookId": "3664",
+    "numberOrPage": "117",
+    "grade": "صحيح",
+    "explainGrade": "صحيح",
+    "takhrij": "أخرجه البخاري (1) واللفظ له، ومسلم (1907)",
+    "hadithId": "JIDbtVSz",
+    "categories": [
+     {
+      "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+      "name": "رقائق وزهد - النية"
+     },
+     {
+      "id": "f7e0fa86266ba7f1f9ad4c6e6742b213",
+      "name": "صلاة - النية في الأعمال"
+     },
+     {
+      "id": "d7d5c9d92e",
+      "name": "إيمان - الاحتساب والنية"
+     },
+     {
+      "id": "0557c2acef",
+      "name": "نية - النية في العبادات"
+     },
+     {
+      "id": "43c4b40ebd",
+      "name": "وضوء - وجوب النية"
+     }
+    ],
+    "hasSimilarHadith": true,
+    "hasAlternateHadithSahih": false,
+    "hasUsulHadith": true,
+    "similarHadithDorar": "/h/JIDbtVSz?sims=1",
+    "usulHadithDorar": "/h/JIDbtVSz?osoul=1",
+    "urlToGetSimilarHadith": "/v1/site/hadith/similar/JIDbtVSz",
+    "urlToGetUsulHadith": "/v1/site/hadith/usul/JIDbtVSz",
+    "hasSharhMetadata": true,
+    "sharhMetadata": {
+     "id": "74201",
+     "isContainSharh": false,
+     "urlToGetSharh": "/v1/site/sharh/74201"
+    }
+   }
+  }
+ }
+}

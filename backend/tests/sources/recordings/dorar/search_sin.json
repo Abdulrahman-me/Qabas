@@ -1,0 +1,789 @@
+{
+ "recorded_from": "http://127.0.0.1:5077/v1/site/hadith/search?value=%D8%A7%D8%B7%D9%84%D8%A8%D9%88%D8%A7+%D8%A7%D9%84%D8%B9%D9%84%D9%85+%D9%88%D9%84%D9%88+%D8%A8%D8%A7%D9%84%D8%B5%D9%8A%D9%86&removehtml=true&specialist=false&page=1",
+ "recorded_at": "2026-10-04",
+ "request": {
+  "method": "GET",
+  "path": "/v1/site/hadith/search",
+  "query": {
+   "value": "اطلبوا العلم ولو بالصين",
+   "removehtml": "true",
+   "specialist": "false",
+   "page": "1"
+  }
+ },
+ "response": {
+  "status": 200,
+  "content_type": "application/json",
+  "body": {
+   "status": "success",
+   "metadata": {
+    "length": 18,
+    "currentPageCount": 18,
+    "total": 18,
+    "page": 1,
+    "totalPages": 1,
+    "hasNextPage": false,
+    "hasPrevPage": false,
+    "removeHTML": true,
+    "specialist": false,
+    "numberOfNonSpecialist": 18,
+    "numberOfSpecialist": 33,
+    "isCached": false
+   },
+   "data": [
+    {
+     "hadith": "اطلُبوا العِلمَ ولو بالصِّينِ",
+     "rawi": "أنس بن مالك",
+     "mohdith": "ابن حبان",
+     "mohdithId": "354",
+     "book": "المجروحين",
+     "bookId": "13475",
+     "numberOrPage": "1/489",
+     "grade": "باطل لا أصل له",
+     "explainGrade": "باطل لا أصل له",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "Onb9Z6zG",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/Onb9Z6zG?sims=1",
+     "alternateHadithSahihDorar": "/h/Onb9Z6zG?alts=1",
+     "usulHadithDorar": "/h/Onb9Z6zG?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/Onb9Z6zG",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/Onb9Z6zG",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/Onb9Z6zG",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلبوا العلمَ ولَو بالصِّينِ",
+     "rawi": "[أنس بن مالك]",
+     "mohdith": "الزرقاني",
+     "mohdithId": "1122",
+     "book": "مختصر المقاصد",
+     "bookId": "3664",
+     "numberOrPage": "109",
+     "grade": "ضعيف",
+     "explainGrade": "ضعيف",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "m5AGKRFc",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/m5AGKRFc?sims=1",
+     "alternateHadithSahihDorar": "/h/m5AGKRFc?alts=1",
+     "usulHadithDorar": "/h/m5AGKRFc?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/m5AGKRFc",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/m5AGKRFc",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/m5AGKRFc",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلبوا العلمَ ولوْ بالصينِ",
+     "rawi": "أنس بن مالك",
+     "mohdith": "ابن همات الدمشقي",
+     "mohdithId": "1175",
+     "book": "التنكيت والإفادة",
+     "bookId": "6209",
+     "numberOrPage": "29",
+     "grade": "ضعيف",
+     "explainGrade": "ضعيف",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "tMm00OAF",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/tMm00OAF?sims=1",
+     "alternateHadithSahihDorar": "/h/tMm00OAF?alts=1",
+     "usulHadithDorar": "/h/tMm00OAF?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/tMm00OAF",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/tMm00OAF",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/tMm00OAF",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلبوا العلمَ ولو في الصِّينِ",
+     "rawi": "-",
+     "mohdith": "ابن باز",
+     "mohdithId": "1419",
+     "book": "التحفة الكريمة",
+     "bookId": "14039",
+     "numberOrPage": "72",
+     "grade": "ضعيف من جميع طرقه [عند جمهور أهل العلم بالحديث]",
+     "explainGrade": "ضعيف من جميع طرقه [عند جمهور أهل العلم بالحديث]",
+     "takhrij": "",
+     "hadithId": "QZnAWak8",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "0a024724f6168c29a186bfa662103169",
+       "name": "علم - فضل العالم على الجاهل"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      },
+      {
+       "id": "f997061179",
+       "name": "علم - الزيادة من العلم والعمل به"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/QZnAWak8?sims=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/QZnAWak8",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلبوا العلمَ ولو في الصِّينِ",
+     "rawi": "-",
+     "mohdith": "ابن باز",
+     "mohdithId": "1419",
+     "book": "مجموع فتاوى ابن باز",
+     "bookId": "9113",
+     "numberOrPage": "26/240",
+     "grade": "جمهور أهل العلم بالحديث قد حكموا على هذا الحديث بأنه ضعيف من جميع طرقه",
+     "explainGrade": "جمهور أهل العلم بالحديث قد حكموا على هذا الحديث بأنه ضعيف من جميع طرقه",
+     "takhrij": "",
+     "hadithId": "RpCdqR4r",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "0a024724f6168c29a186bfa662103169",
+       "name": "علم - فضل العالم على الجاهل"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      },
+      {
+       "id": "f997061179",
+       "name": "علم - الزيادة من العلم والعمل به"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/RpCdqR4r?sims=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/RpCdqR4r",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلُبُوا العِلْمَ ولو بالصِّينِ",
+     "rawi": "أنس بن مالك",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "السلسلة الضعيفة",
+     "bookId": "556",
+     "numberOrPage": "416",
+     "grade": "باطل",
+     "explainGrade": "باطل",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "Yx6dE0Zf",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/Yx6dE0Zf?sims=1",
+     "alternateHadithSahihDorar": "/h/Yx6dE0Zf?alts=1",
+     "usulHadithDorar": "/h/Yx6dE0Zf?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/Yx6dE0Zf",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/Yx6dE0Zf",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/Yx6dE0Zf",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اُطلُبوا العِلمَ ولو منَ الصِّينِ",
+     "rawi": "-",
+     "mohdith": "محمد ابن عبد الوهاب",
+     "mohdithId": "1206",
+     "book": "الرسائل الشخصية لابن عبد الوهاب",
+     "bookId": "14778",
+     "numberOrPage": "18",
+     "grade": "[لم يصح]",
+     "explainGrade": "[لم يصح]",
+     "takhrij": "",
+     "hadithId": "NMJCFBdZ",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "0a024724f6168c29a186bfa662103169",
+       "name": "علم - فضل العالم على الجاهل"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      },
+      {
+       "id": "f997061179",
+       "name": "علم - الزيادة من العلم والعمل به"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/NMJCFBdZ?sims=1",
+     "alternateHadithSahihDorar": "/h/NMJCFBdZ?alts=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/NMJCFBdZ",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/NMJCFBdZ",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلبوا العلمَ ولو في الصينِ فإن العلمَ فريضةٌ على كلِّ مسلمٍ",
+     "rawi": "-",
+     "mohdith": "القاوقجي",
+     "mohdithId": "1305",
+     "book": "اللؤلؤ المرصوع",
+     "bookId": "6331",
+     "numberOrPage": "40",
+     "grade": "ضعيف",
+     "explainGrade": "ضعيف",
+     "takhrij": "",
+     "hadithId": "fLVYSwgr",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/fLVYSwgr?sims=1",
+     "alternateHadithSahihDorar": "/h/fLVYSwgr?alts=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/fLVYSwgr",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/fLVYSwgr",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلبوا العلمَ ولو بالصِّينِ فإنَّ طلبَ العلمِ فريضةٌ على كلِّ مسلمٍ",
+     "rawi": "أنس بن مالك",
+     "mohdith": "البيهقي",
+     "mohdithId": "458",
+     "book": "المدخل إلى السنن الكبرى",
+     "bookId": "12746",
+     "numberOrPage": "1/292",
+     "grade": "متنه مشهور وأسانيده ضعيفة لا أعرف له إسنادا يثبت بمثله الحديث",
+     "explainGrade": "متنه مشهور وأسانيده ضعيفة لا أعرف له إسنادا يثبت بمثله الحديث",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "wnmpN98H",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      },
+      {
+       "id": "f997061179",
+       "name": "علم - الزيادة من العلم والعمل به"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/wnmpN98H?sims=1",
+     "alternateHadithSahihDorar": "/h/wnmpN98H?alts=1",
+     "usulHadithDorar": "/h/wnmpN98H?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/wnmpN98H",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/wnmpN98H",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/wnmpN98H",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلبوا العلمَ ولو بالصِّينِ، فإنَّ طلبَ العلمِ فريضةٌ على كلِّ مسلمٌ",
+     "rawi": "أنس بن مالك",
+     "mohdith": "البيهقي",
+     "mohdithId": "458",
+     "book": "شعب الإيمان",
+     "bookId": "13433",
+     "numberOrPage": "2/724",
+     "grade": "متنه مشهور وإسناده ضعيف وروي من أوجه كلها ضعيفة",
+     "explainGrade": "متنه مشهور وإسناده ضعيف وروي من أوجه كلها ضعيفة",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "g0vZ9tWd",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/g0vZ9tWd?sims=1",
+     "alternateHadithSahihDorar": "/h/g0vZ9tWd?alts=1",
+     "usulHadithDorar": "/h/g0vZ9tWd?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/g0vZ9tWd",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/g0vZ9tWd",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/g0vZ9tWd",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلُبوا العلمَ ولو بالصِّينِ، فإنَّ طلبَ العلمِ فريضةٌ على كلِّ مسلمٍ",
+     "rawi": "أنس بن مالك",
+     "mohdith": "ابن الجوزي",
+     "mohdithId": "597",
+     "book": "الموضوعات لابن الجوزي",
+     "bookId": "13511",
+     "numberOrPage": "1/347",
+     "grade": "لا يصح",
+     "explainGrade": "لا يصح",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "VaKJXlpw",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/VaKJXlpw?sims=1",
+     "alternateHadithSahihDorar": "/h/VaKJXlpw?alts=1",
+     "usulHadithDorar": "/h/VaKJXlpw?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/VaKJXlpw",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/VaKJXlpw",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/VaKJXlpw",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلبوا العلمَ ولو بالصِّينِ، فإنَّ طلَبَ العلمِ فريضةٌ على كلِّ مسلِمٍ",
+     "rawi": "أنس بن مالك",
+     "mohdith": "ابن الجوزي",
+     "mohdithId": "597",
+     "book": "الموضوعات لابن الجوزي",
+     "bookId": "13511",
+     "numberOrPage": "1/348",
+     "grade": "لا يصح",
+     "explainGrade": "لا يصح",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "hrGAJItX",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/hrGAJItX?sims=1",
+     "alternateHadithSahihDorar": "/h/hrGAJItX?alts=1",
+     "usulHadithDorar": "/h/hrGAJItX?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/hrGAJItX",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/hrGAJItX",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/hrGAJItX",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلبوا العلمَ ولو بالصينِ فإنَّ طلبَ العلمِ فريضةٌ على كلِّ مسلمٍ",
+     "rawi": "أنس بن مالك",
+     "mohdith": "السخاوي",
+     "mohdithId": "902",
+     "book": "المقاصد الحسنة",
+     "bookId": "13484",
+     "numberOrPage": "86",
+     "grade": "ضعيف",
+     "explainGrade": "ضعيف",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "m7PbOQIP",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/m7PbOQIP?sims=1",
+     "alternateHadithSahihDorar": "/h/m7PbOQIP?alts=1",
+     "usulHadithDorar": "/h/m7PbOQIP?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/m7PbOQIP",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/m7PbOQIP",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/m7PbOQIP",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلُبُوا العِلْمَ ولَوْ بالصينِ، فإِنَّ طلَبَ العِلْمِ فريضةٌ على كُلِّ مسلِمٍ",
+     "rawi": "أنس بن مالك",
+     "mohdith": "السيوطي",
+     "mohdithId": "911",
+     "book": "الجامع الصغير",
+     "bookId": "14540",
+     "numberOrPage": "1105",
+     "grade": "ضعيف",
+     "explainGrade": "ضعيف",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118). وقوله: \"طلب العلم فريضة على كل مسلم\" أخرجه ابن ماجه (224)",
+     "hadithId": "6cglwsud",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "0a024724f6168c29a186bfa662103169",
+       "name": "علم - فضل العالم على الجاهل"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      },
+      {
+       "id": "f997061179",
+       "name": "علم - الزيادة من العلم والعمل به"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/6cglwsud?sims=1",
+     "alternateHadithSahihDorar": "/h/6cglwsud?alts=1",
+     "usulHadithDorar": "/h/6cglwsud?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/6cglwsud",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/6cglwsud",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/6cglwsud",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلبوا العلمَ ولو بالصِّينِ, فإنَّ طلبَ العلمِ فريضةٌ على كلِّ مسلمٍ",
+     "rawi": "أنس بن مالك",
+     "mohdith": "العجلوني",
+     "mohdithId": "1162",
+     "book": "كشف الخفاء",
+     "bookId": "13510",
+     "numberOrPage": "1/154",
+     "grade": "ضعيف",
+     "explainGrade": "ضعيف",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "UXrtPHuu",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/UXrtPHuu?sims=1",
+     "alternateHadithSahihDorar": "/h/UXrtPHuu?alts=1",
+     "usulHadithDorar": "/h/UXrtPHuu?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/UXrtPHuu",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/UXrtPHuu",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/UXrtPHuu",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلُبُوا العِلْمَ ولَوْ بالصينِ، فإِنَّ طلَبَ العِلْمِ فريضةٌ على كُلِّ مسلِمٍ.",
+     "rawi": "أنس بن مالك",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "ضعيف الجامع",
+     "bookId": "3670",
+     "numberOrPage": "906",
+     "grade": "موضوع",
+     "explainGrade": "موضوع",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "LIGIYd6d",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/LIGIYd6d?sims=1",
+     "alternateHadithSahihDorar": "/h/LIGIYd6d?alts=1",
+     "usulHadithDorar": "/h/LIGIYd6d?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/LIGIYd6d",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/LIGIYd6d",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/LIGIYd6d",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطْلُبوا العِلمَ ولو بالصِّينِ؛ فإنَّه فَريضةٌ على كلِّ مُسلمٍ.",
+     "rawi": "أنس",
+     "mohdith": "الإمام أحمد",
+     "mohdithId": "241",
+     "book": "المنتخب من العلل للخلال",
+     "bookId": "38",
+     "numberOrPage": "109",
+     "grade": "[منكر]",
+     "explainGrade": "[منكر]",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء)) (2751)، والبيهقي في ((الشعب)) (1543)، وأبو نعيم في ((تاريخ أصبهان)) (2/ 124) واللفظ لهم.",
+     "hadithId": "L03OkUMA",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "0a024724f6168c29a186bfa662103169",
+       "name": "علم - فضل العالم على الجاهل"
+      },
+      {
+       "id": "aacb125b95909bf13c0835b3a0bf7dfb",
+       "name": "علم - وجوب طلب العلم"
+      },
+      {
+       "id": "f997061179",
+       "name": "علم - الزيادة من العلم والعمل به"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/L03OkUMA?sims=1",
+     "alternateHadithSahihDorar": "/h/L03OkUMA?alts=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/L03OkUMA",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/L03OkUMA",
+     "hasSharhMetadata": false
+    },
+    {
+     "hadith": "اطلُبُوا العِلْمَ ولو بالصينِ، فإِنَّ طلَبَ العِلْمِ فريضَةٌ على كُلِّ مسلِمٍ، إِنَّ الملائِكَةَ تَضَعُ أجنِحَتَها لطالِبِ العلمِ رضًا بِما يطلبُهُ.",
+     "rawi": "أنس بن مالك",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "ضعيف الجامع",
+     "bookId": "3670",
+     "numberOrPage": "907",
+     "grade": "موضوع",
+     "explainGrade": "موضوع",
+     "takhrij": "أخرجه العقيلي في ((الضعفاء الكبير)) (2/230)، وابن عدي في ((الكامل في الضعفاء)) (4/118)",
+     "hadithId": "keJ0peia",
+     "categories": [
+      {
+       "id": "df310a9e26efe78e6d4cba4391ae00e5",
+       "name": "علم - الحث على طلب العلم"
+      },
+      {
+       "id": "927a527c1e56368f42728d9c975f2568",
+       "name": "علم - الخروج في طلب العلم"
+      },
+      {
+       "id": "dd8bfed555936405e6f2a60aaa2f416f",
+       "name": "علم - فضل العلم"
+      },
+      {
+       "id": "6706fef6d3ded84903e5072ccb92bcf5",
+       "name": "ملائكة - أعمال الملائكة"
+      },
+      {
+       "id": "31219db5177e98b38931e25a0d41be00",
+       "name": "ملائكة - صفة الملائكة"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": true,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/keJ0peia?sims=1",
+     "alternateHadithSahihDorar": "/h/keJ0peia?alts=1",
+     "usulHadithDorar": "/h/keJ0peia?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/keJ0peia",
+     "urlToGetAlternateHadithSahih": "/v1/site/hadith/alternate/keJ0peia",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/keJ0peia",
+     "hasSharhMetadata": false
+    }
+   ]
+  }
+ }
+}

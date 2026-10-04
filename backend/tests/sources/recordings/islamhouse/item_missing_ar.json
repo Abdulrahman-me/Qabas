@@ -1,0 +1,16 @@
+{
+ "recorded_from": "https://api3.islamhouse.com/v3/{key}/main/get-item/999999999/ar/json",
+ "recorded_at": "2026-10-04",
+ "request": {
+  "method": "GET",
+  "path": "/main/get-item/999999999/ar/json",
+  "query": {}
+ },
+ "response": {
+  "status": 200,
+  "content_type": "application/json",
+  "body": {
+   "error": "Error: There is no Data"
+  }
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "recorded_from": "https://api3.islamhouse.com/v3/{key}/main/get-item/2839210/ar/json",
+ "recorded_at": "2026-10-04",
+ "request": {
+  "method": "GET",
+  "path": "/main/get-item/2839210/ar/json",
+  "query": {}
+ },
+ "response": {
+  "status": 200,
+  "content_type": "application/json",
+  "body": {
+   "id": 2839210,
+   "sourceid": 2839210,
+   "source_id": 2839210,
+   "title": "المنتقى من موسوعة الأحاديث النبوية",
+   "description": "موسوعة منتقاة من من الأحاديث النبوية المهمة التي تغطي مختلف جوانب الحياة، بدءًا من العقائد، وختامًا بالأدعية والأذكار ، ويهدف هذا الكتاب إلى شرح وتفسير الأحاديث النبوية، وتوضيح معانيها ودلالاتها، وتوجيه المسلمين في كيفية تطبيقها في حياتهم اليومية .",
+   "full_description": null,
+   "type": "books",
+   "add_date": 1725182985,
+   "update_date": false,
+   "orginal_item": "yes",
+   "translation_language": "ar",
+   "source_language": "ar",
+   "display_box_mp4_default": 1,
+   "image": null,
+   "locales": [
+    "ar"
+   ],
+   "locales-types": {
+    "ar": {
+     "locale": "ar",
+     "type": "books"
+    }
+   },
+   "case": "published",
+   "importance_level": "exceptional",
+   "hits": 4370,
+   "prepared_by": [
+    {
+     "id": 8636,
+     "source_id": 8636,
+     "title": "جمعية الدعوة والإرشاد وتوعية الجاليات بالربوة",
+     "type": "author",
+     "kind": "author",
+     "description": "<p>مؤسسة خيرية دعوية قائمة على جهود المحتسبين، وتبرعات المحسنين، أسست عام 1414هـ، بتوجيه من العلامة ابن باز - رحمه الله - وتعمل تحت إشراف وزارة الشؤون الإسلامية والأوقاف والدعوة والإرشاد.</p>",
+     "api_url": "https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/get-author/8636/ar/json"
+    },
+    {
+     "id": 8636,
+     "source_id": 8636,
+     "title": "جمعية الدعوة والإرشاد وتوعية الجاليات بالربوة",
+     "type": "source",
+     "kind": "source",
+     "description": "<p>مؤسسة خيرية دعوية قائمة على جهود المحتسبين، وتبرعات المحسنين، أسست عام 1414هـ، بتوجيه من العلامة ابن باز - رحمه الله - وتعمل تحت إشراف وزارة الشؤون الإسلامية والأوقاف والدعوة والإرشاد.</p>",
+     "api_url": "https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/get-author/8636/ar/json"
+    },
+    {
+     "id": 2828447,
+     "source_id": 2828447,
+     "title": "جمعية خدمة المحتوى الإسلامي باللغات",
+     "type": "source",
+     "kind": "source",
+     "description": null,
+     "api_url": "https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/get-author/2828447/ar/json"
+    },
+    {
+     "id": 2828466,
+     "source_id": 2828466,
+     "title": "الفريق العلمي بجمعية خدمة المحتوى الإسلامي باللغات",
+     "type": "author",
+     "kind": "author",
+     "description": null,
+     "api_url": "https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/get-author/2828466/ar/json"
+    }
+   ],
+   "attachments": [
+    {
+     "order": 0,
+     "size": "17.64 MB",
+     "updated_at": 1746030951,
+     "extension_type": "PDF",
+     "description": "المنتقى من موسوعة الأحاديث النبوية",
+     "url": "https://d1.islamhouse.com/data/ar/ih_books/single2/ar-almontka-mn-alhadeth.pdf"
+    }
+   ]
+  }
+ }
+}

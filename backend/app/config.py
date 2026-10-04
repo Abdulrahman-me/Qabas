@@ -74,12 +74,17 @@ class Settings(BaseSettings):
     tts_provider: str | None = None
     tts_api_key: SecretStr | None = None
 
-    # Sources (Phase 9).
+    # Sources (Phase 9; docs/SOURCE_POLICY.md). The canonical mushaf is fetched per environment (D-88).
+    mushaf_dir: Path = BACKEND_DIR / "var" / "sources" / "mushaf"
     quran_foundation_client_id: str | None = None
     quran_foundation_client_secret: SecretStr | None = None
     quran_mcp_url: str | None = None
     tafsir_mcp_command: str | None = None
-    dorar_base_url: str = "http://127.0.0.1:5000"
+    dorar_base_url: str = "http://127.0.0.1:5000"           # the local sidecar (scripts/dorar_sidecar.py)
+    dorar_sidecar_dir: Path = BACKEND_DIR / "var" / "sidecars" / "dorar"
+    quran_foundation_api_base: str = "https://apis.quran.foundation/content/api/v4"
+    quran_foundation_auth_url: str = "https://oauth2.quran.foundation/oauth2/token"
+    quran_audio_base_url: str = "https://verses.quran.com/"
     hadeethenc_base_url: str | None = None
     quranenc_base_url: str | None = None
     islamhouse_base_url: str | None = None

@@ -23,7 +23,7 @@
 | 7 | Finish transaction, FSRS, planner, reviews, glossary, stats | ✅ Done | `phase-7` | **Milestone A: durable learning slice** |
 | 7.1 | Phase 7 audit corrections (corrective checkpoint) | ✅ Done | `phase-7.1` | Independent audit; 5 findings fixed (F-48–F-52) |
 | 8 | Content import (Salah reference, Unit 0 drafts), approval-gated publish, staging | ✅ Done | `phase-8` | CI green (582 passed); pipeline complete; real content correctly blocked on human/source/media inputs |
-| 9 | Source adapters (tool layer) | ⏳ Not started | `phase-9` | |
+| 9 | Source adapters (tool layer) | 🔄 In progress (handed off mid-phase; see Phase 9 status note) | `phase-9` | |
 | 10 | Recitation service (`asr` worker) | ⏳ Not started | `phase-10` | **Milestone B: complete learning experience** |
 | 11 | LLM adapter and agent infrastructure | ⏳ Not started | `phase-11` | |
 | 12 | Lesson Factory pipeline: plan → QA | ⏳ Not started | `phase-12` | |
@@ -404,6 +404,11 @@ Re-review of 01_PRODUCT (curriculum incl. the 0.1 reference design, content/bran
 
 **Gates:** O-03 (credentials/licenses/cache terms). Mock adapters proceed without them.
 **Exit:** tag `phase-9`.
+
+**Status note (partial, handed off; branch `phase/9-source-adapters`, not tagged, `main` unchanged).**
+Done: `docs/SOURCE_POLICY.md` (authority/capability matrix), `content/sources/{providers,mushaf,translations}.yaml`, `normalize_ar` (+F-66 KFGQPC marks), mushaf loader/get/resolve/find_exact/find_fuzzy on the digest-pinned KFGQPC Hafs v3.0 (D-88; `scripts/fetch_mushaf.py`, file git-ignored), errors/records/resilience/policy/cache, adapters QuranEnc, HadeethEnc, Dorar (+ sidecar manager, `scripts/dorar_sidecar.py`), grade table (D-94), recorded fixtures (`scripts/record_sources.py`, `tests/sources/recordings/`), mushaf tests.
+Not done: Quran Foundation, IslamHouse and Tafsir Center MCP adapters; adapter/resilience/cache/sidecar tests; `sources.raw` persistence; verified scripture insertion + Unit 0 integration; ruff/mypy cleanup; decisions D-88..D-97 and findings F-66..F-70 still to be written into the tables below; README; product notes.
+
 
 ---
 

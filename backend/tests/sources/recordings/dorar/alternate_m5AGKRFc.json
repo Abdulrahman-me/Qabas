@@ -1,0 +1,50 @@
+{
+ "recorded_from": "http://127.0.0.1:5077/v1/site/hadith/alternate/m5AGKRFc",
+ "recorded_at": "2026-10-04",
+ "request": {
+  "method": "GET",
+  "path": "/v1/site/hadith/alternate/m5AGKRFc",
+  "query": {}
+ },
+ "response": {
+  "status": 200,
+  "content_type": "application/json",
+  "body": {
+   "status": "success",
+   "metadata": {
+    "isCached": false
+   },
+   "data": {
+    "hadith": "قال ابنُ مسعودٍ : تعلَّموا ، تعلَّموا [ فإذا ] علمتُم فاعمَلوا",
+    "rawi": "علقمة بن قيس",
+    "mohdith": "الألباني",
+    "mohdithId": "1420",
+    "book": "اقتضاء العلم",
+    "bookId": "13450",
+    "numberOrPage": "10",
+    "grade": "إسناده موقوف حسن",
+    "explainGrade": "إسناده موقوف حسن",
+    "takhrij": "",
+    "hadithId": "FjLAjTkN",
+    "categories": [
+     {
+      "id": "df310a9e26efe78e6d4cba4391ae00e5",
+      "name": "علم - الحث على طلب العلم"
+     },
+     {
+      "id": "6f4d96fe7184b2f49f951fdfd6b5ad36",
+      "name": "علم - العمل بالعلم"
+     }
+    ],
+    "hasSimilarHadith": true,
+    "hasAlternateHadithSahih": false,
+    "hasUsulHadith": true,
+    "similarHadithDorar": "/h/FjLAjTkN?sims=1",
+    "usulHadithDorar": "/h/FjLAjTkN?osoul=1",
+    "urlToGetSimilarHadith": "/v1/site/hadith/similar/FjLAjTkN",
+    "urlToGetUsulHadith": "/v1/site/hadith/usul/FjLAjTkN",
+    "hasSharhMetadata": false
+   }
+  }
+ }
+}

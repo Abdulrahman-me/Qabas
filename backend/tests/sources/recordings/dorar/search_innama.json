@@ -1,0 +1,1113 @@
+{
+ "recorded_from": "http://127.0.0.1:5077/v1/site/hadith/search?value=%D8%A5%D9%86%D9%85%D8%A7+%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84+%D8%A8%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AA&removehtml=true&specialist=false&page=1",
+ "recorded_at": "2026-10-04",
+ "request": {
+  "method": "GET",
+  "path": "/v1/site/hadith/search",
+  "query": {
+   "value": "إنما الأعمال بالنيات",
+   "removehtml": "true",
+   "specialist": "false",
+   "page": "1"
+  }
+ },
+ "response": {
+  "status": 200,
+  "content_type": "application/json",
+  "body": {
+   "status": "success",
+   "metadata": {
+    "length": 23,
+    "currentPageCount": 23,
+    "total": 23,
+    "page": 1,
+    "totalPages": 1,
+    "hasNextPage": false,
+    "hasPrevPage": false,
+    "removeHTML": true,
+    "specialist": false,
+    "numberOfNonSpecialist": 23,
+    "numberOfSpecialist": 72,
+    "isCached": false
+   },
+   "data": [
+    {
+     "hadith": "الأعْمالُ بالنِّيّاتِ [يعني حديث: إنَّما الأعْمالُ بالنِّيّاتِ، وإنَّما لِكُلِّ امْرِئٍ ما نَوَى، فمَن كانَتْ هِجْرَتُهُ إلى دُنْيا يُصِيبُها، أوْ إلى امْرَأَةٍ يَنْكِحُها، فَهِجْرَتُهُ إلى ما هاجَرَ إلَيْهِ.]",
+     "rawi": "[عمر بن الخطاب]",
+     "mohdith": "الزرقاني",
+     "mohdithId": "1122",
+     "book": "مختصر المقاصد",
+     "bookId": "3664",
+     "numberOrPage": "117",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (1) واللفظ له، ومسلم (1907)",
+     "hadithId": "JIDbtVSz",
+     "categories": [
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "f7e0fa86266ba7f1f9ad4c6e6742b213",
+       "name": "صلاة - النية في الأعمال"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "0557c2acef",
+       "name": "نية - النية في العبادات"
+      },
+      {
+       "id": "43c4b40ebd",
+       "name": "وضوء - وجوب النية"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/JIDbtVSz?sims=1",
+     "usulHadithDorar": "/h/JIDbtVSz?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/JIDbtVSz",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/JIDbtVSz",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "74201",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/74201"
+     }
+    },
+    {
+     "hadith": "الأعْمالُ بالنِّيّاتِ [يعني حديث: إنَّما الأعْمالُ بالنِّيّاتِ، وإنَّما لِكُلِّ امْرِئٍ ما نَوَى، فمَن كانَتْ هِجْرَتُهُ إلى دُنْيا يُصِيبُها، أوْ إلى امْرَأَةٍ يَنْكِحُها، فَهِجْرَتُهُ إلى ما هاجَرَ إلَيْهِ.]",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "شعيب الأرناؤوط",
+     "mohdithId": "1438",
+     "book": "تخريج سير أعلام النبلاء",
+     "bookId": "48",
+     "numberOrPage": "13/ 210",
+     "grade": "صحيح مشهور",
+     "explainGrade": "صحيح مشهور",
+     "takhrij": "أخرجه البخاري (1)، وأبو داود (2201)، وابن ماجه (4227) بلفظه وفيآخره زيادة.",
+     "hadithId": "mfG89sgn",
+     "categories": [
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "0557c2acef",
+       "name": "نية - النية في العبادات"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/mfG89sgn?sims=1",
+     "usulHadithDorar": "/h/mfG89sgn?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/mfG89sgn",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/mfG89sgn",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "203759",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/203759"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّةِ، وإنما لامرئٍ ما نوى.",
+     "rawi": "عمر",
+     "mohdith": "ابن المنذر",
+     "mohdithId": "318",
+     "book": "الأوسط لابن المنذر",
+     "bookId": "93",
+     "numberOrPage": "3/212",
+     "grade": "ثابت",
+     "explainGrade": "ثابت",
+     "takhrij": "أخرجه البخاري (3898)، ومسلم (1907)، والنسائي (75) باختلاف يسير تامًا.",
+     "hadithId": "M0Tujy2c",
+     "categories": [
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "ba5c369d31bfa6283a2cfbf7b6667d16",
+       "name": "رقائق وزهد - تقوى الله"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "17e8e994ca",
+       "name": "رقائق وزهد - من كانت نيته وهمته للدنيا والآخرة"
+      },
+      {
+       "id": "0557c2acef",
+       "name": "نية - النية في العبادات"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/M0Tujy2c?sims=1",
+     "usulHadithDorar": "/h/M0Tujy2c?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/M0Tujy2c",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/M0Tujy2c",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "211139",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/211139"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّةِ.",
+     "rawi": "-",
+     "mohdith": "ابن المنذر",
+     "mohdithId": "318",
+     "book": "الأوسط لابن المنذر",
+     "bookId": "93",
+     "numberOrPage": "2/154",
+     "grade": "ثابت",
+     "explainGrade": "ثابت",
+     "takhrij": "",
+     "hadithId": "fYoNWk56",
+     "categories": [
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "17e8e994ca",
+       "name": "رقائق وزهد - من كانت نيته وهمته للدنيا والآخرة"
+      },
+      {
+       "id": "62337800bd",
+       "name": "صلاة - النية في الصلاة"
+      },
+      {
+       "id": "0557c2acef",
+       "name": "نية - النية في العبادات"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/fYoNWk56?sims=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/fYoNWk56",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "211149",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/211149"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّاتِ",
+     "rawi": "[عمر بن الخطاب]",
+     "mohdith": "النووي",
+     "mohdithId": "676",
+     "book": "الإيضاح في مناسك الحج",
+     "bookId": "13466",
+     "numberOrPage": "40",
+     "grade": "ثبت في الحديث المجمع على صحته",
+     "explainGrade": "ثبت في الحديث المجمع على صحته",
+     "takhrij": "أخرجه البخاري (1)، وأبو داود (2201) بلفظه تامًا، ومسلم (1907) باختلاف يسير تامًا.",
+     "hadithId": "tZZynYKc",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "f7e0fa86266ba7f1f9ad4c6e6742b213",
+       "name": "صلاة - النية في الأعمال"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/tZZynYKc?sims=1",
+     "usulHadithDorar": "/h/tZZynYKc?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/tZZynYKc",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/tZZynYKc",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "63230",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/63230"
+     }
+    },
+    {
+     "hadith": "إنما الأعمالُ بالنياتِ وإنما لكلِّ امرئٍ ما نَوَى",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "غاية المرام",
+     "bookId": "3694",
+     "numberOrPage": "14",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (1)، وأبو داود (2201) بلفظه، ومسلم (1907) بلفظ مقارب",
+     "hadithId": "RaGR74gn",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "f7e0fa86266ba7f1f9ad4c6e6742b213",
+       "name": "صلاة - النية في الأعمال"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/RaGR74gn?sims=1",
+     "usulHadithDorar": "/h/RaGR74gn?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/RaGR74gn",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/RaGR74gn",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "70031",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/70031"
+     }
+    },
+    {
+     "hadith": "إِنَّما الأعمالُ بالنياتِ وإِنَّما لِكلِّ امرئٍ ما نَوَى",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "غاية المرام",
+     "bookId": "3694",
+     "numberOrPage": "401",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (1)، وأبو داود (2201) بلفظه، ومسلم (1907) بلفظ مقارب",
+     "hadithId": "i75JRPLj",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "f7e0fa86266ba7f1f9ad4c6e6742b213",
+       "name": "صلاة - النية في الأعمال"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/i75JRPLj?sims=1",
+     "usulHadithDorar": "/h/i75JRPLj?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/i75JRPLj",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/i75JRPLj",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "67613",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/67613"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّةِ ( و في روايةٍ بالنِّيَّاتِ ) و إنَّما لكلِّ امرئٍ ما نوى، فمَن كانت هجرتُه إلى اللهِ و رسولِه، فهِجرتُه إلى اللهِ و رسولِه، و مَن كانت هجرتُه إلى دنيا يُصيبُها ، أو امرأةٍ ينكِحُها، فهجرتُه إلى ما هاجرَ إليهِ",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "صحيح الترغيب",
+     "bookId": "531",
+     "numberOrPage": "10",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (6689)، والترمذي (1647)، والنسائي (75)، وأحمد (168) واللفظ لهم.",
+     "hadithId": "xa4BE1oU",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "1cceb0d645",
+       "name": "جهاد - الهجرة من دار العدو إلى دار الإسلام"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/xa4BE1oU?sims=1",
+     "usulHadithDorar": "/h/xa4BE1oU?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/xa4BE1oU",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/xa4BE1oU",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "3446",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/3446"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّاتِ، وإنَّما لكُلِّ امرِئٍ ما نَوى، فمَن كانَت هِجرَتُه إلى دُنيا يُصيبُها، أو إلى امرَأةٍ يَنكِحُها، فهِجرَتُه إلى ما هاجَرَ إليه.",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "البخاري",
+     "mohdithId": "256",
+     "book": "صحيح البخاري",
+     "bookId": "6216",
+     "numberOrPage": "1",
+     "grade": "[صحيح]",
+     "explainGrade": "[صحيح]",
+     "takhrij": "أخرجه أبو داود (2201)، وابن ماجه (4227)، والطحاوي في ((شرح معاني الآثار)) (4650) واللفظ لهم.",
+     "hadithId": "45wXAdej",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "1cceb0d645",
+       "name": "جهاد - الهجرة من دار العدو إلى دار الإسلام"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/45wXAdej?sims=1",
+     "usulHadithDorar": "/h/45wXAdej?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/45wXAdej",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/45wXAdej",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "3429",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/3429"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّةِ، وإنَّما لامرٍئ ما نوى، فمَن كانت هِجْرَتُه إلى اللهِ ورَسولِه فهِجْرتُه إلى اللهِ ورَسولِه، ومن كانت هِجْرَتُه إلى دُنيا يُصيبُها أو امرأةٍ يَنكِحُها، فهِجْرَتُه إلى ما هاجَرَ إليه.",
+     "rawi": "عمر",
+     "mohdith": "ابن المنذر",
+     "mohdithId": "318",
+     "book": "الأوسط لابن المنذر",
+     "bookId": "93",
+     "numberOrPage": "2022/10/2",
+     "grade": "ثابت",
+     "explainGrade": "ثابت",
+     "takhrij": "أخرجه البخاري (3898)، ومسلم (1907)، والنسائي (75) باختلاف يسير.",
+     "hadithId": "eMH1IK8s",
+     "categories": [
+      {
+       "id": "8686e878673d7df90c675e570755270b",
+       "name": "جهاد - الترغيب في الجهاد"
+      },
+      {
+       "id": "ba5c369d31bfa6283a2cfbf7b6667d16",
+       "name": "رقائق وزهد - تقوى الله"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "17e8e994ca",
+       "name": "رقائق وزهد - من كانت نيته وهمته للدنيا والآخرة"
+      },
+      {
+       "id": "0557c2acef",
+       "name": "نية - النية في العبادات"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/eMH1IK8s?sims=1",
+     "usulHadithDorar": "/h/eMH1IK8s?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/eMH1IK8s",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/eMH1IK8s",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "211140",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/211140"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّاتِ وإنَّما لِكلِّ امرئٍ ما نوى فمن كانت هجرتُهُ إلى اللَّهِ ورسولِهِ فَهجرتُهُ إلى اللَّهِ ورسولِهِ ومن كانت هجرتُهُ إلى دنيا يصيبُها أو امرأةٍ ينْكحُها فَهجرتُهُ إلى ما هاجرَ إليْهِ",
+     "rawi": "[عمر بن الخطاب]",
+     "mohdith": "ابن تيمية",
+     "mohdithId": "728",
+     "book": "مجموع الفتاوى",
+     "bookId": "9111",
+     "numberOrPage": "20/223",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (1)، وأبو داود (2201) كلاهما بلفظه، ومسلم (1907) بلفظ مقارب.",
+     "hadithId": "jVkVw4xF",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "1cceb0d645",
+       "name": "جهاد - الهجرة من دار العدو إلى دار الإسلام"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/jVkVw4xF?sims=1",
+     "usulHadithDorar": "/h/jVkVw4xF?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/jVkVw4xF",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/jVkVw4xF",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "64107",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/64107"
+     }
+    },
+    {
+     "hadith": "«إنَّما الأعمالُ بالنِّيَّاتِ، وإنَّما لكُلِّ امرئٍ ما نوى، فمَن كانت هِجْرَتُه إلى اللهِ ورَسولِه فهِجْرَتُه إلى اللهِ ورَسولِه، ومن كانت هِجْرَتُه إلى دُنيا يُصيبُها أو امْرأةٍ يَتزَوَّجُها فهِجْرَتُه إلى ما هاجَرَ إليه»",
+     "rawi": "-",
+     "mohdith": "ابن تيمية",
+     "mohdithId": "728",
+     "book": "الفتاوى الكبرى",
+     "bookId": "89",
+     "numberOrPage": "5 / 96",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "",
+     "hadithId": "ClUI9eqD",
+     "categories": [
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "f7e0fa86266ba7f1f9ad4c6e6742b213",
+       "name": "صلاة - النية في الأعمال"
+      },
+      {
+       "id": "036416861397900a9a10fb7f19121768",
+       "name": "مغازي - إذن النبي صلى الله عليه وسلم للمسلمين في الهجرة إلى المدينة"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "0557c2acef",
+       "name": "نية - النية في العبادات"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/ClUI9eqD?sims=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/ClUI9eqD",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "211125",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/211125"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّةِ وإنَّما لامرئٍ ما نوَى فمن كانت هجرتُهُ إلى اللَّهِ ورسولِهِ فَهِجرتُهُ إلى اللَّهِ ورسولِهِ ومن كانت هجرتُهُ لدُنْيا يصيبُها أوِ امرأةٍ يتزوَّجُها فَهِجرتُهُ إلى ما هاجرَ إليهِ",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "صحيح النسائي",
+     "bookId": "13561",
+     "numberOrPage": "3803",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (1)، ومسلم (1907)، وأبو داود (2201) واللفظ لهم.",
+     "hadithId": "C5yKkD9O",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "1cceb0d645",
+       "name": "جهاد - الهجرة من دار العدو إلى دار الإسلام"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/C5yKkD9O?sims=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/C5yKkD9O",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "3445",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/3445"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّةِ، وإنَّما لِكُلِّ امرئٍ ما نوَى، فمَن كانت هِجرتُهُ إلى اللَّهِ ورسولِهِ، فَهِجرتُهُ إلى اللَّهِ ورسولِهِ، ومن كانت هجرتُهُ إلى دُنْيا يصيبُها ، أوِ امرأةٍ يتزوَّجُها، فَهِجرتُهُ إلى ما هاجرَ إليهِ",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "ابن كثير",
+     "mohdithId": "774",
+     "book": "طبقات الشافعية لابن كثير",
+     "bookId": "16583",
+     "numberOrPage": "1/374",
+     "grade": "صحيح، متفق على صحته، وروي من طرق متواترة",
+     "explainGrade": "صحيح، متفق على صحته، وروي من طرق متواترة",
+     "takhrij": "أخرجه البخاري (1)، ومسلم (1907) كلاهما بلفظه.",
+     "hadithId": "pLRYj2HL",
+     "categories": [
+      {
+       "id": "8686e878673d7df90c675e570755270b",
+       "name": "جهاد - الترغيب في الجهاد"
+      },
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "17e8e994ca",
+       "name": "رقائق وزهد - من كانت نيته وهمته للدنيا والآخرة"
+      },
+      {
+       "id": "0557c2acef",
+       "name": "نية - النية في العبادات"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/pLRYj2HL?sims=1",
+     "usulHadithDorar": "/h/pLRYj2HL?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/pLRYj2HL",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/pLRYj2HL",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "77125",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/77125"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّةِ، وإنما لامرئٍ ما نَوى، فمَن كانت هجرتُهُ إلى اللَّهِ ورسولِهِ، فَهِجرتُهُ إلى اللَّهِ ورسولِهِ، ومن كانَت هجرتُهُ لدُنْيا يُصيبُها أوِ امرأةٍ يتزوَّجُها، فَهِجرتُهُ إلى ما هاجرَ إليهِ",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "صحيح النسائي",
+     "bookId": "13561",
+     "numberOrPage": "3437",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (1)، ومسلم (1907)، وأبو داود (2201) واللفظ لهم.",
+     "hadithId": "5hv2L78z",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "1cceb0d645",
+       "name": "جهاد - الهجرة من دار العدو إلى دار الإسلام"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/5hv2L78z?sims=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/5hv2L78z",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "3440",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/3440"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّاتِ وإنَّما لِكلِّ امرئٍ ما نوى فمَن كانَت هجرتُهُ إلى اللَّهِ ورسولِهِ فَهجرتُهُ إلى اللَّهِ ورسولِهِ ومن كانت هجرتُهُ لدنيا يُصيبُها أوِ امرأةٍ يتزوَّجُها فَهجرتُهُ إلى ما هاجرَ إليْهِ",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "صحيح أبي داود",
+     "bookId": "13559",
+     "numberOrPage": "2201",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (1)، ومسلم (1907)، وأبو داود (2201) واللفظ لهم.",
+     "hadithId": "9xwRKQ23",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "1cceb0d645",
+       "name": "جهاد - الهجرة من دار العدو إلى دار الإسلام"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/9xwRKQ23?sims=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/9xwRKQ23",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "3443",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/3443"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّةِ وإنَّما لامرئٍ ما نوى فمن كانت هجرتُه إلى اللَّهِ وإلى ورسولِه فَهجرتُه إلى اللَّهِ وإلى ورسولِه ومن كانت هجرتُه إلى دنيا يصيبُها أوِ امرأةٍ يتزوَّجُها فَهجرتُه إلى ما هاجرَ إليهِ",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "صحيح الترمذي",
+     "bookId": "977",
+     "numberOrPage": "1647",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (1)، ومسلم (1907)، وأبو داود (2201) واللفظ لهم.",
+     "hadithId": "2K0jR59j",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "1cceb0d645",
+       "name": "جهاد - الهجرة من دار العدو إلى دار الإسلام"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/2K0jR59j?sims=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/2K0jR59j",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "3441",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/3441"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّةِ، وإنَّما لامرئِ ما نوى، فمَن كانت هجرتُه إلى اللَّهِ وإلى رسولِه فَهجرتهُ إلى اللَّهِ وإلى رسولِه ومَن كانت هجرتُه إلى دُنيا يُصيبُها أو امرأةٍ ينكحُها فَهجرتُه إلى ما هاجرَ إليهِ",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "صحيح النسائي",
+     "bookId": "13561",
+     "numberOrPage": "75",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (1)، ومسلم (1907)، وأبو داود (2201) واللفظ لهم.",
+     "hadithId": "k6Pvq9v2",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "1cceb0d645",
+       "name": "جهاد - الهجرة من دار العدو إلى دار الإسلام"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/k6Pvq9v2?sims=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/k6Pvq9v2",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "3442",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/3442"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّةِ، وإنَّما لامرِئٍ ما نَوى، فمَن كانتْ هِجرتُه إلى اللهِ ورسولِه فهِجرتُه إلى اللهِ ورسولِه، ومَن كانتْ هِجرتُه إلى دُنْيا يُصيبُها ، أو امرأةٍ يَتزوَّجُها، فهِجرتُه إلى ما هاجَرَ إليه.",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "شعيب الأرناؤوط",
+     "mohdithId": "1438",
+     "book": "تخريج سنن الدارقطني",
+     "bookId": "46",
+     "numberOrPage": "131",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (6689)، ومسلم (1907)، وأبو داود (2201)، والترمذي (1647) واللفظ لهم.",
+     "hadithId": "h4p05ZEt",
+     "categories": [
+      {
+       "id": "8686e878673d7df90c675e570755270b",
+       "name": "جهاد - الترغيب في الجهاد"
+      },
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "17e8e994ca",
+       "name": "رقائق وزهد - من كانت نيته وهمته للدنيا والآخرة"
+      },
+      {
+       "id": "0557c2acef",
+       "name": "نية - النية في العبادات"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/h4p05ZEt?sims=1",
+     "usulHadithDorar": "/h/h4p05ZEt?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/h4p05ZEt",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/h4p05ZEt",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "140267",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/140267"
+     }
+    },
+    {
+     "hadith": "إنَّما الأعمالُ بالنِّيَّةِ، وإنَّما لامرِئٍ ما نَوى، فمَن كانَت هِجرَتُه إلى اللهِ ورَسولِه فهِجرَتُه إلى اللهِ ورَسولِه، ومَن كانَت هِجرَتُه لدُنيا يُصيبُها أوِ امرَأةٍ يَتَزَوَّجُها فهِجرَتُه إلى ما هاجَرَ إليه.",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "مسلم",
+     "mohdithId": "261",
+     "book": "صحيح مسلم",
+     "bookId": "3088",
+     "numberOrPage": "1907",
+     "grade": "[صحيح]",
+     "explainGrade": "[صحيح]",
+     "takhrij": "أخرجه البخاري (54)، والترمذي (1647) واللفظ لهما، وأبو داود (2201) باختلاف يسير.",
+     "hadithId": "lkRAghzd",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "1cceb0d645",
+       "name": "جهاد - الهجرة من دار العدو إلى دار الإسلام"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/lkRAghzd?sims=1",
+     "usulHadithDorar": "/h/lkRAghzd?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/lkRAghzd",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/lkRAghzd",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "3431",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/3431"
+     }
+    },
+    {
+     "hadith": "يا أيُّها النَّاسُ، إنَّما الأعمالُ بالنِّيَّةِ، وإنَّما لامرِئٍ ما نَوى، فمَن كانَت هِجرَتُه إلى اللهِ ورَسولِه، فهِجرَتُه إلى اللهِ ورَسولِه، ومَن هاجَرَ إلى دُنيا يُصيبُها أوِ امرَأةٍ يَتَزَوَّجُها، فهِجرَتُه إلى ما هاجَرَ إليه.",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "البخاري",
+     "mohdithId": "256",
+     "book": "صحيح البخاري",
+     "bookId": "6216",
+     "numberOrPage": "6953",
+     "grade": "[صحيح]",
+     "explainGrade": "[صحيح]",
+     "takhrij": "أخرجه مسلم (1907)، والترمذي (1647) واللفظ لهما، وأبو داود (2201) باختلاف يسير.",
+     "hadithId": "XwSlTK8a",
+     "categories": [
+      {
+       "id": "db4b5679c5317ee1e2954d56d5e8662b",
+       "name": "جهاد - فضل الهجرة"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "f7e0fa86266ba7f1f9ad4c6e6742b213",
+       "name": "صلاة - النية في الأعمال"
+      },
+      {
+       "id": "43c4b40ebd",
+       "name": "وضوء - وجوب النية"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/XwSlTK8a?sims=1",
+     "usulHadithDorar": "/h/XwSlTK8a?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/XwSlTK8a",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/XwSlTK8a",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "3436",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/3436"
+     }
+    },
+    {
+     "hadith": "إنما الأعمالُ بالنيَّاتِ ولكلِّ امرئٍ ما نوى فمن كانت هجرتُه إلى اللهِ وإلى رسولِه فهجرتُه إلى اللهِ وإلى رسولِه ومن كانت هجرتُه لدنيا يُصيبُها أو امرأةٍ يتزوَّجُها فهجرتُه إلى ما هاجرَ إليهِ",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "الألباني",
+     "mohdithId": "1420",
+     "book": "صحيح ابن ماجه",
+     "bookId": "13560",
+     "numberOrPage": "3424",
+     "grade": "صحيح",
+     "explainGrade": "صحيح",
+     "takhrij": "أخرجه البخاري (1)، ومسلم (1907)، وأبو داود (2201) واللفظ لهم.",
+     "hadithId": "cszITMVP",
+     "categories": [
+      {
+       "id": "c83d7c599cf63e40908d32ae8d689342",
+       "name": "جهاد - النية في القتال والغزو"
+      },
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "1cceb0d645",
+       "name": "جهاد - الهجرة من دار العدو إلى دار الإسلام"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": false,
+     "similarHadithDorar": "/h/cszITMVP?sims=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/cszITMVP",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "3444",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/3444"
+     }
+    },
+    {
+     "hadith": "سَمِعتُ رَسولَ اللهِ صلَّى اللهُ عليه وسلَّم يقولُ: إنَّما الأعمالُ بالنِّيَّةِ، وإنَّما لامرِئٍ ما نَوى، فمَن كانَت هِجرَتُه إلى اللهِ ورَسولِه فهِجرَتُه إلى اللهِ ورَسولِه، ومَن كانَت هِجرَتُه إلى دُنيا يُصيبُها أوِ امرَأةٍ يَتَزَوَّجُها فهِجرَتُه إلى ما هاجَرَ إليه.",
+     "rawi": "عمر بن الخطاب",
+     "mohdith": "البخاري",
+     "mohdithId": "256",
+     "book": "صحيح البخاري",
+     "bookId": "6216",
+     "numberOrPage": "6689",
+     "grade": "[صحيح]",
+     "explainGrade": "[صحيح]",
+     "takhrij": "أخرجه مسلم (1907)، والترمذي (1647) واللفظ لهما، وأبو داود (2201) باختلاف يسير.",
+     "hadithId": "Bkjjidcf",
+     "categories": [
+      {
+       "id": "6abe831d18176579d5d94c0a8b7c7d4e",
+       "name": "رقائق وزهد - الإخلاص"
+      },
+      {
+       "id": "c481e8eb6c1426794e80d8ac5ca68e9c",
+       "name": "رقائق وزهد - النية"
+      },
+      {
+       "id": "f7e0fa86266ba7f1f9ad4c6e6742b213",
+       "name": "صلاة - النية في الأعمال"
+      },
+      {
+       "id": "d7d5c9d92e",
+       "name": "إيمان - الاحتساب والنية"
+      },
+      {
+       "id": "0557c2acef",
+       "name": "نية - النية في العبادات"
+      }
+     ],
+     "hasSimilarHadith": true,
+     "hasAlternateHadithSahih": false,
+     "hasUsulHadith": true,
+     "similarHadithDorar": "/h/Bkjjidcf?sims=1",
+     "usulHadithDorar": "/h/Bkjjidcf?osoul=1",
+     "urlToGetSimilarHadith": "/v1/site/hadith/similar/Bkjjidcf",
+     "urlToGetUsulHadith": "/v1/site/hadith/usul/Bkjjidcf",
+     "hasSharhMetadata": true,
+     "sharhMetadata": {
+      "id": "3435",
+      "isContainSharh": false,
+      "urlToGetSharh": "/v1/site/sharh/3435"
+     }
+    }
+   ]
+  }
+ }
+}

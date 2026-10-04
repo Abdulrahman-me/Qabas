@@ -1,0 +1,25 @@
+# Canonical mushaf dataset (SOURCE_ADAPTERS §12, decision D-88; docs/SOURCE_POLICY.md).
+#
+# Authority: the organizers' scientific reference package names the King Fahd Complex edition
+# ("طبعة مجمع الملك فهد") as the approved Qur'an text; the handoff (§12) requires the Uthmani text in memory
+# for every match/insertion. The Complex publishes it for developers at qurancomplex.gov.sa/quran-dev.
+#
+# The file is NOT committed: its redistribution terms are unconfirmed (O-03). scripts/fetch_mushaf.py downloads
+# the pinned archive, checks both digests and installs the member under backend/var/sources/mushaf/ (git-ignored).
+# The loader refuses any file whose SHA-256 differs. Changing the dataset is a reviewed change to this file.
+
+schema: qabas.mushaf_datasets/1
+canonical: kfgqpc_hafs_v30
+datasets:
+  kfgqpc_hafs_v30:
+    title: "Uthmanic Hafs v3.0 — KFGQPC developer data (JSON)"
+    publisher: "King Fahd Glorious Qur'an Printing Complex (مجمع الملك فهد لطباعة المصحف الشريف)"
+    riwaya: "hafs_an_asim"
+    version: "3.0"
+    url: "https://download.qurancomplex.gov.sa/resources_dev/kfgqpc_hafs_v30.zip"
+    archive_sha256: "227e6b1564d980f2bd09c2c35ebfb0330ac268c79a7c247cd1ab665bc635f245"
+    member: "kfgqpc_hafs_v30-data/kfgqpc_hafs_v30.json"
+    member_sha256: "d7adf8aeeef5a7b6798060706a55735dffbcdb542b290a3907bd9f70c498f4d3"
+    ayah_count: 6236
+    authority: "Organizers' package (Qur'an: King Fahd Complex edition) and handoff §12 (local Uthmani mushaf)"
+    redistribution: pending

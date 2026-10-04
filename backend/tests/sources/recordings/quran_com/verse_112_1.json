@@ -1,0 +1,154 @@
+{
+ "recorded_from": "https://api.quran.com/api/v4/verses/by_key/112:1?words=true&word_fields=text_qpc_hafs&fields=text_qpc_hafs&audio=7",
+ "recorded_at": "2026-10-04",
+ "request": {
+  "method": "GET",
+  "path": "/verses/by_key/112:1",
+  "query": {
+   "words": "true",
+   "word_fields": "text_qpc_hafs",
+   "fields": "text_qpc_hafs",
+   "audio": "7"
+  }
+ },
+ "response": {
+  "status": 200,
+  "content_type": "application/json",
+  "body": {
+   "verse": {
+    "id": 6222,
+    "verse_number": 1,
+    "verse_key": "112:1",
+    "hizb_number": 60,
+    "rub_el_hizb_number": 240,
+    "ruku_number": 556,
+    "manzil_number": 7,
+    "sajdah_number": null,
+    "text_qpc_hafs": "قُلۡ هُوَ ٱللَّهُ أَحَدٌ ١",
+    "page_number": 604,
+    "juz_number": 30,
+    "words": [
+     {
+      "id": 6,
+      "position": 1,
+      "audio_url": "wbw/112_001_001.mp3",
+      "char_type_name": "word",
+      "text_qpc_hafs": "قُلۡ",
+      "page_number": 604,
+      "line_number": 3,
+      "text": "قُلۡ",
+      "translation": {
+       "text": "Say",
+       "language_name": "english"
+      },
+      "transliteration": {
+       "text": "qul",
+       "language_name": "english"
+      }
+     },
+     {
+      "id": 7,
+      "position": 2,
+      "audio_url": "wbw/112_001_002.mp3",
+      "char_type_name": "word",
+      "text_qpc_hafs": "هُوَ",
+      "page_number": 604,
+      "line_number": 3,
+      "text": "هُوَ",
+      "translation": {
+       "text": "He",
+       "language_name": "english"
+      },
+      "transliteration": {
+       "text": "huwa",
+       "language_name": "english"
+      }
+     },
+     {
+      "id": 8,
+      "position": 3,
+      "audio_url": "wbw/112_001_003.mp3",
+      "char_type_name": "word",
+      "text_qpc_hafs": "ٱللَّهُ",
+      "page_number": 604,
+      "line_number": 3,
+      "text": "ٱللَّهُ",
+      "translation": {
+       "text": "(is) Allah",
+       "language_name": "english"
+      },
+      "transliteration": {
+       "text": "l-lahu",
+       "language_name": "english"
+      }
+     },
+     {
+      "id": 9,
+      "position": 4,
+      "audio_url": "wbw/112_001_004.mp3",
+      "char_type_name": "word",
+      "text_qpc_hafs": "أَحَدٌ",
+      "page_number": 604,
+      "line_number": 3,
+      "text": "أَحَدٌ",
+      "translation": {
+       "text": "the One",
+       "language_name": "english"
+      },
+      "transliteration": {
+       "text": "aḥadun",
+       "language_name": "english"
+      }
+     },
+     {
+      "id": 10,
+      "position": 5,
+      "audio_url": null,
+      "char_type_name": "end",
+      "text_qpc_hafs": "١",
+      "page_number": 604,
+      "line_number": 3,
+      "text": "١",
+      "translation": {
+       "text": "(1)",
+       "language_name": "english"
+      },
+      "transliteration": {
+       "text": null,
+       "language_name": "english"
+      }
+     }
+    ],
+    "audio": {
+     "url": "Alafasy/mp3/112001.mp3",
+     "segments": [
+      [
+       0,
+       1,
+       30,
+       390
+      ],
+      [
+       1,
+       2,
+       400,
+       790
+      ],
+      [
+       2,
+       3,
+       800,
+       1640
+      ],
+      [
+       3,
+       4,
+       1650,
+       2300
+      ]
+     ]
+    }
+   }
+  }
+ }
+}

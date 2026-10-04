@@ -1,0 +1,14 @@
+{
+ "recorded_from": "https://quranenc.com/api/v1/translation/aya/english_unknown/4/103",
+ "recorded_at": "2026-10-04",
+ "request": {
+  "method": "GET",
+  "path": "/translation/aya/english_unknown/4/103",
+  "query": {}
+ },
+ "response": {
+  "status": 404,
+  "content_type": "application/json",
+  "body": ""
+ }
+}

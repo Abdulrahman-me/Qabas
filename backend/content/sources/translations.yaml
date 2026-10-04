@@ -1,0 +1,22 @@
+# Which approved translation of the meanings of the Qur'an learners see, per language (D-93).
+#
+# The organizers' package requires approved translations for every language used, and names QuranEnc (the
+# association's encyclopedia) as the reference for them. QuranEnc offers several translations per language;
+# choosing one is a content decision, not an engineering one. Every entry stays null and `status: pending`
+# until a content specialist records the choice (status: approved, approved_by, approved_on). While the
+# language's entry is null, verified insertion produces Arabic text only and reports `translation_unselected`
+# wherever a translation is required (e.g. the English variants of Unit 0).
+#
+# Arabic learners receive no translation; the Arabic "meaning" of a verse comes from tafsir (Tafsir Center,
+# Mukhtasar first), which is a separate source kind.
+
+schema: qabas.quran_translations/1
+status: pending
+approved_by: null
+approved_on: null
+languages:
+  # Candidates listed by QuranEnc on 2026-10-05 (key, title, version):
+  #   english_saheeh       English Translation - Noor International Center   1.1.2
+  #   english_rwwad        English Translation - Rowwad Translation Center   1.0.19
+  #   english_hilali_khan  English Translation - Hilali and Khan             1.1.2
+  en: null

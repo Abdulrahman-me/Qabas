@@ -1,0 +1,17 @@
+{
+ "recorded_from": "https://hadeethenc.com/api/v1/hadeeths/one/?language=ar&id=99999999",
+ "recorded_at": "2026-10-04",
+ "request": {
+  "method": "GET",
+  "path": "/hadeeths/one/",
+  "query": {
+   "language": "ar",
+   "id": "99999999"
+  }
+ },
+ "response": {
+  "status": 404,
+  "content_type": "application/json",
+  "body": ""
+ }
+}

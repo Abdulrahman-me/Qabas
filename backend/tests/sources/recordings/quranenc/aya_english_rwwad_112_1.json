@@ -1,0 +1,23 @@
+{
+ "recorded_from": "https://quranenc.com/api/v1/translation/aya/english_rwwad/112/1",
+ "recorded_at": "2026-10-04",
+ "request": {
+  "method": "GET",
+  "path": "/translation/aya/english_rwwad/112/1",
+  "query": {}
+ },
+ "response": {
+  "status": 200,
+  "content_type": "application/json",
+  "body": {
+   "result": {
+    "id": "6222",
+    "sura": "112",
+    "aya": "1",
+    "arabic_text": "قُلۡ هُوَ ٱللَّهُ أَحَدٌ",
+    "translation": "Say: “He is Allah, the One[1];",
+    "footnotes": "[1] He is Alone, without a partner, indivisible and distinct from all else. The only true deity, unique in His essence, attributes, and actions."
+   }
+  }
+ }
+}
