@@ -21,7 +21,15 @@ from app.content.projection import (
     source_count,
     term_card,
 )
-from app.content.store import Approval, FixtureApproval, apply_curriculum, import_package, load_package, publish
+from app.content.store import (
+    Approval,
+    FixtureApproval,
+    apply_curriculum,
+    decide_open_units,
+    import_package,
+    load_package,
+    publish,
+)
 from app.content.test_curriculum import CURRICULUM_DIR, build_curriculum, build_packages, load_test_curriculum
 from app.content.validation import ContentValidationError
 from app.contract import models as C
@@ -252,6 +260,18 @@ async def test_a_unit_opens_only_when_its_assessment_pools_can_be_served(resourc
     async with resources.sessionmaker() as db:
         unit = await db.get(Unit, "unit_test_1")
         assert unit is not None and not unit.coming_soon
+
+
+def test_a_unit_stays_closed_while_a_prerequisite_sits_in_a_closed_unit() -> None:
+    # D-41: a Soft Lock must never point at a lesson the learner cannot see.
+    full = {"pretest": 6, "unit_test": 9}
+    order = ["u1", "u2", "u3"]
+    counts = {"u1": 2, "u2": 3, "u3": 3}
+    supplied = {"u1": {"pretest": 4, "unit_test": 6}, "u2": full, "u3": full}
+    assert decide_open_units(order, counts, supplied, {"u1": set(), "u2": {"u1"}, "u3": {"u2"}}) == set()
+    assert decide_open_units(order, counts, supplied, {"u1": set(), "u2": {"u2"}, "u3": {"u2"}}) == {"u2", "u3"}
+    assert decide_open_units(order, counts, supplied, {"u1": set(), "u2": {""}, "u3": set()}) == {"u3"}
+    assert decide_open_units(order, {**counts, "u3": 0}, supplied, {"u1": set(), "u2": set(), "u3": set()}) == {"u2"}
 
 
 async def test_content_must_sit_in_its_declared_slot(resources: Resources) -> None:

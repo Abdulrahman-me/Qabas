@@ -128,13 +128,19 @@ def session_source_ids(items: list[dict[str, Any]]) -> list[str]:
 
 
 def project_sources(package: LessonPackage, items: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    records = {s.source_id: s for s in package.sources}
+    """Session/reader sources of a lesson version, from the version's own source records."""
+    return project_source_records({s.source_id: s.model_dump(mode="json") for s in package.sources}, items)
+
+
+def project_source_records(records: dict[str, dict[str, Any]], items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Contract ``Source`` list for ``items``; ``records`` maps source_id -> the record without display flags."""
     roles = display_roles(items)
     projected = []
     for source_id in session_source_ids(items):
-        record = records[source_id]
+        if source_id not in records:
+            raise KeyError(f"source {source_id} has no record")
         role = roles.get(source_id)
-        projected.append(C.Source(**record.model_dump(), displayed=role is not None,
+        projected.append(C.Source(**records[source_id], displayed=role is not None,
                                   display_role=role).model_dump(mode="json"))
     return projected
 

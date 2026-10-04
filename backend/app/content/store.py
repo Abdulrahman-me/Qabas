@@ -26,6 +26,7 @@ from sqlalchemy import func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import Settings
+from app.content import catalog
 from app.content.curriculum import Curriculum, CurriculumError
 from app.content.package import LANGS, ExerciseRecord, LessonPackage, content_digest, sentences_of
 from app.content.projection import xp_for
@@ -116,8 +117,7 @@ async def _apply_units(db: AsyncSession, cur: Curriculum, report: SeedReport) ->
     if problems:
         raise CurriculumError(problems)
     await db.flush()
-    for spec in cur.units:
-        await refresh_unit_availability(db, spec.unit_id)
+    await refresh_unit_availability(db)
 
 
 async def _apply_slots(db: AsyncSession, cur: Curriculum, report: SeedReport) -> None:
@@ -337,11 +337,6 @@ async def _store_exercise(db: AsyncSession, package: LessonPackage, record: Exer
     return version
 
 
-def _exercise_versions(lv: LessonVersion) -> dict[str, int]:
-    """The exercise versions a lesson version pins, in package order."""
-    return {row["exercise_id"]: row["version"] for row in lv.content["exercise_versions"]}
-
-
 async def load_package(db: AsyncSession, lesson_version_id: uuid.UUID) -> LessonPackage:
     """Rebuild the exact package a stored lesson version was imported from."""
     lv = await db.get(LessonVersion, lesson_version_id)
@@ -356,7 +351,7 @@ async def load_package(db: AsyncSession, lesson_version_id: uuid.UUID) -> Lesson
     for s in sentences:
         sentence_map.setdefault(s.id, {"sentence_id": s.id, "role": s.role, "claim_ids": list(s.claim_ids)})
     exercises = []
-    for exercise_id, version in _exercise_versions(lv).items():
+    for exercise_id, version in catalog.pinned_exercise_versions(lv).items():
         ex = await db.get(Exercise, exercise_id)
         ev = await db.get(ExerciseVersion, (exercise_id, version))
         assert ex is not None and ev is not None
@@ -429,7 +424,7 @@ async def publish(db: AsyncSession, settings: Settings, lesson_version_id: uuid.
     await _upsert_misconceptions(db, package)
     await _upsert_terms(db, package)
     now = _now()
-    versions = _exercise_versions(lv)
+    versions = catalog.pinned_exercise_versions(lv)
     for exercise_id, version in versions.items():
         ev = await db.get(ExerciseVersion, (exercise_id, version))
         assert ev is not None
@@ -452,27 +447,56 @@ async def publish(db: AsyncSession, settings: Settings, lesson_version_id: uuid.
         prerequisite_concept_ids=list(package.plan.prerequisite_concept_ids),
         introduced_concept_ids=list(package.plan.introduced_concept_ids),
         standalone_eligible=package.plan.standalone_eligible, variants=variants))
-    await refresh_unit_availability(db, unit.id)
+    await refresh_unit_availability(db)
 
 
-async def refresh_unit_availability(db: AsyncSession, unit_id: str) -> bool:
-    """Set ``units.coming_soon`` from what is published (decision D-38) and return it.
+async def refresh_unit_availability(db: AsyncSession) -> dict[str, bool]:
+    """Recompute ``units.coming_soon`` for every unit from what is published; return unit_id -> coming_soon.
 
-    A unit opens to learners only when it has a published lesson **and** its published pools can serve both
-    assessments: >= 6 pretest and >= 9 unit-test items (backend §6.2, factory §13.3). Until then its published
-    lessons stay out of the Roadmap, so no learner can enter a unit whose pretest or unit test cannot be served.
+    A unit opens to learners only when it can be completed (decisions D-38, D-41):
+      * it has a published lesson;
+      * its published pools can serve both assessments: >= 6 pretest and >= 9 unit-test items (backend §6.2,
+        factory §13.3); and
+      * every prerequisite of its published lessons is introduced by a lesson in an open unit, so a Soft Lock
+        never points at a lesson the learner cannot see.
+    Units are decided in curriculum order; prerequisites always sit at earlier positions (publication check).
     """
-    lessons = await db.scalar(select(func.count()).select_from(Lesson).where(
-        Lesson.unit_id == unit_id, Lesson.current_version.is_not(None)))
-    rows = await db.execute(select(Exercise.purpose, func.count()).where(
-        Exercise.unit_id == unit_id, Exercise.current_version.is_not(None),
-        Exercise.purpose.in_(("pretest", "unit_test"))).group_by(Exercise.purpose))
-    pools = {purpose: count for purpose, count in rows}
-    coming_soon = not (lessons and pools.get("pretest", 0) >= PRETEST_POOL_MIN
-                       and pools.get("unit_test", 0) >= UNIT_TEST_POOL_MIN)
-    await db.execute(update(Unit).where(Unit.id == unit_id).values(coming_soon=coming_soon))
+    units = list((await db.execute(select(Unit).order_by(Unit.index))).scalars())
+    lessons = await catalog.published_lessons(db)
+    introducers = await catalog.introducers(db)
+    unit_of = {lesson.lesson_id: lesson.unit_id for lesson in lessons}
+    supplied: dict[str, dict[str, int]] = {}
+    for unit in units:
+        items = await catalog.pool(db, [unit.id], ("pretest", "unit_test"))
+        supplied[unit.id] = {purpose: sum(1 for i in items if i.purpose == purpose)
+                             for purpose in ("pretest", "unit_test")}
+    prerequisite_units = {unit.id: {unit_of.get(introducers.get(c, ""), "") for lesson in lessons
+                                    if lesson.unit_id == unit.id for c in lesson.prerequisite_concept_ids}
+                          for unit in units}
+    lesson_counts = {unit.id: sum(1 for lesson in lessons if lesson.unit_id == unit.id) for unit in units}
+    open_units = decide_open_units([u.id for u in units], lesson_counts, supplied, prerequisite_units)
+    for unit in units:
+        if unit.coming_soon == (unit.id in open_units):
+            unit.coming_soon = unit.id not in open_units
     await db.flush()
-    return coming_soon
+    return {unit.id: unit.id not in open_units for unit in units}
+
+
+def decide_open_units(unit_order: list[str], lesson_counts: dict[str, int], supplied: dict[str, dict[str, int]],
+                      prerequisite_units: dict[str, set[str]]) -> set[str]:
+    """The units that can open (D-38, D-41), deciding in curriculum order.
+
+    ``prerequisite_units[u]`` holds the units whose lessons introduce the prerequisites of u's published lessons
+    ("" for a prerequisite without a published introducer, which never opens).
+    """
+    open_units: set[str] = set()
+    for unit_id in unit_order:
+        pools_ok = (supplied[unit_id].get("pretest", 0) >= PRETEST_POOL_MIN
+                    and supplied[unit_id].get("unit_test", 0) >= UNIT_TEST_POOL_MIN)
+        reachable = prerequisite_units[unit_id] <= open_units | {unit_id}
+        if lesson_counts[unit_id] > 0 and pools_ok and reachable:
+            open_units.add(unit_id)
+    return open_units
 
 
 async def _check_approval(db: AsyncSession, lv: LessonVersion, approval: Approval | FixtureApproval) -> str:
@@ -519,7 +543,7 @@ async def _check_scenes(db: AsyncSession, package: LessonPackage) -> None:
     """Backend §6.5: a scene visual references a published scene version with the same manifest digest."""
     problems = []
     for lang, variant in package.variant_keys():
-        for ref in _scene_refs(package.variants[lang][variant].model_dump(mode="json")):
+        for ref in scene_refs(package.variants[lang][variant].model_dump(mode="json")):
             row = await db.get(SceneVersion, (ref["scene_id"], ref["version"]))
             if row is None or row.status != "published":
                 problems.append(f"scene {ref['scene_id']} v{ref['version']} is not a published scene version")
@@ -530,16 +554,16 @@ async def _check_scenes(db: AsyncSession, package: LessonPackage) -> None:
         raise _fail(*sorted(set(problems)))
 
 
-def _scene_refs(node: Any) -> list[dict[str, Any]]:
+def scene_refs(node: Any) -> list[dict[str, Any]]:
     found = []
     if isinstance(node, dict):
         if node.get("kind") == "scene" and isinstance(node.get("scene"), dict):
             found.append(node["scene"])
         for value in node.values():
-            found += _scene_refs(value)
+            found += scene_refs(value)
     elif isinstance(node, list):
         for value in node:
-            found += _scene_refs(value)
+            found += scene_refs(value)
     return found
 
 

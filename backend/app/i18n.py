@@ -8,6 +8,14 @@ NEXT_STEP_TITLES: dict[str, dict[str, str]] = {
     "unit_test": {"ar": "اختبار الوحدة", "en": "Unit test"},
 }
 
+# Session headers for exercise-only sessions (the contract requires a title; UI copy, pending product review).
+SESSION_TITLES: dict[str, dict[str, str]] = {
+    "pretest": NEXT_STEP_TITLES["pretest"],
+    "unit_test": NEXT_STEP_TITLES["unit_test"],
+    "review_cards": {"ar": "مراجعة البطاقات", "en": "Card review"},
+    "review_quick": {"ar": "مراجعة سريعة", "en": "Quick review"},
+}
+
 ARABIC_INDIC_DIGITS = str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩")
 
 

@@ -52,7 +52,8 @@ def test_goal_anchor_changes_neither_start_nor_next_step(api: TestClient, integr
 
 
 def test_unpublished_start_unit_means_no_step_yet(api: TestClient, integration_settings: Settings) -> None:
-    seed_units(integration_settings.database_url, unit0_coming_soon=True)
+    # Nothing published anywhere: every unit of the path is coming soon (D-38, D-44).
+    seed_units(integration_settings.database_url, unit0_coming_soon=True, unit1_coming_soon=True)
     result = onboard(api, guest_token(api))
     assert result.start_unit_id == "unit_0"
     assert result.next_step == C.NextStep(type="journey_complete", reason="all_done", unit_id=None, lesson_id=None,

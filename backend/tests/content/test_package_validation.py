@@ -210,3 +210,28 @@ def test_placeholder_media_blocks_publication() -> None:
                      known_concepts=CONCEPTS, allow_placeholder_media=False)
     found = codes(PACKAGES[lesson_id], strict)
     assert any("placeholder media URL mock-asset://" in f for f in found), found
+
+
+def test_a_served_order_must_not_reveal_the_answer() -> None:
+    lesson_id, exercise_id = next((p.lesson_id, e.exercise_id) for p in PACKAGES.values() for e in p.exercises
+                                  if e.type == "order_steps")
+
+    def key_order(d: dict[str, Any]) -> None:
+        for lang in ("ar", "en"):
+            record = next(e for e in d["exercises"] if e["exercise_id"] == exercise_id)["exercise"][lang]
+            by_id = {s["step_id"]: s for s in record["payload"]["steps"]}
+            record["payload"]["steps"] = [by_id[i] for i in record["answer_key"]["order"]]
+    assert_issue(lesson_id, key_order, "order equals the answer key")
+
+
+def test_a_match_column_must_not_line_up_with_its_answer() -> None:
+    lesson_id, exercise_id = next((p.lesson_id, e.exercise_id) for p in PACKAGES.values() for e in p.exercises
+                                  if e.type == "match_pairs")
+
+    def aligned(d: dict[str, Any]) -> None:
+        for lang in ("ar", "en"):
+            record = next(e for e in d["exercises"] if e["exercise_id"] == exercise_id)["exercise"][lang]
+            pairs = {p["left_id"]: p["right_id"] for p in record["answer_key"]["pairs"]}
+            by_id = {r["item_id"]: r for r in record["payload"]["right"]}
+            record["payload"]["right"] = [by_id[pairs[x["item_id"]]] for x in record["payload"]["left"]]
+    assert_issue(lesson_id, aligned, "order equals the answer key")

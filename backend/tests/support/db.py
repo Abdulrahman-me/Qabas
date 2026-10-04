@@ -99,3 +99,22 @@ async def expect_sqlstate(conn: AsyncConnection, state: str, sql: str, params: d
 
 async def run(conn: AsyncConnection, sql: str, params: dict[str, Any] | None = None) -> Any:
     return await conn.execute(text(sql), params or {})
+
+
+CONTENT_TABLES = frozenset({
+    "units", "curriculum_slots", "concepts", "lessons", "lesson_versions", "claims", "sentences", "exercises",
+    "exercise_versions", "sources", "terms", "misconceptions", "scene_versions", "scene_assets", "alembic_version",
+})
+
+
+async def truncate_learner_state(url: str) -> None:
+    """Empty every non-content table (users, sessions, learner state, platform rows), keeping the published
+    curriculum, so one loaded curriculum serves many independent learner tests."""
+    conn = await asyncpg.connect(asyncpg_url(url))
+    try:
+        tables = [r["tablename"] for r in await conn.fetch(
+            "SELECT tablename FROM pg_tables WHERE schemaname = 'public'") if r["tablename"] not in CONTENT_TABLES]
+        if tables:
+            await conn.execute(f"TRUNCATE {', '.join(f'\"{t}\"' for t in tables)} RESTART IDENTITY")
+    finally:
+        await conn.close()

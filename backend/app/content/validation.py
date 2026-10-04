@@ -259,10 +259,40 @@ def _exercise_record(record: Any) -> list[Issue]:
             except ValueError as exc:
                 issues.append(Issue("answer_key", f"key is not a complete answer for the served payload: {exc}",
                                     f"{eid}/{lang}"))
+            else:
+                issues += _answer_order(exercise, f"{eid}/{lang}")
         issues += _feedback(record, lang)
         if exercise.framing is not None and record.targets_misconception_id is None:
             issues.append(Issue("exercises", "a myth-framed item targets the misconception it corrects", eid))
     return issues
+
+
+def _answer_order(exercise: Any, location: str) -> list[Issue]:
+    """The public order of a bank must not spell out the private answer (decision D-42).
+
+    Banks may be authored or captured (factory §13.3) and are served exactly as stored, so an order that equals
+    the key would hand the learner the answer: steps/events in key order, a right column aligned with its left
+    items, or a word bank that starts with the blanks' words in blank order. Single-item banks are exempt.
+    """
+    payload, key, typ = exercise.payload, exercise.answer_key.model_dump(mode="json"), exercise.type
+    reveals = False
+    if typ in ("order_steps", "timeline_order"):
+        field, ident = ("steps", "step_id") if typ == "order_steps" else ("events", "event_id")
+        served = [x[ident] for x in payload[field]]
+        reveals = len(served) > 1 and served == key["order"]
+    elif typ == "match_pairs":
+        pairs = {p["left_id"]: p["right_id"] for p in key["pairs"]}
+        aligned = [pairs[x["item_id"]] for x in payload["left"]]
+        reveals = len(pairs) > 1 and aligned == [x["item_id"] for x in payload["right"]]
+    elif typ == "fill_blank":
+        blanks = [x["blank_id"] for x in payload["segments"] if x["type"] == "blank"]
+        fills = {f["blank_id"]: f["word_id"] for f in key["fills"]}
+        bank = [x["word_id"] for x in payload["word_bank"]]
+        reveals = len(blanks) > 1 and bank[:len(blanks)] == [fills[b] for b in blanks]
+    if reveals:
+        return [Issue("exposure", f"the served {typ} order equals the answer key; author or capture a "
+                                  "non-revealing order", location)]
+    return []
 
 
 def _feedback(record: Any, lang: str) -> list[Issue]:

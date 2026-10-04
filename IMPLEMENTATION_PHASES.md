@@ -18,7 +18,7 @@
 | 2 | Core database schema and migrations | ✅ Done | `phase-2` | CI green (151 passed incl. role grants) |
 | 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | ✅ Done | `phase-3` | CI green (218 passed) |
 | 4 | Content storage, registries, projection and seeding | ✅ Done | `phase-4` | CI green (313 passed); conflict D-38 resolved |
-| 5 | Journey, lessons and session creation | ⏳ Not started | `phase-5` | |
+| 5 | Journey, lessons and session creation | 🔄 In progress | `phase-5` | 392 passed locally; CI pending |
 | 6 | Answers: replay-first, evaluators, per-answer adaptation | ⏳ Not started | `phase-6` | |
 | 7 | Finish transaction, FSRS, planner, reviews, glossary, stats | ⏳ Not started | `phase-7` | **Milestone A: durable learning slice** |
 | 8 | Content import (Salah reference, Unit 0 drafts), approval-gated publish, staging | ⏳ Not started | `phase-8` | |
@@ -214,17 +214,41 @@ Re-review of 01_PRODUCT, 06_CONTENT, API §5.5c/5.5d/6.3/6.4, the contract model
 
 ## Phase 5 — Journey, lessons and session creation
 
-**Goal:** a learner can see the journey and start every session kind.
-**Refs:** BACKEND_HANDOFF §6.1–6.2; API §6.3–6.5; AD-28, AD-29.
+**Goal:** a learner can see the journey and start, resume and abandon every session kind.
+**Refs:** BACKEND_HANDOFF §6.1–6.2, §7.3–7.6; API §3.2, §5.9, §6.3–6.5; DATA_MODEL invariants; FRONTEND S3–S7, S21, S22; CURRICULUM_AND_LEARNING_DESIGN (Roadmap/Discover, position vs prerequisites); FACTORY §13.3 (banks); QUALITY §18.1; AD-28, AD-29.
 
-- [ ] `GET /journey`: track membership, prerequisite access, lesson/unit states, `soft_lock` (prerequisites + transitive `start_with`), `standalone_eligible` (Discover), `unit_test.can_skip`, `current`.
-- [ ] `GET /units/{id}/guide`, `GET /lessons/{id}` (reader projection).
-- [ ] Build on Phase 4: published lessons only; `coming_soon` from D-38; projections from `app/content/projection.py` (variant choice, items, sources, counts, term cards); sessions pin the version rows `publish()` recorded.
-- [ ] `POST /sessions` for `lesson` / `review` (cards, quick) / `pretest` / `unit_test`: access checks (`404`, `409 prerequisite_unmet` with details), existing active session returned, variant choice (New Muslim → Explorer fallback only), composition sizes and pool minimums, serve-time shuffle stored in the snapshot, `served_exercises`/`served_scenes` pinning, `counts`, `sources`/`source_count`, `terms`.
-- [ ] `GET /sessions/{id}` with feedback-mode redaction; `POST /sessions/{id}/abandon`.
+- [x] **5.1 Journey service** (`app/services/learning/journey.py`): track membership (coming-soon units list no lessons), concept prerequisites satisfied by the introducing lesson's completion or its unit's passed test, lesson states (completed > in_progress > locked > available), Soft Lock (`prerequisites` in curriculum order, transitive `start_with`), unit states (locked/completed/skipped/in_progress/available, derived from `unit_test_passed_at`, D-21), `pretest`/`unit_test` blocks, `can_skip`, `has_guide`, `art_key`, track-framed titles; published variant titles for lessons. Data that breaks a publication invariant raises instead of being hidden.
+- [x] **5.2 Planner** (`app/services/adaptive/planner.py`): rules 1–5 complete on the journey view; coming-soon units are passed over (D-44); a review is recommended only when a card deck exists (D-51); `current` pointer (D-45).
+- [x] **5.3 Endpoints:** `GET /journey`, `GET /journey/next`, `GET /units/{id}/guide`, `GET /lessons/{id}` (reader projection, D-47), `POST /sessions` (`201` new / `200` existing), `GET /sessions/{id}`, `POST /sessions/{id}/abandon`. Learner-only (reviewers `403`). `Accept-Language` negotiation with profile fallback (D-43).
+- [x] **5.4 Session creation** (`app/services/learning/sessions.py`): lesson access (`404` outside the journey, `409 prerequisite_unmet` with Soft Lock details); variant by track (New Muslim → Explorer fallback only); one active session per key, race-safe through the partial unique index; language and variant pinned; full snapshot (`objectives`, `items`, `completion`, `sources`, `terms`, header fields) stored and replayed unchanged; `served_exercises` from the lesson version's pins and `served_scenes`; `learner_units.started_at` (race-safe upsert); every composition checked with `contextual.session_composition_errors` and the contract `Session` model before it is stored.
+- [x] **5.5 Assessments:** pretest `min(8, pool)`, unit test `min(12, pool)`, from the unit's current published pools (`app/content/catalog.py`), shuffled with a CSPRNG at serve time, no repeats; exercise-only shape (`objectives: []`, `completion: null`).
+- [x] **5.6 Reviews** (`app/services/learning/review.py`): card deck (one flashcard per concept, due first, up to 12) and quick review (up to 10, 20 s timer, excluded types, active-misconception and 24 h priorities) over the learner's practiced concepts, inside the learner's journey (D-46); empty → `409 nothing_to_review`.
+- [x] **5.7 Resume and redaction:** answer history per feedback mode (`immediate` results + stored evaluation; `end` hidden until finish, then results; `none` always hidden); ownership `404`; abandon idempotent, `409 session_finished` after finish.
+- [x] **5.8 Term cards** (`app/services/learning/terms.py`): contract `project_term` with the learner's term state and level (§7.5), lesson titles in the learner's language/variant.
+- [x] **5.9 Phase 4 hardening found while building 5:** unit availability also requires reachable prerequisites (D-41); assessment pools are the exercises pinned by current lesson versions (D-41); a served bank may not spell out its answer (D-42).
 
-**Tests:** `test_curriculum` (journey part), `test_discover_identity`, `test_version_pinning` (serve side), `test_assessment_supply`.
-**Exit:** tag `phase-5`.
+**Tests:** `tests/learning/` (77): the four contract journeys (structure, Soft Locks, track membership, titles), position never gates, unit passing satisfies prerequisites, track switch keeps completions, coming-soon units, `in_progress` from any session, the planner through a whole path and with due reviews, all 34 contract lesson sessions reproduced through `POST /sessions`, Discover identity (no surface field, byte-identical content), one active session per key (also after a track change, and four concurrent starts → one session), language pinning, request validation, all six assessment compositions against the contract banks, serve-time shuffle kept on resume, card and quick review selection, track-scoped reviews, history redaction for all three modes, ownership, abandon, version pinning across a republish (title, key and feedback changes), pools after a revision, unit guides with sources and term cards, reader projection. Plus validation tests for answer-revealing banks and the open-unit decision.
+**Local status:** 392 passed, 1 skipped (role privileges, CI only); ruff and mypy clean; contract suites 595/279/105/382 PASS; OpenAPI regenerated (7 new operations, contract schemas only); `alembic check` clean (no migration needed); production seed unchanged on re-run; end-to-end on the dev database with the production curriculum (all units coming soon, sessions `404`, journey complete).
+**Exit:** CI green; tag `phase-5`.
+
+### Handoff review findings (Phase 5)
+
+Re-review of BACKEND §6–7, API §3.2/§3.4/§5.9/§6.3–6.5, DATA_MODEL invariants and versioning, FRONTEND screens S3–S7/S21/S22 and UI rules, CURRICULUM (Roadmap, Discover, Soft Lock), FACTORY §13.3 (banks), QUALITY §18.1, the contract models and `contextual.py`, and the fixture generator (`tools/make_fixtures.py`).
+
+| # | Finding | Handling |
+|---|---|---|
+| F-14 | The journey fixtures mark the start unit `in_progress` for a learner with no session; backend §6.1 makes a unit `in_progress` only once a session started. The generator hard-codes it. | Spec wins; the fixtures are matched after the learner starts the unit's pretest (D-49). |
+| F-15 | Fixture journey lesson titles (`درس اختباري 1.1`) differ from the fixture session titles of the same lessons. | One source of truth: the published variant title (D-49). |
+| F-16 | Planner rule 1 skips `coming_soon` units; rule 5 ends the journey at the next coming-soon unit; the Phase 3 planner stopped at the first one. | Rule 1 wins; units never wait (D-44). |
+| F-17 | `Journey.current` is only "the planner's target"; the fixtures point at a lesson while the next step is a pretest. | Defined as the rule-3 lesson of the current unit (D-45). |
+| F-18 | Under D-38 a lesson could depend on a lesson in a still-closed unit, making its Soft Lock name a lesson outside the journey (the contract model rejects that). | Such units stay closed (D-41). |
+| F-19 | "Shuffle at serve time" (backend §6.2) vs "authored or server-shuffled banks" and the captured Salah bank order (factory §13.3, AD-14). An authored bank in key order would reveal the answer. | Items of assessments are shuffled at serve time; banks are served as authored/captured, and a revealing bank is rejected at validation (D-42, D-50). |
+| F-20 | `GET /lessons/{id}` access (S6 "re-read a completed lesson") and which sources the reader lists are unspecified. | D-47. |
+| F-21 | Review scope across tracks, and an empty quick review, are unspecified (only cards mention `nothing_to_review`). | D-46. |
+| F-22 | A pretest can be requested again after it was taken; `pretest_complete` XP and `pretest_percent` would be repeatable. | Allowed (no rule forbids it); Phase 7 stores the first result only and grants pretest XP once per unit (D-52). |
+| F-23 | Exercise-only sessions need a `title`; no copy is specified (fixtures use a synthetic "جلسة اختبارية"). | D-51. |
+| F-24 | Planner rule 2 counts due concepts "learning or mastered" and must never recommend a review that would be `nothing_to_review`. | D-51. |
+| F-25 | The contract's graded test exercises all practise `con_test`; flashcards practise one concept each. | Tests account for it; no product effect. |
 
 ---
 
@@ -238,6 +262,7 @@ Re-review of 01_PRODUCT, 06_CONTENT, API §5.5c/5.5d/6.3/6.4, the contract model
 - [ ] **6.3 Rules:** attempt identity, retry eligibility (`409 retry_not_allowed`), authored order (`409 out_of_order`), finished/abandoned sessions, immediate vs end/none responses.
 - [ ] **6.4 Per-answer effects in the same transaction:** Decimal mastery (6 dp, half-up public 2 dp), retries, pretest half weight, misconception evidence/activation/resolution, term exposure; stored `evaluation` snapshot replayed as-is.
 - [ ] Lock order: session → concepts ascending → terms.
+- [ ] Grade against the `exercise_versions` row in `sessions.served_exercises` (pinned by Phase 5), never the current version.
 - [ ] `recite_verse` answer binding is stubbed until Phase 10 (`check_id` validation interface only).
 
 **Tests:** `test_types`, `test_attempt_identity`, `test_mastery`, `test_null_correct`, `test_history_redaction` (submit/replay part), concurrency tests (two devices racing the original and the retry; malformed changed body replays).
@@ -251,6 +276,8 @@ Re-review of 01_PRODUCT, 06_CONTENT, API §5.5c/5.5d/6.3/6.4, the contract model
 **Refs:** BACKEND_HANDOFF §6.4, §7.3–7.6, §10.1–10.2, §10.5–10.6; API §6.2, §6.5, §6.7.
 
 - [ ] XP grants follow the fixed table, which also drives the displayed `JLesson.xp` (D-31); keep the two in one place.
+- [ ] Pretest: store the first result only (`pretest_taken_at`/`pretest_percent` set once) and grant `pretest_complete` once per unit (D-52).
+- [ ] Finish writes the facts the journey derives from (D-21): `learner_lessons.completed_at`, `learner_units.unit_test_passed_at`/`unit_test_best_percent`, `completed_at`/`skipped_at`; FSRS cards set `first_practiced_at`/`due_at`, which feed review selection (Phase 5).
 - [ ] `POST /sessions/{id}/finish`: one transaction that stores and replays `SessionResult` (score, layers, `lesson_perfect`, `passed`, `review_items`, `duration_ms` clamp, XP grants, daily activity/streak/daily goal, quest progress and rewards, FSRS updates, term promotions, `unlocked`, `next_step`); pretest/first-post percentages; unit skip.
 - [ ] Outbox events for unreported effects (`session:{id}:finished` → achievements/leagues/metrics consumers, added in their phases).
 - [ ] FSRS service (py-fsrs), card review and quick review selection, `409 nothing_to_review`.
@@ -528,6 +555,18 @@ Re-review of 01_PRODUCT, 06_CONTENT, API §5.5c/5.5d/6.3/6.4, the contract model
 | 2026-10-04 | D-38 | **Unit availability (conflict resolved).** SEED_AND_IMPORT §15 opens a unit at its first published lesson; BACKEND §6.2 and FACTORY §13.3 make a unit publishable only when its pools reach ≥ 6 pretest and ≥ 9 unit-test items. Safest interpretation, satisfying both: lessons publish individually, but a unit stays `coming_soon` until it has a published lesson **and** its published pools meet both minimums. Otherwise a learner could enter a unit whose pretest and unit test can't be served and could never complete it. | Recomputed at every publish and seed (`refresh_unit_availability`); the planner never meets an unservable pretest (F-6). |
 | 2026-10-04 | D-39 | **Curriculum file status.** `curriculum.yaml` is `review_status: working` pending O-12: English titles from the curriculum; Arabic titles from the handoff where given, otherwise working translations to be reviewed; no unit guides yet. `concepts` is empty: concepts are registered when an approved plan or a gold import introduces them, and imports refuse unregistered concepts. Registry UI copy typo «افز» corrected to «فُز». | Content specialist to review titles, guides and the corrected copy (F-10, F-11). |
 | 2026-10-04 | D-40 | **Unit 0 draft conflicts** (two-digit IDs, 1-based positions, non-contract `learner_acts`, 9 reasoning tools outside the contract enum) are resolved in the Phase 8 importer. The reasoning tools need a human-approved mapping; the importer will not guess. | Phase 8 checklist updated (F-12). |
+| 2026-10-04 | D-41 | **Units open only when their prerequisites are reachable** (extends D-38). A unit also stays `coming_soon` while a prerequisite of one of its published lessons is introduced in a closed unit, so a Soft Lock never names a lesson the learner cannot see. Availability is decided in curriculum order (`decide_open_units`). Assessment pools are the exercises pinned by the *current* published lesson versions, the same definition for availability and for serving. | F-18. |
+| 2026-10-04 | D-42 | **A served bank must not reveal its answer.** Validation rejects an `order_steps`/`timeline_order` bank in key order, a `match_pairs` right column aligned with its key, and a `fill_blank` word bank starting with the answers in blank order (2+ items). | Protects answers under authored/captured banks (F-19). |
+| 2026-10-04 | D-43 | **Request language:** `Accept-Language` is negotiated (q-weights, region subtags); a header naming no supported language falls back to the profile language rather than failing. A session keeps the language it was created in. | API §3.2. |
+| 2026-10-04 | D-44 | **Planner current unit** = the first unit of the track path that is neither completed/skipped nor `coming_soon` (rule 1 as written); coming-soon units are passed over and the journey is complete only when no unit remains. Corrects the Phase 3 planner, which stopped at the first coming-soon unit. | F-16; units never wait for the previous unit. |
+| 2026-10-04 | D-45 | **`Journey.current`** = the planner's rule-3 lesson of the current unit (first available/in-progress lesson, else the Soft Lock `start_with` of the first locked one, possibly in another unit), whatever the next step is; the unit alone when all its lessons are done; both null when the journey is complete. Matches the contract fixtures. | F-17. |
+| 2026-10-04 | D-46 | **Review scope:** reviews draw only on lessons in the learner's journey (open units of the current track) with purpose `lesson`. Practiced concepts outside it are not reviewed (records are kept). An empty quick review is also `409 nothing_to_review`. Cards: one flashcard per concept. Quick: candidates sorted by active-misconception target, then not answered in 24 h, then concept priority. | F-21. |
+| 2026-10-04 | D-47 | **Lesson reader:** `GET /lessons/{id}` serves the current published version for lessons in the learner's journey (`404` otherwise) and refuses a locked lesson with the same `409 prerequisite_unmet` as a session, so the Soft Lock can't be bypassed by reading. Its `sources`/`source_count`/`terms` are those of the reader blocks (no exercises, so no recitation activity source). | F-20. |
+| 2026-10-04 | D-48 | **Guide sources** are sentence citations: listed with `displayed: false`, `display_role: null`; the evidence budget applies to lessons, not guides. A guide citing an unregistered source is a data error. | API §6.3 guide. |
+| 2026-10-04 | D-49 | **Journey fixtures** are compared structurally after the learner has started the start unit's pretest. Lesson titles come from the published variant (they differ in the generated fixtures) and `xp` follows D-31. | F-14, F-15. |
+| 2026-10-04 | D-50 | **Shuffling:** pretest/unit-test items are drawn and ordered with a CSPRNG at serve time and frozen in the snapshot. Lesson items keep authored order; exercise banks are served exactly as authored or captured (factory §13.3, the Salah reference's captured order), protected by D-42. | F-19. |
+| 2026-10-04 | D-51 | **Exercise-only sessions:** title = localized label (pretest "A quick check before you start", unit test "Unit test", "Card review", "Quick review"; UI copy pending product review), `subtitle` null, block ids `blk_q{n}`. Planner rule 2 counts due concepts with mastery > 0 and recommends a review only when a card deck can be served. | F-23, F-24. |
+| 2026-10-04 | D-52 | **Repeated pretests** are allowed by `POST /sessions` (no rule forbids them), but Phase 7 records only the first pretest result and grants `pretest_complete` XP once per unit, so repetition can't skew metrics or farm XP. | F-22; Phase 7 checklist updated. |
 | 2026-10-04 | D-13 | Git HTTPS failed certificate verification with Git's bundled OpenSSL. The repo-local config now sets `http.sslBackend=schannel` (Windows certificate store); global config is untouched. The first push made `phase/0-workspace` GitHub's default branch, so switch the default to `main` when `phase-0` is tagged. | — |
 
 ## Progress log
@@ -548,3 +587,4 @@ Re-review of 01_PRODUCT, 06_CONTENT, API §5.5c/5.5d/6.3/6.4, the contract model
 | 2026-10-04 | 3 | ✅ Phase 3 complete: CI green (218 passed incl. role grants; contract suites green); tagged `phase-3`, merged to `main`. |
 | 2026-10-04 | 4 | Handoff re-reviewed for curriculum and content rules; 13 findings recorded (F-1–F-13), one genuine conflict resolved (D-38). Built the curriculum file and slots (migration 0002), registries, the lesson package model, deterministic validators, versioned storage, digest-bound publication, unit availability, projections and the seed script. Bugs found and fixed during the build: 1-based lesson index, sentence/claim ID prefixes, JSONB losing exercise order (digest mismatch). 312 tests green locally; CI pending. |
 | 2026-10-04 | 4 | ✅ Phase 4 complete: CI green (313 passed incl. role grants; contract suites green); tagged `phase-4`, merged to `main`. |
+| 2026-10-04 | 5 | Handoff re-reviewed for learner delivery (12 findings F-14–F-25). Built the journey service, the complete planner, guide/reader/session endpoints, assessment and review composition, resume with redaction, abandon and term cards; hardened Phase 4 (D-41, D-42) and corrected the Phase 3 planner (D-44). 392 tests green locally; CI pending. |

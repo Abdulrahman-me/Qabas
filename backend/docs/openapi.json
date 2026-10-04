@@ -15703,6 +15703,127 @@
     ]
    }
   },
+  "/v1/journey": {
+   "get": {
+    "description": "The learner's track path with derived states; Discover is the ``standalone_eligible`` lessons of it.",
+    "operationId": "get_journey_v1_journey_get",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Journey"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Get Journey",
+    "tags": [
+     "journey"
+    ]
+   }
+  },
+  "/v1/journey/next": {
+   "get": {
+    "operationId": "get_next_step_v1_journey_next_get",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/NextStep"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Get Next Step",
+    "tags": [
+     "journey"
+    ]
+   }
+  },
+  "/v1/lessons/{lesson_id}": {
+   "get": {
+    "description": "Reader projection (S6): the session's blocks without exercises, for re-reading.",
+    "operationId": "get_lesson_v1_lessons__lesson_id__get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "lesson_id",
+      "required": true,
+      "schema": {
+       "title": "Lesson Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/LessonRead"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Get Lesson",
+    "tags": [
+     "journey"
+    ]
+   }
+  },
   "/v1/me": {
    "delete": {
     "description": "Revoke sessions and mark the account deleted now; the purge job removes the data (<= 30 days).",
@@ -15854,6 +15975,198 @@
     "summary": "Onboarding",
     "tags": [
      "profile"
+    ]
+   }
+  },
+  "/v1/sessions": {
+   "post": {
+    "description": "A new session is ``201``; an existing active one for the same key is returned with ``200``.",
+    "operationId": "create_session_v1_sessions_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/SessionCreate"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Session"
+        }
+       }
+      },
+      "description": "The learner's existing active session"
+     },
+     "201": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Session"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Create Session",
+    "tags": [
+     "sessions"
+    ]
+   }
+  },
+  "/v1/sessions/{session_id}": {
+   "get": {
+    "description": "The stored snapshot with the answer history the feedback mode allows (resume).",
+    "operationId": "get_session_v1_sessions__session_id__get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "session_id",
+      "required": true,
+      "schema": {
+       "title": "Session Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Session"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Get Session",
+    "tags": [
+     "sessions"
+    ]
+   }
+  },
+  "/v1/sessions/{session_id}/abandon": {
+   "post": {
+    "operationId": "abandon_session_v1_sessions__session_id__abandon_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "session_id",
+      "required": true,
+      "schema": {
+       "title": "Session Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Abandon Session",
+    "tags": [
+     "sessions"
+    ]
+   }
+  },
+  "/v1/units/{unit_id}/guide": {
+   "get": {
+    "operationId": "get_unit_guide_v1_units__unit_id__guide_get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "unit_id",
+      "required": true,
+      "schema": {
+       "title": "Unit Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Guide"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Get Unit Guide",
+    "tags": [
+     "journey"
     ]
    }
   }
