@@ -22,7 +22,7 @@
 | 6 | Answers: replay-first, evaluators, per-answer adaptation | ✅ Done | `phase-6` | CI green (525 passed); 86/86 contract evaluations |
 | 7 | Finish transaction, FSRS, planner, reviews, glossary, stats | ✅ Done | `phase-7` | **Milestone A: durable learning slice** |
 | 7.1 | Phase 7 audit corrections (corrective checkpoint) | ✅ Done | `phase-7.1` | Independent audit; 5 findings fixed (F-48–F-52) |
-| 8 | Content import (Salah reference, Unit 0 drafts), approval-gated publish, staging | 🔄 In progress | `phase-8` | Pipeline complete; all real content correctly blocked on human/source/media inputs |
+| 8 | Content import (Salah reference, Unit 0 drafts), approval-gated publish, staging | ✅ Done | `phase-8` | CI green (582 passed); pipeline complete; real content correctly blocked on human/source/media inputs |
 | 9 | Source adapters (tool layer) | ⏳ Not started | `phase-9` | |
 | 10 | Recitation service (`asr` worker) | ⏳ Not started | `phase-10` | **Milestone B: complete learning experience** |
 | 11 | LLM adapter and agent infrastructure | ⏳ Not started | `phase-11` | |
@@ -367,7 +367,7 @@ Phase 7 was delivered by another agent. It was re-audited end to end before Phas
 - [~] Unit 0 import into a review database: **blocked** until the mapping, Arabic plan text, concept registration, verified sources and published scene media exist (O-12, O-05, O-13, Phase 9/14).
 
 **Tests:** `tests/content/test_unit0_converter.py` (12: a resolved neutral record converts to a lesson passing every Phase 4 validator; each blocker kind with its owner; flattened claims; published scene media), `test_salah_converter.py` (4: lossless projection, no authoring without a completion record, completion merge equals the stored lesson, export/media blockers), `test_gold.py` (4: gold round trip; import unpublished/no-op; authentication; inactive reviewer; stale digest; atomic approve+publish with `published_digest`; already published; rejection with reason; fixture content never takes the gold path; the `convert` command's report), `test_private_handoff_content.py` (3, local only: all 12 Unit 0 lessons blocked exactly by the recorded inputs; with stand-ins for those inputs lessons 0.5/0.6/0.8 pass every validator; Salah export blocked and lossless). Updated: production refuses fixture content (staging allowed).
-**Exit:** CI green; tag `phase-8`.
+**Exit:** ✅ CI green on GitHub (run 37232368721: 582 passed incl. role grants, 3 private-content tests skipped as designed, contract suites green); tagged `phase-8`.
 
 ### Handoff review findings (Phase 8)
 
@@ -386,8 +386,8 @@ Re-review of 01_PRODUCT (curriculum incl. the 0.1 reference design, content/bran
 | F-61 | The production slot of the Salah reference (3.2 as-is, adapted or merged with 3.1) is open (P-07); the export keeps fixture id `les_u1_l3`. | Part of the completion record (`target_lesson_id`, `decided_by`); blocked until decided. |
 | F-62 | The frontend demo sessions are a mock projection (inside a ZIP, localhost media, scripture replaced by draft notices), not an import source. | The authoring records are the source (D-80). |
 | F-63 | Unit 0's 13 concepts (34 references across the plans) are not in the curriculum graph; registering them is part of the O-12 review. | Blocked (`concept_unregistered`); no draft concept added to the public curriculum (D-87). |
-| F-65 | CI found a Phase 7 test that depended on the time of day: it finished sessions on a clock 40 minutes ahead but read `/me/stats` with the real clock, so within 40 minutes of the learner's local midnight the two disagreed. Product behaviour was correct. | The test now uses one clock for finishing and reading; verified across local midnight. |
 | F-64 | The plan asks for staging with the test curriculum, which D-29 confined to dev/test; a staging host does not exist yet. | D-84 (staging allowed, production never) and D-86 (host is an operations dependency). |
+| F-65 | CI found a Phase 7 test that depended on the time of day: it finished sessions on a clock 40 minutes ahead but read `/me/stats` with the real clock, so within 40 minutes of the learner's local midnight the two disagreed. Product behaviour was correct. | The test now uses one clock for finishing and reading; verified across local midnight. |
 
 ---
 
@@ -717,3 +717,4 @@ Re-review of 01_PRODUCT (curriculum incl. the 0.1 reference design, content/bran
 | 2026-10-05 | 7.1 | ✅ Phase 7.1 complete: CI green (562 passed incl. role grants; contract suites green); tagged `phase-7.1`, merged to `main`. |
 | 2026-10-05 | 8 | Handoff re-reviewed for real content (12 findings F-53–F-64). Built the gold path (import unpublished → authenticated digest-bound approve+publish), the Unit 0 and Salah converters with typed blocker reports, the pending reasoning-tool mapping, staging support. Real content: 12/12 Unit 0 lessons and the Salah reference correctly blocked; projections proven lossless/valid with stand-ins. CI pending. |
 | 2026-10-05 | 8 | First CI run failed on F-65 (a time-of-day-dependent Phase 7 test, 23:26 Riyadh); fixed with one test clock. |
+| 2026-10-05 | 8 | ✅ Phase 8 complete: CI green (582 passed incl. role grants; contract suites green); tagged `phase-8`, merged to `main`. |
