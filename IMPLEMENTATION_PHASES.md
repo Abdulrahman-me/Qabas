@@ -16,7 +16,7 @@
 | 0 | Workspace, toolchain and baseline verification | ✅ Done | `phase-0` | |
 | 1 | Contract vendoring and service skeleton | ✅ Done | `phase-1`, `phase-1.1` | CI green; repository boundary corrected by D-19 (`phase-1.1`) |
 | 2 | Core database schema and migrations | ✅ Done | `phase-2` | CI green (151 passed incl. role grants) |
-| 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | 🔄 In progress | `phase-3` | All local checks green; waiting on CI |
+| 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | ✅ Done | `phase-3` | CI green (218 passed) |
 | 4 | Content storage, registries, projection and seeding | ⏳ Not started | `phase-4` | |
 | 5 | Journey, lessons and session creation | ⏳ Not started | `phase-5` | |
 | 6 | Answers: replay-first, evaluators, per-answer adaptation | ⏳ Not started | `phase-6` | |
@@ -165,7 +165,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 
 **Tests (real Postgres + Redis):** 59 new integration tests: guest/reviewer auth, HMAC-only storage, pepper rotation, immediate revocation, expiry and throttling, lockouts, onboarding and profile validation, deletion and purge (including private objects and re-purge after restore), idempotency (replay, conflict, five concurrent duplicates → one create, failures, expiry), outbox (once-only, effect ledger, backoff, unknown kinds, four concurrent relays over 30 events), multi-bucket limits, local media links. S3 is exercised with botocore's Stubber.
 **Local status:** 214 passed, 1 skipped (role privileges, which run in CI); ruff and mypy clean; contract suites 595/279/105/382 PASS; `alembic check` clean; OpenAPI regenerated.
-**Exit:** CI green on GitHub, tag `phase-3`.
+**Exit:** ✅ CI green on GitHub (run 37199034433: 218 passed, contract suites green); tagged `phase-3`.
 
 ---
 
@@ -503,3 +503,4 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | 2026-10-04 | 2 | ✅ Phase 2 complete: CI green (151 passed; role grants verified with CI-created roles); tagged `phase-2`, merged to `main`. |
 | 2026-10-04 | 3 | Platform controls built: guest/reviewer auth with immediate revocation, rate limits, idempotency keys, outbox relay, S3/local storage, onboarding/profile, account deletion and purge; real worker verified. 214 tests green locally; CI pending. Product progress notes created (git-ignored). |
 | 2026-10-04 | 3 | First CI run failed: Linux accepted `localtime` as a time zone (OS list). Fixed by validating against the `tzdata` package list (D-28); tests extended (`Factory`, `posixrules`, path-like names). |
+| 2026-10-04 | 3 | ✅ Phase 3 complete: CI green (218 passed incl. role grants; contract suites green); tagged `phase-3`, merged to `main`. |
