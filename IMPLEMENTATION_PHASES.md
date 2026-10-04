@@ -13,8 +13,8 @@
 
 | Phase | Name | Status | Checkpoint tag | Notes |
 |---|---|---|---|---|
-| 0 | Workspace, toolchain and baseline verification | 🔄 In progress | `phase-0` | Waiting on the dev database role (one step for you; see Phase 0) |
-| 1 | Contract vendoring and service skeleton | ⏳ Not started | `phase-1` | Needs D-10 (repo visibility) before vendoring fixtures |
+| 0 | Workspace, toolchain and baseline verification | ✅ Done | `phase-0` | |
+| 1 | Contract vendoring and service skeleton | 🔄 In progress | `phase-1` | Public-repo data policy D-14 |
 | 2 | Core database schema and migrations | ⏳ Not started | `phase-2` | |
 | 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | ⏳ Not started | `phase-3` | |
 | 4 | Content storage, registries, projection and seeding | ⏳ Not started | `phase-4` | |
@@ -76,7 +76,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 - [x] Environment re-checked beyond PATH (Program Files, services, py launcher, choco/winget). Findings are in D-03/D-04/D-05/D-12.
 - [x] Python **3.12.10** (per-user, `py -3.12`) and **uv 0.12.23** for locking. The broken choco `python312` record was left untouched.
 - [x] PostgreSQL **16.14**: native Windows service `postgresql-x64-16`, running, scram-sha-256 auth.
-- [ ] Dev database role and databases (`qabas_dev`, `qabas_test`): **needs the postgres superuser password**. Run `backend\scripts\dev\create-dev-db.ps1` yourself; it prompts for the password and writes `backend/.env`.
+- [x] Dev database role `qabas` and databases `qabas_dev`, `qabas_test` created with `backend\scripts\dev\create-dev-db.ps1` (run by you); credentials in git-ignored `backend/.env`.
 - [x] Redis **7.4.11** native Windows build, localhost only, at `%LOCALAPPDATA%\Programs\Redis`. Start it with `backend\scripts\dev\start-redis.ps1` (D-04).
 - [x] ffmpeg **9.0.2** (winget `Gyan.FFmpeg`); Node **22.23** present (for the native Dorar sidecar in Phase 9).
 - [x] pgvector: not installed. Deferred to Phase 17, where it is first used (D-05).
@@ -84,7 +84,8 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 - [x] Rev 10 suites rerun on a disposable copy with Python 3.12 and the locked dependencies: **595/595 regressions, 279/279 focused checks, 105/105 examples, 382/382 fixtures, 99 exported roots, PASS**. Rerun outputs are identical to the handoff after LF normalization (D-08).
 - [x] O-01 working assumption recorded: rev 10 adopted, schema `9d67bda00d2edd04d47645b6b93a7747ab9d5646cddeb12a7b34a6910c97481c` (D-01).
 - [x] Git connected to `Abdulrahman-me/Qabas`; handoff excluded and set read-only; `.gitattributes` enforces LF (D-09).
-- [ ] Repository visibility decision (D-10). Needed before Phase 1 vendors fixtures containing private answer keys.
+- [x] Repository visibility decided: stays **public** (hackathon requirement), with the public-repo data policy in D-14.
+- [x] `check-env.ps1` passes every check (Python, uv, ffmpeg, Node, Redis, Postgres service, `qabas_dev`, `qabas_test`).
 
 **Exit:** environment documented in `backend/README.md`; dev databases reachable with the credentials in `backend/.env`; Redis ping OK; tag `phase-0` pushed.
 
@@ -94,10 +95,13 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 
 **Goal:** a running FastAPI service whose public shapes come only from the vendored rev 10 contract.
 **Refs:** API §3 (conventions, headers, errors, multipart), SYSTEM_ARCHITECTURE §3.2, BACKEND_IMPLEMENTATION step 1.
-**Precondition:** D-10 resolved.
+**Public-repo rule (D-14):** only code, schemas and sanitized synthetic test data are committed. Fixtures, answer keys, private handoff material and unapproved religious content stay local and git-ignored.
 
 - [ ] Create the `backend/` layout per SYSTEM_ARCHITECTURE §3.2; `pyproject.toml` + `uv.lock` (Python 3.12).
-- [ ] Vendor `03_API/contract_revision10/` **unchanged** into `backend/contract/`, with a checksum test against `SHA256SUMS` (LF-normalized).
+- [ ] Vendor the public part of rev 10, the `contract/` directory (models, schema, dispatch map, contextual/review/display helpers, scene schema, capability and art registries), **unchanged** into `backend/contract/`, with a checksum test against the handoff `SHA256SUMS` entries (LF-normalized).
+- [ ] Local private mirror: `scripts/dev/sync_private_contract.py` copies the full `contract_revision10/` (fixtures, tools, `EVALUATION_CONTEXT`, private grading keys) plus `API_REQUIREMENTS.md` into git-ignored `backend/.private/`. `scripts/dev/run_contract_suites.py` runs 595/279/105/382 there (on a disposable copy).
+- [ ] Public-safety guard `scripts/check_public_safety.py` (runs in CI and as a local pre-commit hook): fails on tracked handoff paths, private fixture names (`PRIVATE_GRADING_KEYS`, `EVALUATION_CONTEXT`, `private_keys`, `gold/`, `answer_key` files), `.env` files, and Arabic-script text outside an explicit allow-list.
+- [ ] Sanitized test data policy: repo tests build synthetic, neutral content in code (placeholder lesson text, no scripture or religious claims); tests that need private fixtures are marked `private` and skip when `backend/.private/` is absent.
 - [ ] `app/config.py` (pydantic-settings, all env vars from OPERATIONS §19), `.env.example` with placeholders only.
 - [ ] Error envelope `{error:{code,message,details}}` with every code from API §3.4; `RequestValidationError` mapping.
 - [ ] Contract identity headers and `426 client_outdated` (API §3.2); `Accept-Language` handling.
@@ -106,9 +110,9 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 - [ ] Adapter interfaces (stubs): storage, queue, LLM, STT, image, TTS, sources.
 - [ ] Celery app skeleton with queues `raqeeb`, `factory`, `media`, `maintenance`, `asr`; beat skeleton (Windows dev: `--pool=solo`/threads; note that prefork is Linux-only).
 - [ ] Local object storage for dev: a filesystem-backed implementation of the storage interface, with two roots (`content`, `private`) and signed-URL emulation, so no Docker/MinIO is needed. The S3 implementation follows in Phase 3.
-- [ ] CI workflow (GitHub Actions, ubuntu, Python 3.12, runner-native Postgres/Redis): ruff, mypy, contract suites, pytest.
+- [ ] CI workflow (GitHub Actions, ubuntu, Python 3.12, runner-native Postgres/Redis): public-safety guard, ruff, mypy, pytest (public tests). The full contract suites need private fixtures, so they run locally only (D-14).
 
-**Exit:** contract suites green on 3.12 locally and in CI; OpenAPI diff test green; error-envelope test green; tag `phase-1`.
+**Exit:** contract suites green on 3.12 locally (private mirror); public tests and safety guard green in CI; OpenAPI diff test green; error-envelope test green; tag `phase-1`.
 
 ---
 
@@ -446,9 +450,10 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | 2026-10-04 | D-07 | `tools/verify_package.py` misreports on Windows: it compares `\` disk paths against `/` manifest paths. Independent check: all 2,010 manifest entries match. Unmanifested files are the later `FRONTEND_DEMO_HANDOFF/` and `UNIT_0_CONTENT/` deliveries, `.vscode/`, plus harmless caches (3 `__pycache__` cpython-313 files, `.gradle` caches). | Handoff accepted as intact; frozen tool not modified. |
 | 2026-10-04 | D-08 | Test-count discrepancy resolved: rev 10 = 595 regressions / 279 focused / 105 examples / 382 fixtures (rerun on Python 3.12.10, PASS, outputs identical after LF normalization). The `SETUP_AND_REPRODUCTION.md` figures 615/170/392 are stale (615/392 are revision 9). | CI targets 595/279/105/382. |
 | 2026-10-04 | D-09 | Git: local `Qabas/` connected to `github.com/Abdulrahman-me/Qabas`. `FINAL_ENGINEERING_HANDOFF/` is git-ignored and its files are read-only (undo: `attrib -R /S /D`). `.gitattributes` forces LF. No AI co-author or attribution metadata in commits (owner request). | — |
-| 2026-10-04 | D-10 | **Open:** the GitHub repo is **public**. Phase 1 would vendor contract fixtures containing private answer keys and unapproved religious content, which the handoff says must stay out of learner/CDN bundles. Recommendation: make the repo private before Phase 1. | Blocks Phase 1 vendoring until decided. |
+| 2026-10-04 | D-10 | The GitHub repo stays **public** (hackathon requirement; owner decision). | Resolved by D-14. |
 | 2026-10-04 | D-11 | `UNIT_0_CONTENT/` (12 authored Unit 0 lessons, 20 scene manifests) and `FRONTEND_DEMO_HANDOFF/` are unapproved review drafts outside the frozen manifest. Treated as read-only import inputs. | Unit 0 import added to Phase 8. |
 | 2026-10-04 | D-12 | Python: 3.12.10 installed per-user (`py -3.12`). The chocolatey `python312` 3.12.4 record points at a missing `C:\python312` and was left untouched. uv 0.12.23 installed for locking. | — |
+| 2026-10-04 | D-14 | **Public-repo data policy.** Committed: application code, migrations, the rev 10 `contract/` directory (verified to contain no Arabic text, scripture or answer keys), docs, and synthetic neutral test data. Never committed: `FINAL_ENGINEERING_HANDOFF/`, contract fixtures and tools, `API_REQUIREMENTS.md`, private grading keys and evaluation context, gold/reference lessons, Unit 0 drafts, and any unapproved religious content. Those live in git-ignored `backend/.private/`. A safety guard enforces this in CI and pre-commit. | Full contract suites run locally only. Content imports (Phase 8) read from local private paths; staging data never enters git. |
 | 2026-10-04 | D-13 | Git HTTPS failed certificate verification with Git's bundled OpenSSL. The repo-local config now sets `http.sslBackend=schannel` (Windows certificate store); global config is untouched. The first push made `phase/0-workspace` GitHub's default branch, so switch the default to `main` when `phase-0` is tagged. | — |
 
 ## Progress log
@@ -458,3 +463,4 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | 2026-10-04 | — | Phase plan created from FINAL_ENGINEERING_HANDOFF |
 | 2026-10-04 | — | Plan revised: Raqeeb after the learning experience + factory (D-02); native dev env (D-03); full-quality scenes (D-06) |
 | 2026-10-04 | 0 | Environment verified and completed (Python 3.12.10, uv, Postgres 16.14, Redis 7.4.11, ffmpeg 9.0.2, Node 22). Handoff integrity verified. Rev 10 suites rerun: 595/279/105/382 PASS. Git connected; WIP branch `phase/0-workspace` pushed. `check-env.ps1`: all checks pass except the database (role not yet created). Waiting on the dev DB role and D-10. |
+| 2026-10-04 | 0 | ✅ Phase 0 complete: `check-env.ps1` all green (dev DBs created); repo stays public with data policy D-14; tagged `phase-0`, merged to `main`. |
