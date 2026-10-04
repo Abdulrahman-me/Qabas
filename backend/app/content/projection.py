@@ -179,6 +179,8 @@ def xp_for(package: LessonPackage) -> int:
     accuracy, and 3 per recitation exercise."""
     variant = next(iter(package.variants["ar"].values()))  # every variant shares the exercise skeleton
     exercises = [e for e in (package.exercise(eid) for eid in variant.exercise_ids()) if e is not None]
-    perfect = 3 if any(e.scored for e in exercises) else 0
-    recitation = 3 * sum(1 for e in exercises if e.type == "recite_verse")
-    return 10 + perfect + recitation
+    from app.services.learning.xp import AMOUNTS
+
+    perfect = AMOUNTS["lesson_perfect"] if any(e.scored for e in exercises) else 0
+    recitation = AMOUNTS["recitation_passed"] * sum(1 for e in exercises if e.type == "recite_verse")
+    return AMOUNTS["lesson_complete"] + perfect + recitation

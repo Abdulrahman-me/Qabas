@@ -40,13 +40,14 @@ from app.models import (
     SessionAnswer,
     User,
 )
-from app.services.learning import adaptation, grading, xp
+from app.services.learning import adaptation, grading, progress, xp
 from app.services.learning.grading import Identity
+from app.services.learning.locking import learner_lock
 from app.services.platform.auth_sessions import utcnow
 
 log = logging.getLogger("qabas.answers")
 
-RECITATION_XP = 3   # backend §10.1 recitation_passed, once per exercise per session
+RECITATION_XP = xp.AMOUNTS["recitation_passed"]
 
 
 class AnswerIntegrityError(RuntimeError):
@@ -72,6 +73,7 @@ async def submit(db: AsyncSession, user: User, session_id: str, body: Any) -> di
             raise ApiError(ErrorCode.session_finished, "This session is already finished.")
         if session.status != "active":
             raise ApiError(ErrorCode.session_not_active, "This session is no longer active.")
+        await learner_lock(db, user.id)
 
         exercises = [b["exercise"] for b in session.items_snapshot["items"] if b["type"] == "exercise"]
         served = {e["exercise_id"]: e for e in exercises}
@@ -158,15 +160,30 @@ async def _grade_and_record(db: AsyncSession, user: User, session: LearningSessi
     plan = adaptation.plan_misconceptions(answer, graded.correct, is_retry, dict(version.option_misconceptions),
                                           version.targets_misconception_id)
     shown = None
+    transitions: dict[str, Any] = {"activated": [], "resolved": [], "titles": {}}
     if plan.related and not is_retry and graded.correct is not None:
         rows_m = await adaptation.lock_misconceptions(db, user.id, sorted(plan.related), set(plan.evidence))
+        states = {m: r.status for m, r in rows_m.items()}
         shown = adaptation.apply_misconceptions(plan, rows_m, graded.correct, now)
+        for m, row_m in rows_m.items():
+            if row_m.status != states[m] and row_m.status in ("active", "resolved"):
+                transitions["activated" if row_m.status == "active" else "resolved"].append(m)
+                card = await _misconception_card(db, version, m, session.language)
+                transitions["titles"][m] = card["title"]
 
     xp_awarded = 0
     if exercise["type"] == "recite_verse" and graded.correct is True and not is_retry:
         granted = await xp.grant(db, user, "recitation_passed", RECITATION_XP, "session_exercise",
-                                 f"{session.id}:{exercise_id}", now)
+                                 f"{session.id}:{exercise_id}", now, reward_key=f"exercise:{exercise_id}")
         xp_awarded = RECITATION_XP if granted else 0
+        if granted:
+            day = xp.local_date(now, user.timezone)
+            quests = await progress.quests(db, user, day)
+            for quest in quests:
+                if quest.kind == "recite_verse" and quest.completed_at is None:
+                    quest.progress += 1
+            daily = await progress.day_row(db, user, day)
+            await progress.refresh_xp(db, user, day, daily)
 
     evaluation = grading.evaluation(
         exercise, graded, feedback, list(version.source_ids),
@@ -175,7 +192,8 @@ async def _grade_and_record(db: AsyncSession, user: User, session: LearningSessi
     _self_check(exercise, submitted, session.kind, evaluation, before_values, key, passed)
     db.add(SessionAnswer(session_id=session.id, exercise_id=exercise_id, exercise_version=version.version,
                          answer=answer, correct=graded.correct, elapsed_ms=submitted["elapsed_ms"],
-                         is_retry=is_retry, misconception_id=shown, evaluation=evaluation, recorded_at=now))
+                         is_retry=is_retry, misconception_id=shown, evaluation=evaluation,
+                         misconception_changes=transitions, recorded_at=now))
     await db.flush()
     return response(session, evaluation)
 

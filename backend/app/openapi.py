@@ -93,6 +93,29 @@ def build_openapi(app: FastAPI) -> dict[str, Any]:
                             description=app.description, separate_input_output_schemas=False)
     components = contract_components()
     paths: dict[str, Any] = generated.get("paths", {})
+    # The contract's Page factory gives multiple classes the same __qualname__; FastAPI disambiguates
+    # those names. Map only byte-equivalent page shapes back to their authoritative exported roots.
+    aliases = {}
+    for name, schema in generated.get("components", {}).get("schemas", {}).items():
+        if "__Page___locals__" not in name:
+            continue
+        shape = {k: v for k, v in schema.items() if k != "title"}
+        matches = [root for root, body in components.items() if root.endswith("Page")
+                   and {k: v for k, v in body.items() if k != "title"} == shape]
+        if len(matches) == 1:
+            aliases[COMPONENTS_PREFIX + name] = COMPONENTS_PREFIX + matches[0]
+
+    def alias_refs(node: Any) -> None:
+        if isinstance(node, dict):
+            if node.get("$ref") in aliases:
+                node["$ref"] = aliases[node["$ref"]]
+            for value in node.values():
+                alias_refs(value)
+        elif isinstance(node, list):
+            for value in node:
+                alias_refs(value)
+
+    alias_refs(paths)
     for operations in paths.values():
         for operation in operations.values():
             responses = operation.setdefault("responses", {})

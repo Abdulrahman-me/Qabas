@@ -18,6 +18,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.models import User, XpEvent
 
 LEAGUE_ZONE = ZoneInfo("Asia/Riyadh")
+AMOUNTS = {"lesson_complete": 10, "lesson_perfect": 3, "recitation_passed": 3, "review_complete": 8,
+           "pretest_complete": 5, "unit_test_passed": 20, "daily_goal_met": 2}
 
 
 def week_key(at: datetime) -> str:
@@ -31,10 +33,10 @@ def local_date(at: datetime, timezone: str) -> date:
 
 
 async def grant(db: AsyncSession, user: User, reason: str, xp: int, ref_type: str, ref_id: str,
-                at: datetime) -> bool:
+                at: datetime, *, reward_key: str | None = None) -> bool:
     """Record a grant once; returns False when this (reason, ref) was already granted to the user."""
     statement = pg_insert(XpEvent).values(
         user_id=user.id, reason=reason, xp=xp, ref_type=ref_type, ref_id=ref_id, week_key=week_key(at),
-        local_date=local_date(at, user.timezone), created_at=at,
-    ).on_conflict_do_nothing(constraint="uq_xp_events_grant").returning(XpEvent.id)
+        local_date=local_date(at, user.timezone), created_at=at, reward_key=reward_key,
+    ).on_conflict_do_nothing().returning(XpEvent.id)
     return (await db.execute(statement)).scalar_one_or_none() is not None

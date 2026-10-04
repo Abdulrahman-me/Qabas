@@ -35,6 +35,7 @@ class XpEvent(Base):
         CheckConstraint("xp >= 0", name="xp_non_negative"),
         # Effects happen once: one grant per (user, reason, reference) (data model, mandatory).
         UniqueConstraint("user_id", "reason", "ref_type", "ref_id", name="uq_xp_events_grant"),
+        UniqueConstraint("user_id", "reason", "reward_key", name="uq_xp_events_reward"),
         # daily_goal_met at most once per stored local date.
         Index("uq_xp_events_daily_goal", "user_id", "local_date", unique=True,
               postgresql_where=sql_text("reason = 'daily_goal_met'")),
@@ -47,6 +48,7 @@ class XpEvent(Base):
     xp: Mapped[int] = mapped_column(Integer)
     ref_type: Mapped[str] = mapped_column(Text)
     ref_id: Mapped[str] = mapped_column(Text)
+    reward_key: Mapped[str | None] = mapped_column(Text)
     week_key: Mapped[str] = mapped_column(Text)   # league week, Sunday 00:00 Asia/Riyadh (backend §10.3)
     local_date: Mapped[date]                      # learner's local day at the event; never recomputed
     created_at: Mapped[datetime] = mapped_column(server_default=func.now())
@@ -57,11 +59,13 @@ class DailyActivity(Base):
     __table_args__ = (
         PrimaryKeyConstraint("user_id", "local_date", name="pk_daily_activity"),
         CheckConstraint("minutes >= 0 AND xp >= 0", name="counters_non_negative"),
+        CheckConstraint("duration_ms >= 0", name="duration_non_negative"),
     )
 
     user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"))
     local_date: Mapped[date]
     minutes: Mapped[int] = mapped_column(Integer, server_default="0")
+    duration_ms: Mapped[int] = mapped_column(BigInteger, server_default="0")
     xp: Mapped[int] = mapped_column(Integer, server_default="0")
     qualifying: Mapped[bool] = mapped_column(Boolean, server_default="false")
 

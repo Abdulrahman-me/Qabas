@@ -276,7 +276,8 @@ def test_resume_redacts_history_by_feedback_mode(learn_api: TestClient, curricul
     assert [(a["result"], a["evaluation"]) for a in body["answers"]] == [("hidden", None)] * 2
     finish(curriculum_settings, unit_test["session_id"])
     body = resumed(unit_test)
-    assert [(a["result"], a["evaluation"]) for a in body["answers"]] == [("correct", None), ("incorrect", None)]
+    assert [a["result"] for a in body["answers"]] == ["correct", "incorrect"]
+    assert all(a["evaluation"] is not None for a in body["answers"])
     finish(curriculum_settings, pretest["session_id"])
     body = resumed(pretest)
     assert [(a["result"], a["evaluation"]) for a in body["answers"]] == [("hidden", None)] * 2

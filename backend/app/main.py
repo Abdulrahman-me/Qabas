@@ -5,7 +5,7 @@ from __future__ import annotations
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api import auth, health, journey, me, media, sessions
+from app.api import auth, health, journey, learning_profile, me, media, sessions
 from app.config import Settings, StorageBackend, get_settings
 from app.errors import install_error_handlers
 from app.logs import configure_logging
@@ -50,6 +50,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(me.router, prefix=API_PREFIX)
     app.include_router(journey.router, prefix=API_PREFIX)
     app.include_router(sessions.router, prefix=API_PREFIX)
+    app.include_router(learning_profile.router, prefix=API_PREFIX)
     if settings.storage_backend is StorageBackend.local:
         app.include_router(media.router)
     return app

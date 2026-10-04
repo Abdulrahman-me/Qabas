@@ -13,7 +13,7 @@
   unit's current published pools, shuffled at serve time, never repeating an item.
 * **Reviews:** ``cards``/``quick`` selection (``review.py``); nothing to serve -> ``409 nothing_to_review``.
 * **History redaction:** ``immediate`` -> results with the stored evaluation; ``end`` -> ``hidden`` while active,
-  results (no evaluation) after finish; ``none`` -> always ``hidden``. Grading never uses the redacted view.
+  results with stored evaluations after finish; ``none`` -> always ``hidden``. Grading uses the private result.
 * Answer keys, misconception maps and duel flags never enter a snapshot: exercises are projected to the
   learner ``Exercise`` model, which has no such fields.
 """
@@ -47,10 +47,11 @@ from app.contract import models as C
 from app.db.ids import new_id
 from app.errors import ApiError, ErrorCode
 from app.i18n import SESSION_TITLES
-from app.models import ExerciseVersion, LearnerUnit, LearningSession, SessionAnswer, User
+from app.models import ExerciseVersion, LearnerConcept, LearnerUnit, LearningSession, SessionAnswer, Unit, User
 from app.services.learning import review
 from app.services.learning import terms as glossary
 from app.services.learning.journey import JourneyView, has_guide, load_view, soft_lock_details
+from app.services.learning.locking import learner_lock
 from app.services.platform.auth_sessions import utcnow
 from app.services.users import iso
 
@@ -86,6 +87,7 @@ async def create(db: AsyncSession, settings: Settings, user: User, request: C.Se
         existing = await _active(db, user.id, request)
         if existing is not None:
             return await _to_contract(db, existing), False
+        await learner_lock(db, user.id)
         view = await load_view(db, user)
         if request.kind == "lesson":
             served = await _serve_lesson(db, view, request.lesson_id or "", lang)
@@ -93,11 +95,26 @@ async def create(db: AsyncSession, settings: Settings, user: User, request: C.Se
             served = await _serve_review(db, view, request.mode or "", lang)
         else:
             served = await _serve_assessment(db, view, request.kind, request.unit_id or "", lang)
+        concept_ids = sorted({c for b in served.snapshot["items"] if b["type"] == "exercise"
+                              for c in b["exercise"]["concept_ids"]})
+        concept_rows = {r.concept_id: r for r in (await db.execute(select(LearnerConcept).where(
+            LearnerConcept.user_id == user.id, LearnerConcept.concept_id.in_(concept_ids)))).scalars()}
+        learning_snapshot: dict[str, Any] = {"mastery": {c: str(concept_rows[c].mastery) if c in concept_rows else "0"
+                                         for c in concept_ids},
+                             "due": {r.concept_id: iso(r.due_at) for r in concept_rows.values()
+                                     if r.due_at is not None}}
+        term_rows = await catalog.terms(db, list(served.snapshot["terms"]))
+        learning_snapshot["term_concepts"] = {tid: row.concept_id for tid, row in term_rows.items()}
+        if request.kind == "unit_test":
+            unit = await db.get(Unit, served.unit_id)
+            assert unit is not None
+            learning_snapshot["pass_percent"] = unit.pass_percent
         session = LearningSession(
             id=new_id("ses"), user_id=user.id, kind=request.kind, mode=request.mode, lesson_id=served.lesson_id,
             lesson_version_id=served.lesson_version_id, unit_id=served.unit_id,
             feedback_mode=FEEDBACK_MODE[request.kind], language=lang, variant=served.variant,
-            items_snapshot=served.snapshot, served_exercises=served.served_exercises,
+            items_snapshot=served.snapshot, learning_snapshot=learning_snapshot,
+            served_exercises=served.served_exercises,
             served_scenes=served.served_scenes, contract_revision=settings.contract_revision, started_at=utcnow())
         _check_composition(session)
         try:
@@ -284,7 +301,7 @@ def history(session: LearningSession, rows: list[SessionAnswer]) -> list[dict[st
     results = {True: "correct", False: "incorrect", None: "neutral"}
     return [{"exercise_id": r.exercise_id, "is_retry": r.is_retry,
              "result": results[r.correct] if visible else "hidden", "recorded_at": iso(r.recorded_at),
-             "evaluation": r.evaluation if session.feedback_mode == "immediate" else None} for r in rows]
+             "evaluation": r.evaluation if visible else None} for r in rows]
 
 
 # ======================================================================================================= abandon

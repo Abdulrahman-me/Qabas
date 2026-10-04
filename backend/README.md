@@ -68,6 +68,27 @@ The repository is the complete production product and must be cloneable, install
 
 `scripts/check_public_safety.py` (pre-commit hook and CI) blocks secrets and credential files, secret-looking tokens, the handoff and private paths, hidden-evaluation dataset names, and verbatim copies of fingerprinted private handoff artifacts (`backend/security/private_fingerprints.json`, digests only). It does not flag Arabic text or production content.
 
+## Phase 7 learning completion
+
+Session finish commits the result, completion facts, FSRS schedules, term exposure/promotions, activity,
+XP and quest rewards together. Results replay unchanged, including changed or malformed retry bodies.
+The fixed XP amounts also drive published lesson XP. Repeating learning remains available; canonical
+lesson/pretest/unit-pass/recitation rewards and the perfect bonus are one-time grants. Review XP requires
+scheduled due work and is capped once per learner local day across both modes (D-67 in the tracker).
+
+Migration 0003 adds private immutable start snapshots and answer transition audit, cross-session reward
+uniqueness, exact cumulative daily duration and bigint session duration. It preserves historical XP and
+issued evaluations; the earliest historical recitation grant claims that exercise's future reward.
+An active record created before these start snapshots existed cannot safely reconstruct its historical
+mastery start. Its finish is rejected as an integrity error; use an explicitly reviewed snapshot migration
+with authoritative historical data before deploying over such records. Do not approximate, reset,
+auto-abandon or rewrite served public content. Already finished records continue to replay.
+
+The durable `session.finished` outbox records are retained for the achievement/league/metrics consumers
+added in later phases. No reported finish effect depends on a worker. `/me/stats` has `league: null` until
+Phase 18 implements league assignment. The normative quest pool already includes `win_challenge`, whose
+activity arrives with challenges in Phases 19–20.
+
 ## Network note
 
 This machine's TLS inspection uses a root CA that only the Windows certificate store trusts. uv uses it through `%APPDATA%\uv\uv.toml` (`system-certs = true`), and git through the repo-local `http.sslBackend=schannel`.

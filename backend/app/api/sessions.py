@@ -1,4 +1,4 @@
-"""Sessions: start, resume, answer and abandon (API §6.5). Finish arrives in Phase 7."""
+"""Sessions: start, resume, answer, finish and abandon (API §6.5)."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from fastapi import APIRouter, Request, Response
 from app.api.deps import CurrentLearner, DbDep, RedisDep, RequestLanguage, SettingsDep
 from app.contract import models as C
 from app.errors import ApiError, ErrorCode
-from app.services.learning import answers, sessions
+from app.services.learning import answers, finish, sessions
 from app.services.platform.rate_limits import RateLimiter
 
 router = APIRouter(prefix="/sessions", tags=["sessions"])
@@ -55,3 +55,16 @@ async def submit_answer(session_id: str, request: Request, user: CurrentLearner,
     except (json.JSONDecodeError, UnicodeDecodeError):
         raise ApiError(ErrorCode.validation_error, "The request body must be JSON.", {"field": "body"}) from None
     return await answers.submit(db, user, session_id, body)
+
+
+FINISH_BODY = {"requestBody": {"required": True, "content": {"application/json": {
+    "schema": {"$ref": "#/components/schemas/FinishReq"}}}}}
+
+
+@router.post("/{session_id}/finish", response_model=C.SessionResult, openapi_extra=FINISH_BODY)
+async def finish_session(session_id: str, request: Request, user: CurrentLearner, db: DbDep) -> Any:
+    try:
+        body = json.loads(await request.body())
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        body = None  # A terminal session replays even a malformed retry body.
+    return await finish.finish(db, user, session_id, body)

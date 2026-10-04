@@ -16,7 +16,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.content import catalog
 from app.content.projection import select_variant, term_card, term_ids
 from app.contract import models as C
+from app.errors import ApiError, ErrorCode
 from app.models import LearnerConcept, LearnerTerm, LearnerUnit, Term, User
+from app.services.learning import profile
 
 MASTERED = Decimal("0.8")
 INTERMEDIATE_AFTER_MASTERED = 8
@@ -56,3 +58,41 @@ async def cards_for(db: AsyncSession, user: User, track: str, lang: str, *nodes:
               for lsn in await catalog.published_lessons(db) if lsn.lesson_id in lesson_ids}
     return {t: term_card(stored_term(rows[t]), lang, state=states.get(t, "new"), level=level,
                          lesson_title=titles.get(rows[t].lesson_id or "")) for t in ids}
+
+
+async def get_card(db: AsyncSession, user: User, term_id: str, lang: str) -> C.TermCard:
+    if await db.get(Term, term_id) is None:
+        raise ApiError(ErrorCode.not_found, "Term was not found.")
+    cards = await cards_for(db, user, user.track, lang, [{"type": "term", "term_id": term_id, "text": ""}])
+    return C.TermCard.model_validate(cards[term_id])
+
+
+async def page(db: AsyncSession, user: User, lang: str, state: str, cursor: str | None, limit: int) -> Any:
+    profile.page_args(cursor, limit)
+    if state not in ("all", "new", "learning", "mastered"):
+        raise profile.invalid("state")
+    # Personal glossary contains only encountered terms; explicit new is a valid empty filter.
+    query = select(LearnerTerm.term_id).where(LearnerTerm.user_id == user.id, LearnerTerm.state != "new")
+    if state != "all":
+        query = query.where(LearnerTerm.state == state)
+    if cursor:
+        query = query.where(LearnerTerm.term_id > cursor)
+    ids = list((await db.execute(query.order_by(LearnerTerm.term_id).limit(limit + 1))).scalars())
+    cards = await cards_for(db, user, user.track, lang,
+                           [{"type": "term", "term_id": tid, "text": ""} for tid in ids[:limit]])
+    return C.EXPORTED["GlossaryPage"].model_validate({"items": list(cards.values()),
+                                                    "next_cursor": ids[limit - 1] if len(ids) > limit else None})
+
+
+async def opened(db: AsyncSession, user: User, term_id: str) -> None:
+    from sqlalchemy.dialects.postgresql import insert
+
+    async with db.begin():
+        if await db.get(Term, term_id) is None:
+            raise ApiError(ErrorCode.not_found, "Term was not found.")
+        await db.execute(insert(LearnerTerm).values(user_id=user.id, term_id=term_id).on_conflict_do_nothing())
+        row = (await db.execute(select(LearnerTerm).where(LearnerTerm.user_id == user.id,
+                                LearnerTerm.term_id == term_id).with_for_update())).scalar_one()
+        row.opened_count += 1
+        if row.state == "new":
+            row.state = "learning"

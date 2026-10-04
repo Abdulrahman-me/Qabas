@@ -177,12 +177,13 @@ class LearningSession(Base):
     language: Mapped[str] = mapped_column(Text)
     variant: Mapped[str] = mapped_column(Text)
     items_snapshot: Mapped[dict[str, Any]]            # exactly what was served
+    learning_snapshot: Mapped[dict[str, Any] | None]  # private start mastery and review eligibility
     served_exercises: Mapped[list[Any]]               # [{exercise_id, version}]
     served_scenes: Mapped[list[Any]] = mapped_column(server_default=sql_text("'[]'::jsonb"))
     started_at: Mapped[datetime] = mapped_column(server_default=func.now())
     finished_at: Mapped[datetime | None]
     abandoned_at: Mapped[datetime | None]
-    duration_ms: Mapped[int | None] = mapped_column(Integer)
+    duration_ms: Mapped[int | None] = mapped_column(BigInteger)
     result_snapshot: Mapped[dict[str, Any] | None]    # stored SessionResult, replayed on every finish call
     contract_revision: Mapped[int] = mapped_column(SmallInteger)
     snapshot_revision: Mapped[int | None] = mapped_column(SmallInteger)  # set only by a tested snapshot migration
@@ -210,6 +211,7 @@ class SessionAnswer(Base):
     is_retry: Mapped[bool] = mapped_column(Boolean)
     misconception_id: Mapped[str | None] = mapped_column(ForeignKey("misconceptions.id"))
     evaluation: Mapped[dict[str, Any]]                # exact evaluation issued, replayed as-is
+    misconception_changes: Mapped[dict[str, Any] | None]  # private transitions caused by this answer
     recorded_at: Mapped[datetime] = mapped_column(server_default=func.now())
 
 
