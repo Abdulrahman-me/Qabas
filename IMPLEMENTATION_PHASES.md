@@ -20,7 +20,7 @@
 | 4 | Content storage, registries, projection and seeding | ✅ Done | `phase-4` | CI green (313 passed); conflict D-38 resolved |
 | 5 | Journey, lessons and session creation | ✅ Done | `phase-5` | CI green (393 passed); planner complete (D-44, D-45) |
 | 6 | Answers: replay-first, evaluators, per-answer adaptation | ✅ Done | `phase-6` | CI green (525 passed); 86/86 contract evaluations |
-| 7 | Finish transaction, FSRS, planner, reviews, glossary, stats | 🔄 In progress | `phase-7` | **Milestone A: durable learning slice** |
+| 7 | Finish transaction, FSRS, planner, reviews, glossary, stats | ✅ Done | `phase-7` | **Milestone A: durable learning slice** |
 | 8 | Content import (Salah reference, Unit 0 drafts), approval-gated publish, staging | ⏳ Not started | `phase-8` | |
 | 9 | Source adapters (tool layer) | ⏳ Not started | `phase-9` | |
 | 10 | Recitation service (`asr` worker) | ⏳ Not started | `phase-10` | **Milestone B: complete learning experience** |
@@ -286,7 +286,7 @@ Re-review of API §5.7–5.8, §6.5–6.6, §7 (every exercise type and mode), �
 | F-33 | Misconception cards live in a mutable registry row, so a republished card could change what a pinned session shows. | D-55. |
 | F-34 | `week_key` is "ISO year + week starting Sunday 00:00 Asia/Riyadh" with no format. | D-60. |
 | F-35 | Phase 4 bugs: misconception cards stored as objects (publication failed); test-curriculum exercises had no `source_ids` although their feedback cites `src_q_112_1`. | Fixed. |
-| F-36 | Nothing limits rewards across repeated sessions: recitation XP is "once per exercise per session", so abandoning and restarting a lesson can earn it again (with a genuinely passing recitation each time). | Spec followed now; the reward policy is decided with finish XP in Phase 7 (D-64, with D-52). |
+| F-36 | Nothing limits rewards across repeated sessions: recitation XP is "once per exercise per session", so abandoning and restarting a lesson can earn it again (with a genuinely passing recitation each time). | Phase 6 followed the per-session rule (D-64). Resolved in Phase 7 by D-67: canonical cross-session claims, preserving legitimate repeated learning and D-52. |
 | F-37 | The order of per-item results, `event_dates` and `pin_labels` is unspecified. | D-65. |
 
 ---
@@ -296,21 +296,21 @@ Re-review of API §5.7–5.8, §6.5–6.6, §7 (every exercise type and mode), �
 **Goal:** complete the durable learning slice (**Milestone A**).
 **Refs:** BACKEND_HANDOFF §6.4, §7.3–7.6, §10.1–10.2, §10.5–10.6; API §6.2, §6.5, §6.7.
 
-- [ ] XP grants follow the fixed table, which also drives the displayed `JLesson.xp` (D-31); keep the two in one place.
-- [ ] Pretest: store the first result only (`pretest_taken_at`/`pretest_percent` set once) and grant `pretest_complete` once per unit (D-52).
-- [ ] Finish takes locks in the answer order (session → concepts ascending → misconceptions ascending → terms, D-56).
-- [ ] Create FSRS cards and set `learner_concepts.first_practiced_at` at finish for concepts practised by non-retry, non-pretest answers (D-54); term exposures and promotions at finish (D-53).
-- [ ] Decide the repeated-reward policy for `lesson_complete`, `lesson_perfect`, `review_complete` and recitation XP across repeated sessions of the same lesson (F-36, D-64), alongside D-52.
-- [ ] Finish writes the facts the journey derives from (D-21): `learner_lessons.completed_at`, `learner_units.unit_test_passed_at`/`unit_test_best_percent`, `completed_at`/`skipped_at`; FSRS cards set `first_practiced_at`/`due_at`, which feed review selection (Phase 5).
-- [ ] `POST /sessions/{id}/finish`: one transaction that stores and replays `SessionResult` (score, layers, `lesson_perfect`, `passed`, `review_items`, `duration_ms` clamp, XP grants, daily activity/streak/daily goal, quest progress and rewards, FSRS updates, term promotions, `unlocked`, `next_step`); pretest/first-post percentages; unit skip.
-- [ ] Outbox events for unreported effects (`session:{id}:finished` → achievements/leagues/metrics consumers, added in their phases).
-- [ ] FSRS service (py-fsrs), card review and quick review selection, `409 nothing_to_review`.
-- [ ] Planner (`GET /journey/next`): complete rules 3–4 (lesson and unit-test steps) on the journey service; rules 1, 2 and 5 exist since Phase 3. Level, `/me/concepts`, `/me/stats`, `/me/activity`, `/me/quests` (lazy deterministic quests).
-- [ ] Glossary: `GET /glossary`, `GET /glossary/{id}`, `POST /glossary/{id}/opened`.
+- [x] XP grants follow the fixed table, which also drives the displayed `JLesson.xp` (D-31); keep the two in one place.
+- [x] Pretest: store the first result only (`pretest_taken_at`/`pretest_percent` set once) and grant `pretest_complete` once per unit (D-52).
+- [x] Finish takes locks in the answer order (session → concepts ascending → misconceptions ascending → terms, D-56).
+- [x] Create FSRS cards and set `learner_concepts.first_practiced_at` at finish for concepts practised by non-retry, non-pretest answers (D-54); term exposures and promotions at finish (D-53).
+- [x] Decide the repeated-reward policy for `lesson_complete`, `lesson_perfect`, `review_complete` and recitation XP across repeated sessions of the same lesson (F-36, D-64), alongside D-52.
+- [x] Finish writes the facts the journey derives from (D-21): `learner_lessons.completed_at`, `learner_units.unit_test_passed_at`/`unit_test_best_percent`, `completed_at`/`skipped_at`; FSRS cards set `first_practiced_at`/`due_at`, which feed review selection (Phase 5).
+- [x] `POST /sessions/{id}/finish`: one transaction that stores and replays `SessionResult` (score, layers, `lesson_perfect`, `passed`, `review_items`, `duration_ms` clamp, XP grants, daily activity/streak/daily goal, quest progress and rewards, FSRS updates, term promotions, `unlocked`, `next_step`); pretest/first-post percentages; unit skip.
+- [x] Outbox events for unreported effects (`session:{id}:finished` → achievements/leagues/metrics consumers, added in their phases).
+- [x] FSRS service (py-fsrs), card review and quick review selection, `409 nothing_to_review`.
+- [x] Planner (`GET /journey/next`): complete rules 3–4 (lesson and unit-test steps) on the journey service; rules 1, 2 and 5 exist since Phase 3. Level, `/me/concepts`, `/me/stats`, `/me/activity`, `/me/quests` (lazy deterministic quests).
+- [x] Glossary: `GET /glossary`, `GET /glossary/{id}`, `POST /glossary/{id}/opened`.
 
 **Implementation:** atomic stored-result finish; private start mastery, term-concept and assessment-threshold pins; FSRS cards; canonical completion facts; reward uniqueness across sessions; exact daily duration; deterministic quests and reward cascades; learner profile and glossary endpoints; finish outbox. Planner rules 3–4 already existed in Phase 5 and are exercised through real completions here.
 
-**Validation:** 556 passed, 1 skipped locally (the existing role-grants check runs with CI-created roles); strict mypy (77 files), ruff, current OpenAPI and repository safety guard pass. Revision 10 suites: 595/595, 279/279, 105/105, 382/382; regenerated schema unchanged. Development migration upgrade → downgrade → upgrade and `alembic check` pass; full tests also verify migration round-trip/parity. Acceptance tests cover the contract §6.5 arithmetic, scoring/FSRS rules, curriculum completion in both tracks, end/none history, original/retry/finish races, concurrent finishes and overlapping reviews, rollback before commit, outbox redelivery, repeated rewards, terms, quests, daily activity, legacy-state rejection and long-lived sessions. GitHub CI is pending.
+**Validation:** 556 passed, 1 skipped locally (the existing role-grants check runs with CI-created roles); strict mypy (77 files), ruff, current OpenAPI and repository safety guard pass. Revision 10 suites: 595/595, 279/279, 105/105, 382/382; regenerated schema unchanged. Development migration upgrade → downgrade → upgrade and `alembic check` pass; full tests also verify migration round-trip/parity. Acceptance tests cover the contract §6.5 arithmetic, scoring/FSRS rules, curriculum completion in both tracks, end/none history, original/retry/finish races, concurrent finishes and overlapping reviews, rollback before commit, outbox redelivery, repeated rewards, terms, quests, daily activity, legacy-state rejection and long-lived sessions. GitHub CI passes all 557 tests including role grants, all static checks and all contract suites. The existing Starlette/httpx deprecation warning remains; no tests were weakened or removed.
 
 ### Handoff review findings (Phase 7)
 
@@ -329,7 +329,7 @@ Re-reviewed the completed tracker records and D-01–D-66/F-01–F-37; searched 
 | F-46 | Phase 5 returned end-mode outcomes without stored evaluations; fixtures permit null, while the API allows feedback at the result/review stage. | D-74: reveal stored unit-test evaluations after finish only; pretests remain hidden; answer replay shape unchanged. |
 | F-47 | FSRS settings/version were unspecified; contract Page factory classes collide in FastAPI component naming. | D-75 pins FSRS. OpenAPI aliases only structurally identical pages to unchanged exported roots; unknown schemas still fail. |
 
-**Exit:** pending full local checks and GitHub CI; Integration gate 3 and tag `phase-7` remain required.
+**Exit:** Integration gate 3 passed: contract §6.5 arithmetic through published content, answer/retry/finish → quest rewards → next step, concurrent finish/answer/review, transaction rollback, history recovery and outbox redelivery. GitHub CI [37226971161](https://github.com/Abdulrahman-me/Qabas/actions/runs/37226971161) green (557 passed including role grants; all contract suites/static checks green). Checkpoint `phase-7` follows the established fast-forward merge to `main`.
 
 ---
 
@@ -659,3 +659,4 @@ Re-reviewed the completed tracker records and D-01–D-66/F-01–F-37; searched 
 | 2026-10-04 | 6 | Handoff re-reviewed for answers, grading, retries, feedback and adaptation (12 findings F-26–F-37). Built replay-first answer handling, all evaluators (86/86 contract evaluations reproduced), per-answer mastery/misconception/recitation-XP effects with a fixed lock order, and recitation binding; fixed two Phase 4 bugs and added the untimed-items rule (D-61). 524 tests green locally; CI pending. |
 | 2026-10-04 | 6 | ✅ Phase 6 complete: CI green (525 passed incl. role grants; contract suites green); tagged `phase-6`, merged to `main`. |
 | 2026-10-04 | 7 | Recovered the complete handoff/contract/history context; recorded F-38–F-47 and D-67–D-75. Built atomic replayable finish, FSRS, progression facts, terms, protected repeat rewards, daily activity/quests and profile/glossary endpoints, with migration 0003. 556 passed + one CI-only role check skipped locally; lint/type/OpenAPI/migration/safety checks and full 595/279/105/382 contract suites green. Private product progress notes updated; CI pending. |
+| 2026-10-04 | 7 | ✅ Phase 7 complete / Milestone A: GitHub CI 37226971161 green (557 passed including role grants; contract suites 595/279/105/382 green). Integration gate 3 passed. Tagged `phase-7`, merged to `main`; private product notes remain git-ignored. |
