@@ -6,7 +6,7 @@ Contract identity rules (decision D-15 for the cases the spec leaves open):
   older than revision 10 and gets ``426 client_outdated``;
 * a missing ``Qabas-Client`` also gets ``426``; a malformed one (not ``<android|ios|web>/<semver>``)
   is a client bug and gets ``400 validation_error``; an app version below ``MIN_APP_VERSION`` gets ``426``.
-Operational paths (health, OpenAPI document) are exempt.
+Operational paths (health, OpenAPI document, local media links) are exempt.
 """
 
 from __future__ import annotations
@@ -28,7 +28,7 @@ from app.logs import redact_query
 
 log = logging.getLogger("qabas.request")
 
-EXEMPT_PREFIXES = ("/health", "/openapi.json", "/docs", "/redoc")
+EXEMPT_PREFIXES = ("/health", "/openapi.json", "/docs", "/redoc", "/media/", "/private/")
 CLIENT_RE = re.compile(r"^(android|ios|web)/(\d+)\.(\d+)\.(\d+)(?:[-+][0-9A-Za-z.\-+]*)?$")
 SEMVER_RE = re.compile(r"^(\d+)\.(\d+)\.(\d+)")
 

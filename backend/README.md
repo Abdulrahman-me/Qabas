@@ -51,6 +51,9 @@ py -3.12 scripts\dev\install_git_hooks.py              # pre-commit public-safet
 | Repository safety check | `uv run python scripts/check_public_safety.py` |
 | Refresh private-artifact fingerprints | `py -3.12 scripts/dev/update_private_fingerprints.py` (needs the local handoff) |
 | Worker (Windows dev) | `uv run celery -A app.workers.celery_app worker -Q maintenance,factory,media --pool=solo` |
+| Scheduler (outbox relay every 5 s, cleanups) | `uv run celery -A app.workers.celery_app beat` |
+| Create or re-key a reviewer | `uv run python scripts/create_reviewer.py --email reviewer@example.org --name "Reviewer"` (prompts for the password) |
+| After restoring a backup | `uv run python scripts/repurge_deleted_users.py` (purges every deleted account again, before reopening traffic) |
 
 ## What belongs in the repository (D-19)
 

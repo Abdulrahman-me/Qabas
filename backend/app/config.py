@@ -43,6 +43,16 @@ class Settings(BaseSettings):
     auth_token_pepper_previous: SecretStr | None = None
     ws_ticket_ttl_seconds: int = 60
     signed_url_ttl_seconds: int = 900
+    auth_cache_ttl_seconds: int = 30          # revocation takes effect within this window (backend §5)
+    guest_inactivity_days: int = 180
+    reviewer_session_hours: int = 12
+    last_seen_throttle_seconds: int = 30
+    reviewer_lockout_attempts: int = 5
+    reviewer_lockout_window_seconds: int = 900
+    idempotency_ttl_hours: int = 24
+    # Number of trusted reverse proxies in front of the API; 0 = use the socket peer address.
+    trusted_proxy_hops: int = 0
+    redis_key_prefix: str = "qabas"
 
     # Contract identity (API §3.2).
     contract_revision: int = 10
@@ -110,6 +120,15 @@ class Settings(BaseSettings):
     @property
     def is_dev_like(self) -> bool:
         return self.app_env in (Environment.dev, Environment.test)
+
+    def peppers(self) -> list[bytes]:
+        """Current pepper first, then the previous one accepted during rotation."""
+        if self.auth_token_pepper is None:
+            raise RuntimeError("AUTH_TOKEN_PEPPER is not configured")
+        values = [self.auth_token_pepper.get_secret_value().encode()]
+        if self.auth_token_pepper_previous is not None:
+            values.append(self.auth_token_pepper_previous.get_secret_value().encode())
+        return values
 
 
 @lru_cache

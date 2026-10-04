@@ -13,7 +13,7 @@ from sqlalchemy.ext.asyncio import AsyncConnection
 
 from app.db.ids import new_id
 from tests.db import factories as f
-from tests.db.conftest import (
+from tests.support.db import (
     CHECK_VIOLATION,
     CURRENT_NOT_PUBLISHED,
     FK_VIOLATION,

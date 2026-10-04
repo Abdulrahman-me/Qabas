@@ -5,12 +5,13 @@ from __future__ import annotations
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api import health
-from app.config import Settings, get_settings
+from app.api import auth, health, me, media
+from app.config import Settings, StorageBackend, get_settings
 from app.errors import install_error_handlers
 from app.logs import configure_logging
 from app.middleware import ContractIdentityMiddleware, RequestContextMiddleware
 from app.openapi import install_openapi
+from app.runtime import lifespan
 
 API_PREFIX = "/v1"
 
@@ -25,7 +26,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         docs_url="/docs" if settings.is_dev_like else None,
         redoc_url=None,
         openapi_url="/openapi.json",
+        lifespan=lifespan,
     )
+    app.state.settings = settings
     install_error_handlers(app)
     install_openapi(app)
 
@@ -43,7 +46,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     )
 
     app.include_router(health.router)
-    # Public /v1 routers are added by later phases (journey, sessions, ...).
+    app.include_router(auth.router, prefix=API_PREFIX)
+    app.include_router(me.router, prefix=API_PREFIX)
+    if settings.storage_backend is StorageBackend.local:
+        app.include_router(media.router)
     return app
 
 

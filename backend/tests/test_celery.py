@@ -21,3 +21,10 @@ def test_routing_by_task_prefix() -> None:
 
 def test_ping_task_runs() -> None:
     assert ping.apply().get() == "pong"
+
+
+def test_maintenance_jobs_are_scheduled() -> None:
+    schedule = celery_app.conf.beat_schedule
+    assert schedule["outbox-relay"]["task"] == "maintenance.outbox_relay"
+    assert schedule["outbox-relay"]["schedule"] <= 10
+    assert {"purge-idempotency-keys", "expire-guest-sessions"} <= schedule.keys()

@@ -6,6 +6,9 @@
 # content, local scratch. Never committed.
 /backend/.private/
 
+# Owner's private, product-level progress notes (not part of the public product)
+/PRODUCT_PROGRESS_NOTES.md
+
 # Secrets and local configuration
 .env
 .env.*

@@ -13,7 +13,7 @@ from sqlalchemy.ext.asyncio import AsyncConnection
 from app.contract import models as C
 from app.db import enums
 from app.db.base import Base
-from tests.db.conftest import alembic_config
+from tests.support.db import alembic_config
 
 pytestmark = pytest.mark.integration
 
