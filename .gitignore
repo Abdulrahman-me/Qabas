@@ -1,0 +1,33 @@
+# Frozen engineering handoff: read-only reference material, never committed
+# (contains private answer keys, unapproved content and large archives).
+/FINAL_ENGINEERING_HANDOFF/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Local runtime data
+/backend/var/
+*.log
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
