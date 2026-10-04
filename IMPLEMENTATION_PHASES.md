@@ -15,7 +15,7 @@
 |---|---|---|---|---|
 | 0 | Workspace, toolchain and baseline verification | ✅ Done | `phase-0` | |
 | 1 | Contract vendoring and service skeleton | ✅ Done | `phase-1`, `phase-1.1` | CI green; repository boundary corrected by D-19 (`phase-1.1`) |
-| 2 | Core database schema and migrations | 🔄 In progress | `phase-2` | All local checks green; waiting on CI |
+| 2 | Core database schema and migrations | ✅ Done | `phase-2` | CI green (151 passed incl. role grants) |
 | 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | ⏳ Not started | `phase-3` | |
 | 4 | Content storage, registries, projection and seeding | ⏳ Not started | `phase-4` | |
 | 5 | Journey, lessons and session creation | ⏳ Not started | `phase-5` | |
@@ -143,7 +143,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 **Tables added later by their phases (additive migrations):** `factory_runs` (12; plus the FK from `review_decisions.run_id` and `lesson_versions.run_id`), `blind_pairs`/`blind_responses` (15), `benchmark_runs` and Raqeeb tables (16–17), league/friend/achievement tables (18), duel tables (19–20).
 
 **Local status:** 150 tests pass (24 DB constraint/schema tests on the real `qabas_test`; the role-privilege test runs in CI and locally after `create-dev-db.ps1` is re-run). `alembic check` shows no drift; the dev DB is at head after a downgrade/upgrade round trip; ruff and mypy are clean.
-**Exit:** CI green on GitHub, tag `phase-2`.
+**Exit:** ✅ CI green on GitHub (run 37193125528: 151 passed, role-privilege test included; contract suites green); tagged `phase-2`.
 
 ---
 
@@ -491,3 +491,4 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | 2026-10-04 | 1 | ✅ Phase 1 complete: CI green on GitHub (84 passed, native Postgres/Redis on the runner); tagged `phase-1`, merged to `main`. |
 | 2026-10-04 | 1.1 | Corrective commit (D-19): full contract vendored and its suites in CI; guard now targets secrets, private handoff artifacts (fingerprints) and hidden evaluation data instead of Arabic text; binary-digest bug fixed. 96 tests + 595/279/105/382 green locally. |
 | 2026-10-04 | 2 | Core schema built: 31 tables, contract-derived enum CHECKs, all mandatory constraints, 12 integrity triggers, least-privilege grants; migration round trip and `alembic check` parity in tests; NULL-CHECK bug in the recitation range found and fixed. 150 tests green locally; CI pending. |
+| 2026-10-04 | 2 | ✅ Phase 2 complete: CI green (151 passed; role grants verified with CI-created roles); tagged `phase-2`, merged to `main`. |
