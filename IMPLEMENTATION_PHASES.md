@@ -17,7 +17,7 @@
 | 1 | Contract vendoring and service skeleton | ✅ Done | `phase-1`, `phase-1.1` | CI green; repository boundary corrected by D-19 (`phase-1.1`) |
 | 2 | Core database schema and migrations | ✅ Done | `phase-2` | CI green (151 passed incl. role grants) |
 | 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | ✅ Done | `phase-3` | CI green (218 passed) |
-| 4 | Content storage, registries, projection and seeding | 🔄 In progress | `phase-4` | 312 passed locally; CI pending |
+| 4 | Content storage, registries, projection and seeding | ✅ Done | `phase-4` | CI green (313 passed); conflict D-38 resolved |
 | 5 | Journey, lessons and session creation | ⏳ Not started | `phase-5` | |
 | 6 | Answers: replay-first, evaluators, per-answer adaptation | ⏳ Not started | `phase-6` | |
 | 7 | Finish transaction, FSRS, planner, reviews, glossary, stats | ⏳ Not started | `phase-7` | **Milestone A: durable learning slice** |
@@ -188,7 +188,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 
 **Tests:** `tests/content/` (94): curriculum file structure and every curriculum error; registry parity; every content rule rejecting the violation it targets; storage round trip; versioning and immutability; approval bound to the digest; fixture origin refused outside dev/test; prerequisites; slot placement; exercise identity; unit availability; projection against the contract sessions; idempotent seeding. DB/API tests updated for slots and `origin`.
 **Local status:** 312 passed, 1 skipped (role privileges, CI only); ruff and mypy clean; contract suites 595/279/105/382 PASS; OpenAPI unchanged; `alembic check` clean; migration round trip verified; production seed applied twice on the dev DB (second run unchanged).
-**Exit:** CI green; tag `phase-4`.
+**Exit:** ✅ CI green on GitHub (run 37209992662: 313 passed incl. role grants, contract suites green); tagged `phase-4`.
 
 ### Handoff review findings (Phase 4)
 
@@ -547,3 +547,4 @@ Re-review of 01_PRODUCT, 06_CONTENT, API §5.5c/5.5d/6.3/6.4, the contract model
 | 2026-10-04 | 3 | First CI run failed: Linux accepted `localtime` as a time zone (OS list). Fixed by validating against the `tzdata` package list (D-28); tests extended (`Factory`, `posixrules`, path-like names). |
 | 2026-10-04 | 3 | ✅ Phase 3 complete: CI green (218 passed incl. role grants; contract suites green); tagged `phase-3`, merged to `main`. |
 | 2026-10-04 | 4 | Handoff re-reviewed for curriculum and content rules; 13 findings recorded (F-1–F-13), one genuine conflict resolved (D-38). Built the curriculum file and slots (migration 0002), registries, the lesson package model, deterministic validators, versioned storage, digest-bound publication, unit availability, projections and the seed script. Bugs found and fixed during the build: 1-based lesson index, sentence/claim ID prefixes, JSONB losing exercise order (digest mismatch). 312 tests green locally; CI pending. |
+| 2026-10-04 | 4 | ✅ Phase 4 complete: CI green (313 passed incl. role grants; contract suites green); tagged `phase-4`, merged to `main`. |
