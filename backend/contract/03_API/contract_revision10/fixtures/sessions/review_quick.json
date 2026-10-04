@@ -1,0 +1,195 @@
+{
+ "session_id": "ses_review_quick",
+ "kind": "review",
+ "mode": "quick",
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": null,
+ "lesson_id": null,
+ "lesson_version": null,
+ "title": "جلسة اختبارية",
+ "subtitle": null,
+ "lesson_type": null,
+ "reviewed_by": null,
+ "objectives": [],
+ "counts": {
+  "interactions": 3,
+  "exercises": 3,
+  "scored": 3
+ },
+ "source_count": 0,
+ "total_exercises": 3,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_review_quick_0",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله واحد لا شريك له"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله أول الآلهة"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله خاص بالعرب"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_review_quick_1",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله واحد لا شريك له"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله أول الآلهة"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله خاص بالعرب"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_review_quick_2",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله واحد لا شريك له"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله أول الآلهة"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله خاص بالعرب"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "completion": null,
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

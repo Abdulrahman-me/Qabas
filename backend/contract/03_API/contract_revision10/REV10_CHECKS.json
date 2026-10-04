@@ -1,0 +1,1126 @@
+{
+  "suite": "revision 10 focused checks",
+  "roots_exported": 99,
+  "tests": 279,
+  "passed": 279,
+  "failed": [],
+  "checks": [
+    {
+      "label": "schema root Session: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root LessonRead: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AnswerEvaluation: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AnswerRecorded: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Visual: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Evidence: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Source: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root TermCard: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Exercise: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root RaqeebCompleted: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Duel: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root WsEvent: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Image: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Overlay: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root SceneRef: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Journey: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root ErrorEnvelope: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root User: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root NextStep: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AuthResp: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root OnboardingReq: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root OnboardingResp: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Stats: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Activity: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Quests: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Achievements: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Guide: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root SessionCreate: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AnswerSubmit: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root SessionResult: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root RecitationCheck: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Conversation: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root PostMessageResp: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AssistantProcessing: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AssistantFailed: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root League: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Friend: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Invite: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DuelCreate: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DuelResult: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AsyncNext: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AsyncAnswerResp: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root FactoryRun: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Draft: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Gate1: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Gate2: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root BlindPair: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root BlindAnswer: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Metrics: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root GuestReq: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root ReviewerReq: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root MePatch: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root FinishReq: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root ConvCreate: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root ConvDetail: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AssistantMessage: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root FeedbackReq: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root InviteAccept: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AsyncAnswer: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root RunCreate: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DraftFragment: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root LessonPlan: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root ReviewerExercise: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root ConceptPage: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root ConversationPage: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root FriendPage: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root InvitationPage: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DuelPage: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root RunPage: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DuelConfig: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root WsClientMessage: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AOption: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AValue: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AReason: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root APairs: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AFills: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AAssignments: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root ASegment: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AOrder: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root APin: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root ARating: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root ACheck: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root ASkipped: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root AUnavailable: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DReason: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DPairs: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DFills: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DAssignments: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DOrder: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DScenario: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DTimeline: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root DPins: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Category: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root CatItem: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root Step: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root POrderSteps: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root PCategorize: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root StoredGlossaryTerm: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "schema root GlossaryPage: valid draft 2020-12 with resolvable refs",
+      "passed": true
+    },
+    {
+      "label": "no undocumented generic dict fields remain in public models",
+      "passed": true
+    },
+    {
+      "label": "every documented request/response body is an exported schema root",
+      "passed": true
+    },
+    {
+      "label": "pydantic models and exported schemas accept the same API examples",
+      "passed": true
+    },
+    {
+      "label": "exported WsClientMessage schema rejects a flashcard rating as a challenge answer",
+      "passed": true
+    },
+    {
+      "label": "MePatch accepts a partial update",
+      "passed": true
+    },
+    {
+      "label": "MePatch rejects an empty body",
+      "passed": true
+    },
+    {
+      "label": "MePatch rejects explicit null",
+      "passed": true
+    },
+    {
+      "label": "MePatch rejects a 1-character display name",
+      "passed": true
+    },
+    {
+      "label": "MePatch rejects unknown fields (local-only preferences)",
+      "passed": true
+    },
+    {
+      "label": "MePatch rejects an unsupported daily goal",
+      "passed": true
+    },
+    {
+      "label": "ws client ready",
+      "passed": true
+    },
+    {
+      "label": "ws client true/false answer",
+      "passed": true
+    },
+    {
+      "label": "ws client rejects unknown type",
+      "passed": true
+    },
+    {
+      "label": "ws client rejects answer without index",
+      "passed": true
+    },
+    {
+      "label": "ws client rejects negative index",
+      "passed": true
+    },
+    {
+      "label": "ws client rejects data on ping",
+      "passed": true
+    },
+    {
+      "label": "API example digests equal review.py output",
+      "passed": true
+    },
+    {
+      "label": "review digest ignores key order, changes on edits, binds run_id, refuses non-gate runs",
+      "passed": true
+    },
+    {
+      "label": "FactoryRun example validates",
+      "passed": true
+    },
+    {
+      "label": "FactoryRun at a gate without digest is rejected",
+      "passed": true
+    },
+    {
+      "label": "running FactoryRun with a digest is rejected",
+      "passed": true
+    },
+    {
+      "label": "published FactoryRun without published ref is rejected",
+      "passed": true
+    },
+    {
+      "label": "failed FactoryRun without error is rejected",
+      "passed": true
+    },
+    {
+      "label": "FactoryRun rejects an unknown stage",
+      "passed": true
+    },
+    {
+      "label": "Gate 1 rejects an edited plan with reject",
+      "passed": true
+    },
+    {
+      "label": "Gate 1 rejects a malformed digest",
+      "passed": true
+    },
+    {
+      "label": "Gate 1 rejects a missing digest",
+      "passed": true
+    },
+    {
+      "label": "Gate 2 request_changes needs a reason",
+      "passed": true
+    },
+    {
+      "label": "Gate 2 edits only with approve",
+      "passed": true
+    },
+    {
+      "label": "Gate 2 rejects a sentence edit without text",
+      "passed": true
+    },
+    {
+      "label": "QA issue accepts kind validation",
+      "passed": true
+    },
+    {
+      "label": "supported claim without supporting evidence is rejected",
+      "passed": true
+    },
+    {
+      "label": "ReviewerExercise accepts an MCQ with an option key",
+      "passed": true
+    },
+    {
+      "label": "ReviewerExercise rejects a missing key on an MCQ",
+      "passed": true
+    },
+    {
+      "label": "ReviewerExercise rejects a wrong-shaped key",
+      "passed": true
+    },
+    {
+      "label": "ReviewerExercise rejects a stored key on a flashcard",
+      "passed": true
+    },
+    {
+      "label": "control: flashcard without a stored key is accepted",
+      "passed": true
+    },
+    {
+      "label": "control: scenario that is not duel eligible is accepted",
+      "passed": true
+    },
+    {
+      "label": "control: Gate 2 reject without edits is accepted",
+      "passed": true
+    },
+    {
+      "label": "control: Gate 2 request_changes with a reason is accepted",
+      "passed": true
+    },
+    {
+      "label": "control: Gate 1 reject without plan is accepted",
+      "passed": true
+    },
+    {
+      "label": "ReviewerExercise rejects duel eligibility for an open type",
+      "passed": true
+    },
+    {
+      "label": "SessionResult example validates",
+      "passed": true
+    },
+    {
+      "label": "SessionResult rejects xp.total != sum(breakdown)",
+      "passed": true
+    },
+    {
+      "label": "SessionResult rejects an unknown XP reason",
+      "passed": true
+    },
+    {
+      "label": "SessionResult rejects passed on a lesson",
+      "passed": true
+    },
+    {
+      "label": "SessionResult rejects review_items on a lesson",
+      "passed": true
+    },
+    {
+      "label": "unit_test SessionResult needs passed and review_items",
+      "passed": true
+    },
+    {
+      "label": "RecitationCheck example validates",
+      "passed": true
+    },
+    {
+      "label": "RecitationCheck rejects a summary that miscounts words",
+      "passed": true
+    },
+    {
+      "label": "RecitationCheck rejects passed with substitutions",
+      "passed": true
+    },
+    {
+      "label": "unclear RecitationCheck rejects words",
+      "passed": true
+    },
+    {
+      "label": "Stats accepts league null (no league this week)",
+      "passed": true
+    },
+    {
+      "label": "Stats rejects an untyped league object",
+      "passed": true
+    },
+    {
+      "label": "ConvDetail accepts mixed typed history",
+      "passed": true
+    },
+    {
+      "label": "ConvDetail rejects an untyped message",
+      "passed": true
+    },
+    {
+      "label": "failed message rejects an unknown error code",
+      "passed": true
+    },
+    {
+      "label": "failed message accepts input_unreadable",
+      "passed": true
+    },
+    {
+      "label": "AsyncAnswer accepts a timeout (null answer)",
+      "passed": true
+    },
+    {
+      "label": "AsyncAnswer rejects a non-closed answer",
+      "passed": true
+    },
+    {
+      "label": "Journey rejects an untyped pretest state",
+      "passed": true
+    },
+    {
+      "label": "Metrics accepts no benchmark yet and empty averages",
+      "passed": true
+    },
+    {
+      "label": "control: unit_test SessionResult with passed and review_items is accepted",
+      "passed": true
+    },
+    {
+      "label": "control: ConvDetail with a completed answer is accepted",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan example with arc, reasoning tools, standalone flag and budgets validates",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects a missing primary learning outcome",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects an empty primary learning outcome",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects more than three intro objectives",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects standalone eligibility with mandatory prerequisites",
+      "passed": true
+    },
+    {
+      "label": "control: standalone lesson without prerequisites is accepted",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects a concept that is both prerequisite and introduced",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects an unknown reasoning tool",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects an unjustified reasoning tool",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects a repeated reasoning tool",
+      "passed": true
+    },
+    {
+      "label": "control: LessonPlan with no reasoning tools (none needed) is accepted",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects an exercise budget of 1",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects an exercise budget of 7",
+      "passed": true
+    },
+    {
+      "label": "LessonArc rejects a single-step arc",
+      "passed": true
+    },
+    {
+      "label": "LessonArc rejects duplicate step ids",
+      "passed": true
+    },
+    {
+      "label": "LessonArc rejects an arc without any interactive step",
+      "passed": true
+    },
+    {
+      "label": "control: a custom arc pattern name is accepted (patterns are not a closed list)",
+      "passed": true
+    },
+    {
+      "label": "claim sentence without a claim is rejected",
+      "passed": true
+    },
+    {
+      "label": "hypothetical sentence that links a claim is rejected",
+      "passed": true
+    },
+    {
+      "label": "control: framing sentence without evidence is accepted",
+      "passed": true
+    },
+    {
+      "label": "control: hypothetical sentence without evidence is accepted",
+      "passed": true
+    },
+    {
+      "label": "control: instruction sentence without evidence is accepted",
+      "passed": true
+    },
+    {
+      "label": "control: question sentence without evidence is accepted",
+      "passed": true
+    },
+    {
+      "label": "sentence map without a role is rejected",
+      "passed": true
+    },
+    {
+      "label": "control: reasoning claim with reasoning support is accepted",
+      "passed": true
+    },
+    {
+      "label": "reasoning claim without reasoning support is rejected",
+      "passed": true
+    },
+    {
+      "label": "reasoning claim supported by scripture is rejected (no circular support)",
+      "passed": true
+    },
+    {
+      "label": "control: reasoning claim may show scripture that does not support it",
+      "passed": true
+    },
+    {
+      "label": "source claim carrying reasoning support is rejected",
+      "passed": true
+    },
+    {
+      "label": "reasoning support needs a premise",
+      "passed": true
+    },
+    {
+      "label": "Draft example with sentence roles, claim basis and arc map validates",
+      "passed": true
+    },
+    {
+      "label": "Draft rejects an arc step mapped twice",
+      "passed": true
+    },
+    {
+      "label": "Draft rejects an arc step with no blocks",
+      "passed": true
+    },
+    {
+      "label": "Gate 2 rejects an Arabic edit without its English localization",
+      "passed": true
+    },
+    {
+      "label": "Gate 2 rejects an English edit for another variant as the pair",
+      "passed": true
+    },
+    {
+      "label": "control: English-only localization polish is accepted",
+      "passed": true
+    },
+    {
+      "label": "FactoryRun accepts the localize stage",
+      "passed": true
+    },
+    {
+      "label": "QA issue accepts kind pedagogy",
+      "passed": true
+    },
+    {
+      "label": "QA issue accepts kind belief_grading",
+      "passed": true
+    },
+    {
+      "label": "QA issue accepts kind circular_reasoning",
+      "passed": true
+    },
+    {
+      "label": "QA issue accepts kind localization",
+      "passed": true
+    },
+    {
+      "label": "Journey example with Soft Locks and standalone lessons validates",
+      "passed": true
+    },
+    {
+      "label": "locked lesson without soft_lock is rejected",
+      "passed": true
+    },
+    {
+      "label": "available lesson with a soft_lock is rejected",
+      "passed": true
+    },
+    {
+      "label": "locked standalone-eligible lesson is rejected",
+      "passed": true
+    },
+    {
+      "label": "Soft Lock needs at least one prerequisite",
+      "passed": true
+    },
+    {
+      "label": "Soft Lock naming a lesson outside the journey is rejected",
+      "passed": true
+    },
+    {
+      "label": "Soft Lock start_with pointing at a locked lesson is rejected",
+      "passed": true
+    },
+    {
+      "label": "Soft Lock with a wrong unit for its lesson is rejected",
+      "passed": true
+    },
+    {
+      "label": "control: a later-unit lesson without prerequisites is available (position is not a prerequisite)",
+      "passed": true
+    },
+    {
+      "label": "test curriculum: the Explorer-only unit is absent from the New Muslim journey",
+      "passed": true
+    },
+    {
+      "label": "test curriculum: shared lessons keep the same identity and access in both tracks",
+      "passed": true
+    },
+    {
+      "label": "test curriculum: no New Muslim variant exists for the Explorer-only unit",
+      "passed": true
+    },
+    {
+      "label": "Onboarding accepts a skipped curiosity question",
+      "passed": true
+    },
+    {
+      "label": "Onboarding requires the goal_anchor field (explicit null when skipped)",
+      "passed": true
+    },
+    {
+      "label": "Onboarding has no religion field",
+      "passed": true
+    },
+    {
+      "label": "User has no religion field",
+      "passed": true
+    },
+    {
+      "label": "MePatch accepts a goal_anchor change",
+      "passed": true
+    },
+    {
+      "label": "lesson composition rejects 1 scored exercise",
+      "passed": true
+    },
+    {
+      "label": "control: lesson composition accepts 2 scored exercises",
+      "passed": true
+    },
+    {
+      "label": "control: lesson composition accepts 6 scored exercises (reference ceiling)",
+      "passed": true
+    },
+    {
+      "label": "lesson composition rejects 7 scored exercises",
+      "passed": true
+    },
+    {
+      "label": "ArcStep rejects an unknown technique",
+      "passed": true
+    },
+    {
+      "label": "ArcStep requires a technique",
+      "passed": true
+    },
+    {
+      "label": "LessonArc rejects two takeaway steps",
+      "passed": true
+    },
+    {
+      "label": "story lesson whose arc has no story step is rejected",
+      "passed": true
+    },
+    {
+      "label": "practice lesson whose arc has no practice step is rejected",
+      "passed": true
+    },
+    {
+      "label": "control: a concept lesson may use story, scenario and practice techniques",
+      "passed": true
+    },
+    {
+      "label": "control: sourced story example still validates",
+      "passed": true
+    },
+    {
+      "label": "control: a teaching scenario (origin null, no provenance or quotes) validates",
+      "passed": true
+    },
+    {
+      "label": "teaching scenario with provenance is rejected",
+      "passed": true
+    },
+    {
+      "label": "teaching scenario with a scripture quote is rejected",
+      "passed": true
+    },
+    {
+      "label": "exported Block schema accepts a teaching scenario",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects an unknown depth profile",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan requires a central learner question",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects an empty central question",
+      "passed": true
+    },
+    {
+      "label": "LessonPlan rejects a supporting understanding missing a language",
+      "passed": true
+    },
+    {
+      "label": "control: a foundational plan with several supporting understandings is accepted",
+      "passed": true
+    },
+    {
+      "label": "control: a focused plan with no supporting understandings is accepted",
+      "passed": true
+    },
+    {
+      "label": "control: an exact semantic review is accepted",
+      "passed": true
+    },
+    {
+      "label": "a partial fit without a named concern is rejected",
+      "passed": true
+    },
+    {
+      "label": "a repeated semantic concern is rejected",
+      "passed": true
+    },
+    {
+      "label": "an unknown semantic concern is rejected",
+      "passed": true
+    },
+    {
+      "label": "API example: supporting Quran evidence carries a semantic review",
+      "passed": true
+    },
+    {
+      "label": "supporting Quran evidence without a semantic review is rejected",
+      "passed": true
+    },
+    {
+      "label": "stretched evidence cannot support a claim",
+      "passed": true
+    },
+    {
+      "label": "unrelated evidence cannot support a claim",
+      "passed": true
+    },
+    {
+      "label": "control: stretched evidence recorded as not supporting is accepted",
+      "passed": true
+    },
+    {
+      "label": "control: a partial fit with a concern may support a claim",
+      "passed": true
+    },
+    {
+      "label": "control: supporting book evidence may omit the semantic review",
+      "passed": true
+    },
+    {
+      "label": "QA issue accepts kind scholarly_review",
+      "passed": true
+    },
+    {
+      "label": "scholarly flags: a tafsir-dependent reading is a warning for the specialist",
+      "passed": true
+    },
+    {
+      "label": "scholarly flags: wording beyond the source blocks",
+      "passed": true
+    },
+    {
+      "label": "scholarly flags: one opinion presented as the only view blocks",
+      "passed": true
+    },
+    {
+      "label": "scholarly flags: an exact fit raises nothing",
+      "passed": true
+    },
+    {
+      "label": "scholarly flags: dropped claims are not reported",
+      "passed": true
+    },
+    {
+      "label": "scholarly flags: issues validate as QA issues",
+      "passed": true
+    },
+    {
+      "label": "publication gate: example-host, mock-asset, http and .test URLs are rejected",
+      "passed": true
+    },
+    {
+      "label": "control: production https media passes the publication gate",
+      "passed": true
+    },
+    {
+      "label": "publication gate flags the documentation draft (example URLs are illustrative only)",
+      "passed": true
+    },
+    {
+      "label": "readiness: no production scene capability is released yet",
+      "passed": true
+    },
+    {
+      "label": "readiness: a builtin visual is compiled",
+      "passed": true
+    },
+    {
+      "label": "readiness: a generated scene is capability_blocked against the production registry",
+      "passed": true
+    },
+    {
+      "label": "readiness: an audited scene rendered by qabas_scene is audited (simulation registry)",
+      "passed": true
+    },
+    {
+      "label": "readiness: frames from the non-normative SVG preview are preview_only",
+      "passed": true
+    },
+    {
+      "label": "readiness: a failed audit is audit_failed",
+      "passed": true
+    },
+    {
+      "label": "readiness: a missing audit is unaudited",
+      "passed": true
+    },
+    {
+      "label": "readiness: the documentation draft generated visuals are placeholders (the builtin is compiled)",
+      "passed": true
+    },
+    {
+      "label": "publication gate rejects a relative draft path, but such a real asset is not a placeholder",
+      "passed": true
+    },
+    {
+      "label": "control: sample scenes pass the rev 10 semantic rules and the full checker",
+      "passed": true
+    },
+    {
+      "label": "scene: zero scale keyframe rejected",
+      "passed": true
+    },
+    {
+      "label": "scene: negative rule scale rejected",
+      "passed": true
+    },
+    {
+      "label": "scene: animated clip source rejected",
+      "passed": true
+    },
+    {
+      "label": "scene: gradient sparkles rejected",
+      "passed": true
+    },
+    {
+      "label": "scene: distorted asset box rejected",
+      "passed": true
+    },
+    {
+      "label": "scene: unknown theme token rejected when a token table is supplied",
+      "passed": true
+    }
+  ],
+  "runtime_verification": "none: models/schemas/examples only; no backend, Flutter app or renderer was executed"
+}

@@ -1,4 +1,4 @@
-"""Access point for the vendored revision 10 contract (``backend/contract``).
+"""Access point for the vendored revision 10 contract (``backend/contract/03_API/contract_revision10``).
 
 The contract modules import each other as top-level modules (``import qabas_contract as C``)
 and must stay byte-identical to the handoff, so their directory is put on ``sys.path`` here
@@ -13,9 +13,11 @@ from functools import cache
 from pathlib import Path
 from typing import Any
 
-CONTRACT_ROOT = Path(__file__).resolve().parents[1] / "contract"
+VENDOR_ROOT = Path(__file__).resolve().parents[1] / "contract"
+CONTRACT_ROOT = VENDOR_ROOT / "03_API" / "contract_revision10"
 CONTRACT_DIR = CONTRACT_ROOT / "contract"
 TOOLS_DIR = CONTRACT_ROOT / "tools"
+FIXTURES_DIR = CONTRACT_ROOT / "fixtures"
 SCHEMA_PATH = CONTRACT_DIR / "qabas_contract.schema.json"
 
 CONTRACT_REVISION = 10

@@ -1,0 +1,51 @@
+{
+ "exercise_id": "ex_spot_error",
+ "type": "spot_error",
+ "concept_ids": [
+  "con_test"
+ ],
+ "prompt": [
+  {
+   "type": "text",
+   "text": "اختر الإجابة المناسبة."
+  }
+ ],
+ "time_limit_ms": 20000,
+ "scoring": {
+  "accuracy": true,
+  "combo": true,
+  "layer": "understand"
+ },
+ "framing": null,
+ "payload": {
+  "segments": [
+   {
+    "segment_id": "seg_1",
+    "spans": [
+     {
+      "type": "text",
+      "text": "يتّجه المسلمون في صلاتهم إلى الكعبة"
+     }
+    ]
+   },
+   {
+    "segment_id": "seg_2",
+    "spans": [
+     {
+      "type": "text",
+      "text": "لأنهم يعبدونها"
+     }
+    ]
+   },
+   {
+    "segment_id": "seg_3",
+    "spans": [
+     {
+      "type": "text",
+      "text": "وهي قِبلة واحدة لكل المسلمين."
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "error": {
+  "code": "validation_error",
+  "message": "each item must be assigned exactly once within capacity",
+  "details": {
+   "reason": "duplicate_or_missing_item"
+  }
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "exercise_id": "ex_order_steps",
+ "type": "order_steps",
+ "concept_ids": [
+  "con_test"
+ ],
+ "prompt": [
+  {
+   "type": "text",
+   "text": "اختر الإجابة المناسبة."
+  }
+ ],
+ "time_limit_ms": 20000,
+ "scoring": {
+  "accuracy": true,
+  "combo": true,
+  "layer": "remember"
+ },
+ "framing": null,
+ "payload": {
+  "steps": [
+   {
+    "step_id": "st_3",
+    "spans": [
+     {
+      "type": "text",
+      "text": "غسل الوجه"
+     }
+    ],
+    "secondary_label": null
+   },
+   {
+    "step_id": "st_1",
+    "spans": [
+     {
+      "type": "text",
+      "text": "النية"
+     }
+    ],
+    "secondary_label": null
+   },
+   {
+    "step_id": "st_4",
+    "spans": [
+     {
+      "type": "text",
+      "text": "غسل اليدين إلى المرفقين"
+     }
+    ],
+    "secondary_label": null
+   },
+   {
+    "step_id": "st_2",
+    "spans": [
+     {
+      "type": "text",
+      "text": "المضمضة والاستنشاق"
+     }
+    ],
+    "secondary_label": null
+   }
+  ],
+  "presentation": "plain"
+ }
+}

@@ -1,0 +1,448 @@
+{
+ "session_id": "ses_t21_en_new_muslim",
+ "kind": "lesson",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": "unit_test_2",
+ "lesson_id": "les_t2_1",
+ "lesson_version": 1,
+ "title": "Test title 1",
+ "subtitle": null,
+ "lesson_type": "concept",
+ "reviewed_by": "Test reviewed_by 2",
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "Test text 3"
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 4,
+  "exercises": 4,
+  "scored": 4
+ },
+ "source_count": 0,
+ "total_exercises": 4,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_p",
+   "type": "paragraph",
+   "sentences": [
+    {
+     "sentence_id": "s1",
+     "spans": [
+      {
+       "type": "text",
+       "text": "Test text 4"
+      }
+     ],
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "block_id": "b_v",
+   "type": "visual",
+   "visual": {
+    "kind": "image",
+    "key": null,
+    "version": null,
+    "params": null,
+    "image": {
+     "url": "mock-asset://test/u2l1.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "scene": null,
+    "fallback_image": null,
+    "fallback_params": null,
+    "alt": "Test alt 5",
+    "overlays": []
+   },
+   "caption": null
+  },
+  {
+   "block_id": "b_x0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t21_0",
+    "type": "match_pairs",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "left": [
+      {
+       "item_id": "l_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 7"
+        }
+       ]
+      },
+      {
+       "item_id": "l_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 8"
+        }
+       ]
+      },
+      {
+       "item_id": "l_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 9"
+        }
+       ]
+      }
+     ],
+     "right": [
+      {
+       "item_id": "r_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 10"
+        }
+       ]
+      },
+      {
+       "item_id": "r_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 11"
+        }
+       ]
+      },
+      {
+       "item_id": "r_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 12"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t21_1",
+    "type": "fill_blank",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "segments": [
+      {
+       "type": "text",
+       "text": "Test text 14"
+      },
+      {
+       "type": "blank",
+       "blank_id": "b_1"
+      },
+      {
+       "type": "text",
+       "text": "Test text 15"
+      },
+      {
+       "type": "blank",
+       "blank_id": "b_2"
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ],
+     "word_bank": [
+      {
+       "word_id": "w_1",
+       "text": "Test text 16"
+      },
+      {
+       "word_id": "w_2",
+       "text": "Test text 17"
+      },
+      {
+       "word_id": "w_3",
+       "text": "Test text 18"
+      },
+      {
+       "word_id": "w_4",
+       "text": "Test text 19"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t21_2",
+    "type": "categorize",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "buckets",
+     "categories": [
+      {
+       "category_id": "c_1",
+       "label": "Test label 21",
+       "phase": null,
+       "capacity": null,
+       "art_key": null
+      },
+      {
+       "category_id": "c_2",
+       "label": "Test label 22",
+       "phase": null,
+       "capacity": null,
+       "art_key": null
+      }
+     ],
+     "items": [
+      {
+       "item_id": "i_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 23"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "i_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 24"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "i_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 25"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "i_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 26"
+        }
+       ],
+       "secondary_label": null
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t21_3",
+    "type": "categorize",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "day_arc",
+     "categories": [
+      {
+       "category_id": "cat_5t",
+       "label": "Test label 28",
+       "phase": "dawn",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_j8",
+       "label": "Test label 29",
+       "phase": "midday",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_2w",
+       "label": "Test label 30",
+       "phase": "afternoon",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_q1",
+       "label": "Test label 31",
+       "phase": "sunset",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_x6",
+       "label": "Test label 32",
+       "phase": "night",
+       "capacity": 1,
+       "art_key": null
+      }
+     ],
+     "items": [
+      {
+       "item_id": "itm_c4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 33"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_9a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 34"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_e2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 35"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_k7",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 36"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_b5",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 37"
+        }
+       ],
+       "secondary_label": null
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "Test text 38"
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_1",
+    "title": "Test title 39",
+    "concept_ids": [
+     "con_test"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "Test text 40"
+   }
+  ]
+ },
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

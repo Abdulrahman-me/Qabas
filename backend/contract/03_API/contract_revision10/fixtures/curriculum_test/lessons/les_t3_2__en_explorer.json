@@ -1,0 +1,395 @@
+{
+ "session_id": "ses_t32_en_explorer",
+ "kind": "lesson",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": "unit_test_3",
+ "lesson_id": "les_t3_2",
+ "lesson_version": 1,
+ "title": "Test title 1",
+ "subtitle": null,
+ "lesson_type": "story",
+ "reviewed_by": "Test reviewed_by 2",
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "Test text 3"
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 4,
+  "exercises": 4,
+  "scored": 4
+ },
+ "source_count": 0,
+ "total_exercises": 4,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_p",
+   "type": "paragraph",
+   "sentences": [
+    {
+     "sentence_id": "s1",
+     "spans": [
+      {
+       "type": "text",
+       "text": "Test text 4"
+      }
+     ],
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "block_id": "b_v",
+   "type": "visual",
+   "visual": {
+    "kind": "scene",
+    "key": null,
+    "version": null,
+    "params": {
+     "beat": 0,
+     "focus": -1
+    },
+    "image": null,
+    "scene": {
+     "scene_id": "scn_test_desert_well",
+     "version": 2,
+     "schema_version": "qabas.scene/1",
+     "url": "mock-asset://scenes/scn_test_desert_well/v2/scene.json",
+     "mime_type": "application/json",
+     "sha256": "145f9fd45a554b9e5c77e2b796ba4814fd85d46d72a9b1a91543b3a155e0d7e7",
+     "view_box": {
+      "width": 1600,
+      "height": 1000
+     },
+     "required_capabilities": [
+      "scene/1",
+      "shape.rect/1",
+      "shape.ellipse/1",
+      "shape.path/1",
+      "paint.gradient/1",
+      "track/1",
+      "anchors/1",
+      "fx.sparkles/1"
+     ]
+    },
+    "fallback_image": {
+     "url": "mock-asset://scenes/scn_test_desert_well/v2/fallback_b0_f-1.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "fallback_params": {
+     "beat": 0,
+     "focus": -1
+    },
+    "alt": "Test alt 5",
+    "overlays": []
+   },
+   "caption": null
+  },
+  {
+   "block_id": "b_x0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t32_0",
+    "type": "order_steps",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "remember"
+    },
+    "framing": null,
+    "payload": {
+     "steps": [
+      {
+       "step_id": "st_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 7"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "step_id": "st_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 8"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "step_id": "st_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 9"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "step_id": "st_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 10"
+        }
+       ],
+       "secondary_label": null
+      }
+     ],
+     "presentation": "plain"
+    }
+   }
+  },
+  {
+   "block_id": "b_x1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t32_1",
+    "type": "scenario",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "situation": [
+      {
+       "type": "text",
+       "text": "Test text 12"
+      }
+     ],
+     "options": [
+      {
+       "option_id": "s_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 13"
+        }
+       ]
+      },
+      {
+       "option_id": "s_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 14"
+        }
+       ]
+      },
+      {
+       "option_id": "s_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 15"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t32_2",
+    "type": "timeline_order",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "events": [
+      {
+       "event_id": "t_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 17"
+        }
+       ]
+      },
+      {
+       "event_id": "t_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 18"
+        }
+       ]
+      },
+      {
+       "event_id": "t_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 19"
+        }
+       ]
+      },
+      {
+       "event_id": "t_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 20"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t32_3",
+    "type": "map_place",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "map_pins",
+     "visual": {
+      "kind": "image",
+      "key": null,
+      "version": null,
+      "params": null,
+      "image": {
+       "url": "mock-asset://maps/hijaz_test.webp",
+       "mime_type": "image/webp",
+       "width": 1600,
+       "height": 1200
+      },
+      "scene": null,
+      "fallback_image": null,
+      "fallback_params": null,
+      "alt": "Test alt 22",
+      "overlays": []
+     },
+     "question": [
+      {
+       "type": "text",
+       "text": "Test text 23"
+      }
+     ],
+     "pins": [
+      {
+       "pin_id": "p_1",
+       "x_pct": 58.0,
+       "y_pct": 71.5,
+       "label": null,
+       "radius_pct": null,
+       "anchor_id": null
+      },
+      {
+       "pin_id": "p_2",
+       "x_pct": 52.5,
+       "y_pct": 38.0,
+       "label": null,
+       "radius_pct": null,
+       "anchor_id": null
+      },
+      {
+       "pin_id": "p_3",
+       "x_pct": 47.0,
+       "y_pct": 45.2,
+       "label": null,
+       "radius_pct": null,
+       "anchor_id": null
+      }
+     ],
+     "interaction": null
+    }
+   }
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "Test text 24"
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_1",
+    "title": "Test title 25",
+    "concept_ids": [
+     "con_test"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "Test text 26"
+   }
+  ]
+ },
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

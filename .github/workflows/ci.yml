@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Public-repository safety guard (D-14)
+      - name: Repository safety guard (D-19)
         run: python3 scripts/check_public_safety.py
 
       - uses: actions/setup-python@v5
@@ -58,5 +58,8 @@ jobs:
       - name: OpenAPI export is current
         run: uv run python scripts/export_openapi.py --check
 
-      - name: Tests (public; private-fixture suites run locally only)
+      - name: Tests
         run: uv run pytest -q
+
+      - name: Contract suites (595 regressions, 279 focused, 105 examples, 382 fixtures)
+        run: uv run python scripts/dev/run_contract_suites.py

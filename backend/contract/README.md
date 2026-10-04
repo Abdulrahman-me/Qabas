@@ -1,15 +1,15 @@
-# Vendored contract — revision 10 (public subset)
+# Vendored contract — revision 10
 
-Copied **unchanged** from `FINAL_ENGINEERING_HANDOFF/03_API/contract_revision10/`. `SHA256SUMS.public` lists the original handoff checksums for exactly these files, and `tests/contract/test_vendored_contract.py` verifies them.
+`03_API/` is copied **unchanged** from `FINAL_ENGINEERING_HANDOFF/03_API/`: the complete `contract_revision10/` folder (models, custom-exported schema, contextual/review/display helpers, scene schema and capability registries, fixtures with their server-side grading context, tools and reports) plus `API_REQUIREMENTS.md`, which `tools/validate.py` reads for its JSON examples. The handoff requires this folder to be vendored into the repository and its suites run in CI (QUALITY §18.1, decision D-19).
+
+Integrity: `VENDORED.json` pins the handoff digests of `API_REQUIREMENTS.md` and `contract_revision10/SHA256SUMS`, and `SHA256SUMS` covers every other file. `tests/contract/test_vendored_contract.py` verifies all of them.
 
 | Path | Use |
 |---|---|
-| `contract/qabas_contract.py` | Canonical Pydantic v2 request/response/event models (the only source of public DTOs) |
-| `contract/qabas_contract.schema.json` | Custom export, 99 roots; the source of the served OpenAPI components |
-| `contract/contextual.py`, `review.py`, `display_fields.py` | Served-context validation and grading helpers, reviewer gate digest, glossary projection |
-| `contract/dispatch_map.json`, `scene.schema.json`, `scene_capabilities*.json`, `exercise_art_registry.json`, `registries.template.json` | Discriminators, scene grammar, capability registries, art and registry templates |
-| `tools/scene_check.py`, `tools/recovery.py`, `tools/export_schema.py` | Scene semantic checker, resume recovery reference, schema exporter |
+| `03_API/contract_revision10/contract/qabas_contract.py` | Canonical Pydantic v2 models: the only source of public DTOs |
+| `03_API/contract_revision10/contract/qabas_contract.schema.json` | Custom export (99 roots), the source of the served OpenAPI components |
+| `03_API/contract_revision10/contract/contextual.py`, `review.py`, `display_fields.py` | Served-context validation and grading, reviewer gate digest, glossary projection |
+| `03_API/contract_revision10/tools/` | `regression.py` (595), `rev10_checks.py` (279), `validate.py` (105 examples, 382 fixtures), `scene_check.py`, `recovery.py`, `export_schema.py` |
+| `03_API/contract_revision10/fixtures/` | Contract examples and synthetic seeds; `EVALUATION_CONTEXT.json` is the **server-side** grading context (never sent to clients) |
 
-Only code and schemas are here. Under the public-repo policy (D-14 in `IMPLEMENTATION_PHASES.md`), the handoff fixtures, the private evaluation context and grading keys, the API prose and the remaining generator tools are **not committed**. They live in git-ignored `backend/.private/` (see `scripts/dev/sync_private_contract.py`).
-
-Never edit these files. A contract amendment means re-vendoring and updating `SHA256SUMS.public`, then rerunning the full suites (`scripts/dev/run_contract_suites.py`).
+Never edit these files. `validate.py` rewrites reports and checksums, so run the suites through `scripts/dev/run_contract_suites.py`, which works on a disposable copy. A contract amendment means re-vendoring, updating `VENDORED.json` and rerunning the suites.

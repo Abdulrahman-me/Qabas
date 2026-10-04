@@ -1,0 +1,382 @@
+{
+ "session_id": "ses_t23_en_explorer",
+ "kind": "lesson",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": "unit_test_2",
+ "lesson_id": "les_t2_3",
+ "lesson_version": 1,
+ "title": "Test title 1",
+ "subtitle": null,
+ "lesson_type": "practice",
+ "reviewed_by": "Test reviewed_by 2",
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "Test text 3"
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 4,
+  "exercises": 4,
+  "scored": 4
+ },
+ "source_count": 0,
+ "total_exercises": 4,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_p",
+   "type": "paragraph",
+   "sentences": [
+    {
+     "sentence_id": "s1",
+     "spans": [
+      {
+       "type": "text",
+       "text": "Test text 4"
+      }
+     ],
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "block_id": "b_v",
+   "type": "visual",
+   "visual": {
+    "kind": "image",
+    "key": null,
+    "version": null,
+    "params": null,
+    "image": {
+     "url": "mock-asset://test/u2l3.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "scene": null,
+    "fallback_image": null,
+    "fallback_params": null,
+    "alt": "Test alt 5",
+    "overlays": []
+   },
+   "caption": null
+  },
+  {
+   "block_id": "b_x0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t23_0",
+    "type": "timeline_order",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "events": [
+      {
+       "event_id": "t_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 7"
+        }
+       ]
+      },
+      {
+       "event_id": "t_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 8"
+        }
+       ]
+      },
+      {
+       "event_id": "t_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 9"
+        }
+       ]
+      },
+      {
+       "event_id": "t_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 10"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t23_1",
+    "type": "map_place",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "map_pins",
+     "visual": {
+      "kind": "image",
+      "key": null,
+      "version": null,
+      "params": null,
+      "image": {
+       "url": "mock-asset://maps/hijaz_test.webp",
+       "mime_type": "image/webp",
+       "width": 1600,
+       "height": 1200
+      },
+      "scene": null,
+      "fallback_image": null,
+      "fallback_params": null,
+      "alt": "Test alt 12",
+      "overlays": []
+     },
+     "question": [
+      {
+       "type": "text",
+       "text": "Test text 13"
+      }
+     ],
+     "pins": [
+      {
+       "pin_id": "p_1",
+       "x_pct": 58.0,
+       "y_pct": 71.5,
+       "label": null,
+       "radius_pct": null,
+       "anchor_id": null
+      },
+      {
+       "pin_id": "p_2",
+       "x_pct": 52.5,
+       "y_pct": 38.0,
+       "label": null,
+       "radius_pct": null,
+       "anchor_id": null
+      },
+      {
+       "pin_id": "p_3",
+       "x_pct": 47.0,
+       "y_pct": 45.2,
+       "label": null,
+       "radius_pct": null,
+       "anchor_id": null
+      }
+     ],
+     "interaction": null
+    }
+   }
+  },
+  {
+   "block_id": "b_x2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t23_2",
+    "type": "map_place",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "hotspots",
+     "visual": {
+      "kind": "builtin",
+      "key": "river_house",
+      "version": 1,
+      "params": {
+       "beat": 1
+      },
+      "image": null,
+      "scene": null,
+      "fallback_image": null,
+      "fallback_params": null,
+      "alt": "Test alt 15",
+      "overlays": []
+     },
+     "question": [
+      {
+       "type": "text",
+       "text": "Test text 16"
+      }
+     ],
+     "pins": [
+      {
+       "pin_id": "pin_h3",
+       "x_pct": 16.0,
+       "y_pct": 36.0,
+       "label": "Test label 17",
+       "radius_pct": null,
+       "anchor_id": null
+      },
+      {
+       "pin_id": "pin_q8",
+       "x_pct": 55.0,
+       "y_pct": 52.0,
+       "label": "Test label 18",
+       "radius_pct": null,
+       "anchor_id": null
+      },
+      {
+       "pin_id": "pin_z1",
+       "x_pct": 80.0,
+       "y_pct": 34.0,
+       "label": "Test label 19",
+       "radius_pct": null,
+       "anchor_id": null
+      },
+      {
+       "pin_id": "pin_m4",
+       "x_pct": 42.0,
+       "y_pct": 86.0,
+       "label": "Test label 20",
+       "radius_pct": null,
+       "anchor_id": null
+      }
+     ],
+     "interaction": null
+    }
+   }
+  },
+  {
+   "block_id": "b_x3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t23_3",
+    "type": "verse_meaning",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "verse": {
+      "evidence_id": "src_q_112_2",
+      "kind": "quran",
+      "quran": {
+       "surah": 112,
+       "surah_name": "الإخلاص",
+       "ayah_start": 2,
+       "ayah_end": 2,
+       "segment": null,
+       "text_uthmani": "اللَّهُ الصَّمَدُ",
+       "translation": null,
+       "translation_source": null,
+       "audio": null
+      },
+      "hadith": null
+     },
+     "options": [
+      {
+       "option_id": "m_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 22"
+        }
+       ]
+      },
+      {
+       "option_id": "m_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 23"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "Test text 24"
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_1",
+    "title": "Test title 25",
+    "concept_ids": [
+     "con_test"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "Test text 26"
+   }
+  ]
+ },
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

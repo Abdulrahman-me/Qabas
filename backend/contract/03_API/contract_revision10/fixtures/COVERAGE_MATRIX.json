@@ -1,0 +1,1481 @@
+{
+ "scope": "fixtures + contextual contract primitives, no API/UI runtime",
+ "rows": [
+  {
+   "type": "categorize",
+   "presentation": "buckets",
+   "exercise": "exercises/categorize__buckets/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/categorize__buckets__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/categorize__buckets/answer_correct.json",
+     "evaluation": "exercises/categorize__buckets/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/categorize__buckets/answer_incorrect.json",
+     "evaluation": "exercises/categorize__buckets/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/categorize__buckets/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/categorize__buckets/answer_retry.json",
+     "evaluation": "exercises/categorize__buckets/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/categorize__buckets/answer_retry_incorrect.json",
+     "evaluation": "exercises/categorize__buckets/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/categorize__buckets/answer_timeout.json",
+     "evaluation": "exercises/categorize__buckets/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  },
+  {
+   "type": "categorize",
+   "presentation": "day_arc",
+   "exercise": "exercises/categorize__day_arc/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/categorize__day_arc__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/categorize__day_arc/answer_correct.json",
+     "evaluation": "exercises/categorize__day_arc/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/categorize__day_arc/answer_incorrect.json",
+     "evaluation": "exercises/categorize__day_arc/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/categorize__day_arc/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/categorize__day_arc/answer_retry.json",
+     "evaluation": "exercises/categorize__day_arc/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/categorize__day_arc/answer_retry_incorrect.json",
+     "evaluation": "exercises/categorize__day_arc/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/categorize__day_arc/answer_timeout.json",
+     "evaluation": "exercises/categorize__day_arc/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": false,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  },
+  {
+   "type": "fill_blank",
+   "presentation": null,
+   "exercise": "exercises/fill_blank/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/fill_blank__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/fill_blank/answer_correct.json",
+     "evaluation": "exercises/fill_blank/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/fill_blank/answer_incorrect.json",
+     "evaluation": "exercises/fill_blank/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/fill_blank/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/fill_blank/answer_retry.json",
+     "evaluation": "exercises/fill_blank/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/fill_blank/answer_retry_incorrect.json",
+     "evaluation": "exercises/fill_blank/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/fill_blank/answer_timeout.json",
+     "evaluation": "exercises/fill_blank/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  },
+  {
+   "type": "flashcard",
+   "presentation": null,
+   "exercise": "exercises/flashcard/exercise.json",
+   "sample_kind": "review",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/flashcard__invalid.json"
+    },
+    "again": {
+     "status": "fixture",
+     "answer": "exercises/flashcard/answer_again.json",
+     "evaluation": "exercises/flashcard/eval_again.json"
+    },
+    "easy": {
+     "status": "fixture",
+     "answer": "exercises/flashcard/answer_easy.json",
+     "evaluation": "exercises/flashcard/eval_easy.json"
+    },
+    "good": {
+     "status": "fixture",
+     "answer": "exercises/flashcard/answer_good.json",
+     "evaluation": "exercises/flashcard/eval_good.json"
+    },
+    "hard": {
+     "status": "fixture",
+     "answer": "exercises/flashcard/answer_hard.json",
+     "evaluation": "exercises/flashcard/eval_hard.json"
+    },
+    "correct": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "timeout": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "retry_correct": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "retry_incorrect": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": true,
+    "review_quick": false,
+    "pretest": false,
+    "unit_test": false,
+    "challenge": false
+   },
+   "retry_rejection": "negative/flashcard__retry.json"
+  },
+  {
+   "type": "map_place",
+   "presentation": "hotspots",
+   "exercise": "exercises/map_place__hotspots/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/map_place__hotspots__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/map_place__hotspots/answer_correct.json",
+     "evaluation": "exercises/map_place__hotspots/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/map_place__hotspots/answer_incorrect.json",
+     "evaluation": "exercises/map_place__hotspots/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/map_place__hotspots/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/map_place__hotspots/answer_retry.json",
+     "evaluation": "exercises/map_place__hotspots/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/map_place__hotspots/answer_retry_incorrect.json",
+     "evaluation": "exercises/map_place__hotspots/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/map_place__hotspots/answer_timeout.json",
+     "evaluation": "exercises/map_place__hotspots/eval_timeout.json"
+    },
+    "unavailable": {
+     "status": "fixture",
+     "answer": "exercises/map_place__hotspots/answer_unavailable.json",
+     "evaluation": "exercises/map_place__hotspots/eval_unavailable.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": false,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  },
+  {
+   "type": "map_place",
+   "presentation": "map_pins",
+   "exercise": "exercises/map_place__map_pins/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/map_place__map_pins__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/map_place__map_pins/answer_correct.json",
+     "evaluation": "exercises/map_place__map_pins/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/map_place__map_pins/answer_incorrect.json",
+     "evaluation": "exercises/map_place__map_pins/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/map_place__map_pins/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/map_place__map_pins/answer_retry.json",
+     "evaluation": "exercises/map_place__map_pins/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/map_place__map_pins/answer_retry_incorrect.json",
+     "evaluation": "exercises/map_place__map_pins/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/map_place__map_pins/answer_timeout.json",
+     "evaluation": "exercises/map_place__map_pins/eval_timeout.json"
+    },
+    "unavailable": {
+     "status": "fixture",
+     "answer": "exercises/map_place__map_pins/answer_unavailable.json",
+     "evaluation": "exercises/map_place__map_pins/eval_unavailable.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  },
+  {
+   "type": "match_pairs",
+   "presentation": null,
+   "exercise": "exercises/match_pairs/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/match_pairs__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/match_pairs/answer_correct.json",
+     "evaluation": "exercises/match_pairs/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/match_pairs/answer_incorrect.json",
+     "evaluation": "exercises/match_pairs/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/match_pairs/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/match_pairs/answer_retry.json",
+     "evaluation": "exercises/match_pairs/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/match_pairs/answer_retry_incorrect.json",
+     "evaluation": "exercises/match_pairs/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/match_pairs/answer_timeout.json",
+     "evaluation": "exercises/match_pairs/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  },
+  {
+   "type": "multiple_choice",
+   "presentation": null,
+   "exercise": "exercises/multiple_choice/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/multiple_choice__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/multiple_choice/answer_correct.json",
+     "evaluation": "exercises/multiple_choice/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/multiple_choice/answer_incorrect.json",
+     "evaluation": "exercises/multiple_choice/eval_incorrect.json"
+    },
+    "incorrect_misconception": {
+     "status": "fixture",
+     "answer": "exercises/multiple_choice/answer_incorrect.json",
+     "evaluation": "exercises/multiple_choice/eval_incorrect_misconception.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/multiple_choice/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/multiple_choice/answer_retry.json",
+     "evaluation": "exercises/multiple_choice/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/multiple_choice/answer_retry_incorrect.json",
+     "evaluation": "exercises/multiple_choice/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/multiple_choice/answer_timeout.json",
+     "evaluation": "exercises/multiple_choice/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": true
+   }
+  },
+  {
+   "type": "order_steps",
+   "presentation": "plain",
+   "exercise": "exercises/order_steps/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/order_steps__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/order_steps/answer_correct.json",
+     "evaluation": "exercises/order_steps/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/order_steps/answer_incorrect.json",
+     "evaluation": "exercises/order_steps/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/order_steps/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/order_steps/answer_retry.json",
+     "evaluation": "exercises/order_steps/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/order_steps/answer_retry_incorrect.json",
+     "evaluation": "exercises/order_steps/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/order_steps/answer_timeout.json",
+     "evaluation": "exercises/order_steps/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  },
+  {
+   "type": "recite_verse",
+   "presentation": null,
+   "exercise": "exercises/recite_verse/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/recite_verse__invalid.json"
+    },
+    "failed": {
+     "status": "fixture",
+     "answer": "exercises/recite_verse/answer_check.json",
+     "evaluation": "exercises/recite_verse/eval_failed.json"
+    },
+    "passed": {
+     "status": "fixture",
+     "answer": "exercises/recite_verse/answer_check.json",
+     "evaluation": "exercises/recite_verse/eval_passed.json"
+    },
+    "skipped": {
+     "status": "fixture",
+     "answer": "exercises/recite_verse/answer_skipped.json",
+     "evaluation": "exercises/recite_verse/eval_skipped.json"
+    },
+    "correct": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "timeout": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "retry_correct": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "retry_incorrect": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": false,
+    "pretest": false,
+    "unit_test": false,
+    "challenge": false
+   },
+   "retry_rejection": "negative/recite_verse__retry.json"
+  },
+  {
+   "type": "scenario",
+   "presentation": null,
+   "exercise": "exercises/scenario/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/scenario__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/scenario/answer_correct.json",
+     "evaluation": "exercises/scenario/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/scenario/answer_incorrect.json",
+     "evaluation": "exercises/scenario/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/scenario/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/scenario/answer_retry.json",
+     "evaluation": "exercises/scenario/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/scenario/answer_retry_incorrect.json",
+     "evaluation": "exercises/scenario/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/scenario/answer_timeout.json",
+     "evaluation": "exercises/scenario/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  },
+  {
+   "type": "spot_error",
+   "presentation": null,
+   "exercise": "exercises/spot_error/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/spot_error__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/spot_error/answer_correct.json",
+     "evaluation": "exercises/spot_error/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/spot_error/answer_incorrect.json",
+     "evaluation": "exercises/spot_error/eval_incorrect.json"
+    },
+    "incorrect_misconception": {
+     "status": "fixture",
+     "answer": "exercises/spot_error/answer_incorrect.json",
+     "evaluation": "exercises/spot_error/eval_incorrect_misconception.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/spot_error/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/spot_error/answer_retry.json",
+     "evaluation": "exercises/spot_error/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/spot_error/answer_retry_incorrect.json",
+     "evaluation": "exercises/spot_error/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/spot_error/answer_timeout.json",
+     "evaluation": "exercises/spot_error/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  },
+  {
+   "type": "timeline_order",
+   "presentation": null,
+   "exercise": "exercises/timeline_order/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/timeline_order__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/timeline_order/answer_correct.json",
+     "evaluation": "exercises/timeline_order/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/timeline_order/answer_incorrect.json",
+     "evaluation": "exercises/timeline_order/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/timeline_order/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/timeline_order/answer_retry.json",
+     "evaluation": "exercises/timeline_order/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/timeline_order/answer_retry_incorrect.json",
+     "evaluation": "exercises/timeline_order/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/timeline_order/answer_timeout.json",
+     "evaluation": "exercises/timeline_order/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  },
+  {
+   "type": "true_false",
+   "presentation": null,
+   "exercise": "exercises/true_false/exercise.json",
+   "sample_kind": "challenge",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/true_false__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/true_false/answer_correct.json",
+     "evaluation": "exercises/true_false/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/true_false/answer_incorrect.json",
+     "evaluation": "exercises/true_false/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/true_false/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/true_false/answer_timeout.json",
+     "evaluation": "exercises/true_false/eval_timeout.json"
+    },
+    "retry_correct": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "retry_incorrect": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": false,
+    "review_cards": false,
+    "review_quick": false,
+    "pretest": false,
+    "unit_test": false,
+    "challenge": true
+   },
+   "retry_rejection": "negative/true_false__retry.json"
+  },
+  {
+   "type": "true_false_reason",
+   "presentation": null,
+   "exercise": "exercises/true_false_reason/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/true_false_reason__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/true_false_reason/answer_correct.json",
+     "evaluation": "exercises/true_false_reason/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/true_false_reason/answer_incorrect.json",
+     "evaluation": "exercises/true_false_reason/eval_incorrect.json"
+    },
+    "incorrect_misconception": {
+     "status": "fixture",
+     "answer": "exercises/true_false_reason/answer_incorrect.json",
+     "evaluation": "exercises/true_false_reason/eval_incorrect_misconception.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/true_false_reason/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/true_false_reason/answer_retry.json",
+     "evaluation": "exercises/true_false_reason/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/true_false_reason/answer_retry_incorrect.json",
+     "evaluation": "exercises/true_false_reason/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/true_false_reason/answer_timeout.json",
+     "evaluation": "exercises/true_false_reason/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  },
+  {
+   "type": "verse_meaning",
+   "presentation": null,
+   "exercise": "exercises/verse_meaning/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/verse_meaning__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/verse_meaning/answer_correct.json",
+     "evaluation": "exercises/verse_meaning/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/verse_meaning/answer_incorrect.json",
+     "evaluation": "exercises/verse_meaning/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/verse_meaning/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/verse_meaning/answer_retry.json",
+     "evaluation": "exercises/verse_meaning/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/verse_meaning/answer_retry_incorrect.json",
+     "evaluation": "exercises/verse_meaning/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/verse_meaning/answer_timeout.json",
+     "evaluation": "exercises/verse_meaning/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": true
+   }
+  },
+  {
+   "type": "which_evidence",
+   "presentation": null,
+   "exercise": "exercises/which_evidence/exercise.json",
+   "sample_kind": "lesson",
+   "outcomes": {
+    "invalid": {
+     "status": "reject",
+     "answer": "negative/which_evidence__invalid.json"
+    },
+    "correct": {
+     "status": "fixture",
+     "answer": "exercises/which_evidence/answer_correct.json",
+     "evaluation": "exercises/which_evidence/eval_correct.json"
+    },
+    "incorrect": {
+     "status": "fixture",
+     "answer": "exercises/which_evidence/answer_incorrect.json",
+     "evaluation": "exercises/which_evidence/eval_incorrect.json"
+    },
+    "recorded_only": {
+     "status": "shape_only",
+     "evaluation": "exercises/which_evidence/eval_recorded_only.json",
+     "reason": "hidden feedback envelope; replay requires stored attempt context"
+    },
+    "retry_correct": {
+     "status": "fixture",
+     "answer": "exercises/which_evidence/answer_retry.json",
+     "evaluation": "exercises/which_evidence/eval_retry_correct.json"
+    },
+    "retry_incorrect": {
+     "status": "fixture",
+     "answer": "exercises/which_evidence/answer_retry_incorrect.json",
+     "evaluation": "exercises/which_evidence/eval_retry_incorrect.json"
+    },
+    "timeout": {
+     "status": "fixture",
+     "answer": "exercises/which_evidence/answer_timeout.json",
+     "evaluation": "exercises/which_evidence/eval_timeout.json"
+    },
+    "passed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "failed": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "skipped": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "unavailable": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "again": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "hard": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "good": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "easy": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    },
+    "incorrect_misconception": {
+     "status": "not_applicable",
+     "reason": "not part of this type/context policy"
+    }
+   },
+   "session_eligibility": {
+    "lesson": true,
+    "review_cards": false,
+    "review_quick": true,
+    "pretest": true,
+    "unit_test": true,
+    "challenge": false
+   }
+  }
+ ],
+ "reviews": [
+  "sessions/review_cards.json",
+  "sessions/review_quick.json"
+ ],
+ "recitation": [
+  "recitation/check_passed.json",
+  "recitation/check_errors.json",
+  "recitation/check_unclear.json",
+  "recitation/exercise_segment.json"
+ ],
+ "scene_assets": [
+  "scenes/asset_positive.scene.json",
+  "negative/scene_asset_wrong_dimensions.json",
+  "negative/scene_asset_wrong_checksum.json",
+  "negative/corrupt_asset.webp"
+ ],
+ "limitations": [
+  "all mode/type cross-products need UI/backend execution",
+  "recitation samples use test tones",
+  "no live scheduler/FSRS or API transaction runtime implemented"
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "exercise_id": "ex_categorize__buckets",
+ "type": "categorize",
+ "concept_ids": [
+  "con_test"
+ ],
+ "prompt": [
+  {
+   "type": "text",
+   "text": "اختر الإجابة المناسبة."
+  }
+ ],
+ "time_limit_ms": 20000,
+ "scoring": {
+  "accuracy": true,
+  "combo": true,
+  "layer": "understand"
+ },
+ "framing": null,
+ "payload": {
+  "presentation": "buckets",
+  "categories": [
+   {
+    "category_id": "c_1",
+    "label": "أركان الإسلام",
+    "phase": null,
+    "capacity": null,
+    "art_key": null
+   },
+   {
+    "category_id": "c_2",
+    "label": "أركان الإيمان",
+    "phase": null,
+    "capacity": null,
+    "art_key": null
+   }
+  ],
+  "items": [
+   {
+    "item_id": "i_1",
+    "spans": [
+     {
+      "type": "text",
+      "text": "الصلاة"
+     }
+    ],
+    "secondary_label": null
+   },
+   {
+    "item_id": "i_2",
+    "spans": [
+     {
+      "type": "text",
+      "text": "الإيمان بالملائكة"
+     }
+    ],
+    "secondary_label": null
+   },
+   {
+    "item_id": "i_3",
+    "spans": [
+     {
+      "type": "text",
+      "text": "الزكاة"
+     }
+    ],
+    "secondary_label": null
+   },
+   {
+    "item_id": "i_4",
+    "spans": [
+     {
+      "type": "text",
+      "text": "الإيمان باليوم الآخر"
+     }
+    ],
+    "secondary_label": null
+   }
+  ]
+ }
+}

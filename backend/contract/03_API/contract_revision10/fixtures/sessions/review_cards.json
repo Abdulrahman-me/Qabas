@@ -1,0 +1,144 @@
+{
+ "session_id": "ses_review_cards",
+ "kind": "review",
+ "mode": "cards",
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": null,
+ "lesson_id": null,
+ "lesson_version": null,
+ "title": "جلسة اختبارية",
+ "subtitle": null,
+ "lesson_type": null,
+ "reviewed_by": null,
+ "objectives": [],
+ "counts": {
+  "interactions": 3,
+  "exercises": 3,
+  "scored": 3
+ },
+ "source_count": 0,
+ "total_exercises": 3,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_review_cards_0",
+    "type": "flashcard",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "front": [
+      {
+       "type": "text",
+       "text": "ما معنى «التوحيد»؟"
+      }
+     ],
+     "back": [
+      {
+       "type": "text",
+       "text": "إفراد الله وحده بالعبادة، والإيمان بأنه واحد لا شريك له."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_review_cards_1",
+    "type": "flashcard",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "front": [
+      {
+       "type": "text",
+       "text": "ما معنى «التوحيد»؟"
+      }
+     ],
+     "back": [
+      {
+       "type": "text",
+       "text": "إفراد الله وحده بالعبادة، والإيمان بأنه واحد لا شريك له."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_review_cards_2",
+    "type": "flashcard",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "front": [
+      {
+       "type": "text",
+       "text": "ما معنى «التوحيد»؟"
+      }
+     ],
+     "back": [
+      {
+       "type": "text",
+       "text": "إفراد الله وحده بالعبادة، والإيمان بأنه واحد لا شريك له."
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "completion": null,
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

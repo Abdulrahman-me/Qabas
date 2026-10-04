@@ -1,0 +1,88 @@
+{
+ "duel_id": "duel_g1",
+ "status": "finished",
+ "mode": "live",
+ "preset": "group",
+ "opponent_type": "friends",
+ "players": [
+  {
+   "user_id": "usr_7f3k2a",
+   "display_name": "مسافر ٤٧",
+   "avatar_key": "traveler_01",
+   "is_me": true,
+   "is_bot": false,
+   "status": "joined"
+  },
+  {
+   "user_id": "usr_f1",
+   "display_name": "Seeker 21",
+   "avatar_key": "traveler_02",
+   "is_me": false,
+   "is_bot": false,
+   "status": "joined"
+  },
+  {
+   "user_id": "usr_f2",
+   "display_name": "سالك ٥",
+   "avatar_key": "traveler_03",
+   "is_me": false,
+   "is_bot": false,
+   "status": "joined"
+  },
+  {
+   "user_id": "usr_f3",
+   "display_name": "نور ١٢",
+   "avatar_key": "traveler_04",
+   "is_me": false,
+   "is_bot": false,
+   "status": "joined"
+  }
+ ],
+ "config": {
+  "question_count": 3,
+  "time_limit_ms": 10000,
+  "scoring": {
+   "base": 100,
+   "speed_bonus": 50,
+   "rounding": "half_up"
+  },
+  "reveal_ms": 2200
+ },
+ "ws_url": "mock-ws://duels/duel_g1",
+ "created_at": "2026-10-04T13:00:00Z",
+ "expires_at": "2026-10-04T13:01:00Z",
+ "result": {
+  "winner_user_ids": [
+   "usr_7f3k2a",
+   "usr_f1"
+  ],
+  "is_draw": false,
+  "scores": [
+   {
+    "user_id": "usr_7f3k2a",
+    "rank": 1,
+    "points": 260,
+    "correct": 2
+   },
+   {
+    "user_id": "usr_f1",
+    "rank": 1,
+    "points": 260,
+    "correct": 2
+   },
+   {
+    "user_id": "usr_f2",
+    "rank": 3,
+    "points": 230,
+    "correct": 2
+   },
+   {
+    "user_id": "usr_f3",
+    "rank": 4,
+    "points": 105,
+    "correct": 1
+   }
+  ],
+  "xp_awarded": 15
+ }
+}

@@ -1,0 +1,608 @@
+{
+ "session_id": "ses_scene_test",
+ "kind": "lesson",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": "unit_test_1",
+ "lesson_id": "les_test_scene",
+ "lesson_version": 1,
+ "title": "درس اختباري: البئر في الصحراء",
+ "subtitle": null,
+ "lesson_type": "concept",
+ "reviewed_by": "لجنة المراجعة الشرعية",
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "هدف اختباري."
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 1,
+  "exercises": 1,
+  "scored": 1
+ },
+ "source_count": 0,
+ "total_exercises": 1,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "blk_s_hook",
+   "type": "hook",
+   "situation": [
+    {
+     "type": "text",
+     "text": "نص اختباري: موقف افتتاحي."
+    }
+   ],
+   "question": [
+    {
+     "type": "text",
+     "text": "سؤال اختباري؟"
+    }
+   ],
+   "visual": {
+    "kind": "scene",
+    "key": null,
+    "version": null,
+    "params": {
+     "beat": 0,
+     "focus": -1
+    },
+    "image": null,
+    "scene": {
+     "scene_id": "scn_test_desert_well",
+     "version": 2,
+     "schema_version": "qabas.scene/1",
+     "url": "mock-asset://scenes/scn_test_desert_well/v2/scene.json",
+     "mime_type": "application/json",
+     "sha256": "145f9fd45a554b9e5c77e2b796ba4814fd85d46d72a9b1a91543b3a155e0d7e7",
+     "view_box": {
+      "width": 1600,
+      "height": 1000
+     },
+     "required_capabilities": [
+      "scene/1",
+      "shape.rect/1",
+      "shape.ellipse/1",
+      "shape.path/1",
+      "paint.gradient/1",
+      "track/1",
+      "anchors/1",
+      "fx.sparkles/1"
+     ]
+    },
+    "fallback_image": {
+     "url": "mock-asset://scenes/scn_test_desert_well/v2/fallback_b0_f-1.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "fallback_params": {
+     "beat": 0,
+     "focus": -1
+    },
+    "alt": "صحراء ليلاً فيها بئر ونخلة وخيمة",
+    "overlays": []
+   },
+   "cta": null
+  },
+  {
+   "block_id": "blk_s_story",
+   "type": "story",
+   "label": "قصة",
+   "title": "قصة اختبارية",
+   "provenance": null,
+   "beats": [
+    {
+     "beat_id": "beat_s_0",
+     "beat_index": 0,
+     "narration": [
+      {
+       "sentence_id": "sen_s_b0",
+       "spans": [
+        {
+         "type": "text",
+         "text": "نص اختباري للمرحلة 0."
+        }
+       ],
+       "source_ids": []
+      }
+     ],
+     "narration_audio_url": null,
+     "quote": null,
+     "quote_meaning": null,
+     "visual": {
+      "kind": "scene",
+      "key": null,
+      "version": null,
+      "params": {
+       "beat": 0,
+       "focus": -1
+      },
+      "image": null,
+      "scene": {
+       "scene_id": "scn_test_desert_well",
+       "version": 2,
+       "schema_version": "qabas.scene/1",
+       "url": "mock-asset://scenes/scn_test_desert_well/v2/scene.json",
+       "mime_type": "application/json",
+       "sha256": "145f9fd45a554b9e5c77e2b796ba4814fd85d46d72a9b1a91543b3a155e0d7e7",
+       "view_box": {
+        "width": 1600,
+        "height": 1000
+       },
+       "required_capabilities": [
+        "scene/1",
+        "shape.rect/1",
+        "shape.ellipse/1",
+        "shape.path/1",
+        "paint.gradient/1",
+        "track/1",
+        "anchors/1",
+        "fx.sparkles/1"
+       ]
+      },
+      "fallback_image": {
+       "url": "mock-asset://scenes/scn_test_desert_well/v2/fallback_b0_f-1.webp",
+       "mime_type": "image/webp",
+       "width": 1600,
+       "height": 1000
+      },
+      "fallback_params": {
+       "beat": 0,
+       "focus": -1
+      },
+      "alt": "صحراء ليلاً فيها بئر ونخلة وخيمة",
+      "overlays": []
+     }
+    },
+    {
+     "beat_id": "beat_s_1",
+     "beat_index": 1,
+     "narration": [
+      {
+       "sentence_id": "sen_s_b1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "نص اختباري للمرحلة 1."
+        }
+       ],
+       "source_ids": []
+      }
+     ],
+     "narration_audio_url": null,
+     "quote": null,
+     "quote_meaning": null,
+     "visual": {
+      "kind": "scene",
+      "key": null,
+      "version": null,
+      "params": {
+       "beat": 1,
+       "focus": -1
+      },
+      "image": null,
+      "scene": {
+       "scene_id": "scn_test_desert_well",
+       "version": 2,
+       "schema_version": "qabas.scene/1",
+       "url": "mock-asset://scenes/scn_test_desert_well/v2/scene.json",
+       "mime_type": "application/json",
+       "sha256": "145f9fd45a554b9e5c77e2b796ba4814fd85d46d72a9b1a91543b3a155e0d7e7",
+       "view_box": {
+        "width": 1600,
+        "height": 1000
+       },
+       "required_capabilities": [
+        "scene/1",
+        "shape.rect/1",
+        "shape.ellipse/1",
+        "shape.path/1",
+        "paint.gradient/1",
+        "track/1",
+        "anchors/1",
+        "fx.sparkles/1"
+       ]
+      },
+      "fallback_image": {
+       "url": "mock-asset://scenes/scn_test_desert_well/v2/fallback_b1_f-1.webp",
+       "mime_type": "image/webp",
+       "width": 1600,
+       "height": 1000
+      },
+      "fallback_params": {
+       "beat": 1,
+       "focus": -1
+      },
+      "alt": "صحراء ليلاً فيها بئر ونخلة وخيمة",
+      "overlays": []
+     }
+    },
+    {
+     "beat_id": "beat_s_2",
+     "beat_index": 2,
+     "narration": [
+      {
+       "sentence_id": "sen_s_b2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "نص اختباري للمرحلة 2."
+        }
+       ],
+       "source_ids": []
+      }
+     ],
+     "narration_audio_url": null,
+     "quote": null,
+     "quote_meaning": null,
+     "visual": {
+      "kind": "scene",
+      "key": null,
+      "version": null,
+      "params": {
+       "beat": 2,
+       "focus": -1
+      },
+      "image": null,
+      "scene": {
+       "scene_id": "scn_test_desert_well",
+       "version": 2,
+       "schema_version": "qabas.scene/1",
+       "url": "mock-asset://scenes/scn_test_desert_well/v2/scene.json",
+       "mime_type": "application/json",
+       "sha256": "145f9fd45a554b9e5c77e2b796ba4814fd85d46d72a9b1a91543b3a155e0d7e7",
+       "view_box": {
+        "width": 1600,
+        "height": 1000
+       },
+       "required_capabilities": [
+        "scene/1",
+        "shape.rect/1",
+        "shape.ellipse/1",
+        "shape.path/1",
+        "paint.gradient/1",
+        "track/1",
+        "anchors/1",
+        "fx.sparkles/1"
+       ]
+      },
+      "fallback_image": {
+       "url": "mock-asset://scenes/scn_test_desert_well/v2/fallback_b2_f-1.webp",
+       "mime_type": "image/webp",
+       "width": 1600,
+       "height": 1000
+      },
+      "fallback_params": {
+       "beat": 2,
+       "focus": -1
+      },
+      "alt": "صحراء ليلاً فيها بئر ونخلة وخيمة",
+      "overlays": []
+     }
+    }
+   ],
+   "origin": {
+    "title": "من أين جاءت هذه القصة؟",
+    "source_ids": [
+     "src_test_story"
+    ],
+    "show_card": false
+   }
+  },
+  {
+   "block_id": "blk_s_teach",
+   "type": "teach",
+   "eyebrow": "تعلّم",
+   "title": [
+    {
+     "type": "text",
+     "text": "بطاقة تعليمية اختبارية"
+    }
+   ],
+   "style": "standard",
+   "visual": {
+    "kind": "scene",
+    "key": null,
+    "version": null,
+    "params": {
+     "beat": 1,
+     "focus": -1
+    },
+    "image": null,
+    "scene": {
+     "scene_id": "scn_test_desert_well",
+     "version": 2,
+     "schema_version": "qabas.scene/1",
+     "url": "mock-asset://scenes/scn_test_desert_well/v2/scene.json",
+     "mime_type": "application/json",
+     "sha256": "145f9fd45a554b9e5c77e2b796ba4814fd85d46d72a9b1a91543b3a155e0d7e7",
+     "view_box": {
+      "width": 1600,
+      "height": 1000
+     },
+     "required_capabilities": [
+      "scene/1",
+      "shape.rect/1",
+      "shape.ellipse/1",
+      "shape.path/1",
+      "paint.gradient/1",
+      "track/1",
+      "anchors/1",
+      "fx.sparkles/1"
+     ]
+    },
+    "fallback_image": {
+     "url": "mock-asset://scenes/scn_test_desert_well/v2/fallback_b1_f-1.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "fallback_params": {
+     "beat": 1,
+     "focus": -1
+    },
+    "alt": "صحراء ليلاً فيها بئر ونخلة وخيمة",
+    "overlays": []
+   },
+   "evidence": null,
+   "points": [
+    {
+     "point_id": "pt_s_0",
+     "sentence": {
+      "sentence_id": "sen_s_t0",
+      "spans": [
+       {
+        "type": "text",
+        "text": "نقطة اختبارية 1."
+       }
+      ],
+      "source_ids": []
+     },
+     "visual_params": {
+      "focus": 0
+     }
+    },
+    {
+     "point_id": "pt_s_1",
+     "sentence": {
+      "sentence_id": "sen_s_t1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "نقطة اختبارية 2."
+       }
+      ],
+      "source_ids": []
+     },
+     "visual_params": {
+      "focus": 1
+     }
+    },
+    {
+     "point_id": "pt_s_2",
+     "sentence": {
+      "sentence_id": "sen_s_t2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "نقطة اختبارية 3."
+       }
+      ],
+      "source_ids": []
+     },
+     "visual_params": {
+      "focus": 2
+     }
+    }
+   ]
+  },
+  {
+   "block_id": "blk_s_map",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_s_hotspot",
+    "type": "map_place",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اضغط على البئر."
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "hotspots",
+     "visual": {
+      "kind": "scene",
+      "key": null,
+      "version": null,
+      "params": {
+       "beat": 1,
+       "focus": -1
+      },
+      "image": null,
+      "scene": {
+       "scene_id": "scn_test_desert_well",
+       "version": 2,
+       "schema_version": "qabas.scene/1",
+       "url": "mock-asset://scenes/scn_test_desert_well/v2/scene.json",
+       "mime_type": "application/json",
+       "sha256": "145f9fd45a554b9e5c77e2b796ba4814fd85d46d72a9b1a91543b3a155e0d7e7",
+       "view_box": {
+        "width": 1600,
+        "height": 1000
+       },
+       "required_capabilities": [
+        "scene/1",
+        "shape.rect/1",
+        "shape.ellipse/1",
+        "shape.path/1",
+        "paint.gradient/1",
+        "track/1",
+        "anchors/1",
+        "fx.sparkles/1"
+       ]
+      },
+      "fallback_image": {
+       "url": "mock-asset://scenes/scn_test_desert_well/v2/fallback_b1_f-1.webp",
+       "mime_type": "image/webp",
+       "width": 1600,
+       "height": 1000
+      },
+      "fallback_params": {
+       "beat": 1,
+       "focus": -1
+      },
+      "alt": "صحراء ليلاً فيها بئر ونخلة وخيمة",
+      "overlays": []
+     },
+     "question": [
+      {
+       "type": "text",
+       "text": "أين البئر؟"
+      }
+     ],
+     "pins": [
+      {
+       "pin_id": "pin_palm",
+       "x_pct": 22.5,
+       "y_pct": 56.0,
+       "label": "النخلة",
+       "radius_pct": 6.88,
+       "anchor_id": "palm"
+      },
+      {
+       "pin_id": "pin_well",
+       "x_pct": 47.5,
+       "y_pct": 66.0,
+       "label": "البئر",
+       "radius_pct": 7.5,
+       "anchor_id": "well"
+      },
+      {
+       "pin_id": "pin_tent",
+       "x_pct": 81.88,
+       "y_pct": 70.0,
+       "label": "الخيمة",
+       "radius_pct": 6.88,
+       "anchor_id": "tent"
+      }
+     ],
+     "interaction": {
+      "bindings": [
+       {
+        "pin_id": "pin_palm",
+        "set": {
+         "focus": 1
+        }
+       },
+       {
+        "pin_id": "pin_well",
+        "set": {
+         "focus": 0
+        }
+       },
+       {
+        "pin_id": "pin_tent",
+        "set": {
+         "focus": 2
+        }
+       }
+      ],
+      "reset_on_deselect": true,
+      "after_evaluation": {
+       "correct": {
+        "beat": 2
+       },
+       "incorrect": null
+      }
+     }
+    }
+   }
+  },
+  {
+   "block_id": "blk_s_sum",
+   "type": "teach",
+   "eyebrow": null,
+   "title": [
+    {
+     "type": "text",
+     "text": "الخلاصة"
+    }
+   ],
+   "style": "summary",
+   "visual": null,
+   "evidence": null,
+   "points": [
+    {
+     "point_id": "pt_sum_0",
+     "sentence": {
+      "sentence_id": "sen_sum_0",
+      "spans": [
+       {
+        "type": "text",
+        "text": "خلاصة اختبارية 1."
+       }
+      ],
+      "source_ids": []
+     },
+     "visual_params": null
+    },
+    {
+     "point_id": "pt_sum_1",
+     "sentence": {
+      "sentence_id": "sen_sum_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "خلاصة اختبارية 2."
+       }
+      ],
+      "source_ids": []
+     },
+     "visual_params": null
+    }
+   ]
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "تحدٍّ اختباري."
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_1",
+    "title": "موضوع اختباري",
+    "concept_ids": [
+     "con_test"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "سؤال الغد الاختباري."
+   }
+  ]
+ },
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

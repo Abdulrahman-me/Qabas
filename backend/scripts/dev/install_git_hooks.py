@@ -1,4 +1,4 @@
-"""Install the repository's local pre-commit hook (runs the public-safety guard on staged files).
+"""Install the repository's local pre-commit hook (runs the repository safety guard on staged files).
 
 Usage: py -3.12 backend/scripts/dev/install_git_hooks.py
 """
@@ -10,7 +10,8 @@ import sys
 from pathlib import Path
 
 HOOK = """#!/bin/sh
-# Installed by backend/scripts/dev/install_git_hooks.py: blocks private material from the public repo (D-14).
+# Installed by backend/scripts/dev/install_git_hooks.py (decision D-19):
+# blocks secrets, private handoff material and hidden evaluation data.
 exec py -3.12 backend/scripts/check_public_safety.py --staged
 """
 

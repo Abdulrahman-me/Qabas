@@ -1,10 +1,11 @@
-"""Run the full revision 10 contract suites against the private mirror (local only, decision D-14).
+"""Run the full revision 10 contract suites from the vendored folder (locally and in CI).
 
-The suites need fixtures and the API prose, which are not in the public repository. ``validate.py``
-rewrites schema/report/checksum files, so everything runs on a disposable copy. Expected results
-were recorded in Phase 0 (D-08): 595 regressions, 279 focused checks, 105 examples, 382 fixtures.
+``validate.py`` rewrites schema/report/checksum files, so the suites run on a disposable copy of
+``backend/contract/03_API``. Expected results are pinned in ``backend/contract/VENDORED.json``
+(595 regressions, 279 focused checks, 105 examples, 382 fixtures), and the regenerated schema
+must be byte-identical (after LF normalization) to the vendored one.
 
-Usage: backend/.venv/Scripts/python backend/scripts/dev/run_contract_suites.py
+Usage (from backend/): uv run python scripts/dev/run_contract_suites.py
 """
 
 from __future__ import annotations
@@ -20,9 +21,9 @@ import tempfile
 from pathlib import Path
 
 BACKEND = Path(__file__).resolve().parents[2]
-MIRROR = BACKEND / ".private" / "handoff" / "03_API"
 VENDORED = BACKEND / "contract"
-EXPECTED = {"regressions": 595, "focused": 279, "examples": 105, "fixtures": 382}
+SOURCE = VENDORED / "03_API"
+SCHEMA = Path("contract_revision10/contract/qabas_contract.schema.json")
 
 
 def run(tool: str, cwd: Path) -> str:
@@ -34,43 +35,35 @@ def run(tool: str, cwd: Path) -> str:
     return proc.stdout
 
 
-def check_vendored_matches_mirror() -> None:
-    for line in (VENDORED / "SHA256SUMS.public").read_text(encoding="utf-8").splitlines():
-        digest, name = line.split("  ", 1)
-        mirrored = hashlib.sha256((MIRROR / "contract_revision10" / name).read_bytes().replace(b"\r\n", b"\n"))
-        if mirrored.hexdigest() != digest:
-            raise SystemExit(f"private mirror differs from vendored contract: {name}")
+def lf_digest(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def main() -> int:
-    if not MIRROR.is_dir():
-        print("private mirror missing; run scripts/dev/sync_private_contract.py first", file=sys.stderr)
-        return 1
-    check_vendored_matches_mirror()
+    expected = json.loads((VENDORED / "VENDORED.json").read_text(encoding="utf-8"))["expected_suites"]
     with tempfile.TemporaryDirectory(prefix="qabas-contract-") as tmp:
         work = Path(tmp) / "03_API"
-        shutil.copytree(MIRROR, work)
+        shutil.copytree(SOURCE, work, ignore=shutil.ignore_patterns("__pycache__"))
         suite = work / "contract_revision10"
         regression = json.loads(run("regression.py", suite))
         focused = json.loads(run("rev10_checks.py", suite))
         report = run("validate.py", suite)
-        examples = re.search(r"Handoff examples: \*\*(\d+)/(\d+)\*\*", report)
-        fixtures = re.search(r"Fixtures: \*\*(\d+)/(\d+)\*\*", report)
-        passed = "Result: **PASS**" in report
-        schema = (suite / "contract" / "qabas_contract.schema.json").read_bytes().replace(b"\r\n", b"\n")
+        regenerated = lf_digest(work / SCHEMA)
+    examples = re.search(r"Handoff examples: \*\*(\d+)/(\d+)\*\*", report)
+    fixtures = re.search(r"Fixtures: \*\*(\d+)/(\d+)\*\*", report)
     results = {
         "regressions": (regression["passed"], regression["tests"]),
         "focused": (focused["passed"], focused["tests"]),
         "examples": tuple(map(int, examples.groups())) if examples else (0, -1),
         "fixtures": tuple(map(int, fixtures.groups())) if fixtures else (0, -1),
     }
+    passed = "Result: **PASS**" in report
     ok = passed
     for name, (got, total) in results.items():
-        good = got == total == EXPECTED[name]
+        good = got == total == expected[name]
         ok &= good
-        print(f"{'OK ' if good else 'BAD'} {name:12} {got}/{total} (expected {EXPECTED[name]})")
-    regenerated = hashlib.sha256(schema).hexdigest()
-    vendored = hashlib.sha256((VENDORED / "contract" / "qabas_contract.schema.json").read_bytes()).hexdigest()
+        print(f"{'OK ' if good else 'BAD'} {name:12} {got}/{total} (expected {expected[name]})")
+    vendored = lf_digest(SOURCE / SCHEMA)  # schema is text
     schema_ok = regenerated == vendored
     ok &= schema_ok
     status = "OK " if schema_ok else "BAD"

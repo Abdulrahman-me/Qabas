@@ -1,0 +1,356 @@
+{
+ "session_id": "ses_t22_en_explorer",
+ "kind": "lesson",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": "unit_test_2",
+ "lesson_id": "les_t2_2",
+ "lesson_version": 1,
+ "title": "Test title 1",
+ "subtitle": null,
+ "lesson_type": "story",
+ "reviewed_by": "Test reviewed_by 2",
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "Test text 3"
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 4,
+  "exercises": 4,
+  "scored": 4
+ },
+ "source_count": 0,
+ "total_exercises": 4,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_p",
+   "type": "paragraph",
+   "sentences": [
+    {
+     "sentence_id": "s1",
+     "spans": [
+      {
+       "type": "text",
+       "text": "Test text 4"
+      }
+     ],
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "block_id": "b_v",
+   "type": "visual",
+   "visual": {
+    "kind": "image",
+    "key": null,
+    "version": null,
+    "params": null,
+    "image": {
+     "url": "mock-asset://test/u2l2.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "scene": null,
+    "fallback_image": null,
+    "fallback_params": null,
+    "alt": "Test alt 5",
+    "overlays": []
+   },
+   "caption": null
+  },
+  {
+   "block_id": "b_x0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t22_0",
+    "type": "spot_error",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "segments": [
+      {
+       "segment_id": "seg_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 7"
+        }
+       ]
+      },
+      {
+       "segment_id": "seg_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 8"
+        }
+       ]
+      },
+      {
+       "segment_id": "seg_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 9"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t22_1",
+    "type": "which_evidence",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "claim": [
+      {
+       "type": "text",
+       "text": "Test text 11"
+      }
+     ],
+     "options": [
+      {
+       "option_id": "ev_1",
+       "evidence": {
+        "evidence_id": "src_q_112_1",
+        "kind": "quran",
+        "quran": {
+         "surah": 112,
+         "surah_name": "الإخلاص",
+         "ayah_start": 1,
+         "ayah_end": 1,
+         "segment": null,
+         "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+         "translation": null,
+         "translation_source": null,
+         "audio": null
+        },
+        "hadith": null
+       }
+      },
+      {
+       "option_id": "ev_2",
+       "evidence": {
+        "evidence_id": "src_h_niyyat",
+        "kind": "hadith",
+        "quran": null,
+        "hadith": {
+         "text_ar": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+         "translation": null,
+         "narrator": "Test narrator 12",
+         "collections": [
+          "Test collections 13",
+          "Test collections 14"
+         ],
+         "grade_label": "Test grade_label 15",
+         "grade_category": "authentic",
+         "grade_source": "Test grade_source 16",
+         "excerpt": false
+        }
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t22_2",
+    "type": "order_steps",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "remember"
+    },
+    "framing": null,
+    "payload": {
+     "steps": [
+      {
+       "step_id": "st_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 18"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "step_id": "st_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 19"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "step_id": "st_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 20"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "step_id": "st_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 21"
+        }
+       ],
+       "secondary_label": null
+      }
+     ],
+     "presentation": "plain"
+    }
+   }
+  },
+  {
+   "block_id": "b_x3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t22_3",
+    "type": "scenario",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "situation": [
+      {
+       "type": "text",
+       "text": "Test text 23"
+      }
+     ],
+     "options": [
+      {
+       "option_id": "s_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 24"
+        }
+       ]
+      },
+      {
+       "option_id": "s_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 25"
+        }
+       ]
+      },
+      {
+       "option_id": "s_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 26"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "Test text 27"
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_1",
+    "title": "Test title 28",
+    "concept_ids": [
+     "con_test"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "Test text 29"
+   }
+  ]
+ },
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

@@ -1,8 +1,9 @@
-# Frozen engineering handoff: read-only reference material, never committed
-# (contains private answer keys, unapproved content and large archives).
+# Frozen engineering handoff: read-only reference; never committed (unpublished review/history
+# material, unapproved drafts, large archives). The contract part is vendored in backend/contract.
 /FINAL_ENGINEERING_HANDOFF/
 
-# Local private mirror of handoff fixtures, grading keys and API prose (D-14). Never committed.
+# Local private area (D-19): hidden evaluation datasets (backend/.private/eval/), pending unapproved
+# content, local scratch. Never committed.
 /backend/.private/
 
 # Secrets and local configuration

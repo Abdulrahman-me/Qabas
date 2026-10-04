@@ -1,0 +1,11 @@
+{
+  "source": "FINAL_ENGINEERING_HANDOFF/03_API (contract revision 10 candidate)",
+  "vendored_on": "2026-10-04",
+  "layout": "03_API/ mirrors the handoff so the contract tools resolve ../API_REQUIREMENTS.md and contract/ relative to themselves",
+  "anchors": {
+    "03_API/API_REQUIREMENTS.md": "f33d77375bd99367104f5e4691953ee9e81da7cd136b14edb0aa03b12bf4dc7d",
+    "03_API/contract_revision10/SHA256SUMS": "8f0693621faf5bb2814dd128437796f23e7b2a154a33b0668bc3ad0ac1152a96"
+  },
+  "schema_sha256": "9d67bda00d2edd04d47645b6b93a7747ab9d5646cddeb12a7b34a6910c97481c",
+  "expected_suites": {"regressions": 595, "focused": 279, "examples": 105, "fixtures": 382}
+}

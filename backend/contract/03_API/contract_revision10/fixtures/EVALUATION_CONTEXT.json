@@ -1,0 +1,7879 @@
+{
+ "exercises/categorize__buckets/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_categorize__buckets",
+   "type": "categorize",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "buckets",
+    "categories": [
+     {
+      "category_id": "c_1",
+      "label": "أركان الإسلام",
+      "phase": null,
+      "capacity": null,
+      "art_key": null
+     },
+     {
+      "category_id": "c_2",
+      "label": "أركان الإيمان",
+      "phase": null,
+      "capacity": null,
+      "art_key": null
+     }
+    ],
+    "items": [
+     {
+      "item_id": "i_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الصلاة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الإيمان بالملائكة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الزكاة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الإيمان باليوم الآخر"
+       }
+      ],
+      "secondary_label": null
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_categorize__buckets",
+   "answer": {
+    "assignments": [
+     {
+      "item_id": "i_1",
+      "category_id": "c_1"
+     },
+     {
+      "item_id": "i_2",
+      "category_id": "c_2"
+     },
+     {
+      "item_id": "i_3",
+      "category_id": "c_1"
+     },
+     {
+      "item_id": "i_4",
+      "category_id": "c_2"
+     }
+    ]
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "assignments": [
+    {
+     "item_id": "i_1",
+     "category_id": "c_1"
+    },
+    {
+     "item_id": "i_2",
+     "category_id": "c_2"
+    },
+    {
+     "item_id": "i_3",
+     "category_id": "c_1"
+    },
+    {
+     "item_id": "i_4",
+     "category_id": "c_2"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/categorize__buckets/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_categorize__buckets",
+   "type": "categorize",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "buckets",
+    "categories": [
+     {
+      "category_id": "c_1",
+      "label": "أركان الإسلام",
+      "phase": null,
+      "capacity": null,
+      "art_key": null
+     },
+     {
+      "category_id": "c_2",
+      "label": "أركان الإيمان",
+      "phase": null,
+      "capacity": null,
+      "art_key": null
+     }
+    ],
+    "items": [
+     {
+      "item_id": "i_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الصلاة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الإيمان بالملائكة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الزكاة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الإيمان باليوم الآخر"
+       }
+      ],
+      "secondary_label": null
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_categorize__buckets",
+   "answer": {
+    "assignments": [
+     {
+      "item_id": "i_1",
+      "category_id": "c_1"
+     },
+     {
+      "item_id": "i_2",
+      "category_id": "c_1"
+     },
+     {
+      "item_id": "i_3",
+      "category_id": "c_1"
+     },
+     {
+      "item_id": "i_4",
+      "category_id": "c_2"
+     }
+    ]
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "assignments": [
+    {
+     "item_id": "i_1",
+     "category_id": "c_1"
+    },
+    {
+     "item_id": "i_2",
+     "category_id": "c_2"
+    },
+    {
+     "item_id": "i_3",
+     "category_id": "c_1"
+    },
+    {
+     "item_id": "i_4",
+     "category_id": "c_2"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/categorize__buckets/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_categorize__buckets",
+   "type": "categorize",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "buckets",
+    "categories": [
+     {
+      "category_id": "c_1",
+      "label": "أركان الإسلام",
+      "phase": null,
+      "capacity": null,
+      "art_key": null
+     },
+     {
+      "category_id": "c_2",
+      "label": "أركان الإيمان",
+      "phase": null,
+      "capacity": null,
+      "art_key": null
+     }
+    ],
+    "items": [
+     {
+      "item_id": "i_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الصلاة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الإيمان بالملائكة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الزكاة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الإيمان باليوم الآخر"
+       }
+      ],
+      "secondary_label": null
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_categorize__buckets",
+   "answer": {
+    "assignments": [
+     {
+      "item_id": "i_1",
+      "category_id": "c_1"
+     },
+     {
+      "item_id": "i_2",
+      "category_id": "c_2"
+     },
+     {
+      "item_id": "i_3",
+      "category_id": "c_1"
+     },
+     {
+      "item_id": "i_4",
+      "category_id": "c_2"
+     }
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "assignments": [
+    {
+     "item_id": "i_1",
+     "category_id": "c_1"
+    },
+    {
+     "item_id": "i_2",
+     "category_id": "c_2"
+    },
+    {
+     "item_id": "i_3",
+     "category_id": "c_1"
+    },
+    {
+     "item_id": "i_4",
+     "category_id": "c_2"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/categorize__buckets/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_categorize__buckets",
+   "type": "categorize",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "buckets",
+    "categories": [
+     {
+      "category_id": "c_1",
+      "label": "أركان الإسلام",
+      "phase": null,
+      "capacity": null,
+      "art_key": null
+     },
+     {
+      "category_id": "c_2",
+      "label": "أركان الإيمان",
+      "phase": null,
+      "capacity": null,
+      "art_key": null
+     }
+    ],
+    "items": [
+     {
+      "item_id": "i_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الصلاة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الإيمان بالملائكة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الزكاة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الإيمان باليوم الآخر"
+       }
+      ],
+      "secondary_label": null
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_categorize__buckets",
+   "answer": {
+    "assignments": [
+     {
+      "item_id": "i_1",
+      "category_id": "c_1"
+     },
+     {
+      "item_id": "i_2",
+      "category_id": "c_1"
+     },
+     {
+      "item_id": "i_3",
+      "category_id": "c_1"
+     },
+     {
+      "item_id": "i_4",
+      "category_id": "c_2"
+     }
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "assignments": [
+    {
+     "item_id": "i_1",
+     "category_id": "c_1"
+    },
+    {
+     "item_id": "i_2",
+     "category_id": "c_2"
+    },
+    {
+     "item_id": "i_3",
+     "category_id": "c_1"
+    },
+    {
+     "item_id": "i_4",
+     "category_id": "c_2"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/categorize__buckets/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_categorize__buckets",
+   "type": "categorize",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "buckets",
+    "categories": [
+     {
+      "category_id": "c_1",
+      "label": "أركان الإسلام",
+      "phase": null,
+      "capacity": null,
+      "art_key": null
+     },
+     {
+      "category_id": "c_2",
+      "label": "أركان الإيمان",
+      "phase": null,
+      "capacity": null,
+      "art_key": null
+     }
+    ],
+    "items": [
+     {
+      "item_id": "i_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الصلاة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الإيمان بالملائكة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الزكاة"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "i_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الإيمان باليوم الآخر"
+       }
+      ],
+      "secondary_label": null
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_categorize__buckets",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "assignments": [
+    {
+     "item_id": "i_1",
+     "category_id": "c_1"
+    },
+    {
+     "item_id": "i_2",
+     "category_id": "c_2"
+    },
+    {
+     "item_id": "i_3",
+     "category_id": "c_1"
+    },
+    {
+     "item_id": "i_4",
+     "category_id": "c_2"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/categorize__day_arc/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_categorize__day_arc",
+   "type": "categorize",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "apply"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "day_arc",
+    "categories": [
+     {
+      "category_id": "cat_5t",
+      "label": "أول الضوء",
+      "phase": "dawn",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_j8",
+      "label": "منتصف النهار",
+      "phase": "midday",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_2w",
+      "label": "بعد الظهيرة",
+      "phase": "afternoon",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_q1",
+      "label": "الغروب",
+      "phase": "sunset",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_x6",
+      "label": "الليل",
+      "phase": "night",
+      "capacity": 1,
+      "art_key": null
+     }
+    ],
+    "items": [
+     {
+      "item_id": "itm_c4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "العصر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_9a",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الفجر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_e2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "العشاء"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_k7",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الظهر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_b5",
+      "spans": [
+       {
+        "type": "text",
+        "text": "المغرب"
+       }
+      ],
+      "secondary_label": null
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_categorize__day_arc",
+   "answer": {
+    "assignments": [
+     {
+      "item_id": "itm_9a",
+      "category_id": "cat_5t"
+     },
+     {
+      "item_id": "itm_k7",
+      "category_id": "cat_j8"
+     },
+     {
+      "item_id": "itm_c4",
+      "category_id": "cat_2w"
+     },
+     {
+      "item_id": "itm_b5",
+      "category_id": "cat_q1"
+     },
+     {
+      "item_id": "itm_e2",
+      "category_id": "cat_x6"
+     }
+    ]
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "assignments": [
+    {
+     "item_id": "itm_9a",
+     "category_id": "cat_5t"
+    },
+    {
+     "item_id": "itm_k7",
+     "category_id": "cat_j8"
+    },
+    {
+     "item_id": "itm_c4",
+     "category_id": "cat_2w"
+    },
+    {
+     "item_id": "itm_b5",
+     "category_id": "cat_q1"
+    },
+    {
+     "item_id": "itm_e2",
+     "category_id": "cat_x6"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/categorize__day_arc/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_categorize__day_arc",
+   "type": "categorize",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "apply"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "day_arc",
+    "categories": [
+     {
+      "category_id": "cat_5t",
+      "label": "أول الضوء",
+      "phase": "dawn",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_j8",
+      "label": "منتصف النهار",
+      "phase": "midday",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_2w",
+      "label": "بعد الظهيرة",
+      "phase": "afternoon",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_q1",
+      "label": "الغروب",
+      "phase": "sunset",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_x6",
+      "label": "الليل",
+      "phase": "night",
+      "capacity": 1,
+      "art_key": null
+     }
+    ],
+    "items": [
+     {
+      "item_id": "itm_c4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "العصر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_9a",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الفجر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_e2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "العشاء"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_k7",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الظهر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_b5",
+      "spans": [
+       {
+        "type": "text",
+        "text": "المغرب"
+       }
+      ],
+      "secondary_label": null
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_categorize__day_arc",
+   "answer": {
+    "assignments": [
+     {
+      "item_id": "itm_9a",
+      "category_id": "cat_5t"
+     },
+     {
+      "item_id": "itm_k7",
+      "category_id": "cat_j8"
+     },
+     {
+      "item_id": "itm_c4",
+      "category_id": "cat_q1"
+     },
+     {
+      "item_id": "itm_b5",
+      "category_id": "cat_2w"
+     },
+     {
+      "item_id": "itm_e2",
+      "category_id": "cat_x6"
+     }
+    ]
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "assignments": [
+    {
+     "item_id": "itm_9a",
+     "category_id": "cat_5t"
+    },
+    {
+     "item_id": "itm_k7",
+     "category_id": "cat_j8"
+    },
+    {
+     "item_id": "itm_c4",
+     "category_id": "cat_2w"
+    },
+    {
+     "item_id": "itm_b5",
+     "category_id": "cat_q1"
+    },
+    {
+     "item_id": "itm_e2",
+     "category_id": "cat_x6"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/categorize__day_arc/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_categorize__day_arc",
+   "type": "categorize",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "apply"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "day_arc",
+    "categories": [
+     {
+      "category_id": "cat_5t",
+      "label": "أول الضوء",
+      "phase": "dawn",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_j8",
+      "label": "منتصف النهار",
+      "phase": "midday",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_2w",
+      "label": "بعد الظهيرة",
+      "phase": "afternoon",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_q1",
+      "label": "الغروب",
+      "phase": "sunset",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_x6",
+      "label": "الليل",
+      "phase": "night",
+      "capacity": 1,
+      "art_key": null
+     }
+    ],
+    "items": [
+     {
+      "item_id": "itm_c4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "العصر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_9a",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الفجر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_e2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "العشاء"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_k7",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الظهر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_b5",
+      "spans": [
+       {
+        "type": "text",
+        "text": "المغرب"
+       }
+      ],
+      "secondary_label": null
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_categorize__day_arc",
+   "answer": {
+    "assignments": [
+     {
+      "item_id": "itm_9a",
+      "category_id": "cat_5t"
+     },
+     {
+      "item_id": "itm_k7",
+      "category_id": "cat_j8"
+     },
+     {
+      "item_id": "itm_c4",
+      "category_id": "cat_2w"
+     },
+     {
+      "item_id": "itm_b5",
+      "category_id": "cat_q1"
+     },
+     {
+      "item_id": "itm_e2",
+      "category_id": "cat_x6"
+     }
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "assignments": [
+    {
+     "item_id": "itm_9a",
+     "category_id": "cat_5t"
+    },
+    {
+     "item_id": "itm_k7",
+     "category_id": "cat_j8"
+    },
+    {
+     "item_id": "itm_c4",
+     "category_id": "cat_2w"
+    },
+    {
+     "item_id": "itm_b5",
+     "category_id": "cat_q1"
+    },
+    {
+     "item_id": "itm_e2",
+     "category_id": "cat_x6"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/categorize__day_arc/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_categorize__day_arc",
+   "type": "categorize",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "apply"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "day_arc",
+    "categories": [
+     {
+      "category_id": "cat_5t",
+      "label": "أول الضوء",
+      "phase": "dawn",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_j8",
+      "label": "منتصف النهار",
+      "phase": "midday",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_2w",
+      "label": "بعد الظهيرة",
+      "phase": "afternoon",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_q1",
+      "label": "الغروب",
+      "phase": "sunset",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_x6",
+      "label": "الليل",
+      "phase": "night",
+      "capacity": 1,
+      "art_key": null
+     }
+    ],
+    "items": [
+     {
+      "item_id": "itm_c4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "العصر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_9a",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الفجر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_e2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "العشاء"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_k7",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الظهر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_b5",
+      "spans": [
+       {
+        "type": "text",
+        "text": "المغرب"
+       }
+      ],
+      "secondary_label": null
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_categorize__day_arc",
+   "answer": {
+    "assignments": [
+     {
+      "item_id": "itm_9a",
+      "category_id": "cat_5t"
+     },
+     {
+      "item_id": "itm_k7",
+      "category_id": "cat_j8"
+     },
+     {
+      "item_id": "itm_c4",
+      "category_id": "cat_q1"
+     },
+     {
+      "item_id": "itm_b5",
+      "category_id": "cat_2w"
+     },
+     {
+      "item_id": "itm_e2",
+      "category_id": "cat_x6"
+     }
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "assignments": [
+    {
+     "item_id": "itm_9a",
+     "category_id": "cat_5t"
+    },
+    {
+     "item_id": "itm_k7",
+     "category_id": "cat_j8"
+    },
+    {
+     "item_id": "itm_c4",
+     "category_id": "cat_2w"
+    },
+    {
+     "item_id": "itm_b5",
+     "category_id": "cat_q1"
+    },
+    {
+     "item_id": "itm_e2",
+     "category_id": "cat_x6"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/categorize__day_arc/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_categorize__day_arc",
+   "type": "categorize",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "apply"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "day_arc",
+    "categories": [
+     {
+      "category_id": "cat_5t",
+      "label": "أول الضوء",
+      "phase": "dawn",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_j8",
+      "label": "منتصف النهار",
+      "phase": "midday",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_2w",
+      "label": "بعد الظهيرة",
+      "phase": "afternoon",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_q1",
+      "label": "الغروب",
+      "phase": "sunset",
+      "capacity": 1,
+      "art_key": null
+     },
+     {
+      "category_id": "cat_x6",
+      "label": "الليل",
+      "phase": "night",
+      "capacity": 1,
+      "art_key": null
+     }
+    ],
+    "items": [
+     {
+      "item_id": "itm_c4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "العصر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_9a",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الفجر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_e2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "العشاء"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_k7",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الظهر"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "item_id": "itm_b5",
+      "spans": [
+       {
+        "type": "text",
+        "text": "المغرب"
+       }
+      ],
+      "secondary_label": null
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_categorize__day_arc",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "assignments": [
+    {
+     "item_id": "itm_9a",
+     "category_id": "cat_5t"
+    },
+    {
+     "item_id": "itm_k7",
+     "category_id": "cat_j8"
+    },
+    {
+     "item_id": "itm_c4",
+     "category_id": "cat_2w"
+    },
+    {
+     "item_id": "itm_b5",
+     "category_id": "cat_q1"
+    },
+    {
+     "item_id": "itm_e2",
+     "category_id": "cat_x6"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/fill_blank/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_fill_blank",
+   "type": "fill_blank",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "segments": [
+     {
+      "type": "text",
+      "text": "أركان الإسلام "
+     },
+     {
+      "type": "blank",
+      "blank_id": "b_1"
+     },
+     {
+      "type": "text",
+      "text": " أركان، أولها "
+     },
+     {
+      "type": "blank",
+      "blank_id": "b_2"
+     },
+     {
+      "type": "text",
+      "text": "."
+     }
+    ],
+    "word_bank": [
+     {
+      "word_id": "w_1",
+      "text": "خمسة"
+     },
+     {
+      "word_id": "w_2",
+      "text": "ستة"
+     },
+     {
+      "word_id": "w_3",
+      "text": "الشهادتان"
+     },
+     {
+      "word_id": "w_4",
+      "text": "الصوم"
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_fill_blank",
+   "answer": {
+    "fills": [
+     {
+      "blank_id": "b_1",
+      "word_id": "w_1"
+     },
+     {
+      "blank_id": "b_2",
+      "word_id": "w_3"
+     }
+    ]
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "fills": [
+    {
+     "blank_id": "b_1",
+     "word_id": "w_1"
+    },
+    {
+     "blank_id": "b_2",
+     "word_id": "w_3"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/fill_blank/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_fill_blank",
+   "type": "fill_blank",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "segments": [
+     {
+      "type": "text",
+      "text": "أركان الإسلام "
+     },
+     {
+      "type": "blank",
+      "blank_id": "b_1"
+     },
+     {
+      "type": "text",
+      "text": " أركان، أولها "
+     },
+     {
+      "type": "blank",
+      "blank_id": "b_2"
+     },
+     {
+      "type": "text",
+      "text": "."
+     }
+    ],
+    "word_bank": [
+     {
+      "word_id": "w_1",
+      "text": "خمسة"
+     },
+     {
+      "word_id": "w_2",
+      "text": "ستة"
+     },
+     {
+      "word_id": "w_3",
+      "text": "الشهادتان"
+     },
+     {
+      "word_id": "w_4",
+      "text": "الصوم"
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_fill_blank",
+   "answer": {
+    "fills": [
+     {
+      "blank_id": "b_1",
+      "word_id": "w_2"
+     },
+     {
+      "blank_id": "b_2",
+      "word_id": "w_3"
+     }
+    ]
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "fills": [
+    {
+     "blank_id": "b_1",
+     "word_id": "w_1"
+    },
+    {
+     "blank_id": "b_2",
+     "word_id": "w_3"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/fill_blank/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_fill_blank",
+   "type": "fill_blank",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "segments": [
+     {
+      "type": "text",
+      "text": "أركان الإسلام "
+     },
+     {
+      "type": "blank",
+      "blank_id": "b_1"
+     },
+     {
+      "type": "text",
+      "text": " أركان، أولها "
+     },
+     {
+      "type": "blank",
+      "blank_id": "b_2"
+     },
+     {
+      "type": "text",
+      "text": "."
+     }
+    ],
+    "word_bank": [
+     {
+      "word_id": "w_1",
+      "text": "خمسة"
+     },
+     {
+      "word_id": "w_2",
+      "text": "ستة"
+     },
+     {
+      "word_id": "w_3",
+      "text": "الشهادتان"
+     },
+     {
+      "word_id": "w_4",
+      "text": "الصوم"
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_fill_blank",
+   "answer": {
+    "fills": [
+     {
+      "blank_id": "b_1",
+      "word_id": "w_1"
+     },
+     {
+      "blank_id": "b_2",
+      "word_id": "w_3"
+     }
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "fills": [
+    {
+     "blank_id": "b_1",
+     "word_id": "w_1"
+    },
+    {
+     "blank_id": "b_2",
+     "word_id": "w_3"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/fill_blank/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_fill_blank",
+   "type": "fill_blank",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "segments": [
+     {
+      "type": "text",
+      "text": "أركان الإسلام "
+     },
+     {
+      "type": "blank",
+      "blank_id": "b_1"
+     },
+     {
+      "type": "text",
+      "text": " أركان، أولها "
+     },
+     {
+      "type": "blank",
+      "blank_id": "b_2"
+     },
+     {
+      "type": "text",
+      "text": "."
+     }
+    ],
+    "word_bank": [
+     {
+      "word_id": "w_1",
+      "text": "خمسة"
+     },
+     {
+      "word_id": "w_2",
+      "text": "ستة"
+     },
+     {
+      "word_id": "w_3",
+      "text": "الشهادتان"
+     },
+     {
+      "word_id": "w_4",
+      "text": "الصوم"
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_fill_blank",
+   "answer": {
+    "fills": [
+     {
+      "blank_id": "b_1",
+      "word_id": "w_2"
+     },
+     {
+      "blank_id": "b_2",
+      "word_id": "w_3"
+     }
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "fills": [
+    {
+     "blank_id": "b_1",
+     "word_id": "w_1"
+    },
+    {
+     "blank_id": "b_2",
+     "word_id": "w_3"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/fill_blank/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_fill_blank",
+   "type": "fill_blank",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "segments": [
+     {
+      "type": "text",
+      "text": "أركان الإسلام "
+     },
+     {
+      "type": "blank",
+      "blank_id": "b_1"
+     },
+     {
+      "type": "text",
+      "text": " أركان، أولها "
+     },
+     {
+      "type": "blank",
+      "blank_id": "b_2"
+     },
+     {
+      "type": "text",
+      "text": "."
+     }
+    ],
+    "word_bank": [
+     {
+      "word_id": "w_1",
+      "text": "خمسة"
+     },
+     {
+      "word_id": "w_2",
+      "text": "ستة"
+     },
+     {
+      "word_id": "w_3",
+      "text": "الشهادتان"
+     },
+     {
+      "word_id": "w_4",
+      "text": "الصوم"
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_fill_blank",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "fills": [
+    {
+     "blank_id": "b_1",
+     "word_id": "w_1"
+    },
+    {
+     "blank_id": "b_2",
+     "word_id": "w_3"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/flashcard/eval_again.json": {
+  "exercise": {
+   "exercise_id": "ex_flashcard",
+   "type": "flashcard",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": null,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "front": [
+     {
+      "type": "text",
+      "text": "ما معنى «التوحيد»؟"
+     }
+    ],
+    "back": [
+     {
+      "type": "text",
+      "text": "إفراد الله وحده بالعبادة، والإيمان بأنه واحد لا شريك له."
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_flashcard",
+   "answer": {
+    "rating": "again"
+   },
+   "elapsed_ms": 4000,
+   "is_retry": false
+  },
+  "kind": "review",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": null,
+  "recitation_passed": null
+ },
+ "exercises/flashcard/eval_easy.json": {
+  "exercise": {
+   "exercise_id": "ex_flashcard",
+   "type": "flashcard",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": null,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "front": [
+     {
+      "type": "text",
+      "text": "ما معنى «التوحيد»؟"
+     }
+    ],
+    "back": [
+     {
+      "type": "text",
+      "text": "إفراد الله وحده بالعبادة، والإيمان بأنه واحد لا شريك له."
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_flashcard",
+   "answer": {
+    "rating": "easy"
+   },
+   "elapsed_ms": 4000,
+   "is_retry": false
+  },
+  "kind": "review",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": null,
+  "recitation_passed": null
+ },
+ "exercises/flashcard/eval_good.json": {
+  "exercise": {
+   "exercise_id": "ex_flashcard",
+   "type": "flashcard",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": null,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "front": [
+     {
+      "type": "text",
+      "text": "ما معنى «التوحيد»؟"
+     }
+    ],
+    "back": [
+     {
+      "type": "text",
+      "text": "إفراد الله وحده بالعبادة، والإيمان بأنه واحد لا شريك له."
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_flashcard",
+   "answer": {
+    "rating": "good"
+   },
+   "elapsed_ms": 4000,
+   "is_retry": false
+  },
+  "kind": "review",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": null,
+  "recitation_passed": null
+ },
+ "exercises/flashcard/eval_hard.json": {
+  "exercise": {
+   "exercise_id": "ex_flashcard",
+   "type": "flashcard",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": null,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "front": [
+     {
+      "type": "text",
+      "text": "ما معنى «التوحيد»؟"
+     }
+    ],
+    "back": [
+     {
+      "type": "text",
+      "text": "إفراد الله وحده بالعبادة، والإيمان بأنه واحد لا شريك له."
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_flashcard",
+   "answer": {
+    "rating": "hard"
+   },
+   "elapsed_ms": 4000,
+   "is_retry": false
+  },
+  "kind": "review",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": null,
+  "recitation_passed": null
+ },
+ "exercises/map_place__hotspots/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__hotspots",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "hotspots",
+    "visual": {
+     "kind": "builtin",
+     "key": "river_house",
+     "version": 1,
+     "params": {
+      "beat": 1
+     },
+     "image": null,
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "بيت ونخيل ونهر جارٍ",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين النهر؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "pin_h3",
+      "x_pct": 16.0,
+      "y_pct": 36.0,
+      "label": "النخلة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_q8",
+      "x_pct": 55.0,
+      "y_pct": 52.0,
+      "label": "الباب",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_z1",
+      "x_pct": 80.0,
+      "y_pct": 34.0,
+      "label": "النافذة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_m4",
+      "x_pct": 42.0,
+      "y_pct": 86.0,
+      "label": "النهر",
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__hotspots",
+   "answer": {
+    "pin_id": "pin_m4"
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pin_id": "pin_m4"
+  },
+  "recitation_passed": null
+ },
+ "exercises/map_place__hotspots/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__hotspots",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "hotspots",
+    "visual": {
+     "kind": "builtin",
+     "key": "river_house",
+     "version": 1,
+     "params": {
+      "beat": 1
+     },
+     "image": null,
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "بيت ونخيل ونهر جارٍ",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين النهر؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "pin_h3",
+      "x_pct": 16.0,
+      "y_pct": 36.0,
+      "label": "النخلة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_q8",
+      "x_pct": 55.0,
+      "y_pct": 52.0,
+      "label": "الباب",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_z1",
+      "x_pct": 80.0,
+      "y_pct": 34.0,
+      "label": "النافذة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_m4",
+      "x_pct": 42.0,
+      "y_pct": 86.0,
+      "label": "النهر",
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__hotspots",
+   "answer": {
+    "pin_id": "pin_q8"
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pin_id": "pin_m4"
+  },
+  "recitation_passed": null
+ },
+ "exercises/map_place__hotspots/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__hotspots",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "hotspots",
+    "visual": {
+     "kind": "builtin",
+     "key": "river_house",
+     "version": 1,
+     "params": {
+      "beat": 1
+     },
+     "image": null,
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "بيت ونخيل ونهر جارٍ",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين النهر؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "pin_h3",
+      "x_pct": 16.0,
+      "y_pct": 36.0,
+      "label": "النخلة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_q8",
+      "x_pct": 55.0,
+      "y_pct": 52.0,
+      "label": "الباب",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_z1",
+      "x_pct": 80.0,
+      "y_pct": 34.0,
+      "label": "النافذة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_m4",
+      "x_pct": 42.0,
+      "y_pct": 86.0,
+      "label": "النهر",
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__hotspots",
+   "answer": {
+    "pin_id": "pin_m4"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "pin_id": "pin_m4"
+  },
+  "recitation_passed": null
+ },
+ "exercises/map_place__hotspots/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__hotspots",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "hotspots",
+    "visual": {
+     "kind": "builtin",
+     "key": "river_house",
+     "version": 1,
+     "params": {
+      "beat": 1
+     },
+     "image": null,
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "بيت ونخيل ونهر جارٍ",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين النهر؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "pin_h3",
+      "x_pct": 16.0,
+      "y_pct": 36.0,
+      "label": "النخلة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_q8",
+      "x_pct": 55.0,
+      "y_pct": 52.0,
+      "label": "الباب",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_z1",
+      "x_pct": 80.0,
+      "y_pct": 34.0,
+      "label": "النافذة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_m4",
+      "x_pct": 42.0,
+      "y_pct": 86.0,
+      "label": "النهر",
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__hotspots",
+   "answer": {
+    "pin_id": "pin_q8"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "pin_id": "pin_m4"
+  },
+  "recitation_passed": null
+ },
+ "exercises/map_place__hotspots/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__hotspots",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "hotspots",
+    "visual": {
+     "kind": "builtin",
+     "key": "river_house",
+     "version": 1,
+     "params": {
+      "beat": 1
+     },
+     "image": null,
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "بيت ونخيل ونهر جارٍ",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين النهر؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "pin_h3",
+      "x_pct": 16.0,
+      "y_pct": 36.0,
+      "label": "النخلة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_q8",
+      "x_pct": 55.0,
+      "y_pct": 52.0,
+      "label": "الباب",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_z1",
+      "x_pct": 80.0,
+      "y_pct": 34.0,
+      "label": "النافذة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_m4",
+      "x_pct": 42.0,
+      "y_pct": 86.0,
+      "label": "النهر",
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__hotspots",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pin_id": "pin_m4"
+  },
+  "recitation_passed": null
+ },
+ "exercises/map_place__hotspots/eval_unavailable.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__hotspots",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "hotspots",
+    "visual": {
+     "kind": "builtin",
+     "key": "river_house",
+     "version": 1,
+     "params": {
+      "beat": 1
+     },
+     "image": null,
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "بيت ونخيل ونهر جارٍ",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين النهر؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "pin_h3",
+      "x_pct": 16.0,
+      "y_pct": 36.0,
+      "label": "النخلة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_q8",
+      "x_pct": 55.0,
+      "y_pct": 52.0,
+      "label": "الباب",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_z1",
+      "x_pct": 80.0,
+      "y_pct": 34.0,
+      "label": "النافذة",
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "pin_m4",
+      "x_pct": 42.0,
+      "y_pct": 86.0,
+      "label": "النهر",
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__hotspots",
+   "answer": {
+    "unavailable": true
+   },
+   "elapsed_ms": 2000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pin_id": "pin_m4"
+  },
+  "recitation_passed": null
+ },
+ "exercises/map_place__map_pins/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__map_pins",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "map_pins",
+    "visual": {
+     "kind": "image",
+     "key": null,
+     "version": null,
+     "params": null,
+     "image": {
+      "url": "mock-asset://maps/hijaz_test.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1200
+     },
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "خريطة منطقة الحجاز بلا أسماء",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين تقع المدينة المنورة؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "p_1",
+      "x_pct": 58.0,
+      "y_pct": 71.5,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_2",
+      "x_pct": 52.5,
+      "y_pct": 38.0,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_3",
+      "x_pct": 47.0,
+      "y_pct": 45.2,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__map_pins",
+   "answer": {
+    "pin_id": "p_2"
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pin_id": "p_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/map_place__map_pins/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__map_pins",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "map_pins",
+    "visual": {
+     "kind": "image",
+     "key": null,
+     "version": null,
+     "params": null,
+     "image": {
+      "url": "mock-asset://maps/hijaz_test.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1200
+     },
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "خريطة منطقة الحجاز بلا أسماء",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين تقع المدينة المنورة؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "p_1",
+      "x_pct": 58.0,
+      "y_pct": 71.5,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_2",
+      "x_pct": 52.5,
+      "y_pct": 38.0,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_3",
+      "x_pct": 47.0,
+      "y_pct": 45.2,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__map_pins",
+   "answer": {
+    "pin_id": "p_1"
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pin_id": "p_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/map_place__map_pins/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__map_pins",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "map_pins",
+    "visual": {
+     "kind": "image",
+     "key": null,
+     "version": null,
+     "params": null,
+     "image": {
+      "url": "mock-asset://maps/hijaz_test.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1200
+     },
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "خريطة منطقة الحجاز بلا أسماء",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين تقع المدينة المنورة؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "p_1",
+      "x_pct": 58.0,
+      "y_pct": 71.5,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_2",
+      "x_pct": 52.5,
+      "y_pct": 38.0,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_3",
+      "x_pct": 47.0,
+      "y_pct": 45.2,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__map_pins",
+   "answer": {
+    "pin_id": "p_2"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "pin_id": "p_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/map_place__map_pins/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__map_pins",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "map_pins",
+    "visual": {
+     "kind": "image",
+     "key": null,
+     "version": null,
+     "params": null,
+     "image": {
+      "url": "mock-asset://maps/hijaz_test.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1200
+     },
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "خريطة منطقة الحجاز بلا أسماء",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين تقع المدينة المنورة؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "p_1",
+      "x_pct": 58.0,
+      "y_pct": 71.5,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_2",
+      "x_pct": 52.5,
+      "y_pct": 38.0,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_3",
+      "x_pct": 47.0,
+      "y_pct": 45.2,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__map_pins",
+   "answer": {
+    "pin_id": "p_1"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "pin_id": "p_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/map_place__map_pins/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__map_pins",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "map_pins",
+    "visual": {
+     "kind": "image",
+     "key": null,
+     "version": null,
+     "params": null,
+     "image": {
+      "url": "mock-asset://maps/hijaz_test.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1200
+     },
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "خريطة منطقة الحجاز بلا أسماء",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين تقع المدينة المنورة؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "p_1",
+      "x_pct": 58.0,
+      "y_pct": 71.5,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_2",
+      "x_pct": 52.5,
+      "y_pct": 38.0,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_3",
+      "x_pct": 47.0,
+      "y_pct": 45.2,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__map_pins",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pin_id": "p_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/map_place__map_pins/eval_unavailable.json": {
+  "exercise": {
+   "exercise_id": "ex_map_place__map_pins",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "map_pins",
+    "visual": {
+     "kind": "image",
+     "key": null,
+     "version": null,
+     "params": null,
+     "image": {
+      "url": "mock-asset://maps/hijaz_test.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1200
+     },
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "خريطة منطقة الحجاز بلا أسماء",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين تقع المدينة المنورة؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "p_1",
+      "x_pct": 58.0,
+      "y_pct": 71.5,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_2",
+      "x_pct": 52.5,
+      "y_pct": 38.0,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     },
+     {
+      "pin_id": "p_3",
+      "x_pct": 47.0,
+      "y_pct": 45.2,
+      "label": null,
+      "radius_pct": null,
+      "anchor_id": null
+     }
+    ],
+    "interaction": null
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_map_place__map_pins",
+   "answer": {
+    "unavailable": true
+   },
+   "elapsed_ms": 2000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pin_id": "p_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/match_pairs/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_match_pairs",
+   "type": "match_pairs",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "left": [
+     {
+      "item_id": "l_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الزكاة"
+       }
+      ]
+     },
+     {
+      "item_id": "l_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الصوم"
+       }
+      ]
+     },
+     {
+      "item_id": "l_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الحج"
+       }
+      ]
+     }
+    ],
+    "right": [
+     {
+      "item_id": "r_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "قصد مكة لأداء المناسك"
+       }
+      ]
+     },
+     {
+      "item_id": "r_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "مال يُعطى للمستحقين"
+       }
+      ]
+     },
+     {
+      "item_id": "r_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الامتناع عن الطعام والشراب من الفجر إلى المغرب"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_match_pairs",
+   "answer": {
+    "pairs": [
+     {
+      "left_id": "l_1",
+      "right_id": "r_2"
+     },
+     {
+      "left_id": "l_2",
+      "right_id": "r_3"
+     },
+     {
+      "left_id": "l_3",
+      "right_id": "r_1"
+     }
+    ]
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pairs": [
+    {
+     "left_id": "l_1",
+     "right_id": "r_2"
+    },
+    {
+     "left_id": "l_2",
+     "right_id": "r_3"
+    },
+    {
+     "left_id": "l_3",
+     "right_id": "r_1"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/match_pairs/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_match_pairs",
+   "type": "match_pairs",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "left": [
+     {
+      "item_id": "l_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الزكاة"
+       }
+      ]
+     },
+     {
+      "item_id": "l_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الصوم"
+       }
+      ]
+     },
+     {
+      "item_id": "l_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الحج"
+       }
+      ]
+     }
+    ],
+    "right": [
+     {
+      "item_id": "r_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "قصد مكة لأداء المناسك"
+       }
+      ]
+     },
+     {
+      "item_id": "r_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "مال يُعطى للمستحقين"
+       }
+      ]
+     },
+     {
+      "item_id": "r_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الامتناع عن الطعام والشراب من الفجر إلى المغرب"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_match_pairs",
+   "answer": {
+    "pairs": [
+     {
+      "left_id": "l_1",
+      "right_id": "r_3"
+     },
+     {
+      "left_id": "l_2",
+      "right_id": "r_2"
+     },
+     {
+      "left_id": "l_3",
+      "right_id": "r_1"
+     }
+    ]
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pairs": [
+    {
+     "left_id": "l_1",
+     "right_id": "r_2"
+    },
+    {
+     "left_id": "l_2",
+     "right_id": "r_3"
+    },
+    {
+     "left_id": "l_3",
+     "right_id": "r_1"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/match_pairs/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_match_pairs",
+   "type": "match_pairs",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "left": [
+     {
+      "item_id": "l_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الزكاة"
+       }
+      ]
+     },
+     {
+      "item_id": "l_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الصوم"
+       }
+      ]
+     },
+     {
+      "item_id": "l_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الحج"
+       }
+      ]
+     }
+    ],
+    "right": [
+     {
+      "item_id": "r_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "قصد مكة لأداء المناسك"
+       }
+      ]
+     },
+     {
+      "item_id": "r_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "مال يُعطى للمستحقين"
+       }
+      ]
+     },
+     {
+      "item_id": "r_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الامتناع عن الطعام والشراب من الفجر إلى المغرب"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_match_pairs",
+   "answer": {
+    "pairs": [
+     {
+      "left_id": "l_1",
+      "right_id": "r_2"
+     },
+     {
+      "left_id": "l_2",
+      "right_id": "r_3"
+     },
+     {
+      "left_id": "l_3",
+      "right_id": "r_1"
+     }
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "pairs": [
+    {
+     "left_id": "l_1",
+     "right_id": "r_2"
+    },
+    {
+     "left_id": "l_2",
+     "right_id": "r_3"
+    },
+    {
+     "left_id": "l_3",
+     "right_id": "r_1"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/match_pairs/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_match_pairs",
+   "type": "match_pairs",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "left": [
+     {
+      "item_id": "l_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الزكاة"
+       }
+      ]
+     },
+     {
+      "item_id": "l_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الصوم"
+       }
+      ]
+     },
+     {
+      "item_id": "l_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الحج"
+       }
+      ]
+     }
+    ],
+    "right": [
+     {
+      "item_id": "r_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "قصد مكة لأداء المناسك"
+       }
+      ]
+     },
+     {
+      "item_id": "r_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "مال يُعطى للمستحقين"
+       }
+      ]
+     },
+     {
+      "item_id": "r_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الامتناع عن الطعام والشراب من الفجر إلى المغرب"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_match_pairs",
+   "answer": {
+    "pairs": [
+     {
+      "left_id": "l_1",
+      "right_id": "r_3"
+     },
+     {
+      "left_id": "l_2",
+      "right_id": "r_2"
+     },
+     {
+      "left_id": "l_3",
+      "right_id": "r_1"
+     }
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "pairs": [
+    {
+     "left_id": "l_1",
+     "right_id": "r_2"
+    },
+    {
+     "left_id": "l_2",
+     "right_id": "r_3"
+    },
+    {
+     "left_id": "l_3",
+     "right_id": "r_1"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/match_pairs/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_match_pairs",
+   "type": "match_pairs",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "left": [
+     {
+      "item_id": "l_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الزكاة"
+       }
+      ]
+     },
+     {
+      "item_id": "l_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الصوم"
+       }
+      ]
+     },
+     {
+      "item_id": "l_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الحج"
+       }
+      ]
+     }
+    ],
+    "right": [
+     {
+      "item_id": "r_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "قصد مكة لأداء المناسك"
+       }
+      ]
+     },
+     {
+      "item_id": "r_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "مال يُعطى للمستحقين"
+       }
+      ]
+     },
+     {
+      "item_id": "r_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الامتناع عن الطعام والشراب من الفجر إلى المغرب"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_match_pairs",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pairs": [
+    {
+     "left_id": "l_1",
+     "right_id": "r_2"
+    },
+    {
+     "left_id": "l_2",
+     "right_id": "r_3"
+    },
+    {
+     "left_id": "l_3",
+     "right_id": "r_1"
+    }
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/multiple_choice/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_multiple_choice",
+   "type": "multiple_choice",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "options": [
+     {
+      "option_id": "opt_a",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله واحد لا شريك له"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_b",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله أول الآلهة"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_c",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله خاص بالعرب"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_multiple_choice",
+   "answer": {
+    "option_id": "opt_a"
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "opt_a"
+  },
+  "recitation_passed": null
+ },
+ "exercises/multiple_choice/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_multiple_choice",
+   "type": "multiple_choice",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "options": [
+     {
+      "option_id": "opt_a",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله واحد لا شريك له"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_b",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله أول الآلهة"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_c",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله خاص بالعرب"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_multiple_choice",
+   "answer": {
+    "option_id": "opt_c"
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "opt_a"
+  },
+  "recitation_passed": null
+ },
+ "exercises/multiple_choice/eval_incorrect_misconception.json": {
+  "exercise": {
+   "exercise_id": "ex_multiple_choice",
+   "type": "multiple_choice",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "options": [
+     {
+      "option_id": "opt_a",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله واحد لا شريك له"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_b",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله أول الآلهة"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_c",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله خاص بالعرب"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_multiple_choice",
+   "answer": {
+    "option_id": "opt_c"
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "opt_a"
+  },
+  "recitation_passed": null
+ },
+ "exercises/multiple_choice/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_multiple_choice",
+   "type": "multiple_choice",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "options": [
+     {
+      "option_id": "opt_a",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله واحد لا شريك له"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_b",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله أول الآلهة"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_c",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله خاص بالعرب"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_multiple_choice",
+   "answer": {
+    "option_id": "opt_a"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "option_id": "opt_a"
+  },
+  "recitation_passed": null
+ },
+ "exercises/multiple_choice/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_multiple_choice",
+   "type": "multiple_choice",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "options": [
+     {
+      "option_id": "opt_a",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله واحد لا شريك له"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_b",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله أول الآلهة"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_c",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله خاص بالعرب"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_multiple_choice",
+   "answer": {
+    "option_id": "opt_c"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "option_id": "opt_a"
+  },
+  "recitation_passed": null
+ },
+ "exercises/multiple_choice/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_multiple_choice",
+   "type": "multiple_choice",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "options": [
+     {
+      "option_id": "opt_a",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله واحد لا شريك له"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_b",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله أول الآلهة"
+       }
+      ]
+     },
+     {
+      "option_id": "opt_c",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أن الله خاص بالعرب"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_multiple_choice",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "opt_a"
+  },
+  "recitation_passed": null
+ },
+ "exercises/order_steps/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_order_steps",
+   "type": "order_steps",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "remember"
+   },
+   "framing": null,
+   "payload": {
+    "steps": [
+     {
+      "step_id": "st_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غسل الوجه"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "النية"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غسل اليدين إلى المرفقين"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "المضمضة والاستنشاق"
+       }
+      ],
+      "secondary_label": null
+     }
+    ],
+    "presentation": "plain"
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_order_steps",
+   "answer": {
+    "order": [
+     "st_1",
+     "st_2",
+     "st_3",
+     "st_4"
+    ]
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "order": [
+    "st_1",
+    "st_2",
+    "st_3",
+    "st_4"
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/order_steps/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_order_steps",
+   "type": "order_steps",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "remember"
+   },
+   "framing": null,
+   "payload": {
+    "steps": [
+     {
+      "step_id": "st_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غسل الوجه"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "النية"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غسل اليدين إلى المرفقين"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "المضمضة والاستنشاق"
+       }
+      ],
+      "secondary_label": null
+     }
+    ],
+    "presentation": "plain"
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_order_steps",
+   "answer": {
+    "order": [
+     "st_1",
+     "st_3",
+     "st_2",
+     "st_4"
+    ]
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "order": [
+    "st_1",
+    "st_2",
+    "st_3",
+    "st_4"
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/order_steps/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_order_steps",
+   "type": "order_steps",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "remember"
+   },
+   "framing": null,
+   "payload": {
+    "steps": [
+     {
+      "step_id": "st_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غسل الوجه"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "النية"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غسل اليدين إلى المرفقين"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "المضمضة والاستنشاق"
+       }
+      ],
+      "secondary_label": null
+     }
+    ],
+    "presentation": "plain"
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_order_steps",
+   "answer": {
+    "order": [
+     "st_1",
+     "st_2",
+     "st_3",
+     "st_4"
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "order": [
+    "st_1",
+    "st_2",
+    "st_3",
+    "st_4"
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/order_steps/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_order_steps",
+   "type": "order_steps",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "remember"
+   },
+   "framing": null,
+   "payload": {
+    "steps": [
+     {
+      "step_id": "st_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غسل الوجه"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "النية"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غسل اليدين إلى المرفقين"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "المضمضة والاستنشاق"
+       }
+      ],
+      "secondary_label": null
+     }
+    ],
+    "presentation": "plain"
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_order_steps",
+   "answer": {
+    "order": [
+     "st_1",
+     "st_3",
+     "st_2",
+     "st_4"
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "order": [
+    "st_1",
+    "st_2",
+    "st_3",
+    "st_4"
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/order_steps/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_order_steps",
+   "type": "order_steps",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "remember"
+   },
+   "framing": null,
+   "payload": {
+    "steps": [
+     {
+      "step_id": "st_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غسل الوجه"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "النية"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غسل اليدين إلى المرفقين"
+       }
+      ],
+      "secondary_label": null
+     },
+     {
+      "step_id": "st_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "المضمضة والاستنشاق"
+       }
+      ],
+      "secondary_label": null
+     }
+    ],
+    "presentation": "plain"
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_order_steps",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "order": [
+    "st_1",
+    "st_2",
+    "st_3",
+    "st_4"
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/recite_verse/eval_failed.json": {
+  "exercise": {
+   "exercise_id": "ex_recite_verse",
+   "type": "recite_verse",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": null,
+   "scoring": {
+    "accuracy": false,
+    "combo": false,
+    "layer": null
+   },
+   "framing": null,
+   "payload": {
+    "surah": 112,
+    "ayah": 1,
+    "word_start": null,
+    "word_end": null,
+    "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+    "audio": {
+     "reciter": "مشاري راشد العفاسي",
+     "url": "mock-asset://audio/test_tone_112001.mp3",
+     "words": [
+      {
+       "ayah": 1,
+       "position": 1,
+       "text": "قُلْ",
+       "start_ms": 0,
+       "end_ms": 520
+      },
+      {
+       "ayah": 1,
+       "position": 2,
+       "text": "هُوَ",
+       "start_ms": 520,
+       "end_ms": 900
+      },
+      {
+       "ayah": 1,
+       "position": 3,
+       "text": "اللَّهُ",
+       "start_ms": 900,
+       "end_ms": 1650
+      },
+      {
+       "ayah": 1,
+       "position": 4,
+       "text": "أَحَدٌ",
+       "start_ms": 1650,
+       "end_ms": 2900
+      }
+     ]
+    },
+    "transliteration": "Qul huwa Allahu ahad",
+    "meaning": [
+     {
+      "type": "text",
+      "text": "قل: هو الله الواحد لا شريك له."
+     }
+    ],
+    "source_id": "src_q_112_1",
+    "max_duration_ms": 30000,
+    "skippable": true
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_recite_verse",
+   "answer": {
+    "check_id": "rchk_55e2"
+   },
+   "elapsed_ms": 41000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": null,
+  "recitation_passed": false
+ },
+ "exercises/recite_verse/eval_passed.json": {
+  "exercise": {
+   "exercise_id": "ex_recite_verse",
+   "type": "recite_verse",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": null,
+   "scoring": {
+    "accuracy": false,
+    "combo": false,
+    "layer": null
+   },
+   "framing": null,
+   "payload": {
+    "surah": 112,
+    "ayah": 1,
+    "word_start": null,
+    "word_end": null,
+    "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+    "audio": {
+     "reciter": "مشاري راشد العفاسي",
+     "url": "mock-asset://audio/test_tone_112001.mp3",
+     "words": [
+      {
+       "ayah": 1,
+       "position": 1,
+       "text": "قُلْ",
+       "start_ms": 0,
+       "end_ms": 520
+      },
+      {
+       "ayah": 1,
+       "position": 2,
+       "text": "هُوَ",
+       "start_ms": 520,
+       "end_ms": 900
+      },
+      {
+       "ayah": 1,
+       "position": 3,
+       "text": "اللَّهُ",
+       "start_ms": 900,
+       "end_ms": 1650
+      },
+      {
+       "ayah": 1,
+       "position": 4,
+       "text": "أَحَدٌ",
+       "start_ms": 1650,
+       "end_ms": 2900
+      }
+     ]
+    },
+    "transliteration": "Qul huwa Allahu ahad",
+    "meaning": [
+     {
+      "type": "text",
+      "text": "قل: هو الله الواحد لا شريك له."
+     }
+    ],
+    "source_id": "src_q_112_1",
+    "max_duration_ms": 30000,
+    "skippable": true
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_recite_verse",
+   "answer": {
+    "check_id": "rchk_55e2"
+   },
+   "elapsed_ms": 41000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": null,
+  "recitation_passed": true
+ },
+ "exercises/recite_verse/eval_skipped.json": {
+  "exercise": {
+   "exercise_id": "ex_recite_verse",
+   "type": "recite_verse",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": null,
+   "scoring": {
+    "accuracy": false,
+    "combo": false,
+    "layer": null
+   },
+   "framing": null,
+   "payload": {
+    "surah": 112,
+    "ayah": 1,
+    "word_start": null,
+    "word_end": null,
+    "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+    "audio": {
+     "reciter": "مشاري راشد العفاسي",
+     "url": "mock-asset://audio/test_tone_112001.mp3",
+     "words": [
+      {
+       "ayah": 1,
+       "position": 1,
+       "text": "قُلْ",
+       "start_ms": 0,
+       "end_ms": 520
+      },
+      {
+       "ayah": 1,
+       "position": 2,
+       "text": "هُوَ",
+       "start_ms": 520,
+       "end_ms": 900
+      },
+      {
+       "ayah": 1,
+       "position": 3,
+       "text": "اللَّهُ",
+       "start_ms": 900,
+       "end_ms": 1650
+      },
+      {
+       "ayah": 1,
+       "position": 4,
+       "text": "أَحَدٌ",
+       "start_ms": 1650,
+       "end_ms": 2900
+      }
+     ]
+    },
+    "transliteration": "Qul huwa Allahu ahad",
+    "meaning": [
+     {
+      "type": "text",
+      "text": "قل: هو الله الواحد لا شريك له."
+     }
+    ],
+    "source_id": "src_q_112_1",
+    "max_duration_ms": 30000,
+    "skippable": true
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_recite_verse",
+   "answer": {
+    "skipped": true
+   },
+   "elapsed_ms": 5000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": null,
+  "recitation_passed": null
+ },
+ "exercises/scenario/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_scenario",
+   "type": "scenario",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "apply"
+   },
+   "framing": null,
+   "payload": {
+    "situation": [
+     {
+      "type": "text",
+      "text": "دعاك زميلك إلى عشاء عمل، وسيُقدَّم فيه الخمر."
+     }
+    ],
+    "options": [
+     {
+      "option_id": "s_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أحضر وأعتذر بلطف عن الخمر، وأشرب شيئاً آخر."
+       }
+      ]
+     },
+     {
+      "option_id": "s_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أشرب قليلاً حتى لا أُحرج زميلي."
+       }
+      ]
+     },
+     {
+      "option_id": "s_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أقاطع زميلي ولا أكلّمه."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_scenario",
+   "answer": {
+    "option_id": "s_1"
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "s_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/scenario/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_scenario",
+   "type": "scenario",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "apply"
+   },
+   "framing": null,
+   "payload": {
+    "situation": [
+     {
+      "type": "text",
+      "text": "دعاك زميلك إلى عشاء عمل، وسيُقدَّم فيه الخمر."
+     }
+    ],
+    "options": [
+     {
+      "option_id": "s_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أحضر وأعتذر بلطف عن الخمر، وأشرب شيئاً آخر."
+       }
+      ]
+     },
+     {
+      "option_id": "s_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أشرب قليلاً حتى لا أُحرج زميلي."
+       }
+      ]
+     },
+     {
+      "option_id": "s_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أقاطع زميلي ولا أكلّمه."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_scenario",
+   "answer": {
+    "option_id": "s_2"
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "s_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/scenario/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_scenario",
+   "type": "scenario",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "apply"
+   },
+   "framing": null,
+   "payload": {
+    "situation": [
+     {
+      "type": "text",
+      "text": "دعاك زميلك إلى عشاء عمل، وسيُقدَّم فيه الخمر."
+     }
+    ],
+    "options": [
+     {
+      "option_id": "s_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أحضر وأعتذر بلطف عن الخمر، وأشرب شيئاً آخر."
+       }
+      ]
+     },
+     {
+      "option_id": "s_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أشرب قليلاً حتى لا أُحرج زميلي."
+       }
+      ]
+     },
+     {
+      "option_id": "s_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أقاطع زميلي ولا أكلّمه."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_scenario",
+   "answer": {
+    "option_id": "s_1"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "option_id": "s_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/scenario/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_scenario",
+   "type": "scenario",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "apply"
+   },
+   "framing": null,
+   "payload": {
+    "situation": [
+     {
+      "type": "text",
+      "text": "دعاك زميلك إلى عشاء عمل، وسيُقدَّم فيه الخمر."
+     }
+    ],
+    "options": [
+     {
+      "option_id": "s_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أحضر وأعتذر بلطف عن الخمر، وأشرب شيئاً آخر."
+       }
+      ]
+     },
+     {
+      "option_id": "s_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أشرب قليلاً حتى لا أُحرج زميلي."
+       }
+      ]
+     },
+     {
+      "option_id": "s_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أقاطع زميلي ولا أكلّمه."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_scenario",
+   "answer": {
+    "option_id": "s_2"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "option_id": "s_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/scenario/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_scenario",
+   "type": "scenario",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "apply"
+   },
+   "framing": null,
+   "payload": {
+    "situation": [
+     {
+      "type": "text",
+      "text": "دعاك زميلك إلى عشاء عمل، وسيُقدَّم فيه الخمر."
+     }
+    ],
+    "options": [
+     {
+      "option_id": "s_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أحضر وأعتذر بلطف عن الخمر، وأشرب شيئاً آخر."
+       }
+      ]
+     },
+     {
+      "option_id": "s_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أشرب قليلاً حتى لا أُحرج زميلي."
+       }
+      ]
+     },
+     {
+      "option_id": "s_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "أقاطع زميلي ولا أكلّمه."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_scenario",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "s_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/spot_error/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_spot_error",
+   "type": "spot_error",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "segments": [
+     {
+      "segment_id": "seg_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يتّجه المسلمون في صلاتهم إلى الكعبة"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأنهم يعبدونها"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "وهي قِبلة واحدة لكل المسلمين."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_spot_error",
+   "answer": {
+    "segment_id": "seg_2"
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "segment_id": "seg_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/spot_error/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_spot_error",
+   "type": "spot_error",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "segments": [
+     {
+      "segment_id": "seg_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يتّجه المسلمون في صلاتهم إلى الكعبة"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأنهم يعبدونها"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "وهي قِبلة واحدة لكل المسلمين."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_spot_error",
+   "answer": {
+    "segment_id": "seg_3"
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "segment_id": "seg_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/spot_error/eval_incorrect_misconception.json": {
+  "exercise": {
+   "exercise_id": "ex_spot_error",
+   "type": "spot_error",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "segments": [
+     {
+      "segment_id": "seg_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يتّجه المسلمون في صلاتهم إلى الكعبة"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأنهم يعبدونها"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "وهي قِبلة واحدة لكل المسلمين."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_spot_error",
+   "answer": {
+    "segment_id": "seg_3"
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "segment_id": "seg_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/spot_error/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_spot_error",
+   "type": "spot_error",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "segments": [
+     {
+      "segment_id": "seg_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يتّجه المسلمون في صلاتهم إلى الكعبة"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأنهم يعبدونها"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "وهي قِبلة واحدة لكل المسلمين."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_spot_error",
+   "answer": {
+    "segment_id": "seg_2"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "segment_id": "seg_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/spot_error/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_spot_error",
+   "type": "spot_error",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "segments": [
+     {
+      "segment_id": "seg_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يتّجه المسلمون في صلاتهم إلى الكعبة"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأنهم يعبدونها"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "وهي قِبلة واحدة لكل المسلمين."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_spot_error",
+   "answer": {
+    "segment_id": "seg_3"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "segment_id": "seg_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/spot_error/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_spot_error",
+   "type": "spot_error",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "segments": [
+     {
+      "segment_id": "seg_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يتّجه المسلمون في صلاتهم إلى الكعبة"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأنهم يعبدونها"
+       }
+      ]
+     },
+     {
+      "segment_id": "seg_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "وهي قِبلة واحدة لكل المسلمين."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_spot_error",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "segment_id": "seg_2"
+  },
+  "recitation_passed": null
+ },
+ "exercises/timeline_order/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_timeline_order",
+   "type": "timeline_order",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "events": [
+     {
+      "event_id": "t_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الهجرة إلى المدينة"
+       }
+      ]
+     },
+     {
+      "event_id": "t_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "فتح مكة"
+       }
+      ]
+     },
+     {
+      "event_id": "t_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "نزول الوحي في غار حراء"
+       }
+      ]
+     },
+     {
+      "event_id": "t_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غزوة بدر"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_timeline_order",
+   "answer": {
+    "order": [
+     "t_1",
+     "t_2",
+     "t_3",
+     "t_4"
+    ]
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "order": [
+    "t_1",
+    "t_2",
+    "t_3",
+    "t_4"
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/timeline_order/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_timeline_order",
+   "type": "timeline_order",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "events": [
+     {
+      "event_id": "t_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الهجرة إلى المدينة"
+       }
+      ]
+     },
+     {
+      "event_id": "t_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "فتح مكة"
+       }
+      ]
+     },
+     {
+      "event_id": "t_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "نزول الوحي في غار حراء"
+       }
+      ]
+     },
+     {
+      "event_id": "t_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غزوة بدر"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_timeline_order",
+   "answer": {
+    "order": [
+     "t_2",
+     "t_1",
+     "t_3",
+     "t_4"
+    ]
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "order": [
+    "t_1",
+    "t_2",
+    "t_3",
+    "t_4"
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/timeline_order/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_timeline_order",
+   "type": "timeline_order",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "events": [
+     {
+      "event_id": "t_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الهجرة إلى المدينة"
+       }
+      ]
+     },
+     {
+      "event_id": "t_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "فتح مكة"
+       }
+      ]
+     },
+     {
+      "event_id": "t_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "نزول الوحي في غار حراء"
+       }
+      ]
+     },
+     {
+      "event_id": "t_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غزوة بدر"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_timeline_order",
+   "answer": {
+    "order": [
+     "t_1",
+     "t_2",
+     "t_3",
+     "t_4"
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "order": [
+    "t_1",
+    "t_2",
+    "t_3",
+    "t_4"
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/timeline_order/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_timeline_order",
+   "type": "timeline_order",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "events": [
+     {
+      "event_id": "t_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الهجرة إلى المدينة"
+       }
+      ]
+     },
+     {
+      "event_id": "t_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "فتح مكة"
+       }
+      ]
+     },
+     {
+      "event_id": "t_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "نزول الوحي في غار حراء"
+       }
+      ]
+     },
+     {
+      "event_id": "t_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غزوة بدر"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_timeline_order",
+   "answer": {
+    "order": [
+     "t_2",
+     "t_1",
+     "t_3",
+     "t_4"
+    ]
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "order": [
+    "t_1",
+    "t_2",
+    "t_3",
+    "t_4"
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/timeline_order/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_timeline_order",
+   "type": "timeline_order",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "events": [
+     {
+      "event_id": "t_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الهجرة إلى المدينة"
+       }
+      ]
+     },
+     {
+      "event_id": "t_4",
+      "spans": [
+       {
+        "type": "text",
+        "text": "فتح مكة"
+       }
+      ]
+     },
+     {
+      "event_id": "t_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "نزول الوحي في غار حراء"
+       }
+      ]
+     },
+     {
+      "event_id": "t_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "غزوة بدر"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_timeline_order",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "order": [
+    "t_1",
+    "t_2",
+    "t_3",
+    "t_4"
+   ]
+  },
+  "recitation_passed": null
+ },
+ "exercises/true_false/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_true_false",
+   "type": "true_false",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 15000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "statement": [
+     {
+      "type": "text",
+      "text": "يؤمن المسلمون بأن لله شريكاً في الخلق."
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_true_false",
+   "answer": {
+    "value": false
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "challenge",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "value": false
+  },
+  "recitation_passed": null
+ },
+ "exercises/true_false/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_true_false",
+   "type": "true_false",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 15000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "statement": [
+     {
+      "type": "text",
+      "text": "يؤمن المسلمون بأن لله شريكاً في الخلق."
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_true_false",
+   "answer": {
+    "value": true
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "challenge",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "value": false
+  },
+  "recitation_passed": null
+ },
+ "exercises/true_false/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_true_false",
+   "type": "true_false",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 15000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "statement": [
+     {
+      "type": "text",
+      "text": "يؤمن المسلمون بأن لله شريكاً في الخلق."
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_true_false",
+   "answer": null,
+   "elapsed_ms": 15000,
+   "is_retry": false
+  },
+  "kind": "challenge",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "value": false
+  },
+  "recitation_passed": null
+ },
+ "exercises/true_false_reason/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_true_false_reason",
+   "type": "true_false_reason",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "statement": [
+     {
+      "type": "text",
+      "text": "يجب على كل من أسلم أن يغيّر اسمه."
+     }
+    ],
+    "reasons": [
+     {
+      "option_id": "r_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يُغيَّر الاسم فقط إذا كان معناه مخالفاً للإسلام."
+       }
+      ]
+     },
+     {
+      "option_id": "r_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن الأسماء غير العربية لا تجوز."
+       }
+      ]
+     },
+     {
+      "option_id": "r_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن تغيير الاسم من أركان الإسلام."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_true_false_reason",
+   "answer": {
+    "value": false,
+    "reason_option_id": "r_1"
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "value": false,
+   "reason_option_id": "r_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/true_false_reason/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_true_false_reason",
+   "type": "true_false_reason",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "statement": [
+     {
+      "type": "text",
+      "text": "يجب على كل من أسلم أن يغيّر اسمه."
+     }
+    ],
+    "reasons": [
+     {
+      "option_id": "r_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يُغيَّر الاسم فقط إذا كان معناه مخالفاً للإسلام."
+       }
+      ]
+     },
+     {
+      "option_id": "r_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن الأسماء غير العربية لا تجوز."
+       }
+      ]
+     },
+     {
+      "option_id": "r_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن تغيير الاسم من أركان الإسلام."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_true_false_reason",
+   "answer": {
+    "value": false,
+    "reason_option_id": "r_2"
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "value": false,
+   "reason_option_id": "r_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/true_false_reason/eval_incorrect_misconception.json": {
+  "exercise": {
+   "exercise_id": "ex_true_false_reason",
+   "type": "true_false_reason",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "statement": [
+     {
+      "type": "text",
+      "text": "يجب على كل من أسلم أن يغيّر اسمه."
+     }
+    ],
+    "reasons": [
+     {
+      "option_id": "r_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يُغيَّر الاسم فقط إذا كان معناه مخالفاً للإسلام."
+       }
+      ]
+     },
+     {
+      "option_id": "r_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن الأسماء غير العربية لا تجوز."
+       }
+      ]
+     },
+     {
+      "option_id": "r_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن تغيير الاسم من أركان الإسلام."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_true_false_reason",
+   "answer": {
+    "value": false,
+    "reason_option_id": "r_2"
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "value": false,
+   "reason_option_id": "r_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/true_false_reason/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_true_false_reason",
+   "type": "true_false_reason",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "statement": [
+     {
+      "type": "text",
+      "text": "يجب على كل من أسلم أن يغيّر اسمه."
+     }
+    ],
+    "reasons": [
+     {
+      "option_id": "r_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يُغيَّر الاسم فقط إذا كان معناه مخالفاً للإسلام."
+       }
+      ]
+     },
+     {
+      "option_id": "r_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن الأسماء غير العربية لا تجوز."
+       }
+      ]
+     },
+     {
+      "option_id": "r_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن تغيير الاسم من أركان الإسلام."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_true_false_reason",
+   "answer": {
+    "value": false,
+    "reason_option_id": "r_1"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "value": false,
+   "reason_option_id": "r_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/true_false_reason/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_true_false_reason",
+   "type": "true_false_reason",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "statement": [
+     {
+      "type": "text",
+      "text": "يجب على كل من أسلم أن يغيّر اسمه."
+     }
+    ],
+    "reasons": [
+     {
+      "option_id": "r_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يُغيَّر الاسم فقط إذا كان معناه مخالفاً للإسلام."
+       }
+      ]
+     },
+     {
+      "option_id": "r_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن الأسماء غير العربية لا تجوز."
+       }
+      ]
+     },
+     {
+      "option_id": "r_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن تغيير الاسم من أركان الإسلام."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_true_false_reason",
+   "answer": {
+    "value": false,
+    "reason_option_id": "r_2"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "value": false,
+   "reason_option_id": "r_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/true_false_reason/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_true_false_reason",
+   "type": "true_false_reason",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "statement": [
+     {
+      "type": "text",
+      "text": "يجب على كل من أسلم أن يغيّر اسمه."
+     }
+    ],
+    "reasons": [
+     {
+      "option_id": "r_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "يُغيَّر الاسم فقط إذا كان معناه مخالفاً للإسلام."
+       }
+      ]
+     },
+     {
+      "option_id": "r_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن الأسماء غير العربية لا تجوز."
+       }
+      ]
+     },
+     {
+      "option_id": "r_3",
+      "spans": [
+       {
+        "type": "text",
+        "text": "لأن تغيير الاسم من أركان الإسلام."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_true_false_reason",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "value": false,
+   "reason_option_id": "r_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/verse_meaning/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_verse_meaning",
+   "type": "verse_meaning",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "verse": {
+     "evidence_id": "src_q_112_2",
+     "kind": "quran",
+     "quran": {
+      "surah": 112,
+      "surah_name": "الإخلاص",
+      "ayah_start": 2,
+      "ayah_end": 2,
+      "segment": null,
+      "text_uthmani": "اللَّهُ الصَّمَدُ",
+      "translation": null,
+      "translation_source": null,
+      "audio": null
+     },
+     "hadith": null
+    },
+    "options": [
+     {
+      "option_id": "m_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الذي يحتاج إليه كل الخلق، وهو لا يحتاج إلى أحد"
+       }
+      ]
+     },
+     {
+      "option_id": "m_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الذي خلق السماوات في ستة أيام"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_verse_meaning",
+   "answer": {
+    "option_id": "m_1"
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "m_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/verse_meaning/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_verse_meaning",
+   "type": "verse_meaning",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "verse": {
+     "evidence_id": "src_q_112_2",
+     "kind": "quran",
+     "quran": {
+      "surah": 112,
+      "surah_name": "الإخلاص",
+      "ayah_start": 2,
+      "ayah_end": 2,
+      "segment": null,
+      "text_uthmani": "اللَّهُ الصَّمَدُ",
+      "translation": null,
+      "translation_source": null,
+      "audio": null
+     },
+     "hadith": null
+    },
+    "options": [
+     {
+      "option_id": "m_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الذي يحتاج إليه كل الخلق، وهو لا يحتاج إلى أحد"
+       }
+      ]
+     },
+     {
+      "option_id": "m_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الذي خلق السماوات في ستة أيام"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_verse_meaning",
+   "answer": {
+    "option_id": "m_2"
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "m_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/verse_meaning/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_verse_meaning",
+   "type": "verse_meaning",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "verse": {
+     "evidence_id": "src_q_112_2",
+     "kind": "quran",
+     "quran": {
+      "surah": 112,
+      "surah_name": "الإخلاص",
+      "ayah_start": 2,
+      "ayah_end": 2,
+      "segment": null,
+      "text_uthmani": "اللَّهُ الصَّمَدُ",
+      "translation": null,
+      "translation_source": null,
+      "audio": null
+     },
+     "hadith": null
+    },
+    "options": [
+     {
+      "option_id": "m_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الذي يحتاج إليه كل الخلق، وهو لا يحتاج إلى أحد"
+       }
+      ]
+     },
+     {
+      "option_id": "m_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الذي خلق السماوات في ستة أيام"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_verse_meaning",
+   "answer": {
+    "option_id": "m_1"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "option_id": "m_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/verse_meaning/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_verse_meaning",
+   "type": "verse_meaning",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "verse": {
+     "evidence_id": "src_q_112_2",
+     "kind": "quran",
+     "quran": {
+      "surah": 112,
+      "surah_name": "الإخلاص",
+      "ayah_start": 2,
+      "ayah_end": 2,
+      "segment": null,
+      "text_uthmani": "اللَّهُ الصَّمَدُ",
+      "translation": null,
+      "translation_source": null,
+      "audio": null
+     },
+     "hadith": null
+    },
+    "options": [
+     {
+      "option_id": "m_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الذي يحتاج إليه كل الخلق، وهو لا يحتاج إلى أحد"
+       }
+      ]
+     },
+     {
+      "option_id": "m_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الذي خلق السماوات في ستة أيام"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_verse_meaning",
+   "answer": {
+    "option_id": "m_2"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "option_id": "m_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/verse_meaning/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_verse_meaning",
+   "type": "verse_meaning",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "verse": {
+     "evidence_id": "src_q_112_2",
+     "kind": "quran",
+     "quran": {
+      "surah": 112,
+      "surah_name": "الإخلاص",
+      "ayah_start": 2,
+      "ayah_end": 2,
+      "segment": null,
+      "text_uthmani": "اللَّهُ الصَّمَدُ",
+      "translation": null,
+      "translation_source": null,
+      "audio": null
+     },
+     "hadith": null
+    },
+    "options": [
+     {
+      "option_id": "m_1",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الذي يحتاج إليه كل الخلق، وهو لا يحتاج إلى أحد"
+       }
+      ]
+     },
+     {
+      "option_id": "m_2",
+      "spans": [
+       {
+        "type": "text",
+        "text": "الذي خلق السماوات في ستة أيام"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_verse_meaning",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "m_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/which_evidence/eval_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_which_evidence",
+   "type": "which_evidence",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "claim": [
+     {
+      "type": "text",
+      "text": "الله واحد لا شريك له."
+     }
+    ],
+    "options": [
+     {
+      "option_id": "ev_1",
+      "evidence": {
+       "evidence_id": "src_q_112_1",
+       "kind": "quran",
+       "quran": {
+        "surah": 112,
+        "surah_name": "الإخلاص",
+        "ayah_start": 1,
+        "ayah_end": 1,
+        "segment": null,
+        "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "translation": null,
+        "translation_source": null,
+        "audio": null
+       },
+       "hadith": null
+      }
+     },
+     {
+      "option_id": "ev_2",
+      "evidence": {
+       "evidence_id": "src_h_niyyat",
+       "kind": "hadith",
+       "quran": null,
+       "hadith": {
+        "text_ar": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+        "translation": null,
+        "narrator": "عمر بن الخطاب رضي الله عنه",
+        "collections": [
+         "صحيح البخاري (1)",
+         "صحيح مسلم (1907)"
+        ],
+        "grade_label": "صحيح",
+        "grade_category": "authentic",
+        "grade_source": "متفق عليه",
+        "excerpt": false
+       }
+      }
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_which_evidence",
+   "answer": {
+    "option_id": "ev_1"
+   },
+   "elapsed_ms": 6000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "ev_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/which_evidence/eval_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_which_evidence",
+   "type": "which_evidence",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "claim": [
+     {
+      "type": "text",
+      "text": "الله واحد لا شريك له."
+     }
+    ],
+    "options": [
+     {
+      "option_id": "ev_1",
+      "evidence": {
+       "evidence_id": "src_q_112_1",
+       "kind": "quran",
+       "quran": {
+        "surah": 112,
+        "surah_name": "الإخلاص",
+        "ayah_start": 1,
+        "ayah_end": 1,
+        "segment": null,
+        "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "translation": null,
+        "translation_source": null,
+        "audio": null
+       },
+       "hadith": null
+      }
+     },
+     {
+      "option_id": "ev_2",
+      "evidence": {
+       "evidence_id": "src_h_niyyat",
+       "kind": "hadith",
+       "quran": null,
+       "hadith": {
+        "text_ar": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+        "translation": null,
+        "narrator": "عمر بن الخطاب رضي الله عنه",
+        "collections": [
+         "صحيح البخاري (1)",
+         "صحيح مسلم (1907)"
+        ],
+        "grade_label": "صحيح",
+        "grade_category": "authentic",
+        "grade_source": "متفق عليه",
+        "excerpt": false
+       }
+      }
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_which_evidence",
+   "answer": {
+    "option_id": "ev_2"
+   },
+   "elapsed_ms": 7000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "ev_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/which_evidence/eval_retry_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_which_evidence",
+   "type": "which_evidence",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "claim": [
+     {
+      "type": "text",
+      "text": "الله واحد لا شريك له."
+     }
+    ],
+    "options": [
+     {
+      "option_id": "ev_1",
+      "evidence": {
+       "evidence_id": "src_q_112_1",
+       "kind": "quran",
+       "quran": {
+        "surah": 112,
+        "surah_name": "الإخلاص",
+        "ayah_start": 1,
+        "ayah_end": 1,
+        "segment": null,
+        "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "translation": null,
+        "translation_source": null,
+        "audio": null
+       },
+       "hadith": null
+      }
+     },
+     {
+      "option_id": "ev_2",
+      "evidence": {
+       "evidence_id": "src_h_niyyat",
+       "kind": "hadith",
+       "quran": null,
+       "hadith": {
+        "text_ar": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+        "translation": null,
+        "narrator": "عمر بن الخطاب رضي الله عنه",
+        "collections": [
+         "صحيح البخاري (1)",
+         "صحيح مسلم (1907)"
+        ],
+        "grade_label": "صحيح",
+        "grade_category": "authentic",
+        "grade_source": "متفق عليه",
+        "excerpt": false
+       }
+      }
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_which_evidence",
+   "answer": {
+    "option_id": "ev_1"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "option_id": "ev_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/which_evidence/eval_retry_incorrect.json": {
+  "exercise": {
+   "exercise_id": "ex_which_evidence",
+   "type": "which_evidence",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "claim": [
+     {
+      "type": "text",
+      "text": "الله واحد لا شريك له."
+     }
+    ],
+    "options": [
+     {
+      "option_id": "ev_1",
+      "evidence": {
+       "evidence_id": "src_q_112_1",
+       "kind": "quran",
+       "quran": {
+        "surah": 112,
+        "surah_name": "الإخلاص",
+        "ayah_start": 1,
+        "ayah_end": 1,
+        "segment": null,
+        "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "translation": null,
+        "translation_source": null,
+        "audio": null
+       },
+       "hadith": null
+      }
+     },
+     {
+      "option_id": "ev_2",
+      "evidence": {
+       "evidence_id": "src_h_niyyat",
+       "kind": "hadith",
+       "quran": null,
+       "hadith": {
+        "text_ar": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+        "translation": null,
+        "narrator": "عمر بن الخطاب رضي الله عنه",
+        "collections": [
+         "صحيح البخاري (1)",
+         "صحيح مسلم (1907)"
+        ],
+        "grade_label": "صحيح",
+        "grade_category": "authentic",
+        "grade_source": "متفق عليه",
+        "excerpt": false
+       }
+      }
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_which_evidence",
+   "answer": {
+    "option_id": "ev_2"
+   },
+   "elapsed_ms": 5000,
+   "is_retry": true
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": false,
+  "private_key": {
+   "option_id": "ev_1"
+  },
+  "recitation_passed": null
+ },
+ "exercises/which_evidence/eval_timeout.json": {
+  "exercise": {
+   "exercise_id": "ex_which_evidence",
+   "type": "which_evidence",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اختر الإجابة المناسبة."
+    }
+   ],
+   "time_limit_ms": 20000,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "claim": [
+     {
+      "type": "text",
+      "text": "الله واحد لا شريك له."
+     }
+    ],
+    "options": [
+     {
+      "option_id": "ev_1",
+      "evidence": {
+       "evidence_id": "src_q_112_1",
+       "kind": "quran",
+       "quran": {
+        "surah": 112,
+        "surah_name": "الإخلاص",
+        "ayah_start": 1,
+        "ayah_end": 1,
+        "segment": null,
+        "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "translation": null,
+        "translation_source": null,
+        "audio": null
+       },
+       "hadith": null
+      }
+     },
+     {
+      "option_id": "ev_2",
+      "evidence": {
+       "evidence_id": "src_h_niyyat",
+       "kind": "hadith",
+       "quran": null,
+       "hadith": {
+        "text_ar": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+        "translation": null,
+        "narrator": "عمر بن الخطاب رضي الله عنه",
+        "collections": [
+         "صحيح البخاري (1)",
+         "صحيح مسلم (1907)"
+        ],
+        "grade_label": "صحيح",
+        "grade_category": "authentic",
+        "grade_source": "متفق عليه",
+        "excerpt": false
+       }
+      }
+     }
+    ]
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_which_evidence",
+   "answer": null,
+   "elapsed_ms": 20000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "option_id": "ev_1"
+  },
+  "recitation_passed": null
+ },
+ "scenes/eval_hotspot_correct.json": {
+  "exercise": {
+   "exercise_id": "ex_s_hotspot",
+   "type": "map_place",
+   "concept_ids": [
+    "con_test"
+   ],
+   "prompt": [
+    {
+     "type": "text",
+     "text": "اضغط على البئر."
+    }
+   ],
+   "time_limit_ms": null,
+   "scoring": {
+    "accuracy": true,
+    "combo": true,
+    "layer": "understand"
+   },
+   "framing": null,
+   "payload": {
+    "presentation": "hotspots",
+    "visual": {
+     "kind": "scene",
+     "key": null,
+     "version": null,
+     "params": {
+      "beat": 1,
+      "focus": -1
+     },
+     "image": null,
+     "scene": {
+      "scene_id": "scn_test_desert_well",
+      "version": 2,
+      "schema_version": "qabas.scene/1",
+      "url": "mock-asset://scenes/scn_test_desert_well/v2/scene.json",
+      "mime_type": "application/json",
+      "sha256": "145f9fd45a554b9e5c77e2b796ba4814fd85d46d72a9b1a91543b3a155e0d7e7",
+      "view_box": {
+       "width": 1600,
+       "height": 1000
+      },
+      "required_capabilities": [
+       "scene/1",
+       "shape.rect/1",
+       "shape.ellipse/1",
+       "shape.path/1",
+       "paint.gradient/1",
+       "track/1",
+       "anchors/1",
+       "fx.sparkles/1"
+      ]
+     },
+     "fallback_image": {
+      "url": "mock-asset://scenes/scn_test_desert_well/v2/fallback_b1_f-1.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1000
+     },
+     "fallback_params": {
+      "beat": 1,
+      "focus": -1
+     },
+     "alt": "صحراء ليلاً فيها بئر ونخلة وخيمة",
+     "overlays": []
+    },
+    "question": [
+     {
+      "type": "text",
+      "text": "أين البئر؟"
+     }
+    ],
+    "pins": [
+     {
+      "pin_id": "pin_palm",
+      "x_pct": 22.5,
+      "y_pct": 56.0,
+      "label": "النخلة",
+      "radius_pct": 6.88,
+      "anchor_id": "palm"
+     },
+     {
+      "pin_id": "pin_well",
+      "x_pct": 47.5,
+      "y_pct": 66.0,
+      "label": "البئر",
+      "radius_pct": 7.5,
+      "anchor_id": "well"
+     },
+     {
+      "pin_id": "pin_tent",
+      "x_pct": 81.88,
+      "y_pct": 70.0,
+      "label": "الخيمة",
+      "radius_pct": 6.88,
+      "anchor_id": "tent"
+     }
+    ],
+    "interaction": {
+     "bindings": [
+      {
+       "pin_id": "pin_palm",
+       "set": {
+        "focus": 1
+       }
+      },
+      {
+       "pin_id": "pin_well",
+       "set": {
+        "focus": 0
+       }
+      },
+      {
+       "pin_id": "pin_tent",
+       "set": {
+        "focus": 2
+       }
+      }
+     ],
+     "reset_on_deselect": true,
+     "after_evaluation": {
+      "correct": {
+       "beat": 2
+      },
+      "incorrect": null
+     }
+    }
+   }
+  },
+  "answer": {
+   "exercise_id": "ex_s_hotspot",
+   "answer": {
+    "pin_id": "pin_well"
+   },
+   "elapsed_ms": 4000,
+   "is_retry": false
+  },
+  "kind": "lesson",
+  "mastery_before": {
+   "con_test": "0.400000"
+  },
+  "original_correct": null,
+  "private_key": {
+   "pin_id": "pin_well"
+  },
+  "recitation_passed": null
+ }
+}

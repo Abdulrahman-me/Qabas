@@ -1,0 +1,18 @@
+{
+ "check_id": "rchk_55e2",
+ "status": "unclear",
+ "passed": false,
+ "words": [],
+ "summary": {
+  "correct": 0,
+  "missing": 0,
+  "substituted": 0,
+  "extra": 0
+ },
+ "message": [
+  {
+   "type": "text",
+   "text": "Synthetic recitation check; no audio was recognized."
+  }
+ ]
+}

@@ -1,0 +1,448 @@
+{
+ "session_id": "ses_t21_ar_new_muslim",
+ "kind": "lesson",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": "unit_test_2",
+ "lesson_id": "les_t2_1",
+ "lesson_version": 1,
+ "title": "[new_muslim] نص اختباري: درس 2.2",
+ "subtitle": null,
+ "lesson_type": "concept",
+ "reviewed_by": "لجنة المراجعة الشرعية",
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "هدف اختباري."
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 4,
+  "exercises": 4,
+  "scored": 4
+ },
+ "source_count": 0,
+ "total_exercises": 4,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_p",
+   "type": "paragraph",
+   "sentences": [
+    {
+     "sentence_id": "s1",
+     "spans": [
+      {
+       "type": "text",
+       "text": "[new_muslim] نص اختباري: الدرس 2.2"
+      }
+     ],
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "block_id": "b_v",
+   "type": "visual",
+   "visual": {
+    "kind": "image",
+    "key": null,
+    "version": null,
+    "params": null,
+    "image": {
+     "url": "mock-asset://test/u2l1.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "scene": null,
+    "fallback_image": null,
+    "fallback_params": null,
+    "alt": "[new_muslim] نص اختباري: صورة",
+    "overlays": []
+   },
+   "caption": null
+  },
+  {
+   "block_id": "b_x0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t21_0",
+    "type": "match_pairs",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "left": [
+      {
+       "item_id": "l_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الزكاة"
+        }
+       ]
+      },
+      {
+       "item_id": "l_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الصوم"
+        }
+       ]
+      },
+      {
+       "item_id": "l_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الحج"
+        }
+       ]
+      }
+     ],
+     "right": [
+      {
+       "item_id": "r_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "قصد مكة لأداء المناسك"
+        }
+       ]
+      },
+      {
+       "item_id": "r_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "مال يُعطى للمستحقين"
+        }
+       ]
+      },
+      {
+       "item_id": "r_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الامتناع عن الطعام والشراب من الفجر إلى المغرب"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t21_1",
+    "type": "fill_blank",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "segments": [
+      {
+       "type": "text",
+       "text": "أركان الإسلام "
+      },
+      {
+       "type": "blank",
+       "blank_id": "b_1"
+      },
+      {
+       "type": "text",
+       "text": " أركان، أولها "
+      },
+      {
+       "type": "blank",
+       "blank_id": "b_2"
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ],
+     "word_bank": [
+      {
+       "word_id": "w_1",
+       "text": "خمسة"
+      },
+      {
+       "word_id": "w_2",
+       "text": "ستة"
+      },
+      {
+       "word_id": "w_3",
+       "text": "الشهادتان"
+      },
+      {
+       "word_id": "w_4",
+       "text": "الصوم"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t21_2",
+    "type": "categorize",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "buckets",
+     "categories": [
+      {
+       "category_id": "c_1",
+       "label": "أركان الإسلام",
+       "phase": null,
+       "capacity": null,
+       "art_key": null
+      },
+      {
+       "category_id": "c_2",
+       "label": "أركان الإيمان",
+       "phase": null,
+       "capacity": null,
+       "art_key": null
+      }
+     ],
+     "items": [
+      {
+       "item_id": "i_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الصلاة"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "i_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الإيمان بالملائكة"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "i_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الزكاة"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "i_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الإيمان باليوم الآخر"
+        }
+       ],
+       "secondary_label": null
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t21_3",
+    "type": "categorize",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "day_arc",
+     "categories": [
+      {
+       "category_id": "cat_5t",
+       "label": "أول الضوء",
+       "phase": "dawn",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_j8",
+       "label": "منتصف النهار",
+       "phase": "midday",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_2w",
+       "label": "بعد الظهيرة",
+       "phase": "afternoon",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_q1",
+       "label": "الغروب",
+       "phase": "sunset",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_x6",
+       "label": "الليل",
+       "phase": "night",
+       "capacity": 1,
+       "art_key": null
+      }
+     ],
+     "items": [
+      {
+       "item_id": "itm_c4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "العصر"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_9a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الفجر"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_e2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "العشاء"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_k7",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الظهر"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_b5",
+       "spans": [
+        {
+         "type": "text",
+         "text": "المغرب"
+        }
+       ],
+       "secondary_label": null
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "تحدٍّ اختباري."
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_1",
+    "title": "موضوع اختباري",
+    "concept_ids": [
+     "con_test"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "سؤال الغد الاختباري."
+   }
+  ]
+ },
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

@@ -1,0 +1,73 @@
+{
+ "exercise_id": "ex_map_place__map_pins",
+ "type": "map_place",
+ "concept_ids": [
+  "con_test"
+ ],
+ "prompt": [
+  {
+   "type": "text",
+   "text": "اختر الإجابة المناسبة."
+  }
+ ],
+ "time_limit_ms": 20000,
+ "scoring": {
+  "accuracy": true,
+  "combo": true,
+  "layer": "understand"
+ },
+ "framing": null,
+ "payload": {
+  "presentation": "map_pins",
+  "visual": {
+   "kind": "image",
+   "key": null,
+   "version": null,
+   "params": null,
+   "image": {
+    "url": "mock-asset://maps/hijaz_test.webp",
+    "mime_type": "image/webp",
+    "width": 1600,
+    "height": 1200
+   },
+   "scene": null,
+   "fallback_image": null,
+   "fallback_params": null,
+   "alt": "خريطة منطقة الحجاز بلا أسماء",
+   "overlays": []
+  },
+  "question": [
+   {
+    "type": "text",
+    "text": "أين تقع المدينة المنورة؟"
+   }
+  ],
+  "pins": [
+   {
+    "pin_id": "p_1",
+    "x_pct": 58.0,
+    "y_pct": 71.5,
+    "label": null,
+    "radius_pct": null,
+    "anchor_id": null
+   },
+   {
+    "pin_id": "p_2",
+    "x_pct": 52.5,
+    "y_pct": 38.0,
+    "label": null,
+    "radius_pct": null,
+    "anchor_id": null
+   },
+   {
+    "pin_id": "p_3",
+    "x_pct": 47.0,
+    "y_pct": 45.2,
+    "label": null,
+    "radius_pct": null,
+    "anchor_id": null
+   }
+  ],
+  "interaction": null
+ }
+}

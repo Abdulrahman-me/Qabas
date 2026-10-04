@@ -34,7 +34,6 @@ backend\scripts\dev\check-env.ps1
 cd backend
 uv sync                                                # Python 3.12 venv in backend\.venv (uv.lock)
 py -3.12 scripts\dev\install_git_hooks.py              # pre-commit public-safety guard
-.venv\Scripts\python scripts\dev\sync_private_contract.py   # local private mirror of handoff fixtures
 ```
 
 ## Everyday commands (from `backend/`)
@@ -45,13 +44,20 @@ py -3.12 scripts\dev\install_git_hooks.py              # pre-commit public-safet
 | Tests | `uv run pytest` (`-m "not integration"` skips the Postgres/Redis tests) |
 | Lint / types | `uv run ruff check .` · `uv run mypy` |
 | Regenerate `docs/openapi.json` | `uv run python scripts/export_openapi.py` |
-| Full contract suites (local, needs the private mirror) | `uv run python scripts/dev/run_contract_suites.py` (expects 595/279/105/382) |
-| Public-repo safety check | `uv run python scripts/check_public_safety.py` |
+| Full contract suites (also in CI) | `uv run python scripts/dev/run_contract_suites.py` (expects 595/279/105/382) |
+| Repository safety check | `uv run python scripts/check_public_safety.py` |
+| Refresh private-artifact fingerprints | `py -3.12 scripts/dev/update_private_fingerprints.py` (needs the local handoff) |
 | Worker (Windows dev) | `uv run celery -A app.workers.celery_app worker -Q maintenance,factory,media --pool=solo` |
 
-## Public repository rules (D-14)
+## What belongs in the repository (D-19)
 
-The repository is public. Commit only code, schemas and **synthetic, neutral** test data built in the tests themselves. Handoff fixtures, answer keys, the private grading context, gold/reference lessons, Unit 0 drafts and any unapproved religious content stay in git-ignored `backend/.private/`. The pre-commit hook and CI run `scripts/check_public_safety.py`, which blocks private paths and names, Arabic-script text outside `.public-safety-allow`, and verbatim copies of private handoff files.
+The repository is the complete production product and must be cloneable, installable, testable and runnable as-is. There is one product architecture: no demo mode, sample dataset or reduced path.
+
+- **Public:** application code, migrations, the vendored contract with its fixtures and server-side grading context, approved production content and its answer keys (seed/import data), Arabic text, and the tests and fixtures that verify real production behavior.
+- **Never sent to clients before submission:** correct answers and grading keys. They stay server-side and the API redacts them; that is enforced in the API, not by hiding files.
+- **Private and git-ignored (`backend/.private/`):** hidden/golden evaluation datasets, reviewer reference answers and adversarial cases (`backend/.private/eval/`), unapproved pending religious content until approved, unpublished handoff material, and secrets/credentials.
+
+`scripts/check_public_safety.py` (pre-commit hook and CI) blocks secrets and credential files, secret-looking tokens, the handoff and private paths, hidden-evaluation dataset names, and verbatim copies of fingerprinted private handoff artifacts (`backend/security/private_fingerprints.json`, digests only). It does not flag Arabic text or production content.
 
 ## Network note
 

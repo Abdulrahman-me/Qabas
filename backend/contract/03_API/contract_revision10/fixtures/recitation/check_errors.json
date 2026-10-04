@@ -1,0 +1,47 @@
+{
+ "check_id": "rchk_55e2",
+ "status": "evaluated",
+ "passed": false,
+ "words": [
+  {
+   "index": 0,
+   "expected": "قُلْ",
+   "result": "correct",
+   "heard": "قُلْ",
+   "audio_segment": null
+  },
+  {
+   "index": 1,
+   "expected": "هُوَ",
+   "result": "substituted",
+   "heard": "TEST",
+   "audio_segment": null
+  },
+  {
+   "index": 2,
+   "expected": "اللَّهُ",
+   "result": "correct",
+   "heard": "اللَّهُ",
+   "audio_segment": null
+  },
+  {
+   "index": 3,
+   "expected": "أَحَدٌ",
+   "result": "correct",
+   "heard": "أَحَدٌ",
+   "audio_segment": null
+  }
+ ],
+ "summary": {
+  "correct": 3,
+  "missing": 0,
+  "substituted": 1,
+  "extra": 0
+ },
+ "message": [
+  {
+   "type": "text",
+   "text": "Synthetic recitation check; no audio was recognized."
+  }
+ ]
+}

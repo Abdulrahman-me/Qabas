@@ -1,0 +1,55 @@
+{
+ "exercise_id": "ex_generic_notebook",
+ "type": "order_steps",
+ "concept_ids": [
+  "con_test"
+ ],
+ "prompt": [
+  {
+   "type": "text",
+   "text": "Put these test actions in order."
+  }
+ ],
+ "time_limit_ms": 20000,
+ "scoring": {
+  "accuracy": true,
+  "combo": true,
+  "layer": "remember"
+ },
+ "framing": null,
+ "payload": {
+  "presentation": "plain",
+  "steps": [
+   {
+    "step_id": "write",
+    "spans": [
+     {
+      "type": "text",
+      "text": "Write the date"
+     }
+    ],
+    "secondary_label": null
+   },
+   {
+    "step_id": "open",
+    "spans": [
+     {
+      "type": "text",
+      "text": "Open the bag"
+     }
+    ],
+    "secondary_label": null
+   },
+   {
+    "step_id": "take",
+    "spans": [
+     {
+      "type": "text",
+      "text": "Take out the notebook"
+     }
+    ],
+    "secondary_label": null
+   }
+  ]
+ }
+}

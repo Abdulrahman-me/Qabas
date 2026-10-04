@@ -1,0 +1,363 @@
+{
+ "session_id": "ses_t10_en_explorer",
+ "kind": "lesson",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": "unit_test_1",
+ "lesson_id": "les_t1_0",
+ "lesson_version": 1,
+ "title": "Test title 1",
+ "subtitle": null,
+ "lesson_type": "concept",
+ "reviewed_by": "Test reviewed_by 2",
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "Test text 3"
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 4,
+  "exercises": 4,
+  "scored": 4
+ },
+ "source_count": 0,
+ "total_exercises": 4,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_p",
+   "type": "paragraph",
+   "sentences": [
+    {
+     "sentence_id": "s1",
+     "spans": [
+      {
+       "type": "text",
+       "text": "Test text 4"
+      }
+     ],
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "block_id": "b_v",
+   "type": "visual",
+   "visual": {
+    "kind": "image",
+    "key": null,
+    "version": null,
+    "params": null,
+    "image": {
+     "url": "mock-asset://test/u1l0.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "scene": null,
+    "fallback_image": null,
+    "fallback_params": null,
+    "alt": "Test alt 5",
+    "overlays": []
+   },
+   "caption": null
+  },
+  {
+   "block_id": "b_x0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t10_0",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 7"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 8"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 9"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t10_1",
+    "type": "true_false_reason",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "statement": [
+      {
+       "type": "text",
+       "text": "Test text 11"
+      }
+     ],
+     "reasons": [
+      {
+       "option_id": "r_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 12"
+        }
+       ]
+      },
+      {
+       "option_id": "r_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 13"
+        }
+       ]
+      },
+      {
+       "option_id": "r_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 14"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t10_2",
+    "type": "match_pairs",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "left": [
+      {
+       "item_id": "l_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 16"
+        }
+       ]
+      },
+      {
+       "item_id": "l_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 17"
+        }
+       ]
+      },
+      {
+       "item_id": "l_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 18"
+        }
+       ]
+      }
+     ],
+     "right": [
+      {
+       "item_id": "r_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 19"
+        }
+       ]
+      },
+      {
+       "item_id": "r_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 20"
+        }
+       ]
+      },
+      {
+       "item_id": "r_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 21"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t10_3",
+    "type": "fill_blank",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "segments": [
+      {
+       "type": "text",
+       "text": "Test text 23"
+      },
+      {
+       "type": "blank",
+       "blank_id": "b_1"
+      },
+      {
+       "type": "text",
+       "text": "Test text 24"
+      },
+      {
+       "type": "blank",
+       "blank_id": "b_2"
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ],
+     "word_bank": [
+      {
+       "word_id": "w_1",
+       "text": "Test text 25"
+      },
+      {
+       "word_id": "w_2",
+       "text": "Test text 26"
+      },
+      {
+       "word_id": "w_3",
+       "text": "Test text 27"
+      },
+      {
+       "word_id": "w_4",
+       "text": "Test text 28"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "Test text 29"
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_1",
+    "title": "Test title 30",
+    "concept_ids": [
+     "con_test"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "Test text 31"
+   }
+  ]
+ },
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

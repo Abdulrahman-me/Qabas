@@ -1,0 +1,53 @@
+{
+ "exercise_id": "ex_timeline_order",
+ "recorded": true,
+ "correct": false,
+ "correct_answer": {
+  "order": [
+   "t_1",
+   "t_2",
+   "t_3",
+   "t_4"
+  ]
+ },
+ "details": {
+  "event_dates": [
+   {
+    "event_id": "t_1",
+    "label": "نحو 610م"
+   },
+   {
+    "event_id": "t_2",
+    "label": "1 هـ / 622م"
+   },
+   {
+    "event_id": "t_3",
+    "label": "2 هـ"
+   },
+   {
+    "event_id": "t_4",
+    "label": "8 هـ"
+   }
+  ]
+ },
+ "explanation": [
+  {
+   "type": "text",
+   "text": "شرح مختصر مرتبط بالدليل."
+  }
+ ],
+ "source_ids": [
+  "src_q_112_1"
+ ],
+ "misconception": null,
+ "mastery_changes": [
+  {
+   "concept_id": "con_test",
+   "title": "مفهوم اختباري",
+   "before": 0.4,
+   "after": 0.3
+  }
+ ],
+ "term_changes": [],
+ "xp_awarded": 0
+}

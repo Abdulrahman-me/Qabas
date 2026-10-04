@@ -14,7 +14,7 @@
 | Phase | Name | Status | Checkpoint tag | Notes |
 |---|---|---|---|---|
 | 0 | Workspace, toolchain and baseline verification | ✅ Done | `phase-0` | |
-| 1 | Contract vendoring and service skeleton | ✅ Done | `phase-1` | CI green (run 37191065880) |
+| 1 | Contract vendoring and service skeleton | ✅ Done | `phase-1`, `phase-1.1` | CI green; repository boundary corrected by D-19 (`phase-1.1`) |
 | 2 | Core database schema and migrations | ⏳ Not started | `phase-2` | |
 | 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | ⏳ Not started | `phase-3` | |
 | 4 | Content storage, registries, projection and seeding | ⏳ Not started | `phase-4` | |
@@ -46,10 +46,11 @@ Legend: ⏳ Not started · 🔄 In progress · ✅ Done · ⛔ Blocked (state th
 |---|---|---|
 | A-1 | The rev 10 candidate is the working contract until the approval record says otherwise. Any amendment means re-vendoring and rerunning the suites. | D-01 |
 | A-2 | Development runs natively on Windows: Postgres 16 service, native Redis 7.4, Python 3.12, uv, ffmpeg. No Docker. CI uses runner-native Postgres/Redis, also without Docker. | D-03 |
-| A-3 | All religious content (Salah reference, Unit 0 drafts, curriculum titles) is unapproved. It is imported **unpublished**, or published only to staging, until O-05/O-12 close. | Handoff status register |
+| A-3 | Religious content still pending approval (Salah reference, Unit 0 drafts, curriculum titles) stays in git-ignored `backend/.private/content/` and is imported unpublished until O-05/O-12 close. Once approved, it enters `backend/content/` through the normal import pipeline and is committed like any production content. | Handoff status register, D-19 |
 | A-4 | Product decisions P-01–P-08 use the handoff's engineering defaults until decided. | STATUS_AND_OPEN_DECISIONS |
 | A-5 | Generated scenes target the final production architecture. A missing Flutter preview tool limits **inspection only**, never scene quality or capability. | D-06 |
 | A-6 | Commits carry no AI co-author or attribution metadata. | D-09 |
+| A-7 | **One real product.** The public repository is the complete production system: cloneable, installable, testable and runnable as-is. There is no demo mode, demo dataset, sample product or judge-only path. Production/runtime data, answer keys and tests may be public; internal evaluation material, unpublished handoff material and secrets stay private. Correct answers never reach a client before submission (server-side grading and redaction). | D-19 |
 
 ---
 
@@ -113,6 +114,13 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 - [x] CI workflow `.github/workflows/ci.yml` (ubuntu-24.04, Python 3.12, runner-native Postgres 16 and Redis, no Docker): guard, ruff, mypy, OpenAPI check, pytest. First run green: 84 passed, integration tests included.
 
 **Local status:** 84 tests pass (including the integration tests on the real `qabas_test`/Redis), ruff clean, mypy strict clean.
+
+**Correction `phase-1.1` (D-19, supersedes the D-14 boundary).** The items above that keep fixtures and the API prose local and block Arabic text describe the original `phase-1` state and are kept here as history. Corrected:
+- [x] The **whole** `contract_revision10/` folder (fixtures, server-side grading context `EVALUATION_CONTEXT.json`, tools, reports) and `API_REQUIREMENTS.md` are vendored under `backend/contract/03_API/` (handoff layout). `VENDORED.json` pins the handoff digests; tests verify all 455 checksummed files and that nothing unlisted exists.
+- [x] The full contract suites (595/279/105/382, schema identity) run **in CI** via `scripts/dev/run_contract_suites.py`, as QUALITY §18.1 requires ("both repos, from the vendored revision 10 folder"). The local private mirror and `sync_private_contract.py` are removed.
+- [x] The Arabic-text rule and `.public-safety-allow` are removed. The guard now blocks: handoff and `backend/.private/` paths; secrets/credential files; secret-looking tokens (private keys; Anthropic, OpenAI-style, AWS, GitHub, Slack and Google keys); hidden-evaluation dataset names (held-out, adversarial, golden/reference answers, `backend/bench/data/`); and verbatim copies of private handoff artifacts. That last check uses committed digests-only fingerprints (`backend/security/private_fingerprints.json`, 881 digests from `scripts/dev/update_private_fingerprints.py`), so CI enforces it too.
+- [x] Fix found on the way: digests now cover raw bytes as well as LF-normalized text, because normalizing binaries (WebP) corrupted their checksums.
+- [x] 96 tests, ruff, mypy, OpenAPI check and contract suites green locally.
 **Exit:** ✅ contract suites green locally, CI green on GitHub, tagged `phase-1`.
 
 ---
@@ -228,6 +236,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 - [ ] Minimal publish path: a Gate 2-equivalent `review_decisions` row bound to the content digest → immutable publish (extended in Phase 13).
 - [ ] Salah reference: import the four actual-source sessions (fixture `les_u1_l3` → production slot 3.2) with the backend-authored plan, claims, sentence roles, `arc_map`, keys, flashcards, assessment and duel items; `test_salah_reference.py` for 4 language × track combinations (14 steps, 14/13 terms, 12 banks, 8/7/6 counts, `source_count` 4).
 - [ ] Unit 0 drafts: an importer projecting `UNIT_0_CONTENT/lessons/u0_l01…u0_l12.json` (authoring records) and its 20 scene manifests into rev 10 stored content, kept **unpublished**. Scripture placeholders stay flagged until verified insertion (Phase 9) and specialist approval.
+- [ ] Content locations (D-19): pending drafts are read from git-ignored `backend/.private/content/`; approved content is exported into `backend/content/` (committed) and seeded through the same import pipeline. The importer is the same code in every environment, with no demo path.
 - [ ] Staging environment (native services on the target host) with the test curriculum + reference content, so the frontend can integrate on live data.
 
 **Gates:** publication of Salah and Unit 0 stays blocked on O-05/O-06/O-12/P-07; staging-only publication is allowed.
@@ -363,7 +372,7 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 
 - [ ] Inputs: voice (ffmpeg → STT provider), images (vision extraction), DOCX, PDF (text and scanned via pypdfium2), limits, `input_unreadable`; private attachment storage + retention.
 - [ ] pgvector installed and the extension enabled (D-05); embeddings worker (bge-m3, CPU); `raqeeb_memory` with guarded reuse (standalone, no attachments, source digests, equivalence check, version keys, expiry, purge by `origin_user_id`).
-- [ ] `bench/questions.jsonl` + `bench/run.py` with the judge and P-05 thresholds; `benchmark_runs` table.
+- [ ] `bench/run.py` (committed) with the judge and P-05 thresholds, reading the benchmark/adversarial question sets from git-ignored `backend/.private/eval/` (D-19); public harness tests use their own small synthetic cases; `benchmark_runs` table.
 
 **Tests:** `test_raqeeb_memory_guard`, input-type tests.
 **Gates:** O-03 (models/STT), P-05 (release thresholds), P-04 (provider disclosure).
@@ -454,7 +463,8 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | 2026-10-04 | D-10 | The GitHub repo stays **public** (hackathon requirement; owner decision). | Resolved by D-14. |
 | 2026-10-04 | D-11 | `UNIT_0_CONTENT/` (12 authored Unit 0 lessons, 20 scene manifests) and `FRONTEND_DEMO_HANDOFF/` are unapproved review drafts outside the frozen manifest. Treated as read-only import inputs. | Unit 0 import added to Phase 8. |
 | 2026-10-04 | D-12 | Python: 3.12.10 installed per-user (`py -3.12`). The chocolatey `python312` 3.12.4 record points at a missing `C:\python312` and was left untouched. uv 0.12.23 installed for locking. | — |
-| 2026-10-04 | D-14 | **Public-repo data policy.** Committed: application code, migrations, the rev 10 `contract/` directory (verified to contain no Arabic text, scripture or answer keys), docs, and synthetic neutral test data. Never committed: `FINAL_ENGINEERING_HANDOFF/`, contract fixtures and tools, `API_REQUIREMENTS.md`, private grading keys and evaluation context, gold/reference lessons, Unit 0 drafts, and any unapproved religious content. Those live in git-ignored `backend/.private/`. A safety guard enforces this in CI and pre-commit. | Full contract suites run locally only. Content imports (Phase 8) read from local private paths; staging data never enters git. |
+| 2026-10-04 | D-14 | **Superseded by D-19.** **Public-repo data policy.** Committed: application code, migrations, the rev 10 `contract/` directory (verified to contain no Arabic text, scripture or answer keys), docs, and synthetic neutral test data. Never committed: `FINAL_ENGINEERING_HANDOFF/`, contract fixtures and tools, `API_REQUIREMENTS.md`, private grading keys and evaluation context, gold/reference lessons, Unit 0 drafts, and any unapproved religious content. Those live in git-ignored `backend/.private/`. A safety guard enforces this in CI and pre-commit. | Full contract suites run locally only. Content imports (Phase 8) read from local private paths; staging data never enters git. |
+| 2026-10-04 | D-19 | **Repository boundary corrected (owner clarification; supersedes D-14).** The public repository is the complete production product, not a demo or reduced version, and must be cloneable, installable, testable and runnable as the real system. Rule: *production/runtime data and tests may be public; internal evaluation material stays private.* Public: code, migrations, the full vendored contract with fixtures and server-side grading context, approved production content and its answer keys, Arabic text, and tests that verify real behavior. Private (git-ignored `backend/.private/`): hidden/golden evaluation datasets, reviewer reference answers, adversarial cases, unpublished handoff material, content pending approval, secrets and credentials. Correct answers are protected at runtime (server-side grading, redaction before submission), not by hiding files. The handoff itself requires the contract suites in CI in both repositories (QUALITY §18.1), so they now run in CI. Earlier commits and the `phase-1` tag are kept unchanged; this correction is `phase-1.1`. | Phase 1 corrected; Phases 8 and 17 content/eval locations updated; A-3 revised, A-7 added. |
 | 2026-10-04 | D-15 | Contract-header cases the spec leaves open: a missing or non-integer `Qabas-Contract`, or a missing `Qabas-Client`, is treated as a pre-revision-10 client (`426 client_outdated`). A malformed `Qabas-Client` (not `android`, `ios` or `web` followed by `/` and a semantic version) is `400 validation_error` with `details.field`. Health and OpenAPI paths are exempt. | `app/middleware.py`; tests in `test_contract_headers.py`. |
 | 2026-10-04 | D-16 | A request to a known path with an unsupported method returns `404 not_found`, like an unknown path, because §3.4 has no 405 row (adding a code is a contract change). | `app/errors.py`. |
 | 2026-10-04 | D-17 | uv also needs the Windows certificate store: user-level `%APPDATA%\uv\uv.toml` sets `system-certs = true`. | Documented in `backend/README.md`. |
@@ -471,3 +481,4 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | 2026-10-04 | 0 | ✅ Phase 0 complete: `check-env.ps1` all green (dev DBs created); repo stays public with data policy D-14; tagged `phase-0`, merged to `main`. |
 | 2026-10-04 | 1 | Skeleton built: vendored contract (14 files, checksums verified), private mirror + full suites 595/279/105/382 PASS, guard + pre-commit hook, config, errors, contract headers, contract-only OpenAPI, health, logging, adapters, Celery, storage. 84 tests green locally; CI pending. |
 | 2026-10-04 | 1 | ✅ Phase 1 complete: CI green on GitHub (84 passed, native Postgres/Redis on the runner); tagged `phase-1`, merged to `main`. |
+| 2026-10-04 | 1.1 | Corrective commit (D-19): full contract vendored and its suites in CI; guard now targets secrets, private handoff artifacts (fingerprints) and hidden evaluation data instead of Arabic text; binary-digest bug fixed. 96 tests + 595/279/105/382 green locally. |

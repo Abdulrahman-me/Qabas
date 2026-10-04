@@ -1,0 +1,187 @@
+{
+ "track": "new_muslim",
+ "current": {
+  "unit_id": "unit_test_2",
+  "lesson_id": "les_t2_0"
+ },
+ "units": [
+  {
+   "unit_id": "unit_test_2",
+   "index": 1,
+   "title": "وحدة اختبارية 2",
+   "subtitle": "اختبار",
+   "art_key": null,
+   "has_guide": false,
+   "state": "in_progress",
+   "coming_soon": false,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": true
+   },
+   "lessons": [
+    {
+     "lesson_id": "les_t2_0",
+     "index": 0,
+     "title": "درس اختباري 2.1",
+     "lesson_type": "concept",
+     "state": "available",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": true,
+     "soft_lock": null
+    },
+    {
+     "lesson_id": "les_t2_1",
+     "index": 1,
+     "title": "درس اختباري 2.2",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_t2_0",
+        "unit_id": "unit_test_2",
+        "title": "درس اختباري 2.1"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_t2_0",
+       "unit_id": "unit_test_2",
+       "title": "درس اختباري 2.1"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_t2_2",
+     "index": 2,
+     "title": "درس اختباري 2.3",
+     "lesson_type": "story",
+     "state": "available",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": true,
+     "soft_lock": null
+    },
+    {
+     "lesson_id": "les_t2_3",
+     "index": 3,
+     "title": "درس اختباري 2.4",
+     "lesson_type": "practice",
+     "state": "locked",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_t2_1",
+        "unit_id": "unit_test_2",
+        "title": "درس اختباري 2.2"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_t2_0",
+       "unit_id": "unit_test_2",
+       "title": "درس اختباري 2.1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_test_3",
+   "index": 2,
+   "title": "وحدة اختبارية 3",
+   "subtitle": "اختبار",
+   "art_key": null,
+   "has_guide": false,
+   "state": "available",
+   "coming_soon": false,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": true
+   },
+   "lessons": [
+    {
+     "lesson_id": "les_t3_0",
+     "index": 0,
+     "title": "درس اختباري 3.1",
+     "lesson_type": "practice",
+     "state": "locked",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_t2_3",
+        "unit_id": "unit_test_2",
+        "title": "درس اختباري 2.4"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_t2_0",
+       "unit_id": "unit_test_2",
+       "title": "درس اختباري 2.1"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_t3_1",
+     "index": 1,
+     "title": "درس اختباري 3.2",
+     "lesson_type": "concept",
+     "state": "available",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": null
+    },
+    {
+     "lesson_id": "les_t3_2",
+     "index": 2,
+     "title": "درس اختباري 3.3",
+     "lesson_type": "story",
+     "state": "available",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": true,
+     "soft_lock": null
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_test_4",
+   "index": 3,
+   "title": "قريباً",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  }
+ ]
+}

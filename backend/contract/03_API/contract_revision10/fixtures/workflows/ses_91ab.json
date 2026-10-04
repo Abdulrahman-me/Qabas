@@ -1,0 +1,32 @@
+{
+ "_about": "Answer history and initial learner state for the §6.5 example session ses_91ab; tools/validate.py recomputes the §6.5 finish example (score, layers, perfect, XP, mastery_summary) and every evaluation snapshot's mastery change with the backend §7.1 formulas.",
+ "session_id": "ses_91ab",
+ "daily_goal_met": true,
+ "answers": [
+  {
+   "exercise_id": "ex_u2_l1_01",
+   "is_retry": false,
+   "result": "correct"
+  },
+  {
+   "exercise_id": "ex_u2_l1_07",
+   "is_retry": false,
+   "result": "incorrect"
+  },
+  {
+   "exercise_id": "ex_u2_l1_09",
+   "is_retry": false,
+   "result": "correct",
+   "recitation_passed": true
+  },
+  {
+   "exercise_id": "ex_u2_l1_07",
+   "is_retry": true,
+   "result": "correct"
+  }
+ ],
+ "initial_mastery": {
+  "con_allah_one": 0.2,
+  "con_qibla": 0.4
+ }
+}

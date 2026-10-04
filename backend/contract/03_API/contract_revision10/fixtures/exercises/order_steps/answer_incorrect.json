@@ -1,0 +1,13 @@
+{
+ "exercise_id": "ex_order_steps",
+ "answer": {
+  "order": [
+   "st_1",
+   "st_3",
+   "st_2",
+   "st_4"
+  ]
+ },
+ "elapsed_ms": 7000,
+ "is_retry": false
+}

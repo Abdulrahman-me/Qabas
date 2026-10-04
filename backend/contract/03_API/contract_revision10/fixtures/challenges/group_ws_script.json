@@ -1,0 +1,758 @@
+[
+ {
+  "type": "state",
+  "data": {
+   "duel": {
+    "duel_id": "duel_g1",
+    "status": "pending",
+    "mode": "live",
+    "preset": "group",
+    "opponent_type": "friends",
+    "players": [
+     {
+      "user_id": "usr_7f3k2a",
+      "display_name": "مسافر ٤٧",
+      "avatar_key": "traveler_01",
+      "is_me": true,
+      "is_bot": false,
+      "status": "joined"
+     },
+     {
+      "user_id": "usr_f1",
+      "display_name": "Seeker 21",
+      "avatar_key": "traveler_02",
+      "is_me": false,
+      "is_bot": false,
+      "status": "invited"
+     },
+     {
+      "user_id": "usr_f2",
+      "display_name": "سالك ٥",
+      "avatar_key": "traveler_03",
+      "is_me": false,
+      "is_bot": false,
+      "status": "invited"
+     },
+     {
+      "user_id": "usr_f3",
+      "display_name": "نور ١٢",
+      "avatar_key": "traveler_04",
+      "is_me": false,
+      "is_bot": false,
+      "status": "invited"
+     }
+    ],
+    "config": {
+     "question_count": 3,
+     "time_limit_ms": 10000,
+     "scoring": {
+      "base": 100,
+      "speed_bonus": 50,
+      "rounding": "half_up"
+     },
+     "reveal_ms": 2200
+    },
+    "ws_url": "mock-ws://duels/duel_g1",
+    "created_at": "2026-10-04T13:00:00Z",
+    "expires_at": "2026-10-04T13:01:00Z",
+    "result": null
+   },
+   "server_ts": "2026-10-04T13:00:01Z",
+   "live": null
+  }
+ },
+ {
+  "type": "player_status",
+  "data": {
+   "user_id": "usr_f1",
+   "status": "joined"
+  }
+ },
+ {
+  "type": "player_status",
+  "data": {
+   "user_id": "usr_f2",
+   "status": "joined"
+  }
+ },
+ {
+  "type": "player_status",
+  "data": {
+   "user_id": "usr_f3",
+   "status": "joined"
+  }
+ },
+ {
+  "type": "state",
+  "data": {
+   "duel": {
+    "duel_id": "duel_g1",
+    "status": "ready",
+    "mode": "live",
+    "preset": "group",
+    "opponent_type": "friends",
+    "players": [
+     {
+      "user_id": "usr_7f3k2a",
+      "display_name": "مسافر ٤٧",
+      "avatar_key": "traveler_01",
+      "is_me": true,
+      "is_bot": false,
+      "status": "joined"
+     },
+     {
+      "user_id": "usr_f1",
+      "display_name": "Seeker 21",
+      "avatar_key": "traveler_02",
+      "is_me": false,
+      "is_bot": false,
+      "status": "joined"
+     },
+     {
+      "user_id": "usr_f2",
+      "display_name": "سالك ٥",
+      "avatar_key": "traveler_03",
+      "is_me": false,
+      "is_bot": false,
+      "status": "joined"
+     },
+     {
+      "user_id": "usr_f3",
+      "display_name": "نور ١٢",
+      "avatar_key": "traveler_04",
+      "is_me": false,
+      "is_bot": false,
+      "status": "joined"
+     }
+    ],
+    "config": {
+     "question_count": 3,
+     "time_limit_ms": 10000,
+     "scoring": {
+      "base": 100,
+      "speed_bonus": 50,
+      "rounding": "half_up"
+     },
+     "reveal_ms": 2200
+    },
+    "ws_url": "mock-ws://duels/duel_g1",
+    "created_at": "2026-10-04T13:00:00Z",
+    "expires_at": "2026-10-04T13:01:00Z",
+    "result": null
+   },
+   "server_ts": "2026-10-04T13:00:20Z",
+   "live": null
+  }
+ },
+ {
+  "type": "countdown",
+  "data": {
+   "starts_at": "2026-10-04T13:00:24Z",
+   "seconds": 3
+  }
+ },
+ {
+  "type": "question",
+  "data": {
+   "question_index": 0,
+   "total": 3,
+   "exercise": {
+    "exercise_id": "ex_g_0",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال جماعي 1"
+     }
+    ],
+    "time_limit_ms": 10000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": null
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أ"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "ب"
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "issued_at": "2026-10-04T13:00:30Z",
+   "deadline_at": "2026-10-04T13:00:40Z"
+  }
+ },
+ {
+  "type": "opponent_disconnected",
+  "data": {
+   "user_id": "usr_f2",
+   "grace_ms": 10000
+  }
+ },
+ {
+  "type": "answer_received",
+  "data": {
+   "question_index": 0
+  }
+ },
+ {
+  "type": "opponent_answered",
+  "data": {
+   "question_index": 0,
+   "user_id": "usr_f1"
+  }
+ },
+ {
+  "type": "opponent_answered",
+  "data": {
+   "question_index": 0,
+   "user_id": "usr_f3"
+  }
+ },
+ {
+  "type": "question_result",
+  "data": {
+   "question_index": 0,
+   "correct_answer": {
+    "option_id": "opt_a"
+   },
+   "explanation": [
+    {
+     "type": "text",
+     "text": "شرح اختباري."
+    }
+   ],
+   "players": [
+    {
+     "user_id": "usr_7f3k2a",
+     "correct": true,
+     "elapsed_ms": 5000,
+     "points": 125
+    },
+    {
+     "user_id": "usr_f1",
+     "correct": true,
+     "elapsed_ms": 5000,
+     "points": 125
+    },
+    {
+     "user_id": "usr_f2",
+     "correct": false,
+     "elapsed_ms": 10000,
+     "points": 0
+    },
+    {
+     "user_id": "usr_f3",
+     "correct": false,
+     "elapsed_ms": 7100,
+     "points": 0
+    }
+   ],
+   "totals": [
+    {
+     "user_id": "usr_7f3k2a",
+     "points": 125
+    },
+    {
+     "user_id": "usr_f1",
+     "points": 125
+    },
+    {
+     "user_id": "usr_f2",
+     "points": 0
+    },
+    {
+     "user_id": "usr_f3",
+     "points": 0
+    }
+   ]
+  }
+ },
+ {
+  "type": "opponent_reconnected",
+  "data": {
+   "user_id": "usr_f2"
+  }
+ },
+ {
+  "type": "state",
+  "data": {
+   "duel": {
+    "duel_id": "duel_g1",
+    "status": "in_progress",
+    "mode": "live",
+    "preset": "group",
+    "opponent_type": "friends",
+    "players": [
+     {
+      "user_id": "usr_7f3k2a",
+      "display_name": "مسافر ٤٧",
+      "avatar_key": "traveler_01",
+      "is_me": true,
+      "is_bot": false,
+      "status": "joined"
+     },
+     {
+      "user_id": "usr_f1",
+      "display_name": "Seeker 21",
+      "avatar_key": "traveler_02",
+      "is_me": false,
+      "is_bot": false,
+      "status": "joined"
+     },
+     {
+      "user_id": "usr_f2",
+      "display_name": "سالك ٥",
+      "avatar_key": "traveler_03",
+      "is_me": false,
+      "is_bot": false,
+      "status": "joined"
+     },
+     {
+      "user_id": "usr_f3",
+      "display_name": "نور ١٢",
+      "avatar_key": "traveler_04",
+      "is_me": false,
+      "is_bot": false,
+      "status": "joined"
+     }
+    ],
+    "config": {
+     "question_count": 3,
+     "time_limit_ms": 10000,
+     "scoring": {
+      "base": 100,
+      "speed_bonus": 50,
+      "rounding": "half_up"
+     },
+     "reveal_ms": 2200
+    },
+    "ws_url": "mock-ws://duels/duel_g1",
+    "created_at": "2026-10-04T13:00:00Z",
+    "expires_at": "2026-10-04T13:01:00Z",
+    "result": null
+   },
+   "server_ts": "2026-10-04T13:00:43Z",
+   "live": {
+    "phase": "result",
+    "question_index": 0,
+    "question": null,
+    "deadline_at": null,
+    "answered_user_ids": [
+     "usr_7f3k2a",
+     "usr_f1",
+     "usr_f3"
+    ],
+    "my_answer": {
+     "answer": {
+      "option_id": "opt_a"
+     },
+     "locked": true
+    },
+    "totals": [
+     {
+      "user_id": "usr_7f3k2a",
+      "points": 125
+     },
+     {
+      "user_id": "usr_f1",
+      "points": 125
+     },
+     {
+      "user_id": "usr_f2",
+      "points": 0
+     },
+     {
+      "user_id": "usr_f3",
+      "points": 0
+     }
+    ],
+    "results_so_far": [
+     {
+      "question_index": 0,
+      "correct_answer": {
+       "option_id": "opt_a"
+      },
+      "explanation": [
+       {
+        "type": "text",
+        "text": "شرح اختباري."
+       }
+      ],
+      "players": [
+       {
+        "user_id": "usr_7f3k2a",
+        "correct": true,
+        "elapsed_ms": 5000,
+        "points": 125
+       },
+       {
+        "user_id": "usr_f1",
+        "correct": true,
+        "elapsed_ms": 5000,
+        "points": 125
+       },
+       {
+        "user_id": "usr_f2",
+        "correct": false,
+        "elapsed_ms": 10000,
+        "points": 0
+       },
+       {
+        "user_id": "usr_f3",
+        "correct": false,
+        "elapsed_ms": 7100,
+        "points": 0
+       }
+      ],
+      "totals": [
+       {
+        "user_id": "usr_7f3k2a",
+        "points": 125
+       },
+       {
+        "user_id": "usr_f1",
+        "points": 125
+       },
+       {
+        "user_id": "usr_f2",
+        "points": 0
+       },
+       {
+        "user_id": "usr_f3",
+        "points": 0
+       }
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "type": "question",
+  "data": {
+   "question_index": 1,
+   "total": 3,
+   "exercise": {
+    "exercise_id": "ex_g_1",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال جماعي 2"
+     }
+    ],
+    "time_limit_ms": 10000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": null
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أ"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "ب"
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "issued_at": "2026-10-04T13:01:30Z",
+   "deadline_at": "2026-10-04T13:01:40Z"
+  }
+ },
+ {
+  "type": "answer_received",
+  "data": {
+   "question_index": 1
+  }
+ },
+ {
+  "type": "opponent_answered",
+  "data": {
+   "question_index": 1,
+   "user_id": "usr_f1"
+  }
+ },
+ {
+  "type": "opponent_answered",
+  "data": {
+   "question_index": 1,
+   "user_id": "usr_f2"
+  }
+ },
+ {
+  "type": "opponent_answered",
+  "data": {
+   "question_index": 1,
+   "user_id": "usr_f3"
+  }
+ },
+ {
+  "type": "question_result",
+  "data": {
+   "question_index": 1,
+   "correct_answer": {
+    "option_id": "opt_a"
+   },
+   "explanation": [
+    {
+     "type": "text",
+     "text": "شرح اختباري."
+    }
+   ],
+   "players": [
+    {
+     "user_id": "usr_7f3k2a",
+     "correct": true,
+     "elapsed_ms": 3000,
+     "points": 135
+    },
+    {
+     "user_id": "usr_f1",
+     "correct": true,
+     "elapsed_ms": 3000,
+     "points": 135
+    },
+    {
+     "user_id": "usr_f2",
+     "correct": true,
+     "elapsed_ms": 6000,
+     "points": 120
+    },
+    {
+     "user_id": "usr_f3",
+     "correct": true,
+     "elapsed_ms": 9000,
+     "points": 105
+    }
+   ],
+   "totals": [
+    {
+     "user_id": "usr_7f3k2a",
+     "points": 260
+    },
+    {
+     "user_id": "usr_f1",
+     "points": 260
+    },
+    {
+     "user_id": "usr_f2",
+     "points": 120
+    },
+    {
+     "user_id": "usr_f3",
+     "points": 105
+    }
+   ]
+  }
+ },
+ {
+  "type": "question",
+  "data": {
+   "question_index": 2,
+   "total": 3,
+   "exercise": {
+    "exercise_id": "ex_g_2",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال جماعي 3"
+     }
+    ],
+    "time_limit_ms": 10000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": null
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أ"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "ب"
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "issued_at": "2026-10-04T13:02:30Z",
+   "deadline_at": "2026-10-04T13:02:40Z"
+  }
+ },
+ {
+  "type": "answer_received",
+  "data": {
+   "question_index": 2
+  }
+ },
+ {
+  "type": "opponent_answered",
+  "data": {
+   "question_index": 2,
+   "user_id": "usr_f1"
+  }
+ },
+ {
+  "type": "opponent_answered",
+  "data": {
+   "question_index": 2,
+   "user_id": "usr_f2"
+  }
+ },
+ {
+  "type": "question_result",
+  "data": {
+   "question_index": 2,
+   "correct_answer": {
+    "option_id": "opt_a"
+   },
+   "explanation": [
+    {
+     "type": "text",
+     "text": "شرح اختباري."
+    }
+   ],
+   "players": [
+    {
+     "user_id": "usr_7f3k2a",
+     "correct": false,
+     "elapsed_ms": 4000,
+     "points": 0
+    },
+    {
+     "user_id": "usr_f1",
+     "correct": false,
+     "elapsed_ms": 6000,
+     "points": 0
+    },
+    {
+     "user_id": "usr_f2",
+     "correct": true,
+     "elapsed_ms": 8000,
+     "points": 110
+    },
+    {
+     "user_id": "usr_f3",
+     "correct": false,
+     "elapsed_ms": 10000,
+     "points": 0
+    }
+   ],
+   "totals": [
+    {
+     "user_id": "usr_7f3k2a",
+     "points": 260
+    },
+    {
+     "user_id": "usr_f1",
+     "points": 260
+    },
+    {
+     "user_id": "usr_f2",
+     "points": 230
+    },
+    {
+     "user_id": "usr_f3",
+     "points": 105
+    }
+   ]
+  }
+ },
+ {
+  "type": "finished",
+  "data": {
+   "result": {
+    "winner_user_ids": [
+     "usr_7f3k2a",
+     "usr_f1"
+    ],
+    "is_draw": false,
+    "scores": [
+     {
+      "user_id": "usr_7f3k2a",
+      "rank": 1,
+      "points": 260,
+      "correct": 2
+     },
+     {
+      "user_id": "usr_f1",
+      "rank": 1,
+      "points": 260,
+      "correct": 2
+     },
+     {
+      "user_id": "usr_f2",
+      "rank": 3,
+      "points": 230,
+      "correct": 2
+     },
+     {
+      "user_id": "usr_f3",
+      "rank": 4,
+      "points": 105,
+      "correct": 1
+     }
+    ],
+    "xp_awarded": 15
+   },
+   "summary": []
+  }
+ }
+]

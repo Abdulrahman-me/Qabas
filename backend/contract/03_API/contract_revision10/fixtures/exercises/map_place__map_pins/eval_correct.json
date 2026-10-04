@@ -1,0 +1,44 @@
+{
+ "exercise_id": "ex_map_place__map_pins",
+ "recorded": true,
+ "correct": true,
+ "correct_answer": {
+  "pin_id": "p_2"
+ },
+ "details": {
+  "pin_labels": [
+   {
+    "pin_id": "p_1",
+    "label": "مكة المكرمة"
+   },
+   {
+    "pin_id": "p_2",
+    "label": "المدينة المنورة"
+   },
+   {
+    "pin_id": "p_3",
+    "label": "بدر"
+   }
+  ]
+ },
+ "explanation": [
+  {
+   "type": "text",
+   "text": "شرح مختصر مرتبط بالدليل."
+  }
+ ],
+ "source_ids": [
+  "src_q_112_1"
+ ],
+ "misconception": null,
+ "mastery_changes": [
+  {
+   "concept_id": "con_test",
+   "title": "مفهوم اختباري",
+   "before": 0.4,
+   "after": 0.61
+  }
+ ],
+ "term_changes": [],
+ "xp_awarded": 0
+}

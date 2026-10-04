@@ -1,4 +1,5 @@
-"""The public-repo guard (D-14) catches private paths, names, Arabic text and verbatim private copies."""
+"""Repository safety guard (D-19): blocks secrets, private handoff material and hidden evaluation data,
+while Arabic text, production content and application answer keys are legitimate repository content."""
 
 from __future__ import annotations
 
@@ -32,39 +33,67 @@ def _repo(tmp_path: Path, files: dict[str, bytes]) -> Path:
     return tmp_path
 
 
-def test_clean_repo_passes(guard: ModuleType, tmp_path: Path) -> None:
-    root = _repo(tmp_path, {"backend/app/x.py": b"print('ok')\n", "backend/.env.example": b"A=1\n"})
+def test_production_content_with_arabic_and_answer_keys_passes(guard: ModuleType, tmp_path: Path) -> None:
+    exercise = {
+        "exercise_id": "ex_example",
+        "prompt": [{"type": "text", "text": "ما معنى التوحيد؟"}],
+        "answer_key": {"option_id": "opt_b"},
+    }
+    root = _repo(tmp_path, {
+        "backend/content/lessons/les_example.json": json.dumps(exercise, ensure_ascii=False).encode(),
+        "backend/app/x.py": "LABEL = 'مسافر'\n".encode(),
+        "backend/.env.example": b"AUTH_TOKEN_PEPPER=<random secret>\n",
+    })
     assert guard.check(root, staged=True) == []
     assert guard.check(root, staged=False) == []
 
 
 @pytest.mark.parametrize("name", [
     "FINAL_ENGINEERING_HANDOFF/README.md",
-    "backend/.private/handoff/x.json",
-    "backend/tests/fixtures/PRIVATE_GRADING_KEYS.json",
-    "backend/content/gold/lesson.json",
+    "backend/.private/eval/questions.jsonl",
     "backend/.env",
+    ".env.production",
+    "deploy/server.pem",
+    "deploy/gcp-service-account.json",
+    "backend/bench/data/questions.jsonl",
+    "backend/tests/data/raqeeb_adversarial.jsonl",
+    "backend/eval/heldout_learner_audio.json",
+    "backend/eval/reference_answers.json",
 ])
-def test_private_paths_and_names_fail(guard: ModuleType, tmp_path: Path, name: str) -> None:
+def test_private_secret_and_eval_paths_fail(guard: ModuleType, tmp_path: Path, name: str) -> None:
     root = _repo(tmp_path, {name: b"{}\n"})
     problems = guard.check(root, staged=True)
-    assert len(problems) == 1 and problems[0].startswith(name)
+    assert len(problems) == 1 and problems[0].startswith(name), problems
 
 
-def test_arabic_text_needs_allow_list(guard: ModuleType, tmp_path: Path) -> None:
-    arabic = "".join(map(chr, (0x645, 0x631, 0x62D, 0x628, 0x627)))  # a neutral greeting, kept out of the source
-    root = _repo(tmp_path, {"notes.md": f"line one\n{arabic}\n".encode()})
-    assert guard.check(root, staged=True) == ["notes.md:2: Arabic-script text outside .public-safety-allow"]
-    (root / ".public-safety-allow").write_text("notes.md  # test\n", encoding="utf-8")
-    subprocess.run(["git", "add", "-A"], cwd=root, check=True)
-    assert guard.check(root, staged=True) == []
+# Secret-looking values are assembled at runtime so this source file never contains one.
+@pytest.mark.parametrize("secret", [
+    "-----BEGIN " + "RSA PRIVATE KEY-----\nMIIB\n",
+    "ANTHROPIC_API_KEY=" + "sk-ant-" + "a1" * 20,
+    "aws = " + "AKIA" + "ABCDEFGHIJKLMNOP",
+    "token: " + "ghp_" + "x" * 36,
+    "SLACK=" + "xoxb-" + "1234567890-abc",
+])
+def test_secret_content_fails(guard: ModuleType, tmp_path: Path, secret: str) -> None:
+    root = _repo(tmp_path, {"backend/app/settings_notes.md": f"intro\n{secret}\n".encode()})
+    problems = guard.check(root, staged=True)
+    assert len(problems) == 1 and problems[0].startswith("backend/app/settings_notes.md:2: possible"), problems
 
 
-def test_verbatim_private_copy_fails(guard: ModuleType, tmp_path: Path) -> None:
-    secret = b'{"exercise": "synthetic", "key": "opt_b"}\r\n'
-    root = _repo(tmp_path, {"backend/tests/data.json": secret})
-    private = root / "backend" / ".private"
-    private.mkdir(parents=True)
-    digest = guard.normalized_digest(secret)
-    (private / "private_digests.json").write_text(json.dumps({"sha256": [digest]}))
-    assert guard.check(root, staged=True) == ["backend/tests/data.json: identical to a private handoff file"]
+def test_fingerprinted_private_artifact_fails(guard: ModuleType, tmp_path: Path) -> None:
+    private = b'{"draft": "unapproved lesson draft", "status": "pending review"}\r\n'
+    digest = guard.normalized_digest(private)
+    fingerprints = json.dumps({"sha256": [digest]}).encode()
+    root = _repo(tmp_path, {"backend/content/copied.json": private,
+                            "backend/security/private_fingerprints.json": fingerprints})
+    assert guard.check(root, staged=True) == ["backend/content/copied.json: identical to a private handoff artifact"]
+
+
+def test_repository_fingerprints_exclude_vendored_contract(guard: ModuleType) -> None:
+    root = Path(__file__).resolve().parents[2]
+    fingerprints = guard.load_fingerprints(root)
+    assert fingerprints, "backend/security/private_fingerprints.json must be committed"
+    vendored = root / "backend" / "contract"
+    for path in vendored.rglob("*"):
+        if path.is_file():
+            assert not guard.digests(path.read_bytes()) & fingerprints, path
