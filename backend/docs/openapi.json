@@ -16123,6 +16123,72 @@
     ]
    }
   },
+  "/v1/sessions/{session_id}/answers": {
+   "post": {
+    "description": "Grade one attempt. The body is read raw: a recorded attempt identity replays its stored response before\nthe rest of the body is validated (API §6.5 processing order), so FastAPI must not parse it eagerly.",
+    "operationId": "submit_answer_v1_sessions__session_id__answers_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "session_id",
+      "required": true,
+      "schema": {
+       "title": "Session Id",
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/AnswerSubmit"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "anyOf": [
+          {
+           "$ref": "#/components/schemas/AnswerEvaluation"
+          },
+          {
+           "$ref": "#/components/schemas/AnswerRecorded"
+          }
+         ],
+         "title": "Response Submit Answer V1 Sessions  Session Id  Answers Post"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Submit Answer",
+    "tags": [
+     "sessions"
+    ]
+   }
+  },
   "/v1/units/{unit_id}/guide": {
    "get": {
     "operationId": "get_unit_guide_v1_units__unit_id__guide_get",

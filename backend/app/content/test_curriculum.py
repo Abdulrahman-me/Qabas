@@ -63,6 +63,7 @@ class _Specimen:
     option_feedback: list[dict[str, Any]]
     event_dates: list[dict[str, Any]]
     pin_labels: list[dict[str, Any]]
+    source_ids: list[str]          # the sources the specimen's evaluations cite
 
 
 def _specimens() -> list[_Specimen]:
@@ -74,6 +75,7 @@ def _specimens() -> list[_Specimen]:
         event_dates: dict[str, dict[str, Any]] = {}
         pin_labels: dict[str, dict[str, Any]] = {}
         explanation: list[dict[str, Any]] = []
+        source_ids: list[str] = []
         key = None
         for evaluation_file in sorted(folder.glob("eval_*.json")):
             evaluation = _load(evaluation_file)
@@ -84,12 +86,15 @@ def _specimens() -> list[_Specimen]:
                 event_dates.setdefault(row["event_id"], row)
             for row in details.get("pin_labels", []):
                 pin_labels.setdefault(row["pin_id"], row)
+            if "explanation" not in evaluation:      # eval_recorded_only.json
+                continue
             if evaluation_file.name == "eval_correct.json" or not explanation:
                 explanation = evaluation["explanation"]
+            source_ids += [s for s in evaluation["source_ids"] if s not in source_ids]
             if evaluation_file.name == "eval_correct.json":
                 key = context[f"exercises/{folder.name}/eval_correct.json"]["private_key"]
         found.append(_Specimen(folder.name, exercise, key, explanation, list(option_feedback.values()),
-                               list(event_dates.values()), list(pin_labels.values())))
+                               list(event_dates.values()), list(pin_labels.values()), source_ids))
     return found
 
 
@@ -134,7 +139,7 @@ def _record(purpose: str, by_lang: dict[str, dict[str, Any]], key: Any, spec: _S
         "feedback": {lang: (_feedback(spec, by_lang[lang], lang) if spec else
                             {"explanation": [{"type": "text", "text": "Test explanation."}], "option_feedback": [],
                              "event_dates": [], "pin_labels": []}) for lang in LANGS},
-        "targets_misconception_id": None, "source_ids": [],
+        "targets_misconception_id": None, "source_ids": list(spec.source_ids) if spec else [],
     }
 
 
@@ -298,6 +303,16 @@ def _package(lesson_id: str, meta: dict[str, Any], prereq_lessons: list[str], sp
         "content_budget": max(1, len(content_blocks)), "exercise_budget": min(6, max(2, graded)),
     }
     sources = _embedded_sources([e["exercise"]["ar"] for e in exercises.values()])
+    # Sources cited by exercise feedback, recorded from the specimens' own embedded evidence (never invented).
+    known = {s["source_id"] for s in sources}
+    evidence = {s["source_id"]: s for s in _embedded_sources([s.exercise for s in specimens])}
+    for record in exercises.values():
+        for source_id in record["source_ids"]:
+            if source_id not in known:
+                if source_id not in evidence:
+                    raise FixtureError(f"{record['exercise_id']} cites {source_id}, which no specimen carries")
+                sources.append(evidence[source_id])
+                known.add(source_id)
     return LessonPackage.model_validate({
         "lesson_id": lesson_id, "unit_id": meta["unit_id"], "index": meta["index"], "plan": plan,
         "variants": variants, "claims": [],

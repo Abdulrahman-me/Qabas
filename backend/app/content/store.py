@@ -203,6 +203,7 @@ async def _context(db: AsyncSession, unit: Unit, *, allow_placeholder_media: boo
         known_misconceptions=set((await db.execute(select(Misconception.id))).scalars()),
         known_concepts=set((await db.execute(select(Concept.id))).scalars()),
         allow_placeholder_media=allow_placeholder_media,
+        allow_timed_items=allow_placeholder_media,   # the same fixture-only allowance (D-29, D-61)
     )
 
 
@@ -235,6 +236,8 @@ async def import_package(db: AsyncSession, package: LessonPackage, *, origin: st
     """Store ``package`` as the next unpublished version of its lesson (caller owns the transaction)."""
     if origin not in ("factory", "gold_import", "test_fixture"):
         raise ValueError(f"unknown content origin {origin!r}")
+    if allow_placeholder_media and origin != "test_fixture":
+        raise ValueError("fixture allowances apply only to test-fixture content (D-29)")
     _slot, unit = await _slot_and_unit(db, package)
     ctx = await _context(db, unit, allow_placeholder_media=allow_placeholder_media)
     unregistered = sorted((set(package.plan.introduced_concept_ids) | set(package.plan.prerequisite_concept_ids)
@@ -581,8 +584,9 @@ async def _upsert_sources(db: AsyncSession, package: LessonPackage) -> None:
 async def _upsert_misconceptions(db: AsyncSession, package: LessonPackage) -> None:
     for record in package.misconceptions:
         row = await db.get(Misconception, record.misconception_id)
-        values = {"unit_id": package.unit_id, "concept_id": record.concept_id, "title": record.title,
-                  "card": record.card, "source_ids": list(record.source_ids)}
+        dumped = record.model_dump(mode="json")   # cards are Span models; the row stores JSON
+        values = {"unit_id": package.unit_id, "concept_id": record.concept_id, "title": dumped["title"],
+                  "card": dumped["card"], "source_ids": list(record.source_ids)}
         if row is None:
             db.add(Misconception(id=record.misconception_id, **values))
         else:

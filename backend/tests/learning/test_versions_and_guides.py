@@ -5,43 +5,19 @@ QUALITY §18.1 ``test_version_pinning`` (serve side: grading against the served 
 
 from __future__ import annotations
 
-import asyncio
 import json
-from collections.abc import Callable
 from typing import Any
 
 import pytest
 from fastapi.testclient import TestClient
 
 from app.config import Settings
-from app.content.package import LessonPackage
-from app.content.store import FixtureApproval, import_package, publish
 from app.content.test_curriculum import build_packages
 from app.contract import models as C
-from app.runtime import Resources
 from tests.api.helpers import execute, query
-from tests.learning.conftest import learner, user_id
+from tests.learning.conftest import learner, revise, user_id
 
 pytestmark = pytest.mark.integration
-
-
-def revise(settings: Settings, lesson_id: str, change: Callable[[dict[str, Any]], None]) -> None:
-    """Import and publish a new version of ``lesson_id`` through the real pipeline."""
-    original = next(p for p in build_packages() if p.lesson_id == lesson_id)
-    data = original.model_dump(mode="json")
-    change(data)
-    package = LessonPackage.model_validate(data)
-
-    async def main() -> None:
-        resources = Resources.create(settings)
-        try:
-            async with resources.sessionmaker() as db, db.begin():
-                result = await import_package(db, package, origin="test_fixture", allow_placeholder_media=True)
-                await publish(db, settings, result.lesson_version_id, FixtureApproval())
-        finally:
-            await resources.close()
-
-    asyncio.run(main())
 
 
 def served(settings: Settings, session_id: str) -> dict[str, int]:

@@ -1,0 +1,40 @@
+"""XP grants (backend §10.1): one ``xp_events`` row per grant, unique per (user, reason, ref), so a retried or
+concurrent request can never grant twice.
+
+``week_key`` (backend §10.3) is the league week, which starts Sunday 00:00 Asia/Riyadh. It is written as the ISO
+year-week of the Riyadh date shifted by one day, so Sunday through Saturday share one key (decision D-60).
+``local_date`` is the learner's calendar day in their time zone at the moment of the grant; it is stored and
+never recomputed after a time-zone change (backend §10.2).
+"""
+
+from __future__ import annotations
+
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
+
+from sqlalchemy.dialects.postgresql import insert as pg_insert
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from app.models import User, XpEvent
+
+LEAGUE_ZONE = ZoneInfo("Asia/Riyadh")
+
+
+def week_key(at: datetime) -> str:
+    shifted = at.astimezone(LEAGUE_ZONE).date() + timedelta(days=1)
+    year, week, _ = shifted.isocalendar()
+    return f"{year}-W{week:02d}"
+
+
+def local_date(at: datetime, timezone: str) -> date:
+    return at.astimezone(ZoneInfo(timezone)).date()
+
+
+async def grant(db: AsyncSession, user: User, reason: str, xp: int, ref_type: str, ref_id: str,
+                at: datetime) -> bool:
+    """Record a grant once; returns False when this (reason, ref) was already granted to the user."""
+    statement = pg_insert(XpEvent).values(
+        user_id=user.id, reason=reason, xp=xp, ref_type=ref_type, ref_id=ref_id, week_key=week_key(at),
+        local_date=local_date(at, user.timezone), created_at=at,
+    ).on_conflict_do_nothing(constraint="uq_xp_events_grant").returning(XpEvent.id)
+    return (await db.execute(statement)).scalar_one_or_none() is not None

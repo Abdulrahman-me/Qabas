@@ -24,7 +24,7 @@ CONCEPTS = {c.concept_id for c in CURRICULUM.concepts}
 def ctx(lesson_id: str, **overrides: Any) -> Context:
     package = PACKAGES[lesson_id]
     return Context(unit_tracks=list(CURRICULUM.unit(package.unit_id).tracks), known_concepts=CONCEPTS,
-                   allow_placeholder_media=True, **overrides)
+                   allow_placeholder_media=True, allow_timed_items=True, **overrides)
 
 
 def broken(lesson_id: str, mutate: Callable[[dict[str, Any]], None]) -> LessonPackage:
@@ -235,3 +235,18 @@ def test_a_match_column_must_not_line_up_with_its_answer() -> None:
             by_id = {r["item_id"]: r for r in record["payload"]["right"]}
             record["payload"]["right"] = [by_id[pairs[x["item_id"]]] for x in record["payload"]["left"]]
     assert_issue(lesson_id, aligned, "order equals the answer key")
+
+
+def test_lesson_items_are_untimed_outside_fixtures() -> None:
+    # The contract specimens carry 20 s timers; real lesson, pretest and unit-test items must not (API §5.7).
+    strict = Context(unit_tracks=list(CURRICULUM.unit("unit_test_1").tracks), known_concepts=CONCEPTS,
+                     allow_placeholder_media=True)
+    found = codes(PACKAGES["les_t1_0"], strict)
+    assert any("untimed" in f for f in found), found
+
+    def untimed(d: dict[str, Any]) -> None:
+        for record in d["exercises"]:
+            for lang in ("ar", "en"):
+                if record["purpose"] != "duel":
+                    record["exercise"][lang]["time_limit_ms"] = None
+    assert not any("untimed" in f for f in codes(broken("les_t1_0", untimed), strict))

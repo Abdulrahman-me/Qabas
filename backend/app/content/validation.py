@@ -60,6 +60,7 @@ class Context:
     known_misconceptions: set[str] = field(default_factory=set)
     known_concepts: set[str] = field(default_factory=set)
     allow_placeholder_media: bool = False  # only for test fixtures outside staging/production (D-29)
+    allow_timed_items: bool = False        # only for test fixtures: the contract specimens carry 20 s timers (D-61)
 
 
 def validate_package(package: LessonPackage, ctx: Context) -> list[Issue]:
@@ -220,6 +221,12 @@ def _exercises(p: LessonPackage, ctx: Context) -> list[Issue]:
     issues = []
     ids = Counter(e.exercise_id for e in p.exercises)
     issues += [Issue("exercises", "duplicate exercise id", eid) for eid, n in ids.items() if n > 1]
+    if not ctx.allow_timed_items:
+        # API §5.7: lessons, tests and card reviews are untimed; timers belong to the serving mode (quick review
+        # 20 s, challenges 15 s / 10 s), so stored lesson, pretest and unit-test items carry no time limit.
+        issues += [Issue("exercises", "lesson, pretest and unit-test items are untimed (time_limit_ms null)",
+                         e.exercise_id) for e in p.exercises
+                   if e.purpose in ("lesson", "pretest", "unit_test") and e.exercise["ar"].time_limit_ms is not None]
     keys = p.variant_keys()
     placed = p.variants[keys[0][0]][keys[0][1]].exercise_ids() if keys else []
     for exercise_id in placed:

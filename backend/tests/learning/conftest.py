@@ -7,7 +7,7 @@ Tests that publish new content versions use ``fresh_curriculum`` instead.
 from __future__ import annotations
 
 import asyncio
-from collections.abc import Iterator
+from collections.abc import Callable, Iterator
 from pathlib import Path
 from typing import Any
 
@@ -17,7 +17,9 @@ from fastapi.testclient import TestClient
 from pydantic import SecretStr
 
 from app.config import Environment, Settings
-from app.content.test_curriculum import load_test_curriculum
+from app.content.package import LessonPackage
+from app.content.store import FixtureApproval, import_package, publish
+from app.content.test_curriculum import build_packages, load_test_curriculum
 from app.main import create_app
 from app.runtime import Resources
 from tests.conftest import CONTRACT_HEADERS, TEST_PEPPER, test_redis_url
@@ -98,3 +100,22 @@ def learner(client: TestClient, *, track: str = "explorer", language: str = "ar"
 
 def user_id(client: TestClient, headers: dict[str, str]) -> str:
     return str(client.get("/v1/me", headers=headers).json()["user_id"])
+
+
+def revise(settings: Settings, lesson_id: str, change: Callable[[dict[str, Any]], None]) -> None:
+    """Import and publish a new version of ``lesson_id`` through the real pipeline."""
+    original = next(p for p in build_packages() if p.lesson_id == lesson_id)
+    data = original.model_dump(mode="json")
+    change(data)
+    package = LessonPackage.model_validate(data)
+
+    async def main() -> None:
+        resources = Resources.create(settings)
+        try:
+            async with resources.sessionmaker() as db, db.begin():
+                result = await import_package(db, package, origin="test_fixture", allow_placeholder_media=True)
+                await publish(db, settings, result.lesson_version_id, FixtureApproval())
+        finally:
+            await resources.close()
+
+    asyncio.run(main())
