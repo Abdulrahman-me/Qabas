@@ -39,6 +39,33 @@ class Dorar(HttpAdapter):
         entries = require(self.provider, fetched.data, "data", list)
         return [self._record("search", arguments, fetched, entry) for entry in entries]
 
+    def validate_response(self, operation: str, arguments: dict[str, Any], data: Any) -> None:
+        if operation == "search":
+            entries = require(self.provider, data, "data", list)
+        elif operation == "alternate":
+            if not isinstance(data, dict) or "data" not in data:
+                raise ProviderResponseInvalid(self.provider, "alternate response has no data field")
+            if data["data"] is None:
+                raise RecordNotFound(self.provider, "no authentic alternative recorded")
+            entries = [require(self.provider, data, "data", dict)]
+        elif operation == "sharh":
+            item = require(self.provider, data, "data", dict)
+            meta = require(self.provider, item, "sharhMetadata", dict)
+            if str(meta.get("id")) != str(arguments["sharh_id"]):
+                raise ProviderResponseInvalid(self.provider, "explanation identity differs from request")
+            if meta.get("isContainSharh") is False:
+                raise RecordNotFound(self.provider, "no explanation recorded")
+            require(self.provider, meta, "sharh")
+            return
+        else:
+            entry = require(self.provider, data, "data", dict)
+            if str(entry.get("hadithId")) != str(arguments["hadith_id"]):
+                raise ProviderResponseInvalid(self.provider, "hadith identity differs from request")
+            entries = [entry]
+        for entry in entries:
+            require(self.provider, entry, "hadithId")
+            require(self.provider, entry, "hadith")
+
     async def get(self, hadith_id: str) -> SourceRecord:
         arguments = {"hadith_id": hadith_id}
         fetched = await self.fetch("get", arguments, f"/v1/site/hadith/{hadith_id}")

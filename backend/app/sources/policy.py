@@ -58,7 +58,7 @@ class ProviderPolicy(BaseModel):
         if settings.app_env is Environment.production and self.live != "approved":
             raise ProviderNotConfigured(self.id, "live use is not approved for production yet (O-03)")
 
-    def extra(self, key: str) -> Any:
+    def option(self, key: str) -> Any:
         return (self.model_extra or {}).get(key)
 
 

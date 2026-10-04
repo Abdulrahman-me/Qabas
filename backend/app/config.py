@@ -83,6 +83,7 @@ class Settings(BaseSettings):
     dorar_base_url: str = "http://127.0.0.1:5000"           # the local sidecar (scripts/dorar_sidecar.py)
     dorar_sidecar_dir: Path = BACKEND_DIR / "var" / "sidecars" / "dorar"
     quran_foundation_api_base: str = "https://apis.quran.foundation/content/api/v4"
+    quran_foundation_search_base: str = "https://apis.quran.foundation/search"
     quran_foundation_auth_url: str = "https://oauth2.quran.foundation/oauth2/token"
     quran_audio_base_url: str = "https://verses.quran.com/"
     hadeethenc_base_url: str | None = None

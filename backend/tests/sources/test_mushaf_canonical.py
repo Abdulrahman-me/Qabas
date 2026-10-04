@@ -34,7 +34,8 @@ def test_structure(mushaf: Mushaf) -> None:
 
 
 def test_agrees_with_the_recorded_capability_text(mushaf: Mushaf) -> None:
-    recorded = json.loads((RECORDINGS / "quran_com" / "verse_4_103.json").read_text("utf-8"))["response"]["body"]["verse"]
+    payload = json.loads((RECORDINGS / "quran_com" / "verse_4_103.json").read_text("utf-8"))
+    recorded = payload["response"]["body"]["verse"]
     words = [w["text_qpc_hafs"] for w in recorded["words"] if w["char_type_name"] == "word"]
     canonical = mushaf.get(4, 103).words
     assert [normalize_ar(w) for w in words] == [normalize_ar(w.text) for w in canonical]
@@ -42,9 +43,9 @@ def test_agrees_with_the_recorded_capability_text(mushaf: Mushaf) -> None:
 
 
 @pytest.mark.parametrize(("reference", "key", "words"), [
-    ("Ash-Shura 42:51", "42:51", 22), ("An-Nahl 16:36", "16:36", 28), ("As-Sajdah 32:2–3", "32:2-3", 26),
+    ("Ash-Shura 42:51", "42:51", 22), ("An-Nahl 16:36", "16:36", 28), ("As-Sajdah 32:2\u20133", "32:2-3", 26),
     ("Al-Baqarah 2:23", "2:23", 20), ("An-Nisa 4:82", "4:82", 13), ("Sad 38:86", "38:86", 10),
-    ("Al-Anam 6:162–163", "6:162-163", 17), ("Ali Imran 3:19", "3:19", 26),
+    ("Al-Anam 6:162\u2013163", "6:162-163", 17), ("Ali Imran 3:19", "3:19", 26),
 ])
 def test_unit0_references_resolve(mushaf: Mushaf, reference: str, key: str, words: int) -> None:
     passage = mushaf.resolve(reference)

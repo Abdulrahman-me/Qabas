@@ -7,9 +7,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Protocol
 
-
-class ProviderNotConfigured(RuntimeError):
-    """The provider for this capability has not been configured for this environment."""
+from app.sources.errors import ProviderNotConfigured as ProviderNotConfigured
+from app.sources.records import SourceRecord as SourceRecord
 
 
 @dataclass(frozen=True)
@@ -67,24 +66,10 @@ class TextToSpeech(Protocol):
     async def synthesize(self, *, text: str, language: str, voice: str | None = None) -> bytes: ...
 
 
-@dataclass(frozen=True)
-class SourceRecord:
-    provider: str
-    provider_record_id: str
-    kind: str
-    title: str
-    reference: str
-    text: str
-    url: str | None
-    raw: dict[str, Any]
-    text_sha256: str
-    adapter_version: str
-
-
 class SourceTool(Protocol):
     """Phase 9. One allow-listed evidence tool (SOURCE_ADAPTERS §12); returned text is data, never instructions."""
 
-    name: str
+    provider: str
     version: str
 
     async def call(self, operation: str, **arguments: Any) -> list[SourceRecord]: ...

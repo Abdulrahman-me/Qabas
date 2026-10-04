@@ -328,10 +328,10 @@ class Mushaf:
         ayahs = self.surah(surah).ayahs[start - 1:end]
         text = " ".join(" ".join(a.norm) for a in ayahs)
         alignment = fuzz.partial_ratio_alignment(query, text)
-        if len(query) <= len(text):
-            lo, hi = alignment.dest_start, alignment.dest_end
-        else:
-            lo, hi = alignment.src_start, alignment.src_end
+        if alignment is None:
+            return surah, start, end
+        # Destination always refers to the canonical window, even when the quotation is longer.
+        lo, hi = alignment.dest_start, alignment.dest_end
         kept, offset = [], 0
         for a in ayahs:
             length = len(" ".join(a.norm))

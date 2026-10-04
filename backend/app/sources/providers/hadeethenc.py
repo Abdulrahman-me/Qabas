@@ -11,7 +11,7 @@ from __future__ import annotations
 from typing import Any, ClassVar
 
 from app.config import Settings
-from app.sources.errors import OperationUnsupported, RecordNotFound
+from app.sources.errors import OperationUnsupported, ProviderResponseInvalid, RecordNotFound
 from app.sources.providers.base import Fetched, HttpAdapter, combine, require
 from app.sources.records import Part, SourceRecord
 from app.sources.resilience import ProviderHttp
@@ -34,8 +34,14 @@ class HadeethEnc(HttpAdapter):
         fetched = await self.fetch("one", {"id": hadith_id, "language": language}, "/hadeeths/one/",
                                    {"language": language, "id": hadith_id})
         if str(require(self.provider, fetched.data, "id")) != str(hadith_id):
-            raise RecordNotFound(self.provider, f"hadith {hadith_id} ({language}) answered with another id")
+            raise ProviderResponseInvalid(self.provider, "hadith identity differs from request")
         return fetched
+
+    def validate_response(self, operation: str, arguments: dict[str, Any], data: Any) -> None:
+        if str(require(self.provider, data, "id")) != str(arguments["id"]):
+            raise ProviderResponseInvalid(self.provider, "hadith identity differs from request")
+        require(self.provider, data, "title")
+        require(self.provider, data, "hadeeth")
 
     async def get(self, hadith_id: str, language: str) -> SourceRecord:
         arguments = {"id": str(hadith_id), "language": language}

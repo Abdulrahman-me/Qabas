@@ -12,7 +12,7 @@ from app.sources.cache import CachedResponse, SourceCache
 from app.sources.errors import OperationUnsupported, ProviderResponseInvalid
 from app.sources.policy import ProviderPolicy, policy
 from app.sources.records import Retrieval, SourceRecord, canonical_json, sha256_bytes, sha256_text, utcnow
-from app.sources.resilience import ProviderHttp
+from app.sources.resilience import ProviderHttp, Response
 
 
 @dataclass(frozen=True)
@@ -79,15 +79,30 @@ class HttpAdapter(Adapter):
         """Cache first (only where the provider's terms allow), then the live provider (only where O-03 allows)."""
         hit = await self.cached(operation, arguments)
         if hit is not None:
+            self.validate_response(operation, arguments, hit.data)
             return hit
         self.policy.require_live(self.settings)
-        response = await self.http.get_json(path, params, headers=await self.auth_headers())
-        fetched = Fetched(response.data, sha256_bytes(response.body), self.clock(), False)
+        response = await self.request_json(operation, arguments, path, params, headers)
+        fetched = Fetched(self.safe_response(response.data), sha256_bytes(response.body), self.clock(), False)
         await self.remember(operation, arguments, fetched)
         return fetched
 
+    async def request_json(self, operation: str, arguments: dict[str, Any], path: str,
+                           params: Mapping[str, Any] | None, headers: Mapping[str, str] | None) -> Response:
+        return await self.http.get_json(path, params,
+                                       headers={**(headers or {}), **(await self.auth_headers() or {})},
+                                       validate=lambda data: self.validate_response(operation, arguments, data))
+
+    def safe_response(self, data: Any) -> Any:
+        return data
+
     async def auth_headers(self) -> dict[str, str] | None:
         return None
+
+    def validate_response(self, operation: str, arguments: dict[str, Any], data: Any) -> None:
+        """Validate documented payloads before caching or counting an upstream call as healthy."""
+        if not isinstance(data, dict):
+            raise ProviderResponseInvalid(self.provider, "response must be an object")
 
 
 def combine(parts: Mapping[str, Fetched]) -> Fetched:

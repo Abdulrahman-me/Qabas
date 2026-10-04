@@ -20,7 +20,7 @@ from typing import Any
 
 import httpx
 
-from app.sources.errors import ProviderResponseInvalid, RecordNotFound, UpstreamUnavailable
+from app.sources.errors import AuthenticationRejected, ProviderResponseInvalid, RecordNotFound, UpstreamUnavailable
 
 CONNECT_TIMEOUT = 5.0
 READ_TIMEOUT = 15.0
@@ -124,19 +124,35 @@ class ProviderHttp:
         await self._client.aclose()
 
     async def get_json(self, path: str, params: Mapping[str, Any] | None = None, *,
-                       headers: Mapping[str, str] | None = None) -> Response:
-        return await self.request("GET", path, params=params, headers=headers)
+                       headers: Mapping[str, str] | None = None,
+                       validate: Callable[[Any], None] | None = None) -> Response:
+        return await self.request("GET", path, params=params, headers=headers, validate=validate)
 
     async def request(self, method: str, path: str, *, params: Mapping[str, Any] | None = None,
-                      headers: Mapping[str, str] | None = None, data: Mapping[str, str] | None = None) -> Response:
+                      headers: Mapping[str, str] | None = None, data: Mapping[str, str] | None = None,
+                      auth: httpx.Auth | None = None, validate: Callable[[Any], None] | None = None) -> Response:
         self.breaker.before_call()
+        try:
+            return await self._request(method, path, params=params, headers=headers, data=data,
+                                       auth=auth, validate=validate)
+        except asyncio.CancelledError:
+            # Cancellation is not evidence of an upstream outage. Release a half-open slot.
+            self.breaker.trial_in_flight = False
+            raise
+
+    async def _request(self, method: str, path: str, *, params: Mapping[str, Any] | None,
+                       headers: Mapping[str, str] | None, data: Mapping[str, str] | None,
+                       auth: httpx.Auth | None, validate: Callable[[Any], None] | None) -> Response:
         last = ""
         for attempt in range(self.retry.retries + 1):
             if attempt:
                 await self.retry.sleep(self.retry.delay(attempt - 1))
             try:
-                response = await self._client.request(method, path, params=params, headers=headers, data=data)
+                response = await self._client.request(method, path, params=params, headers=headers,
+                                                      data=data, auth=auth)
                 result = self._interpret(response)
+                if validate is not None:
+                    validate(result.data)
             except _Retryable as exc:
                 last = exc.reason
                 continue
@@ -162,11 +178,13 @@ class ProviderHttp:
         if status == 429 or status >= 500:
             raise _Retryable(f"HTTP {status}")
         if status == 404:
-            raise RecordNotFound(self.provider, f"{response.request.url.path} not found")
-        if status in (401, 403):
+            raise RecordNotFound(self.provider, "record not found")
+        if status == 401:
+            raise AuthenticationRejected(self.provider, "HTTP 401 (credentials or access refused)")
+        if status == 403:
             raise UpstreamUnavailable(self.provider, f"HTTP {status} (credentials or access refused)")
         if status >= 400:
-            raise ProviderResponseInvalid(self.provider, f"HTTP {status} for {response.request.url.path}")
+            raise ProviderResponseInvalid(self.provider, f"HTTP {status}")
         body = response.content
         try:
             data = json.loads(body)

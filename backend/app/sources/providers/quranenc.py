@@ -26,11 +26,25 @@ class QuranEnc(HttpAdapter):
 
     @classmethod
     def create(cls, settings: Settings, **kwargs: Any) -> QuranEnc:
-        http = ProviderHttp(cls.provider, settings.quranenc_base_url or BASE_URL, transport=kwargs.pop("transport", None))
+        http = ProviderHttp(cls.provider, settings.quranenc_base_url or BASE_URL,
+                            transport=kwargs.pop("transport", None))
         return cls(settings, http, **kwargs)
 
     async def _catalogue(self, language: str) -> Fetched:
         return await self.fetch("catalogue", {"language": language}, f"/translations/list/{language}")
+
+    def validate_response(self, operation: str, arguments: dict[str, Any], data: Any) -> None:
+        if operation == "catalogue":
+            for item in require(self.provider, data, "translations", list):
+                require(self.provider, item, "key")
+                require(self.provider, item, "title")
+                require(self.provider, item, "version", (str, int))
+        else:
+            item = require(self.provider, data, "result", dict)
+            if str(item.get("sura")) != str(arguments["surah"]) or str(item.get("aya")) != str(arguments["ayah"]):
+                raise ProviderResponseInvalid(self.provider, "translation verse identity differs from request")
+            require(self.provider, item, "translation")
+            require(self.provider, item, "arabic_text")
 
     async def catalogue(self, language: str) -> dict[str, dict[str, Any]]:
         items = require(self.provider, (await self._catalogue(language)).data, "translations", list)

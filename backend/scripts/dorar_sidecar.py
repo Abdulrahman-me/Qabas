@@ -24,11 +24,12 @@ from app.sources.sidecar import REVISION_FILE, DorarSidecar, pinned_revision
 
 
 def install(directory: Path, ssl_backend: str | None) -> int:
-    sidecar = policy("dorar").extra("sidecar") or {}
+    sidecar = policy("dorar").option("sidecar") or {}
     revision = pinned_revision()
     git = ["git"] + (["-c", f"http.sslBackend={ssl_backend}"] if ssl_backend else [])
     if directory.exists():
-        shutil.rmtree(directory)
+        print("destination already exists; choose an empty DORAR_SIDECAR_DIR", file=sys.stderr)
+        return 1
     directory.parent.mkdir(parents=True, exist_ok=True)
     subprocess.run([*git, "clone", "--quiet", sidecar["repository"], str(directory)], check=True)
     subprocess.run(["git", "-C", str(directory), "checkout", "--quiet", revision], check=True)

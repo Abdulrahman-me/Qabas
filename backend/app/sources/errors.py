@@ -20,6 +20,10 @@ class ProviderResponseInvalid(UpstreamUnavailable):
     """The provider answered with something that is not the documented shape. Treated as an outage, not as data."""
 
 
+class AuthenticationRejected(UpstreamUnavailable):
+    """HTTP 401; only an explicitly supported OAuth refresh flow may repeat this request."""
+
+
 class ProviderNotConfigured(SourceError):
     """Credentials or live approval (O-03) are missing for this environment."""
 

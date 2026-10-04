@@ -14,13 +14,13 @@ from tests.sources import synthetic
 # ---------------------------------------------------------------- normalize_ar
 @pytest.mark.parametrize(("raw", "expected"), [
     ("ٱلۡكِتَٰبُ", "الكتب"),                              # harakat, small marks, dagger alef, wasla
-    ("أَإِآٱ", "اااا"),                                     # alef variants
+    ("أَإِآٱ", "\u0627" * 4),                              # alef variants
     ("مُوسَىٰ", "موسي"), ("صَلَاةٌ", "صلاه"),              # alef maqsura, ta marbuta
     ("مُؤۡمِن", "مومن"), ("قَائِم", "قايم"),               # hamza carriers
     ("قِيَٰمࣰا", "قيما"),                                   # KFGQPC open tanween U+08F0 (F-66)
     ("كـــتاب", "كتاب"),                                   # tatweel
     ("قال: «نعم»، ثم ذهب.", "قال نعم ثم ذهب"),            # punctuation separates words
-    ("الكتاب ۝١٢", "الكتاب"), ("﴿الكتاب﴾", "الكتاب"),    # ayah-end glyph, number, ornate brackets
+    ("الكتاب ۝١٢", "الكتاب"), ("\ufd3f" + "الكتاب" + "\ufd3e", "الكتاب"),  # ayah-end, number, brackets
     ("  كلمة‌  أخرى\n", "كلمه اخري"),                 # zero-width, whitespace
     ("ﻻ", "لا"),                                            # presentation forms (NFKC)
 ])
@@ -92,7 +92,7 @@ def test_get_refuses_what_does_not_exist(args: tuple[int, ...], kwargs: dict[str
 
 def test_resolve_reference_checks_the_name_against_the_number() -> None:
     m = synthetic.mushaf()
-    assert m.resolve("Al-Hadiqah 2:2–3").key == "2:2-3"
+    assert m.resolve("Al-Hadiqah 2:2\u20133").key == "2:2-3"
     assert m.resolve("2:4").key == "2:4"
     with pytest.raises(ReferenceNotFound, match="does not match"):
         m.resolve("Ad-Dars 2:1")
