@@ -47,7 +47,8 @@ def test_guest_creation_returns_a_contract_user(api: TestClient) -> None:
     assert user.user_id.startswith("usr_") and user.created_at.endswith("Z")
 
 
-@pytest.mark.parametrize("body", [{"timezone": "Mars/Olympus"}, {"timezone": "localtime"}, {},
+@pytest.mark.parametrize("body", [{"timezone": "Mars/Olympus"}, {"timezone": "localtime"}, {"timezone": "Factory"},
+                                  {"timezone": "posixrules"}, {"timezone": "../etc/passwd"}, {},
                                   {"timezone": "UTC", "religion": "x"}])
 def test_guest_creation_validates_input(api: TestClient, body: dict[str, str]) -> None:
     response = api.post("/v1/auth/guest", json=body)

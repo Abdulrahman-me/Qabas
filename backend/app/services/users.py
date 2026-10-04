@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import secrets
 from datetime import UTC, datetime
-from zoneinfo import ZoneInfo, ZoneInfoNotFoundError, available_timezones
+from functools import cache
+from importlib import resources
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -46,10 +48,18 @@ def to_contract_user(user: User) -> C.User:
     )
 
 
+@cache
+def iana_zones() -> frozenset[str]:
+    """The IANA zone names shipped with the pinned ``tzdata`` package: one authority on every platform
+    (the OS list differs, e.g. Linux adds ``localtime``). ``Factory`` is a placeholder, not a place."""
+    zones = resources.files("tzdata").joinpath("zones").read_text(encoding="utf-8").split()
+    return frozenset(zones) - {"Factory"}
+
+
 def validate_timezone(name: str) -> str:
-    """An IANA zone name such as ``Asia/Riyadh`` (not ``localtime`` or file paths)."""
+    """An IANA zone name such as ``Asia/Riyadh`` (not ``localtime``, aliases of the OS, or file paths)."""
     candidate = name.strip()
-    if candidate in available_timezones():
+    if candidate in iana_zones():
         try:
             ZoneInfo(candidate)
             return candidate
