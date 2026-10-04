@@ -44,7 +44,7 @@
      "type": "author",
      "kind": "author",
      "description": "<p>مؤسسة خيرية دعوية قائمة على جهود المحتسبين، وتبرعات المحسنين، أسست عام 1414هـ، بتوجيه من العلامة ابن باز - رحمه الله - وتعمل تحت إشراف وزارة الشؤون الإسلامية والأوقاف والدعوة والإرشاد.</p>",
-     "api_url": "https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/get-author/8636/ar/json"
+     "api_url": "https://api3.islamhouse.com/v3/{key}/main/get-author/8636/ar/json"
     },
     {
      "id": 8636,
@@ -53,7 +53,7 @@
      "type": "source",
      "kind": "source",
      "description": "<p>مؤسسة خيرية دعوية قائمة على جهود المحتسبين، وتبرعات المحسنين، أسست عام 1414هـ، بتوجيه من العلامة ابن باز - رحمه الله - وتعمل تحت إشراف وزارة الشؤون الإسلامية والأوقاف والدعوة والإرشاد.</p>",
-     "api_url": "https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/get-author/8636/ar/json"
+     "api_url": "https://api3.islamhouse.com/v3/{key}/main/get-author/8636/ar/json"
     },
     {
      "id": 2828447,
@@ -62,7 +62,7 @@
      "type": "source",
      "kind": "source",
      "description": null,
-     "api_url": "https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/get-author/2828447/ar/json"
+     "api_url": "https://api3.islamhouse.com/v3/{key}/main/get-author/2828447/ar/json"
     },
     {
      "id": 2828466,
@@ -71,7 +71,7 @@
      "type": "author",
      "kind": "author",
      "description": null,
-     "api_url": "https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/get-author/2828466/ar/json"
+     "api_url": "https://api3.islamhouse.com/v3/{key}/main/get-author/2828466/ar/json"
     }
    ],
    "attachments": [

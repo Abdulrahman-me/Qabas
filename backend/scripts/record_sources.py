@@ -76,8 +76,9 @@ def record(provider: str, client: httpx.Client, base: str, requests: list[tuple[
         except ValueError:
             body = response.text
         url = str(response.request.url)
-        if secret:
+        if secret:  # the provider also echoes the key inside response bodies
             url = url.replace(secret, "{key}")
+            body = json.loads(json.dumps(body, ensure_ascii=False).replace(secret, "{key}"))
         saved = {"recorded_from": url, "recorded_at": datetime.now(UTC).date().isoformat(),
                  "request": {"method": "GET", "path": path, "query": query},
                  "response": {"status": response.status_code, "content_type": content_type.split(";")[0],
