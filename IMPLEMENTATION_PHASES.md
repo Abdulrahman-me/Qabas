@@ -18,7 +18,7 @@
 | 2 | Core database schema and migrations | ✅ Done | `phase-2` | CI green (151 passed incl. role grants) |
 | 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | ✅ Done | `phase-3` | CI green (218 passed) |
 | 4 | Content storage, registries, projection and seeding | ✅ Done | `phase-4` | CI green (313 passed); conflict D-38 resolved |
-| 5 | Journey, lessons and session creation | 🔄 In progress | `phase-5` | 392 passed locally; CI pending |
+| 5 | Journey, lessons and session creation | ✅ Done | `phase-5` | CI green (393 passed); planner complete (D-44, D-45) |
 | 6 | Answers: replay-first, evaluators, per-answer adaptation | ⏳ Not started | `phase-6` | |
 | 7 | Finish transaction, FSRS, planner, reviews, glossary, stats | ⏳ Not started | `phase-7` | **Milestone A: durable learning slice** |
 | 8 | Content import (Salah reference, Unit 0 drafts), approval-gated publish, staging | ⏳ Not started | `phase-8` | |
@@ -229,7 +229,7 @@ Re-review of 01_PRODUCT, 06_CONTENT, API §5.5c/5.5d/6.3/6.4, the contract model
 
 **Tests:** `tests/learning/` (77): the four contract journeys (structure, Soft Locks, track membership, titles), position never gates, unit passing satisfies prerequisites, track switch keeps completions, coming-soon units, `in_progress` from any session, the planner through a whole path and with due reviews, all 34 contract lesson sessions reproduced through `POST /sessions`, Discover identity (no surface field, byte-identical content), one active session per key (also after a track change, and four concurrent starts → one session), language pinning, request validation, all six assessment compositions against the contract banks, serve-time shuffle kept on resume, card and quick review selection, track-scoped reviews, history redaction for all three modes, ownership, abandon, version pinning across a republish (title, key and feedback changes), pools after a revision, unit guides with sources and term cards, reader projection. Plus validation tests for answer-revealing banks and the open-unit decision.
 **Local status:** 392 passed, 1 skipped (role privileges, CI only); ruff and mypy clean; contract suites 595/279/105/382 PASS; OpenAPI regenerated (7 new operations, contract schemas only); `alembic check` clean (no migration needed); production seed unchanged on re-run; end-to-end on the dev database with the production curriculum (all units coming soon, sessions `404`, journey complete).
-**Exit:** CI green; tag `phase-5`.
+**Exit:** ✅ CI green on GitHub (run 37218397023: 393 passed incl. role grants, contract suites green); tagged `phase-5`.
 
 ### Handoff review findings (Phase 5)
 
@@ -588,3 +588,4 @@ Re-review of BACKEND §6–7, API §3.2/§3.4/§5.9/§6.3–6.5, DATA_MODEL inva
 | 2026-10-04 | 4 | Handoff re-reviewed for curriculum and content rules; 13 findings recorded (F-1–F-13), one genuine conflict resolved (D-38). Built the curriculum file and slots (migration 0002), registries, the lesson package model, deterministic validators, versioned storage, digest-bound publication, unit availability, projections and the seed script. Bugs found and fixed during the build: 1-based lesson index, sentence/claim ID prefixes, JSONB losing exercise order (digest mismatch). 312 tests green locally; CI pending. |
 | 2026-10-04 | 4 | ✅ Phase 4 complete: CI green (313 passed incl. role grants; contract suites green); tagged `phase-4`, merged to `main`. |
 | 2026-10-04 | 5 | Handoff re-reviewed for learner delivery (12 findings F-14–F-25). Built the journey service, the complete planner, guide/reader/session endpoints, assessment and review composition, resume with redaction, abandon and term cards; hardened Phase 4 (D-41, D-42) and corrected the Phase 3 planner (D-44). 392 tests green locally; CI pending. |
+| 2026-10-04 | 5 | ✅ Phase 5 complete: CI green (393 passed incl. role grants; contract suites green); tagged `phase-5`, merged to `main`. |
