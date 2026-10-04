@@ -121,6 +121,12 @@ class Settings(BaseSettings):
     def is_dev_like(self) -> bool:
         return self.app_env in (Environment.dev, Environment.test)
 
+    @property
+    def allows_fixture_content(self) -> bool:
+        """The contract's synthetic test curriculum may be loaded and published here (D-29, D-84): dev, test and
+        the staging environment frontend integration runs against. Never production."""
+        return self.app_env in (Environment.dev, Environment.test, Environment.staging)
+
     def peppers(self) -> list[bytes]:
         """Current pepper first, then the previous one accepted during rotation."""
         if self.auth_token_pepper is None:

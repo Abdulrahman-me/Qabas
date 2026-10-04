@@ -30,7 +30,13 @@ from app.content.store import (
     load_package,
     publish,
 )
-from app.content.test_curriculum import CURRICULUM_DIR, build_curriculum, build_packages, load_test_curriculum
+from app.content.test_curriculum import (
+    CURRICULUM_DIR,
+    FixtureError,
+    build_curriculum,
+    build_packages,
+    load_test_curriculum,
+)
 from app.content.validation import ContentValidationError
 from app.contract import models as C
 from app.models import Concept, Exercise, Lesson, LessonVersion, ReviewDecision, Unit, User
@@ -188,16 +194,25 @@ async def test_changed_content_is_a_new_version_and_old_versions_stay_immutable(
         assert sqlstate(exc.value) == "QB001"
 
 
-async def test_fixture_content_never_publishes_outside_dev_or_test(resources: Resources) -> None:
+async def test_fixture_content_never_publishes_in_production(resources: Resources) -> None:
+    # D-29, D-84: dev, test and staging (frontend integration) may hold the synthetic curriculum; production never.
     async with resources.sessionmaker() as db, db.begin():
         await apply_curriculum(db, build_curriculum())
     package = build_packages()[0]
-    staging = resources.settings.model_copy(update={"app_env": "staging"})
+    production = resources.settings.model_copy(update={"app_env": "production"})
     async with resources.sessionmaker() as db:
         with pytest.raises(ContentValidationError, match="fixture approval applies only"):
             async with db.begin():
                 result = await import_package(db, package, origin="test_fixture", allow_placeholder_media=True)
-                await publish(db, staging, result.lesson_version_id, FixtureApproval())
+                await publish(db, production, result.lesson_version_id, FixtureApproval())
+    with pytest.raises(FixtureError, match="never loaded into production"):
+        async with resources.sessionmaker() as db, db.begin():
+            await load_test_curriculum(db, production)
+    staging = resources.settings.model_copy(update={"app_env": "staging"})
+    assert staging.allows_fixture_content and not production.allows_fixture_content
+    with pytest.raises(ValueError, match="fixture allowances apply only to test-fixture content"):
+        async with resources.sessionmaker() as db, db.begin():
+            await import_package(db, package, origin="gold_import", allow_placeholder_media=True)
 
 
 async def test_reviewer_approval_is_bound_to_the_digest(resources: Resources) -> None:

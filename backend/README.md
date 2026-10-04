@@ -54,7 +54,7 @@ py -3.12 scripts\dev\install_git_hooks.py              # pre-commit public-safet
 | Scheduler (outbox relay every 5 s, cleanups) | `uv run celery -A app.workers.celery_app beat` |
 | Validate the curriculum file | `uv run python scripts/seed.py --check` (no database needed) |
 | Seed the curriculum structure | `uv run python scripts/seed.py` (units, lesson slots, concept graph; safe to re-run, refuses destructive changes) |
-| Load the contract test curriculum (dev/test DB only) | `uv run python scripts/seed.py --test-curriculum` (publishes the synthetic test lessons through the real pipeline; refused outside dev/test) |
+| Load the contract test curriculum (dev/test/staging DB only) | `uv run python scripts/seed.py --test-curriculum` (publishes the synthetic test lessons through the real pipeline; refused in production, D-84) |
 | Create or re-key a reviewer | `uv run python scripts/create_reviewer.py --email reviewer@example.org --name "Reviewer"` (prompts for the password) |
 | Before `alembic upgrade` past 0003 on a database with old active sessions | `uv run python scripts/abandon_legacy_sessions.py` lists them; add `--confirm` to abandon them (migration 0004 refuses to run otherwise) |
 | After restoring a backup | `uv run python scripts/repurge_deleted_users.py` (purges every deleted account again, before reopening traffic) |
@@ -89,6 +89,36 @@ The durable `session.finished` outbox records are retained for the achievement/l
 added in later phases. No reported finish effect depends on a worker. `/me/stats` has `league: null` until
 Phase 18 implements league assignment. The normative quest pool already includes `win_challenge`, whose
 activity arrives with challenges in Phases 19–20.
+
+## Real content: gold lessons (Phase 8)
+
+Real lessons reach learners only through one path: **convert → import (unpublished) → specialist approval of the
+exact content digest, which publishes** (factory §13.6–13.7). There is no demo path and no shortcut.
+
+| Step | Command |
+|---|---|
+| Convert the Unit 0 authoring drafts | `uv run python scripts/import_gold.py convert unit0 --source <UNIT_0_CONTENT/lessons> --report unit0-report.json` |
+| Convert the Salah reference export | `uv run python scripts/import_gold.py convert salah --source <reply8/reference_export> [--completion <completion.json>]` |
+| Import gold files (unpublished) | `uv run python scripts/import_gold.py import <gold.json>...` |
+| Show a stored version and its digest | `uv run python scripts/review_gold.py show --lesson les_u3_l2` |
+| Approve and publish (Gate 2-equivalent) | `uv run python scripts/review_gold.py approve --lesson … --version … --digest … --reviewer <email>` (prompts the reviewer's own password) |
+| Reject | `uv run python scripts/review_gold.py reject --lesson … --version … --digest … --reviewer <email> --reason "…"` |
+
+`convert` writes a gold file only for a lesson with no blockers; the report lists every blocker and who resolves it
+(the reasoning-tool mapping in `content/mappings/reasoning_tools.yaml`, concept registration in
+`content/curriculum.yaml`, verified sources, published scene media, the Salah completion record). Pending,
+unapproved gold files go to the git-ignored `backend/.private/content/gold/` (the default `--out`); approved
+lessons are committed under `content/gold/` and imported the same way. Today every Unit 0 lesson and the
+Salah reference are correctly blocked (see `IMPLEMENTATION_PHASES.md`, Phase 8).
+
+## Staging
+
+Staging is a non-production environment for frontend integration (`APP_ENV=staging`): the same code, migrations and
+native services as production, plus the contract's synthetic test curriculum (`scripts/seed.py
+--test-curriculum`, allowed in dev, test and staging and refused in production, D-84). Approved real content is
+imported and published there through the same gold path. Staging needs real secrets (`AUTH_TOKEN_PEPPER`,
+`STORAGE_SIGNING_KEY`) like production; it does not use the dev-only fallbacks. Provisioning the staging host is
+an operations dependency.
 
 ## Network note
 

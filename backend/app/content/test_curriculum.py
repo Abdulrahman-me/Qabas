@@ -4,7 +4,8 @@ SEED_AND_IMPORT §15: ``scripts/seed.py --test-curriculum`` loads 3 units x 3-4 
 unit, shared units 2-3, both languages, concept/story/practice, prerequisite chains with Soft Locks,
 standalone lessons, an image-only lesson and a lesson on the generated scene) plus ``fixtures/scenes``. It is a
 synthetic contract witness, not curriculum content, and it goes through exactly the same import and
-publication pipeline as real lessons, with ``origin = test_fixture``. That is allowed only in dev/test (D-29).
+publication pipeline as real lessons, with ``origin = test_fixture``. That is allowed only outside production
+(D-29, D-84).
 
 The fixtures are served Session snapshots, so this module rebuilds the stored form from them without
 guessing: every lesson exercise must be byte-identical to a contract exercise specimen (keys and feedback
@@ -406,8 +407,8 @@ def _visuals(node: Any) -> list[dict[str, Any]]:
 
 async def load_test_curriculum(db: AsyncSession, settings: Settings) -> dict[str, int]:
     """Seed and publish the whole test curriculum (caller owns the transaction)."""
-    if not settings.is_dev_like:
-        raise FixtureError("the test curriculum is test data; it is never loaded into staging or production")
+    if not settings.allows_fixture_content:
+        raise FixtureError("the test curriculum is test data; it is never loaded into production")
     from app.content.store import apply_curriculum
 
     await apply_curriculum(db, build_curriculum())

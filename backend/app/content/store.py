@@ -389,7 +389,7 @@ class Approval:
 
 
 class FixtureApproval:
-    """Test fixtures only: publishable outside staging/production, never with real approval semantics."""
+    """Test fixtures only: publishable outside production (D-29, D-84), never with real approval semantics."""
 
 
 async def publish(db: AsyncSession, settings: Settings, lesson_version_id: uuid.UUID,
@@ -407,8 +407,8 @@ async def publish(db: AsyncSession, settings: Settings, lesson_version_id: uuid.
 
     fixture = isinstance(approval, FixtureApproval)
     if fixture:
-        if lv.origin != "test_fixture" or not settings.is_dev_like:
-            raise _fail("fixture approval applies only to test-fixture content in dev/test environments")
+        if lv.origin != "test_fixture" or not settings.allows_fixture_content:
+            raise _fail("fixture approval applies only to test-fixture content outside production")
         reviewed_by = FIXTURE_REVIEWER
     else:
         if lv.origin == "test_fixture":

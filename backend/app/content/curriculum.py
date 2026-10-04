@@ -16,7 +16,8 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError, model_valida
 from app.contract import models as C
 from app.registries import registries
 
-CURRICULUM_PATH = Path(__file__).resolve().parents[2] / "content" / "curriculum.yaml"
+CONTENT_DIR = Path(__file__).resolve().parents[2] / "content"
+CURRICULUM_PATH = CONTENT_DIR / "curriculum.yaml"
 
 Lang = Literal["ar", "en"]
 Track = Literal["explorer", "new_muslim"]

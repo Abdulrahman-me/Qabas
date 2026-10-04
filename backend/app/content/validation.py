@@ -59,7 +59,7 @@ class Context:
     known_sources: set[str] = field(default_factory=set)
     known_misconceptions: set[str] = field(default_factory=set)
     known_concepts: set[str] = field(default_factory=set)
-    allow_placeholder_media: bool = False  # only for test fixtures outside staging/production (D-29)
+    allow_placeholder_media: bool = False  # only for test fixtures, never production (D-29, D-84)
     allow_timed_items: bool = False        # only for test fixtures: the contract specimens carry 20 s timers (D-61)
 
 

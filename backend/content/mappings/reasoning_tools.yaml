@@ -1,0 +1,23 @@
+# Reasoning-tool mapping for the Unit 0 authoring drafts (decision D-40, O-12).
+#
+# The drafts name nine reasoning tools that are not in the revision 10 contract, whose LessonPlan and claim
+# reasoning accept only: observation, inference, testimony, historical_evidence, causal_reasoning, comparison.
+# Choosing the contract tool for each draft tool is a pedagogical and scholarly decision. It is NOT made by
+# engineering: every entry stays null and `status: pending` until a content specialist records the approved
+# mapping (status: approved, approved_by, approved_on). While any used tool is unmapped, the Unit 0 converter
+# reports `reasoning_tool_unmapped` and produces no gold lesson.
+
+schema: qabas.reasoning_tool_mapping/1
+status: pending
+approved_by: null
+approved_on: null
+mapping:
+  observation_vs_inference: null
+  limits_of_inference: null
+  test_explanation: null
+  limits_of_analogy: null
+  conditional_reasoning: null
+  test_conflicting_choices: null
+  effects_vs_intentions: null
+  message_route_comparison: null
+  proportionate_claim_checking: null
