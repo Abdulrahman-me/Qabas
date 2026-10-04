@@ -2,6 +2,9 @@
 # (contains private answer keys, unapproved content and large archives).
 /FINAL_ENGINEERING_HANDOFF/
 
+# Local private mirror of handoff fixtures, grading keys and API prose (D-14). Never committed.
+/backend/.private/
+
 # Secrets and local configuration
 .env
 .env.*

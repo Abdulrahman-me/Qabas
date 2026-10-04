@@ -1,0 +1,17 @@
+{
+  "scope": "existing compiled UnitArtIcon drawings; no downloads",
+  "keys": {
+    "starry_sky": "starrySky",
+    "footprints": "footprints",
+    "water_drop": "waterDrop",
+    "prayer_rug": "prayerRug",
+    "lantern": "lantern",
+    "book": "book",
+    "heart": "heart",
+    "compass": "compass",
+    "questions": "questions"
+  },
+  "default": null,
+  "unknown_key": "reject content before publication",
+  "null": "omit bucket artwork"
+}

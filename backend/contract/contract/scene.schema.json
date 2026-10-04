@@ -1,0 +1,766 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qabas.app/schemas/scene-1.json",
+  "title": "Qabas scene manifest (qabas.scene/1)",
+  "description": "Declarative animated scene interpreted by the Flutter scene renderer. No code, no scripts, no text glyphs. Localized labels and scripture are drawn by Flutter UI overlays, never in the scene.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scene_id",
+    "version",
+    "view_box",
+    "required_capabilities",
+    "palette",
+    "assets",
+    "states",
+    "layers",
+    "anchors",
+    "reduced_motion",
+    "preview"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "qabas.scene/1"
+    },
+    "scene_id": {
+      "type": "string",
+      "pattern": "^scn_[a-z0-9_]+$"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "view_box": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "width",
+        "height"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4096
+        }
+      }
+    },
+    "required_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "palette": {
+      "type": "object",
+      "description": "Named colors. Values are #RRGGBB / #RRGGBBAA or token:<name> from the app theme tokens.",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^(#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?|token:[a-z0-9_]+)$"
+      }
+    },
+    "assets": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "asset_id",
+          "url",
+          "mime_type",
+          "width",
+          "height",
+          "bytes",
+          "sha256"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "mime_type": {
+            "enum": [
+              "image/webp",
+              "image/png",
+              "image/jpeg",
+              "image/svg+xml"
+            ]
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1048576
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "states": {
+      "type": "object",
+      "maxProperties": 6,
+      "description": "Declared state inputs. Visual.params gives initial values; story beats and TeachPoint.visual_params change them.",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "default"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "int",
+              "bool",
+              "enum"
+            ]
+          },
+          "min": {
+            "type": "integer"
+          },
+          "max": {
+            "type": "integer"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "default": {}
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "int"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "min",
+                "max"
+              ],
+              "properties": {
+                "default": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "bool"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "default": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "enum"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "values"
+              ],
+              "properties": {
+                "default": {
+                  "type": "string"
+                },
+                "values": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "layers": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 60,
+      "items": {
+        "$ref": "#/$defs/layer"
+      }
+    },
+    "anchors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "anchor_id",
+          "layer_id",
+          "x",
+          "y",
+          "radius"
+        ],
+        "properties": {
+          "anchor_id": {
+            "type": "string"
+          },
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "radius": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "layer_id": {
+            "type": "string",
+            "description": "Layer whose on-screen position the anchor marks. For graded hotspots the layer and its ancestors must be positionally static; descendants may only move within the bounded decorative limits (scene_capabilities.json limits.anchor_motion)."
+          }
+        }
+      },
+      "description": "Static view-box points marking interactable objects. Anchors never move; validators ensure the anchored layer stays under them in every permitted state and animation time."
+    },
+    "reduced_motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "still_time_ms"
+      ],
+      "properties": {
+        "still_time_ms": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "preview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "frames_ms",
+        "states"
+      ],
+      "properties": {
+        "frames_ms": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "minItems": 1,
+          "maxItems": 6
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 1,
+          "maxItems": 8
+        }
+      }
+    }
+  },
+  "$defs": {
+    "number_or_state": {
+      "type": "number"
+    },
+    "transform": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "rotation": {
+          "type": "number"
+        },
+        "scale": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "origin_x": {
+          "type": "number"
+        },
+        "origin_y": {
+          "type": "number"
+        }
+      }
+    },
+    "paint": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "palette name"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "gradient",
+            "stops"
+          ],
+          "properties": {
+            "gradient": {
+              "enum": [
+                "linear",
+                "radial"
+              ]
+            },
+            "from": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "to": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "center": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "radius": {
+              "type": "number"
+            },
+            "stops": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 4,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "at",
+                  "color"
+                ],
+                "properties": {
+                  "at": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "color": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "condition": {
+      "type": "object",
+      "minProperties": 1,
+      "description": "All listed state conditions must hold.",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "minProperties": 1,
+        "properties": {
+          "eq": {},
+          "gte": {
+            "type": "number"
+          },
+          "lte": {
+            "type": "number"
+          },
+          "in": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "state_rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "when",
+        "set"
+      ],
+      "properties": {
+        "when": {
+          "$ref": "#/$defs/condition"
+        },
+        "set": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "opacity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "rotation": {
+              "type": "number"
+            },
+            "scale": {
+              "type": "number"
+            },
+            "fill": {
+              "type": "string"
+            }
+          }
+        },
+        "transition_ms": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3000
+        },
+        "easing": {
+          "enum": [
+            "linear",
+            "ease_in",
+            "ease_out",
+            "ease_in_out"
+          ]
+        }
+      }
+    },
+    "track": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "property",
+        "duration_ms",
+        "keyframes",
+        "easing",
+        "loop"
+      ],
+      "properties": {
+        "property": {
+          "enum": [
+            "translate_x",
+            "translate_y",
+            "rotation",
+            "scale",
+            "opacity"
+          ]
+        },
+        "duration_ms": {
+          "type": "integer",
+          "minimum": 200,
+          "maximum": 60000
+        },
+        "delay_ms": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 60000
+        },
+        "easing": {
+          "enum": [
+            "linear",
+            "ease_in",
+            "ease_out",
+            "ease_in_out"
+          ]
+        },
+        "loop": {
+          "enum": [
+            "none",
+            "repeat",
+            "ping_pong"
+          ]
+        },
+        "keyframes": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "t",
+              "v"
+            ],
+            "properties": {
+              "t": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "v": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "active_when": {
+          "$ref": "#/$defs/condition"
+        }
+      }
+    },
+    "layer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "type": {
+          "enum": [
+            "group",
+            "rect",
+            "ellipse",
+            "path",
+            "asset",
+            "sparkles"
+          ]
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/layer"
+          }
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "h": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "rx": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "ry": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "corner": {
+          "type": "number"
+        },
+        "d": {
+          "type": "string",
+          "maxLength": 20000
+        },
+        "asset_id": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 40
+        },
+        "seed": {
+          "type": "integer"
+        },
+        "fill": {
+          "$ref": "#/$defs/paint"
+        },
+        "stroke": {
+          "type": "string"
+        },
+        "stroke_width": {
+          "type": "number",
+          "minimum": 0
+        },
+        "opacity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "transform": {
+          "$ref": "#/$defs/transform"
+        },
+        "clip": {
+          "type": "string",
+          "description": "id of a rect/ellipse/path layer used as clip"
+        },
+        "state_rules": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "$ref": "#/$defs/state_rule"
+          }
+        },
+        "tracks": {
+          "type": "array",
+          "maxItems": 10,
+          "items": {
+            "$ref": "#/$defs/track"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "group"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "children"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "rect"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "w",
+              "h",
+              "fill"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "ellipse"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "rx",
+              "ry",
+              "fill"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "path"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "d",
+              "fill"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "asset"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "w",
+              "h",
+              "asset_id"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "sparkles"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "w",
+              "h",
+              "fill",
+              "count",
+              "seed"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

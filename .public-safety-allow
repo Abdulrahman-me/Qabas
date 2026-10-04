@@ -1,0 +1,6 @@
+# Paths allowed to contain Arabic-script text in this PUBLIC repository (see D-14).
+# One glob per line, with a reason. Add an entry only for non-religious text (product name,
+# UI words, synthetic test strings) or verified canonical contract files. Lesson, scripture or
+# curriculum content never goes here.
+README.md                                            # product name (Qabas, in Arabic script)
+backend/contract/contract/registries.template.json   # vendored rev 10 contract; honorific sign in an English goal-anchor label

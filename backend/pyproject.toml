@@ -1,0 +1,71 @@
+[project]
+name = "qabas-backend"
+version = "0.1.0"
+description = "Qabas backend: learning API, workers, Lesson Factory and reviewer services"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    # Pinned to the versions the revision 10 contract suites were verified with.
+    "pydantic==2.12.5",
+    "jsonschema==4.25.1",
+    "pillow==12.0.0",
+    "pydantic-settings>=2.4",
+    "asyncpg>=0.29",
+    "redis>=5.0",
+    "celery[redis]>=5.4",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "httpx>=0.27",
+    "ruff>=0.6",
+    "mypy>=1.11",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
+markers = [
+    "integration: needs the native Postgres/Redis services from backend/.env",
+    "private: needs the git-ignored private handoff mirror in backend/.private/",
+]
+filterwarnings = ["error::DeprecationWarning:app.*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["contract", ".private"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "SIM", "RUF"]
+ignore = ["S101"]  # assert is fine in tests
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S603", "S607"]
+"scripts/**" = ["S603", "S607"]  # fixed-argument git/python invocations
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+mypy_path = "contract/contract"
+files = ["app", "scripts"]
+exclude = ["^contract/", "^\\.private/"]
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["qabas_contract", "contextual", "review", "display_fields", "celery", "celery.*", "kombu", "kombu.*", "asyncpg", "asyncpg.*"]
+ignore_missing_imports = true
+follow_imports = "skip"
+
+[[tool.mypy.overrides]]
+module = ["app.workers.*"]
+disallow_untyped_decorators = false  # celery task decorators are untyped

@@ -14,7 +14,7 @@
 | Phase | Name | Status | Checkpoint tag | Notes |
 |---|---|---|---|---|
 | 0 | Workspace, toolchain and baseline verification | ✅ Done | `phase-0` | |
-| 1 | Contract vendoring and service skeleton | 🔄 In progress | `phase-1` | Public-repo data policy D-14 |
+| 1 | Contract vendoring and service skeleton | 🔄 In progress | `phase-1` | All local checks green; waiting on first CI run |
 | 2 | Core database schema and migrations | ⏳ Not started | `phase-2` | |
 | 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | ⏳ Not started | `phase-3` | |
 | 4 | Content storage, registries, projection and seeding | ⏳ Not started | `phase-4` | |
@@ -97,22 +97,23 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 **Refs:** API §3 (conventions, headers, errors, multipart), SYSTEM_ARCHITECTURE §3.2, BACKEND_IMPLEMENTATION step 1.
 **Public-repo rule (D-14):** only code, schemas and sanitized synthetic test data are committed. Fixtures, answer keys, private handoff material and unapproved religious content stay local and git-ignored.
 
-- [ ] Create the `backend/` layout per SYSTEM_ARCHITECTURE §3.2; `pyproject.toml` + `uv.lock` (Python 3.12).
-- [ ] Vendor the public part of rev 10, the `contract/` directory (models, schema, dispatch map, contextual/review/display helpers, scene schema, capability and art registries), **unchanged** into `backend/contract/`, with a checksum test against the handoff `SHA256SUMS` entries (LF-normalized).
-- [ ] Local private mirror: `scripts/dev/sync_private_contract.py` copies the full `contract_revision10/` (fixtures, tools, `EVALUATION_CONTEXT`, private grading keys) plus `API_REQUIREMENTS.md` into git-ignored `backend/.private/`. `scripts/dev/run_contract_suites.py` runs 595/279/105/382 there (on a disposable copy).
-- [ ] Public-safety guard `scripts/check_public_safety.py` (runs in CI and as a local pre-commit hook): fails on tracked handoff paths, private fixture names (`PRIVATE_GRADING_KEYS`, `EVALUATION_CONTEXT`, `private_keys`, `gold/`, `answer_key` files), `.env` files, and Arabic-script text outside an explicit allow-list.
-- [ ] Sanitized test data policy: repo tests build synthetic, neutral content in code (placeholder lesson text, no scripture or religious claims); tests that need private fixtures are marked `private` and skip when `backend/.private/` is absent.
-- [ ] `app/config.py` (pydantic-settings, all env vars from OPERATIONS §19), `.env.example` with placeholders only.
-- [ ] Error envelope `{error:{code,message,details}}` with every code from API §3.4; `RequestValidationError` mapping.
-- [ ] Contract identity headers and `426 client_outdated` (API §3.2); `Accept-Language` handling.
-- [ ] OpenAPI built from the **custom schema export** (99 roots, nested tagged unions), never from a generic Pydantic export; a test diffs served components against `contract/qabas_contract.schema.json`; export `docs/openapi.json` for the frontend.
-- [ ] Health/readiness endpoints; structured JSON logging with redaction (no tokens, tickets, learner text or answers).
-- [ ] Adapter interfaces (stubs): storage, queue, LLM, STT, image, TTS, sources.
-- [ ] Celery app skeleton with queues `raqeeb`, `factory`, `media`, `maintenance`, `asr`; beat skeleton (Windows dev: `--pool=solo`/threads; note that prefork is Linux-only).
-- [ ] Local object storage for dev: a filesystem-backed implementation of the storage interface, with two roots (`content`, `private`) and signed-URL emulation, so no Docker/MinIO is needed. The S3 implementation follows in Phase 3.
-- [ ] CI workflow (GitHub Actions, ubuntu, Python 3.12, runner-native Postgres/Redis): public-safety guard, ruff, mypy, pytest (public tests). The full contract suites need private fixtures, so they run locally only (D-14).
+- [x] `backend/` layout per SYSTEM_ARCHITECTURE §3.2; `pyproject.toml` + `uv.lock` (Python 3.12; pydantic 2.12.5 / jsonschema 4.25.1 / Pillow 12.0.0 pinned to the contract-verified versions).
+- [x] Public part of rev 10 vendored **unchanged** into `backend/contract/` (D-18): the `contract/` directory plus the runtime tools `scene_check.py`, `recovery.py` and `export_schema.py`. A checksum test runs against `SHA256SUMS.public` (the 14 original handoff checksums), and the schema digest test expects `9d67bda0...481c`.
+- [x] Local private mirror: `scripts/dev/sync_private_contract.py` (fixtures, tools, grading context, API prose into git-ignored `backend/.private/`, plus private-file digests). `scripts/dev/run_contract_suites.py` result: **595/595, 279/279, 105/105, 382/382, schema identical, PASS**.
+- [x] Public-safety guard `scripts/check_public_safety.py`: runs in CI and in the local pre-commit hook (`scripts/dev/install_git_hooks.py`). It blocks handoff/private paths, private-material names, `.env`, Arabic text outside `.public-safety-allow`, and verbatim copies of private handoff files.
+- [x] Sanitized test data policy: tests build synthetic neutral data in code; marker `private` is reserved for tests needing the mirror.
+- [x] `app/config.py` (pydantic-settings, all OPERATIONS §19 variables, secrets as `SecretStr`, staging/production secret checks, P-01 guard), `.env.example`.
+- [x] Error envelope through the contract `ErrorEnvelope` model, with every §3.4 code and status; validation errors are 400 without echoing input; unknown route or method gives 404 (D-16); unhandled errors give 500 with no internals.
+- [x] Contract identity middleware: `Qabas-Contract` on every response, `426 client_outdated` with `min_contract`/`min_app_version`, header rules per D-15; CORS per API §3.2; request IDs.
+- [x] OpenAPI 3.1 whose components are the 99-root custom export flattened (281 definitions plus roots, conflict-checked). Routes referencing a non-contract schema fail the build; 422 responses are replaced by the `ErrorEnvelope` default. Exported to `backend/docs/openapi.json` with a staleness check.
+- [x] `/health/live`, `/health/ready` (real Postgres + Redis checks, no secrets in output), outside `/v1` and the contract document; JSON logging with key and query redaction.
+- [x] Adapter interfaces: LLM, STT, image, TTS, source tools (`app/adapters.py`).
+- [x] Celery app: five queues, prefix routing, acks-late, reject-on-lost, prefetch 1; `maintenance.ping`; Windows dev uses `--pool=solo`.
+- [x] Storage: two-bucket interface with local filesystem implementation (immutable content, HMAC-signed private URLs, key validation). S3 follows in Phase 3.
+- [ ] CI workflow `.github/workflows/ci.yml` (ubuntu-24.04, Python 3.12, runner-native Postgres 16 and Redis, no Docker): guard, ruff, mypy, OpenAPI check, pytest. **Pending its first green run on GitHub.**
 
-**Exit:** contract suites green on 3.12 locally (private mirror); public tests and safety guard green in CI; OpenAPI diff test green; error-envelope test green; tag `phase-1`.
+**Local status:** 84 tests pass (including the integration tests on the real `qabas_test`/Redis), ruff clean, mypy strict clean.
+**Exit:** contract suites green locally (done), CI green on GitHub, tag `phase-1`.
 
 ---
 
@@ -454,6 +455,10 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | 2026-10-04 | D-11 | `UNIT_0_CONTENT/` (12 authored Unit 0 lessons, 20 scene manifests) and `FRONTEND_DEMO_HANDOFF/` are unapproved review drafts outside the frozen manifest. Treated as read-only import inputs. | Unit 0 import added to Phase 8. |
 | 2026-10-04 | D-12 | Python: 3.12.10 installed per-user (`py -3.12`). The chocolatey `python312` 3.12.4 record points at a missing `C:\python312` and was left untouched. uv 0.12.23 installed for locking. | — |
 | 2026-10-04 | D-14 | **Public-repo data policy.** Committed: application code, migrations, the rev 10 `contract/` directory (verified to contain no Arabic text, scripture or answer keys), docs, and synthetic neutral test data. Never committed: `FINAL_ENGINEERING_HANDOFF/`, contract fixtures and tools, `API_REQUIREMENTS.md`, private grading keys and evaluation context, gold/reference lessons, Unit 0 drafts, and any unapproved religious content. Those live in git-ignored `backend/.private/`. A safety guard enforces this in CI and pre-commit. | Full contract suites run locally only. Content imports (Phase 8) read from local private paths; staging data never enters git. |
+| 2026-10-04 | D-15 | Contract-header cases the spec leaves open: a missing or non-integer `Qabas-Contract`, or a missing `Qabas-Client`, is treated as a pre-revision-10 client (`426 client_outdated`). A malformed `Qabas-Client` (not `android`, `ios` or `web` followed by `/` and a semantic version) is `400 validation_error` with `details.field`. Health and OpenAPI paths are exempt. | `app/middleware.py`; tests in `test_contract_headers.py`. |
+| 2026-10-04 | D-16 | A request to a known path with an unsupported method returns `404 not_found`, like an unknown path, because §3.4 has no 405 row (adding a code is a contract change). | `app/errors.py`. |
+| 2026-10-04 | D-17 | uv also needs the Windows certificate store: user-level `%APPDATA%\uv\uv.toml` sets `system-certs = true`. | Documented in `backend/README.md`. |
+| 2026-10-04 | D-18 | Vendored layout keeps the handoff structure (`backend/contract/contract/*`, `backend/contract/tools/*`) because the tools locate the schema relative to themselves; `app/contract.py` puts the directory on `sys.path` so the modules stay byte-identical. OpenAPI components are the export's `$defs` and roots flattened with refs rewritten. Same-named definitions must be identical, except the four tagged-union roots, which differ only by `title`. | `app/contract.py`, `app/openapi.py`. |
 | 2026-10-04 | D-13 | Git HTTPS failed certificate verification with Git's bundled OpenSSL. The repo-local config now sets `http.sslBackend=schannel` (Windows certificate store); global config is untouched. The first push made `phase/0-workspace` GitHub's default branch, so switch the default to `main` when `phase-0` is tagged. | — |
 
 ## Progress log
@@ -464,3 +469,4 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | 2026-10-04 | — | Plan revised: Raqeeb after the learning experience + factory (D-02); native dev env (D-03); full-quality scenes (D-06) |
 | 2026-10-04 | 0 | Environment verified and completed (Python 3.12.10, uv, Postgres 16.14, Redis 7.4.11, ffmpeg 9.0.2, Node 22). Handoff integrity verified. Rev 10 suites rerun: 595/279/105/382 PASS. Git connected; WIP branch `phase/0-workspace` pushed. `check-env.ps1`: all checks pass except the database (role not yet created). Waiting on the dev DB role and D-10. |
 | 2026-10-04 | 0 | ✅ Phase 0 complete: `check-env.ps1` all green (dev DBs created); repo stays public with data policy D-14; tagged `phase-0`, merged to `main`. |
+| 2026-10-04 | 1 | Skeleton built: vendored contract (14 files, checksums verified), private mirror + full suites 595/279/105/382 PASS, guard + pre-commit hook, config, errors, contract headers, contract-only OpenAPI, health, logging, adapters, Celery, storage. 84 tests green locally; CI pending. |

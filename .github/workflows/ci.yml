@@ -1,0 +1,62 @@
+name: backend-ci
+
+on:
+  push:
+    branches: [main, "phase/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      APP_ENV: test
+      DATABASE_URL: postgresql+asyncpg://qabas:ci-only-password@127.0.0.1:5432/qabas_test
+      TEST_DATABASE_URL: postgresql+asyncpg://qabas:ci-only-password@127.0.0.1:5432/qabas_test
+      REDIS_URL: redis://127.0.0.1:6379/0
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Public-repository safety guard (D-14)
+        run: python3 scripts/check_public_safety.py
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: astral-sh/setup-uv@v6
+
+      # Native services on the runner (no Docker, D-03).
+      - name: Start PostgreSQL 16
+        run: |
+          sudo systemctl start postgresql.service
+          until pg_isready -h 127.0.0.1; do sleep 1; done
+          sudo -u postgres psql -v ON_ERROR_STOP=1 -c "CREATE ROLE qabas LOGIN CREATEDB PASSWORD 'ci-only-password';"
+          sudo -u postgres psql -v ON_ERROR_STOP=1 -c "CREATE DATABASE qabas_test OWNER qabas ENCODING 'UTF8' TEMPLATE template0;"
+
+      - name: Start Redis
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq redis-server
+          sudo systemctl start redis-server
+          redis-cli ping
+
+      - name: Install dependencies
+        run: uv sync --frozen --python 3.12
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Type check
+        run: uv run mypy
+
+      - name: OpenAPI export is current
+        run: uv run python scripts/export_openapi.py --check
+
+      - name: Tests (public; private-fixture suites run locally only)
+        run: uv run pytest -q

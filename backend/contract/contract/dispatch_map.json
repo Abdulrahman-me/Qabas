@@ -1,0 +1,77 @@
+{
+  "contract_revision": 10,
+  "wire_format_changed": true,
+  "wire_changes_since_revision_9": {
+    "FactoryRun": [
+      "review_digest",
+      "published"
+    ],
+    "Gate1": [
+      "review_digest"
+    ],
+    "Gate2": [
+      "review_digest"
+    ],
+    "QAIssue.kind": [
+      "validation"
+    ],
+    "Stats.league": "nullable",
+    "Metrics": "nullable averages/rates and raqeeb_benchmark",
+    "AsyncAnswer.answer": "nullable (timeout)"
+  },
+  "display_amendment": {
+    "TermCard": "arabic",
+    "Step": "secondary_label",
+    "Category": "art_key",
+    "POrderSteps": "presentation"
+  },
+  "exercise_discriminator": "type",
+  "reviewer_exercise_discriminator": "type",
+  "server_event_discriminator": "type",
+  "client_event_discriminator": "type",
+  "raqeeb_message_discriminator": "status",
+  "answer_discriminator": "served exercise.type (request exercise_id lookup)",
+  "answer_by_type": {
+    "multiple_choice": "AOption",
+    "true_false_reason": "AReason",
+    "match_pairs": "APairs",
+    "flashcard": "ARating",
+    "fill_blank": "AFills",
+    "categorize": "AAssignments",
+    "spot_error": "ASegment",
+    "which_evidence": "AOption",
+    "order_steps": "AOrder",
+    "scenario": "AOption",
+    "timeline_order": "AOrder",
+    "map_place": "APin",
+    "recite_verse": "ACheck",
+    "verse_meaning": "AOption",
+    "true_false": "AValue"
+  },
+  "details_by_type": {
+    "true_false_reason": "DReason",
+    "match_pairs": "DPairs",
+    "fill_blank": "DFills",
+    "categorize": "DAssignments",
+    "order_steps": "DOrder",
+    "scenario": "DScenario",
+    "timeline_order": "DTimeline",
+    "map_place": "DPins"
+  },
+  "recitation_specials": [
+    "ASkipped"
+  ],
+  "map_specials": [
+    "AUnavailable"
+  ],
+  "context_required": [
+    "served IDs",
+    "retry eligibility",
+    "order",
+    "private grading key",
+    "feedback privacy",
+    "six-decimal mastery snapshot",
+    "recitation ownership/version/range/text",
+    "reviewer gate digest"
+  ]
+}
