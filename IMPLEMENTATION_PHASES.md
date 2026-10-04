@@ -347,7 +347,7 @@ Phase 7 was delivered by another agent. It was re-audited end to end before Phas
 | F-52 | Quest titles were ungrammatical ("Complete 1 lessons", «أكمل 2 من الدروس» where API §6.2 shows «أكمل درسين»). | D-78; number-agreeing titles; tested. |
 
 **Validation:** 561 passed, 1 skipped locally; ruff, strict mypy (79 files), OpenAPI current, `alembic check` clean, migration round trip incl. the 0004 guard, repository safety guard OK; contract suites unchanged.
-**Exit:** corrective checkpoint `phase-7.1` (the original `phase-7` tag and history are kept unchanged).
+**Exit:** ✅ CI green on GitHub (run 37229813941: 562 passed incl. role grants, contract suites green); corrective checkpoint `phase-7.1` (the original `phase-7` tag and history are kept unchanged).
 
 ---
 
@@ -682,3 +682,4 @@ Phase 7 was delivered by another agent. It was re-audited end to end before Phas
 | 2026-10-04 | 7 | Recovered the complete handoff/contract/history context; recorded F-38–F-47 and D-67–D-75. Built atomic replayable finish, FSRS, progression facts, terms, protected repeat rewards, daily activity/quests and profile/glossary endpoints, with migration 0003. 556 passed + one CI-only role check skipped locally; lint/type/OpenAPI/migration/safety checks and full 595/279/105/382 contract suites green. Private product progress notes updated; CI pending. |
 | 2026-10-04 | 7 | ✅ Phase 7 complete / Milestone A: GitHub CI 37226971161 green (557 passed including role grants; contract suites 595/279/105/382 green). Integration gate 3 passed. Tagged `phase-7`, merged to `main`; private product notes remain git-ignored. |
 | 2026-10-05 | 7.1 | Independent Phase 7 audit (baseline 556 passed reproduced). Policy and core finish behaviour verified; five defects fixed: pagination limits, finish rate limit, missing `session.finished` consumer, legacy active sessions (migration 0004 guard + CHECK + operator script), quest-title grammar. 561 passed locally; CI pending. |
+| 2026-10-05 | 7.1 | ✅ Phase 7.1 complete: CI green (562 passed incl. role grants; contract suites green); tagged `phase-7.1`, merged to `main`. |
