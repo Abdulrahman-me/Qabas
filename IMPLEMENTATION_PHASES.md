@@ -14,7 +14,7 @@
 | Phase | Name | Status | Checkpoint tag | Notes |
 |---|---|---|---|---|
 | 0 | Workspace, toolchain and baseline verification | ✅ Done | `phase-0` | |
-| 1 | Contract vendoring and service skeleton | 🔄 In progress | `phase-1` | All local checks green; waiting on first CI run |
+| 1 | Contract vendoring and service skeleton | ✅ Done | `phase-1` | CI green (run 37191065880) |
 | 2 | Core database schema and migrations | ⏳ Not started | `phase-2` | |
 | 3 | Platform controls: auth, idempotency, rate limits, outbox, deletion | ⏳ Not started | `phase-3` | |
 | 4 | Content storage, registries, projection and seeding | ⏳ Not started | `phase-4` | |
@@ -110,10 +110,10 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 - [x] Adapter interfaces: LLM, STT, image, TTS, source tools (`app/adapters.py`).
 - [x] Celery app: five queues, prefix routing, acks-late, reject-on-lost, prefetch 1; `maintenance.ping`; Windows dev uses `--pool=solo`.
 - [x] Storage: two-bucket interface with local filesystem implementation (immutable content, HMAC-signed private URLs, key validation). S3 follows in Phase 3.
-- [ ] CI workflow `.github/workflows/ci.yml` (ubuntu-24.04, Python 3.12, runner-native Postgres 16 and Redis, no Docker): guard, ruff, mypy, OpenAPI check, pytest. **Pending its first green run on GitHub.**
+- [x] CI workflow `.github/workflows/ci.yml` (ubuntu-24.04, Python 3.12, runner-native Postgres 16 and Redis, no Docker): guard, ruff, mypy, OpenAPI check, pytest. First run green: 84 passed, integration tests included.
 
 **Local status:** 84 tests pass (including the integration tests on the real `qabas_test`/Redis), ruff clean, mypy strict clean.
-**Exit:** contract suites green locally (done), CI green on GitHub, tag `phase-1`.
+**Exit:** ✅ contract suites green locally, CI green on GitHub, tagged `phase-1`.
 
 ---
 
@@ -470,3 +470,4 @@ A phase is **done** only when every item below is true. The checkpoint is the la
 | 2026-10-04 | 0 | Environment verified and completed (Python 3.12.10, uv, Postgres 16.14, Redis 7.4.11, ffmpeg 9.0.2, Node 22). Handoff integrity verified. Rev 10 suites rerun: 595/279/105/382 PASS. Git connected; WIP branch `phase/0-workspace` pushed. `check-env.ps1`: all checks pass except the database (role not yet created). Waiting on the dev DB role and D-10. |
 | 2026-10-04 | 0 | ✅ Phase 0 complete: `check-env.ps1` all green (dev DBs created); repo stays public with data policy D-14; tagged `phase-0`, merged to `main`. |
 | 2026-10-04 | 1 | Skeleton built: vendored contract (14 files, checksums verified), private mirror + full suites 595/279/105/382 PASS, guard + pre-commit hook, config, errors, contract headers, contract-only OpenAPI, health, logging, adapters, Celery, storage. 84 tests green locally; CI pending. |
+| 2026-10-04 | 1 | ✅ Phase 1 complete: CI green on GitHub (84 passed, native Postgres/Redis on the runner); tagged `phase-1`, merged to `main`. |
