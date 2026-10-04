@@ -38,6 +38,9 @@ jobs:
           until pg_isready -h 127.0.0.1; do sleep 1; done
           sudo -u postgres psql -v ON_ERROR_STOP=1 -c "CREATE ROLE qabas LOGIN CREATEDB PASSWORD 'ci-only-password';"
           sudo -u postgres psql -v ON_ERROR_STOP=1 -c "CREATE DATABASE qabas_test OWNER qabas ENCODING 'UTF8' TEMPLATE template0;"
+          for role in qabas_app qabas_worker qabas_readonly; do
+            sudo -u postgres psql -v ON_ERROR_STOP=1 -c "CREATE ROLE $role NOLOGIN;"
+          done
 
       - name: Start Redis
         run: |

@@ -1,7 +1,8 @@
 # Creates (or re-keys) the local Qabas development role and databases on the native
 # PostgreSQL 16 service, then writes backend/.env with the connection URLs.
 #
-#   Role:      qabas (LOGIN, CREATEDB) with a freshly generated password
+#   Role:      qabas (LOGIN, CREATEDB) with a freshly generated password; owns the schema
+#   Roles:     qabas_app, qabas_worker, qabas_readonly (NOLOGIN; privileges granted by migrations)
 #   Databases: qabas_dev, qabas_test (UTF8, owned by qabas)
 #
 # You are prompted for the postgres superuser password; it is used only for this run
@@ -40,6 +41,21 @@ BEGIN
   ELSE
     ALTER ROLE qabas WITH LOGIN CREATEDB PASSWORD '$rolePassword';
   END IF;
+END
+`$`$;
+"@ | Out-Null
+
+    # Least-privilege runtime roles (data model: data protection). NOLOGIN locally; deployed
+    # environments give them LOGIN and credentials. Migrations grant table privileges to them.
+    Invoke-Psql 'postgres' @"
+DO `$`$
+DECLARE r text;
+BEGIN
+  FOREACH r IN ARRAY ARRAY['qabas_app', 'qabas_worker', 'qabas_readonly'] LOOP
+    IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = r) THEN
+      EXECUTE format('CREATE ROLE %I NOLOGIN', r);
+    END IF;
+  END LOOP;
 END
 `$`$;
 "@ | Out-Null

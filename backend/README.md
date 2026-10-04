@@ -41,7 +41,10 @@ py -3.12 scripts\dev\install_git_hooks.py              # pre-commit public-safet
 | Task | Command |
 |---|---|
 | Run the API | `uv run uvicorn app.main:app --reload` (http://127.0.0.1:8000, docs at `/docs`) |
-| Tests | `uv run pytest` (`-m "not integration"` skips the Postgres/Redis tests) |
+| Migrate the dev database | `uv run alembic upgrade head` (`uv run alembic downgrade -1` to step back) |
+| New migration | `uv run alembic revision --autogenerate -m "..."`, then review it; triggers, grants and data steps are hand-written |
+| Models = migrations? | `uv run alembic check` (also a test) |
+| Tests | `uv run pytest` (`-m "not integration"` skips the Postgres/Redis tests; DB tests reset and migrate `qabas_test` only) |
 | Lint / types | `uv run ruff check .` · `uv run mypy` |
 | Regenerate `docs/openapi.json` | `uv run python scripts/export_openapi.py` |
 | Full contract suites (also in CI) | `uv run python scripts/dev/run_contract_suites.py` (expects 595/279/105/382) |
