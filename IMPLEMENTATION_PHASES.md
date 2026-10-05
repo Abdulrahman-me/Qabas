@@ -506,7 +506,7 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 |---|---|---|
 | F-95 | The F-91 false rejection was **not a model error**: with `vad_filter=True` the Silero VAD (default options) ended speech at 7.95 s of a 13.2 s clip while the voice stayed at full level until 12.4 s (speech probability 0.02–0.06 over the six-count madd of «ٱلضَّآلِّينَ»); without the VAD the same model transcribes the word correctly. No VAD threshold reaches the end without effectively disabling the VAD. Sustained madd is pervasive in recitation (verse endings, «الٓمٓ»), so this was a systematic Phase 10 defect against the acceptance row. The clip-set test also did not assert the outcome classes. | D-118: the specified VAD still decides whether there is speech and where each region starts; regions are extended forward only through continuing voice relative to their own level; the model then transcribes those regions. Thresholds (match ratio 80, unclear −1.0) unchanged. The clip set asserts every class (correct/missing/substituted/extra/unclear) and now passes **18/18**; live worker check of 1:7 passes 9/9. |
 
-**Exit:** corrective checkpoint `phase-10.1` once CI is green (the original `phase-10` tag and history stay unchanged).
+**Exit:** ✅ CI green on GitHub (run 37277069615: 743 passed, 15 skipped; contract suites green); locally 757 passed with the real-model clip set (18/18). Corrective checkpoint `phase-10.1`; the original `phase-10` tag and history stay unchanged.
 
 ---
 
@@ -843,3 +843,4 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | 2026-10-05 | 10 | Recitation service implemented on `phase/10-recitation`: endpoint, isolated `asr` worker, pinned model, in-memory decoding, alignment, messages, back-pressure, binding. Findings F-86–F-94, decisions D-109–D-117. Real worker verified locally end to end; clip set 17/18 (one recorded model false reject). |
 | 2026-10-05 | 10 | ✅ Phase 10 complete: 754 passed / 1 local role skip (real-model clip set included); CI 37272620979 green (740 passed, 15 data/model skips; contracts 595/279/105/382); tagged `phase-10`, merged to `main`. |
 | 2026-10-05 | 10.1 | Targeted Tarteel audit: the handoff's only Tarteel artefact is the `tarteel-ai/whisper-base-ar-quran` model, which Phase 10 uses (D-115); O-06 holds no Tarteel item. Found and fixed F-95 (VAD cut sustained madd; D-118); clip set asserts all acceptance classes, 18/18. |
+| 2026-10-05 | 10.1 | ✅ Phase 10.1 complete: 757 passed / 1 local role skip; CI 37277069615 green (743 passed, 15 skipped); tagged `phase-10.1`, merged to `main`. |
