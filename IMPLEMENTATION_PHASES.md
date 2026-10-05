@@ -30,7 +30,7 @@
 | 11 | LLM adapter and agent infrastructure | ✅ Done | `phase-11` | Model approval, capabilities and prices remain O-03 |
 | 12 | Lesson Factory pipeline: plan → QA | ✅ Complete (sub-tag `phase-12.1`) | `phase-12` | |
 | 13 | Reviewer gates, publication, reviewer console API | ✅ Complete | `phase-13` | |
-| 14 | Visual and media pipeline (images, audio, production scenes) | 🔄 In progress | — | Engineering checkpoint tested locally and in CI; real medallion art/style/scene references, licensed Factory bindings and normative acceptance remain open (D-147–D-156/F-108). No tag yet. |
+| 14 | Visual and media pipeline (images, audio, production scenes) | ✅ Engineering complete | `phase-14` | Independent audit (F-139–F-144, D-157–D-159); `[~]` external/human gates: O-03, O-05/O-13 art and sign-offs, O-06, O-02 + Integration Gate 4 (D-158) |
 | 15 | Metrics, blind tests, factory acceptance | ⏳ Not started | `phase-15` | **Milestone C: lesson generation and publishing** |
 | 16 | Raqeeb text pipeline | ⏳ Not started | `phase-16` | Starts after Milestone C |
 | 17 | Raqeeb inputs, guarded memory and benchmark | ⏳ Not started | `phase-17` | Needs pgvector (D-05) |
