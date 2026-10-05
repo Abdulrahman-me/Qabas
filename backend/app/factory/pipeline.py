@@ -33,3 +33,10 @@ def next_stage(stage: str) -> str | None:
 def initial_stages() -> list[dict[str, object]]:
     return [{"stage": s, "status": "skipped" if s in MEDIA_STAGES else "pending", "started_at": None,
              "finished_at": None} for s in ORDER]
+
+
+def current_draft(artifacts: dict[str, object]) -> object | None:
+    """The reviewer ``Draft`` of a run: built by ``qa`` from the accepted artifacts, reviewed at Gate 2."""
+    qa = artifacts.get("qa")
+    output = qa.get("output") if isinstance(qa, dict) else None
+    return output.get("draft") if isinstance(output, dict) else None

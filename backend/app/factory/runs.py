@@ -64,7 +64,7 @@ def to_contract(run: FactoryRun) -> dict[str, Any]:
                  if run.published_lesson_id is not None else None)
     body = {"run_id": run.id, "unit_id": run.unit_id, "lesson_type": run.lesson_type, "brief": run.brief,
             "status": run.status, "stage": run.stage, "stages": run.stages, "plan": run.plan,
-            "draft": run.artifacts.get("draft"), "qa_report": run.qa_report, "error": run.error,
+            "draft": pipeline.current_draft(run.artifacts), "qa_report": run.qa_report, "error": run.error,
             "review_digest": run.review_digest, "published": published}
     projected: dict[str, Any] = C.FactoryRun.model_validate(body).model_dump(mode="json")
     return projected

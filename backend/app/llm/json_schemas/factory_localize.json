@@ -1,0 +1,47 @@
+{
+ "$defs": {
+  "LText": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "text": {
+     "minLength": 1,
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "text"
+   ],
+   "title": "LText",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "issues": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Issues",
+   "type": "array"
+  },
+  "texts": {
+   "items": {
+    "$ref": "#/$defs/LText"
+   },
+   "title": "Texts",
+   "type": "array"
+  }
+ },
+ "required": [
+  "texts",
+  "issues"
+ ],
+ "title": "factory_localize",
+ "type": "object"
+}

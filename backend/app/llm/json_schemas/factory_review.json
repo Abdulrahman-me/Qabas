@@ -1,0 +1,84 @@
+{
+ "$defs": {
+  "ModelIssue": {
+   "additionalProperties": false,
+   "properties": {
+    "exercise_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Exercise Id"
+    },
+    "kind": {
+     "enum": [
+      "unsupported_sentence",
+      "fatwa_like",
+      "consistency",
+      "sensitive",
+      "pedagogy",
+      "belief_grading",
+      "circular_reasoning",
+      "localization",
+      "scholarly_review"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "message": {
+     "minLength": 1,
+     "title": "Message",
+     "type": "string"
+    },
+    "sentence_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Sentence Id"
+    },
+    "severity": {
+     "enum": [
+      "blocker",
+      "warning",
+      "info"
+     ],
+     "title": "Severity",
+     "type": "string"
+    }
+   },
+   "required": [
+    "severity",
+    "kind",
+    "sentence_id",
+    "exercise_id",
+    "message"
+   ],
+   "title": "ModelIssue",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "issues": {
+   "items": {
+    "$ref": "#/$defs/ModelIssue"
+   },
+   "title": "Issues",
+   "type": "array"
+  }
+ },
+ "required": [
+  "issues"
+ ],
+ "title": "factory_review",
+ "type": "object"
+}

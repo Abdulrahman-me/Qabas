@@ -1,0 +1,188 @@
+{
+ "$defs": {
+  "ClaimVerdict": {
+   "additionalProperties": false,
+   "properties": {
+    "claim_id": {
+     "title": "Claim Id",
+     "type": "string"
+    },
+    "evidence": {
+     "items": {
+      "$ref": "#/$defs/EvidenceJudgement"
+     },
+     "title": "Evidence",
+     "type": "array"
+    },
+    "reasoning": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/ReasoningJudgement"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "status": {
+     "enum": [
+      "supported",
+      "dropped"
+     ],
+     "title": "Status",
+     "type": "string"
+    }
+   },
+   "required": [
+    "claim_id",
+    "status",
+    "evidence",
+    "reasoning"
+   ],
+   "title": "ClaimVerdict",
+   "type": "object"
+  },
+  "EvidenceJudgement": {
+   "additionalProperties": false,
+   "properties": {
+    "candidate_id": {
+     "title": "Candidate Id",
+     "type": "string"
+    },
+    "semantic_review": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/SemanticReview"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "supports": {
+     "title": "Supports",
+     "type": "boolean"
+    },
+    "verifier_note": {
+     "minLength": 1,
+     "title": "Verifier Note",
+     "type": "string"
+    }
+   },
+   "required": [
+    "candidate_id",
+    "supports",
+    "verifier_note",
+    "semantic_review"
+   ],
+   "title": "EvidenceJudgement",
+   "type": "object"
+  },
+  "ReasoningJudgement": {
+   "additionalProperties": false,
+   "properties": {
+    "inference": {
+     "minLength": 1,
+     "title": "Inference",
+     "type": "string"
+    },
+    "premises": {
+     "items": {
+      "type": "string"
+     },
+     "minItems": 1,
+     "title": "Premises",
+     "type": "array"
+    },
+    "tool": {
+     "enum": [
+      "observation",
+      "inference",
+      "testimony",
+      "historical_evidence",
+      "causal_reasoning",
+      "comparison"
+     ],
+     "title": "Tool",
+     "type": "string"
+    }
+   },
+   "required": [
+    "tool",
+    "premises",
+    "inference"
+   ],
+   "title": "ReasoningJudgement",
+   "type": "object"
+  },
+  "SemanticReview": {
+   "additionalProperties": false,
+   "description": "Pre-generation audit: the Evidence Verifier's semantic reading of one evidence item against the exact claim\nwording. It flags; the specialist decides at Gate 2. `exact`: the source states the claim as worded. `partial`:\nit supports the claim with a named concern. `stretched`: the claim says more than, or other than, the source.\n`unrelated`: the source does not address the claim.",
+   "properties": {
+    "concerns": {
+     "items": {
+      "enum": [
+       "needs_tafsir",
+       "context_dependent",
+       "addressee_specific",
+       "generalised_from_specific",
+       "beyond_source",
+       "scholarly_disagreement",
+       "single_opinion_as_consensus",
+       "oversimplified",
+       "translation_sensitive"
+      ],
+      "type": "string"
+     },
+     "title": "Concerns",
+     "type": "array"
+    },
+    "fit": {
+     "enum": [
+      "exact",
+      "partial",
+      "stretched",
+      "unrelated"
+     ],
+     "title": "Fit",
+     "type": "string"
+    },
+    "note": {
+     "minLength": 1,
+     "title": "Note",
+     "type": "string"
+    }
+   },
+   "required": [
+    "fit",
+    "concerns",
+    "note"
+   ],
+   "title": "SemanticReview",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "claims": {
+   "items": {
+    "$ref": "#/$defs/ClaimVerdict"
+   },
+   "title": "Claims",
+   "type": "array"
+  },
+  "issues": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Issues",
+   "type": "array"
+  }
+ },
+ "required": [
+  "claims",
+  "issues"
+ ],
+ "title": "factory_verify",
+ "type": "object"
+}

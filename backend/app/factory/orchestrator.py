@@ -48,13 +48,14 @@ from app.llm.errors import (
 from app.models import FactoryRun
 from app.services.platform.auth_sessions import utcnow
 from app.sources.errors import ProviderNotConfigured, UpstreamUnavailable
+from app.sources.mushaf import MushafError
 
 log = logging.getLogger("qabas.factory")
 RETRY_BACKOFF_SECONDS = (0, 30, 120)
 NOT_RETRIED: dict[type[BaseException], str] = {
     BudgetExceeded: "budget_exceeded", LLMRefusal: "refusal", LLMNotConfigured: "model_not_configured",
     LLMRequestRejected: "request_rejected", UnsafePromptData: "unsafe_prompt_data",
-    ProviderNotConfigured: "source_not_configured",
+    ProviderNotConfigured: "source_not_configured", MushafError: "mushaf_unavailable",
 }
 RETRIED: dict[type[BaseException], str] = {
     LLMUnavailable: "model_unavailable", LLMTruncated: "output_truncated", LLMOutputInvalid: "output_invalid",
@@ -118,7 +119,7 @@ def gate_digest(gate: str, run: FactoryRun) -> str:
     """The digest of the artifact a reviewer decides on (FactoryRun.review_digest)."""
     if gate == "awaiting_gate1":
         return content_digest({"gate": 1, "plan": run.plan})
-    return content_digest({"gate": 2, "draft": run.artifacts.get("draft"), "qa_report": run.qa_report})
+    return content_digest({"gate": 2, "draft": pipeline.current_draft(run.artifacts), "qa_report": run.qa_report})
 
 
 class Orchestrator:

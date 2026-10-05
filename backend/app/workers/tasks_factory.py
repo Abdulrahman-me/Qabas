@@ -4,13 +4,15 @@
 
 Tasks are acknowledged late, so a worker that dies mid-stage gets the same message redelivered; the orchestrator's
 claim fences duplicates and stale messages, so a crash re-runs at most one stage. Model calls go through the
-Phase 11 adapter only (``app.llm``); the adapter refuses unapproved models in production (O-03).
+Phase 11 adapter only (``app.llm``) and sources only through the Phase 9 layer (``app.factory.evidence``); both
+refuse unapproved models and providers in production (O-03).
 """
 
 from __future__ import annotations
 
 import uuid
 
+from app.factory.evidence import live_tools
 from app.factory.orchestrator import Orchestrator
 from app.factory.stages import EXECUTORS
 from app.llm.client import AnthropicClient
@@ -33,7 +35,8 @@ class CeleryDispatcher:
 def run_stage(run_id: str, stage: str, attempt: int) -> str:
     async def job(resources: Resources) -> str:
         orchestrator = Orchestrator(resources.sessionmaker, resources.settings, AnthropicClient(resources.settings),
-                                    CeleryDispatcher(), EXECUTORS)
+                                    CeleryDispatcher(), EXECUTORS,
+                                    services={"sources": live_tools(resources.settings)})
         return await orchestrator.run_stage(run_id, stage, attempt)
 
     return run_with_resources(job)

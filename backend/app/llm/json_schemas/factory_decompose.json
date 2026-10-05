@@ -1,0 +1,133 @@
+{
+ "$defs": {
+  "DecomposedClaim": {
+   "additionalProperties": false,
+   "properties": {
+    "arc_step_id": {
+     "title": "Arc Step Id",
+     "type": "string"
+    },
+    "basis": {
+     "enum": [
+      "source",
+      "reasoning"
+     ],
+     "title": "Basis",
+     "type": "string"
+    },
+    "claim_id": {
+     "pattern": "^c[0-9]{1,3}$",
+     "title": "Claim Id",
+     "type": "string"
+    },
+    "kind": {
+     "enum": [
+      "factual",
+      "historical",
+      "theological",
+      "religious",
+      "reasoning"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "reasoning_tool": {
+     "anyOf": [
+      {
+       "enum": [
+        "observation",
+        "inference",
+        "testimony",
+        "historical_evidence",
+        "causal_reasoning",
+        "comparison"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Reasoning Tool"
+    },
+    "text_ar": {
+     "minLength": 1,
+     "title": "Text Ar",
+     "type": "string"
+    }
+   },
+   "required": [
+    "claim_id",
+    "text_ar",
+    "arc_step_id",
+    "kind",
+    "basis",
+    "reasoning_tool"
+   ],
+   "title": "DecomposedClaim",
+   "type": "object"
+  },
+  "StoryEvent": {
+   "additionalProperties": false,
+   "properties": {
+    "arc_step_id": {
+     "title": "Arc Step Id",
+     "type": "string"
+    },
+    "claim_id": {
+     "title": "Claim Id",
+     "type": "string"
+    },
+    "event_id": {
+     "pattern": "^e[0-9]{1,3}$",
+     "title": "Event Id",
+     "type": "string"
+    },
+    "order": {
+     "minimum": 0,
+     "title": "Order",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "event_id",
+    "arc_step_id",
+    "order",
+    "claim_id"
+   ],
+   "title": "StoryEvent",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "claims": {
+   "items": {
+    "$ref": "#/$defs/DecomposedClaim"
+   },
+   "title": "Claims",
+   "type": "array"
+  },
+  "issues": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Issues",
+   "type": "array"
+  },
+  "story_events": {
+   "items": {
+    "$ref": "#/$defs/StoryEvent"
+   },
+   "title": "Story Events",
+   "type": "array"
+  }
+ },
+ "required": [
+  "claims",
+  "story_events",
+  "issues"
+ ],
+ "title": "factory_decompose",
+ "type": "object"
+}

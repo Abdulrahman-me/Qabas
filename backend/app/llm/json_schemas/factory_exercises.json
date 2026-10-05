@@ -1,0 +1,601 @@
+{
+ "$defs": {
+  "XCategory": {
+   "additionalProperties": false,
+   "properties": {
+    "category_id": {
+     "title": "Category Id",
+     "type": "string"
+    },
+    "label": {
+     "title": "Label",
+     "type": "string"
+    }
+   },
+   "required": [
+    "category_id",
+    "label"
+   ],
+   "title": "XCategory",
+   "type": "object"
+  },
+  "XExercise": {
+   "additionalProperties": false,
+   "properties": {
+    "back": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Back"
+    },
+    "categories": {
+     "anyOf": [
+      {
+       "items": {
+        "$ref": "#/$defs/XCategory"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Categories"
+    },
+    "concept_ids": {
+     "items": {
+      "type": "string"
+     },
+     "minItems": 1,
+     "title": "Concept Ids",
+     "type": "array"
+    },
+    "correct_option_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Correct Option Id"
+    },
+    "correct_value": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Correct Value"
+    },
+    "evidence_ids": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Evidence Ids",
+     "type": "array"
+    },
+    "evidence_option_ids": {
+     "anyOf": [
+      {
+       "items": {
+        "type": "string"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Evidence Option Ids"
+    },
+    "exercise_id": {
+     "pattern": "^x[0-9]{1,3}$",
+     "title": "Exercise Id",
+     "type": "string"
+    },
+    "explanation": {
+     "minLength": 1,
+     "title": "Explanation",
+     "type": "string"
+    },
+    "front": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Front"
+    },
+    "items": {
+     "anyOf": [
+      {
+       "items": {
+        "$ref": "#/$defs/XItem"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Items"
+    },
+    "layer": {
+     "anyOf": [
+      {
+       "enum": [
+        "understand",
+        "apply",
+        "remember"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Layer"
+    },
+    "myth_statement": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Myth Statement"
+    },
+    "options": {
+     "anyOf": [
+      {
+       "items": {
+        "$ref": "#/$defs/XOption"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Options"
+    },
+    "pairs": {
+     "anyOf": [
+      {
+       "items": {
+        "$ref": "#/$defs/XPair"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Pairs"
+    },
+    "prompt": {
+     "minLength": 1,
+     "title": "Prompt",
+     "type": "string"
+    },
+    "purpose": {
+     "enum": [
+      "lesson",
+      "pretest",
+      "unit_test",
+      "duel"
+     ],
+     "title": "Purpose",
+     "type": "string"
+    },
+    "segments": {
+     "anyOf": [
+      {
+       "items": {
+        "$ref": "#/$defs/XSegment"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Segments"
+    },
+    "situation": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Situation"
+    },
+    "slot_block_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Slot Block Id"
+    },
+    "statement": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Statement"
+    },
+    "steps": {
+     "anyOf": [
+      {
+       "items": {
+        "$ref": "#/$defs/XOption"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Steps"
+    },
+    "targets_misconception_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Targets Misconception Id"
+    },
+    "type": {
+     "enum": [
+      "multiple_choice",
+      "true_false",
+      "true_false_reason",
+      "scenario",
+      "match_pairs",
+      "fill_blank",
+      "categorize",
+      "order_steps",
+      "spot_error",
+      "which_evidence",
+      "verse_meaning",
+      "flashcard"
+     ],
+     "title": "Type",
+     "type": "string"
+    },
+    "verse_evidence_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Verse Evidence Id"
+    },
+    "words": {
+     "anyOf": [
+      {
+       "items": {
+        "$ref": "#/$defs/XWord"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Words"
+    }
+   },
+   "required": [
+    "exercise_id",
+    "purpose",
+    "type",
+    "slot_block_id",
+    "concept_ids",
+    "prompt",
+    "layer",
+    "myth_statement",
+    "targets_misconception_id",
+    "explanation",
+    "evidence_ids",
+    "statement",
+    "correct_value",
+    "situation",
+    "options",
+    "correct_option_id",
+    "pairs",
+    "categories",
+    "items",
+    "steps",
+    "segments",
+    "words",
+    "evidence_option_ids",
+    "verse_evidence_id",
+    "front",
+    "back"
+   ],
+   "title": "XExercise",
+   "type": "object"
+  },
+  "XItem": {
+   "additionalProperties": false,
+   "properties": {
+    "category_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Category Id"
+    },
+    "item_id": {
+     "title": "Item Id",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "item_id",
+    "text",
+    "category_id"
+   ],
+   "title": "XItem",
+   "type": "object"
+  },
+  "XMisconception": {
+   "additionalProperties": false,
+   "properties": {
+    "card": {
+     "minLength": 1,
+     "title": "Card",
+     "type": "string"
+    },
+    "concept_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Concept Id"
+    },
+    "misconception_id": {
+     "title": "Misconception Id",
+     "type": "string"
+    },
+    "title": {
+     "minLength": 1,
+     "title": "Title",
+     "type": "string"
+    }
+   },
+   "required": [
+    "misconception_id",
+    "concept_id",
+    "title",
+    "card"
+   ],
+   "title": "XMisconception",
+   "type": "object"
+  },
+  "XOption": {
+   "additionalProperties": false,
+   "properties": {
+    "feedback": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Feedback"
+    },
+    "misconception_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Misconception Id"
+    },
+    "option_id": {
+     "pattern": "^o_[0-9a-z_]{1,40}$",
+     "title": "Option Id",
+     "type": "string"
+    },
+    "text": {
+     "minLength": 1,
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "option_id",
+    "text",
+    "misconception_id",
+    "feedback"
+   ],
+   "title": "XOption",
+   "type": "object"
+  },
+  "XPair": {
+   "additionalProperties": false,
+   "properties": {
+    "left": {
+     "title": "Left",
+     "type": "string"
+    },
+    "left_id": {
+     "title": "Left Id",
+     "type": "string"
+    },
+    "right": {
+     "title": "Right",
+     "type": "string"
+    },
+    "right_id": {
+     "title": "Right Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "left_id",
+    "left",
+    "right_id",
+    "right"
+   ],
+   "title": "XPair",
+   "type": "object"
+  },
+  "XSegment": {
+   "additionalProperties": false,
+   "properties": {
+    "blank_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Blank Id"
+    },
+    "kind": {
+     "enum": [
+      "text",
+      "blank"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "text": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Text"
+    }
+   },
+   "required": [
+    "kind",
+    "text",
+    "blank_id"
+   ],
+   "title": "XSegment",
+   "type": "object"
+  },
+  "XWord": {
+   "additionalProperties": false,
+   "properties": {
+    "fills_blank_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Fills Blank Id"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    },
+    "word_id": {
+     "title": "Word Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "word_id",
+    "text",
+    "fills_blank_id"
+   ],
+   "title": "XWord",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "exercises": {
+   "items": {
+    "$ref": "#/$defs/XExercise"
+   },
+   "title": "Exercises",
+   "type": "array"
+  },
+  "issues": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Issues",
+   "type": "array"
+  },
+  "misconceptions": {
+   "items": {
+    "$ref": "#/$defs/XMisconception"
+   },
+   "title": "Misconceptions",
+   "type": "array"
+  }
+ },
+ "required": [
+  "exercises",
+  "misconceptions",
+  "issues"
+ ],
+ "title": "factory_exercises",
+ "type": "object"
+}

@@ -3,8 +3,44 @@
   "sha256": "7d6cdca86392915849c4b678d3e456be28c2339bfd496e501596bd4a01641114",
   "version": 1
  },
+ "factory_decompose": {
+  "sha256": "b4d727d1b657c9db8a78d7317725a2963ac37a0d575799288a77b4be7f81827c",
+  "version": 1
+ },
+ "factory_exercises": {
+  "sha256": "e0cdf13492fa2432745d200796b52c8fa926ca35171965781b70cf8637fa499b",
+  "version": 1
+ },
+ "factory_glossary": {
+  "sha256": "f15c43a3ee1c42f88a385fa3e14f02c5defbd958f315137593487008aed51b3b",
+  "version": 1
+ },
+ "factory_localize": {
+  "sha256": "95472d3d79d1a6993c3fa1a9377e9d8ee59c531d61222a9600f243a88451805e",
+  "version": 1
+ },
+ "factory_pedagogy": {
+  "sha256": "1435b735e32d976cfce7342ce0ab9d65f4cf217fad1b5358dbb570bb5946d91c",
+  "version": 1
+ },
  "factory_plan": {
   "sha256": "b5f4d578d39309b7a77d3f7560e5d3714d295f1799cc6b1d64d67e4d6a86e122",
+  "version": 1
+ },
+ "factory_qa": {
+  "sha256": "7bb3f52f75d46d25cd17b0e076fcc2e39b528089a70d692cf0264daad20cabd0",
+  "version": 1
+ },
+ "factory_retrieve": {
+  "sha256": "7cbb4fdd37207c7748961e6238cfc26f54876a9dbc9aa91222b754722dc7a6c3",
+  "version": 1
+ },
+ "factory_verify": {
+  "sha256": "77390317b39628547a9c273dfa8c79efef10d365da97e2d5f8fcadf6db4e7418",
+  "version": 1
+ },
+ "factory_write": {
+  "sha256": "ae72c5be534f5449045d28fed964ac47c882b3f4e94e1f08d1acd7babd4b2b78",
   "version": 1
  }
 }

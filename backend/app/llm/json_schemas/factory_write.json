@@ -1,0 +1,728 @@
+{
+ "$defs": {
+  "WArcStep": {
+   "additionalProperties": false,
+   "properties": {
+    "block_ids": {
+     "items": {
+      "type": "string"
+     },
+     "minItems": 1,
+     "title": "Block Ids",
+     "type": "array"
+    },
+    "step_id": {
+     "title": "Step Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "step_id",
+    "block_ids"
+   ],
+   "title": "WArcStep",
+   "type": "object"
+  },
+  "WBeat": {
+   "additionalProperties": false,
+   "properties": {
+    "beat_id": {
+     "title": "Beat Id",
+     "type": "string"
+    },
+    "narration": {
+     "items": {
+      "$ref": "#/$defs/WSentence"
+     },
+     "minItems": 1,
+     "title": "Narration",
+     "type": "array"
+    },
+    "quote_evidence_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Quote Evidence Id"
+    },
+    "quote_meaning": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Quote Meaning"
+    },
+    "visual_brief": {
+     "minLength": 1,
+     "title": "Visual Brief",
+     "type": "string"
+    }
+   },
+   "required": [
+    "beat_id",
+    "narration",
+    "quote_evidence_id",
+    "quote_meaning",
+    "visual_brief"
+   ],
+   "title": "WBeat",
+   "type": "object"
+  },
+  "WCallout": {
+   "additionalProperties": false,
+   "properties": {
+    "block_id": {
+     "title": "Block Id",
+     "type": "string"
+    },
+    "text": {
+     "minLength": 1,
+     "title": "Text",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "callout"
+     ],
+     "title": "Type",
+     "type": "string"
+    },
+    "variant": {
+     "enum": [
+      "tip",
+      "note"
+     ],
+     "title": "Variant",
+     "type": "string"
+    }
+   },
+   "required": [
+    "block_id",
+    "type",
+    "variant",
+    "text"
+   ],
+   "title": "WCallout",
+   "type": "object"
+  },
+  "WCompletion": {
+   "additionalProperties": false,
+   "properties": {
+    "challenge": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Challenge"
+    },
+    "check_in": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Check In"
+    },
+    "review_topics": {
+     "items": {
+      "$ref": "#/$defs/WReviewTopic"
+     },
+     "title": "Review Topics",
+     "type": "array"
+    }
+   },
+   "required": [
+    "challenge",
+    "review_topics",
+    "check_in"
+   ],
+   "title": "WCompletion",
+   "type": "object"
+  },
+  "WEvidence": {
+   "additionalProperties": false,
+   "properties": {
+    "block_id": {
+     "title": "Block Id",
+     "type": "string"
+    },
+    "caption": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Caption"
+    },
+    "evidence_id": {
+     "title": "Evidence Id",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "evidence"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "block_id",
+    "type",
+    "evidence_id",
+    "caption"
+   ],
+   "title": "WEvidence",
+   "type": "object"
+  },
+  "WExerciseSlot": {
+   "additionalProperties": false,
+   "properties": {
+    "block_id": {
+     "title": "Block Id",
+     "type": "string"
+    },
+    "intent": {
+     "minLength": 1,
+     "title": "Intent",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "exercise_slot"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "block_id",
+    "type",
+    "intent"
+   ],
+   "title": "WExerciseSlot",
+   "type": "object"
+  },
+  "WHook": {
+   "additionalProperties": false,
+   "properties": {
+    "block_id": {
+     "title": "Block Id",
+     "type": "string"
+    },
+    "cta": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Cta"
+    },
+    "question": {
+     "minLength": 1,
+     "title": "Question",
+     "type": "string"
+    },
+    "situation": {
+     "minLength": 1,
+     "title": "Situation",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "hook"
+     ],
+     "title": "Type",
+     "type": "string"
+    },
+    "visual_brief": {
+     "minLength": 1,
+     "title": "Visual Brief",
+     "type": "string"
+    }
+   },
+   "required": [
+    "block_id",
+    "type",
+    "situation",
+    "question",
+    "cta",
+    "visual_brief"
+   ],
+   "title": "WHook",
+   "type": "object"
+  },
+  "WOption": {
+   "additionalProperties": false,
+   "properties": {
+    "option_id": {
+     "pattern": "^o_[0-9a-z_]{1,40}$",
+     "title": "Option Id",
+     "type": "string"
+    },
+    "text": {
+     "minLength": 1,
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "option_id",
+    "text"
+   ],
+   "title": "WOption",
+   "type": "object"
+  },
+  "WParagraph": {
+   "additionalProperties": false,
+   "properties": {
+    "block_id": {
+     "title": "Block Id",
+     "type": "string"
+    },
+    "sentences": {
+     "items": {
+      "$ref": "#/$defs/WSentence"
+     },
+     "minItems": 1,
+     "title": "Sentences",
+     "type": "array"
+    },
+    "type": {
+     "enum": [
+      "paragraph"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "block_id",
+    "type",
+    "sentences"
+   ],
+   "title": "WParagraph",
+   "type": "object"
+  },
+  "WPoint": {
+   "additionalProperties": false,
+   "properties": {
+    "point_id": {
+     "title": "Point Id",
+     "type": "string"
+    },
+    "sentence": {
+     "$ref": "#/$defs/WSentence"
+    }
+   },
+   "required": [
+    "point_id",
+    "sentence"
+   ],
+   "title": "WPoint",
+   "type": "object"
+  },
+  "WPredict": {
+   "additionalProperties": false,
+   "properties": {
+    "block_id": {
+     "title": "Block Id",
+     "type": "string"
+    },
+    "options": {
+     "items": {
+      "$ref": "#/$defs/WOption"
+     },
+     "maxItems": 4,
+     "minItems": 2,
+     "title": "Options",
+     "type": "array"
+    },
+    "prompt": {
+     "minLength": 1,
+     "title": "Prompt",
+     "type": "string"
+    },
+    "reveal": {
+     "minLength": 1,
+     "title": "Reveal",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "predict"
+     ],
+     "title": "Type",
+     "type": "string"
+    },
+    "visual_brief": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Visual Brief"
+    }
+   },
+   "required": [
+    "block_id",
+    "type",
+    "prompt",
+    "options",
+    "reveal",
+    "visual_brief"
+   ],
+   "title": "WPredict",
+   "type": "object"
+  },
+  "WReviewTopic": {
+   "additionalProperties": false,
+   "properties": {
+    "concept_ids": {
+     "items": {
+      "type": "string"
+     },
+     "minItems": 1,
+     "title": "Concept Ids",
+     "type": "array"
+    },
+    "title": {
+     "minLength": 1,
+     "title": "Title",
+     "type": "string"
+    },
+    "topic_id": {
+     "title": "Topic Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "topic_id",
+    "title",
+    "concept_ids"
+   ],
+   "title": "WReviewTopic",
+   "type": "object"
+  },
+  "WSentence": {
+   "additionalProperties": false,
+   "properties": {
+    "claim_ids": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Claim Ids",
+     "type": "array"
+    },
+    "role": {
+     "enum": [
+      "claim",
+      "framing",
+      "hypothetical",
+      "instruction",
+      "question"
+     ],
+     "title": "Role",
+     "type": "string"
+    },
+    "sentence_id": {
+     "pattern": "^s_[0-9a-z_]{1,40}$",
+     "title": "Sentence Id",
+     "type": "string"
+    },
+    "text": {
+     "minLength": 1,
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "sentence_id",
+    "text",
+    "role",
+    "claim_ids"
+   ],
+   "title": "WSentence",
+   "type": "object"
+  },
+  "WStory": {
+   "additionalProperties": false,
+   "properties": {
+    "beats": {
+     "items": {
+      "$ref": "#/$defs/WBeat"
+     },
+     "minItems": 1,
+     "title": "Beats",
+     "type": "array"
+    },
+    "block_id": {
+     "title": "Block Id",
+     "type": "string"
+    },
+    "label": {
+     "minLength": 1,
+     "title": "Label",
+     "type": "string"
+    },
+    "origin_title": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Origin Title"
+    },
+    "sourced": {
+     "title": "Sourced",
+     "type": "boolean"
+    },
+    "title": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Title"
+    },
+    "type": {
+     "enum": [
+      "story"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "block_id",
+    "type",
+    "label",
+    "title",
+    "sourced",
+    "origin_title",
+    "beats"
+   ],
+   "title": "WStory",
+   "type": "object"
+  },
+  "WTeach": {
+   "additionalProperties": false,
+   "properties": {
+    "block_id": {
+     "title": "Block Id",
+     "type": "string"
+    },
+    "evidence_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Evidence Id"
+    },
+    "eyebrow": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Eyebrow"
+    },
+    "points": {
+     "items": {
+      "$ref": "#/$defs/WPoint"
+     },
+     "maxItems": 5,
+     "minItems": 1,
+     "title": "Points",
+     "type": "array"
+    },
+    "style": {
+     "enum": [
+      "standard",
+      "summary"
+     ],
+     "title": "Style",
+     "type": "string"
+    },
+    "title": {
+     "minLength": 1,
+     "title": "Title",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "teach"
+     ],
+     "title": "Type",
+     "type": "string"
+    },
+    "visual_brief": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Visual Brief"
+    }
+   },
+   "required": [
+    "block_id",
+    "type",
+    "eyebrow",
+    "title",
+    "style",
+    "evidence_id",
+    "points",
+    "visual_brief"
+   ],
+   "title": "WTeach",
+   "type": "object"
+  },
+  "WVariant": {
+   "additionalProperties": false,
+   "properties": {
+    "blocks": {
+     "items": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/WHook"
+       },
+       {
+        "$ref": "#/$defs/WPredict"
+       },
+       {
+        "$ref": "#/$defs/WStory"
+       },
+       {
+        "$ref": "#/$defs/WTeach"
+       },
+       {
+        "$ref": "#/$defs/WParagraph"
+       },
+       {
+        "$ref": "#/$defs/WCallout"
+       },
+       {
+        "$ref": "#/$defs/WEvidence"
+       },
+       {
+        "$ref": "#/$defs/WExerciseSlot"
+       }
+      ]
+     },
+     "minItems": 1,
+     "title": "Blocks",
+     "type": "array"
+    },
+    "completion": {
+     "$ref": "#/$defs/WCompletion"
+    },
+    "subtitle": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Subtitle"
+    },
+    "title": {
+     "minLength": 1,
+     "title": "Title",
+     "type": "string"
+    },
+    "variant": {
+     "enum": [
+      "explorer",
+      "new_muslim"
+     ],
+     "title": "Variant",
+     "type": "string"
+    }
+   },
+   "required": [
+    "variant",
+    "title",
+    "subtitle",
+    "blocks",
+    "completion"
+   ],
+   "title": "WVariant",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "arc_map": {
+   "items": {
+    "$ref": "#/$defs/WArcStep"
+   },
+   "title": "Arc Map",
+   "type": "array"
+  },
+  "issues": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Issues",
+   "type": "array"
+  },
+  "variants": {
+   "items": {
+    "$ref": "#/$defs/WVariant"
+   },
+   "minItems": 1,
+   "title": "Variants",
+   "type": "array"
+  }
+ },
+ "required": [
+  "variants",
+  "arc_map",
+  "issues"
+ ],
+ "title": "factory_write",
+ "type": "object"
+}

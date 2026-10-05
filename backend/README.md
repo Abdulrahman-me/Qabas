@@ -178,6 +178,25 @@ usage record per attempt (model, prompt version and digest, effort, tokens) char
 
 Tests and CI never call a model: they use `app/llm/fake.py` (an SDK-shaped fake and a deterministic client).
 
+## Lesson Factory (Phase 12)
+
+`app/factory/` drafts one lesson for one curriculum slot: `plan` → Gate 1 → `decompose` → `retrieve` →
+`verify_evidence` → `write` → `exercises` → `glossary` → `localize` → `qa` → Gate 2 (factory §13.1). Each stage is
+an idempotent task on the `factory` queue keyed by (run, stage, attempt); models only *draft* (through `app/llm`),
+code executes source requests through the Phase 9 layer, inserts verified Qur'an/hadith text, composes the contract
+blocks and runs every content validator. Every accepted artifact records its inputs/output digests, the prompt
+versions and models that produced it, and each paid call's tokens (`factory_runs.artifacts`, `.cost`).
+
+| Task | Command |
+|---|---|
+| After changing a factory output model | `uv run python scripts/export_llm_schemas.py` (CI runs `--check` through the tests) |
+| Run the factory worker (Windows dev) | `uv run celery -A app.workers.celery_app worker -Q factory --pool=solo` |
+
+A run stops with an explicit blocker instead of working around a human decision: `concepts_unregistered` (O-12),
+`sources_not_configured` (O-03), `no_supported_claims`, `translation_unselected` (D-93). Until the media pipeline
+(Phase 14) exists, every draft carries placeholder-media and visual-readiness blockers, so none can pass Gate 2.
+Gate 2 decisions and publication arrive in Phase 13. Runs never write lessons, exercises, terms or sources.
+
 ## Staging environment
 
 Staging is a non-production environment for frontend integration (`APP_ENV=staging`): the same code, migrations and

@@ -1,0 +1,132 @@
+{
+ "$defs": {
+  "RetrievalRequest": {
+   "additionalProperties": false,
+   "properties": {
+    "book": {
+     "anyOf": [
+      {
+       "enum": [
+        "mukhtasar",
+        "saadi",
+        "ibn_kathir",
+        "tabari",
+        "baghawi",
+        "muyassar"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Book"
+    },
+    "claim_id": {
+     "title": "Claim Id",
+     "type": "string"
+    },
+    "item_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Item Id"
+    },
+    "language": {
+     "anyOf": [
+      {
+       "enum": [
+        "ar",
+        "en"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Language"
+    },
+    "reference": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Reference"
+    },
+    "request_id": {
+     "pattern": "^r[0-9]{1,3}$",
+     "title": "Request Id",
+     "type": "string"
+    },
+    "text": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Text"
+    },
+    "tool": {
+     "enum": [
+      "quran_reference",
+      "quran_text",
+      "hadith_search",
+      "tafsir",
+      "hadeethenc_hadith",
+      "islamhouse_item"
+     ],
+     "title": "Tool",
+     "type": "string"
+    }
+   },
+   "required": [
+    "request_id",
+    "claim_id",
+    "tool",
+    "reference",
+    "text",
+    "book",
+    "item_id",
+    "language"
+   ],
+   "title": "RetrievalRequest",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "issues": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Issues",
+   "type": "array"
+  },
+  "requests": {
+   "items": {
+    "$ref": "#/$defs/RetrievalRequest"
+   },
+   "title": "Requests",
+   "type": "array"
+  }
+ },
+ "required": [
+  "requests",
+  "issues"
+ ],
+ "title": "factory_retrieve",
+ "type": "object"
+}

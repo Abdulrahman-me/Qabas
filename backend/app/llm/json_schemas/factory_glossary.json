@@ -1,0 +1,102 @@
+{
+ "$defs": {
+  "GTerm": {
+   "additionalProperties": false,
+   "properties": {
+    "arabic": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Arabic"
+    },
+    "basic_ar": {
+     "minLength": 1,
+     "title": "Basic Ar",
+     "type": "string"
+    },
+    "concept_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Concept Id"
+    },
+    "example_ar": {
+     "minLength": 1,
+     "title": "Example Ar",
+     "type": "string"
+    },
+    "intermediate_ar": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Intermediate Ar"
+    },
+    "term_id": {
+     "pattern": "^t[0-9]{1,3}$",
+     "title": "Term Id",
+     "type": "string"
+    },
+    "text_ar": {
+     "minLength": 1,
+     "title": "Text Ar",
+     "type": "string"
+    },
+    "transliteration": {
+     "minLength": 1,
+     "title": "Transliteration",
+     "type": "string"
+    }
+   },
+   "required": [
+    "term_id",
+    "text_ar",
+    "arabic",
+    "transliteration",
+    "basic_ar",
+    "intermediate_ar",
+    "example_ar",
+    "concept_id"
+   ],
+   "title": "GTerm",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "issues": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Issues",
+   "type": "array"
+  },
+  "terms": {
+   "items": {
+    "$ref": "#/$defs/GTerm"
+   },
+   "title": "Terms",
+   "type": "array"
+  }
+ },
+ "required": [
+  "terms",
+  "issues"
+ ],
+ "title": "factory_glossary",
+ "type": "object"
+}
