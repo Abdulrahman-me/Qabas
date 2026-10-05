@@ -24,7 +24,7 @@
 | 7.1 | Phase 7 audit corrections (corrective checkpoint) | ✅ Done | `phase-7.1` | Independent audit; 5 findings fixed (F-48–F-52) |
 | 8 | Content import (Salah reference, Unit 0 drafts), approval-gated publish, staging | ✅ Done | `phase-8` | CI green (582 passed); pipeline complete; real content correctly blocked on human/source/media inputs |
 | 9 | Source adapters (tool layer) | ✅ Done | `phase-9` | CI green; canonical insertion/import checks complete; provider live/cache approvals remain O-03 |
-| 9.1 | Phase 9 audit corrections (corrective checkpoint) | 🔄 In progress | `phase-9.1` | Independent audit; findings F-79–F-85 |
+| 9.1 | Phase 9 audit corrections (corrective checkpoint) | ✅ Done | `phase-9.1` | Independent audit; 7 findings F-79–F-85 (6 fixed, 1 recorded gate) |
 | 10 | Recitation service (`asr` worker) | ⏳ Not started | `phase-10` | **Milestone B: complete learning experience** |
 | 11 | LLM adapter and agent infrastructure | ⏳ Not started | `phase-11` | |
 | 12 | Lesson Factory pipeline: plan → QA | ⏳ Not started | `phase-12` | |
@@ -452,7 +452,7 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | F-84 | `SOURCE_POLICY.md` presented Tafsir Center as the organizers' tafsir authority. The organizers' tafsir rule (p. 3) names first-three-centuries sources or dorar.net/tafseer; Tafsir Center appears among recommended external platforms; the handoff's Mukhtasar-first order names later works. | Recorded as a specialist decision (D-107); the adapter was already mock-only (D-103), so no learner-facing tafsir is affected. |
 | F-85 | Gold hadith/translation/audio snapshots are checked for consistency with the lesson and with each other, but their provenance is operator-supplied (private gold envelope); they are not re-fetched at import, and the reviewer's digest approval covers the public lesson, not `raw`. | Accepted trust boundary for unpublished import; live re-verification of every cited snapshot before production approval is a recorded gate (D-108, O-03). |
 
-**Exit:** corrective checkpoint `phase-9.1` once CI is green (the original `phase-9` tag and history stay unchanged).
+**Exit:** ✅ CI green on GitHub (run 37267917624: 694 passed, 14 data-dependent skips, contract suites green); corrective checkpoint `phase-9.1` (the original `phase-9` tag and history stay unchanged).
 
 ---
 
@@ -791,3 +791,4 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | 2026-10-05 | 9 | Continued `phase/9-source-adapters` from `0332e69` without rewriting history. Read the full organizers' PDF independently; completed capability adapters, resilience/sidecar tests, immutable persistence, canonical scripture insertion and Unit 0/gold verification. Added D-88–D-104 and F-66–F-78. Focused checks: 134 passed; strict mypy, ruff, OpenAPI, safety and 595/279/105/382 contracts pass. First full run: 692 passed, one local role check skipped; final full run and branch CI pending. Fixed four CI tests to use explicit configuration rather than local `.env` secrets (F-77). Private product notes updated and remain ignored. |
 | 2026-10-05 | 9 | ✅ Phase 9 complete: final local suite 702 passed / 1 local role skip; GitHub CI 37252965749 green with 689 passed / 14 private-data skips and contracts 595/279/105/382. Ruff, strict mypy, OpenAPI and safety green. Real Unit 0 converter resolves canonical Arabic insertion while correctly retaining translation/content/media blockers. Release checkpoint `phase-9`; O-03/O-05/O-06/O-12/O-13 and the documented D-95–D-97 follow-ups remain open. |
 | 2026-10-05 | 9.1 | Independent Phase 9 audit (baseline 702 passed / 1 skipped reproduced). Core source guarantees verified; seven findings F-79–F-85: segment audio, citable-only persistence, breaker trial release and IslamHouse definite answers, live gate before cache, learner-facing Qur'an citation, tafsir authority wording, gold snapshot trust boundary. D-105–D-108. |
+| 2026-10-05 | 9.1 | ✅ Phase 9.1 complete: 707 passed / 1 local role skip; CI 37267917624 green (694 passed, 14 canonical-dataset/private-handoff skips; contracts 595/279/105/382); tagged `phase-9.1`, merged to `main`. |
