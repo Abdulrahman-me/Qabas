@@ -19,9 +19,9 @@ depends_on: str | Sequence[str] | None = None
 
 previous = import_module("migrations.versions.0005_factory_runs")
 PREVIOUS_GRANTS: str = previous.GRANTS.format(no_delete=previous.NO_DELETE_AFTER)
-GRANTS = PREVIOUS_GRANTS.replace(
+GRANTS = previous.GRANTS.format(no_delete=previous.NO_DELETE_AFTER + ", media_jobs, media_assets").replace(
     "REVOKE UPDATE ON review_decisions, session_answers",
-    "REVOKE UPDATE, DELETE ON media_jobs, media_assets, review_decisions, session_answers")
+    "REVOKE UPDATE ON media_jobs, media_assets, review_decisions, session_answers")
 
 
 def upgrade() -> None:

@@ -104,5 +104,10 @@ async def test_least_privilege_roles(conn: AsyncConnection) -> None:
         assert not await can(role, "review_decisions", "UPDATE")
         assert not await can(role, "review_decisions", "DELETE")
         assert not await can(role, "alembic_version", "UPDATE")
+        for table in ("media_jobs", "media_assets"):
+            assert await can(role, table, "SELECT")
+            assert await can(role, table, "INSERT")
+            assert not await can(role, table, "UPDATE")
+            assert not await can(role, table, "DELETE")
     assert await can("qabas_readonly", "sessions", "SELECT")
     assert not await can("qabas_readonly", "sessions", "INSERT")
