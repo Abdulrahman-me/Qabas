@@ -1,0 +1,41 @@
+# LLM models (agent catalog; system architecture "LLM"; O-03). Model IDs are configuration (LLM_MODEL_STRONG,
+# LLM_MODEL_FAST); this file says what is known about each candidate.
+#
+#   status:   pending -> usable in dev/test/staging; production refuses the model until the bilingual evaluation
+#             (O-03) approves it (status: approved, evaluated_by, evaluated_on, report).
+#   capabilities: declared, never assumed. `effort` lists the levels the model accepts; null means unverified, and
+#             the adapter then omits output_config.effort and records that it was not applied. Same for adaptive
+#             thinking. scripts/evaluate_models.py --capabilities compares these with the live Models API.
+#   price_per_mtok: USD per million tokens, null until confirmed against the provider's current price list; costs
+#             are then reported as unpriced and budgets are enforced in tokens.
+# Sampling parameters (temperature/top_p/top_k) are never sent (AD-27), so strong and fast stay interchangeable.
+
+schema: qabas.llm_models/1
+models:
+  claude-opus-5-5:
+    role: strong starting point (system architecture, agent catalog)
+    status: pending
+    evaluated_by: null
+    evaluated_on: null
+    report: null
+    capabilities:
+      effort: [low, medium, high, xhigh, max]   # agent catalog: effort is the depth control; defaults to medium
+      adaptive_thinking: true
+      structured_outputs: true
+    price_per_mtok: {input: null, output: null, cache_write: null, cache_read: null}
+  claude-sonnet-5-5:
+    role: fast alternative (system architecture)
+    status: pending
+    evaluated_by: null
+    evaluated_on: null
+    report: null
+    capabilities: {effort: null, adaptive_thinking: null, structured_outputs: true}
+    price_per_mtok: {input: null, output: null, cache_write: null, cache_read: null}
+  claude-haiku-4-5:
+    role: fast starting point (lowest latency/cost)
+    status: pending
+    evaluated_by: null
+    evaluated_on: null
+    report: null
+    capabilities: {effort: null, adaptive_thinking: null, structured_outputs: true}
+    price_per_mtok: {input: null, output: null, cache_write: null, cache_read: null}

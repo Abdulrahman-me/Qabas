@@ -25,6 +25,7 @@ dependencies = [
     "httpx>=0.28",
     "rapidfuzz>=3.14",
     "python-multipart>=0.0.20",
+    "anthropic>=1.11",
 ]
 
 [dependency-groups]

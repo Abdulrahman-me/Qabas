@@ -163,6 +163,21 @@ written to disk, stored or logged, and the transcript lives a few seconds in Red
 
 CI has neither the model nor the clips: it covers the same pipeline with generated audio and an in-process engine.
 
+## Model calls (Phase 11)
+
+`app/llm/` is the one way Qabas calls a language model (agent catalog §17, AD-27): a registered prompt
+(`app/llm/prompts/<id>.md`, versioned and pinned in `LOCK.json`), its strict JSON schema (`app/llm/json_schemas/`),
+framed untrusted data, structured output validated against the schema and the contract, one corrective retry, and a
+usage record per attempt (model, prompt version and digest, effort, tokens) charged to a token budget.
+
+| Task | Command |
+|---|---|
+| After editing a prompt (raise its `version` first) | `uv run python scripts/lock_prompts.py` |
+| Bilingual model validation (O-03; live calls, needs `ANTHROPIC_API_KEY`) | `uv run python scripts/evaluate_models.py --systems opus=claude-opus-5-5,haiku=claude-haiku-4-5` (cases default to the private `.private/eval/llm/cases.jsonl`; report in `var/llm-eval/`) |
+| Compare declared model capabilities with the Models API | `uv run python scripts/evaluate_models.py --capabilities claude-opus-5-5 claude-haiku-4-5` |
+
+Tests and CI never call a model: they use `app/llm/fake.py` (an SDK-shaped fake and a deterministic client).
+
 ## Staging environment
 
 Staging is a non-production environment for frontend integration (`APP_ENV=staging`): the same code, migrations and

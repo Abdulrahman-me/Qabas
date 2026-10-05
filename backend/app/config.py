@@ -67,6 +67,9 @@ class Settings(BaseSettings):
     anthropic_api_key: SecretStr | None = None
     llm_model_strong: str = "claude-opus-5-5"
     llm_model_fast: str = "claude-haiku-4-5"
+    # Per-request timeout; the SDK retries transport errors, 429 and 5xx with backoff this many times (Phase 11).
+    llm_timeout_seconds: float = 120.0
+    llm_max_retries: int = 2
     stt_provider: str | None = None
     stt_api_key: SecretStr | None = None
     image_provider: str | None = None

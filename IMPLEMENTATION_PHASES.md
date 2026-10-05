@@ -27,7 +27,7 @@
 | 9.1 | Phase 9 audit corrections (corrective checkpoint) | ✅ Done | `phase-9.1` | Independent audit; 7 findings F-79–F-85 (6 fixed, 1 recorded gate) |
 | 10 | Recitation service (`asr` worker) | ✅ Done | `phase-10` | **Milestone B: complete learning experience** (learner-audio acceptance O-06, throughput O-03) |
 | 10.1 | Phase 10 audit: Tarteel requirement, VAD truncation of sustained madd (corrective checkpoint) | ✅ Done | `phase-10.1` | Tarteel model confirmed in use; F-95 fixed (D-118); clip set 18/18 |
-| 11 | LLM adapter and agent infrastructure | ⏳ Not started | `phase-11` | |
+| 11 | LLM adapter and agent infrastructure | 🔄 In progress | `phase-11` | |
 | 12 | Lesson Factory pipeline: plan → QA | ⏳ Not started | `phase-12` | |
 | 13 | Reviewer gates, publication, reviewer console API | ⏳ Not started | `phase-13` | |
 | 14 | Visual and media pipeline (images, audio, production scenes) | ⏳ Not started | `phase-14` | Full scene quality (D-06) |
@@ -515,13 +515,28 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 **Goal:** the shared, auditable model-calling layer used by the factory (and later Raqeeb).
 **Refs:** AGENT_AND_PROVIDER_CATALOG §17; AD-27.
 
-- [ ] Adapter on the official Anthropic SDK: structured outputs/strict tools, effort setting, records model ID, prompt version and token usage per call; `LLM_MODEL_STRONG`/`LLM_MODEL_FAST`.
-- [ ] Prompt registry (`llm/prompts/*.md`, versioned) and JSON schemas (`llm/json_schemas/`).
-- [ ] Untrusted-data framing helper (delimited data fields, ignore-embedded-directives instruction), reused by every agent.
-- [ ] Spend/budget accounting primitives; a deterministic fake client for tests.
-- [ ] Bilingual evaluation harness skeleton for O-03 model validation.
+- [x] Adapter on the official Anthropic SDK (`app/llm/client.py`, `anthropic` 1.11): structured outputs (`output_config.format` = the prompt's schema), explicit `output_config.effort` where the model declares it, adaptive thinking per prompt, no sampling parameters or forced `tool_choice`; `stop_reason` checked first (refusal / truncation); schema + contract validation with one corrective retry; SDK retries/timeouts; classified errors; records model ID, prompt id/version/digest, effort and token usage (incl. cache) per attempt; `LLM_MODEL_STRONG`/`LLM_MODEL_FAST` by prompt tier; model policy with the O-03 production gate (D-119, D-121).
+- [x] Prompt registry (`app/llm/prompts/*.md` with front matter, versioned and pinned by digest in `LOCK.json`; `scripts/lock_prompts.py`) and strict JSON schemas (`app/llm/json_schemas/`); first catalog prompt `conversation_title` (D-120).
+- [x] Untrusted-data framing helper (`app/llm/framing.py`): per-call nonce-tagged data elements that the data cannot close, the ignore-embedded-directives instruction, and refusal of learner identifiers; used by every call (D-123).
+- [x] Spend/budget accounting (`app/llm/budget.py`: per-attempt usage records, token budgets → `budget_exceeded`, run `cost` summary, USD only from confirmed prices) and deterministic fakes (`app/llm/fake.py`) (D-122).
+- [x] Bilingual evaluation harness skeleton (`app/llm/evaluation.py`, `scripts/evaluate_models.py`): deterministic checks, per-language pass rates, error classes, latency, tokens, identity; live capability check; private evaluation sets (D-124).
 
 **Exit:** tag `phase-11`.
+
+**Refs re-reviewed:** AGENT_AND_PROVIDER_CATALOG (calling rules, §17 call catalog); AD-27, AD-22; SYSTEM_ARCHITECTURE (LLM row, `llm/` layout); BACKEND §9.1 (untrusted input), §9.2 (memory keys need prompt versions); FACTORY (stage table tiers, stage execution: per-call model/prompt/source versions and spend in `factory_runs.cost`, `budget_exceeded`, untrusted brief/reasons); DATA_MODEL (`factory_runs.cost`); OPERATIONS (LLM env, provider errors and spend metrics, retention O-09); RAQEEB_BENCHMARK §16 (identity/latency/cost recording; the benchmark itself is Raqeeb's); STATUS O-03, O-09, P-04/P-05; D-19 (evaluation sets private).
+
+**Delivered.** `app/llm/` (`client`, `prompts`, `framing`, `models`, `budget`, `errors`, `fake`, `evaluation`), `content/llm/models.yaml`, `scripts/lock_prompts.py`, `scripts/evaluate_models.py`, `tests/llm/` (43: request shape and calling rules, effort only where declared, refusal/truncation without retry, corrective retry for five kinds of invalid output, twice-invalid failure, eight provider error classes, learner-identifier refusal before any call, production/unknown-model/unknown-prompt/no-key gates, budget stop with the paid call recorded, metadata-only logs, framing injection resistance, lock/version enforcement incl. the lock script, strict-schema rules, priced/unpriced cost, fake-client validation, harness scoring/classification/budget). The factory agents and their prompts are Phase 12; Raqeeb's are Phase 16; nothing here authors or judges religious content.
+
+| # | Finding | Resolution |
+|---|---|---|
+| F-96 | The catalog makes effort the depth control and says Opus 5.5 defaults to `medium`, but whether `claude-haiku-4-5` / `claude-sonnet-5-5` accept `output_config.effort` (or adaptive thinking) is not stated; sending an unsupported parameter would fail every call (`400`). | D-121: capabilities are declared per model; unverified ones are not sent and the usage record says so; `--capabilities` checks the declarations against the live Models API (O-03). |
+| F-97 | Structured outputs accept a strict JSON-schema subset (closed objects); a loosely written schema would fail at call time. | D-120: the registry refuses schemas that are not closed and fully required; nullable types replace optional fields. |
+| F-98 | No price list is part of the handoff, yet `factory_runs.cost` and spend metrics need cost. | D-122: tokens are always recorded and budgets are in tokens; USD is computed only from prices confirmed in `models.yaml`, otherwise reported as unpriced, never estimated. |
+| F-99 | Prompt identity by file digest would differ between Windows (CRLF checkout) and Linux. | Digests are computed over LF-normalized content. |
+| F-100 | The catalog recommends the Message Batches API for the benchmark harness and non-interactive factory re-runs. | Belongs to the phases that run those workloads (factory re-runs, Raqeeb benchmark); the Phase 11 harness skeleton calls synchronously. Recorded follow-up, not a gap in the adapter. |
+
+**Gates still open:** O-03 (model approval on the bilingual tasks with a private evaluation set; capability confirmation; prices), O-09 (provider data-processing terms before learner content is sent — Phase 16), P-04 (provider disclosure).
+
 
 ---
 
@@ -805,6 +820,12 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | 2026-10-05 | D-116 | **Back-pressure is a Redis-backed admission set across API instances** (`ASR_QUEUE_MAX` admitted checks; slots older than wait + 5 s reclaimed); a full set answers `503` at once with `retry_after_ms` until the oldest wait ends. | AD-22; backend §8; stateless API (AD-23). |
 | 2026-10-05 | D-117 | **The `asr` dependency group (faster-whisper, CTranslate2, PyAV) stays out of the API environment**; the API never imports it. CI runs the pipeline with generated audio and an in-process engine; the real model runs where installed. | AD-22; reply7 separate environments; no live calls in CI. |
 | 2026-10-05 | D-118 | **The recitation VAD keeps sustained madd.** The specified Silero VAD (faster-whisper, default options) is applied explicitly: no region means no speech (unclear); each region is extended forward while the voice continues at ≥ ¼ of the region's median level (and above near-silence), then the Tarteel model transcribes the regions. The VAD's role (filter silence/non-speech, detect speech) and the §8 thresholds are unchanged. | F-95; BACKEND §8 steps 2–3; QUALITY recitation acceptance row. |
+| 2026-10-05 | D-119 | **One model adapter on the official SDK.** `AnthropicClient.structured(prompt_id, data, ledger, call_key, effort)`: tier→model from settings; structured output with the prompt's schema; explicit effort where declared; adaptive thinking per prompt; `stop_reason` first (`refusal` → `LLMRefusal`, truncation → `LLMTruncated`, never retried); schema + contract validation with exactly one corrective retry, then `LLMOutputInvalid`; SDK retries (2) for transport/429/5xx within `LLM_TIMEOUT_SECONDS`, then `LLMUnavailable`; other 4xx `LLMRequestRejected`; 401/403 `LLMNotConfigured`. No sampling parameters, no forced `tool_choice`. | Agent catalog calling rules; AD-27. |
+| 2026-10-05 | D-120 | **Prompts are versioned files pinned by digest.** Front matter (id, version, tier, effort, thinking, max_tokens, output schema, optional contract model) + system text; `LOCK.json` holds version and SHA-256 (LF-normalized); an edit without a version bump is refused at load and by the lock script. Schemas are strict (closed, fully required). Every call records prompt id, version, digest and schema digest. | Catalog "record exact prompt versions"; backend §9.2 memory keys; F-97, F-99. |
+| 2026-10-05 | D-121 | **Models are declared policy.** `content/llm/models.yaml` lists each candidate with status (production refuses `pending`, O-03), declared capabilities (effort levels, adaptive thinking; unverified = not sent) and confirmed prices (null until confirmed). | O-03; F-96. |
+| 2026-10-05 | D-122 | **Spend is recorded per attempt and budgeted in tokens.** A `Ledger` refuses to start a call once a run's budget is spent and raises `budget_exceeded` after a call that crosses it (the paid call is still recorded); its summary is the `factory_runs.cost` document; USD only from confirmed prices. | Factory stage execution; operations spend metrics; F-98. |
+| 2026-10-05 | D-123 | **Untrusted data is framed with per-call nonce tags** that data cannot close or forge, under a fixed ignore-embedded-instructions rule; learner identifiers (learner-scoped id prefixes, identity keys) are refused before any call. | Backend §9.1; catalog data handling ("no learner identifiers in prompts"). |
+| 2026-10-05 | D-124 | **The O-03 harness scores deterministically through the production adapter**, records per-system identity, pass rates by language, error classes, latency and tokens, and leaves release verdicts to evaluators (P-05). Real evaluation sets are private (D-19); a neutral sample runs in CI with the fake client. Judged scoring and the Raqeeb benchmark come with their phases. | O-03; RAQEEB_BENCHMARK §16; D-19. |
 | 2026-10-04 | D-13 | Git HTTPS failed certificate verification with Git's bundled OpenSSL. The repo-local config now sets `http.sslBackend=schannel` (Windows certificate store); global config is untouched. The first push made `phase/0-workspace` GitHub's default branch, so switch the default to `main` when `phase-0` is tagged. | — |
 
 ## Progress log
@@ -844,3 +865,4 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | 2026-10-05 | 10 | ✅ Phase 10 complete: 754 passed / 1 local role skip (real-model clip set included); CI 37272620979 green (740 passed, 15 data/model skips; contracts 595/279/105/382); tagged `phase-10`, merged to `main`. |
 | 2026-10-05 | 10.1 | Targeted Tarteel audit: the handoff's only Tarteel artefact is the `tarteel-ai/whisper-base-ar-quran` model, which Phase 10 uses (D-115); O-06 holds no Tarteel item. Found and fixed F-95 (VAD cut sustained madd; D-118); clip set asserts all acceptance classes, 18/18. |
 | 2026-10-05 | 10.1 | ✅ Phase 10.1 complete: 757 passed / 1 local role skip; CI 37277069615 green (743 passed, 15 skipped); tagged `phase-10.1`, merged to `main`. |
+| 2026-10-05 | 11 | Model-calling layer implemented on `phase/11-llm-adapter`: adapter, prompt registry/lock, strict schemas, framing, model policy, spend ledger, fakes, evaluation harness skeleton. Findings F-96–F-100, decisions D-119–D-124. |

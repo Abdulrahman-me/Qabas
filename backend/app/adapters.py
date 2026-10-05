@@ -7,29 +7,10 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Protocol
 
+from app.llm.client import LLMClient as LLMClient  # Phase 11: app/llm (prompt registry, structured output)
+from app.llm.client import LLMResult as LLMResult
 from app.sources.errors import ProviderNotConfigured as ProviderNotConfigured
 from app.sources.records import SourceRecord as SourceRecord
-
-
-@dataclass(frozen=True)
-class LLMUsage:
-    model: str
-    prompt_version: str
-    input_tokens: int
-    output_tokens: int
-
-
-@dataclass(frozen=True)
-class LLMResult:
-    data: dict[str, Any]
-    usage: LLMUsage
-
-
-class LLMClient(Protocol):
-    """Phase 11. Structured output against a JSON schema; records model, prompt version and usage (AD-27)."""
-
-    async def structured(self, *, tier: str, prompt_id: str, prompt_version: str, system: str,
-                         data: dict[str, Any], output_schema: dict[str, Any], effort: str = "medium") -> LLMResult: ...
 
 
 @dataclass(frozen=True)
