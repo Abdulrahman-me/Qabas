@@ -94,11 +94,14 @@ def write_gold(path: Path, gold: GoldFile) -> None:
 async def import_gold(db: AsyncSession, gold: GoldFile, *, run_id: str | None = None) -> ImportResult:
     """Store a gold lesson as an unpublished version (caller owns the transaction)."""
     from app.sources.gold import verify_scripture
-    from app.sources.store import persist
+    from app.sources.store import citable, persist
     try:
         verify_scripture(gold.lesson.model_dump(mode="json"), gold.source_records)
+        # Capability snapshots (audio/timing metadata) are verified above and stay embedded in the canonical
+        # row's provenance; only authority records become citable sources (D-106).
         for identifier, record in sorted(gold.source_records.items()):
-            await persist(db, record, id_=identifier)
+            if citable(record):
+                await persist(db, record, id_=identifier)
     except (RuntimeError, LookupError, ValueError, TypeError) as exc:
         raise GoldError(f"scripture/source verification failed: {exc}") from exc
     result = await import_package(db, gold.lesson, origin="gold_import", run_id=run_id)

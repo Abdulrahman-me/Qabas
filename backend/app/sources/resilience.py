@@ -135,10 +135,10 @@ class ProviderHttp:
         try:
             return await self._request(method, path, params=params, headers=headers, data=data,
                                        auth=auth, validate=validate)
-        except asyncio.CancelledError:
-            # Cancellation is not evidence of an upstream outage. Release a half-open slot.
+        finally:
+            # Success and failure already settled the breaker. Anything else (cancellation, an unexpected
+            # exception) is not evidence about the provider, but must never keep a half-open slot (F-81).
             self.breaker.trial_in_flight = False
-            raise
 
     async def _request(self, method: str, path: str, *, params: Mapping[str, Any] | None,
                        headers: Mapping[str, str] | None, data: Mapping[str, str] | None,

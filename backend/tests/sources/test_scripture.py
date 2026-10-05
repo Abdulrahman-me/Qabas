@@ -106,9 +106,12 @@ def test_invalid_timings_keep_audio_but_no_word_highlighting(invalid: str) -> No
 
 
 def test_audio_cross_checks_words_and_uses_canonical_timing_text() -> None:
-    verified = insert(mushaf(), 1, (1, 1), audio=audio(), reciter="Synthetic reciter", word_range=(2, 4))
-    assert [word.position for word in verified.evidence.quran.audio.words] == [2, 3, 4]
+    verified = insert(mushaf(), 1, (1, 1), audio=audio(), reciter="Synthetic reciter")
+    assert [word.position for word in verified.evidence.quran.audio.words] == [1, 2, 3, 4, 5]
     assert [part.role for part in verified.source.parts] == ["text_authority", "audio", "timing"]
+    # A segment never borrows the whole-ayah clip (F-79): its clip is cut to the exact words at publish time.
+    with pytest.raises(CapabilityMismatch, match="segment"):
+        insert(mushaf(), 1, (1, 1), audio=audio(), reciter="Synthetic reciter", word_range=(2, 4))
     data = copy.deepcopy(audio().data)
     data["words"][0]["text_qpc_hafs"] = "different"
     with pytest.raises(CapabilityMismatch, match="word identity"):

@@ -11,7 +11,8 @@ from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models import Source
-from app.sources.errors import SourceChanged
+from app.sources.errors import CapabilityMismatch, SourceChanged
+from app.sources.policy import load_policies
 from app.sources.records import SourceRecord, sha256_text
 
 
@@ -19,7 +20,19 @@ def source_id(record: SourceRecord) -> str:
     return "src_" + sha256_text(f"{record.provider}\0{record.provider_record_id}")[:32]
 
 
+def citable(record: SourceRecord) -> bool:
+    """Only authority records become ``sources`` rows (D-106). Canonical scripture is attributed to the contract's
+    Quran provider but carries the mushaf text-authority part; capability-only data (Quran Foundation verse text,
+    search hits, audio, timings) never becomes a citable source - it stays inside the authority row's ``raw``."""
+    if any(part.role == "text_authority" and part.provider == "mushaf" for part in record.parts):
+        return record.provider == "quran_com" and record.kind == "quran" and record.adapter_version == "scripture/1"
+    provider = load_policies().get(record.provider)
+    return provider is not None and "authority" in provider.role and "capability" not in provider.role
+
+
 async def persist(db: AsyncSession, record: SourceRecord, *, id_: str | None = None) -> Source:
+    if not citable(record):
+        raise CapabilityMismatch(record.provider, "capability data cannot be stored as a citable source")
     identifier = id_ or source_id(record)
     values = {"id": identifier, "provider": record.provider, "provider_record_id": record.provider_record_id,
               "kind": record.kind, "title": record.title, "reference": record.reference, "excerpt": record.text,

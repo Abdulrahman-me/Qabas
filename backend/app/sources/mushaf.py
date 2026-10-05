@@ -66,6 +66,7 @@ class DatasetSpec(BaseModel):
     member_sha256: str
     ayah_count: int
     authority: str
+    citation: str                   # how a source card names the edition (D-105)
     redistribution: Literal["pending", "permitted", "not_permitted"]
     synthetic: bool = False
 

@@ -57,7 +57,8 @@ def spec(data: bytes | None = None) -> DatasetSpec:
     return DatasetSpec(id="synthetic_test", title="Synthetic test text (not scripture)", publisher="tests",
                        riwaya="none", version="0", member="synthetic.json",
                        member_sha256=hashlib.sha256(data).hexdigest(), ayah_count=len(records()),
-                       authority="tests only", redistribution="permitted", synthetic=True)
+                       authority="tests only", citation="نص تجريبي", redistribution="permitted",
+                       synthetic=True)
 
 
 def mushaf() -> Mushaf:

@@ -6,7 +6,6 @@ undelivered server's tool names. Mapping and argument schemas must be confirmed 
 
 from __future__ import annotations
 
-import asyncio
 import json
 from typing import Any, ClassVar
 
@@ -106,9 +105,8 @@ class TafsirCenter(Adapter):
             except UpstreamUnavailable:
                 self.breaker.record_failure()
                 raise
-            except asyncio.CancelledError:
-                self.breaker.trial_in_flight = False
-                raise
+            finally:
+                self.breaker.trial_in_flight = False   # F-81: never keep a half-open slot after any exit
             self.breaker.record_success()
             assert fetched is not None
             await self.remember(operation, arguments, fetched)

@@ -46,6 +46,27 @@ def translation_choice(language: str, path: Path = TRANSLATIONS) -> TranslationC
     return TranslationChoice.model_validate(choice)
 
 
+def _span(passage: Passage) -> str:
+    if passage.ayah_start == passage.ayah_end:
+        return str(passage.ayah_start)
+    return f"{passage.ayah_start}-{passage.ayah_end}"
+
+
+def citation_title(passage: Passage) -> str:
+    """Learner-facing title: the surah and the canonical edition the text comes from (D-105). The contract's
+    ``provider`` value stays ``quran_com`` (D-89); the edition is named here and in ``raw.parts``."""
+    return f"سورة {passage.surah_name_ar} — {passage.dataset.citation}"
+
+
+def citation_reference(passage: Passage) -> str:
+    return f"{passage.surah_name_ar}: {_span(passage)}"
+
+
+def citation_url(passage: Passage) -> str:
+    """A reading link for the verse (the contract's Quran provider), never a dataset download."""
+    return f"https://quran.com/{passage.surah}/{_span(passage)}"
+
+
 @dataclass(frozen=True)
 class VerifiedScripture:
     evidence: Any  # revision 10 contract Evidence (contract models are deliberately isolated from mypy)
@@ -85,6 +106,11 @@ def _translation(mushaf: Mushaf, passage: Passage, language: str, records: tuple
 
 def _audio(mushaf: Mushaf, passage: Passage, record: SourceRecord, reciter: str,
            base_url: str) -> tuple[Any, tuple[Part, ...]]:
+    if passage.word_start is not None:
+        # The recite payload's audio must be a clip of exactly the recited words, cut at publish time from the
+        # licensed recitation (backend §8 step 8, API recite_verse; O-06). Whole-ayah audio is never served as a
+        # segment, and filtered timings over the whole clip would highlight against the wrong audio (F-79).
+        raise CapabilityMismatch("quran_com", "a word segment needs a published clip of exactly those words")
     if passage.ayah_start != passage.ayah_end or record.provider != "quran_com" or \
             record.data.get("verse_key") != f"{passage.surah}:{passage.ayah_start}":
         raise CapabilityMismatch("quran_com", "audio does not identify this single ayah")
@@ -160,8 +186,8 @@ def insert(mushaf: Mushaf, surah: int, ayah_range: tuple[int, int], *, language:
     response = {"dataset": passage.dataset.provenance(), "reference": passage.key,
                 "text_uthmani": passage.text_uthmani, "translations": [r.raw() for r in translations],
                 "audio": audio.raw() if audio is not None else None}
-    record = SourceRecord("quran_com", record_id, "quran", passage.dataset.title, passage.key,
-                          passage.text_uthmani, passage.dataset.url, "scripture/1",
+    record = SourceRecord("quran_com", record_id, "quran", citation_title(passage), citation_reference(passage),
+                          passage.text_uthmani, citation_url(passage), "scripture/1",
                           Retrieval("mushaf.get", "get", {"surah": surah, "ayah_range": list(ayah_range),
                                                          "word_range": list(word_range) if word_range else None,
                                                          "translation_languages": sorted(localized)}, response,

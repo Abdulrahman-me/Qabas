@@ -114,7 +114,8 @@ def gold(title_suffix: str = "") -> GoldFile:
         for language, item in exercise["exercise"].items():
             walk(item, language)
     replacements = {f"src_q_112_{ayah}": next(identifier for identifier, source in records.items()
-                                             if source.provider == "quran_com" and source.reference == f"1:{ayah}")
+                                              if source.provider == "quran_com"
+                                              and source.parts[0].record_id == f"1:{ayah}")
                     for ayah in (1, 2)}
     def relink(node: Any) -> Any:
         if isinstance(node, str):

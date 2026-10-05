@@ -50,10 +50,12 @@ class IslamHouse(HttpAdapter):
             raise ProviderResponseInvalid(self.provider, "item identity differs from request")
         require(self.provider, data, "title")
         require(self.provider, data, "description")
+        # A valid item that is not a citable text (audio, video, ...) or not in the requested language is a
+        # definite answer from a healthy provider, not an outage: it must not count towards the breaker (F-81).
         if data.get("type") not in {"books", "articles", "fatwa", "fatwas"}:
-            raise ProviderResponseInvalid(self.provider, "item type is not supported for citation")
+            raise RecordNotFound(self.provider, "item is not a citable text type")
         if data.get("translation_language") != arguments["language"]:
-            raise ProviderResponseInvalid(self.provider, "item language differs from request")
+            raise RecordNotFound(self.provider, "item is not available in the requested language")
         for field in ("prepared_by", "attachments"):
             list_field(data.get(field, []), field)
 

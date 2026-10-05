@@ -22,4 +22,5 @@ datasets:
     member_sha256: "d7adf8aeeef5a7b6798060706a55735dffbcdb542b290a3907bd9f70c498f4d3"
     ayah_count: 6236
     authority: "Organizers' package (Qur'an: King Fahd Complex edition) and handoff §12 (local Uthmani mushaf)"
+    citation: "مصحف المدينة النبوية، مجمع الملك فهد (رواية حفص)"
     redistribution: pending

@@ -76,12 +76,13 @@ class HttpAdapter(Adapter):
 
     async def fetch(self, operation: str, arguments: dict[str, Any], path: str,
                     params: Mapping[str, Any] | None = None, *, headers: Mapping[str, str] | None = None) -> Fetched:
-        """Cache first (only where the provider's terms allow), then the live provider (only where O-03 allows)."""
+        """The O-03 live gate first (cached provider data is still that provider's data, F-82), then the cache
+        (only where the provider's terms allow), then the live provider."""
+        self.policy.require_live(self.settings)
         hit = await self.cached(operation, arguments)
         if hit is not None:
             self.validate_response(operation, arguments, hit.data)
             return hit
-        self.policy.require_live(self.settings)
         response = await self.request_json(operation, arguments, path, params, headers)
         fetched = Fetched(self.safe_response(response.data), sha256_bytes(response.body), self.clock(), False)
         await self.remember(operation, arguments, fetched)
