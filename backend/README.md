@@ -209,6 +209,18 @@ removals, re-runs every publication gate and publishes in the same transaction, 
 with the blocking issues and changes nothing. `request_changes` sends the run back to `write` with the reason;
 `reject` is final. Gold lessons publish through the same approval rule with `scripts/review_gold.py`.
 
+## Metrics and blind tests (Phase 15)
+
+`GET /v1/admin/metrics` reports learning pre/post, misconception and completion figures (from per-learner facts the
+`session.finished` outbox subscriber keeps current; synthetic, bot and deleted users excluded) and factory figures
+(published runs, generation and review minutes, blind-test results). `GET /v1/admin/blind-test/next` and
+`POST /v1/admin/blind-test/{pair_id}` run the blind comparison of a gold and a generated lesson.
+
+| Task | Command |
+|---|---|
+| Pair a published gold lesson with a published generated one | `uv run python scripts/create_blind_pair.py --gold <lesson_id> --generated <lesson_id>` |
+| Backfill learning-metric facts | `uv run python scripts/create_blind_pair.py --refresh-metrics` |
+
 ## Staging environment
 
 Staging is a non-production environment for frontend integration (`APP_ENV=staging`): the same code, migrations and

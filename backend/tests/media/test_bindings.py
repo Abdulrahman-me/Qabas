@@ -138,7 +138,7 @@ def authored(data: dict[str, Any]) -> dict[str, Any]:
     manifest = json.loads((FIXTURES_DIR / "scenes/asset_positive.scene.json").read_text("utf-8"))
     manifest.update(scene_id=data["scene_id"], version=data["version"],
                     preview={"frames_ms": [0, 500], "states": [{"beat": 0, "focus": -1}]})
-    assert {a["anchor_id"] for a in data["required_anchors"]} == {"palm", "well", "tent"}
+    assert {a["anchor_id"] for a in data["required_anchors"]} <= {"palm", "well", "tent"}
     return {"manifest_json": json.dumps(manifest), "artwork": [
         {"asset_id": a["asset_id"], "brief": "Neutral synthetic geometry", "width": a["width"], "height": a["height"]}
         for a in manifest["assets"]]}

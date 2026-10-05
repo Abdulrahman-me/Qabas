@@ -29,14 +29,16 @@ from app.models.learner import (
     SessionAnswer,
 )
 from app.models.media import MediaAssetRecord, MediaJob
+from app.models.metrics import BlindPair, BlindResponse, MetricLearnerFact, MetricUnitFact
 from app.models.platform import EffectLedger, OutboxEvent, ReviewDecision
 from app.models.users import AuthSession, DeletionJob, IdempotencyKey, User
 
 __all__ = [
-    "AuthSession", "Claim", "Concept", "CurriculumSlot", "DailyActivity", "DeletionJob", "EffectLedger", "Exercise",
+    "AuthSession", "BlindPair", "BlindResponse", "Claim", "Concept", "CurriculumSlot", "DailyActivity",
+    "DeletionJob", "EffectLedger", "Exercise",
     "ExerciseVersion", "FactoryRun", "IdempotencyKey", "LearnerConcept", "LearnerLesson", "LearnerMisconception",
     "LearnerTerm", "LearnerUnit", "LearningSession", "Lesson", "LessonVersion", "MediaAssetRecord", "MediaJob",
-    "Misconception",
+    "MetricLearnerFact", "MetricUnitFact", "Misconception",
     "OutboxEvent", "Quest", "RecitationCheckRecord", "ReviewDecision", "SceneAsset", "SceneVersion",
     "SentenceRecord", "SessionAnswer", "Source", "Term", "Unit", "User", "XpEvent",
 ]

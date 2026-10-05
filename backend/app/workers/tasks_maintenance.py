@@ -10,12 +10,13 @@ from sqlalchemy.pool import NullPool
 
 from app.config import get_settings
 from app.runtime import Resources
+from app.services import metrics
 from app.services.learning import finish_events
 from app.services.platform import auth_sessions, deletion, idempotency, outbox
 from app.workers.celery_app import celery_app
 
 # Importing a consumer module registers its outbox consumers with the relay.
-CONSUMER_MODULES = (deletion, finish_events)
+CONSUMER_MODULES = (deletion, finish_events, metrics)
 
 
 def run_with_resources[T](job: Callable[[Resources], Awaitable[T]]) -> T:
