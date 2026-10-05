@@ -6,6 +6,7 @@ carry adapter provenance; missing, stale or mismatching scripture is rejected ev
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any
 
 from app.config import get_settings
@@ -18,7 +19,7 @@ from app.sources.scripture import TRANSLATIONS, insert
 
 
 def verify_scripture(package: dict[str, Any], records: dict[str, SourceRecord], *,
-                     mushaf: Mushaf | None = None) -> None:
+                     mushaf: Mushaf | None = None, translation_manifest: Path | None = None) -> None:
     sources = {item["source_id"]: item for item in package["sources"]}
     references: list[tuple[str, dict[str, Any], str | None]] = []
     hadiths: list[tuple[str, dict[str, Any]]] = []
@@ -135,7 +136,8 @@ def verify_scripture(package: dict[str, Any], records: dict[str, SourceRecord], 
         verified = insert(canonical, passage.surah, (passage.ayah_start, passage.ayah_end), language=language,
                           word_range=word_range,
                           translations=translations, audio=audio_record,
-                          reciter=(body.get("audio") or {}).get("reciter"), translation_manifest=TRANSLATIONS)
+                          reciter=(body.get("audio") or {}).get("reciter"),
+                          translation_manifest=translation_manifest or TRANSLATIONS)
         for field in ("translation", "translation_source", "audio"):
             expected = verified.evidence.quran.model_dump(mode="json")[field]
             if body.get(field) != expected:

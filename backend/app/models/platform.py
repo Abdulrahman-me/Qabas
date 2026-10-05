@@ -44,6 +44,9 @@ class EffectLedger(Base):
     applied_at: Mapped[datetime] = mapped_column(server_default=func.now())
 
 
+FINAL_DECISION = "gate = 2 AND decision IN ('approve', 'reject')"
+
+
 class ReviewDecision(Base):
     """Insert-only gate audit bound to the exact reviewed digest (AD-13, AD-19).
 
@@ -62,6 +65,14 @@ class ReviewDecision(Base):
                         name="published_digest_format"),
         CheckConstraint("published_digest IS NULL OR (gate = 2 AND decision = 'approve')",
                         name="published_only_on_gate2_approve"),
+        CheckConstraint("gate <> 2 OR decision <> 'approve' OR published_digest IS NOT NULL",
+                        name="gate2_approve_publishes"),
+        # One Gate 1 decision per run; one final Gate 2 decision per run and per lesson version (migration 0006).
+        Index("uq_review_decisions_gate1_run", "run_id", unique=True, postgresql_where=text("gate = 1")),
+        Index("uq_review_decisions_final_run", "run_id", unique=True,
+              postgresql_where=text(f"run_id IS NOT NULL AND {FINAL_DECISION}")),
+        Index("uq_review_decisions_final_version", "lesson_version_id", unique=True,
+              postgresql_where=text(f"lesson_version_id IS NOT NULL AND {FINAL_DECISION}")),
         Index("ix_review_decisions_run_id", "run_id"),
         Index("ix_review_decisions_lesson_version_id", "lesson_version_id"),
     )

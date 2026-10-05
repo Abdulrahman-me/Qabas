@@ -195,7 +195,17 @@ versions and models that produced it, and each paid call's tokens (`factory_runs
 A run stops with an explicit blocker instead of working around a human decision: `concepts_unregistered` (O-12),
 `sources_not_configured` (O-03), `no_supported_claims`, `translation_unselected` (D-93). Until the media pipeline
 (Phase 14) exists, every draft carries placeholder-media and visual-readiness blockers, so none can pass Gate 2.
-Gate 2 decisions and publication arrive in Phase 13. Runs never write lessons, exercises, terms or sources.
+Runs never write lessons, exercises, terms or sources.
+
+## Reviewer console and publication (Phase 13)
+
+Reviewers sign in with `POST /v1/auth/reviewer` and use `/v1/admin/factory/runs` (create, list, read) and
+`…/{run_id}/gate1|gate2` (API §6.11). A decision must echo the run's current `review_digest` (the contract's
+`review.py` digest of the stored plan, or of the draft plus QA report); a changed draft is `409 review_stale`, a run
+not at the gate `409 run_not_at_gate`. Gate 2 `approve` applies the paired Arabic/English sentence edits and exercise
+removals, re-runs every publication gate and publishes in the same transaction, or returns `400 validation_error`
+with the blocking issues and changes nothing. `request_changes` sends the run back to `write` with the reason;
+`reject` is final. Gold lessons publish through the same approval rule with `scripts/review_gold.py`.
 
 ## Staging environment
 

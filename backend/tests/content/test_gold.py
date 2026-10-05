@@ -203,6 +203,12 @@ async def test_import_approve_publish_and_reject(resources: Resources) -> None:
         assert decisions[1].reason == "Title change not approved."
         lesson = await db.get(Lesson, "les_t1_0")
         assert lesson is not None and lesson.current_version == 1                            # still the approved one
+    # A recorded decision is final: the rejected version can never be approved later (a correction is v3).
+    async with resources.sessionmaker() as db:
+        with pytest.raises(GoldError, match="already decided"):
+            async with db.begin():
+                await approve_and_publish(db, settings, reviewer_id=reviewer, lesson_id="les_t1_0", version=2,
+                                          reviewed_digest=revised.lesson.digest())
 
 
 @pytest.mark.parametrize("corruption", ["text", "range", "english_translation", "provenance"])

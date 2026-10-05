@@ -151,6 +151,12 @@ async def _decidable(db: AsyncSession, lesson_id: str, version: int, reviewed_di
         raise GoldError(f"{lesson_id} v{version} is not a gold import (origin {pending.origin})")
     if pending.published:
         raise GoldError(f"{lesson_id} v{version} is already published")
+    final = await db.scalar(select(ReviewDecision.decision).where(
+        ReviewDecision.lesson_version_id == pending.lesson_version_id, ReviewDecision.gate == 2,
+        ReviewDecision.decision.in_(("approve", "reject"))))
+    if final is not None:
+        # A recorded decision is final (review_decisions is insert-only); a corrected import is a new version.
+        raise GoldError(f"{lesson_id} v{version} was already decided ({final})")
     if reviewed_digest != pending.content_sha256:
         # The reviewer saw other content (an older import or a mistyped digest): never approve blind.
         raise GoldError(f"{lesson_id} v{version}: the reviewed digest does not match the stored content")

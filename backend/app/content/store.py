@@ -22,7 +22,7 @@ from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from typing import Any
 
-from sqlalchemy import func, select, update
+from sqlalchemy import func, null, select, text, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import Settings
@@ -232,12 +232,19 @@ def _exercise_version_content(record: ExerciseRecord) -> dict[str, Any]:
 
 
 async def import_package(db: AsyncSession, package: LessonPackage, *, origin: str, run_id: str | None = None,
-                         allow_placeholder_media: bool = False) -> ImportResult:
-    """Store ``package`` as the next unpublished version of its lesson (caller owns the transaction)."""
+                         allow_placeholder_media: bool = False,
+                         edited_sentences: frozenset[tuple[str, str, str]] = frozenset()) -> ImportResult:
+    """Store ``package`` as the next unpublished version of its lesson (caller owns the transaction).
+
+    ``edited_sentences`` holds the (lang, variant, sentence_id) a Gate 2 reviewer edited (factory §13.6:
+    ``edited_by_reviewer``). Versions of one lesson are numbered under a transaction-scoped lock on the lesson,
+    so a factory publication and a gold import of the same slot can never claim the same version number."""
     if origin not in ("factory", "gold_import", "test_fixture"):
         raise ValueError(f"unknown content origin {origin!r}")
     if allow_placeholder_media and origin != "test_fixture":
         raise ValueError("fixture allowances apply only to test-fixture content (D-29)")
+    await db.execute(text("SELECT pg_advisory_xact_lock(hashtextextended(:k, 0))"),
+                     {"k": f"lesson_version:{package.lesson_id}"})
     _slot, unit = await _slot_and_unit(db, package)
     ctx = await _context(db, unit, allow_placeholder_media=allow_placeholder_media)
     unregistered = sorted((set(package.plan.introduced_concept_ids) | set(package.plan.prerequisite_concept_ids)
@@ -286,10 +293,10 @@ async def import_package(db: AsyncSession, package: LessonPackage, *, origin: st
             ExerciseVersion.exercise_id.in_(list(exercise_versions))))).scalars():
         if exercise_versions.get(version_row.exercise_id) == version_row.version:
             version_row.lesson_version_id = lesson_version.id
-    for claim in package.claims:
+    for claim in package.claims:      # an absent reasoning is SQL NULL, never JSON null (F-112)
         db.add(Claim(lesson_version_id=lesson_version.id, id=claim.claim_id, text=claim.text, status=claim.status,
                      basis=claim.basis, evidence=[e.model_dump(mode="json") for e in claim.evidence],
-                     reasoning=claim.reasoning.model_dump(mode="json") if claim.reasoning else None))
+                     reasoning=claim.reasoning.model_dump(mode="json") if claim.reasoning else null()))
     roles = {row.sentence_id: row for row in package.sentence_map}
     for lang, variant in package.variant_keys():
         seen: set[str] = set()
@@ -301,7 +308,8 @@ async def import_package(db: AsyncSession, package: LessonPackage, *, origin: st
                 seen.add(sid)
                 row = roles[sid]
                 db.add(SentenceRecord(lesson_version_id=lesson_version.id, lang=lang, variant=variant, id=sid,
-                                      role=row.role, claim_ids=list(row.claim_ids)))
+                                      role=row.role, claim_ids=list(row.claim_ids),
+                                      edited_by_reviewer=(lang, variant, sid) in edited_sentences))
     await db.flush()
     return ImportResult(lesson_version.id, version, created=True)
 
@@ -350,9 +358,15 @@ async def load_package(db: AsyncSession, lesson_version_id: uuid.UUID) -> Lesson
     claims = (await db.execute(select(Claim).where(Claim.lesson_version_id == lv.id))).scalars()
     sentences = (await db.execute(select(SentenceRecord).where(SentenceRecord.lesson_version_id == lv.id)
                                   .order_by(SentenceRecord.lang, SentenceRecord.variant))).scalars()
+    # Order is content (it is part of the digest): rebuild it from where the sentences appear in the stored
+    # variants, which is the order import_package wrote them, never from the table's physical row order (F-119).
+    roles = {s.id: {"sentence_id": s.id, "role": s.role, "claim_ids": list(s.claim_ids)} for s in sentences}
     sentence_map: dict[str, dict[str, Any]] = {}
-    for s in sentences:
-        sentence_map.setdefault(s.id, {"sentence_id": s.id, "role": s.role, "claim_ids": list(s.claim_ids)})
+    for lang in LANGS:
+        for variant in sorted(lv.content["variants"].get(lang, {})):
+            for block in lv.content["variants"][lang][variant]["blocks"]:
+                for sentence in sentences_of(block):
+                    sentence_map.setdefault(sentence["sentence_id"], roles[sentence["sentence_id"]])
     exercises = []
     for exercise_id, version in catalog.pinned_exercise_versions(lv).items():
         ex = await db.get(Exercise, exercise_id)
@@ -383,7 +397,8 @@ async def load_package(db: AsyncSession, lesson_version_id: uuid.UUID) -> Lesson
 
 @dataclass(frozen=True)
 class Approval:
-    """Gate 2 (or Gate 2-equivalent import) approval: a ``review_decisions`` row bound to the digest."""
+    """A Gate 2 approval (factory run) or Gate 2-equivalent approval (gold import): a ``review_decisions`` row
+    bound to exactly this lesson version and its content digest (``published_digest``)."""
 
     decision_id: uuid.UUID
 
@@ -503,12 +518,19 @@ def decide_open_units(unit_order: list[str], lesson_counts: dict[str, int], supp
 
 
 async def _check_approval(db: AsyncSession, lv: LessonVersion, approval: Approval | FixtureApproval) -> str:
+    """One approval path for every origin (D-139): the decision names this version and its exact content digest.
+    A gold approval reviewed that content digest itself; a factory approval reviewed the run's Gate 2 draft
+    (``reviewed_digest`` = the run's ``review_digest``) and belongs to the run that produced this version."""
     assert isinstance(approval, Approval)
     decision = await db.get(ReviewDecision, approval.decision_id)
-    if (decision is None or decision.gate != 2 or decision.decision != "approve"
-            or decision.reviewed_digest != lv.content_sha256
-            or (decision.lesson_version_id is not None and decision.lesson_version_id != lv.id)
-            or (decision.lesson_version_id is None and decision.run_id != lv.run_id)):
+    bound = (decision is not None and decision.gate == 2 and decision.decision == "approve"
+             and decision.lesson_version_id == lv.id and decision.published_digest == lv.content_sha256)
+    if bound and decision is not None:
+        if lv.origin == "factory":
+            bound = lv.run_id is not None and decision.run_id == lv.run_id
+        else:
+            bound = decision.run_id is None and decision.reviewed_digest == lv.content_sha256
+    if not bound or decision is None:
         raise _fail("publication needs a Gate 2 approval of exactly this content digest")
     reviewer = await db.get(User, decision.reviewer_id)
     if reviewer is None or reviewer.role != "reviewer" or reviewer.deactivated_at is not None:

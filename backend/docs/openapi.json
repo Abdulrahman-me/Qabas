@@ -15610,6 +15610,295 @@
  },
  "openapi": "3.1.0",
  "paths": {
+  "/v1/admin/factory/runs": {
+   "get": {
+    "description": "Newest first; ``cursor`` is the last run id of the previous page.",
+    "operationId": "runs_v1_admin_factory_runs_get",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "status",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Status"
+      }
+     },
+     {
+      "in": "query",
+      "name": "cursor",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Cursor"
+      }
+     },
+     {
+      "in": "query",
+      "name": "limit",
+      "required": false,
+      "schema": {
+       "default": 20,
+       "title": "Limit",
+       "type": "integer"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/RunPage"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Runs",
+    "tags": [
+     "reviewer-console"
+    ]
+   },
+   "post": {
+    "description": "Start the factory for the curriculum slot at (``unit_id``, ``position_index``). Accepts\n``Idempotency-Key``: a retried request returns the original ``201`` and never starts a second run.",
+    "operationId": "start_v1_admin_factory_runs_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/RunCreate"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/FactoryRun"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Start",
+    "tags": [
+     "reviewer-console"
+    ]
+   }
+  },
+  "/v1/admin/factory/runs/{run_id}": {
+   "get": {
+    "description": "The run; while it awaits Gate 2 the first reviewer view records ``review_started_at`` (factory §13.6).",
+    "operationId": "get_run_v1_admin_factory_runs__run_id__get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "run_id",
+      "required": true,
+      "schema": {
+       "title": "Run Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/FactoryRun"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Get Run",
+    "tags": [
+     "reviewer-console"
+    ]
+   }
+  },
+  "/v1/admin/factory/runs/{run_id}/gate1": {
+   "post": {
+    "operationId": "gate1_v1_admin_factory_runs__run_id__gate1_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "run_id",
+      "required": true,
+      "schema": {
+       "title": "Run Id",
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/Gate1"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/FactoryRun"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Gate1",
+    "tags": [
+     "reviewer-console"
+    ]
+   }
+  },
+  "/v1/admin/factory/runs/{run_id}/gate2": {
+   "post": {
+    "description": "``approve`` publishes in the same transaction or changes nothing (``400`` with ``details.issues``).",
+    "operationId": "gate2_v1_admin_factory_runs__run_id__gate2_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "run_id",
+      "required": true,
+      "schema": {
+       "title": "Run Id",
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/Gate2"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/FactoryRun"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Gate2",
+    "tags": [
+     "reviewer-console"
+    ]
+   }
+  },
   "/v1/auth/guest": {
    "post": {
     "operationId": "create_guest_v1_auth_guest_post",

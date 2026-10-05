@@ -228,18 +228,26 @@ async def test_reviewer_approval_is_bound_to_the_digest(resources: Resources) ->
             if record["purpose"] != "duel":
                 for lang in ("ar", "en"):
                     record["exercise"][lang]["time_limit_ms"] = None
-        result = await import_package(db, LessonPackage.model_validate(data), origin="gold_import")
-        lv = await db.get(LessonVersion, result.lesson_version_id)
+        first = await import_package(db, LessonPackage.model_validate(data), origin="gold_import")
+        lv = await db.get(LessonVersion, first.lesson_version_id)
         assert lv is not None
+        # An approval of other content (a stale or mistyped digest) is recorded but authorizes nothing.
         stale = ReviewDecision(lesson_version_id=lv.id, gate=2, decision="approve", reviewer_id="usr_reviewer1",
-                               reviewed_digest="0" * 64)
-        good = ReviewDecision(lesson_version_id=lv.id, gate=2, decision="approve", reviewer_id="usr_reviewer1",
-                              reviewed_digest=lv.content_sha256)
-        db.add_all([stale, good])
+                               reviewed_digest="0" * 64, published_digest="0" * 64)
+        db.add(stale)
     async with resources.sessionmaker() as db:
         with pytest.raises(ContentValidationError, match="Gate 2 approval of exactly this content digest"):
             async with db.begin():
-                await publish(db, resources.settings, result.lesson_version_id, Approval(stale.id))
+                await publish(db, resources.settings, first.lesson_version_id, Approval(stale.id))
+    # A version has one final decision (migration 0006): the corrected content is a new version.
+    data["variants"]["ar"]["explorer"]["title"] += " (مصحح)"
+    async with resources.sessionmaker() as db, db.begin():
+        result = await import_package(db, LessonPackage.model_validate(data), origin="gold_import")
+        lv = await db.get(LessonVersion, result.lesson_version_id)
+        assert lv is not None and lv.version == 2
+        good = ReviewDecision(lesson_version_id=lv.id, gate=2, decision="approve", reviewer_id="usr_reviewer1",
+                              reviewed_digest=lv.content_sha256, published_digest=lv.content_sha256)
+        db.add(good)
     async with resources.sessionmaker() as db, db.begin():
         await publish(db, resources.settings, result.lesson_version_id, Approval(good.id))
     async with resources.sessionmaker() as db:

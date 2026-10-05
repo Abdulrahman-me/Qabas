@@ -290,7 +290,24 @@ async def test_review_decisions_are_insert_only(conn: AsyncConnection) -> None:
     await expect_sqlstate(conn, CHECK_VIOLATION, insert,
                           {"gate": 2, "decision": "reject", "r": reviewer, "d": "e" * 64, "p": "f" * 64})
     await expect_sqlstate(conn, "23503", insert.replace("'run_t'", "'run_missing'"),   # foreign key (Phase 12)
-                          {"gate": 2, "decision": "approve", "r": reviewer, "d": "e" * 64, "p": None})
+                          {"gate": 2, "decision": "approve", "r": reviewer, "d": "e" * 64, "p": "f" * 64})
+
+
+async def test_gate_decisions_are_final_once(conn: AsyncConnection) -> None:
+    """Migration 0006: a Gate 2 approval names what it published; one Gate 1 decision and one final Gate 2
+    decision per run; any number of request_changes before the final one."""
+    reviewer = await f.user(conn, role="reviewer", email="reviewer@example.test", password_hash="argon2id$x")
+    await f.factory_run(conn, reviewer)
+    insert = """INSERT INTO review_decisions (run_id, gate, decision, reviewer_id, reviewed_digest, published_digest)
+                VALUES ('run_t', :gate, :decision, :r, :d, :p)"""
+    values = {"r": reviewer, "d": "e" * 64}
+    await expect_sqlstate(conn, CHECK_VIOLATION, insert, {"gate": 2, "decision": "approve", "p": None} | values)
+    await run(conn, insert, {"gate": 1, "decision": "approve", "p": None} | values)
+    await expect_sqlstate(conn, UNIQUE_VIOLATION, insert, {"gate": 1, "decision": "reject", "p": None} | values)
+    for _ in range(2):
+        await run(conn, insert, {"gate": 2, "decision": "request_changes", "p": None} | values)
+    await run(conn, insert, {"gate": 2, "decision": "reject", "p": None} | values)
+    await expect_sqlstate(conn, UNIQUE_VIOLATION, insert, {"gate": 2, "decision": "approve", "p": "f" * 64} | values)
 
 
 # --- curriculum: one lesson per slot, one completion per canonical lesson, one introducing lesson ---

@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import re
 from collections.abc import Callable, Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from typing import Any, Protocol
 
 from pydantic import TypeAdapter
@@ -26,7 +26,7 @@ from app.sources import grades
 from app.sources.errors import SourceError
 from app.sources.mushaf import Mushaf, ReferenceNotFound
 from app.sources.normalize import normalize_ar
-from app.sources.records import SourceRecord
+from app.sources.records import Part, SourceRecord
 from app.sources.scripture import ScriptureBindings, prepare_references
 from app.sources.store import citable as store_citable
 from app.sources.store import source_id
@@ -219,7 +219,13 @@ def hadith_candidate(record: SourceRecord, *, claim_id: str, request_id: str, to
         match = [t for t in translations if t.provider == "hadeethenc" and t.data.get("language") == "en"
                  and normalize_ar(str(t.data.get("text_ar", ""))) == normalize_ar(record.text)]
         if len(match) == 1:
-            extra.append(match[0])
+            # The binding is part of the hadith's provenance, exactly as a gold file records it (F-111): the
+            # Dorar record names the HadeethEnc card whose identical Arabic carries the reviewed translation.
+            card = match[0]
+            record = replace(record, parts=(*record.parts, Part(
+                "translation", "hadeethenc", card.provider_record_id, sha256=card.retrieval.response_sha256,
+                checks=("identical_normalized_arabic",))))
+            extra.append(card)
             evidence_en = C.Evidence(evidence_id=source_id(record), kind="hadith", quran=None,
                                      hadith=C.HadithBody(translation=match[0].text, **body))
         else:

@@ -276,6 +276,8 @@ async def run(ctx: StageContext) -> StageResult:
             "evidence": [{"evidence_id": k, "kind": v["kind"], "reference": v["reference"], "text": v["text"],
                           "supports_claims": v["claim_ids"]} for k, v in registry.items()],
             "style_guide": None, "gold_examples": [],
+            # Gate 2 ``request_changes``: the reviewer's reasons, oldest first (untrusted data, factory §13.1).
+            "reviewer_change_requests": [r["reason"] for r in ctx.run.artifacts.get("revisions", [])],
             "previous_attempt_issues": ctx.run.previous_issues}
     result = await ctx.llm.structured("factory_write", data, ledger=ctx.ledger, call_key=ctx.call_key)
     draft = parse(WriterDraft, result.data, "draft_invalid")

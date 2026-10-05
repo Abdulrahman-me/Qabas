@@ -31,6 +31,8 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from app.config import Settings
 from app.content.package import content_digest
+from app.contract import models as C
+from app.contract import review
 from app.factory import pipeline
 from app.factory.errors import StageBlocked, StageOutputInvalid
 from app.llm.budget import Ledger, UsageRecord
@@ -116,10 +118,17 @@ def _usage(record: dict[str, Any]) -> UsageRecord:
 
 
 def gate_digest(gate: str, run: FactoryRun) -> str:
-    """The digest of the artifact a reviewer decides on (FactoryRun.review_digest)."""
-    if gate == "awaiting_gate1":
-        return content_digest({"gate": 1, "plan": run.plan})
-    return content_digest({"gate": 2, "draft": pipeline.current_draft(run.artifacts), "qa_report": run.qa_report})
+    """``FactoryRun.review_digest``: the contract's reference ``review.review_digest`` over the stored gate artifact
+    as the contract projects it (Gate 1: the plan; Gate 2: the draft and the QA report), so the value a client
+    echoes is exactly the one API §6.11 defines (F-110)."""
+    plan = C.LessonPlan.model_validate(run.plan).model_dump(mode="json") if run.plan is not None else None
+    draft = pipeline.current_draft(run.artifacts)
+    projection = {"status": gate, "run_id": run.id, "plan": plan,
+                  "draft": C.Draft.model_validate(draft).model_dump(mode="json") if draft is not None else None,
+                  "qa_report": C.QAReport.model_validate(run.qa_report).model_dump(mode="json")
+                  if run.qa_report is not None else None}
+    digest: str = review.review_digest(projection)
+    return digest
 
 
 class Orchestrator:
@@ -180,7 +189,10 @@ class Orchestrator:
             run.stages = stages
             run.attempts = [*run.attempts, {"stage": stage, "attempt": attempt,
                                             "event": "resumed" if resumed else "started", "at": now}]
-            previous = [a for a in run.attempts if a["stage"] == stage and a["event"] == "failed"]
+            # Feedback comes from this round only: a Gate 2 change request starts a new round at ``write``.
+            rounds = [i for i, a in enumerate(run.attempts) if a["event"] == "revision_requested"]
+            since = rounds[-1] if rounds else 0
+            previous = [a for a in run.attempts[since:] if a["stage"] == stage and a["event"] == "failed"]
             return RunSnapshot(run.id, run.unit_id, run.lesson_id, run.position_index, run.lesson_type, run.brief,
                                stage, attempt, run.plan, dict(run.artifacts), run.budget_tokens,
                                list(run.cost.get("calls", [])),
