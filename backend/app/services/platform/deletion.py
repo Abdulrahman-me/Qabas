@@ -1,8 +1,8 @@
 """Account deletion (API §6.2 ``DELETE /me``, backend §5, AD-21).
 
 Request transaction (:func:`request_deletion`): revoke every auth session, mark the user deleted,
-run the request-time steps that other users depend on (friend lists, invitations and current
-leagues are added with Phase 18), record a ``deletion_jobs`` row and enqueue ``user:{id}:purge``.
+remove what other users see at once (friendships, invites and league seats, :func:`forget_community`), run
+any further request-time steps, record a ``deletion_jobs`` row and enqueue ``user:{id}:purge``.
 
 Purge (:func:`purge_user`, an outbox consumer): delete the learner's data, private objects and
 derived rows, and anonymize the profile row (kept only as a placeholder for records other users
@@ -18,7 +18,7 @@ from collections.abc import Awaitable, Callable
 from datetime import datetime
 from typing import Any
 
-from sqlalchemy import delete, select, update
+from sqlalchemy import delete, or_, select, update
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -27,11 +27,16 @@ from app.models import (
     AuthSession,
     DailyActivity,
     DeletionJob,
+    FriendInvite,
+    Friendship,
     IdempotencyKey,
+    LeagueMember,
+    LearnerAchievement,
     LearnerConcept,
     LearnerLesson,
     LearnerMisconception,
     LearnerTerm,
+    LearnerTier,
     LearnerUnit,
     LearningSession,
     MetricLearnerFact,
@@ -52,7 +57,7 @@ log = logging.getLogger("qabas.deletion")
 PURGE_KIND = "user.purge"
 DELETED_DISPLAY_NAME = "deleted"  # rendered as the localized "Deleted learner" placeholder
 
-# Steps other features add for request-time removal (e.g. friendships, invitations, leagues).
+# Further steps other features add for request-time removal (e.g. open challenges, Phase 19).
 RequestStep = Callable[[AsyncSession, str], Awaitable[None]]
 REQUEST_STEPS: list[RequestStep] = []
 
@@ -60,8 +65,17 @@ REQUEST_STEPS: list[RequestStep] = []
 PURGED_TABLES: tuple[Any, ...] = (
     LearningSession, RecitationCheckRecord, LearnerConcept, LearnerTerm, LearnerMisconception, LearnerLesson,
     LearnerUnit, XpEvent, DailyActivity, Quest, IdempotencyKey, AuthSession, MetricUnitFact, MetricLearnerFact,
-    RaqeebConversation,
+    RaqeebConversation, LeagueMember, LearnerTier, LearnerAchievement,
 )
+
+
+async def forget_community(db: AsyncSession, user_id: str) -> None:
+    """Remove the learner from other learners' views: friendships, open and past invites they sent, and league
+    seats. Invites they accepted stay with the inviter without their id. Idempotent (request time and purge)."""
+    await db.execute(delete(Friendship).where(or_(Friendship.user_a == user_id, Friendship.user_b == user_id)))
+    await db.execute(delete(FriendInvite).where(FriendInvite.inviter_id == user_id))
+    await db.execute(update(FriendInvite).where(FriendInvite.used_by == user_id).values(used_by=None))
+    await db.execute(delete(LeagueMember).where(LeagueMember.user_id == user_id))
 
 
 def purge_event_key(user_id: str) -> str:
@@ -76,6 +90,7 @@ async def request_deletion(db: AsyncSession, user: User, *, now: datetime | None
     async with db.begin():
         await auth_sessions.revoke_all(db, user.id, now=now)
         await db.execute(update(User).where(User.id == user.id, User.deleted_at.is_(None)).values(deleted_at=now))
+        await forget_community(db, user.id)
         for step in REQUEST_STEPS:
             await step(db, user.id)
         await db.execute(insert(DeletionJob).values(user_id=user.id, requested_at=now)
@@ -90,6 +105,7 @@ async def purge_user(db: AsyncSession, storage: ObjectStorage, user_id: str) -> 
     if user is None or user.deleted_at is None:
         raise RuntimeError(f"refusing to purge {user_id}: not a deleted user")
     steps: dict[str, int] = {}
+    await forget_community(db, user_id)
     for model in PURGED_TABLES:
         result = await db.execute(delete(model).where(model.user_id == user_id))
         steps[model.__tablename__] = int(result.rowcount or 0)  # type: ignore[attr-defined]

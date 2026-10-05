@@ -34,9 +34,18 @@ def local_date(at: datetime, timezone: str) -> date:
 
 async def grant(db: AsyncSession, user: User, reason: str, xp: int, ref_type: str, ref_id: str,
                 at: datetime, *, reward_key: str | None = None) -> bool:
-    """Record a grant once; returns False when this (reason, ref) was already granted to the user."""
+    """Record a grant once; returns False when this (reason, ref) was already granted to the user.
+
+    A learner's first XP of the week also places them in that week's league, in the same transaction
+    (backend §10.3), whatever the XP source.
+    """
+    from app.services.community import leagues
+
     statement = pg_insert(XpEvent).values(
         user_id=user.id, reason=reason, xp=xp, ref_type=ref_type, ref_id=ref_id, week_key=week_key(at),
         local_date=local_date(at, user.timezone), created_at=at, reward_key=reward_key,
     ).on_conflict_do_nothing().returning(XpEvent.id)
-    return (await db.execute(statement)).scalar_one_or_none() is not None
+    granted = (await db.execute(statement)).scalar_one_or_none() is not None
+    if granted and xp > 0:
+        await leagues.join(db, user, at)
+    return granted

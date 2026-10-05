@@ -45,8 +45,9 @@ async def dispatch(db: Any, event: OutboxEvent) -> None:
 
 @outbox.consumer("raqeeb.completed")
 async def completed(db: Any, event: OutboxEvent) -> None:
-    # Phase 18 backfills achievements from immutable completed rows (D-77), not transient event counts.
-    return None
+    # Achievements recompute from immutable completed rows (D-77), not transient event counts (Phase 18).
+    from app.services.community import achievements
+    await achievements.refresh_for_event(db, event)
 
 
 async def process(resources: Resources, message_id: str, *, client: LLMClient | None = None,

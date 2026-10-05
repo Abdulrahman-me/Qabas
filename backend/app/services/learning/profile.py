@@ -20,6 +20,7 @@ from app.models import (
     User,
     XpEvent,
 )
+from app.services.community import leagues
 from app.services.learning import grading, progress, xp
 from app.services.platform.auth_sessions import utcnow
 from app.services.users import iso
@@ -56,7 +57,8 @@ async def stats(db: AsyncSession, user: User) -> C.Stats:
     minutes = daily.minutes if daily else 0
     return C.Stats(xp_total=total, xp_this_week=weekly, streak=await progress.streak(db, user, today),
                    daily_goal={"minutes": user.daily_goal_minutes, "minutes_today": minutes,
-                               "met": minutes >= user.daily_goal_minutes}, league=None,
+                               "met": minutes >= user.daily_goal_minutes},
+                   league=await leagues.stats_league(db, user, now),
                    concepts={"mastered": await count(LearnerConcept, LearnerConcept.mastery >= Decimal("0.8")),
                              "learning": await count(LearnerConcept, LearnerConcept.mastery > 0,
                                                       LearnerConcept.mastery < Decimal("0.8"))},

@@ -57,7 +57,7 @@ async def _relay(settings: Settings) -> None:
 
 def test_finish_events_are_consumed_and_fan_out_once(learn_api: TestClient, curriculum_settings: Settings,
                                                      monkeypatch: pytest.MonkeyPatch) -> None:
-    # D-77: the event completes with no subscriber yet; each subscriber applies its effect exactly once.
+    # D-77: the event completes whatever subscribers exist; a subscriber added later applies its effect exactly once.
     assert outbox.CONSUMERS[finish_events.KIND] is finish_events.dispatch
     headers = learner(learn_api)
     session = start(learn_api, headers, {"kind": "lesson", "lesson_id": "les_t1_0"})
@@ -71,10 +71,10 @@ def test_finish_events_are_consumed_and_fan_out_once(learn_api: TestClient, curr
 
     applied: list[str] = []
 
-    async def achievements(db: Any, event: OutboxEvent) -> None:
+    async def late_subscriber(db: Any, event: OutboxEvent) -> None:
         applied.append(event.event_key)
 
-    monkeypatch.setitem(finish_events.SUBSCRIBERS, "achievements", achievements)
+    monkeypatch.setitem(finish_events.SUBSCRIBERS, "late_subscriber", late_subscriber)
     for _ in range(2):                                                   # redelivery is harmless
         query(curriculum_settings.database_url, "UPDATE outbox_events SET processed_at = NULL WHERE event_key = $1",
               key)

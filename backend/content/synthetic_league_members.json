@@ -1,0 +1,725 @@
+{
+  "_about": "Synthetic league members (backend §10.3, SEED_AND_IMPORT §15): 60 demo/staging learners with display names in the guest-name scheme and weekly XP activity profiles. Seeded by scripts/seed.py only when SYNTHETIC_LEAGUE_MEMBERS=true (never in production, P-01). active_hours are Asia/Riyadh hours [start, end); weekly_xp is the expected XP per week.",
+  "members": [
+    {
+      "key": "member_01",
+      "display_name": "سالك ٩٨",
+      "language": "ar",
+      "avatar_key": "traveler_08",
+      "private_profile": false,
+      "weekly_xp": 220,
+      "active_hours": [
+        17,
+        22
+      ]
+    },
+    {
+      "key": "member_02",
+      "display_name": "رحّال ٧٠",
+      "language": "ar",
+      "avatar_key": "traveler_09",
+      "private_profile": true,
+      "weekly_xp": 80,
+      "active_hours": [
+        20,
+        24
+      ]
+    },
+    {
+      "key": "member_03",
+      "display_name": "Pilgrim 89",
+      "language": "en",
+      "avatar_key": "traveler_05",
+      "private_profile": false,
+      "weekly_xp": 100,
+      "active_hours": [
+        17,
+        22
+      ]
+    },
+    {
+      "key": "member_04",
+      "display_name": "قاصد ٤٣",
+      "language": "ar",
+      "avatar_key": "traveler_03",
+      "private_profile": true,
+      "weekly_xp": 150,
+      "active_hours": [
+        12,
+        15
+      ]
+    },
+    {
+      "key": "member_05",
+      "display_name": "باحث ٩٧",
+      "language": "ar",
+      "avatar_key": "traveler_01",
+      "private_profile": false,
+      "weekly_xp": 40,
+      "active_hours": [
+        6,
+        9
+      ]
+    },
+    {
+      "key": "member_06",
+      "display_name": "Pilgrim 69",
+      "language": "en",
+      "avatar_key": "traveler_02",
+      "private_profile": true,
+      "weekly_xp": 260,
+      "active_hours": [
+        14,
+        18
+      ]
+    },
+    {
+      "key": "member_07",
+      "display_name": "باحث ٣٠",
+      "language": "ar",
+      "avatar_key": "traveler_04",
+      "private_profile": false,
+      "weekly_xp": 100,
+      "active_hours": [
+        6,
+        9
+      ]
+    },
+    {
+      "key": "member_08",
+      "display_name": "باحث ٣٦",
+      "language": "ar",
+      "avatar_key": "traveler_04",
+      "private_profile": true,
+      "weekly_xp": 260,
+      "active_hours": [
+        19,
+        23
+      ]
+    },
+    {
+      "key": "member_09",
+      "display_name": "Pilgrim 1",
+      "language": "en",
+      "avatar_key": "traveler_03",
+      "private_profile": false,
+      "weekly_xp": 180,
+      "active_hours": [
+        16,
+        19
+      ]
+    },
+    {
+      "key": "member_10",
+      "display_name": "قاصد ٣٠",
+      "language": "ar",
+      "avatar_key": "traveler_02",
+      "private_profile": false,
+      "weekly_xp": 150,
+      "active_hours": [
+        20,
+        24
+      ]
+    },
+    {
+      "key": "member_11",
+      "display_name": "باحث ٤٢",
+      "language": "ar",
+      "avatar_key": "traveler_10",
+      "private_profile": false,
+      "weekly_xp": 220,
+      "active_hours": [
+        20,
+        24
+      ]
+    },
+    {
+      "key": "member_12",
+      "display_name": "Wayfarer 28",
+      "language": "en",
+      "avatar_key": "traveler_02",
+      "private_profile": false,
+      "weekly_xp": 260,
+      "active_hours": [
+        14,
+        18
+      ]
+    },
+    {
+      "key": "member_13",
+      "display_name": "سالك ٣٦",
+      "language": "ar",
+      "avatar_key": "traveler_06",
+      "private_profile": true,
+      "weekly_xp": 420,
+      "active_hours": [
+        19,
+        23
+      ]
+    },
+    {
+      "key": "member_14",
+      "display_name": "مسافر ٩٩",
+      "language": "ar",
+      "avatar_key": "traveler_11",
+      "private_profile": false,
+      "weekly_xp": 260,
+      "active_hours": [
+        6,
+        9
+      ]
+    },
+    {
+      "key": "member_15",
+      "display_name": "Wayfarer 47",
+      "language": "en",
+      "avatar_key": "traveler_09",
+      "private_profile": false,
+      "weekly_xp": 380,
+      "active_hours": [
+        8,
+        12
+      ]
+    },
+    {
+      "key": "member_16",
+      "display_name": "مسافر ٦٧",
+      "language": "ar",
+      "avatar_key": "traveler_08",
+      "private_profile": true,
+      "weekly_xp": 100,
+      "active_hours": [
+        19,
+        23
+      ]
+    },
+    {
+      "key": "member_17",
+      "display_name": "رحّال ٤٨",
+      "language": "ar",
+      "avatar_key": "traveler_11",
+      "private_profile": false,
+      "weekly_xp": 60,
+      "active_hours": [
+        21,
+        24
+      ]
+    },
+    {
+      "key": "member_18",
+      "display_name": "Traveler 72",
+      "language": "en",
+      "avatar_key": "traveler_09",
+      "private_profile": false,
+      "weekly_xp": 40,
+      "active_hours": [
+        6,
+        9
+      ]
+    },
+    {
+      "key": "member_19",
+      "display_name": "مسافر ٩١",
+      "language": "ar",
+      "avatar_key": "traveler_11",
+      "private_profile": true,
+      "weekly_xp": 150,
+      "active_hours": [
+        12,
+        15
+      ]
+    },
+    {
+      "key": "member_20",
+      "display_name": "سالك ٩٤",
+      "language": "ar",
+      "avatar_key": "traveler_11",
+      "private_profile": false,
+      "weekly_xp": 180,
+      "active_hours": [
+        19,
+        23
+      ]
+    },
+    {
+      "key": "member_21",
+      "display_name": "Wayfarer 76",
+      "language": "en",
+      "avatar_key": "traveler_05",
+      "private_profile": true,
+      "weekly_xp": 420,
+      "active_hours": [
+        8,
+        12
+      ]
+    },
+    {
+      "key": "member_22",
+      "display_name": "باحث ٥٣",
+      "language": "ar",
+      "avatar_key": "traveler_05",
+      "private_profile": false,
+      "weekly_xp": 120,
+      "active_hours": [
+        17,
+        22
+      ]
+    },
+    {
+      "key": "member_23",
+      "display_name": "مسافر ٢٧",
+      "language": "ar",
+      "avatar_key": "traveler_08",
+      "private_profile": false,
+      "weekly_xp": 320,
+      "active_hours": [
+        8,
+        12
+      ]
+    },
+    {
+      "key": "member_24",
+      "display_name": "Seeker 24",
+      "language": "en",
+      "avatar_key": "traveler_04",
+      "private_profile": false,
+      "weekly_xp": 180,
+      "active_hours": [
+        5,
+        8
+      ]
+    },
+    {
+      "key": "member_25",
+      "display_name": "رحّال ٨٥",
+      "language": "ar",
+      "avatar_key": "traveler_08",
+      "private_profile": true,
+      "weekly_xp": 150,
+      "active_hours": [
+        16,
+        19
+      ]
+    },
+    {
+      "key": "member_26",
+      "display_name": "سالك ١١",
+      "language": "ar",
+      "avatar_key": "traveler_02",
+      "private_profile": false,
+      "weekly_xp": 80,
+      "active_hours": [
+        14,
+        18
+      ]
+    },
+    {
+      "key": "member_27",
+      "display_name": "Pilgrim 63",
+      "language": "en",
+      "avatar_key": "traveler_09",
+      "private_profile": false,
+      "weekly_xp": 120,
+      "active_hours": [
+        5,
+        8
+      ]
+    },
+    {
+      "key": "member_28",
+      "display_name": "رحّال ١٢",
+      "language": "ar",
+      "avatar_key": "traveler_08",
+      "private_profile": true,
+      "weekly_xp": 100,
+      "active_hours": [
+        6,
+        9
+      ]
+    },
+    {
+      "key": "member_29",
+      "display_name": "باحث ٣١",
+      "language": "ar",
+      "avatar_key": "traveler_05",
+      "private_profile": false,
+      "weekly_xp": 40,
+      "active_hours": [
+        6,
+        9
+      ]
+    },
+    {
+      "key": "member_30",
+      "display_name": "Pilgrim 23",
+      "language": "en",
+      "avatar_key": "traveler_10",
+      "private_profile": false,
+      "weekly_xp": 380,
+      "active_hours": [
+        12,
+        15
+      ]
+    },
+    {
+      "key": "member_31",
+      "display_name": "قاصد ٧٧",
+      "language": "ar",
+      "avatar_key": "traveler_01",
+      "private_profile": true,
+      "weekly_xp": 80,
+      "active_hours": [
+        21,
+        24
+      ]
+    },
+    {
+      "key": "member_32",
+      "display_name": "مسافر ٧٠",
+      "language": "ar",
+      "avatar_key": "traveler_06",
+      "private_profile": false,
+      "weekly_xp": 220,
+      "active_hours": [
+        5,
+        8
+      ]
+    },
+    {
+      "key": "member_33",
+      "display_name": "Voyager 44",
+      "language": "en",
+      "avatar_key": "traveler_04",
+      "private_profile": false,
+      "weekly_xp": 260,
+      "active_hours": [
+        19,
+        23
+      ]
+    },
+    {
+      "key": "member_34",
+      "display_name": "رحّال ٧٣",
+      "language": "ar",
+      "avatar_key": "traveler_09",
+      "private_profile": true,
+      "weekly_xp": 220,
+      "active_hours": [
+        17,
+        22
+      ]
+    },
+    {
+      "key": "member_35",
+      "display_name": "سالك ٩٥",
+      "language": "ar",
+      "avatar_key": "traveler_09",
+      "private_profile": false,
+      "weekly_xp": 220,
+      "active_hours": [
+        21,
+        24
+      ]
+    },
+    {
+      "key": "member_36",
+      "display_name": "Wayfarer 90",
+      "language": "en",
+      "avatar_key": "traveler_06",
+      "private_profile": false,
+      "weekly_xp": 420,
+      "active_hours": [
+        14,
+        18
+      ]
+    },
+    {
+      "key": "member_37",
+      "display_name": "مسافر ٧٢",
+      "language": "ar",
+      "avatar_key": "traveler_04",
+      "private_profile": false,
+      "weekly_xp": 40,
+      "active_hours": [
+        19,
+        23
+      ]
+    },
+    {
+      "key": "member_38",
+      "display_name": "سالك ٥٥",
+      "language": "ar",
+      "avatar_key": "traveler_09",
+      "private_profile": false,
+      "weekly_xp": 380,
+      "active_hours": [
+        21,
+        24
+      ]
+    },
+    {
+      "key": "member_39",
+      "display_name": "Pilgrim 49",
+      "language": "en",
+      "avatar_key": "traveler_02",
+      "private_profile": false,
+      "weekly_xp": 220,
+      "active_hours": [
+        12,
+        15
+      ]
+    },
+    {
+      "key": "member_40",
+      "display_name": "سالك ٩٩",
+      "language": "ar",
+      "avatar_key": "traveler_07",
+      "private_profile": false,
+      "weekly_xp": 150,
+      "active_hours": [
+        6,
+        9
+      ]
+    },
+    {
+      "key": "member_41",
+      "display_name": "مسافر ٣٥",
+      "language": "ar",
+      "avatar_key": "traveler_04",
+      "private_profile": false,
+      "weekly_xp": 120,
+      "active_hours": [
+        20,
+        24
+      ]
+    },
+    {
+      "key": "member_42",
+      "display_name": "Traveler 95",
+      "language": "en",
+      "avatar_key": "traveler_04",
+      "private_profile": false,
+      "weekly_xp": 80,
+      "active_hours": [
+        5,
+        8
+      ]
+    },
+    {
+      "key": "member_43",
+      "display_name": "قاصد ٤٧",
+      "language": "ar",
+      "avatar_key": "traveler_01",
+      "private_profile": false,
+      "weekly_xp": 120,
+      "active_hours": [
+        8,
+        12
+      ]
+    },
+    {
+      "key": "member_44",
+      "display_name": "قاصد ١٠",
+      "language": "ar",
+      "avatar_key": "traveler_04",
+      "private_profile": true,
+      "weekly_xp": 80,
+      "active_hours": [
+        6,
+        9
+      ]
+    },
+    {
+      "key": "member_45",
+      "display_name": "Voyager 8",
+      "language": "en",
+      "avatar_key": "traveler_03",
+      "private_profile": true,
+      "weekly_xp": 60,
+      "active_hours": [
+        21,
+        24
+      ]
+    },
+    {
+      "key": "member_46",
+      "display_name": "قاصد ٥٨",
+      "language": "ar",
+      "avatar_key": "traveler_06",
+      "private_profile": false,
+      "weekly_xp": 320,
+      "active_hours": [
+        19,
+        23
+      ]
+    },
+    {
+      "key": "member_47",
+      "display_name": "سالك ٤٨",
+      "language": "ar",
+      "avatar_key": "traveler_10",
+      "private_profile": false,
+      "weekly_xp": 40,
+      "active_hours": [
+        19,
+        23
+      ]
+    },
+    {
+      "key": "member_48",
+      "display_name": "Pilgrim 50",
+      "language": "en",
+      "avatar_key": "traveler_04",
+      "private_profile": false,
+      "weekly_xp": 40,
+      "active_hours": [
+        12,
+        15
+      ]
+    },
+    {
+      "key": "member_49",
+      "display_name": "قاصد ٧٥",
+      "language": "ar",
+      "avatar_key": "traveler_08",
+      "private_profile": false,
+      "weekly_xp": 80,
+      "active_hours": [
+        5,
+        8
+      ]
+    },
+    {
+      "key": "member_50",
+      "display_name": "قاصد ٦",
+      "language": "ar",
+      "avatar_key": "traveler_02",
+      "private_profile": true,
+      "weekly_xp": 150,
+      "active_hours": [
+        8,
+        12
+      ]
+    },
+    {
+      "key": "member_51",
+      "display_name": "Pilgrim 92",
+      "language": "en",
+      "avatar_key": "traveler_01",
+      "private_profile": false,
+      "weekly_xp": 60,
+      "active_hours": [
+        20,
+        24
+      ]
+    },
+    {
+      "key": "member_52",
+      "display_name": "سالك ٢٣",
+      "language": "ar",
+      "avatar_key": "traveler_11",
+      "private_profile": false,
+      "weekly_xp": 100,
+      "active_hours": [
+        19,
+        23
+      ]
+    },
+    {
+      "key": "member_53",
+      "display_name": "مسافر ١٩",
+      "language": "ar",
+      "avatar_key": "traveler_09",
+      "private_profile": true,
+      "weekly_xp": 60,
+      "active_hours": [
+        20,
+        24
+      ]
+    },
+    {
+      "key": "member_54",
+      "display_name": "Traveler 88",
+      "language": "en",
+      "avatar_key": "traveler_08",
+      "private_profile": false,
+      "weekly_xp": 420,
+      "active_hours": [
+        5,
+        8
+      ]
+    },
+    {
+      "key": "member_55",
+      "display_name": "مسافر ٦٤",
+      "language": "ar",
+      "avatar_key": "traveler_09",
+      "private_profile": false,
+      "weekly_xp": 40,
+      "active_hours": [
+        16,
+        19
+      ]
+    },
+    {
+      "key": "member_56",
+      "display_name": "سالك ٤٤",
+      "language": "ar",
+      "avatar_key": "traveler_09",
+      "private_profile": false,
+      "weekly_xp": 60,
+      "active_hours": [
+        19,
+        23
+      ]
+    },
+    {
+      "key": "member_57",
+      "display_name": "Seeker 97",
+      "language": "en",
+      "avatar_key": "traveler_12",
+      "private_profile": false,
+      "weekly_xp": 260,
+      "active_hours": [
+        12,
+        15
+      ]
+    },
+    {
+      "key": "member_58",
+      "display_name": "سالك ٣٥",
+      "language": "ar",
+      "avatar_key": "traveler_11",
+      "private_profile": false,
+      "weekly_xp": 80,
+      "active_hours": [
+        19,
+        23
+      ]
+    },
+    {
+      "key": "member_59",
+      "display_name": "مسافر ٢٤",
+      "language": "ar",
+      "avatar_key": "traveler_08",
+      "private_profile": true,
+      "weekly_xp": 40,
+      "active_hours": [
+        8,
+        12
+      ]
+    },
+    {
+      "key": "member_60",
+      "display_name": "Voyager 36",
+      "language": "en",
+      "avatar_key": "traveler_08",
+      "private_profile": false,
+      "weekly_xp": 150,
+      "active_hours": [
+        17,
+        22
+      ]
+    }
+  ]
+}

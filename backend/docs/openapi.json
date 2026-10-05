@@ -16213,6 +16213,193 @@
     ]
    }
   },
+  "/v1/friends": {
+   "get": {
+    "operationId": "friend_page_v1_friends_get",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "cursor",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Cursor"
+      }
+     },
+     {
+      "in": "query",
+      "name": "limit",
+      "required": false,
+      "schema": {
+       "default": 20,
+       "title": "Limit",
+       "type": "integer"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/FriendPage"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Friend Page",
+    "tags": [
+     "community"
+    ]
+   }
+  },
+  "/v1/friends/invites": {
+   "post": {
+    "operationId": "create_invite_v1_friends_invites_post",
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Invite"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Create Invite",
+    "tags": [
+     "community"
+    ]
+   }
+  },
+  "/v1/friends/invites/accept": {
+   "post": {
+    "description": "At most 10 failed codes per learner per hour and 100 per address per day (backend §10.4).",
+    "operationId": "accept_invite_v1_friends_invites_accept_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/InviteAccept"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Friend"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Accept Invite",
+    "tags": [
+     "community"
+    ]
+   }
+  },
+  "/v1/friends/{user_id}": {
+   "delete": {
+    "operationId": "remove_friend_v1_friends__user_id__delete",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "user_id",
+      "required": true,
+      "schema": {
+       "title": "User Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Remove Friend",
+    "tags": [
+     "community"
+    ]
+   }
+  },
   "/v1/glossary": {
    "get": {
     "operationId": "glossary_v1_glossary_get",
@@ -16447,6 +16634,42 @@
     ]
    }
   },
+  "/v1/leagues/current": {
+   "get": {
+    "operationId": "current_league_v1_leagues_current_get",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/League"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Current League",
+    "tags": [
+     "community"
+    ]
+   }
+  },
   "/v1/lessons/{lesson_id}": {
    "get": {
     "description": "Reader projection (S6): the session's blocks without exercises, for re-reading.",
@@ -16600,6 +16823,42 @@
     "summary": "Patch Me",
     "tags": [
      "profile"
+    ]
+   }
+  },
+  "/v1/me/achievements": {
+   "get": {
+    "operationId": "my_achievements_v1_me_achievements_get",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Achievements"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "My Achievements",
+    "tags": [
+     "community"
     ]
    }
   },

@@ -126,3 +126,33 @@ class FailureCounter:
 
     async def reset(self, identity: str) -> None:
         await self.redis.delete(self._key(identity))
+
+    async def reserve(self, identity: str) -> None:
+        """Count an attempt *before* it runs, atomically, or raise 429 when the window is full.
+
+        Unlike ``check`` + ``record_failure``, concurrent attempts cannot all pass the check before any failure is
+        recorded. Call :meth:`release` when the attempt turns out not to be a failure."""
+        key = self._key(identity)
+        retry = int(await self.redis.eval(  # type: ignore[misc]
+            _RESERVE_SCRIPT, 1, key, str(self.limit.capacity), str(self.limit.period_seconds * 1000)))
+        if retry > 0:
+            raise rate_limited(max(retry, 1000))
+
+    async def release(self, identity: str) -> None:
+        await self.redis.eval(_RELEASE_SCRIPT, 1, self._key(identity))  # type: ignore[misc]
+
+
+_RESERVE_SCRIPT = """
+local n = redis.call('INCR', KEYS[1])
+if redis.call('PTTL', KEYS[1]) < 0 then redis.call('PEXPIRE', KEYS[1], ARGV[2]) end
+if n > tonumber(ARGV[1]) then
+  redis.call('DECR', KEYS[1])
+  return redis.call('PTTL', KEYS[1])
+end
+return 0
+"""
+_RELEASE_SCRIPT = """
+local n = tonumber(redis.call('GET', KEYS[1]) or '0')
+if n > 0 then redis.call('DECR', KEYS[1]) end
+return 0
+"""

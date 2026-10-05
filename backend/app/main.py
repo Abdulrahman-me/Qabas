@@ -9,6 +9,7 @@ from app.api import (
     admin_factory,
     admin_review,
     auth,
+    community,
     health,
     journey,
     learning_profile,
@@ -65,6 +66,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(learning_profile.router, prefix=API_PREFIX)
     app.include_router(recitation.router, prefix=API_PREFIX)
     app.include_router(raqeeb.router, prefix=API_PREFIX)
+    app.include_router(community.router, prefix=API_PREFIX)
     app.include_router(admin_factory.router, prefix=API_PREFIX)
     app.include_router(admin_review.router, prefix=API_PREFIX)
     if settings.storage_backend is StorageBackend.local:

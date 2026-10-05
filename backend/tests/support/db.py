@@ -53,13 +53,19 @@ async def reset_schema(url: str) -> None:
         await conn.close()
 
 
+# Configuration rows inserted by migrations (registry snapshots) that every test expects to exist.
+SEEDED_TABLES = frozenset({"league_tiers", "achievements"})
+
+
 async def truncate_all(url: str) -> None:
     """Empty every application table that has rows (TRUNCATE fires no row triggers, so audit tables can
-    be cleared). Probing first keeps per-test cleanup cheap when a test touched only a few tables."""
+    be cleared), keeping the migration-seeded configuration. Probing first keeps per-test cleanup cheap when a
+    test touched only a few tables."""
     conn = await asyncpg.connect(asyncpg_url(url))
     try:
         tables = [r["tablename"] for r in await conn.fetch(
-            "SELECT tablename FROM pg_tables WHERE schemaname = 'public' AND tablename <> 'alembic_version'")]
+            "SELECT tablename FROM pg_tables WHERE schemaname = 'public' AND tablename <> 'alembic_version'")
+            if r["tablename"] not in SEEDED_TABLES]
         if not tables:
             return
         probe = " UNION ALL ".join(f"SELECT '{t}' AS t WHERE EXISTS (SELECT 1 FROM \"{t}\")" for t in tables)
@@ -114,7 +120,7 @@ async def truncate_learner_state(url: str) -> None:
     try:
         # factory_runs is referenced by content (lesson_versions.run_id) and references users, so neither can be
         # truncated without the content: those two are emptied with DELETE after the other learner tables.
-        kept = CONTENT_TABLES | {"factory_runs", "users"}
+        kept = CONTENT_TABLES | SEEDED_TABLES | {"factory_runs", "users"}
         tables = [r["tablename"] for r in await conn.fetch(
             "SELECT tablename FROM pg_tables WHERE schemaname = 'public'") if r["tablename"] not in kept]
         if tables:

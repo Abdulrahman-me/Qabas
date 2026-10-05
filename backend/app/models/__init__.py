@@ -32,13 +32,28 @@ from app.models.media import MediaAssetRecord, MediaJob
 from app.models.metrics import BlindPair, BlindResponse, MetricLearnerFact, MetricUnitFact
 from app.models.platform import EffectLedger, OutboxEvent, ReviewDecision
 from app.models.raqeeb import BenchmarkRun, RaqeebConversation, RaqeebMessage
+from app.models.social import (
+    AchievementDefinition,
+    FriendInvite,
+    Friendship,
+    League,
+    LeagueMember,
+    LeaguePromotion,
+    LeagueTier,
+    LearnerAchievement,
+    LearnerTier,
+)
 from app.models.users import AuthSession, DeletionJob, IdempotencyKey, User
 
 __all__ = [
+    "AchievementDefinition",
     "AuthSession", "BenchmarkRun", "BlindPair", "BlindResponse", "Claim", "Concept", "CurriculumSlot", "DailyActivity",
     "DeletionJob", "EffectLedger", "Exercise",
-    "ExerciseVersion", "FactoryRun", "IdempotencyKey", "LearnerConcept", "LearnerLesson", "LearnerMisconception",
-    "LearnerTerm", "LearnerUnit", "LearningSession", "Lesson", "LessonVersion", "MediaAssetRecord", "MediaJob",
+    "ExerciseVersion", "FactoryRun", "FriendInvite", "Friendship", "IdempotencyKey",
+    "League", "LeagueMember", "LeaguePromotion", "LeagueTier", "LearnerAchievement",
+    "LearnerConcept", "LearnerLesson", "LearnerMisconception",
+    "LearnerTerm", "LearnerTier", "LearnerUnit", "LearningSession", "Lesson", "LessonVersion", "MediaAssetRecord",
+    "MediaJob",
     "MetricLearnerFact", "MetricUnitFact", "Misconception",
     "OutboxEvent", "Quest", "RaqeebConversation", "RaqeebMessage", "RecitationCheckRecord", "ReviewDecision",
     "SceneAsset", "SceneVersion",
