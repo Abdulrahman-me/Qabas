@@ -158,9 +158,11 @@ async def run(question: str, snapshot: dict[str, Any], calls: Calls, tools: Tool
         if policy.matches(question, "personal_fatwa") and (classified.confidence < .6 or
                 classified.question_class not in ("personal_fatwa", "sensitive_human")):
             classified.question_class = "personal_fatwa"
-        if classified.confidence < .6 and not classified.standalone and any(
-                policy.matches(h["text"], "sensitive_human") for h in snapshot["history"] if h["role"] == "user"):
-            classified.question_class = "sensitive_human"
+        if classified.confidence < .6 and not classified.standalone:
+            for protective in ("sensitive_human", "personal_fatwa"):
+                if any(policy.matches(h["text"], protective) for h in snapshot["history"] if h["role"] == "user"):
+                    classified.question_class = protective
+                    break
         # Exact input binding: an injected classifier cannot fabricate quotes for verification or retrieval.
         if len(classified.quotes) > 10 or any(not q.text.strip() or q.text not in question for q in classified.quotes):
             raise ValueError("classifier quotes do not bind to submitted text")
@@ -254,7 +256,8 @@ async def run(question: str, snapshot: dict[str, Any], calls: Calls, tools: Tool
         issues = guard(core, pool, category)
         model_guard = S.Guarded.model_validate(await calls("raqeeb_guard", {
             "question": question, "question_class": category, "answer": core,
-            "supported_claims": supported, "sources": pool.sources()}, key=f"{key}:guard"))
+            "supported_claims": supported, "sources": pool.sources(), "verification": pool.items,
+            "canonical_evidence": list(pool.evidence.values())}, key=f"{key}:guard"))
         issues += model_guard.violations
         attempts = [a for a in calls.trace.get("guard_attempts", []) if a["attempt"] != attempt]
         calls.trace["guard_attempts"] = [*attempts, {"attempt": attempt, "findings": issues}]

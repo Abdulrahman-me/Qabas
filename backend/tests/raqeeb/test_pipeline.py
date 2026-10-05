@@ -67,6 +67,20 @@ async def test_low_confidence_fatwa_boundary_is_protective():
     assert result["classification"]["question_class"] == "personal_fatwa" and not tools.calls
 
 
+async def test_low_confidence_followup_keeps_personal_fatwa_boundary():
+    client = model("general_knowledge", confidence=.4)
+    client.script["raqeeb_classify"]["standalone"] = False
+    inputs = snapshot()
+    inputs["history"] = [{"role": "user", "text": "Am I allowed to do this?", "understood_input": None}]
+    tools = Tools()
+
+    async def noop(_):
+        pass
+
+    result = await pipeline.run("And this?", inputs, pipeline.Calls(client, Ledger(100_000), {}, noop), tools, noop)
+    assert result["classification"]["question_class"] == "personal_fatwa" and not tools.calls
+
+
 async def test_no_sources_abstains_without_fabrication():
     result, client, _, _, _ = await answer("general_knowledge", tools=Tools(articles=[]))
     assert result["abstained"] and result["citations"] == []
@@ -129,6 +143,13 @@ async def test_committed_model_checkpoints_replay_without_calls():
     again = await answer("general_knowledge", client=client, trace=trace)
     assert again[0] == result
     assert len([p for p, _ in client.calls if p == "raqeeb_write"]) == 1
+
+
+async def test_fast_guard_receives_canonical_evidence_and_tool_verdicts():
+    result, client, _, _, _ = await answer("verification")
+    data = next(data for prompt, data in client.calls if prompt == "raqeeb_guard")
+    assert data["verification"] == result["blocks"][0]["items"]
+    assert data["canonical_evidence"][0] == data["verification"][0]["correct_text"]
 
 
 async def test_untrusted_input_cannot_change_tools_policy_or_invent_quotes():

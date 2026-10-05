@@ -32,8 +32,12 @@ class HostedClient:
                          images: tuple[VisionImage, ...] = ()) -> LLMResult:
         if self.client is None:
             if self.settings.app_env in (Environment.production, Environment.staging):
-                policy = yaml.safe_load(self.settings.raqeeb_data_policy_path.read_text(encoding="utf-8"))
-                if policy.get("schema") != "qabas.raqeeb_data_policy/1" or policy.get("status") != "approved" or \
+                try:
+                    policy = yaml.safe_load(self.settings.raqeeb_data_policy_path.read_text(encoding="utf-8"))
+                except (OSError, UnicodeError, yaml.YAMLError):
+                    raise LLMNotConfigured("Raqeeb data-processing approval is unavailable (O-09)") from None
+                if not isinstance(policy, dict) or policy.get("schema") != "qabas.raqeeb_data_policy/1" or \
+                        policy.get("status") != "approved" or \
                         not all(policy.get(k) for k in ("approved_by", "approved_on", "report")) or \
                         policy.get("provider") != "anthropic" or not all(policy.get(k) for k in (
                             "provider_retention", "deletion_responsibilities", "learner_disclosure")):

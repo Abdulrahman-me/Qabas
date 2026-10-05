@@ -14,6 +14,28 @@ from tests.raqeeb.test_api_worker import send, start
 pytestmark = pytest.mark.integration
 
 
+async def test_local_embedding_launch_failure_keeps_valid_answer(fresh_curriculum):
+    api, settings = fresh_curriculum
+    headers = learner(api, language="en") | {"Accept-Language": "en"}
+    aid = send(api, headers, start(api, headers)).json()["assistant_message"]["message_id"]
+
+    class MissingRuntime:
+        async def encode(self, texts):
+            raise OSError("synthetic missing local runtime")
+
+    resources = Resources.create(settings)
+    try:
+        assert await worker.process(resources, aid, client=model("general_knowledge"), tools=Tools(),
+                                    embedder=MissingRuntime()) == "completed"
+        result = api.get(f"/v1/raqeeb/messages/{aid}", headers=headers).json()
+        assert not result["abstained"] and result["suggested_lessons"] == []
+        async with resources.sessionmaker() as db:
+            row = await db.get(RaqeebMessage, aid)
+            assert row.trace["suggestions"] == {"outcome": "unavailable", "type": "OSError"}
+    finally:
+        await resources.close()
+
+
 async def test_context_pins_published_version_language_track_without_keys(fresh_curriculum):
     api, settings = fresh_curriculum
     headers = learner(api, language="en", track="explorer") | {"Accept-Language": "en"}

@@ -13,7 +13,7 @@ Processing responses contain only the five processing fields; private snapshots 
 
 Message admission locks user → conversation → message, writes one user/assistant pair and an outbox event
 atomically, and uses the existing idempotency service. The DB allows only one processing answer per conversation
-and one answer per original message. Logical requests consume the existing 5/minute limit; replays do not.
+and one answer per original message. Logical requests consume the existing 5/minute and 50/day limits; replays do not.
 The broker receives message IDs, not questions. `raqeeb` workers acknowledge late; a per-message PostgreSQL
 advisory lock plus a lease fences concurrent deliveries. Provider/model calls hold no learner row lock.
 

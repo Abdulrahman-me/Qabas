@@ -81,6 +81,19 @@ async def test_o09_blocks_hosted_questions_before_model_client_creation():
     assert client.client is None
 
 
+@pytest.mark.parametrize("contents", [None, "[", "", "- not a policy"])
+async def test_unreadable_o09_approval_is_typed_and_never_creates_hosted_client(tmp_path, contents):
+    path = tmp_path / "approval.yaml"
+    if contents is not None:
+        path.write_text(contents, encoding="utf-8")
+    settings = Settings(app_env=Environment.staging, auth_token_pepper=SecretStr("test"),
+                         storage_signing_key=SecretStr("test"), raqeeb_data_policy_path=path)
+    client = HostedClient(settings)
+    with pytest.raises(LLMNotConfigured, match="O-09"):
+        await client.structured("raqeeb_classify", {"question": "private question"})
+    assert client.client is None
+
+
 def test_policy_has_real_authority_and_no_invented_support_addresses():
     rules, referrals = policy.load()
     assert len(rules["labels"]) == 8

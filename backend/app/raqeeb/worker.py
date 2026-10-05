@@ -136,7 +136,7 @@ async def _process(resources: Resources, message_id: str, *, client: LLMClient |
                             answer["suggested_lessons"] = await suggestions.recommend(db, question,
                                 snapshot["profile"]["track"], snapshot["profile"]["language"],
                                 embedder or suggestions.LocalBge(resources.settings))
-                except (SourceError, ValueError, TimeoutError) as exc:
+                except (SourceError, ValueError, TimeoutError, OSError) as exc:
                     trace["suggestions"] = {"outcome": "unavailable", "type": type(exc).__name__}
             # Title failure is optional and must never turn an otherwise valid answer into a failure.
             remaining = (deadline - utcnow()).total_seconds() - 1

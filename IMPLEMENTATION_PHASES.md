@@ -707,7 +707,7 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 text API/worker, migration 0009, benchmark projection into existing metrics, `docs/RAQEEB_POLICY.md` and deterministic
 tests. Sources persist atomically with the completed answer; source change rolls back completion. Context pins
 served lesson content, published glossary cards supply term links, and no learner progress or publication writes
-are possible. See F-147–F-153 and D-163–D-170. Full validation/CI records follow before tagging.
+are possible. See F-147–F-155 and D-163–D-170. Full validation/CI records follow before tagging.
 
 | # | Finding | Resolution |
 |---|---|---|
@@ -718,6 +718,8 @@ are possible. See F-147–F-153 and D-163–D-170. Full validation/CI records fo
 | F-151 | Concurrent Raqeeb and Factory transactions can persist several shared sources in opposite orders. | Both acquire `(provider, provider_record_id)` order; Gate 2's stored draft/digest/source presentation remain identical (D-164). |
 | F-152 | During Phase 16 testing, its initial context reader treated `LessonVersion.content` as a full `LessonPackage`; stored content is deliberately minimal. | Read `VariantContent`/stored glossary models and active-session snapshots. New-version/track/language tests prove pinning; no completed-phase storage redesign (D-167). |
 | F-153 | Revision 10 has no claim-verified status, and requires a `differing_views` block plus final specialist referral even when abstained. | Direct source support retains `needs_specialist`; unavailable differing views use an honest intro with empty views, never invented positions (D-170). |
+| F-154 | An optional local embedding subprocess can fail to launch even after configuration, which initially failed the whole new Raqeeb answer. | OSError joins timeout/provider failures in the optional recommendation boundary; safe answers remain completed without chips. Fast guard input also carries canonical evidence and code-owned verification receipts, with explicit sentence-citation/authenticity checks. |
+| F-155 | A low-confidence dependent follow-up can inherit a personal-fatwa boundary from the previous user message, even without repeating its keywords. | Both sensitive and personal-fatwa history boundaries route protectively; sensitive safety takes precedence. No tools are called for that follow-up. |
 
 ---
 
