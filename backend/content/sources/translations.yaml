@@ -1,9 +1,11 @@
 # Which approved translation of the meanings of the Qur'an learners see, per language (D-93).
 #
-# The organizers' package requires approved translations for every language used, and names QuranEnc (the
-# association's encyclopedia) as the reference for them. QuranEnc offers several translations per language;
+# The organizers' package accepts King Fahd translations/Quranpedia and prefers association-reviewed
+# translations and Risala al-Haramain. QuranEnc is Qabas's selected integration route (D-93), not the
+# document's exclusive permissible source. QuranEnc offers several translations per language;
 # choosing one is a content decision, not an engineering one. Every entry stays null and `status: pending`
-# until a content specialist records the choice (status: approved, approved_by, approved_on). While the
+# until a content specialist records the choice (status: approved, approved_by, approved_on; each language
+# entry is {key: <catalogue key>, version: <approved catalogue version>}). While the
 # language's entry is null, verified insertion produces Arabic text only and reports `translation_unselected`
 # wherever a translation is required (e.g. the English variants of Unit 0).
 #

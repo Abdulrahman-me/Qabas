@@ -176,6 +176,43 @@ def test_the_committed_tool_mapping_is_pending_and_blocks() -> None:
     assert details == ["plan tool observation_vs_inference", "claim c_t_01 tool observation_vs_inference"]
 
 
+def test_quran_placeholders_use_verified_sources_and_keep_unselected_english_blocked() -> None:
+    from app.sources.scripture import insert
+    from tests.sources.synthetic import mushaf
+    data = record()
+    for variant in data["variants"].values():
+        variant["blocks"][1]["evidence"] = {"kind": "quran", "ref": "1:1", "insert_by_code": True}
+    canonical = mushaf()
+    def resolve(reference: str, language: str) -> Any:
+        passage = canonical.resolve(reference)
+        return insert(canonical, passage.surah, (passage.ayah_start, passage.ayah_end), language=language)
+    conversion = unit0.convert(data, curriculum(), mapping=APPROVED, scenes={}, scripture=resolve)
+    assert conversion.package is None and len(conversion.source_records) == 1
+    assert all("en translation is unselected" in blocker.detail for blocker in conversion.blockers)
+    assert next(iter(conversion.source_records.values())).text == canonical.get(1, 1).text_uthmani
+
+
+def test_bilingual_quran_insertion_keeps_identity_and_all_provenance(tmp_path: Any) -> None:
+    from app.sources.scripture import insert
+    from tests.sources.synthetic import mushaf
+    from tests.sources.test_scripture import manifest, translation
+    data = record()
+    for variant in data["variants"].values():
+        variant["blocks"][1]["evidence"] = {"kind": "quran", "ref": "1:1", "insert_by_code": True}
+    canonical, choice, selected = mushaf(), manifest(tmp_path), translation()
+    def resolve(reference: str, language: str) -> Any:
+        passage = canonical.resolve(reference)
+        return insert(canonical, passage.surah, (passage.ayah_start, passage.ayah_end), language=language,
+                      translations=(selected,), translation_manifest=choice)
+    conversion = unit0.convert(data, curriculum(), mapping=APPROVED, scenes={}, scripture=resolve)
+    assert conversion.package is not None and not conversion.blockers
+    ar = conversion.package["variants"]["ar"]["explorer"]["blocks"][1]["evidence"]
+    en = conversion.package["variants"]["en"]["explorer"]["blocks"][1]["evidence"]
+    assert ar["evidence_id"] == en["evidence_id"]
+    assert ar["quran"]["translation"] is None and en["quran"]["translation"] == selected.text
+    assert len(conversion.package["sources"]) == 1 and len(conversion.source_records) == 2
+
+
 @pytest.mark.parametrize(("change", "code"), [
     (lambda r: r["plan"]["lesson_arc"].update(rationale="English only"), "plan_text_missing"),
     (lambda r: r["plan"]["reasoning_tools"][0].update(justification="English only"), "plan_text_missing"),

@@ -5,6 +5,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
+from app.sources.records import SourceRecord
+
 # Who resolves each kind of blocker (decision D-81). Converters never resolve them themselves.
 OWNERS: dict[str, str] = {
     "reasoning_tool_unmapped": "content specialist: approve the reasoning-tool mapping (D-40, O-12)",
@@ -44,6 +46,7 @@ class Conversion:
     package: dict[str, Any] | None = None
     blockers: list[Blocker] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
+    source_records: dict[str, SourceRecord] = field(default_factory=dict)
 
     def block(self, code: str, detail: str) -> None:
         if code not in OWNERS:

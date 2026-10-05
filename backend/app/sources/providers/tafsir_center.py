@@ -56,7 +56,7 @@ class TafsirCenter(Adapter):
         payload = response.get("structuredContent")
         if payload is None:
             content = require(self.provider, response, "content", list)
-            if len(content) != 1 or content[0].get("type") != "text":
+            if len(content) != 1 or not isinstance(content[0], dict) or content[0].get("type") != "text":
                 raise ProviderResponseInvalid(self.provider, "MCP tool has no unambiguous JSON record")
             try:
                 payload = json.loads(require(self.provider, content[0], "text"))

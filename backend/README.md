@@ -111,7 +111,41 @@ unapproved gold files go to the git-ignored `backend/.private/content/gold/` (th
 lessons are committed under `content/gold/` and imported the same way. Today every Unit 0 lesson and the
 Salah reference are correctly blocked (see `IMPLEMENTATION_PHASES.md`, Phase 8).
 
-## Staging
+## Verified sources (Phase 9)
+
+The source layer keeps religious authority separate from technical capabilities. The canonical Arabic Quran
+comes from the digest-pinned King Fahd Hafs v3.0 dataset; Quran Foundation supplies discovery/audio/timings,
+and specialist-selected QuranEnc records supply translations. See [SOURCE_POLICY.md](docs/SOURCE_POLICY.md)
+for the full topic matrix, supported operations, provenance and pending provider approvals.
+
+Install the local mushaf with `uv run python scripts/fetch_mushaf.py`; where the system CA is required,
+download the pinned archive using the system-trusted client and pass `--archive <file>`. The script verifies
+both digests. The dataset stays git-ignored; it is never silently repaired or bundled into production content.
+Tests use neutral synthetic text, and optional local canonical-data checks run only when the dataset is installed.
+
+The Unit 0 conversion command resolves Arabic Quran placeholders from that local dataset. Once the specialist
+approves an English QuranEnc key **and version** in `content/sources/translations.yaml`, it retrieves those records
+through the adapter and prepares one shared verified bundle for both languages. An outage, Arabic mismatch,
+changed version or pending selection remains an explicit blocker. Gold files retain typed `source_records`
+snapshots; imports verify scripture/ranges and persist sources with the unpublished lesson atomically.
+
+Provider HTTP calls use 5 s connect / 15 s read, two jittered retries and a five-failure/60-second breaker.
+All provider live/cache approvals are pending under O-03: production refuses live calls and no lookup cache
+is used. Native Dorar uses the pinned checkout, a cache-disable preload, its original rate limit and a minimal
+child environment. `uv run python scripts/dorar_sidecar.py install` refuses an existing destination;
+`uv run python scripts/dorar_sidecar.py run` starts the checked local process. Actual native process network
+isolation must be provisioned before deployment approval. Node 22 is required locally and explicitly set in CI.
+
+Quran Foundation OAuth and its current Search API are mock-tested; public v4 content formats, QuranEnc,
+HadeethEnc, IslamHouse and Dorar use recorded responses. Tafsir stdio runs against a fake MCP server in CI;
+its actual package/tool/response mapping remains pending. `TAFSIR_MCP_COMMAND` is a JSON argv array,
+not a shell command. Nothing in the tests requires live provider credentials.
+
+HadeethEnc/IslamHouse REST text search is explicitly unsupported pending the association MCP schemas.
+Hadith collection-number bindings, source-based teaching claims, licensed reciter audio, curriculum approvals
+and scene media are still human/provider dependencies. This phase publishes no unfinished religious content.
+
+## Staging environment
 
 Staging is a non-production environment for frontend integration (`APP_ENV=staging`): the same code, migrations and
 native services as production, plus the contract's synthetic test curriculum (`scripts/seed.py

@@ -30,10 +30,23 @@ from app.models import Lesson, LessonVersion, ReviewDecision, User
 from app.runtime import Resources
 from app.services.platform import passwords
 from tests.content.test_unit0_converter import record
+from tests.sources.synthetic import mushaf
 
 pytestmark = pytest.mark.integration
 PASSWORD = "a long reviewer passphrase"
 BACKEND = Path(__file__).resolve().parents[2]
+TRANSLATION_TEST_MANIFEST = Path("test-manifest-not-configured")
+
+
+@pytest.fixture(autouse=True)
+def canonical_test_sources(tmp_path: Path, monkeypatch: Any) -> None:
+    """Neutral canonical data and a test-only specialist choice; no production fixture exception."""
+    import app.sources.gold as verifier
+    from tests.sources.test_scripture import manifest
+    path = manifest(tmp_path)
+    monkeypatch.setattr(verifier, "get_mushaf", lambda settings: mushaf())
+    monkeypatch.setattr(verifier, "TRANSLATIONS", path)
+    monkeypatch.setattr(sys.modules[__name__], "TRANSLATION_TEST_MANIFEST", path, raising=False)
 
 
 def production_like(package: LessonPackage, title_suffix: str = "") -> LessonPackage:
@@ -51,8 +64,70 @@ def production_like(package: LessonPackage, title_suffix: str = "") -> LessonPac
 
 def gold(title_suffix: str = "") -> GoldFile:
     package = next(p for p in build_packages() if p.lesson_id == "les_t1_0")
+    from dataclasses import replace
+
+    from app.sources.scripture import insert
+    from app.sources.store import source_id
+    from tests.sources.test_scripture import translation
+    data = production_like(package, title_suffix).model_dump(mode="json")
+    canonical = mushaf()
+    records, sources = {}, {}
+    for ayah in (1, 2):
+        selected = translation()
+        selected = replace(selected, provider_record_id=f"fixture_key:1:{ayah}", reference=f"1:{ayah}",
+                           data={**selected.data, "arabic_text": canonical.get(1, ayah).text_uthmani})
+        inserted = insert(canonical, 1, (ayah, ayah), translations=(selected,),
+                          translation_manifest=TRANSLATION_TEST_MANIFEST)
+        identifier, source = inserted.evidence.evidence_id, inserted.source
+        records[identifier] = source
+        records[source_id(selected)] = selected
+        sources[identifier] = {"source_id": identifier, "kind": source.kind, "provider": source.provider,
+                               "title": source.title, "reference": source.reference, "excerpt": source.text,
+                               "url": source.url}
+    for language, variants in data["variants"].items():
+        for variant in variants.values():
+            def walk(node: Any, language: str = language) -> None:
+                if isinstance(node, dict):
+                    if node.get("kind") == "quran" and node.get("quran"):
+                        ayah = node["quran"]["ayah_start"]
+                        selected = translation()
+                        selected = replace(selected, provider_record_id=f"fixture_key:1:{ayah}", reference=f"1:{ayah}",
+                                           data={**selected.data, "arabic_text": canonical.get(1, ayah).text_uthmani})
+                        inserted = insert(canonical, 1, (ayah, ayah), language=language,
+                                          translations=(selected,),
+                                          translation_manifest=TRANSLATION_TEST_MANIFEST)
+                        node.update(inserted.evidence.model_dump(mode="json"))
+                        identifier, source = node["evidence_id"], inserted.source
+                        records[identifier] = source
+                        for item in inserted.records:
+                            records[source_id(item)] = item
+                        sources[identifier] = {"source_id": identifier, "kind": source.kind,
+                            "provider": source.provider, "title": source.title, "reference": source.reference,
+                            "excerpt": source.text, "url": source.url}
+                    for value in node.values():
+                        walk(value, language)
+                elif isinstance(node, list):
+                    for value in node:
+                        walk(value, language)
+            walk(variant)
+    for exercise in data["exercises"]:
+        for language, item in exercise["exercise"].items():
+            walk(item, language)
+    replacements = {f"src_q_112_{ayah}": next(identifier for identifier, source in records.items()
+                                             if source.provider == "quran_com" and source.reference == f"1:{ayah}")
+                    for ayah in (1, 2)}
+    def relink(node: Any) -> Any:
+        if isinstance(node, str):
+            return replacements.get(node, node)
+        if isinstance(node, list):
+            return [relink(value) for value in node]
+        if isinstance(node, dict):
+            return {key: relink(value) for key, value in node.items()}
+        return node
+    data = relink(data)
+    data["sources"] = list(sources.values())
     return GoldFile(provenance=Provenance(source="handwritten", notes=["test"]),
-                    lesson=production_like(package, title_suffix))
+                    lesson=LessonPackage.model_validate(data), source_records=records)
 
 
 async def _reviewer(db: Any, *, active: bool = True, email: str = "specialist@example.test") -> str:
@@ -127,6 +202,43 @@ async def test_import_approve_publish_and_reject(resources: Resources) -> None:
         assert decisions[1].reason == "Title change not approved."
         lesson = await db.get(Lesson, "les_t1_0")
         assert lesson is not None and lesson.current_version == 1                            # still the approved one
+
+
+@pytest.mark.parametrize("corruption", ["text", "range", "english_translation", "provenance"])
+async def test_gold_rejects_scripture_corruption_before_any_source_or_lesson_write(
+        resources: Resources, corruption: str) -> None:
+    from sqlalchemy import func
+
+    from app.models import Source
+    candidate = gold()
+    data = candidate.dump()
+    language = "en" if corruption == "english_translation" else "ar"
+    def corrupt(node: Any) -> bool:
+        if isinstance(node, dict):
+            if node.get("kind") == "quran" and node.get("quran"):
+                value = node["quran"]
+                if corruption == "text":
+                    value["text_uthmani"] = "Different neutral text"
+                elif corruption == "range":
+                    value["segment"] = {"word_start": 1, "word_end": 999}
+                elif corruption == "english_translation":
+                    value["translation"] = None
+                return True
+            return any(corrupt(value) for value in node.values())
+        if isinstance(node, list):
+            return any(corrupt(value) for value in node)
+        return False
+    assert corrupt([exercise["exercise"][language] for exercise in data["lesson"]["exercises"]])
+    if corruption == "provenance":
+        data["source_records"] = {}
+    refused = GoldFile.model_validate(data)
+    with pytest.raises(GoldError, match="verification failed"):
+        async with resources.sessionmaker() as db, db.begin():
+            await apply_curriculum(db, build_curriculum())
+            await import_gold(db, refused)
+    async with resources.sessionmaker() as db:
+        assert (await db.execute(select(func.count()).select_from(Source))).scalar_one() == 0
+        assert (await db.execute(select(func.count()).select_from(LessonVersion))).scalar_one() == 0
 
 
 async def test_test_fixture_content_never_takes_the_gold_path(resources: Resources) -> None:

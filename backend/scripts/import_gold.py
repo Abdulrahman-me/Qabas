@@ -31,6 +31,8 @@ from app.content.importers.report import Conversion, summary
 from app.content.package import LessonPackage
 from app.content.validation import ContentValidationError
 from app.runtime import Resources
+from app.sources.mushaf import MushafError, get_mushaf
+from app.sources.scripture import prepare_references
 
 PRIVATE_GOLD = Path(__file__).resolve().parents[1] / ".private" / "content" / "gold"
 
@@ -41,8 +43,26 @@ def _convert(args: argparse.Namespace) -> int:
     if args.kind == "unit0":
         mapping = unit0.load_mapping()
         records = unit0.load_records(Path(args.source))
+        scripture: unit0.ScriptureResolver | None = None
+        try:
+            mushaf = get_mushaf(get_settings())
+        except MushafError:
+            pass  # The converter keeps explicit source blockers until the pinned dataset is installed.
+        else:
+            references: set[str] = set()
+            def walk(node: object) -> None:
+                if isinstance(node, dict):
+                    if node.get("kind") == "quran" and isinstance(node.get("ref"), str):
+                        references.add(node["ref"])
+                    for value in node.values():
+                        walk(value)
+                elif isinstance(node, list):
+                    for value in node:
+                        walk(value)
+            walk(records)
+            scripture = asyncio.run(prepare_references(mushaf, sorted(references), get_settings()))
         # Production scene media come from the visual pipeline (Phase 14); none is published yet (O-13).
-        conversions = [unit0.convert(r, curriculum, mapping=mapping, scenes={}) for r in records]
+        conversions = [unit0.convert(r, curriculum, mapping=mapping, scenes={}, scripture=scripture) for r in records]
         provenance = {c.lesson: Provenance(source="unit0_authoring", source_digest=unit0.digest(r),
                                            converter=unit0.CONVERTER, notes=c.notes)
                       for c, r in zip(conversions, records, strict=True)}
@@ -57,7 +77,8 @@ def _convert(args: argparse.Namespace) -> int:
     for conversion in conversions:
         if conversion.ready and conversion.package is not None:
             gold = GoldFile(provenance=provenance[conversion.lesson],
-                            lesson=LessonPackage.model_validate(conversion.package))
+                            lesson=LessonPackage.model_validate(conversion.package),
+                            source_records=conversion.source_records)
             write_gold(out / f"{conversion.lesson}.json", gold)
     report = summary(conversions)
     text = json.dumps(report, ensure_ascii=False, indent=1)

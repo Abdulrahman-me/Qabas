@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Literal
 
 import yaml
-from pydantic import BaseModel, ConfigDict, model_validator
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from app.config import BACKEND_DIR, Environment, Settings
 from app.sources.errors import ProviderNotConfigured
@@ -19,7 +19,7 @@ DAY = 86_400
 class CachePolicy(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
 
-    ttl_days: float
+    ttl_days: float = Field(ge=0, allow_inf_nan=False)
     terms: Literal["pending", "confirmed", "no_cache"]
     confirmed_by: str | None
 

@@ -17,6 +17,7 @@ from pathlib import Path
 from types import TracebackType
 from urllib.parse import urlsplit
 
+from app.config import Settings, get_settings
 from app.sources.policy import policy
 
 REVISION_FILE = ".qabas-revision"
@@ -36,11 +37,13 @@ def pinned_revision() -> str:
 
 class DorarSidecar:
     def __init__(self, directory: Path, base_url: str, *, command: Sequence[str] | None = None,
-                 revision: str | None = None, env: dict[str, str] | None = None) -> None:
+                 revision: str | None = None, env: dict[str, str] | None = None,
+                 settings: Settings | None = None) -> None:
         parts = urlsplit(base_url)
         if parts.hostname not in ("127.0.0.1", "localhost") or parts.port is None:
             raise SidecarError(f"the sidecar runs locally on an explicit port, not {base_url}")
         self.directory = directory
+        self.settings = settings or get_settings()
         self.host, self.port = parts.hostname, parts.port
         self.command = list(command) if command is not None else [
             "node", "--require", str(Path(__file__).with_name("dorar_no_cache.cjs")), "server.js"]
@@ -73,6 +76,7 @@ class DorarSidecar:
             raise SidecarError("sidecar HEAD or tracked files differ from the pinned revision")
 
     async def start(self, timeout: float = 15.0) -> None:
+        policy("dorar").require_live(self.settings)
         if self.process is not None:
             raise SidecarError("sidecar is already started")
         self.check_revision()
@@ -88,6 +92,14 @@ class DorarSidecar:
         self.process = await asyncio.create_subprocess_exec(
             *self.command, cwd=self.directory, env=self.env,
             stdout=asyncio.subprocess.DEVNULL, stderr=asyncio.subprocess.DEVNULL)
+        try:
+            await self._wait_ready(timeout)
+        except BaseException:
+            await self.stop()
+            raise
+
+    async def _wait_ready(self, timeout: float) -> None:
+        assert self.process is not None
         loop = asyncio.get_running_loop()
         deadline = loop.time() + timeout
         while loop.time() < deadline:

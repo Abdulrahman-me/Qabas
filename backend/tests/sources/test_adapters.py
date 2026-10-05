@@ -95,7 +95,10 @@ async def test_production_pending_gate_prevents_network(adapter_class: Any, oper
                                                        arguments: dict[str, Any]) -> None:
     def forbidden(request: httpx.Request) -> httpx.Response:
         raise AssertionError("O-03 pending provider attempted live access")
-    adapter = adapter_class.create(Settings(app_env=Environment.production), transport=httpx.MockTransport(forbidden))
+    config = Settings(_env_file=None, app_env=Environment.production,
+                      auth_token_pepper=SecretStr("test-pepper-" * 4),
+                      storage_signing_key=SecretStr("test-signing-key"))
+    adapter = adapter_class.create(config, transport=httpx.MockTransport(forbidden))
     try:
         with pytest.raises(ProviderNotConfigured, match="O-03"):
             await adapter.call(operation, **arguments)

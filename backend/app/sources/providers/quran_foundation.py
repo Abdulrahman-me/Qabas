@@ -69,7 +69,8 @@ class QuranFoundation(HttpAdapter):
                 if isinstance(ttl, bool) or ttl <= 0:
                     raise ProviderResponseInvalid(self.provider, "invalid OAuth token lifetime")
 
-            response = await self.oauth.request("POST", "", auth=httpx.BasicAuth(client_id, secret.get_secret_value()),
+            response = await self.oauth.request("POST", self.settings.quran_foundation_auth_url,
+                                                auth=httpx.BasicAuth(client_id, secret.get_secret_value()),
                                                 data={"grant_type": "client_credentials", "scope": scope},
                                                 validate=validate)
             token = str(response.data["access_token"])

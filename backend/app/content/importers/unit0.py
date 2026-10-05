@@ -24,7 +24,7 @@ from __future__ import annotations
 
 import hashlib
 import json
-from collections.abc import Mapping
+from collections.abc import Callable, Mapping
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -36,8 +36,10 @@ from app.content.curriculum import CONTENT_DIR, Curriculum
 from app.content.importers.report import Conversion
 from app.content.package import LessonPackage
 from app.contract import models as C
+from app.sources.scripture import VerifiedScripture
 
-CONVERTER = "unit0_authoring/1"
+CONVERTER = "unit0_authoring/2"
+ScriptureResolver = Callable[[str, str], VerifiedScripture]
 MAPPING_PATH = CONTENT_DIR / "mappings" / "reasoning_tools.yaml"
 CONTRACT_TOOLS = set(C.ReasoningTool.__args__)
 SPAN_ONLY = {"hook": ("situation", "question"), "predict": ("reveal",), "callout": ("sentences",)}
@@ -91,11 +93,14 @@ def digest(record: dict[str, Any]) -> str:
 
 class _Projector:
     def __init__(self, record: dict[str, Any], conversion: Conversion, *, mapping: ToolMapping,
-                 concepts: set[str], scenes: Mapping[str, SceneMedia]) -> None:
+                 concepts: set[str], scenes: Mapping[str, SceneMedia],
+                 scripture: ScriptureResolver | None = None) -> None:
         self.r, self.c, self.mapping, self.concepts, self.scenes = record, conversion, mapping, concepts, scenes
         self.roles: dict[str, dict[str, Any]] = {}
         self.sentence_claims: set[str] = set()
         self.flattened_claims: dict[str, set[str]] = {}
+        self.scripture = scripture
+        self.sources: dict[str, dict[str, Any]] = {}
 
     # --- text --------------------------------------------------------------------------------------------
 
@@ -156,10 +161,31 @@ class _Projector:
                 "scene": media.scene_ref, "fallback_image": fallback, "fallback_params": v.get("params"),
                 "alt": v["alt"], "overlays": []}
 
-    def evidence(self, e: dict[str, Any] | None, where: str) -> dict[str, Any] | None:
+    def evidence(self, e: dict[str, Any] | None, where: str, lang: str) -> dict[str, Any] | None:
         if e is None:
             return None
         if e.get("insert_by_code") or "evidence_id" not in e:
+            if e.get("kind") == "quran" and self.scripture is not None:
+                from app.sources.errors import SourceError
+                from app.sources.mushaf import ReferenceNotFound
+                try:
+                    reference = e.get("ref")
+                    if not isinstance(reference, str):
+                        raise ReferenceNotFound("Quran placeholder requires an explicit reference")
+                    verified = self.scripture(reference, lang)
+                except (SourceError, ReferenceNotFound) as exc:
+                    self.c.block("source_pending", f"{where}: {exc}")
+                    return None
+                identifier = verified.evidence.evidence_id
+                source = verified.source
+                self.sources[identifier] = {"source_id": identifier, "kind": source.kind,
+                    "provider": source.provider, "title": source.title, "reference": source.reference,
+                    "excerpt": source.text, "url": source.url}
+                self.c.source_records[identifier] = source
+                from app.sources.store import source_id
+                for record in verified.records:
+                    self.c.source_records[source_id(record)] = record
+                return dict(verified.evidence.model_dump(mode="json"))
             self.c.block("source_pending", f"{where}: {e.get('kind')} {e.get('ref')} awaits verified insertion")
             return None
         return e
@@ -183,7 +209,7 @@ class _Projector:
         if kind == "teach":
             return {"block_id": where, "type": "teach", "eyebrow": b.get("eyebrow"), "title": b["title"],
                     "style": b["style"], "visual": self.visual(b.get("visual"), where),
-                    "evidence": self.evidence(b.get("evidence"), where),
+                    "evidence": self.evidence(b.get("evidence"), where, lang),
                     "points": [{"point_id": p["point_id"], "sentence": self.sentence(p["sentence"]),
                                 "visual_params": p.get("visual_params")} for p in b["points"]]}
         if kind == "story":
@@ -195,7 +221,7 @@ class _Projector:
                     "beats": [{"beat_id": beat["beat_id"], "beat_index": beat["beat_index"],
                                "narration": [self.sentence(s) for s in beat["narration"]],
                                "narration_audio_url": beat.get("narration_audio_url"),
-                               "quote": self.evidence(beat.get("quote"), f"{where}/{beat['beat_id']}"),
+                               "quote": self.evidence(beat.get("quote"), f"{where}/{beat['beat_id']}", lang),
                                "quote_meaning": beat.get("quote_meaning"),
                                "visual": self.visual(beat["visual"], f"{where}/{beat['beat_id']}")}
                               for beat in b["beats"]]}
@@ -205,7 +231,7 @@ class _Projector:
             item = dict(b)
             item.pop("sentences", None)
             if kind == "evidence":
-                item["evidence"] = self.evidence(b["evidence"], where)
+                item["evidence"] = self.evidence(b["evidence"], where, lang)
             else:
                 item["visual"] = self.visual(b["visual"], where)
             return item
@@ -375,12 +401,12 @@ class _Projector:
                                 "card": {lang: [{"type": "text", "text": m["correction"][lang]}]
                                          for lang in ("ar", "en")}, "source_ids": []}
                                for m in self.r["misconceptions"]],
-            "sources": [],
+            "sources": list(self.sources.values()),
         }
 
 
 def convert(record: dict[str, Any], curriculum: Curriculum, *, mapping: ToolMapping,
-            scenes: Mapping[str, SceneMedia]) -> Conversion:
+            scenes: Mapping[str, SceneMedia], scripture: ScriptureResolver | None = None) -> Conversion:
     """Project one authoring record; ``package`` is set only when nothing blocks it."""
     try:
         lesson_id, index = canonical_id(record["number"])
@@ -395,7 +421,7 @@ def convert(record: dict[str, Any], curriculum: Curriculum, *, mapping: ToolMapp
                                            f"slot {lesson_id}")
         return conversion
     concepts = {c.concept_id for c in curriculum.concepts}
-    projector = _Projector(record, conversion, mapping=mapping, concepts=concepts, scenes=scenes)
+    projector = _Projector(record, conversion, mapping=mapping, concepts=concepts, scenes=scenes, scripture=scripture)
     try:
         data = projector.package(lesson_id, slot[0].unit_id, index)
     except (KeyError, TypeError) as exc:

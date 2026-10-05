@@ -42,6 +42,9 @@ class HadeethEnc(HttpAdapter):
             raise ProviderResponseInvalid(self.provider, "hadith identity differs from request")
         require(self.provider, data, "title")
         require(self.provider, data, "hadeeth")
+        if arguments["language"] == "ar":
+            for field in ("reference", "attribution", "grade"):
+                require(self.provider, data, field)
 
     async def get(self, hadith_id: str, language: str) -> SourceRecord:
         arguments = {"id": str(hadith_id), "language": language}

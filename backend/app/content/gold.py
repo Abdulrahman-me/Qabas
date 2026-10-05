@@ -24,7 +24,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, ValidationError
+from pydantic import BaseModel, ConfigDict, Field, TypeAdapter, ValidationError
 from sqlalchemy import func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -34,6 +34,7 @@ from app.content.store import Approval, ImportResult, import_package, publish
 from app.content.validation import ContentValidationError, Issue
 from app.models import Lesson, LessonVersion, ReviewDecision, User
 from app.services.platform import passwords
+from app.sources.records import SourceRecord
 
 SCHEMA = "qabas.gold/1"
 
@@ -55,10 +56,15 @@ class GoldFile(BaseModel):
     schema_: Literal["qabas.gold/1"] = Field(default="qabas.gold/1", alias="schema")
     provenance: Provenance
     lesson: LessonPackage
+    source_records: dict[str, SourceRecord] = Field(default_factory=dict)
 
     def dump(self) -> dict[str, Any]:
-        return {"schema": SCHEMA, "provenance": self.provenance.model_dump(mode="json"),
-                "lesson": self.lesson.model_dump(mode="json")}
+        result = {"schema": SCHEMA, "provenance": self.provenance.model_dump(mode="json"),
+                  "lesson": self.lesson.model_dump(mode="json")}
+        if self.source_records:
+            result["source_records"] = TypeAdapter(dict[str, SourceRecord]).dump_python(
+                self.source_records, mode="json")
+        return result
 
 
 class GoldError(ValueError):
@@ -87,6 +93,14 @@ def write_gold(path: Path, gold: GoldFile) -> None:
 
 async def import_gold(db: AsyncSession, gold: GoldFile, *, run_id: str | None = None) -> ImportResult:
     """Store a gold lesson as an unpublished version (caller owns the transaction)."""
+    from app.sources.gold import verify_scripture
+    from app.sources.store import persist
+    try:
+        verify_scripture(gold.lesson.model_dump(mode="json"), gold.source_records)
+        for identifier, record in sorted(gold.source_records.items()):
+            await persist(db, record, id_=identifier)
+    except (RuntimeError, LookupError, ValueError, TypeError) as exc:
+        raise GoldError(f"scripture/source verification failed: {exc}") from exc
     result = await import_package(db, gold.lesson, origin="gold_import", run_id=run_id)
     await db.execute(update(Lesson).where(Lesson.id == gold.lesson.lesson_id).values(is_gold=True))
     await db.flush()

@@ -72,6 +72,15 @@ async def test_sidecar_refuses_occupied_port(tmp_path: Path, monkeypatch: Any) -
         await server.wait_closed()
 
 
+@pytest.mark.parametrize("code", ["raise SystemExit(3)", "import time; time.sleep(30)"])
+async def test_sidecar_startup_failure_cleans_process(tmp_path: Path, monkeypatch: Any, code: str) -> None:
+    sidecar = DorarSidecar(tmp_path, f"http://127.0.0.1:{port()}", command=[sys.executable, "-c", code])
+    monkeypatch.setattr(sidecar, "check_revision", lambda: None)
+    with pytest.raises(SidecarError):
+        await sidecar.start(timeout=.3)
+    assert sidecar.process is None
+
+
 def test_node_cache_hook_never_stores_even_with_zero_ttl(tmp_path: Path) -> None:
     node = shutil.which("node")
     assert node, "Node is required for the pinned Dorar sidecar and its cache safety test"

@@ -185,6 +185,8 @@ class ProviderHttp:
             raise UpstreamUnavailable(self.provider, f"HTTP {status} (credentials or access refused)")
         if status >= 400:
             raise ProviderResponseInvalid(self.provider, f"HTTP {status}")
+        if not 200 <= status < 300:
+            raise ProviderResponseInvalid(self.provider, f"unexpected HTTP {status}; redirects are not followed")
         body = response.content
         try:
             data = json.loads(body)

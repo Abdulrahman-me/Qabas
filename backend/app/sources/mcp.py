@@ -8,6 +8,9 @@ import os
 from collections.abc import Sequence
 from typing import Any
 
+from jsonschema import Draft202012Validator
+from jsonschema.exceptions import SchemaError
+
 from app.sources.errors import ProviderResponseInvalid, UpstreamUnavailable
 from app.sources.providers.base import require
 from app.sources.records import canonical_json
@@ -108,7 +111,7 @@ class StdioMcp:
                 if tool not in self.tools:
                     raise ProviderResponseInvalid(self.provider, "configured tool is absent from MCP catalogue")
                 schema = require(self.provider, self.tools[tool], "inputSchema", dict)
-                from jsonschema import Draft202012Validator
+                Draft202012Validator.check_schema(schema)
                 if list(Draft202012Validator(schema).iter_errors(arguments)):
                     raise ProviderResponseInvalid(self.provider, "arguments disagree with MCP tool schema")
                 return await self._rpc("tools/call", {"name": tool, "arguments": arguments})
@@ -118,7 +121,7 @@ class StdioMcp:
             except (OSError, TimeoutError) as exc:
                 await self.aclose()
                 raise UpstreamUnavailable(self.provider, f"MCP transport failure ({type(exc).__name__})") from exc
-            except (ValueError, ProviderResponseInvalid) as exc:
+            except (ValueError, SchemaError, ProviderResponseInvalid) as exc:
                 await self.aclose()
                 if isinstance(exc, ProviderResponseInvalid):
                     raise

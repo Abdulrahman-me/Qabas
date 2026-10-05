@@ -18,7 +18,8 @@ from tests.sources.transport import RecordedTransport
 def foundation(settings: Settings, handler: Any) -> QuranFoundation:
     transport = httpx.MockTransport(handler)
     settings = settings.model_copy(update={"quran_foundation_client_id": "test-client",
-                                           "quran_foundation_client_secret": SecretStr("test-secret")})
+                                           "quran_foundation_client_secret": SecretStr("test-secret"),
+                                           "quran_foundation_auth_url": "https://auth.test/oauth2/token"})
     kwargs = {"transport": transport, "breaker": CircuitBreaker("quran_com")}
     return QuranFoundation(settings, ProviderHttp("quran_com", "https://content.test/api/v4", **kwargs),
                            oauth=ProviderHttp("quran_com", "https://auth.test/oauth2/token", **kwargs),
@@ -31,6 +32,7 @@ async def test_scoped_tokens_are_reused_and_never_stored(settings: Settings) -> 
 
     async def handler(request: httpx.Request) -> httpx.Response:
         if request.url.host == "auth.test":
+            assert request.url.path == "/oauth2/token"
             assert request.headers["authorization"].startswith("Basic ")
             scope = dict(httpx.QueryParams(request.content.decode()))["scope"]
             scopes.append(scope)

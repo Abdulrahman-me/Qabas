@@ -44,6 +44,7 @@ async def test_transient_failures_retry_twice_with_bounded_jitter(failure: Any) 
     (404, b"", RecordNotFound), (400, b"{}", ProviderResponseInvalid),
     (401, b"{}", UpstreamUnavailable), (403, b"{}", UpstreamUnavailable),
     (200, b"not json", ProviderResponseInvalid), (204, b"", ProviderResponseInvalid),
+    (302, b"{}", ProviderResponseInvalid),
 ])
 async def test_definite_or_malformed_responses_are_not_retried(status: int, content: bytes, error: type) -> None:
     calls = []
