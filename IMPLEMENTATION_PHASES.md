@@ -3,7 +3,7 @@
 **Scope:** backend only (FastAPI, Postgres, Redis, Celery workers, sources, recitation, Lesson Factory, reviewer gates and publishing, Raqeeb, community, challenges, operations). The Flutter app, Dart DTOs, `packages/qabas_scene` and the `tools/scene_preview` CLI are owned outside this plan and appear only as **external dependencies**.
 **Baseline:** `FINAL_ENGINEERING_HANDOFF/` (contract **revision 10 candidate**, schema SHA-256 `9d67bda0…481c`). The handoff folder is read-only and excluded from git.
 **Repository:** https://github.com/Abdulrahman-me/Qabas (branch `main` = latest completed checkpoint).
-**Created:** 2026-10-04 · **Last updated:** 2026-10-05
+**Created:** 2026-10-04 · **Last updated:** 2026-10-06
 
 **Priority order (D-02):** first the core learning experience (Phases 1–10), then the Lesson Factory, reviewer gates, publishing and the full visual/media pipeline (11–15). Raqeeb (16–17) starts only after that milestone. Community and challenges (18–20) and production hardening (21) follow.
 
@@ -32,7 +32,7 @@
 | 13 | Reviewer gates, publication, reviewer console API | ✅ Complete | `phase-13` | |
 | 14 | Visual and media pipeline (images, audio, production scenes) | ✅ Engineering complete | `phase-14` | Independent audit (F-139–F-144, D-157–D-159); `[~]` external/human gates: O-03, O-05/O-13 art and sign-offs, O-06, O-02 + Integration Gate 4 (D-158) |
 | 15 | Metrics, blind tests, factory acceptance | ✅ Engineering complete | `phase-15` | **Milestone C (engineering)**: pipeline proven end to end in CI; live staging acceptance `[~]` O-03/O-13/O-02 (D-162) |
-| 16 | Raqeeb text pipeline | 🔄 In progress | `phase-16` | Text pipeline implemented; full validation pending; external O-03/O-09/P-04 gates remain |
+| 16 | Raqeeb text pipeline | ✅ Engineering complete | `phase-16` | Text pipeline and benchmark storage; CI green; external O-03/O-09/P-04 gates remain (D-163) |
 | 17 | Raqeeb inputs, guarded memory and benchmark | ⏳ Not started | `phase-17` | Needs pgvector (D-05) |
 | 18 | Community: leagues, friends, achievements | ⏳ Not started | `phase-18` | |
 | 19 | Challenges: REST, selection, bot, async | ⏳ Not started | `phase-19` | |
@@ -707,7 +707,12 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 text API/worker, migration 0009, benchmark projection into existing metrics, `docs/RAQEEB_POLICY.md` and deterministic
 tests. Sources persist atomically with the completed answer; source change rolls back completion. Context pins
 served lesson content, published glossary cards supply term links, and no learner progress or publication writes
-are possible. See F-147–F-156 and D-163–D-170. Full validation/CI records follow before tagging.
+are possible. See F-147–F-156 and D-163–D-170. Full local suite: **1,033 passed / 1 expected role-check skip**;
+final focused Raqeeb/database suite: **125 passed / 1 role-check skip** (including four context cases added after
+the full local collection). Release-branch CI [37375137666](https://github.com/Abdulrahman-me/Qabas/actions/runs/37375137666):
+**1,023 passed / 15 expected skips**, including runtime-role assertions. Revision 10 contracts **595/279/105/382**,
+Ruff, strict mypy (206 files), OpenAPI, LLM schemas/prompt locks, Alembic parity/roundtrip and public safety pass.
+Engineering-complete under D-163; no live provider acceptance, real private benchmark or newly publishable lesson claimed.
 
 | # | Finding | Resolution |
 |---|---|---|
@@ -1031,3 +1036,4 @@ are possible. See F-147–F-156 and D-163–D-170. Full validation/CI records fo
 | 2026-10-05 | 14 | ✅ Phase 14 engineering-complete after the independent audit: 933 passed / 1 local role skip; CI 37354625149 green (919 passed, 15 skips; contracts 595/279/105/382); tagged `phase-14`, merged to `main`. Open by design: O-03, O-05/O-13 (style, characters, medallion art, scene candidate sign-off), O-06, O-02 + Integration Gate 4. No real lesson is publishable yet. |
 | 2026-10-05 | 15 | Blind tests, outbox-fed metrics and the Factory definition-of-done acceptance implemented on `phase/15-metrics-blind-tests`; F-145–F-146, D-160–D-162. |
 | 2026-10-05 | 15 | ✅ Phase 15 engineering-complete: 937 passed / 1 local role skip; CI 37360126635 green (923 passed, 15 skipped; contracts 595/279/105/382); tagged `phase-15`, merged to `main`. Live staging acceptance gated (O-03, O-13, O-02). |
+| 2026-10-06 | 16 | ✅ Phase 16 engineering-complete: durable Raqeeb text API/pipeline, Phase 9 tool-backed evidence, guarded responses, pinned context, append-only benchmark storage and existing metrics integration. F-147–F-156, D-163–D-170. Full local suite 1,033 passed / 1 expected role skip; final focused suite 125 passed / 1 role skip includes four subsequently added context cases. Release CI 37375137666 green: 1,023 passed / 15 expected skips, contracts 595/279/105/382; Ruff, strict mypy, OpenAPI, LLM schemas/prompt locks, Alembic and safety green. Tagged `phase-16` on `f7f7ea5`, fast-forwarded to `main`. Private product notes updated and ignored. O-03/O-09/P-04/D-93/native-model acceptance remain open; Phase 17 owns attachments/voice/memory/private benchmark runner. |
