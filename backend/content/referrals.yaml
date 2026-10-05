@@ -1,0 +1,34 @@
+schema: qabas.referrals/1
+version: 1
+# Engineering policy review: exact types/authority checked against backend §9.3.
+# No support mailbox, partnership, specialist accreditation or hotline is invented.
+# Human deployment/content approval remains a separate external gate.
+review: {status: engineering_reviewed, basis: "BACKEND_HANDOFF §9.3; API §6.8"}
+types:
+  fatwa_authority:
+    ar:
+      reason: "هذا السؤال يتعلق بحالتك الشخصية ويحتاج إلى عالم يسمع تفاصيلها. لا أقدّم حكماً شخصياً؛ اسأل جهة إفتاء معتمدة."
+      targets:
+        - {name: "الرئاسة العامة للبحوث العلمية والإفتاء", description: "بوابة الفتوى الرسمية في المملكة العربية السعودية", url: "https://www.alifta.gov.sa", contact: null}
+    en:
+      reason: "This question needs a qualified scholar who can hear the details of your situation. I cannot give a personal ruling; please ask an accredited fatwa authority."
+      targets:
+        - {name: "General Presidency of Scholarly Research and Ifta", description: "Official fatwa portal in Saudi Arabia", url: "https://www.alifta.gov.sa", contact: null}
+  specialist:
+    ar:
+      reason: "تحتاج هذه المسألة إلى مراجعة مختص مؤهل تثق به. لا أستطيع الجزم بما لا تسنده المصادر المتاحة."
+      targets:
+        - {name: "مختص مؤهل", description: "عالم أو معلّم موثوق يستطيع مراجعة النصوص وسماع تفاصيل السؤال", url: null, contact: null}
+    en:
+      reason: "Please ask a qualified specialist you trust to review this question. I cannot assert what the available sources do not support."
+      targets:
+        - {name: "Qualified specialist", description: "A trusted scholar or teacher who can review the texts and hear the details", url: null, contact: null}
+  human_support:
+    ar:
+      reason: "تحتاج هذه الحالة إلى دعم بشري مباشر. إذا كنت في خطر فاطلب خدمات الطوارئ المحلية أو تواصل مع شخص موثوق قريب منك."
+      targets:
+        - {name: "شخص موثوق أو خدمات الطوارئ المحلية", description: "اختر شخصاً يستطيع مساعدتك مباشرة؛ عند وجود خطر فوري اتصل بالطوارئ المحلية", url: null, contact: null}
+    en:
+      reason: "This situation needs direct human support. If you are in danger, contact local emergency services or someone you trust nearby."
+      targets:
+        - {name: "Trusted person or local emergency services", description: "Contact someone who can help you directly; use local emergency services for immediate danger", url: null, contact: null}

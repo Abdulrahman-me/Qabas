@@ -32,7 +32,7 @@
 | 13 | Reviewer gates, publication, reviewer console API | ✅ Complete | `phase-13` | |
 | 14 | Visual and media pipeline (images, audio, production scenes) | ✅ Engineering complete | `phase-14` | Independent audit (F-139–F-144, D-157–D-159); `[~]` external/human gates: O-03, O-05/O-13 art and sign-offs, O-06, O-02 + Integration Gate 4 (D-158) |
 | 15 | Metrics, blind tests, factory acceptance | ✅ Engineering complete | `phase-15` | **Milestone C (engineering)**: pipeline proven end to end in CI; live staging acceptance `[~]` O-03/O-13/O-02 (D-162) |
-| 16 | Raqeeb text pipeline | ⏳ Not started | `phase-16` | Starts after Milestone C |
+| 16 | Raqeeb text pipeline | 🔄 In progress | `phase-16` | Text pipeline implemented; full validation pending; external O-03/O-09/P-04 gates remain |
 | 17 | Raqeeb inputs, guarded memory and benchmark | ⏳ Not started | `phase-17` | Needs pgvector (D-05) |
 | 18 | Community: leagues, friends, achievements | ⏳ Not started | `phase-18` | |
 | 19 | Challenges: REST, selection, bot, async | ⏳ Not started | `phase-19` | |
@@ -693,13 +693,31 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 **Precondition:** Milestone C complete.
 **Refs:** BACKEND_HANDOFF §7.7, §9.1–9.5.
 
-- [ ] Additive migration: `raqeeb_conversations`, `raqeeb_messages`.
-- [ ] Endpoints: conversations create/list/get, messages (202 + polling), feedback; one `processing` answer per conversation; 75 s timeout; 90 s stalled-message sweeper.
-- [ ] `content/referrals.yaml` and `content/safety_rules.yaml`, authored and reviewed with this phase (D-37).
-- [ ] Pipeline: safety rules → classifier → 8 class strategies → verifier → writer → level service (rewrite / term linking / check) → guard (regenerate once, then abstain) → output mapping; referrals; titles; history window; `suggested_lessons`.
+- [x] Additive migration: `raqeeb_conversations`, `raqeeb_messages`; append-only `benchmark_runs` for F-145.
+- [x] Endpoints: conversations create/list/get, messages (202 + polling), feedback; one `processing` answer per conversation; 75 s admission deadline; 90 s stalled-message sweeper; durable ID-only outbox, lease fencing and late-ack recovery.
+- [x] `content/referrals.yaml` and `content/safety_rules.yaml`, authored and engineering-reviewed with this phase (D-37): actual bilingual templates/targets, official Ifta URL, trusted-person/emergency guidance without invented contacts.
+- [x] Pipeline: safety rules → classifier → 8 class strategies → verifier → writer → level service (rewrite / term linking / check) → guard (regenerate once, then abstain) → output mapping; referrals; titles; last six messages; `suggested_lessons` via an approved installed bge-m3 provider (no model download/lexical substitute).
+- [x] F-145 metrics integration: latest immutable nonsynthetic benchmark run; replay-safe aggregate storage with dataset/model/prompt/adapter/manual-review provenance. Full private runner/judge remains Phase 17 (D-163).
+- [~] Live bilingual model/source acceptance and hosted learner-question processing: O-03, O-09/P-04; association discovery schemas pending, English Quran translation selection D-93. Native bge-m3 installation/licence/CPU acceptance O-03. No live integrations/real benchmark claimed.
 
 **Tests:** contract-valid messages for all 8 classes (fake LLM), guard rules, `test_untrusted_input`.
 **Exit:** tag `phase-16`.
+
+**Delivered:** `app/raqeeb/`, six locked model prompts and strict schemas, Phase 9 association discovery client,
+text API/worker, migration 0009, benchmark projection into existing metrics, `docs/RAQEEB_POLICY.md` and deterministic
+tests. Sources persist atomically with the completed answer; source change rolls back completion. Context pins
+served lesson content, published glossary cards supply term links, and no learner progress or publication writes
+are possible. See F-147–F-153 and D-163–D-170. Full validation/CI records follow before tagging.
+
+| # | Finding | Resolution |
+|---|---|---|
+| F-147 | F-145/API metrics assigns `benchmark_runs` to Phase 16; the Phase 17 checklist also names it with the full runner. | Storage and metrics implemented now; private runner, judge, cold/warm memory and P-05 release evaluation remain Phase 17 (D-163). |
+| F-148 | API prose describes conversation context as optional, but revision 10 `ConvCreate` requires a nullable `context` field. | Follow the schema: clients send `{"context": null}`; no contract change (D-170). |
+| F-149 | The overall deadline is 75 s, while stalled-message recovery runs at 90 s. A queued job must not receive a fresh 75 s when claimed. | Deadline starts at admission, enforced by worker, durable expiry task and poll/admission; 90 s sweep remains crash fallback (D-164). |
+| F-150 | HadeethEnc/IslamHouse REST APIs do not provide search; the association MCP tool schemas remain unconfirmed (D-96/O-03). | Implement confirmed-mapping discovery → authority get with separate capability provenance; pending configuration yields source unavailability, never invented hits (D-166). |
+| F-151 | Concurrent Raqeeb and Factory transactions can persist several shared sources in opposite orders. | Both acquire `(provider, provider_record_id)` order; Gate 2's stored draft/digest/source presentation remain identical (D-164). |
+| F-152 | During Phase 16 testing, its initial context reader treated `LessonVersion.content` as a full `LessonPackage`; stored content is deliberately minimal. | Read `VariantContent`/stored glossary models and active-session snapshots. New-version/track/language tests prove pinning; no completed-phase storage redesign (D-167). |
+| F-153 | Revision 10 has no claim-verified status, and requires a `differing_views` block plus final specialist referral even when abstained. | Direct source support retains `needs_specialist`; unavailable differing views use an honest intro with empty views, never invented positions (D-170). |
 
 ---
 
@@ -707,7 +725,7 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 
 - [ ] Inputs: voice (ffmpeg → STT provider), images (vision extraction), DOCX, PDF (text and scanned via pypdfium2), limits, `input_unreadable`; private attachment storage + retention.
 - [ ] pgvector installed and the extension enabled (D-05); embeddings worker (bge-m3, CPU); `raqeeb_memory` with guarded reuse (standalone, no attachments, source digests, equivalence check, version keys, expiry, purge by `origin_user_id`).
-- [ ] `bench/run.py` (committed) with the judge and P-05 thresholds, reading the benchmark/adversarial question sets from git-ignored `backend/.private/eval/` (D-19); public harness tests use their own small synthetic cases; `benchmark_runs` table.
+- [ ] `bench/run.py` (committed) with the judge and P-05 thresholds, reading the benchmark/adversarial question sets from git-ignored `backend/.private/eval/` (D-19); public harness tests use their own small synthetic cases; use Phase 16's `benchmark_runs` table/storage (F-147, D-163).
 
 **Tests:** `test_raqeeb_memory_guard`, input-type tests.
 **Gates:** O-03 (models/STT), P-05 (release thresholds), P-04 (provider disclosure).
@@ -949,12 +967,21 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | 2026-10-05 | D-160 | **Learning metrics are outbox-fed facts recomputed per learner.** The `metrics` subscriber of `session.finished` (its own effect key) rewrites the learner's unit facts (started, completed/skipped, pretest, first post-test) and misconception counts from the authoritative tables, so replay, late delivery and backfill converge; facts are purged with the account; aggregates exclude synthetic, bot and deleted users and round half up; factory generation time runs from creation to the first Gate 2 arrival minus the Gate 1 wait. | Backend "Transactions and effects"; D-77; factory §14. |
 | 2026-10-05 | D-161 | **Blind pairs compare current published versions of a gold import and a factory lesson**, with the gold side drawn and kept server-side; reviewers get Explorer previews in their language (learner-form exercises, no keys), one answer per pair (same answer replays `204`, a different one `400`), insert-only. | Factory §14; API §6.11. |
 | 2026-10-05 | D-162 | **Phase 15 is engineering-complete with the live staging acceptance as `[~]`** (O-03, O-13, O-02; O-12 for production content), the same convention as D-158; Milestone C's live proof follows those approvals. | F-146; D-158. |
+| 2026-10-05 | D-163 | **Phase 16 owns benchmark persistence and the existing metrics projection; Phase 17 owns the private runner/judge and guarded-memory evaluation.** Real rows require bilingual 60–80/all-eight-class coverage, adversarial/manual-review provenance and the same strong baseline; synthetic rows never appear as real staff metrics. No private set or release-quality result is fabricated. Engineering completion follows D-158/D-162 with named external gates `[~]`. | F-145/F-147; D-19; RAQEEB_BENCHMARK. |
+| 2026-10-05 | D-164 | **Raqeeb admission is atomic and replay-safe, with user → conversation → message locks, a per-message advisory lock/lease and ID-only outbox.** The 75 s deadline includes queue time; 90 s is fallback recovery. Shared source rows are acquired in provider/record order in both Raqeeb and Gate 2; existing source IDs are mechanically adopted. A changed source aborts the completed-answer transaction. | F-149/F-151; preserves D-56/Gate 2 digest semantics. |
+| 2026-10-05 | D-165 | **Guards cover every answer; exact code-owned templates/cards do not depend on hosted judgments.** Generated prose receives both code and fast-model guard, one regeneration then abstention. All final outputs receive code validation; protective human-support routing works without keys/providers. Referrals are reviewed bilingual policy data, never model contacts. | Backend §9.2–9.4; D-37; no AI religious authority/publisher. |
+| 2026-10-05 | D-166 | **Raqeeb uses Phase 9 authority tools, not model memory.** Quran discovery re-reads canonical text; Dorar grades are verbatim and `other` escalates; sharh never grades; HadeethEnc explanations bind the Arabic quotation; IslamHouse article/fatwa sources supply published responses. Association search is capability-only, gated on confirmed schema and separately recorded in `raw.parts`. | D-88/D-89/D-93/D-94/D-96; F-150; existing no-cache/live gates stand. |
+| 2026-10-05 | D-167 | **Conversation context pins served learner content and published glossary cards.** No reviewer keys or learner IDs reach a model; language/track and last-six-message snapshots are stable. Rewriting touches paragraphs only, terms retain their existing state, and no XP/mastery/promotions occur. Recommendations use installed approved local bge-m3 cosine ≥ 0.6, not lexical approximations; Phase 17 can reuse its provider. | F-152; backend §7.7/§9; native model acceptance O-03. |
+| 2026-10-05 | D-168 | **Hosted learner questions are gated by O-09/P-04 in staging and production, separately from model O-03.** Approval must record actual provider retention, deletion responsibilities, disclosure and owner/date/report. Proposed attachment retention is not a provider-retention assumption. Conversation checkpoints are private account data, purged with the account; logs/broker payloads contain metadata/IDs only. | OPERATIONS/privacy; Phase 10 recitation remains local and audio-free. |
+| 2026-10-05 | D-169 | **Committed per-message checkpoints resume only identical inputs/prompts and preserve spend.** They are not shared provider caching or semantic memory. A crash before checkpoint durability may repeat a paid call; exactly-once billing is not promised. Leases/deadlines still prevent duplicate or stale terminal effects. | Backend §9.1; analogous D-154; Phase 17 owns guarded reuse. |
+| 2026-10-05 | D-170 | **Preserve closed revision 10 message semantics over prose ambiguity.** Conversation context is required/nullable; claim support remains `needs_specialist`; abstained disagreements still carry an empty, honest views block and final specialist referral. No new authenticity/status/DTO values are introduced. | F-148/F-153; all eight contract messages validated. |
 | 2026-10-04 | D-13 | Git HTTPS failed certificate verification with Git's bundled OpenSSL. The repo-local config now sets `http.sslBackend=schannel` (Windows certificate store); global config is untouched. The first push made `phase/0-workspace` GitHub's default branch, so switch the default to `main` when `phase-0` is tagged. | — |
 
 ## Progress log
 
 | Date | Phase | Entry |
 |---|---|---|
+| 2026-10-05 | 16 | Continued verified `main` 9fbe2aa and phase-14/15 tags on `phase/16-raqeeb-text`; implemented the full text pipeline, durable endpoints/worker, source provenance, local recommendation interface, append-only benchmark storage and metrics. F-147–F-153/D-163–D-170 recorded; full validation pending. |
 | 2026-10-04 | — | Phase plan created from FINAL_ENGINEERING_HANDOFF |
 | 2026-10-04 | — | Plan revised: Raqeeb after the learning experience + factory (D-02); native dev env (D-03); full-quality scenes (D-06) |
 | 2026-10-04 | 0 | Environment verified and completed (Python 3.12.10, uv, Postgres 16.14, Redis 7.4.11, ffmpeg 9.0.2, Node 22). Handoff integrity verified. Rev 10 suites rerun: 595/279/105/382 PASS. Git connected; WIP branch `phase/0-workspace` pushed. `check-env.ps1`: all checks pass except the database (role not yet created). Waiting on the dev DB role and D-10. |

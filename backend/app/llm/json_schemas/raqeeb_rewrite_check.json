@@ -1,0 +1,19 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "new_claims": {
+   "title": "New Claims",
+   "type": "boolean"
+  },
+  "same_meaning": {
+   "title": "Same Meaning",
+   "type": "boolean"
+  }
+ },
+ "required": [
+  "same_meaning",
+  "new_claims"
+ ],
+ "title": "raqeeb_rewrite_check",
+ "type": "object"
+}

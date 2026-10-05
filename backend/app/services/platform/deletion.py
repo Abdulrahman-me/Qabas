@@ -38,6 +38,7 @@ from app.models import (
     MetricUnitFact,
     OutboxEvent,
     Quest,
+    RaqeebConversation,
     RecitationCheckRecord,
     User,
     XpEvent,
@@ -59,6 +60,7 @@ REQUEST_STEPS: list[RequestStep] = []
 PURGED_TABLES: tuple[Any, ...] = (
     LearningSession, RecitationCheckRecord, LearnerConcept, LearnerTerm, LearnerMisconception, LearnerLesson,
     LearnerUnit, XpEvent, DailyActivity, Quest, IdempotencyKey, AuthSession, MetricUnitFact, MetricLearnerFact,
+    RaqeebConversation,
 )
 
 

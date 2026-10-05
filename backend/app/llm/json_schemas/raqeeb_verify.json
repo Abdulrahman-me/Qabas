@@ -1,0 +1,51 @@
+{
+ "$defs": {
+  "Claim": {
+   "additionalProperties": false,
+   "properties": {
+    "note": {
+     "title": "Note",
+     "type": "string"
+    },
+    "source_ids": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Source Ids",
+     "type": "array"
+    },
+    "supported": {
+     "title": "Supported",
+     "type": "boolean"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "text",
+    "supported",
+    "source_ids",
+    "note"
+   ],
+   "title": "Claim",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "claims": {
+   "items": {
+    "$ref": "#/$defs/Claim"
+   },
+   "title": "Claims",
+   "type": "array"
+  }
+ },
+ "required": [
+  "claims"
+ ],
+ "title": "raqeeb_verify",
+ "type": "object"
+}

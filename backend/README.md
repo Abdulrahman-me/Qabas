@@ -221,6 +221,17 @@ with the blocking issues and changes nothing. `request_changes` sends the run ba
 | Pair a published gold lesson with a published generated one | `uv run python scripts/create_blind_pair.py --gold <lesson_id> --generated <lesson_id>` |
 | Backfill learning-metric facts | `uv run python scripts/create_blind_pair.py --refresh-metrics` |
 
+## Raqeeb text assistant (Phase 16)
+
+`/v1/raqeeb` now supports learner-owned conversations, text admission (`202`), polling and feedback. The eight
+class strategies use the existing model/source layers, with protective referrals, source-bound verification,
+level adaptation and guarded answers. A 75-second admission deadline, durable outbox and 90-second crash
+sweeper keep requests terminal and replay-safe. It cannot publish lessons, issue personal rulings or change XP.
+
+See [Raqeeb policy](docs/RAQEEB_POLICY.md) for exact source roles, worker commands, private-data/model gates,
+offline recommendation setup, and benchmark persistence. Phase 17 owns attachments, guarded memory and the
+private benchmark runner; no synthetic benchmark appears as release quality in staff metrics.
+
 ## Staging environment
 
 Staging is a non-production environment for frontend integration (`APP_ENV=staging`): the same code, migrations and

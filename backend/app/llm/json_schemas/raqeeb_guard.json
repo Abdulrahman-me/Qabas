@@ -1,0 +1,23 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "violations": {
+   "items": {
+    "enum": [
+     "personal_ruling",
+     "unsupported_claim",
+     "unattributed_view",
+     "picked_winner"
+    ],
+    "type": "string"
+   },
+   "title": "Violations",
+   "type": "array"
+  }
+ },
+ "required": [
+  "violations"
+ ],
+ "title": "raqeeb_guard",
+ "type": "object"
+}

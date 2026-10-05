@@ -1,0 +1,104 @@
+{
+ "$defs": {
+  "Quote": {
+   "additionalProperties": false,
+   "properties": {
+    "kind_guess": {
+     "enum": [
+      "quran",
+      "hadith",
+      "claim"
+     ],
+     "title": "Kind Guess",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "text",
+    "kind_guess"
+   ],
+   "title": "Quote",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "canonical_question": {
+   "title": "Canonical Question",
+   "type": "string"
+  },
+  "concept_hint": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "title": "Concept Hint"
+  },
+  "confidence": {
+   "maximum": 1,
+   "minimum": 0,
+   "title": "Confidence",
+   "type": "number"
+  },
+  "language": {
+   "enum": [
+    "ar",
+    "en"
+   ],
+   "title": "Language",
+   "type": "string"
+  },
+  "question_class": {
+   "enum": [
+    "general_knowledge",
+    "text_explanation",
+    "verification",
+    "differing_opinions",
+    "personal_fatwa",
+    "doubt_or_deep_creed",
+    "sensitive_human",
+    "out_of_scope"
+   ],
+   "title": "Question Class",
+   "type": "string"
+  },
+  "quotes": {
+   "items": {
+    "$ref": "#/$defs/Quote"
+   },
+   "title": "Quotes",
+   "type": "array"
+  },
+  "retrieval_queries": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Retrieval Queries",
+   "type": "array"
+  },
+  "standalone": {
+   "title": "Standalone",
+   "type": "boolean"
+  }
+ },
+ "required": [
+  "question_class",
+  "confidence",
+  "language",
+  "quotes",
+  "retrieval_queries",
+  "concept_hint",
+  "standalone",
+  "canonical_question"
+ ],
+ "title": "raqeeb_classify",
+ "type": "object"
+}

@@ -176,6 +176,7 @@ async def factory(db: AsyncSession) -> dict[str, Any]:
 
 
 async def metrics(db: AsyncSession, lang: str) -> dict[str, Any]:
-    value = {"learning": await learning(db, lang), "raqeeb_benchmark": None, "factory": await factory(db)}
+    from app.raqeeb.benchmark import latest
+    value = {"learning": await learning(db, lang), "raqeeb_benchmark": await latest(db), "factory": await factory(db)}
     projected: dict[str, Any] = C.Metrics.model_validate(value).model_dump(mode="json")
     return projected

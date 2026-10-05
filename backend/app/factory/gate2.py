@@ -243,7 +243,8 @@ async def _approve(db: AsyncSession, settings: Settings, run: FactoryRun, body: 
         raise _blocked([issue("blocker", "validation", "media provenance differs from the reviewed QA fingerprint")])
     try:
         await publication.validate(storage, settings, output, package)
-        for source in package.sources:
+        for source in sorted(package.sources, key=lambda s: (
+                records[s.source_id].provider, records[s.source_id].provider_record_id)):
             record = records.get(source.source_id)
             if record is None or not citable(record):
                 raise ContentValidationError([validation.Issue("sources", "a cited source has no verified, citable "

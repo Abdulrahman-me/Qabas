@@ -1,0 +1,38 @@
+schema: qabas.safety_rules/1
+version: 1
+review: {status: engineering_reviewed, basis: "BACKEND_HANDOFF §9.2–9.4"}
+# Deliberately protective routing, not a diagnosis, authenticity judgment or ruling.
+patterns:
+  sensitive_human:
+    en:
+      - '\b(suicid\w*|self[- ]harm|kill myself|hurt myself|end my life)\b'
+      - '\b(abuse[dr]?|abusive|rape[dr]?|threaten\w*|coerc\w*|blackmail\w*)\b'
+      - '\b(kill|hurt) (him|her|them|someone|you)\b'
+    ar:
+      - '(انتحار|أنتحر|انتحر|أقتل نفسي|اقتل نفسي|إيذاء النفس|ايذاء النفس|أؤذي نفسي|اؤذي نفسي)'
+      - '(اغتصاب|تهديد|يهددني|يهددونني|ابتزاز|إكراه|اكراه|عنف أسري|عنف اسري|يضربني)'
+      - '(سأقتل|ساقتل|سأؤذي|ساؤذي)'
+  personal_fatwa:
+    en:
+      - '\b(am I allowed|must I|should I divorce|is it (halal|haram) for me|my (marriage|divorce|inheritance))\b'
+    ar:
+      - '(هل يجوز لي|هل يجب علي|حكم عملي|حكم زواجي|حكم طلاقي|هل أطلق|هل اطلق)'
+templates:
+  sensitive_human:
+    ar: "يؤسفني ما تمر به. سلامتك مهمة، وتستحق دعماً مباشراً من شخص يستطيع مساعدتك الآن."
+    en: "I am sorry you are going through this. Your safety matters, and you deserve direct support from someone who can help you now."
+  out_of_scope:
+    ar: "يساعد رقيب في تعلّم الإسلام وشرح النصوص والتحقق منها. هذا السؤال خارج هذا النطاق."
+    en: "Raqeeb helps with learning about Islam, explaining texts and checking their sources. This question is outside that scope."
+  unavailable:
+    ar: "لا أستطيع تقديم إجابة موثوقة من المصادر المتاحة لهذا السؤال."
+    en: "I cannot provide a reliable answer from the available sources for this question."
+labels:
+  general_knowledge: {ar: "سؤال معرفي", en: "General knowledge"}
+  text_explanation: {ar: "شرح نص", en: "Text explanation"}
+  verification: {ar: "تحقق", en: "Verification"}
+  differing_opinions: {ar: "مسألة خلافية", en: "Differing opinions"}
+  personal_fatwa: {ar: "فتوى شخصية", en: "Personal fatwa"}
+  doubt_or_deep_creed: {ar: "سؤال عقدي", en: "Doubt or deep creed"}
+  sensitive_human: {ar: "دعم", en: "Human support"}
+  out_of_scope: {ar: "خارج النطاق", en: "Outside scope"}

@@ -9,6 +9,7 @@ from datetime import timedelta
 from sqlalchemy.pool import NullPool
 
 from app.config import get_settings
+from app.raqeeb import worker as raqeeb_worker
 from app.runtime import Resources
 from app.services import metrics
 from app.services.learning import finish_events
@@ -16,7 +17,7 @@ from app.services.platform import auth_sessions, deletion, idempotency, outbox
 from app.workers.celery_app import celery_app
 
 # Importing a consumer module registers its outbox consumers with the relay.
-CONSUMER_MODULES = (deletion, finish_events, metrics)
+CONSUMER_MODULES = (deletion, finish_events, metrics, raqeeb_worker)
 
 
 def run_with_resources[T](job: Callable[[Resources], Awaitable[T]]) -> T:
@@ -64,6 +65,7 @@ def expire_guest_sessions() -> int:
 
 SCHEDULE = {
     "outbox-relay": {"task": "maintenance.outbox_relay", "schedule": 5.0},
+    "raqeeb-sweeper": {"task": "maintenance.sweep_raqeeb_messages", "schedule": 10.0},
     "purge-idempotency-keys": {"task": "maintenance.purge_idempotency_keys", "schedule": 3600.0},
     "expire-guest-sessions": {"task": "maintenance.expire_guest_sessions", "schedule": 86400.0},
 }

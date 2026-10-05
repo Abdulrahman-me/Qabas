@@ -16855,6 +16855,336 @@
     ]
    }
   },
+  "/v1/raqeeb/conversations": {
+   "get": {
+    "operationId": "page_v1_raqeeb_conversations_get",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "cursor",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Cursor"
+      }
+     },
+     {
+      "in": "query",
+      "name": "limit",
+      "required": false,
+      "schema": {
+       "default": 20,
+       "title": "Limit",
+       "type": "integer"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ConversationPage"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Page",
+    "tags": [
+     "raqeeb"
+    ]
+   },
+   "post": {
+    "operationId": "create_v1_raqeeb_conversations_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ConvCreate"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Conversation"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Create",
+    "tags": [
+     "raqeeb"
+    ]
+   }
+  },
+  "/v1/raqeeb/conversations/{conversation_id}": {
+   "get": {
+    "operationId": "detail_v1_raqeeb_conversations__conversation_id__get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "conversation_id",
+      "required": true,
+      "schema": {
+       "title": "Conversation Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ConvDetail"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Detail",
+    "tags": [
+     "raqeeb"
+    ]
+   }
+  },
+  "/v1/raqeeb/conversations/{conversation_id}/messages": {
+   "post": {
+    "operationId": "submit_v1_raqeeb_conversations__conversation_id__messages_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "conversation_id",
+      "required": true,
+      "schema": {
+       "title": "Conversation Id",
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "multipart/form-data": {
+       "schema": {
+        "properties": {
+         "audio": {
+          "format": "binary",
+          "type": "string"
+         },
+         "document": {
+          "format": "binary",
+          "type": "string"
+         },
+         "images": {
+          "items": {
+           "format": "binary",
+           "type": "string"
+          },
+          "type": "array"
+         },
+         "text": {
+          "maxLength": 2000,
+          "type": "string"
+         }
+        },
+        "type": "object"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "202": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/PostMessageResp"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Submit",
+    "tags": [
+     "raqeeb"
+    ]
+   }
+  },
+  "/v1/raqeeb/messages/{message_id}": {
+   "get": {
+    "operationId": "get_v1_raqeeb_messages__message_id__get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "message_id",
+      "required": true,
+      "schema": {
+       "title": "Message Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AssistantMessage"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Get",
+    "tags": [
+     "raqeeb"
+    ]
+   }
+  },
+  "/v1/raqeeb/messages/{message_id}/feedback": {
+   "post": {
+    "operationId": "feedback_v1_raqeeb_messages__message_id__feedback_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "message_id",
+      "required": true,
+      "schema": {
+       "title": "Message Id",
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/FeedbackReq"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Feedback",
+    "tags": [
+     "raqeeb"
+    ]
+   }
+  },
   "/v1/recitation/checks": {
    "post": {
     "description": "Check one recitation of a verse or word segment. Requires ``Idempotency-Key``.",

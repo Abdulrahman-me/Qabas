@@ -12,6 +12,16 @@
 
 schema: qabas.source_providers/1
 providers:
+  islamiccontent_mcp:
+    name: "Association MCP discovery (mcp.islamiccontent.org)"
+    role: [capability]
+    contract_provider: null
+    adapter: app.sources.discovery
+    credentials: [ASSOCIATION_MCP_COMMAND]
+    live: pending
+    live_confirmed_by: null
+    cache: {ttl_days: 0, terms: pending, confirmed_by: null}
+    notes: "D-96: schemas/tool mappings and the operator-installed stdio bridge await O-03. Search only nominates IDs; authority content is fetched through IslamHouse/HadeethEnc."
   quran_com:
     name: "Quran Foundation (Quran.com) Content API v4"
     role: [capability]          # search, audio, word timings; its verse text is only cross-checked
@@ -40,6 +50,7 @@ providers:
     contract_provider: hadeethenc
     adapter: app.sources.providers.hadeethenc
     credentials: []
+    discovery: {status: pending, confirmed_by: null, name: null, arguments: null, results_key: null, id_key: null}
     live: pending
     live_confirmed_by: null
     cache: {ttl_days: 7, terms: pending, confirmed_by: null}
@@ -50,6 +61,7 @@ providers:
     contract_provider: islamhouse
     adapter: app.sources.providers.islamhouse
     credentials: [ISLAMHOUSE_API_KEY]   # the documented key is public; it is still configuration, not code
+    discovery: {status: pending, confirmed_by: null, name: null, arguments: null, results_key: null, id_key: null}
     live: pending
     live_confirmed_by: null
     cache: {ttl_days: 7, terms: pending, confirmed_by: null}

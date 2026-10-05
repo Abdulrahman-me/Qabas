@@ -1,0 +1,150 @@
+{
+ "$defs": {
+  "ABParagraph": {
+   "additionalProperties": false,
+   "properties": {
+    "spans": {
+     "items": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/SpanText"
+       },
+       {
+        "$ref": "#/$defs/SpanStrong"
+       },
+       {
+        "$ref": "#/$defs/SpanTerm"
+       },
+       {
+        "$ref": "#/$defs/SpanCitation"
+       }
+      ]
+     },
+     "title": "Spans",
+     "type": "array"
+    },
+    "type": {
+     "enum": [
+      "paragraph"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "spans"
+   ],
+   "title": "ABParagraph",
+   "type": "object"
+  },
+  "SpanCitation": {
+   "additionalProperties": false,
+   "properties": {
+    "ref": {
+     "title": "Ref",
+     "type": "integer"
+    },
+    "type": {
+     "enum": [
+      "citation"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "ref"
+   ],
+   "title": "SpanCitation",
+   "type": "object"
+  },
+  "SpanStrong": {
+   "additionalProperties": false,
+   "properties": {
+    "text": {
+     "title": "Text",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "strong"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "text"
+   ],
+   "title": "SpanStrong",
+   "type": "object"
+  },
+  "SpanTerm": {
+   "additionalProperties": false,
+   "properties": {
+    "term_id": {
+     "title": "Term Id",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "term"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "text",
+    "term_id"
+   ],
+   "title": "SpanTerm",
+   "type": "object"
+  },
+  "SpanText": {
+   "additionalProperties": false,
+   "properties": {
+    "text": {
+     "title": "Text",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "text"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "text"
+   ],
+   "title": "SpanText",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "paragraphs": {
+   "items": {
+    "$ref": "#/$defs/ABParagraph"
+   },
+   "title": "Paragraphs",
+   "type": "array"
+  }
+ },
+ "required": [
+  "paragraphs"
+ ],
+ "title": "raqeeb_rewrite",
+ "type": "object"
+}

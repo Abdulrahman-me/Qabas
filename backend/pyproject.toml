@@ -32,6 +32,7 @@ dependencies = [
 ]
 
 [dependency-groups]
+embeddings = ["sentence-transformers>=5.1,<6"]
 asr = [
     "av>=14",
     "faster-whisper>=1.2",

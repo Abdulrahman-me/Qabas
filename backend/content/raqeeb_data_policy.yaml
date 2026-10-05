@@ -1,0 +1,11 @@
+schema: qabas.raqeeb_data_policy/1
+status: pending
+provider: anthropic
+provider_retention: null
+deletion_responsibilities: null
+learner_disclosure: null
+approved_by: null
+approved_on: null
+report: null
+# O-09: hosted learner-question processing stays disabled in staging/production until data-processing terms,
+# disclosure, provider retention and deletion responsibilities are confirmed. Model approval O-03 is separate.

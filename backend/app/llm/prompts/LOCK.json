@@ -58,5 +58,29 @@
  "factory_write": {
   "sha256": "119fd0d14d2cdfd152c4b5db365382ecc896a4ab3f301c0142fa18e18d7ddd2e",
   "version": 4
+ },
+ "raqeeb_classify": {
+  "sha256": "f9d38e0d089adc6e7ebf46dd3352ed3d321cb05f67e6882083093514874092c5",
+  "version": 2
+ },
+ "raqeeb_guard": {
+  "sha256": "69bdb89b8cd5c21bdbe6405c574073073745577d65b358d686d37e15c824f63c",
+  "version": 1
+ },
+ "raqeeb_rewrite": {
+  "sha256": "d6a1d03cddf8d451f74bd82e84a4733ff8c8bee5035d86af03169210d812bd9c",
+  "version": 1
+ },
+ "raqeeb_rewrite_check": {
+  "sha256": "bfbf714a4ba357b179e00c311bd45019f935c75f38a13a3c3c9d2365d6b993e2",
+  "version": 1
+ },
+ "raqeeb_verify": {
+  "sha256": "2e333eecdd0bd177a42b55d4ae64f432849d9566e85f72f61a4be2c81a03a368",
+  "version": 1
+ },
+ "raqeeb_write": {
+  "sha256": "ce2e3766b86c9467d719705f5481cc8e730a3dcf4afc975f029138fdc428703b",
+  "version": 1
  }
 }

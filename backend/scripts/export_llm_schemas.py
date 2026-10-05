@@ -18,6 +18,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from app.factory.schemas import EXPORTS
 from app.llm.prompts import SCHEMAS, strict_schema_problems
+from app.raqeeb.schemas import exported
+
+EXPORTS = EXPORTS | exported()
 
 
 def render(name: str) -> str:

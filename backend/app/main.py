@@ -14,6 +14,7 @@ from app.api import (
     learning_profile,
     me,
     media,
+    raqeeb,
     recitation,
     sessions,
 )
@@ -63,6 +64,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(sessions.router, prefix=API_PREFIX)
     app.include_router(learning_profile.router, prefix=API_PREFIX)
     app.include_router(recitation.router, prefix=API_PREFIX)
+    app.include_router(raqeeb.router, prefix=API_PREFIX)
     app.include_router(admin_factory.router, prefix=API_PREFIX)
     app.include_router(admin_review.router, prefix=API_PREFIX)
     if settings.storage_backend is StorageBackend.local:

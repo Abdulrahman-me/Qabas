@@ -73,6 +73,12 @@ class Settings(BaseSettings):
     # Lesson Factory (Phase 12): default token budget of one run (factory §13.1 budget_exceeded); a run may
     # set its own. Every call of every attempt counts, including output that was rejected.
     factory_run_budget_tokens: int = 1_500_000
+    raqeeb_budget_tokens: int = Field(default=30_000, ge=1)
+    # Hosted processing of learner questions requires confirmed data-processing terms (O-09).
+    raqeeb_data_policy_path: Path = BACKEND_DIR / "content" / "raqeeb_data_policy.yaml"
+    association_mcp_command: str | None = None  # JSON argv for an operator-installed association MCP bridge (O-03)
+    raqeeb_embedding_model_dir: Path | None = None
+    raqeeb_embedding_timeout_seconds: float = Field(default=8, gt=0, le=20)
     stt_provider: str | None = None
     stt_api_key: SecretStr | None = None
     image_provider: str | None = None
