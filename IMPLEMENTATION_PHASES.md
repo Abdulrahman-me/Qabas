@@ -31,7 +31,7 @@
 | 12 | Lesson Factory pipeline: plan → QA | ✅ Complete (sub-tag `phase-12.1`) | `phase-12` | |
 | 13 | Reviewer gates, publication, reviewer console API | ✅ Complete | `phase-13` | |
 | 14 | Visual and media pipeline (images, audio, production scenes) | ✅ Engineering complete | `phase-14` | Independent audit (F-139–F-144, D-157–D-159); `[~]` external/human gates: O-03, O-05/O-13 art and sign-offs, O-06, O-02 + Integration Gate 4 (D-158) |
-| 15 | Metrics, blind tests, factory acceptance | ⏳ Not started | `phase-15` | **Milestone C: lesson generation and publishing** |
+| 15 | Metrics, blind tests, factory acceptance | ✅ Engineering complete | `phase-15` | **Milestone C (engineering)**: pipeline proven end to end in CI; live staging acceptance `[~]` O-03/O-13/O-02 (D-162) |
 | 16 | Raqeeb text pipeline | ⏳ Not started | `phase-16` | Starts after Milestone C |
 | 17 | Raqeeb inputs, guarded memory and benchmark | ⏳ Not started | `phase-17` | Needs pgvector (D-05) |
 | 18 | Community: leagues, friends, achievements | ⏳ Not started | `phase-18` | |
@@ -1000,3 +1000,4 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | 2026-10-05 | 14 | Independent audit of the Phase 14 checkpoint by the returning agent: design and immutable promotion confirmed; F-139–F-144 found and fixed (clip identity, Qur'an evidence audio, F-108 bindings, translation selection, named scene tests, prepared scene candidates); D-157–D-159. |
 | 2026-10-05 | 14 | ✅ Phase 14 engineering-complete after the independent audit: 933 passed / 1 local role skip; CI 37354625149 green (919 passed, 15 skips; contracts 595/279/105/382); tagged `phase-14`, merged to `main`. Open by design: O-03, O-05/O-13 (style, characters, medallion art, scene candidate sign-off), O-06, O-02 + Integration Gate 4. No real lesson is publishable yet. |
 | 2026-10-05 | 15 | Blind tests, outbox-fed metrics and the Factory definition-of-done acceptance implemented on `phase/15-metrics-blind-tests`; F-145–F-146, D-160–D-162. |
+| 2026-10-05 | 15 | ✅ Phase 15 engineering-complete: 937 passed / 1 local role skip; CI 37360126635 green (923 passed, 15 skipped; contracts 595/279/105/382); tagged `phase-15`, merged to `main`. Live staging acceptance gated (O-03, O-13, O-02). |
