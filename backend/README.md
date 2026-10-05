@@ -52,9 +52,9 @@ py -3.12 scripts\dev\install_git_hooks.py              # pre-commit public-safet
 | Refresh private-artifact fingerprints | `py -3.12 scripts/dev/update_private_fingerprints.py` (needs the local handoff) |
 | Worker (Windows dev) | `uv run celery -A app.workers.celery_app worker -Q maintenance,factory,media --pool=solo` |
 | Recitation worker (Windows dev) | `uv sync --group asr`, then `uv run celery -A app.workers.celery_app worker -Q asr --pool=solo --prefetch-multiplier=1` (see Recitation below) |
-| Scheduler (outbox relay every 5 s, cleanups) | `uv run celery -A app.workers.celery_app beat` |
+| Scheduler (outbox relay every 5 s, cleanups, league promotion, synthetic league members) | `uv run celery -A app.workers.celery_app beat` |
 | Validate the curriculum file | `uv run python scripts/seed.py --check` (no database needed) |
-| Seed the curriculum structure | `uv run python scripts/seed.py` (units, lesson slots, concept graph; safe to re-run, refuses destructive changes) |
+| Seed the curriculum structure | `uv run python scripts/seed.py` (units, lesson slots, concept graph, league tiers and achievements from `content/registries.json`; synthetic league members only when `SYNTHETIC_LEAGUE_MEMBERS=true`; safe to re-run, refuses destructive changes) |
 | Load the contract test curriculum (dev/test/staging DB only) | `uv run python scripts/seed.py --test-curriculum` (publishes the synthetic test lessons through the real pipeline; refused in production, D-84) |
 | Create or re-key a reviewer | `uv run python scripts/create_reviewer.py --email reviewer@example.org --name "Reviewer"` (prompts for the password) |
 | Before `alembic upgrade` past 0003 on a database with old active sessions | `uv run python scripts/abandon_legacy_sessions.py` lists them; add `--confirm` to abandon them (migration 0004 refuses to run otherwise) |
@@ -86,10 +86,9 @@ mastery start. Its finish is rejected as an integrity error; use an explicitly r
 with authoritative historical data before deploying over such records. Do not approximate, reset,
 auto-abandon or rewrite served public content. Already finished records continue to replay.
 
-The durable `session.finished` outbox records are retained for the achievement/league/metrics consumers
-added in later phases. No reported finish effect depends on a worker. `/me/stats` has `league: null` until
-Phase 18 implements league assignment. The normative quest pool already includes `win_challenge`, whose
-activity arrives with challenges in Phases 19–20.
+The durable `session.finished` outbox records feed the achievement and metrics consumers. No reported finish
+effect depends on a worker. League assignment happens inside the XP grant itself (Phase 18). The normative quest
+pool already includes `win_challenge`, whose activity arrives with challenges in Phases 19–20.
 
 ## Real content: gold lessons (Phase 8)
 
@@ -231,6 +230,28 @@ sweeper keep requests terminal and replay-safe. It cannot publish lessons, issue
 See [Raqeeb policy](docs/RAQEEB_POLICY.md) for exact source roles, worker commands, private-data/model gates,
 offline recommendation setup, and benchmark persistence. Phase 17 owns attachments, guarded memory and the
 private benchmark runner; no synthetic benchmark appears as release quality in staff metrics.
+
+## Community: leagues, friends, achievements (Phase 18)
+
+- **Leagues** (`GET /v1/leagues/current`, `/me/stats.league`): the first XP of the Riyadh week (Sunday 00:00
+  Asia/Riyadh) places the learner in a league of 20 for their tier, inside the XP grant's transaction, under a
+  per-(week, tier) lock. Standings are sums of `xp_events`; there is no second XP store. Tiers: Lantern, Beacon,
+  Star, Dawn. At week end the top 5 with XP move up; there is no demotion. Promotion runs once per week (beat job
+  at Sunday 00:00 Riyadh, hourly catch-up, and before the first placement of a new week). Private members appear
+  to others as "Traveler"/"مسافر" with the default avatar.
+- **Friends** (`/v1/friends`, `/v1/friends/invites`, `/v1/friends/invites/accept`): single-use `QBS-XXXX` codes,
+  valid 7 days. At most 10 failed codes per learner per hour and 100 per address per day, counted atomically.
+  `already_friends` never consumes a code. Private friends show `xp_week`/`streak_current` as null; `online` means
+  seen within 60 s.
+- **Achievements** (`GET /v1/me/achievements`): the eight registry badges. Progress is recomputed from
+  authoritative tables on `session.finished`, completed Raqeeb answers and reads; unlocks are permanent.
+  `challenges_won` counts 0 until Phase 19. Backfill after deploy: `achievements.refresh_all(sessionmaker)`.
+- **Synthetic league members** (demo/staging only, P-01; refused in production): 60 members from
+  `content/synthetic_league_members.json`, seeded by `scripts/seed.py` with `SYNTHETIC_LEAGUE_MEMBERS=true`. The
+  beat job seats up to 15 per league, keeping 5 seats for learners, and grants their XP through the normal ledger
+  once per 30 minutes. They never sign in, befriend, earn badges or enter metrics.
+- Account deletion removes friendships, sent invites and league seats at once; the purge also removes tiers,
+  memberships and achievement progress.
 
 ## Staging environment
 
