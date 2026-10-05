@@ -25,7 +25,7 @@
 | 8 | Content import (Salah reference, Unit 0 drafts), approval-gated publish, staging | ✅ Done | `phase-8` | CI green (582 passed); pipeline complete; real content correctly blocked on human/source/media inputs |
 | 9 | Source adapters (tool layer) | ✅ Done | `phase-9` | CI green; canonical insertion/import checks complete; provider live/cache approvals remain O-03 |
 | 9.1 | Phase 9 audit corrections (corrective checkpoint) | ✅ Done | `phase-9.1` | Independent audit; 7 findings F-79–F-85 (6 fixed, 1 recorded gate) |
-| 10 | Recitation service (`asr` worker) | 🔄 In progress | `phase-10` | **Milestone B: complete learning experience** |
+| 10 | Recitation service (`asr` worker) | ✅ Done | `phase-10` | **Milestone B: complete learning experience** (learner-audio acceptance O-06, throughput O-03) |
 | 11 | LLM adapter and agent infrastructure | ⏳ Not started | `phase-11` | |
 | 12 | Lesson Factory pipeline: plan → QA | ⏳ Not started | `phase-12` | |
 | 13 | Reviewer gates, publication, reviewer console API | ⏳ Not started | `phase-13` | |
@@ -488,6 +488,8 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | F-93 | `exercise_id` is optional and its effect unspecified; `audio_segment` needs reciter timings for the checked words. | D-114: when sent, it must be the caller's active served `recite_verse` with the same verse, range and text (else 409, no existence leak), and its verified clip timings feed `audio_segment`; otherwise segments are null. No provider is called at check time. |
 | F-94 | faster-whisper fetches a tokenizer at runtime when the model directory lacks one. | D-115: the conversion bundles tokenizer/preprocessor files and a digest manifest; the worker refuses a missing or altered file. |
 
+**Exit:** ✅ CI green on GitHub (run 37272620979: 740 passed, 15 data/model-dependent skips — 11 canonical-dataset, 3 private-handoff, 1 real-model clip set; contract suites green); locally 754 passed with the model, mushaf and clips installed. Tagged `phase-10`. Open: learner-audio acceptance (O-06), segment clips and reciter licence (O-06), throughput sizing and model validation (O-03), English message copy review (D-110).
+
 
 ---
 
@@ -821,3 +823,4 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | 2026-10-05 | 9.1 | Independent Phase 9 audit (baseline 702 passed / 1 skipped reproduced). Core source guarantees verified; seven findings F-79–F-85: segment audio, citable-only persistence, breaker trial release and IslamHouse definite answers, live gate before cache, learner-facing Qur'an citation, tafsir authority wording, gold snapshot trust boundary. D-105–D-108. |
 | 2026-10-05 | 9.1 | ✅ Phase 9.1 complete: 707 passed / 1 local role skip; CI 37267917624 green (694 passed, 14 canonical-dataset/private-handoff skips; contracts 595/279/105/382); tagged `phase-9.1`, merged to `main`. |
 | 2026-10-05 | 10 | Recitation service implemented on `phase/10-recitation`: endpoint, isolated `asr` worker, pinned model, in-memory decoding, alignment, messages, back-pressure, binding. Findings F-86–F-94, decisions D-109–D-117. Real worker verified locally end to end; clip set 17/18 (one recorded model false reject). |
+| 2026-10-05 | 10 | ✅ Phase 10 complete: 754 passed / 1 local role skip (real-model clip set included); CI 37272620979 green (740 passed, 15 data/model skips; contracts 595/279/105/382); tagged `phase-10`, merged to `main`. |
