@@ -49,6 +49,15 @@ def start(api, headers, *, context=None):
     return response.json()["conversation_id"]
 
 
+@pytest.mark.parametrize("context", [{"lesson_id": 7}, {"lesson_id": {"id": "les_t1_0"}},
+    {"lesson_id": "les_t1_0", "block_id": []}, {"lesson_id": "les_t1_0", "block_id": ""}])
+async def test_invalid_nested_context_is_rejected_before_lookup(api, resources, context):
+    result = api.post("/v1/raqeeb/conversations", json={"context": context}, headers=guest(api))
+    assert result.status_code == 400 and result.json()["error"]["code"] == "validation_error"
+    async with resources.sessionmaker() as db:
+        assert await db.scalar(select(func.count()).select_from(RaqeebConversation)) == 0
+
+
 def send(api, headers, conv, *, key=None, question="A neutral question"):
     return api.post(f"/v1/raqeeb/conversations/{conv}/messages", files={"text": (None, question)},
         headers=headers | {"Idempotency-Key": key or str(uuid.uuid4())})

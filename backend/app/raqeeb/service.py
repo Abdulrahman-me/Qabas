@@ -92,9 +92,10 @@ async def create(db: AsyncSession, user: User, language: str, context: dict[str,
     user = await active_user(db, user.id)
     snapshot: dict[str, Any] = {}
     if context is not None:
-        if set(context) - {"lesson_id", "block_id"} or not context.get("lesson_id"):
+        lesson_id, block_id = context.get("lesson_id"), context.get("block_id")
+        if set(context) - {"lesson_id", "block_id"} or not isinstance(lesson_id, str) or not lesson_id.strip() or \
+                (block_id is not None and (not isinstance(block_id, str) or not block_id.strip())):
             raise ApiError(ErrorCode.validation_error, "Context requires a lesson_id and optional block_id.")
-        block_id = context.get("block_id")
         served = (await db.execute(select(LearningSession).where(LearningSession.user_id == user.id,
             LearningSession.lesson_id == context["lesson_id"], LearningSession.kind == "lesson",
             LearningSession.status == "active"))).scalar_one_or_none()

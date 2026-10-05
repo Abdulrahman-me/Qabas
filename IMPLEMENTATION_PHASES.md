@@ -707,7 +707,7 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 text API/worker, migration 0009, benchmark projection into existing metrics, `docs/RAQEEB_POLICY.md` and deterministic
 tests. Sources persist atomically with the completed answer; source change rolls back completion. Context pins
 served lesson content, published glossary cards supply term links, and no learner progress or publication writes
-are possible. See F-147–F-155 and D-163–D-170. Full validation/CI records follow before tagging.
+are possible. See F-147–F-156 and D-163–D-170. Full validation/CI records follow before tagging.
 
 | # | Finding | Resolution |
 |---|---|---|
@@ -720,6 +720,7 @@ are possible. See F-147–F-155 and D-163–D-170. Full validation/CI records fo
 | F-153 | Revision 10 has no claim-verified status, and requires a `differing_views` block plus final specialist referral even when abstained. | Direct source support retains `needs_specialist`; unavailable differing views use an honest intro with empty views, never invented positions (D-170). |
 | F-154 | An optional local embedding subprocess can fail to launch even after configuration, which initially failed the whole new Raqeeb answer. | OSError joins timeout/provider failures in the optional recommendation boundary; safe answers remain completed without chips. Fast guard input also carries canonical evidence and code-owned verification receipts, with explicit sentence-citation/authenticity checks. |
 | F-155 | A low-confidence dependent follow-up can inherit a personal-fatwa boundary from the previous user message, even without repeating its keywords. | Both sensitive and personal-fatwa history boundaries route protectively; sensitive safety takes precedence. No tools are called for that follow-up. |
+| F-156 | `ConvCreate.context` is open JSON: schema validation alone permits malformed nested lesson/block values, which could reach a text lookup or make an empty block selector silently select all content. | Validate nonempty string IDs before lookup and reject invalid values with `400 validation_error`; no conversation is created and the contract schema stays unchanged. |
 
 ---
 
