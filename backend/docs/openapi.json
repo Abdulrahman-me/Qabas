@@ -16315,7 +16315,7 @@
   },
   "/v1/friends/invites/accept": {
    "post": {
-    "description": "At most 10 failed codes per learner per hour and 100 per address per day (backend §10.4).",
+    "description": "At most 10 failed codes per learner per hour and 100 per address per day (backend §10.4).\n\nEach attempt is counted before it runs (atomically, so a concurrent burst cannot outrun the limit) and the\ncount is given back when the attempt is not a failed code.",
     "operationId": "accept_invite_v1_friends_invites_accept_post",
     "requestBody": {
      "content": {
