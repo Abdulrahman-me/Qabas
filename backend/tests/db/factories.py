@@ -63,6 +63,18 @@ async def lesson(conn: AsyncConnection, unit_id: str, index: int = 0, **override
     return str(await _insert(conn, "lessons", values))
 
 
+async def factory_run(conn: AsyncConnection, created_by: str, run_id: str = "run_t", **overrides: Any) -> str:
+    """A running factory run on a fresh slot (review decisions and lesson versions reference runs)."""
+    unit_id = await unit(conn)
+    lesson_id = await slot(conn, unit_id, 0)
+    values = {"id": run_id, "unit_id": unit_id, "lesson_id": lesson_id, "position_index": 0, "lesson_type": "concept",
+              "brief": "brief", "stages": "[]", "created_by": created_by, **overrides}
+    await conn.execute(text("""INSERT INTO factory_runs (id, unit_id, lesson_id, position_index, lesson_type, brief,
+        stages, created_by) VALUES (:id, :unit_id, :lesson_id, :position_index, :lesson_type, :brief,
+        CAST(:stages AS jsonb), :created_by)"""), values)
+    return run_id
+
+
 async def lesson_version(conn: AsyncConnection, lesson_id: str, version: int = 1, *, published: bool = False) -> Any:
     content = {"en": {"explorer": {"title": "Lesson", "blocks": []}}}
     values: dict[str, Any] = {"lesson_id": lesson_id, "version": version, "origin": "test_fixture",

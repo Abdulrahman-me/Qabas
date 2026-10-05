@@ -279,6 +279,7 @@ async def test_idempotency_key_unique_per_user(conn: AsyncConnection) -> None:
 
 async def test_review_decisions_are_insert_only(conn: AsyncConnection) -> None:
     reviewer = await f.user(conn, role="reviewer", email="reviewer@example.test", password_hash="argon2id$x")
+    await f.factory_run(conn, reviewer)
     insert = """INSERT INTO review_decisions (run_id, gate, decision, reviewer_id, reviewed_digest, published_digest)
                 VALUES ('run_t', :gate, :decision, :r, :d, :p)"""
     await run(conn, insert, {"gate": 2, "decision": "approve", "r": reviewer, "d": "e" * 64, "p": "f" * 64})
@@ -288,6 +289,8 @@ async def test_review_decisions_are_insert_only(conn: AsyncConnection) -> None:
                           {"gate": 1, "decision": "request_changes", "r": reviewer, "d": "e" * 64, "p": None})
     await expect_sqlstate(conn, CHECK_VIOLATION, insert,
                           {"gate": 2, "decision": "reject", "r": reviewer, "d": "e" * 64, "p": "f" * 64})
+    await expect_sqlstate(conn, "23503", insert.replace("'run_t'", "'run_missing'"),   # foreign key (Phase 12)
+                          {"gate": 2, "decision": "approve", "r": reviewer, "d": "e" * 64, "p": None})
 
 
 # --- curriculum: one lesson per slot, one completion per canonical lesson, one introducing lesson ---

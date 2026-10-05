@@ -14,7 +14,7 @@ from pydantic import SecretStr
 
 from app.config import Environment, Settings
 from app.llm.budget import Ledger
-from app.llm.client import FORBIDDEN_PARAMETERS, AnthropicClient
+from app.llm.client import FORBIDDEN_PARAMETERS, AnthropicClient, provider_schema
 from app.llm.errors import (
     BudgetExceeded,
     LLMNotConfigured,
@@ -49,7 +49,7 @@ async def test_request_shape_follows_the_calling_rules(settings: Settings) -> No
     (call,) = sdk.calls
     prompt = get_prompt("conversation_title")
     assert call["model"] == settings.llm_model_fast and call["max_tokens"] == prompt.meta.max_tokens
-    assert call["output_config"] == {"format": {"type": "json_schema", "schema": prompt.schema}}  # effort unverified
+    assert call["output_config"] == {"format": {"type": "json_schema", "schema": provider_schema(prompt.schema)}}
     assert not FORBIDDEN_PARAMETERS & call.keys() and "thinking" not in call
     assert call["system"][0] == {"type": "text", "text": prompt.system, "cache_control": {"type": "ephemeral"}}
     tag = call["system"][1]["text"].split("<", 1)[1].split(" ", 1)[0]

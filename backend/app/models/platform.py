@@ -48,8 +48,7 @@ class ReviewDecision(Base):
     """Insert-only gate audit bound to the exact reviewed digest (AD-13, AD-19).
 
     A decision concerns a factory run (Gates 1/2) or, for gold/approved-content imports, an
-    imported lesson version (Gate 2-equivalent approval, factory §13.7). The FK to
-    ``factory_runs`` is added with that table (Phase 12).
+    imported lesson version (Gate 2-equivalent approval, factory §13.7).
     """
 
     __tablename__ = "review_decisions"
@@ -68,7 +67,7 @@ class ReviewDecision(Base):
     )
 
     id: Mapped[uuid.UUID] = mapped_column(UUID, primary_key=True, server_default=func.gen_random_uuid())
-    run_id: Mapped[str | None] = mapped_column(Text)
+    run_id: Mapped[str | None] = mapped_column(ForeignKey("factory_runs.id"))
     lesson_version_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("lesson_versions.id"))
     gate: Mapped[int] = mapped_column(SmallInteger)
     decision: Mapped[str] = mapped_column(Text)

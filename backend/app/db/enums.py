@@ -57,6 +57,8 @@ FEEDBACK_MODE = literal_values(C.Session, "feedback_mode")
 RECITATION_STATUS = literal_values(C.RecitationCheck, "status")
 
 # Reviewer gates
+RUN_STATUS = literal_values(C.RunStatus)
+RUN_STAGE = literal_values(C.RunStage)
 GATE1_DECISION = literal_values(C.Gate1, "decision")
 GATE2_DECISION = literal_values(C.Gate2, "decision")
 REVIEW_DECISION = tuple(dict.fromkeys(GATE1_DECISION + GATE2_DECISION))

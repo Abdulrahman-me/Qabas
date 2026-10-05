@@ -28,7 +28,7 @@
 | 10 | Recitation service (`asr` worker) | ✅ Done | `phase-10` | **Milestone B: complete learning experience** (learner-audio acceptance O-06, throughput O-03) |
 | 10.1 | Phase 10 audit: Tarteel requirement, VAD truncation of sustained madd (corrective checkpoint) | ✅ Done | `phase-10.1` | Tarteel model confirmed in use; F-95 fixed (D-118); clip set 18/18 |
 | 11 | LLM adapter and agent infrastructure | ✅ Done | `phase-11` | Model approval, capabilities and prices remain O-03 |
-| 12 | Lesson Factory pipeline: plan → QA | ⏳ Not started | `phase-12` | |
+| 12 | Lesson Factory pipeline: plan → QA | 🔄 In progress (`phase-12.1` checkpoint: orchestrator + plan stage) | `phase-12` | |
 | 13 | Reviewer gates, publication, reviewer console API | ⏳ Not started | `phase-13` | |
 | 14 | Visual and media pipeline (images, audio, production scenes) | ⏳ Not started | `phase-14` | Full scene quality (D-06) |
 | 15 | Metrics, blind tests, factory acceptance | ⏳ Not started | `phase-15` | **Milestone C: lesson generation and publishing** |
@@ -546,14 +546,22 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 
 **Refs:** FACTORY §13–13.5; CURRICULUM (lesson types, completeness and depth); AD-30–AD-36.
 
-- [ ] Additive migration: `factory_runs` (+ `review_digest`, `cost`).
-- [ ] Orchestrator: idempotent Celery stages keyed by (`run_id`, `stage`, `attempt`), transactional stage writes, 2 retries, budgets (`budget_exceeded`), cost recording.
+- [x] Additive migration: `factory_runs` (+ `review_digest`, `cost`) — migration 0005: contract invariants as CHECKs, one active run per slot, deferred FKs from `review_decisions.run_id` / `lesson_versions.run_id`, no deletes by runtime roles.
+- [x] Orchestrator: idempotent Celery stages keyed by (`run_id`, `stage`, `attempt`), transactional stage writes, 2 retries, budgets (`budget_exceeded`), cost recording (`app/factory/orchestrator.py`, `app/workers/tasks_factory.py`; D-126).
 - [ ] Agents: Curriculum Architect (with unit context), Objective Decomposer/Event Extractor, Evidence Retriever, Evidence Verifier (code checks + semantic scholarly review), Lesson Writer/Story Narrator, Exercise Designer + selection, Glossary Editor, Localizer + code parity check, QA Reviewer + Pedagogy Reviewer.
 - [ ] Code validators: writing rules, sentence roles/claim basis, evidence budget, arc coverage, exercise rules (2–6 graded), duplication/composition checks, localization parity, pool minimums.
 
 **Tests:** `test_factory_pedagogy` (fake LLM), stage crash/resume.
 **Gates:** O-03 (model validation on bilingual tasks), O-12 (curriculum review before production seeding).
 **Exit:** sub-tag `phase-12.1` after the orchestrator and plan stage; tag `phase-12`.
+
+**Checkpoint `phase-12.1` (orchestrator + plan stage).** Re-reviewed FACTORY §13–13.8 and §14, CURRICULUM (principles, positions vs prerequisites, lesson types and composition, completeness and depth, responsibility boundaries), AD-27–AD-36, AGENT_AND_PROVIDER_CATALOG, CONTENT_AND_BRAND_POLICY, DATA_MODEL (`factory_runs`, `review_decisions`, `lesson_versions.run_id`), API §6.11 shapes (`FactoryRun`, `StageStatus`, `Gate1`, `Draft`, `QAReport`, `LessonPlan`, `Claim`, `ClaimEvidence`, `SemanticReview`), the Phase 4 validators and the Phase 9/11 layers. Delivered: migration 0005 and `FactoryRun` model; `app/factory/` (`pipeline`, `orchestrator`, `runs`, `gates`, `errors`, `schemas`, `stages/plan`); the Curriculum Architect prompt (`factory_plan`, schema exported from the contract `LessonPlan`) with the shared `factory_rules` partial; `scripts/export_llm_schemas.py`; Gate 1 decision service; `tests/factory/test_orchestrator.py` (14: provenance at Gate 1, retry with issues as feedback then `plan_invalid`, corrected retry, refusal/transient/permanent classification, budget stop with the paid call recorded, `concepts_unregistered` blocker before any model call, crash → `resumed`, late and concurrent duplicates, one active run per slot, Gate 1 approve/edit/stale/invalid edit/inactive reviewer/reject, database invariants).
+
+| # | Finding | Resolution |
+|---|---|---|
+| F-101 | The production curriculum registers no concepts yet (`concepts: []`, O-12), so no production lesson can be planned: the Architect may only introduce/require registered concepts. | D-127: the plan stage stops with `concepts_unregistered` before any model call; generation never invents concepts (D-85, D-87). |
+| F-102 | The structured-output subset accepted by the provider is not documented in the handoff; contract schemas carry constraint keywords (`minLength`, `maxItems`, `pattern`, …) a provider may reject. | D-125: the request carries a structure-only copy; the full schema (and the contract model) is enforced locally with the corrective retry. |
+
 
 ---
 
@@ -828,6 +836,12 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | 2026-10-05 | D-122 | **Spend is recorded per attempt and budgeted in tokens.** A `Ledger` refuses to start a call once a run's budget is spent and raises `budget_exceeded` after a call that crosses it (the paid call is still recorded); its summary is the `factory_runs.cost` document; USD only from confirmed prices. | Factory stage execution; operations spend metrics; F-98. |
 | 2026-10-05 | D-123 | **Untrusted data is framed with per-call nonce tags** that data cannot close or forge, under a fixed ignore-embedded-instructions rule; learner identifiers (learner-scoped id prefixes, identity keys) are refused before any call. | Backend §9.1; catalog data handling ("no learner identifiers in prompts"). |
 | 2026-10-05 | D-124 | **The O-03 harness scores deterministically through the production adapter**, records per-system identity, pass rates by language, error classes, latency and tokens, and leaves release verdicts to evaluators (P-05). Real evaluation sets are private (D-19); a neutral sample runs in CI with the fake client. Judged scoring and the Raqeeb benchmark come with their phases. | O-03; RAQEEB_BENCHMARK §16; D-19. |
+| 2026-10-05 | D-125 | **The provider receives a structure-only schema; validation stays complete locally.** Constraint keywords are stripped from `output_config.format`; `validate_output` enforces the full schema and contract model with the one corrective retry. | F-102; catalog "still validate every result". |
+| 2026-10-05 | D-126 | **Factory stages run claim → execute → complete.** Claim and completion lock the run row and are fenced by (stage, attempt); execution holds no lock; every call's spend is recorded even for rejected or discarded output; refusal, budget, configuration and human blockers fail the run at once; model/source outages, invalid output and crashes are retried twice (30 s, 120 s) with the previous issues as feedback. | Factory §13.1 stage execution; catalog refusal rule. |
+| 2026-10-05 | D-127 | **Human blockers stop a stage before any model spend.** A stage raises `StageBlocked` (e.g. `concepts_unregistered`, O-12) and the run fails with that code; generation never fills curriculum, specialist or provider gaps. | D-85, D-87; F-101. |
+| 2026-10-05 | D-128 | **The Gate 1 decision service ships with the pipeline** (runs can only continue through it): active reviewer, run-row lock, `409 run_not_at_gate` / `409 review_stale`, edited plans re-checked like the Architect's output, insert-only `review_decisions` in the same transaction. Phase 13 exposes it over HTTP and adds Gate 2. | Factory §13.1, §14; API §6.11. |
+| 2026-10-05 | D-129 | **Media stages (`visuals`, `scene_author`, `scene_render`, `narration`) are `skipped` until Phase 14**, and QA keeps the visual-readiness and placeholder-media blockers, so no factory draft can pass Gate 2 before real audited media exist. | Factory §13.4 readiness; AD-36. |
+| 2026-10-05 | D-130 | **Factory prompts share a `factory_rules` partial** (AD-30–AD-36, content policy, §13 rules) placed first; a prompt's recorded identity digests the composed text, so editing the partial requires new prompt versions. | Catalog: fixed rules at the top of every prompt. |
 | 2026-10-04 | D-13 | Git HTTPS failed certificate verification with Git's bundled OpenSSL. The repo-local config now sets `http.sslBackend=schannel` (Windows certificate store); global config is untouched. The first push made `phase/0-workspace` GitHub's default branch, so switch the default to `main` when `phase-0` is tagged. | — |
 
 ## Progress log
@@ -869,3 +883,4 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | 2026-10-05 | 10.1 | ✅ Phase 10.1 complete: 757 passed / 1 local role skip; CI 37277069615 green (743 passed, 15 skipped); tagged `phase-10.1`, merged to `main`. |
 | 2026-10-05 | 11 | Model-calling layer implemented on `phase/11-llm-adapter`: adapter, prompt registry/lock, strict schemas, framing, model policy, spend ledger, fakes, evaluation harness skeleton. Findings F-96–F-100, decisions D-119–D-124. |
 | 2026-10-05 | 11 | ✅ Phase 11 complete: 800 passed / 1 local role skip; CI 37278721432 green (786 passed, 15 skips; contracts 595/279/105/382); tagged `phase-11`, merged to `main`. |
+| 2026-10-05 | 12 | Checkpoint `phase-12.1`: migration 0005, orchestrator, plan stage, Gate 1 decision service; F-101–F-102, D-125–D-130. |

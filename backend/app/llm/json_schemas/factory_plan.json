@@ -1,0 +1,273 @@
+{
+ "$defs": {
+  "ArcStep": {
+   "additionalProperties": false,
+   "properties": {
+    "experience": {
+     "$ref": "#/$defs/LocalizedText"
+    },
+    "interactive": {
+     "title": "Interactive",
+     "type": "boolean"
+    },
+    "step_id": {
+     "title": "Step Id",
+     "type": "string"
+    },
+    "technique": {
+     "enum": [
+      "scenario",
+      "prediction",
+      "example",
+      "story",
+      "demonstration",
+      "explanation",
+      "evidence",
+      "comparison",
+      "practice",
+      "reflection",
+      "takeaway"
+     ],
+     "title": "Technique",
+     "type": "string"
+    }
+   },
+   "required": [
+    "step_id",
+    "technique",
+    "experience",
+    "interactive"
+   ],
+   "title": "ArcStep",
+   "type": "object"
+  },
+  "LessonArc": {
+   "additionalProperties": false,
+   "description": "Lesson-specific pedagogical journey (not a fixed template) and the composition plan of the ONE\nlesson. `pattern` is a short label such as discovery, misconception, story, practice or comparison,\nor any name the architect constructs. Steps name only the techniques this lesson needs.",
+   "properties": {
+    "pattern": {
+     "minLength": 1,
+     "title": "Pattern",
+     "type": "string"
+    },
+    "rationale": {
+     "$ref": "#/$defs/LocalizedText"
+    },
+    "steps": {
+     "items": {
+      "$ref": "#/$defs/ArcStep"
+     },
+     "minItems": 2,
+     "title": "Steps",
+     "type": "array"
+    }
+   },
+   "required": [
+    "pattern",
+    "rationale",
+    "steps"
+   ],
+   "title": "LessonArc",
+   "type": "object"
+  },
+  "LocalizedText": {
+   "additionalProperties": false,
+   "properties": {
+    "ar": {
+     "title": "Ar",
+     "type": "string"
+    },
+    "en": {
+     "title": "En",
+     "type": "string"
+    }
+   },
+   "required": [
+    "ar",
+    "en"
+   ],
+   "title": "LocalizedText",
+   "type": "object"
+  },
+  "ReasoningToolUse": {
+   "additionalProperties": false,
+   "properties": {
+    "justification": {
+     "$ref": "#/$defs/LocalizedText"
+    },
+    "tool": {
+     "enum": [
+      "observation",
+      "inference",
+      "testimony",
+      "historical_evidence",
+      "causal_reasoning",
+      "comparison"
+     ],
+     "title": "Tool",
+     "type": "string"
+    }
+   },
+   "required": [
+    "tool",
+    "justification"
+   ],
+   "title": "ReasoningToolUse",
+   "type": "object"
+  },
+  "TargetMisconception": {
+   "additionalProperties": false,
+   "properties": {
+    "description": {
+     "$ref": "#/$defs/LocalizedText"
+    },
+    "misconception_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Misconception Id"
+    },
+    "title": {
+     "$ref": "#/$defs/LocalizedText"
+    }
+   },
+   "required": [
+    "misconception_id",
+    "title",
+    "description"
+   ],
+   "title": "TargetMisconception",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "central_question": {
+   "$ref": "#/$defs/LocalizedText"
+  },
+  "content_budget": {
+   "minimum": 1,
+   "title": "Content Budget",
+   "type": "integer"
+  },
+  "depth_profile": {
+   "enum": [
+    "foundational",
+    "standard",
+    "focused"
+   ],
+   "title": "Depth Profile",
+   "type": "string"
+  },
+  "estimated_minutes": {
+   "minimum": 1,
+   "title": "Estimated Minutes",
+   "type": "integer"
+  },
+  "exercise_budget": {
+   "maximum": 6,
+   "minimum": 2,
+   "title": "Exercise Budget",
+   "type": "integer"
+  },
+  "introduced_concept_ids": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Introduced Concept Ids",
+   "type": "array"
+  },
+  "lesson_arc": {
+   "$ref": "#/$defs/LessonArc"
+  },
+  "lesson_type": {
+   "enum": [
+    "concept",
+    "story",
+    "practice"
+   ],
+   "title": "Lesson Type",
+   "type": "string"
+  },
+  "new_terms": {
+   "items": {
+    "$ref": "#/$defs/LocalizedText"
+   },
+   "title": "New Terms",
+   "type": "array"
+  },
+  "objectives": {
+   "items": {
+    "$ref": "#/$defs/LocalizedText"
+   },
+   "maxItems": 3,
+   "minItems": 1,
+   "title": "Objectives",
+   "type": "array"
+  },
+  "prerequisite_concept_ids": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Prerequisite Concept Ids",
+   "type": "array"
+  },
+  "primary_learning_outcome": {
+   "$ref": "#/$defs/LocalizedText"
+  },
+  "reasoning_tools": {
+   "items": {
+    "$ref": "#/$defs/ReasoningToolUse"
+   },
+   "title": "Reasoning Tools",
+   "type": "array"
+  },
+  "standalone_eligible": {
+   "title": "Standalone Eligible",
+   "type": "boolean"
+  },
+  "supporting_understandings": {
+   "items": {
+    "$ref": "#/$defs/LocalizedText"
+   },
+   "title": "Supporting Understandings",
+   "type": "array"
+  },
+  "target_misconceptions": {
+   "items": {
+    "$ref": "#/$defs/TargetMisconception"
+   },
+   "title": "Target Misconceptions",
+   "type": "array"
+  },
+  "title": {
+   "$ref": "#/$defs/LocalizedText"
+  }
+ },
+ "required": [
+  "title",
+  "central_question",
+  "primary_learning_outcome",
+  "supporting_understandings",
+  "depth_profile",
+  "objectives",
+  "prerequisite_concept_ids",
+  "introduced_concept_ids",
+  "new_terms",
+  "target_misconceptions",
+  "lesson_type",
+  "estimated_minutes",
+  "lesson_arc",
+  "reasoning_tools",
+  "standalone_eligible",
+  "content_budget",
+  "exercise_budget"
+ ],
+ "title": "factory_plan",
+ "type": "object"
+}

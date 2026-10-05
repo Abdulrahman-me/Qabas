@@ -17,6 +17,7 @@ from app.models.content import (
     Term,
     Unit,
 )
+from app.models.factory import FactoryRun
 from app.models.learner import (
     LearnerConcept,
     LearnerLesson,
@@ -32,7 +33,7 @@ from app.models.users import AuthSession, DeletionJob, IdempotencyKey, User
 
 __all__ = [
     "AuthSession", "Claim", "Concept", "CurriculumSlot", "DailyActivity", "DeletionJob", "EffectLedger", "Exercise",
-    "ExerciseVersion", "IdempotencyKey", "LearnerConcept", "LearnerLesson", "LearnerMisconception",
+    "ExerciseVersion", "FactoryRun", "IdempotencyKey", "LearnerConcept", "LearnerLesson", "LearnerMisconception",
     "LearnerTerm", "LearnerUnit", "LearningSession", "Lesson", "LessonVersion", "Misconception",
     "OutboxEvent", "Quest", "RecitationCheckRecord", "ReviewDecision", "SceneAsset", "SceneVersion",
     "SentenceRecord", "SessionAnswer", "Source", "Term", "Unit", "User", "XpEvent",

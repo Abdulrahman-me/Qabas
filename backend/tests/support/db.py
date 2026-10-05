@@ -112,9 +112,14 @@ async def truncate_learner_state(url: str) -> None:
     curriculum, so one loaded curriculum serves many independent learner tests."""
     conn = await asyncpg.connect(asyncpg_url(url))
     try:
+        # factory_runs is referenced by content (lesson_versions.run_id) and references users, so neither can be
+        # truncated without the content: those two are emptied with DELETE after the other learner tables.
+        kept = CONTENT_TABLES | {"factory_runs", "users"}
         tables = [r["tablename"] for r in await conn.fetch(
-            "SELECT tablename FROM pg_tables WHERE schemaname = 'public'") if r["tablename"] not in CONTENT_TABLES]
+            "SELECT tablename FROM pg_tables WHERE schemaname = 'public'") if r["tablename"] not in kept]
         if tables:
             await conn.execute(f"TRUNCATE {', '.join(f'\"{t}\"' for t in tables)} RESTART IDENTITY")
+        await conn.execute("DELETE FROM factory_runs")
+        await conn.execute("DELETE FROM users")
     finally:
         await conn.close()

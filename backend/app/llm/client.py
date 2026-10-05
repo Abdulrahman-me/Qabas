@@ -90,9 +90,25 @@ def validate_output(prompt: Prompt, text: str) -> dict[str, Any]:
     return data
 
 
+CONSTRAINT_KEYWORDS = frozenset({"minLength", "maxLength", "pattern", "format", "minimum", "maximum",
+                                 "exclusiveMinimum", "exclusiveMaximum", "multipleOf", "minItems", "maxItems",
+                                 "uniqueItems", "minProperties", "maxProperties"})
+
+
+def provider_schema(schema: Any) -> Any:
+    """The schema sent to the provider: structure only (types, required, enums, closed objects). Value constraints
+    are not all part of the structured-output subset, so they are enforced locally by ``validate_output`` (with
+    the corrective retry) instead of risking a rejected request (D-125)."""
+    if isinstance(schema, dict):
+        return {k: provider_schema(v) for k, v in schema.items() if k not in CONSTRAINT_KEYWORDS}
+    if isinstance(schema, list):
+        return [provider_schema(v) for v in schema]
+    return schema
+
+
 def request_arguments(prompt: Prompt, policy: ModelPolicy, model: str, system: list[dict[str, Any]],
                       messages: list[dict[str, Any]], effort: Effort | None) -> dict[str, Any]:
-    output_config: dict[str, Any] = {"format": {"type": "json_schema", "schema": prompt.schema}}
+    output_config: dict[str, Any] = {"format": {"type": "json_schema", "schema": provider_schema(prompt.schema)}}
     level = effort or prompt.meta.effort
     declared = policy.capabilities.effort
     if declared is not None and level in declared:

@@ -27,6 +27,7 @@ from app.llm.errors import LLMNotConfigured
 
 LLM_DIR = Path(__file__).resolve().parent
 PROMPTS = LLM_DIR / "prompts"
+PARTIALS = PROMPTS / "partials"
 SCHEMAS = LLM_DIR / "json_schemas"
 LOCK = PROMPTS / "LOCK.json"
 
@@ -45,6 +46,7 @@ class PromptMeta(BaseModel):
     max_tokens: int = Field(ge=16, le=64_000)
     output_schema: str
     contract_model: str | None = None       # a revision 10 contract model the output must also satisfy
+    includes: list[str] = Field(default_factory=list)   # shared rule texts from prompts/partials/<name>.md
     purpose: str
 
 
@@ -119,8 +121,17 @@ def parse_prompt(path: Path) -> Prompt:
         raise LLMNotConfigured(f"{path.name}: empty system text")
     schema = load_schema(meta.output_schema)
     schema_bytes = normalized(SCHEMAS / meta.output_schema)
-    return Prompt(meta, body.strip(), schema, hashlib.sha256(raw).hexdigest(),
-                  hashlib.sha256(schema_bytes).hexdigest())
+    # Shared rules come first (the agent catalog puts the fixed rules at the top); the identity covers them.
+    parts, identity = [], hashlib.sha256(raw)
+    for name in meta.includes:
+        partial = PARTIALS / f"{name}.md"
+        if not partial.is_file():
+            raise LLMNotConfigured(f"{path.name}: included partial {name!r} does not exist")
+        content = normalized(partial)
+        identity.update(b"\0" + name.encode() + b"\0" + content)
+        parts.append(content.decode("utf-8").strip())
+    system = "\n\n".join([*parts, body.strip()])
+    return Prompt(meta, system, schema, identity.hexdigest(), hashlib.sha256(schema_bytes).hexdigest())
 
 
 def read_lock() -> dict[str, dict[str, Any]]:

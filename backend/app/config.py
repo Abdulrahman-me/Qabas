@@ -70,6 +70,9 @@ class Settings(BaseSettings):
     # Per-request timeout; the SDK retries transport errors, 429 and 5xx with backoff this many times (Phase 11).
     llm_timeout_seconds: float = 120.0
     llm_max_retries: int = 2
+    # Lesson Factory (Phase 12): default token budget of one run (factory §13.1 budget_exceeded); a run may
+    # set its own. Every call of every attempt counts, including output that was rejected.
+    factory_run_budget_tokens: int = 1_500_000
     stt_provider: str | None = None
     stt_api_key: SecretStr | None = None
     image_provider: str | None = None

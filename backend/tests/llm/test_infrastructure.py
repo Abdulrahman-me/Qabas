@@ -174,3 +174,11 @@ async def test_evaluation_stops_charging_once_the_budget_is_spent() -> None:
     report = await evaluate(load_cases(SAMPLE), {"x": FakeLLMClient({"conversation_title": {"title": "T"}})},
                             budget_tokens=1)
     assert report["systems"]["x"]["errors"].get("budget_exceeded", 0) >= 3
+
+
+def test_factory_output_schemas_are_exported_from_the_contract() -> None:
+    from app.factory.schemas import EXPORTS
+    for name, build in EXPORTS.items():
+        committed = json.loads((registry.SCHEMAS / f"{name}.json").read_text(encoding="utf-8"))
+        assert committed == build(), f"{name}.json is stale: run scripts/export_llm_schemas.py"
+        assert registry.strict_schema_problems(committed) == []

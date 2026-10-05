@@ -170,7 +170,7 @@ class LessonVersion(Base):
     version: Mapped[int] = mapped_column(Integer)
     reviewed_by: Mapped[str | None] = mapped_column(Text)  # reviewer display name shown to learners
     published_at: Mapped[datetime | None]
-    run_id: Mapped[str | None] = mapped_column(Text)  # FK to factory_runs added in Phase 12
+    run_id: Mapped[str | None] = mapped_column(ForeignKey("factory_runs.id"))
     # factory | gold_import | test_fixture. Test-fixture content is publishable only outside staging and
     # production (app-enforced, D-29) and exists to exercise the real pipeline in automated tests.
     origin: Mapped[str] = mapped_column(Text)
