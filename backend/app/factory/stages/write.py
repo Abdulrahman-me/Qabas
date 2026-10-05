@@ -68,6 +68,7 @@ def check(draft: WriterDraft, plan: dict[str, Any], tracks: list[str], supported
         if skeleton != reference:
             errors.append(f"{name}: every variant shares one block skeleton (ids, types, order)")
     roles: dict[str, tuple[str, list[str]]] = {}
+    figures: dict[str, list[str]] = {}
     concepts = set(plan["introduced_concept_ids"]) | set(plan["prerequisite_concept_ids"])
     for variant in draft.variants:
         where = variant.variant
@@ -102,6 +103,10 @@ def check(draft: WriterDraft, plan: dict[str, Any], tracks: list[str], supported
                            for o in duplicates([o.option_id for o in block.options])]
             if block.type == "story":
                 errors += _story(block.block_id, block.sourced, block.origin_title, block.beats)
+                for beat in block.beats:
+                    host = f"{block.block_id}.{beat.beat_id}"
+                    if figures.setdefault(host, beat.figures) != beat.figures:
+                        errors.append(f"{host}: referenced figures must stay the same across tracks")
         slots = [b for b in variant.blocks if b.type == "exercise_slot"]
         if len(slots) != plan["exercise_budget"]:
             errors.append(f"{where}: place exactly the plan's exercise_budget ({plan['exercise_budget']}) "
@@ -298,5 +303,7 @@ async def run(ctx: StageContext) -> StageResult:
     output = {"writer": draft.model_dump(mode="json"), "variants": composed, "sentence_map": sentence_map(draft),
               "arc_map": [row.model_dump(mode="json") for row in draft.arc_map], "visuals": visuals,
               "few_shot": {"style_guide": False, "gold_examples": 0}}
+    output["figures"] = {f"{block.block_id}.{beat.beat_id}": beat.figures
+                         for block in draft.variants[0].blocks if block.type == "story" for beat in block.beats}
     return StageResult(output=output, inputs=data, notes={"agent_issues": draft.issues,
                                                           "few_shot_missing": "F-104"})

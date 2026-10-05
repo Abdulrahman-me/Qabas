@@ -1,0 +1,16 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "prompt": {
+   "maxLength": 12000,
+   "minLength": 1,
+   "title": "Prompt",
+   "type": "string"
+  }
+ },
+ "required": [
+  "prompt"
+ ],
+ "title": "factory_image_prompt",
+ "type": "object"
+}

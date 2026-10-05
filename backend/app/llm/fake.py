@@ -21,6 +21,7 @@ from app.llm.client import LLMResult, OutputProblem, validate_output
 from app.llm.errors import LLMOutputInvalid
 from app.llm.framing import frame
 from app.llm.prompts import Effort, get_prompt
+from app.llm.vision import VisionImage
 
 
 def message(text: str = "{}", *, stop_reason: str = "end_turn", model: str = "fake-model",
@@ -60,12 +61,17 @@ class FakeLLMClient:
     script: Script
     model: str = "fake-model"
     calls: list[tuple[str, dict[str, Any]]] = field(default_factory=list)
+    vision_calls: list[tuple[str, tuple[str, ...]]] = field(default_factory=list)
 
     async def structured(self, prompt_id: str, data: Mapping[str, Any], *, ledger: Ledger | None = None,
-                         call_key: str | None = None, effort: Effort | None = None) -> LLMResult:
+                         call_key: str | None = None, effort: Effort | None = None,
+                         images: tuple[VisionImage, ...] = ()) -> LLMResult:
         prompt = get_prompt(prompt_id)
         framed = frame(data, nonce="0" * 16)                 # same identifier checks as a live call
         self.calls.append((prompt_id, dict(data)))
+        for image in images:
+            image.block()
+        self.vision_calls.append((prompt_id, tuple(image.sha256 for image in images)))
         if ledger is not None:
             ledger.check_available()
         answer = self.script[prompt_id]

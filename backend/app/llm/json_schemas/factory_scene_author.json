@@ -1,0 +1,58 @@
+{
+ "$defs": {
+  "ArtworkBrief": {
+   "additionalProperties": false,
+   "properties": {
+    "asset_id": {
+     "title": "Asset Id",
+     "type": "string"
+    },
+    "brief": {
+     "minLength": 1,
+     "title": "Brief",
+     "type": "string"
+    },
+    "height": {
+     "exclusiveMinimum": 0,
+     "maximum": 4096,
+     "title": "Height",
+     "type": "integer"
+    },
+    "width": {
+     "exclusiveMinimum": 0,
+     "maximum": 4096,
+     "title": "Width",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "asset_id",
+    "brief",
+    "width",
+    "height"
+   ],
+   "title": "ArtworkBrief",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "artwork": {
+   "items": {
+    "$ref": "#/$defs/ArtworkBrief"
+   },
+   "title": "Artwork",
+   "type": "array"
+  },
+  "manifest_json": {
+   "title": "Manifest Json",
+   "type": "string"
+  }
+ },
+ "required": [
+  "manifest_json",
+  "artwork"
+ ],
+ "title": "factory_scene_author",
+ "type": "object"
+}

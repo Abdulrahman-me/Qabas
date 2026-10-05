@@ -1,0 +1,145 @@
+{
+ "$defs": {
+  "Alt": {
+   "additionalProperties": false,
+   "properties": {
+    "ar": {
+     "minLength": 1,
+     "title": "Ar",
+     "type": "string"
+    },
+    "en": {
+     "minLength": 1,
+     "title": "En",
+     "type": "string"
+    }
+   },
+   "required": [
+    "ar",
+    "en"
+   ],
+   "title": "Alt",
+   "type": "object"
+  },
+  "Selection": {
+   "additionalProperties": false,
+   "properties": {
+    "alt": {
+     "$ref": "#/$defs/Alt"
+    },
+    "brief_id": {
+     "title": "Brief Id",
+     "type": "string"
+    },
+    "figures": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Figures",
+     "type": "array"
+    },
+    "group": {
+     "minLength": 1,
+     "title": "Group",
+     "type": "string"
+    },
+    "image_brief": {
+     "title": "Image Brief",
+     "type": "string"
+    },
+    "key": {
+     "anyOf": [
+      {
+       "enum": [
+        "river_house",
+        "workplace",
+        "day_arc",
+        "pillars"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Key"
+    },
+    "kind": {
+     "enum": [
+      "builtin",
+      "image",
+      "scene",
+      "none"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "map": {
+     "title": "Map",
+     "type": "boolean"
+    },
+    "params_json": {
+     "title": "Params Json",
+     "type": "string"
+    },
+    "point_params_json": {
+     "anyOf": [
+      {
+       "items": {
+        "type": "string"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Point Params Json"
+    },
+    "purpose": {
+     "minLength": 1,
+     "title": "Purpose",
+     "type": "string"
+    }
+   },
+   "required": [
+    "brief_id",
+    "purpose",
+    "kind",
+    "key",
+    "params_json",
+    "point_params_json",
+    "group",
+    "image_brief",
+    "figures",
+    "alt",
+    "map"
+   ],
+   "title": "Selection",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "issues": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Issues",
+   "type": "array"
+  },
+  "visuals": {
+   "items": {
+    "$ref": "#/$defs/Selection"
+   },
+   "title": "Visuals",
+   "type": "array"
+  }
+ },
+ "required": [
+  "visuals",
+  "issues"
+ ],
+ "title": "factory_visuals",
+ "type": "object"
+}

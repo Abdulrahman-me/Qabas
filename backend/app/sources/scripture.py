@@ -106,7 +106,8 @@ def _translation(mushaf: Mushaf, passage: Passage, language: str, records: tuple
 
 def _audio(mushaf: Mushaf, passage: Passage, record: SourceRecord, reciter: str,
            base_url: str) -> tuple[Any, tuple[Part, ...]]:
-    if passage.word_start is not None:
+    clip = record.data.get("reference_clip")
+    if passage.word_start is not None and clip is None:
         # The recite payload's audio must be a clip of exactly the recited words, cut at publish time from the
         # licensed recitation (backend §8 step 8, API recite_verse; O-06). Whole-ayah audio is never served as a
         # segment, and filtered timings over the whole clip would highlight against the wrong audio (F-79).
@@ -149,6 +150,35 @@ def _audio(mushaf: Mushaf, passage: Passage, record: SourceRecord, reciter: str,
     parts.append(Part("timing", record.provider, record.provider_record_id, sha256=record.retrieval.response_sha256,
                       checks=("word_count", "positions", "chronological") if reason is None else (),
                       meta={} if reason is None else {"rejected": reason}))
+    if clip is not None:
+        from app.media.policy import approved
+        if not isinstance(clip, dict) or not isinstance(clip.get("binding"), dict) or \
+                not isinstance(clip.get("licence"), dict) or not isinstance(clip.get("cut"), dict) or \
+                any(type(clip["cut"].get(key)) is not int for key in ("start_ms", "end_ms")) or \
+                not isinstance(clip.get("words"), list) or not isinstance(clip.get("url"), str) or \
+                not isinstance(clip.get("sha256"), str) or len(clip["sha256"]) != 64 or \
+                any(char not in "0123456789abcdef" for char in clip["sha256"]) or \
+                type(record.data.get("reciter_id")) is not int or record.data["reciter_id"] < 1:
+            raise CapabilityMismatch("quran_com", "reference clip metadata is malformed")
+        binding = clip["binding"]
+        if reason is not None or binding != {
+                "surah": passage.surah, "ayah": passage.ayah_start,
+                "word_start": passage.word_start or 1, "word_end": passage.word_end or len(whole.words),
+                "reciter": reciter,
+                "reciter_id": record.data.get("reciter_id"),
+                "dataset_sha256": whole.dataset.member_sha256}:
+            raise CapabilityMismatch("quran_com", "reference clip differs from the canonical word binding")
+        approved(clip["licence"], "reference clip distribution licence")
+        first, last = timings[0].start_ms, timings[-1].end_ms
+        if clip["cut"]["start_ms"] != first or clip["cut"]["end_ms"] != last:
+            raise CapabilityMismatch("quran_com", "reference clip does not cut at the selected word boundaries")
+        expected = [{**word.model_dump(mode="json"), "start_ms": word.start_ms - first,
+                     "end_ms": word.end_ms - first} for word in timings]
+        if clip["words"] != expected or urlsplit(clip["url"]).scheme != "https" or clip["sha256"] not in clip["url"]:
+            raise CapabilityMismatch("quran_com", "reference clip timings or immutable URL differ")
+        parts.append(Part("audio", "qabas_media", clip["sha256"], sha256=clip["sha256"],
+                          checks=("canonical_word_range", "licensed_reference_cut"), meta=clip))
+        url, timings = clip["url"], [C.WordTiming.model_validate(word) for word in expected]
     return C.Audio(reciter=reciter, url=url, words=timings if reason is None else None), tuple(parts)
 
 

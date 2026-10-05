@@ -127,6 +127,7 @@ class WBeat(Closed):
     quote_evidence_id: str | None            # a verified evidence id; code inserts the verbatim text
     quote_meaning: str | None
     visual_brief: str = Field(min_length=1)
+    figures: list[str]                       # approved medallion bindings, never image-model depictions
 
 
 class WStory(Closed):

@@ -30,6 +30,13 @@
      "title": "Beat Id",
      "type": "string"
     },
+    "figures": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Figures",
+     "type": "array"
+    },
     "narration": {
      "items": {
       "$ref": "#/$defs/WSentence"
@@ -71,7 +78,8 @@
     "narration",
     "quote_evidence_id",
     "quote_meaning",
-    "visual_brief"
+    "visual_brief",
+    "figures"
    ],
    "title": "WBeat",
    "type": "object"

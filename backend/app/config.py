@@ -79,6 +79,11 @@ class Settings(BaseSettings):
     image_api_key: SecretStr | None = None
     tts_provider: str | None = None
     tts_api_key: SecretStr | None = None
+    media_policy_path: Path | None = None
+    media_timeout_seconds: float = 120
+    media_narration_enabled: bool = False  # narration is optional and never autoplays (factory §13.2)
+    media_pronunciation_enabled: bool = False
+    scene_preview_command: str | None = None  # JSON argv, installed normative Flutter CLI (O-02/O-13)
 
     # Sources (Phase 9; docs/SOURCE_POLICY.md). The canonical mushaf is fetched per environment (D-88).
     mushaf_dir: Path = BACKEND_DIR / "var" / "sources" / "mushaf"

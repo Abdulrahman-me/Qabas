@@ -1,8 +1,6 @@
-"""Stage order and which stages this phase runs (factory §13.1, contract ``RunStage``).
+"""Complete production stage order (factory §13.1, contract RunStage); every media stage is resumable.
 
-Stages 8-9 (``visuals``, ``scene_author``, ``scene_render``, ``narration``) belong to the visual and media
-pipeline (Phase 14): until then a run records them as ``skipped`` and QA keeps the visual-readiness and
-placeholder-media blockers that stop such a draft from passing Gate 2 (§13.4, D-129).
+Missing approvals/providers fail closed. QA and Gate 2 enforce media publication readiness.
 """
 
 from __future__ import annotations
@@ -23,15 +21,13 @@ assert tuple(C.RunStage.__args__) == ORDER
 
 
 def next_stage(stage: str) -> str | None:
-    """The stage that runs after ``stage`` (media stages are skipped), or None after ``qa``."""
+    """The next production stage, or None after ``qa``."""
     index = ORDER.index(stage) + 1
-    while index < len(ORDER) and ORDER[index] in MEDIA_STAGES:
-        index += 1
     return ORDER[index] if index < len(ORDER) else None
 
 
 def initial_stages() -> list[dict[str, object]]:
-    return [{"stage": s, "status": "skipped" if s in MEDIA_STAGES else "pending", "started_at": None,
+    return [{"stage": s, "status": "pending", "started_at": None,
              "finished_at": None} for s in ORDER]
 
 

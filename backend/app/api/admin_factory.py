@@ -20,10 +20,11 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.api.deps import CurrentReviewer, DbDep, RedisDep, RequestLanguage, ResourcesDep, SettingsDep
 from app.contract import models as C
 from app.errors import ApiError, ErrorCode
-from app.factory import gates
+from app.factory import gates, regenerate
 from app.factory.gate2 import ScriptureAuthority, decide_gate2
 from app.factory.orchestrator import Dispatcher
 from app.factory.runs import create_run, to_contract
+from app.media.objects import review_projection
 from app.models import CurriculumSlot, FactoryRun
 from app.services.learning.profile import PAGE_DEFAULT, page_args
 from app.services.platform import idempotency
@@ -106,7 +107,7 @@ async def runs(user: CurrentReviewer, db: DbDep, lang: RequestLanguage, status: 
 
 
 @router.get("/runs/{run_id}", response_model=C.FactoryRun)
-async def get_run(run_id: str, user: CurrentReviewer, db: DbDep) -> Any:
+async def get_run(run_id: str, user: CurrentReviewer, db: DbDep, resources: ResourcesDep) -> Any:
     """The run; while it awaits Gate 2 the first reviewer view records ``review_started_at`` (factory §13.6)."""
     async with db.begin():
         run = await _run(db, run_id)
@@ -114,7 +115,10 @@ async def get_run(run_id: str, user: CurrentReviewer, db: DbDep) -> Any:
             locked = await db.get(FactoryRun, run_id, with_for_update=True)
             assert locked is not None
             locked.review_started_at = locked.review_started_at or utcnow()
-        return to_contract(run)
+        projected = to_contract(run)
+        objects = (run.artifacts.get("qa") or {}).get("output", {}).get("media_objects", [])
+        return await review_projection(projected, objects, resources.storage,
+                                       resources.settings.signed_url_ttl_seconds, published=run.status == "published")
 
 
 @router.post("/runs/{run_id}/gate1", response_model=C.FactoryRun)
@@ -129,5 +133,25 @@ async def gate1(run_id: str, body: C.Gate1, user: CurrentReviewer, resources: Re
 async def gate2(run_id: str, body: C.Gate2, user: CurrentReviewer, resources: ResourcesDep,
                 dispatcher: DispatcherDep, authority: AuthorityDep) -> Any:
     """``approve`` publishes in the same transaction or changes nothing (``400`` with ``details.issues``)."""
-    return await decide_gate2(resources.sessionmaker, resources.settings, dispatcher, run_id=run_id,
-                              reviewer_id=user.id, body=body, authority=authority)
+    await decide_gate2(resources.sessionmaker, resources.settings, dispatcher, run_id=run_id,
+                      reviewer_id=user.id, body=body, authority=authority, storage=resources.storage)
+    async with resources.sessionmaker() as db:
+        run = await _run(db, run_id)
+        records = (run.artifacts.get("qa") or {}).get("output", {}).get("media_objects", [])
+        return await review_projection(to_contract(run), records, resources.storage,
+                                       resources.settings.signed_url_ttl_seconds, published=run.status == "published")
+
+
+@router.post("/runs/{run_id}/images/{scene_id}/regenerate", status_code=202, response_model=C.FactoryRun,
+             openapi_extra={"requestBody": {"required": False, "content": {"application/json": {"schema": {
+                 "type": "object", "additionalProperties": False, "properties": {
+                     "reason": {"type": ["string", "null"], "maxLength": 4000}}}}}}})
+async def regenerate_media(run_id: str, scene_id: str, user: CurrentReviewer, resources: ResourcesDep,
+                           dispatcher: DispatcherDep, body: dict[str, str | None] | None = None) -> Any:
+    if body and (set(body) - {"reason"} or len(body.get("reason") or "") > 4000):
+        raise ApiError(ErrorCode.validation_error,
+                       "Media regeneration accepts only an optional reason of <=4000 characters.")
+    await regenerate.request(resources.sessionmaker, dispatcher, run_id=run_id, scene_id=scene_id,
+                             reviewer_id=user.id, reason=body.get("reason") if body else None)
+    async with resources.sessionmaker() as db:
+        return to_contract(await _run(db, run_id))

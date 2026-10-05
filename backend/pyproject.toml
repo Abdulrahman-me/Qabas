@@ -26,6 +26,9 @@ dependencies = [
     "rapidfuzz>=3.14",
     "python-multipart>=0.0.20",
     "anthropic>=1.11",
+    "av>=14",
+    "resvg-py==0.5.0",
+    "numpy>=2.0",  # PyAV's build-time reference cuts and frame conversion use ndarray buffers.
 ]
 
 [dependency-groups]

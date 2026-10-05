@@ -4,7 +4,7 @@ fakes until its provider is approved (O-03, O-13). Implementations arrive in the
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Any, Protocol
 
 from app.llm.client import LLMClient as LLMClient  # Phase 11: app/llm (prompt registry, structured output)
@@ -23,28 +23,6 @@ class SpeechToText(Protocol):
     """Phase 17 (Raqeeb voice)."""
 
     async def transcribe(self, audio_wav: bytes, *, language_hint: str | None) -> Transcript: ...
-
-
-@dataclass(frozen=True)
-class GeneratedImage:
-    data: bytes
-    mime_type: str
-    width: int
-    height: int
-    provider_meta: dict[str, Any] = field(default_factory=dict)
-
-
-class ImageGenerator(Protocol):
-    """Phase 14 (build-time only, IMAGE_PROVIDER)."""
-
-    async def generate(self, *, prompt: str, width: int, height: int,
-                       reference_images: list[bytes] | None = None) -> GeneratedImage: ...
-
-
-class TextToSpeech(Protocol):
-    """Phase 14 (build-time narration and term pronunciation; never Quran)."""
-
-    async def synthesize(self, *, text: str, language: str, voice: str | None = None) -> bytes: ...
 
 
 class SourceTool(Protocol):

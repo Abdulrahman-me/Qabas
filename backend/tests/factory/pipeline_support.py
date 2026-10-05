@@ -172,9 +172,9 @@ def write(data: dict[str, Any], **changes: Any) -> dict[str, Any]:
         {"block_id": "b_story", "type": "story", "label": "موقف", "title": None, "sourced": False,
          "origin_title": None, "beats": [
              {"beat_id": "beat1", "narration": [sentence("s_sc1", "تخيل موقفا تجريبيا", "hypothetical")],
-              "quote_evidence_id": None, "quote_meaning": None, "visual_brief": "beat one"},
+              "quote_evidence_id": None, "quote_meaning": None, "visual_brief": "beat one", "figures": []},
              {"beat_id": "beat2", "narration": [sentence("s_sc2", "ماذا تلاحظ هنا؟", "question")],
-              "quote_evidence_id": None, "quote_meaning": None, "visual_brief": "beat two"}]},
+              "quote_evidence_id": None, "quote_meaning": None, "visual_brief": "beat two", "figures": []}]},
         {"block_id": "b_predict", "type": "predict", "prompt": "ماذا تتوقع؟", "reveal": "كشف تجريبي",
          "options": [{"option_id": "o_a", "text": "أ"}, {"option_id": "o_b", "text": "ب"}], "visual_brief": None},
         {"block_id": "b_teach", "type": "teach", "eyebrow": None, "title": "عنوان تجريبي", "style": "standard",
@@ -280,7 +280,16 @@ def script(**overrides: Callable[[dict[str, Any]], dict[str, Any]] | dict[str, A
     answers: dict[str, Any] = {"factory_plan": plan(), "factory_decompose": decompose,
                                "factory_retrieve": retrieve, "factory_verify": verify, "factory_write": write,
                                "factory_exercises": exercises, "factory_glossary": glossary,
-                               "factory_localize": localize, "factory_qa": qa_review,
+                               "factory_localize": localize, "factory_visuals": visual_selection,
+                               "factory_qa": qa_review,
                                "factory_pedagogy": pedagogy_review}
     answers.update(overrides)
     return answers
+
+
+def visual_selection(data: dict[str, Any]) -> dict[str, Any]:
+    """Neutral fixtures select a compiled setting. Image/scene providers have their own pixel-level tests."""
+    return {"visuals": [{"brief_id": item["brief_id"], "purpose": "Synthetic setting", "kind": "builtin",
+        "key": "workplace", "params_json": "{}", "point_params_json": None, "group": item["brief_id"],
+        "image_brief": "", "figures": [], "alt": {"ar": "مكتب تجريبي", "en": "Synthetic office"}, "map": False}
+        for item in data["briefs"]], "issues": []}

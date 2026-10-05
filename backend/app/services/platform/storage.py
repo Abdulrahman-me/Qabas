@@ -15,8 +15,11 @@ from __future__ import annotations
 import hashlib
 import hmac
 import json
+import os
 import shutil
+import tempfile
 import time
+from contextlib import suppress
 from dataclasses import dataclass
 from enum import StrEnum
 from pathlib import Path
@@ -81,6 +84,7 @@ def _validate_prefix(prefix: str) -> str:
 
 class ObjectStorage(Protocol):
     def put(self, bucket: Bucket, key: str, data: bytes, content_type: str) -> StoredObject: ...
+    def put_immutable(self, bucket: Bucket, key: str, data: bytes, content_type: str) -> StoredObject: ...
     def get(self, bucket: Bucket, key: str) -> bytes: ...
     def exists(self, bucket: Bucket, key: str) -> bool: ...
     def delete_private(self, key: str) -> None: ...
@@ -102,18 +106,48 @@ class LocalStorage:
         return self.root / bucket.value / validate_key(key)
 
     def put(self, bucket: Bucket, key: str, data: bytes, content_type: str) -> StoredObject:
+        if bucket is Bucket.content:
+            return self.put_immutable(bucket, key, data, content_type)
         path = self._path(bucket, key)
         digest = sha256_hex(data)
-        if bucket is Bucket.content and path.exists():
-            if sha256_hex(path.read_bytes()) != digest:
-                raise ImmutableObjectError(f"content object already exists with different bytes: {key}")
-            return StoredObject(bucket, key, digest, len(data), self.content_type(bucket, key))
         path.parent.mkdir(parents=True, exist_ok=True)
-        tmp = path.with_name(path.name + ".tmp")
-        tmp.write_bytes(data)
-        tmp.replace(path)
+        with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as stream:
+            tmp = Path(stream.name)
+            stream.write(data)
+        try:
+            tmp.replace(path)
+        finally:
+            tmp.unlink(missing_ok=True)
         self._meta_path(path).write_text(json.dumps({"content_type": content_type, "sha256": digest}))
         return StoredObject(bucket, key, digest, len(data), content_type)
+
+    def put_immutable(self, bucket: Bucket, key: str, data: bytes, content_type: str) -> StoredObject:
+        path = self._path(bucket, key)
+        digest = sha256_hex(data)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        self._create_once(path, data)
+        if path.read_bytes() != data:
+            raise ImmutableObjectError(f"immutable object has different bytes: {key}")
+        metadata = json.dumps({"content_type": content_type, "sha256": digest}).encode()
+        meta = self._meta_path(path)
+        self._create_once(meta, metadata)
+        if json.loads(meta.read_bytes()) != json.loads(metadata):
+            raise ImmutableObjectError(f"immutable object has different metadata: {key}")
+        return StoredObject(bucket, key, digest, len(data), content_type)
+
+    @staticmethod
+    def _create_once(path: Path, data: bytes) -> None:
+        # A hard-link claims the destination atomically, without exposing partial bytes or overwriting a winner.
+        with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as stream:
+            tmp = Path(stream.name)
+            stream.write(data)
+            stream.flush()
+            os.fsync(stream.fileno())
+        try:
+            with suppress(FileExistsError):
+                os.link(tmp, path)
+        finally:
+            tmp.unlink(missing_ok=True)
 
     def get(self, bucket: Bucket, key: str) -> bytes:
         path = self._path(bucket, key)
@@ -172,24 +206,37 @@ class S3Storage:
         self.cdn_base_url = cdn_base_url.rstrip("/")
 
     def put(self, bucket: Bucket, key: str, data: bytes, content_type: str) -> StoredObject:
+        if bucket is Bucket.content:
+            return self.put_immutable(bucket, key, data, content_type)
         validate_key(key)
         digest = sha256_hex(data)
         name = self.buckets[bucket]
-        if bucket is Bucket.content:
+        self.client.put_object(Bucket=name, Key=key, Body=data, ContentType=content_type,
+                               CacheControl="private, no-store", Metadata={"sha256": digest})
+        return StoredObject(bucket, key, digest, len(data), content_type)
+
+    def put_immutable(self, bucket: Bucket, key: str, data: bytes, content_type: str) -> StoredObject:
+        validate_key(key)
+        digest, name = sha256_hex(data), self.buckets[bucket]
+        for _ in range(3):
             existing = self._head(name, key)
             if existing is not None:
                 metadata = existing.get("Metadata")
                 stored = metadata.get("sha256") if isinstance(metadata, dict) else None
-                if stored != digest:
+                if stored != digest or existing.get("ContentType") != content_type:
                     raise ImmutableObjectError(f"content object already exists with different bytes: {key}")
-                return StoredObject(bucket, key, digest, len(data), str(existing.get("ContentType", content_type)))
-            self.client.put_object(Bucket=name, Key=key, Body=data, ContentType=content_type,
-                                   CacheControl="public, max-age=31536000, immutable",
-                                   Metadata={"sha256": digest})
-        else:
-            self.client.put_object(Bucket=name, Key=key, Body=data, ContentType=content_type,
-                                   Metadata={"sha256": digest})
-        return StoredObject(bucket, key, digest, len(data), content_type)
+                return StoredObject(bucket, key, digest, len(data), content_type)
+            try:
+                self.client.put_object(Bucket=name, Key=key, Body=data, ContentType=content_type,
+                                       IfNoneMatch="*", Metadata={"sha256": digest}, CacheControl=(
+                                           "public, max-age=31536000, immutable" if bucket is Bucket.content
+                                           else "private, no-store"))
+                return StoredObject(bucket, key, digest, len(data), content_type)
+            except self.client.exceptions.ClientError as exc:
+                if exc.response.get("Error", {}).get("Code") not in (
+                        "PreconditionFailed", "ConditionalRequestConflict", "409", "412"):
+                    raise
+        raise StorageError("immutable object write contention; retry later")
 
     def _head(self, bucket_name: str, key: str) -> dict[str, object] | None:
         try:

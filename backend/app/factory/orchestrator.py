@@ -47,6 +47,7 @@ from app.llm.errors import (
     LLMUnavailable,
     UnsafePromptData,
 )
+from app.media.errors import MediaInvalid, MediaNotConfigured, MediaRefused, MediaUnavailable
 from app.models import FactoryRun
 from app.services.platform.auth_sessions import utcnow
 from app.sources.errors import ProviderNotConfigured, UpstreamUnavailable
@@ -58,10 +59,12 @@ NOT_RETRIED: dict[type[BaseException], str] = {
     BudgetExceeded: "budget_exceeded", LLMRefusal: "refusal", LLMNotConfigured: "model_not_configured",
     LLMRequestRejected: "request_rejected", UnsafePromptData: "unsafe_prompt_data",
     ProviderNotConfigured: "source_not_configured", MushafError: "mushaf_unavailable",
+    MediaNotConfigured: "media_not_configured", MediaRefused: "media_refusal",
 }
 RETRIED: dict[type[BaseException], str] = {
     LLMUnavailable: "model_unavailable", LLMTruncated: "output_truncated", LLMOutputInvalid: "output_invalid",
     UpstreamUnavailable: "source_unavailable",
+    MediaInvalid: "media_invalid", MediaUnavailable: "media_unavailable",
 }
 
 
@@ -206,10 +209,20 @@ class Orchestrator:
         async with self.sessionmaker() as db, db.begin():
             run = await db.get(FactoryRun, snapshot.id, with_for_update=True)
             assert run is not None
-            calls = [*run.cost.get("calls", []), *(asdict(r) for r in spent)]
+            calls = list(run.cost.get("calls", []))
+            seen = {content_digest(asdict(_usage(call))) for call in calls}
+            for record in spent:
+                identity = content_digest(asdict(record))
+                if identity not in seen:
+                    calls.append(asdict(record))
+                    seen.add(identity)
             run.cost = Ledger(run.budget_tokens, [_usage(c) for c in calls]).summary() | {"calls": calls}
             current = next(s for s in run.stages if s["stage"] == stage)
-            if run.status != "running" or run.stage != stage or run.attempt != attempt or current["status"] == "done":
+            revision_changed = (run.artifacts.get("media_regeneration") != snapshot.artifacts.get("media_regeneration")
+                                or len(run.artifacts.get("revisions", [])) !=
+                                len(snapshot.artifacts.get("revisions", [])))
+            if (run.status != "running" or run.stage != stage or run.attempt != attempt
+                    or current["status"] == "done" or revision_changed):
                 run.attempts = [*run.attempts, {"stage": stage, "attempt": attempt, "event": "discarded",
                                                 "at": now.isoformat()}]
                 return "stale"
@@ -233,6 +246,10 @@ class Orchestrator:
                 else:
                     entry.update(status="failed", finished_at=now.isoformat())
                     run.status, run.error = "failed", {"code": code, "message": message[:2000]}
+                    if stage in pipeline.MEDIA_STAGES:
+                        run.qa_report = {"issues": [{"severity": "blocker", "kind": "validation",
+                            "message": message[:2000],
+                            "location": {"sentence_id": None, "exercise_id": None, "scene_id": None}}]}
                     outcome = "failed"
                     log.warning("factory run failed", extra={"run_id": run.id, "stage": stage, "code": code})
             run.stages = stages

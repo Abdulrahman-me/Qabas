@@ -42,10 +42,12 @@ from app.llm.errors import (
     LLMRequestRejected,
     LLMTruncated,
     LLMUnavailable,
+    UnsafePromptData,
 )
 from app.llm.framing import frame
 from app.llm.models import ModelPolicy, model_policy
 from app.llm.prompts import Effort, Prompt, get_prompt
+from app.llm.vision import VisionImage
 
 log = logging.getLogger("qabas.llm")
 FORBIDDEN_PARAMETERS = frozenset({"temperature", "top_p", "top_k", "tool_choice"})
@@ -63,7 +65,8 @@ class LLMResult:
 
 class LLMClient(Protocol):
     async def structured(self, prompt_id: str, data: Mapping[str, Any], *, ledger: Ledger | None = None,
-                         call_key: str | None = None, effort: Effort | None = None) -> LLMResult: ...
+                         call_key: str | None = None, effort: Effort | None = None,
+                         images: tuple[VisionImage, ...] = ()) -> LLMResult: ...
 
 
 class OutputProblem(Exception):
@@ -139,7 +142,8 @@ class AnthropicClient:
         return self.settings.llm_model_strong if prompt.meta.tier == "strong" else self.settings.llm_model_fast
 
     async def structured(self, prompt_id: str, data: Mapping[str, Any], *, ledger: Ledger | None = None,
-                         call_key: str | None = None, effort: Effort | None = None) -> LLMResult:
+                         call_key: str | None = None, effort: Effort | None = None,
+                         images: tuple[VisionImage, ...] = ()) -> LLMResult:
         prompt = get_prompt(prompt_id)
         model = self.model_for(prompt)
         policy = model_policy(model, self.settings)
@@ -148,6 +152,10 @@ class AnthropicClient:
             {"type": "text", "text": prompt.system, "cache_control": {"type": "ephemeral"}},
             {"type": "text", "text": framed.instruction}]
         messages: list[dict[str, Any]] = [{"role": "user", "content": framed.text}]
+        if images:
+            if len(images) > 20:
+                raise UnsafePromptData("too many vision images")
+            messages[0]["content"] = [*(image.block() for image in images), {"type": "text", "text": framed.text}]
         records: list[UsageRecord] = []
         for attempt in (1, 2):
             if ledger is not None:

@@ -1,0 +1,47 @@
+schema: qabas.media_policy/1
+scene_author:
+  status: pending
+  approved_by: null
+  approved_on: null
+  design_tokens: {path: content/scene_design_tokens.json, sha256: null}
+  examples: []
+renderer:
+  status: pending
+  approved_by: null
+  approved_on: null
+  executable_sha256: null
+  renderer_version: null
+  launcher_sha256: null
+# Adapter availability is not provider selection/approval. No paid calls are enabled by this file.
+providers:
+  image:
+    openai:
+      status: pending
+      approved_by: null
+      approved_on: null
+      model: null
+      size: null
+      licence: {status: pending, approved_by: null, approved_on: null}
+  tts:
+    openai:
+      status: pending
+      approved_by: null
+      approved_on: null
+      model: null
+      voices: {ar: null, en: null}
+      licence: {status: pending, approved_by: null, approved_on: null}
+style:
+  status: pending
+  approved_by: null
+  approved_on: null
+  guide: {path: content/style_guide.md, sha256: null}
+  characters: {path: content/character_reference.md, sha256: null}
+  references: []
+recitation:
+  status: pending
+  approved_by: null
+  approved_on: null
+  provider: quran_com
+  reciter: null
+  reciter_id: null
+  licence: {status: pending, approved_by: null, approved_on: null}

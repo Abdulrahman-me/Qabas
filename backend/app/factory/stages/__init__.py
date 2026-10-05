@@ -1,10 +1,9 @@
-"""Factory stage executors by stage name (factory §13.1). A stage absent here is not runnable yet: the media
-stages (``visuals``, ``scene_author``, ``scene_render``, ``narration``) are skipped until Phase 14 (D-129)."""
+"""All production Factory stage executors in contract order (factory §13.1)."""
 
 from __future__ import annotations
 
 from app.factory.orchestrator import Executor
-from app.factory.stages import decompose, exercises, glossary, localize, plan, qa, retrieve, verify, write
+from app.factory.stages import decompose, exercises, glossary, localize, media, plan, qa, retrieve, verify, write
 
 EXECUTORS: dict[str, Executor] = {
     "plan": plan.run,
@@ -15,5 +14,9 @@ EXECUTORS: dict[str, Executor] = {
     "exercises": exercises.run,
     "glossary": glossary.run,
     "localize": localize.run,
+    "visuals": media.visuals,
+    "scene_author": media.scene_author,
+    "scene_render": media.scene_render,
+    "narration": media.narration,
     "qa": qa.run,
 }

@@ -15899,6 +15899,101 @@
     ]
    }
   },
+  "/v1/admin/factory/runs/{run_id}/images/{scene_id}/regenerate": {
+   "post": {
+    "operationId": "regenerate_media_v1_admin_factory_runs__run_id__images__scene_id__regenerate_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "run_id",
+      "required": true,
+      "schema": {
+       "title": "Run Id",
+       "type": "string"
+      }
+     },
+     {
+      "in": "path",
+      "name": "scene_id",
+      "required": true,
+      "schema": {
+       "title": "Scene Id",
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "additionalProperties": false,
+        "anyOf": [
+         {
+          "additionalProperties": {
+           "anyOf": [
+            {
+             "type": "string"
+            },
+            {
+             "type": "null"
+            }
+           ]
+          },
+          "type": "object"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "properties": {
+         "reason": {
+          "maxLength": 4000,
+          "type": [
+           "string",
+           "null"
+          ]
+         }
+        },
+        "title": "Body",
+        "type": "object"
+       }
+      }
+     },
+     "required": false
+    },
+    "responses": {
+     "202": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/FactoryRun"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Regenerate Media",
+    "tags": [
+     "reviewer-console"
+    ]
+   }
+  },
   "/v1/auth/guest": {
    "post": {
     "operationId": "create_guest_v1_auth_guest_post",

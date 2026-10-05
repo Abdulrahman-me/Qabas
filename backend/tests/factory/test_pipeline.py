@@ -20,13 +20,15 @@ from app.factory.orchestrator import Orchestrator, gate_digest
 from app.factory.runs import start_run, to_contract
 from app.factory.stages import EXECUTORS
 from app.llm.fake import FakeLLMClient
+from app.media.preview import InspectionPreviewer
+from app.media.service import MediaService
 from app.models import FactoryRun, User
 from app.runtime import Resources
 from tests.factory import pipeline_support as P
 from tests.factory.support import SLOT, InlineDispatcher, drive, reviewer
 
 pytestmark = pytest.mark.integration
-STAGES = ["plan", "decompose", "retrieve", "verify_evidence", "write", "exercises", "glossary", "localize", "qa"]
+STAGES = list(pipeline.ORDER)
 
 
 @pytest.fixture
@@ -46,7 +48,9 @@ class Harness:
         self.resources, self.llm, self.tools = resources, llm, tools
         self.dispatcher = InlineDispatcher()
         self.orchestrator = Orchestrator(resources.sessionmaker, resources.settings, llm, self.dispatcher, EXECUTORS,
-                                         services={"sources": lambda: tools})
+                                         services={"sources": lambda: tools,
+                                                   "media": MediaService(resources.storage,
+                                                                         previewer=InspectionPreviewer())})
 
     async def start(self) -> str:
         who = await reviewer(self.resources)
@@ -86,11 +90,11 @@ async def test_a_lesson_reaches_gate2_with_provenance_for_every_stage(resources:
     run_id, outcomes = await h.to_gate2()
     run = await h.load(run_id)
     assert run.error is None, run.error
-    assert outcomes == ["done"] * 7 + ["gate"]
+    assert outcomes == ["done"] * 11 + ["gate"]
     assert run.status == "awaiting_gate2" and run.stage == "qa"
     statuses = {s["stage"]: s["status"] for s in run.stages}
     assert all(statuses[s] == "done" for s in STAGES)
-    assert all(statuses[s] == "skipped" for s in pipeline.MEDIA_STAGES)
+    assert all(statuses[s] == "done" for s in pipeline.MEDIA_STAGES)
     # Provenance: which prompt (version + digest) and model produced each accepted artifact, from which inputs.
     for stage in STAGES:
         artifact = run.artifacts[stage]
@@ -101,7 +105,8 @@ async def test_a_lesson_reaches_gate2_with_provenance_for_every_stage(resources:
     assert run.artifacts["write"]["prompts"][0]["prompt_id"] == "factory_write"
     assert [c["prompt_id"] for c in run.cost["calls"]] == [
         "factory_plan", "factory_decompose", "factory_retrieve", "factory_verify", "factory_write",
-        "factory_exercises", "factory_glossary", "factory_localize", "factory_qa", "factory_pedagogy"]
+        "factory_exercises", "factory_glossary", "factory_localize", "factory_visuals",
+        "factory_qa", "factory_pedagogy"]
     assert run.cost["tokens"]["total"] > 0 and all(c["call_key"].startswith(run_id) for c in run.cost["calls"])
     # Gate 2 binds the reviewed draft and report; the contract projection validates.
     assert run.review_digest == gate_digest("awaiting_gate2", run)
@@ -110,10 +115,9 @@ async def test_a_lesson_reaches_gate2_with_provenance_for_every_stage(resources:
     package = LessonPackage.model_validate(run.artifacts["qa"]["output"]["package"])
     assert package.digest() == run.artifacts["qa"]["output"]["package_digest"]
     assert sorted(package.variants) == ["ar", "en"]
-    # What the reviewer sees: only placeholder media and visual readiness block (D-129); flags are reported.
+    # Compiled, registered visuals are publishable without a paid image call; scholarly flags still reach review.
     blockers = [i for i in run.qa_report["issues"] if i["severity"] == "blocker"]
-    assert {i["kind"] for i in blockers} == {"validation"}
-    assert sum("placeholder" in i["message"] for i in blockers) == 4
+    assert blockers == []
     assert any(i["kind"] == "scholarly_review" and "needs_tafsir" in i["message"] for i in run.qa_report["issues"])
     assert any(i["location"]["sentence_id"] == "s_t1" and i["message"].startswith("[pedagogy]")
                for i in run.qa_report["issues"])

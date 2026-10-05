@@ -13,6 +13,7 @@ from typing import Any
 
 from app.contract import models as C
 from app.factory import stage_models as S
+from app.media import stage_models as M
 
 
 def _subset(node: Any) -> Any:
@@ -48,4 +49,8 @@ EXPORTS: dict[str, Callable[[], dict[str, Any]]] = {
     "factory_glossary": lambda: _schema(S.Glossary, "factory_glossary"),
     "factory_localize": lambda: _schema(S.Localization, "factory_localize"),
     "factory_review": lambda: _schema(S.ModelReview, "factory_review"),
+    "factory_visuals": lambda: _schema(M.VisualSelection, "factory_visuals"),
+    "factory_image_prompt": lambda: _schema(M.ImagePrompt, "factory_image_prompt"),
+    "factory_scene_author": lambda: _schema(M.AuthoredScene, "factory_scene_author"),
+    "factory_visual_audit": lambda: _schema(M.VisualAudit, "factory_visual_audit"),
 }

@@ -2,9 +2,9 @@
 reviewed draft, blockers that keep a draft unpublishable, request_changes / reject, races and replays, version
 pinning for learners, and the shared approval rule of factory and gold content.
 
-Real factory drafts carry placeholder media until Phase 14, so a successful publication here first applies
-``install_media``: a test-only stand-in for the Phase 14 media stages (audited https images in place of the
-placeholders, a new draft, a new digest). Without it the same draft is refused, as production would refuse it.
+The synthetic pipeline selects valid compiled visuals. ``install_media`` changes their accessibility text to
+exercise a new review digest. Pixel-level image generation, storage and approval are tested in tests/media.
+The explicit placeholder corruption tests prove publication still refuses an incomplete reviewed package.
 """
 
 from __future__ import annotations
@@ -29,8 +29,10 @@ from app.content.store import Approval, FixtureApproval, publish
 from app.content.validation import ContentValidationError
 from app.contract import models as C
 from app.errors import ApiError
+from app.factory import compose
 from app.factory.gate2 import ScriptureAuthority, decide_gate2
 from app.factory.orchestrator import gate_digest
+from app.factory.stages.qa import build_draft
 from app.models import FactoryRun, Lesson, LessonVersion, ReviewDecision, SentenceRecord, Source
 from app.runtime import Resources
 from tests.factory import pipeline_support as P
@@ -39,7 +41,6 @@ from tests.factory.test_pipeline import Harness, harness, sequence
 from tests.learning.conftest import learner, user_id
 
 pytestmark = pytest.mark.integration
-CDN = "https://cdn.qabas.app/media/"
 PASSWORD = "a long passphrase"
 
 
@@ -74,18 +75,23 @@ def login(client: TestClient, email: str = "usr_factory_reviewer@example.test") 
 
 
 async def install_media(resources: Resources, run_id: str) -> str:
-    """TEST ONLY — stands in for the Phase 14 media stages: the draft's placeholder images become audited https
-    images, which is a new draft with a new review digest (exactly what a regeneration produces)."""
+    """Revise the accessibility text of compiled fixture media, producing a new exact draft/digest."""
     async with resources.sessionmaker() as db, db.begin():
         run = await db.get(FactoryRun, run_id, with_for_update=True)
         assert run is not None and run.status == "awaiting_gate2"
         artifacts = copy.deepcopy(run.artifacts)
         output = artifacts["qa"]["output"]
-        output["package"] = json.loads(json.dumps(output["package"]).replace("mock-asset://factory/", CDN))
+        def change(value: Any) -> Any:
+            if isinstance(value, dict):
+                if value.get("kind") == "builtin":
+                    return {**value, "alt": value["alt"] + " (reviewed)"}
+                return {k: change(v) for k, v in value.items()}
+            if isinstance(value, list):
+                return [change(v) for v in value]
+            return value
+        output["package"] = change(output["package"])
         output["package_digest"] = LessonPackage.model_validate(output["package"]).digest()
-        output["draft"] = json.loads(json.dumps(output["draft"]).replace("mock-asset://factory/", CDN))
-        for visual in output["draft"]["visuals"]:
-            visual.update(audit={"passed": True, "issues": []}, attempts=1)
+        output["draft"] = change(output["draft"])
         run.artifacts = artifacts
         run.qa_report = {"issues": [i for i in run.qa_report["issues"] if i["kind"] != "validation"]}
         run.review_digest = gate_digest("awaiting_gate2", run)
@@ -97,6 +103,31 @@ def gate2(client: TestClient, headers: dict[str, str], run_id: str, digest: str,
     body = {"decision": decision, "sentence_edits": [], "exercise_removals": [], "reason": None,
             "review_digest": digest} | fields
     return client.post(f"/v1/admin/factory/runs/{run_id}/gate2", json=body, headers=headers)
+
+
+async def add_placeholders(resources: Resources, run_id: str) -> None:
+    """Corrupt an otherwise completed fixture draft to prove publication revalidates actual stored content."""
+    async with resources.sessionmaker() as db, db.begin():
+        run = await db.get(FactoryRun, run_id, with_for_update=True)
+        assert run is not None
+        artifacts = copy.deepcopy(run.artifacts)
+        output = artifacts["qa"]["output"]
+        def change(value: Any) -> Any:
+            if isinstance(value, dict):
+                if value.get("kind") == "builtin":
+                    return compose.placeholder_visual(run_id, "synthetic", "Synthetic placeholder")
+                return {k: change(v) for k, v in value.items()}
+            if isinstance(value, list):
+                return [change(v) for v in value]
+            return value
+        output["package"] = change(output["package"])
+        package = LessonPackage.model_validate(output["package"])
+        visuals = [compose.draft_visual(v["scene_id"], compose.placeholder_visual(run_id, v["scene_id"], "Synthetic"))
+                   for v in output["draft"]["visuals"]]
+        output["draft"] = build_draft(package, visuals)
+        output["package_digest"] = package.digest()
+        run.artifacts = artifacts
+        run.review_digest = gate_digest("awaiting_gate2", run)
 
 
 async def complete(resources: Resources, uid: str, lesson_id: str) -> None:
@@ -184,6 +215,7 @@ async def test_a_draft_with_placeholder_media_is_never_approved(console: tuple[T
     h = harness(resources, tmp_path)
     wire(client, h, tmp_path)
     run_id, _ = await h.to_gate2()
+    await add_placeholders(resources, run_id)
     before = await h.load(run_id)
     response = gate2(client, login(client), run_id, before.review_digest)
     assert response.status_code == 400 and response.json()["error"]["code"] == "validation_error"

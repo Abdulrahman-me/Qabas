@@ -222,12 +222,9 @@ async def test_reviewer_approval_is_bound_to_the_digest(resources: Resources) ->
                     role="reviewer", email="r@example.test", password_hash="argon2id$x"))
     package = build_packages()[0]
     async with resources.sessionmaker() as db, db.begin():
-        # A gold import must pass the media gate, so this one uses real-looking https media.
-        data = json.loads(json.dumps(package.model_dump(mode="json")).replace("mock-asset://", "https://cdn.qabas.app/"))
-        for record in data["exercises"]:                 # and untimed lesson/assessment items (API §5.7, D-61)
-            if record["purpose"] != "duel":
-                for lang in ("ar", "en"):
-                    record["exercise"][lang]["time_limit_ms"] = None
+        # This checks approval identity, with legitimate compiled visuals rather than fabricated hosted URLs.
+        from tests.content.test_gold import production_like
+        data = production_like(package).model_dump(mode="json")
         first = await import_package(db, LessonPackage.model_validate(data), origin="gold_import")
         lv = await db.get(LessonVersion, first.lesson_version_id)
         assert lv is not None

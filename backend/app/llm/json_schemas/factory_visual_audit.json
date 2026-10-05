@@ -1,0 +1,22 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "issues": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Issues",
+   "type": "array"
+  },
+  "passed": {
+   "title": "Passed",
+   "type": "boolean"
+  }
+ },
+ "required": [
+  "passed",
+  "issues"
+ ],
+ "title": "factory_visual_audit",
+ "type": "object"
+}

@@ -24,7 +24,7 @@ from pydantic import ValidationError
 from sqlalchemy import select
 
 from app.content import validation
-from app.content.package import LessonPackage, sentences_of
+from app.content.package import LessonPackage, content_digest, sentences_of
 from app.content.projection import resolve_items
 from app.contract import contextual
 from app.contract import models as C
@@ -33,6 +33,8 @@ from app.factory.errors import StageOutputInvalid
 from app.factory.orchestrator import StageContext, StageResult
 from app.factory.stage_models import ModelReview
 from app.factory.stages.common import accepted, approved_plan, parse
+from app.media import scenes
+from app.media.service import overlay_bundle
 from app.models import Concept, Misconception, Source, Term, Unit
 
 READING_WORDS = 25
@@ -70,7 +72,12 @@ def assemble(ctx: StageContext) -> tuple[dict[str, Any], dict[str, list[dict[str
     written = accepted(ctx, "write")
     designed = accepted(ctx, "exercises")
     glossary = accepted(ctx, "glossary")
-    localized = accepted(ctx, "localize")
+    localized = (accepted(ctx, "narration")["localized"] if "narration" in ctx.run.artifacts
+                 else accepted(ctx, "localize"))
+    if "scene_render" in ctx.run.artifacts:
+        media = accepted(ctx, "scene_render")
+        localized = {lang: overlay_bundle(localized[lang], media["replacements"][lang], media["point_states"])
+                     for lang in ("ar", "en")}
     terms = {lang: [(t["term_id"], (t["text_ar"] if lang == "ar" else
                                     localized["en"]["glossary"][t["term_id"]]["title"]))
                     for t in glossary["terms"]] for lang in ("ar", "en")}
@@ -103,7 +110,9 @@ def assemble(ctx: StageContext) -> tuple[dict[str, Any], dict[str, list[dict[str
                            "intermediate": {"ar": ar["intermediate"], "en": en["intermediate"]}
                            if ar["intermediate"] else None},
             "example": {"ar": ar["example"], "en": en["example"]}, "concept_id": term["concept_id"],
-            "lesson_id": ctx.run.lesson_id, "source_id": None, "pronunciation_audio_url": None})
+            "lesson_id": ctx.run.lesson_id, "source_id": None,
+            "pronunciation_audio_url": accepted(ctx, "narration").get("pronunciation", {}).get(term["term_id"])
+            if "narration" in ctx.run.artifacts else None})
     misconceptions = []
     for card in designed["misconceptions"]:
         mid = card["misconception_id"]
@@ -127,7 +136,8 @@ def assemble(ctx: StageContext) -> tuple[dict[str, Any], dict[str, list[dict[str
                "plan": plan, "variants": variants, "claims": [row["claim"] for row in verified["claims"]],
                "sentence_map": written["sentence_map"], "arc_map": written["arc_map"], "exercises": exercises,
                "glossary": stored_terms, "misconceptions": misconceptions, "sources": sources}
-    return package, records, written["visuals"]
+    visuals = accepted(ctx, "scene_render")["visuals"] if "scene_render" in ctx.run.artifacts else written["visuals"]
+    return package, records, visuals
 
 
 def build_draft(package: LessonPackage, visuals: list[dict[str, Any]]) -> dict[str, Any]:
@@ -171,15 +181,15 @@ def validation_issues(found: list[validation.Issue], sentence_ids: set[str],
         out.append(issue("blocker", kind, str(item), sentence_id=item.location if item.location in sentence_ids
                          else None, exercise_id=head if head in exercise_ids else None))
     if media:
-        out.append(issue("blocker", "validation", f"{len(media)} placeholder or non-https media URLs (visual and "
-                         f"media stages are not built yet, D-129); first: {media[0]}"))
+        out.append(issue("blocker", "validation",
+                         f"{len(media)} placeholder or non-https media URLs; first: {media[0]}"))
     return out
 
 
 def readiness_issues(visuals: list[dict[str, Any]]) -> list[dict[str, Any]]:
     out = []
     for visual in visuals:
-        state = contextual.visual_readiness(visual, released_capabilities=[])
+        state = contextual.visual_readiness(visual, released_capabilities=scenes.released())
         if state not in contextual.VISUAL_PUBLISHABLE:
             out.append(issue("blocker", "validation", f"visual readiness {state}: Gate 2 needs a compiled or "
                              "audited visual", scene_id=visual["scene_id"]))
@@ -404,10 +414,23 @@ async def run(ctx: StageContext) -> StageResult:
     issues += map_review(parse(ModelReview, pedagogy.data, "qa_review_invalid"), allowed={"pedagogy"},
                          sentence_ids=sentence_ids, exercise_ids=exercise_ids, reasoning_lesson=reasoning_lesson,
                          reviewer="pedagogy")
+    media_objects: list[dict[str, Any]] = []
+    media_scenes: list[dict[str, Any]] = []
+    if "scene_render" in ctx.run.artifacts:
+        media = accepted(ctx, "scene_render")
+        media_objects, media_scenes = media["objects"], media["scenes"]
+        for finding in media["issues"]:
+            issues.append(issue("blocker", finding["kind"], finding["message"], scene_id=finding["scene_id"]))
+    if "narration" in ctx.run.artifacts:
+        media_objects = [*media_objects, *accepted(ctx, "narration")["objects"]]
+    if media_objects:
+        media_objects = [{**record, "binding": {**record["binding"], "reviewed_package_sha256": package.digest()}}
+                         for record in media_objects]
+        issues.append(issue("info", "validation", "reviewed media receipts: " + content_digest(media_objects)))
     report = C.QAReport.model_validate({"issues": issues}).model_dump(mode="json")
     draft = build_draft(package, visuals)
     blockers = sum(1 for i in report["issues"] if i["severity"] == "blocker")
     output = {"draft": draft, "package": package.model_dump(mode="json"), "package_digest": package.digest(),
-              "source_records": records}
+              "source_records": records, "media_objects": media_objects, "media_scenes": media_scenes}
     return StageResult(output=output, inputs={"material": material}, qa_report=report,
                        notes={"blockers": blockers, "issues": len(report["issues"])})

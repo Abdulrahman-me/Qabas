@@ -437,6 +437,8 @@ async def publish(db: AsyncSession, settings: Settings, lesson_version_id: uuid.
     require_valid(package, await _context(db, unit, allow_placeholder_media=fixture))
     await _check_prerequisites(db, package, unit)
     await _check_scenes(db, package)
+    if not fixture:
+        await _check_media(db, settings, package)
 
     await _upsert_sources(db, package)
     await _upsert_misconceptions(db, package)
@@ -567,16 +569,62 @@ async def _check_prerequisites(db: AsyncSession, package: LessonPackage, unit: U
 async def _check_scenes(db: AsyncSession, package: LessonPackage) -> None:
     """Backend §6.5: a scene visual references a published scene version with the same manifest digest."""
     problems = []
-    for lang, variant in package.variant_keys():
-        for ref in scene_refs(package.variants[lang][variant].model_dump(mode="json")):
+    nodes = [package.variants[lang][variant].model_dump(mode="json") for lang, variant in package.variant_keys()]
+    nodes += [record.model_dump(mode="json") for record in package.exercises]
+    for node in nodes:
+        for ref in scene_refs(node):
             row = await db.get(SceneVersion, (ref["scene_id"], ref["version"]))
             if row is None or row.status != "published":
                 problems.append(f"scene {ref['scene_id']} v{ref['version']} is not a published scene version")
             elif row.sha256 != ref["sha256"]:
                 problems.append(f"scene {ref['scene_id']} v{ref['version']}: "
                                 "SceneRef sha256 differs from the stored manifest")
+            else:
+                from app.media import scenes
+                from app.media.errors import MediaInvalid
+                expected = {"scene_id": row.scene_id, "version": row.version, "schema_version": "qabas.scene/1",
+                            "url": row.manifest_url, "sha256": row.sha256, "mime_type": "application/json",
+                            "view_box": row.view_box, "required_capabilities": row.required_capabilities}
+                try:
+                    scenes.bindings({"states": row.states, "anchors": row.anchors, "view_box": row.view_box},
+                                    node, expected)
+                except MediaInvalid as exc:
+                    problems.append(str(exc))
     if problems:
         raise _fail(*sorted(set(problems)))
+
+
+async def _check_media(db: AsyncSession, settings: Settings, package: LessonPackage) -> None:
+    """Every real media URL is backed by a reviewed receipt and the exact immutable production bytes."""
+    from urllib.parse import unquote, urlsplit
+
+    from app.media import objects, publication
+    from app.media.errors import MediaError
+    from app.models import MediaAssetRecord
+    from app.services.platform.storage import Bucket, StorageError, build_storage
+    storage = build_storage(settings)
+    nodes = package.model_dump(mode="json")
+    urls = publication.media_urls({k: nodes[k] for k in ("variants", "exercises", "glossary")})
+    for url in sorted(urls):
+        try:
+            objects.https(url)
+            base = urlsplit(storage.public_url("probe"))
+            parsed = urlsplit(url)
+            prefix = base.path.removesuffix("probe")
+            if parsed.netloc != base.netloc or not parsed.path.startswith(prefix):
+                raise ValueError("media is outside the immutable production content bucket")
+            key = unquote(parsed.path[len(prefix):])
+            if storage.public_url(key) != url:
+                raise ValueError("media URL is not a canonical immutable object identity")
+            rows = list((await db.scalars(select(MediaAssetRecord).where(MediaAssetRecord.content_key == key))).all())
+            if not rows:
+                raise ValueError("media has no reviewed production receipt")
+            record = objects.MediaObject.model_validate(rows[0].receipt)
+            if record.sha256 != rows[0].sha256 or record.content_key != key:
+                raise ValueError("media receipt identity changed")
+            await objects.verify(storage, record, bucket=Bucket.content)
+        except (MediaError, StorageError, ValueError) as exc:
+            raise _fail(f"production media verification: {exc}") from exc
 
 
 def scene_refs(node: Any) -> list[dict[str, Any]]:

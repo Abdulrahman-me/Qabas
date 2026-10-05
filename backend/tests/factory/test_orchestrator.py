@@ -90,8 +90,9 @@ async def test_the_plan_reaches_gate1_with_durable_provenance(resources: Resourc
     assert len(run.cost["calls"]) == 1 and run.cost["calls"][0]["call_key"] == f"{run_id}:plan:1"
     assert run.cost["tokens"]["total"] > 0 and run.cost["usd"] is None
     assert [s["status"] for s in run.stages if s["stage"] == "plan"] == ["done"]
-    assert {s["stage"] for s in run.stages if s["status"] == "skipped"} == {
-        "visuals", "scene_author", "scene_render", "narration"}
+    assert {s["stage"] for s in run.stages if s["status"] == "skipped"} == set()
+    assert all(s["status"] == "pending" for s in run.stages if s["stage"] in {
+        "visuals", "scene_author", "scene_render", "narration"})
     projected = to_contract(run)
     assert projected["status"] == "awaiting_gate1" and projected["review_digest"] == run.review_digest
 

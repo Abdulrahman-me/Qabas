@@ -14,8 +14,10 @@ import uuid
 
 from app.factory.evidence import live_tools
 from app.factory.orchestrator import Orchestrator
+from app.factory.pipeline import MEDIA_STAGES
 from app.factory.stages import EXECUTORS
 from app.llm.client import AnthropicClient
+from app.media.service import MediaService
 from app.runtime import Resources
 from app.workers.celery_app import celery_app
 from app.workers.tasks_maintenance import run_with_resources
@@ -27,16 +29,21 @@ class CeleryDispatcher:
     """Publishes the next stage only after the stage's transaction committed (the orchestrator calls it then)."""
 
     def send(self, run_id: str, stage: str, attempt: int, countdown: float = 0) -> None:
-        celery_app.send_task(TASK, args=[run_id, stage, attempt], queue="factory", countdown=countdown,
+        celery_app.send_task(TASK, args=[run_id, stage, attempt], queue="media" if stage in MEDIA_STAGES else "factory",
+                             countdown=countdown,
                              task_id=f"{run_id}:{stage}:{attempt}:{uuid.uuid4().hex[:8]}")
 
 
 @celery_app.task(name=TASK)
 def run_stage(run_id: str, stage: str, attempt: int) -> str:
     async def job(resources: Resources) -> str:
+        media = MediaService(resources.storage)
         orchestrator = Orchestrator(resources.sessionmaker, resources.settings, AnthropicClient(resources.settings),
                                     CeleryDispatcher(), EXECUTORS,
-                                    services={"sources": live_tools(resources.settings)})
-        return await orchestrator.run_stage(run_id, stage, attempt)
+                                    services={"sources": live_tools(resources.settings), "media": media})
+        try:
+            return await orchestrator.run_stage(run_id, stage, attempt)
+        finally:
+            await media.aclose()
 
     return run_with_resources(job)

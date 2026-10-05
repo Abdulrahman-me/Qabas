@@ -50,8 +50,25 @@ def canonical_test_sources(tmp_path: Path, monkeypatch: Any) -> None:
 
 
 def production_like(package: LessonPackage, title_suffix: str = "") -> LessonPackage:
-    """A real-content shape: hosted https media and untimed lesson/assessment items (D-61)."""
+    """A media-free gold shape using compiled visuals and untimed assessments (D-61).
+
+    URL strings alone are not production media. The dedicated media tests upload and review real bytes.
+    """
     data = json.loads(json.dumps(package.model_dump(mode="json")).replace("mock-asset://", "https://cdn.qabas.app/"))
+    def compiled(node: Any) -> None:
+        if isinstance(node, dict):
+            if node.get("kind") == "image" and "alt" in node and "overlays" in node:
+                node.update(kind="builtin", key="workplace", version=1, params={}, image=None)
+            if "pronunciation_audio_url" in node:
+                node["pronunciation_audio_url"] = None
+            if "narration_audio_url" in node:
+                node["narration_audio_url"] = None
+            for child in node.values():
+                compiled(child)
+        elif isinstance(node, list):
+            for child in node:
+                compiled(child)
+    compiled(data)
     for exercise in data["exercises"]:
         if exercise["purpose"] != "duel":
             for lang in ("ar", "en"):
@@ -258,6 +275,43 @@ async def test_test_fixture_content_never_takes_the_gold_path(resources: Resourc
         with pytest.raises(GoldError, match="not a gold import"):
             await approve_and_publish(db, resources.settings, reviewer_id=reviewer, lesson_id="les_t1_0",
                                       version=result.version, reviewed_digest=package.digest())
+
+
+async def test_gold_publication_requires_actual_reviewed_media_not_only_a_plausible_https_url(
+    resources: Resources,
+) -> None:
+    from sqlalchemy import func
+
+    from app.content.validation import ContentValidationError
+    candidate = gold()
+    data = candidate.lesson.model_dump(mode="json")
+    def replace_visual(node: Any) -> bool:
+        if isinstance(node, dict):
+            if node.get("kind") == "builtin" and "alt" in node:
+                node.update(kind="image", key=None, version=None, params=None,
+                            image={"url": "https://cdn.qabas.app/unverified.webp", "mime_type": "image/webp",
+                                   "width": 1600, "height": 1000})
+                return True
+            return any(replace_visual(value) for value in node.values())
+        if isinstance(node, list):
+            return any(replace_visual(value) for value in node)
+        return False
+    assert replace_visual(data["variants"]["ar"])
+    assert replace_visual(data["variants"]["en"])
+    candidate = candidate.model_copy(update={"lesson": LessonPackage.model_validate(data)})
+    async with resources.sessionmaker() as db, db.begin():
+        await apply_curriculum(db, build_curriculum())
+        reviewer = await _reviewer(db)
+        imported = await import_gold(db, candidate)
+    with pytest.raises(ContentValidationError, match="production media verification"):
+        async with resources.sessionmaker() as db, db.begin():
+            await approve_and_publish(db, resources.settings, reviewer_id=reviewer,
+                                      lesson_id=candidate.lesson.lesson_id,
+                                      version=imported.version, reviewed_digest=candidate.lesson.digest())
+    async with resources.sessionmaker() as db:
+        assert await db.scalar(select(func.count()).select_from(ReviewDecision)) == 0
+        version = await db.get(LessonVersion, imported.lesson_version_id)
+        assert version is not None and version.published_at is None
 
 
 def test_the_convert_command_reports_blockers_and_writes_only_ready_lessons(tmp_path: Path) -> None:

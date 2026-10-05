@@ -33,7 +33,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from app.config import Settings
 from app.content import validation
-from app.content.package import LessonPackage, sentences_of
+from app.content.package import LessonPackage, content_digest, sentences_of
 from app.content.store import Approval, import_package, publish
 from app.content.validation import ContentValidationError
 from app.contract import contextual
@@ -45,15 +45,18 @@ from app.factory.gates import _active_reviewer
 from app.factory.orchestrator import Dispatcher
 from app.factory.runs import to_contract
 from app.factory.stages.qa import issue, readiness_issues, validation_issues
+from app.media import publication
+from app.media.errors import MediaError
 from app.models import FactoryRun, LessonVersion, ReviewDecision, Unit
 from app.services.platform.auth_sessions import utcnow
+from app.services.platform.storage import ObjectStorage, StorageError, build_storage
 from app.sources.errors import SourceError
 from app.sources.mushaf import Mushaf
 from app.sources.records import SourceRecord
 from app.sources.store import citable, persist, source_id
 
 REWRITE_FROM = "write"
-REWRITTEN = ("write", "exercises", "glossary", "localize", "qa")
+REWRITTEN = ("write", "exercises", "glossary", "localize", "visuals", "scene_author", "scene_render", "narration", "qa")
 
 
 @dataclass
@@ -207,7 +210,7 @@ def _blocked(issues: list[dict[str, Any]]) -> ApiError:
 
 
 async def _approve(db: AsyncSession, settings: Settings, run: FactoryRun, body: C.Gate2, reviewer_id: str,
-                   authority: ScriptureAuthority) -> ReviewDecision:
+                   authority: ScriptureAuthority, storage: ObjectStorage) -> ReviewDecision:
     output = (run.artifacts.get("qa") or {}).get("output") or {}
     stored = output.get("package")
     if stored is None or LessonPackage.model_validate(stored).digest() != output.get("package_digest"):
@@ -234,7 +237,12 @@ async def _approve(db: AsyncSession, settings: Settings, run: FactoryRun, body: 
     issues += remaining_model_blockers(run.qa_report, package, edited)
     if issues:
         raise _blocked(issues)
+    if output.get("media_objects") and not any(
+        i["message"] == "reviewed media receipts: " + content_digest(output["media_objects"])
+        for i in run.qa_report["issues"]):
+        raise _blocked([issue("blocker", "validation", "media provenance differs from the reviewed QA fingerprint")])
     try:
+        await publication.validate(storage, settings, output, package)
         for source in package.sources:
             record = records.get(source.source_id)
             if record is None or not citable(record):
@@ -253,11 +261,14 @@ async def _approve(db: AsyncSession, settings: Settings, run: FactoryRun, body: 
                                   published_digest=version.content_sha256, edits=edited.audit, reason=body.reason)
         db.add(decision)
         await db.flush()
+        await publication.promote(db, storage, settings, output, package, decision_id=decision.id, run_id=run.id)
         await publish(db, settings, version.id, Approval(decision.id))
     except ContentValidationError as exc:
         raise _blocked(_issues_of(exc, package)) from None
     except SourceError as exc:      # e.g. SourceChanged: the stored citation differs; a person re-verifies it
         raise _blocked([issue("blocker", "validation", f"source re-verification required: {exc}")]) from None
+    except (MediaError, StorageError) as exc:
+        raise _blocked([issue("blocker", "validation", str(exc))]) from None
     run.status, run.published_lesson_id, run.published_version = "published", version.lesson_id, version.version
     return decision
 
@@ -273,7 +284,8 @@ def _request_changes(run: FactoryRun, decision_id: uuid.UUID, body: C.Gate2, now
     revisions.append({"round": len(revisions) + 1, "decision_id": str(decision_id), "reason": body.reason,
                       "reviewed_digest": body.review_digest, "qa_report": run.qa_report,
                       "artifacts": {stage: run.artifacts[stage] for stage in REWRITTEN if stage in run.artifacts}})
-    run.artifacts = {**{k: v for k, v in run.artifacts.items() if k not in REWRITTEN}, "revisions": revisions}
+    discarded = {*REWRITTEN, "media_previous", "media_regeneration"}
+    run.artifacts = {**{k: v for k, v in run.artifacts.items() if k not in discarded}, "revisions": revisions}
     run.stages = [{**s, "status": "pending", "started_at": None, "finished_at": None}
                   if s["stage"] in REWRITTEN else s for s in run.stages]
     run.stage_timings = {k: v for k, v in run.stage_timings.items() if k not in REWRITTEN}
@@ -285,7 +297,8 @@ def _request_changes(run: FactoryRun, decision_id: uuid.UUID, body: C.Gate2, now
 
 async def decide_gate2(sessionmaker: async_sessionmaker[AsyncSession], settings: Settings, dispatcher: Dispatcher, *,
                        run_id: str, reviewer_id: str, body: C.Gate2,
-                       authority: ScriptureAuthority | None = None) -> dict[str, Any]:
+                       authority: ScriptureAuthority | None = None,
+                       storage: ObjectStorage | None = None) -> dict[str, Any]:
     authority = authority or ScriptureAuthority()
     async with sessionmaker() as db, db.begin():
         await _active_reviewer(db, reviewer_id)
@@ -298,7 +311,8 @@ async def decide_gate2(sessionmaker: async_sessionmaker[AsyncSession], settings:
             raise ApiError(ErrorCode.review_stale, "The draft changed since you reviewed it; review it again.")
         now = utcnow()
         if body.decision == "approve":
-            decision = await _approve(db, settings, run, body, reviewer_id, authority)
+            decision = await _approve(db, settings, run, body, reviewer_id, authority,
+                                      storage or build_storage(settings))
         else:
             decision = ReviewDecision(run_id=run.id, gate=2, decision=body.decision, reviewer_id=reviewer_id,
                                       reviewed_digest=body.review_digest, reason=body.reason)
