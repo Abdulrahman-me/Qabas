@@ -83,6 +83,9 @@ class Settings(BaseSettings):
     media_timeout_seconds: float = 120
     media_narration_enabled: bool = False  # narration is optional and never autoplays (factory §13.2)
     media_pronunciation_enabled: bool = False
+    # Licensed reference recitations (O-06): a directory with recordings.yaml listing each whole-ayah MP3 and its
+    # SHA-256. Unset = no reference recitation audio; recitation activities and evidence audio stay unavailable.
+    media_reference_recordings_dir: Path | None = None
     scene_preview_command: str | None = None  # JSON argv, installed normative Flutter CLI (O-02/O-13)
 
     # Sources (Phase 9; docs/SOURCE_POLICY.md). The canonical mushaf is fetched per environment (D-88).

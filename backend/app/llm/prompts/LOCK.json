@@ -8,8 +8,8 @@
   "version": 1
  },
  "factory_exercises": {
-  "sha256": "e0cdf13492fa2432745d200796b52c8fa926ca35171965781b70cf8637fa499b",
-  "version": 1
+  "sha256": "0432075d3b4b7f9f0f741d869afab48876aaa761c20507d6135bf9aafe49948e",
+  "version": 2
  },
  "factory_glossary": {
   "sha256": "f15c43a3ee1c42f88a385fa3e14f02c5defbd958f315137593487008aed51b3b",
@@ -40,8 +40,8 @@
   "version": 1
  },
  "factory_scene_author": {
-  "sha256": "8cd383ff8361324ab5bd7850ae52c1c0a1129a3e6b8b1c98f110971242270e8d",
-  "version": 1
+  "sha256": "a7c9509d6138e6b07aff6f48a979b1c9ec71af6b02d3d27791e84f14a8f7f82e",
+  "version": 2
  },
  "factory_verify": {
   "sha256": "77390317b39628547a9c273dfa8c79efef10d365da97e2d5f8fcadf6db4e7418",
@@ -52,11 +52,11 @@
   "version": 1
  },
  "factory_visuals": {
-  "sha256": "ad0ae672510e38f6124bb9f419ec7cf5181bfa73c5be6df495391c7d30d68636",
-  "version": 1
+  "sha256": "bf44b62680c9dca68aa50ac05b678dad5da37d91fed17b18eb6a883bdae67dd3",
+  "version": 2
  },
  "factory_write": {
-  "sha256": "34c922c25490613617a24f432878c6a6c00f38a8fa7bb5665b8c6017a78123f1",
-  "version": 3
+  "sha256": "119fd0d14d2cdfd152c4b5db365382ecc896a4ab3f301c0142fa18e18d7ddd2e",
+  "version": 4
  }
 }

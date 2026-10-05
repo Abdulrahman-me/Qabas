@@ -20,11 +20,13 @@ from app.factory import compose
 from app.factory.orchestrator import StageContext, StageResult
 from app.factory.stage_models import WBeat, WriterDraft, WSentence, WVariant
 from app.factory.stages.common import accepted, approved_plan, duplicates, parse, require
+from app.media.recitation import recitation_available
 from app.models import Unit
 
 STORY_TECHNIQUES = {"story", "scenario"}
 PREDICT_TECHNIQUES = {"prediction", "reflection"}
 MAX_CONTENT_EVIDENCE = 3
+MAX_RECITATIONS = 2
 
 
 def variants_for(tracks: list[str]) -> list[str]:
@@ -54,7 +56,7 @@ def _evidence_keys(variant: WVariant) -> list[str]:
 
 
 def check(draft: WriterDraft, plan: dict[str, Any], tracks: list[str], supported: dict[str, dict[str, Any]],
-          registry: dict[str, dict[str, Any]]) -> list[str]:
+          registry: dict[str, dict[str, Any]], *, recitation: bool = False) -> list[str]:
     errors: list[str] = []
     wanted = variants_for(tracks)
     names: list[str] = [v.variant for v in draft.variants]
@@ -107,10 +109,16 @@ def check(draft: WriterDraft, plan: dict[str, Any], tracks: list[str], supported
                     host = f"{block.block_id}.{beat.beat_id}"
                     if figures.setdefault(host, beat.figures) != beat.figures:
                         errors.append(f"{host}: referenced figures must stay the same across tracks")
-        slots = [b for b in variant.blocks if b.type == "exercise_slot"]
+        slots = [b for b in variant.blocks if b.type == "exercise_slot" and b.activity == "graded"]
         if len(slots) != plan["exercise_budget"]:
             errors.append(f"{where}: place exactly the plan's exercise_budget ({plan['exercise_budget']}) "
-                          f"exercise slots (found {len(slots)})")
+                          f"graded exercise slots (found {len(slots)})")
+        recitations = [b for b in variant.blocks if b.type == "exercise_slot" and b.activity == "recitation"]
+        if recitations and not recitation:
+            errors.append(f"{where}: recitation slots need licensed reference recitation audio, which is not "
+                          "available (O-06)")
+        if len(recitations) > MAX_RECITATIONS:
+            errors.append(f"{where}: at most {MAX_RECITATIONS} recitation activities per lesson")
         for topic in variant.completion.review_topics:
             unknown = set(topic.concept_ids) - concepts
             if unknown:
@@ -248,7 +256,7 @@ def compose_variant(run_id: str, variant: WVariant, supported: dict[str, dict[st
                            "caption": compose.span(block.caption) if block.caption else None})
         else:
             blocks.append({"block_id": block.block_id, "type": "exercise", "exercise_id": None,
-                           "intent": block.intent})
+                           "intent": block.intent, "activity": block.activity})
     return blocks, visuals
 
 
@@ -276,17 +284,18 @@ async def run(ctx: StageContext) -> StageResult:
                 "arc_step_id": row["arc_step_id"],
                 "supporting_sources": [e["source"]["source_id"] for e in claim["evidence"] if e["supports"]]}
     registry = {item["evidence_key"]: item for item in verified["evidence"]}
+    recitation = recitation_available(ctx)
     data = {"plan": plan, "variants_to_write": variants_for(tracks), "unit": {"unit_id": unit.id,
             "index": unit.index, "title": unit.title}, "supported_claims": list(supported.values()),
             "evidence": [{"evidence_id": k, "kind": v["kind"], "reference": v["reference"], "text": v["text"],
                           "supports_claims": v["claim_ids"]} for k, v in registry.items()],
-            "style_guide": None, "gold_examples": [],
+            "style_guide": None, "gold_examples": [], "recitation_available": recitation,
             # Gate 2 ``request_changes``: the reviewer's reasons, oldest first (untrusted data, factory §13.1).
             "reviewer_change_requests": [r["reason"] for r in ctx.run.artifacts.get("revisions", [])],
             "previous_attempt_issues": ctx.run.previous_issues}
     result = await ctx.llm.structured("factory_write", data, ledger=ctx.ledger, call_key=ctx.call_key)
     draft = parse(WriterDraft, result.data, "draft_invalid")
-    require(check(draft, plan, tracks, supported, registry), "draft_invalid")
+    require(check(draft, plan, tracks, supported, registry, recitation=recitation), "draft_invalid")
     composed: dict[str, Any] = {}
     visuals: list[dict[str, Any]] = []
     for variant in draft.variants:

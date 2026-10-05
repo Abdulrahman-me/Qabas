@@ -8,8 +8,14 @@ teaches or requires, misconception mappings with cards, and payload sizes.
 
 Ids are minted by code and are opaque: options, items, steps, words and blanks are numbered by their *served*
 position, and ordered banks are served rotated from the key order, so neither an id nor the public order spells
-out the private answer (D-42). ``recite_verse`` and ``map_place`` need the media pipeline (Phase 14, O-06) and
-``timeline_order`` dated event sources, so the designer is not offered them yet.
+out the private answer (D-42).
+
+F-108 bindings (Phase 14): ``timeline_order`` events must each be dated by a supported historical claim (their dates
+are revealed after checking); ``map_place`` names labelled targets that the Animated Scene Author must anchor
+statically, so its pins come from the authored anchors (media stages) and its pin ids are hash-ordered; a
+``recite_verse`` fills a recitation slot (ungraded: accuracy/combo false, layer null) only when licensed reference
+recitation is available (O-06), and its audio and activity source are bound from that licence in ``narration``.
+Until the media stages replace them, both carry reserved placeholders that QA and publication refuse.
 """
 
 from __future__ import annotations
@@ -20,14 +26,19 @@ from typing import Any
 from pydantic import ValidationError
 from sqlalchemy import select
 
+from app.content.package import content_digest
 from app.contract import models as C
 from app.factory import compose
 from app.factory.orchestrator import StageContext, StageResult
 from app.factory.stage_models import ExerciseSet, XExercise
 from app.factory.stages.common import accepted, approved_plan, duplicates, key_of, parse, require
+from app.media.recitation import recitation_available
 from app.models import Misconception
 
 ASSESSMENT = {"pretest": 2, "unit_test": 3, "duel": 3}
+LESSON_ONLY = ("map_place", "recite_verse")            # bound to this lesson's own media (F-108)
+RECITE_MAX_WORDS = 20                                  # contract PReciteVerse
+RECITE_MAX_MS = 30_000                                 # the recitation service's audio limit (Phase 10)
 DUEL_TYPES = ("multiple_choice", "true_false", "verse_meaning")
 NOT_ASSESSMENT = ("flashcard",)
 
@@ -40,9 +51,14 @@ class Builder:
     """Converts one designer item into the stored Arabic exercise (reviewer projection + feedback)."""
 
     def __init__(self, exercise_id: str, x: XExercise, registry: dict[str, dict[str, Any]],
-                 displayed: set[str], misconception_id: Any) -> None:
+                 displayed: set[str], misconception_id: Any, *, historical: frozenset[str] = frozenset(),
+                 mushaf: Any = None, run_id: str = "", recitation: bool = False) -> None:
         self.id, self.x, self.registry, self.displayed = exercise_id, x, registry, displayed
         self.misconception_id = misconception_id
+        self.historical, self.mushaf, self.run_id, self.recitation = historical, mushaf, run_id, recitation
+        self.event_dates: list[dict[str, Any]] = []
+        self.pin_labels: list[dict[str, Any]] = []
+        self.media: dict[str, Any] = {}
         self.errors: list[str] = []
         self.option_misconceptions: dict[str, str] = {}
         self.option_feedback: list[dict[str, Any]] = []
@@ -166,8 +182,80 @@ class Builder:
             verse = self.evidence(x.verse_evidence_id, quran_displayed=True)
             options, correct = self.options()
             return {"verse": verse, "options": options}, {"option_id": correct}
+        if t == "timeline_order":
+            return self.timeline()
+        if t == "map_place":
+            return self.map_place()
+        if t == "recite_verse":
+            return self.recite()
         self.need(bool(x.front) and bool(x.back), "a flashcard has a front and a back")
         return {"front": compose.span(x.front or ""), "back": compose.span(x.back or "")}, None
+
+    def timeline(self) -> tuple[dict[str, Any], dict[str, Any] | None]:
+        events = self.x.events or []
+        self.need(3 <= len(events) <= 7, "3-7 events")
+        self.need(not duplicates([e.event_id for e in events]), "event ids are unique")
+        for event in events:
+            self.need(event.claim_id in self.historical, f"event {event.event_id} is dated by {event.claim_id}, "
+                      "which is not a supported historical claim (dated sources, factory 13.3)")
+        served = _rotate(list(range(len(events))))
+        self.event_dates = [{"event_id": f"t{i}", "label": events[k].date_label} for i, k in enumerate(served, 1)]
+        return ({"events": [{"event_id": f"t{i}", "spans": compose.span(events[k].text)}
+                            for i, k in enumerate(served, start=1)]},
+                {"order": [f"t{served.index(k) + 1}" for k in range(len(events))]})
+
+    def map_place(self) -> tuple[dict[str, Any], dict[str, Any] | None]:
+        x = self.x
+        targets = x.targets or []
+        self.need(3 <= len(targets) <= 6, "3-6 labelled targets")
+        self.need(not duplicates([t.target_id for t in targets]), "target ids are unique")
+        self.need(bool(x.map_brief), "a map_brief describing the scene to generate")
+        self.need(x.correct_option_id in {t.target_id for t in targets}, "correct_option_id names a target")
+        # Pin ids are opaque and their order is hash-based, so no fixed position can hint at the answer.
+        order = sorted(targets, key=lambda t: content_digest({"exercise": self.id, "target": t.target_id}))
+        pins = [{"pin_id": f"p{i}", "x_pct": round(100 * i / (len(order) + 1), 2), "y_pct": 50.0,
+                 "label": t.label, "radius_pct": None, "anchor_id": None} for i, t in enumerate(order, start=1)]
+        pin_of = {t.target_id: f"p{i}" for i, t in enumerate(order, start=1)}
+        self.pin_labels = [{"pin_id": pin_of[t.target_id], "label": t.label} for t in order]
+        self.media = {"map": {"brief": x.map_brief, "targets": [
+            {"pin_id": pin_of[t.target_id], "target_id": t.target_id, "label": t.label} for t in order]}}
+        visual = compose.placeholder_visual(self.run_id, self.id, x.map_brief or x.prompt)
+        return ({"presentation": "hotspots", "visual": visual, "question": compose.span(x.prompt), "pins": pins,
+                 "interaction": None}, {"pin_id": pin_of.get(x.correct_option_id or "")})
+
+    def recite(self) -> tuple[dict[str, Any], dict[str, Any] | None]:
+        x = self.x
+        if not self.need(self.recitation, "recitation needs licensed reference recitation audio (O-06)"):
+            return {}, None
+        item = self.registry.get(x.verse_evidence_id or "")
+        quran = ((item or {}).get("evidence", {}).get("ar") or {}).get("quran")
+        if not self.need(quran is not None, "recite_verse recites a verified Qur'an evidence item"):
+            return {}, None
+        assert item is not None and quran is not None and self.mushaf is not None
+        if not self.need(quran["ayah_start"] == quran["ayah_end"], "recite_verse recites one ayah or a segment"):
+            return {}, None
+        surah, ayah = quran["surah"], quran["ayah_start"]
+        count = len(self.mushaf.get(surah, ayah).words)
+        segment = (x.word_start, x.word_end)
+        if segment == (None, None):
+            start, end = 1, count
+        elif None in segment or not 1 <= (x.word_start or 0) <= (x.word_end or 0) <= count:
+            self.need(False, f"word_start/word_end lie within the ayah's {count} words (both null for all)")
+            return {}, None
+        else:
+            start, end = x.word_start or 1, x.word_end or count
+        self.need(end - start + 1 <= RECITE_MAX_WORDS, f"at most {RECITE_MAX_WORDS} recited words")
+        whole = segment == (None, None)
+        passage = self.mushaf.get(surah, ayah, word_start=None if whole else start, word_end=None if whole else end)
+        self.sources.append(item["source_id"])
+        self.media = {"recitation": {"evidence_key": x.verse_evidence_id, "surah": surah, "ayah": ayah,
+                                     "word_range": None if whole else [start, end]}}
+        return ({"surah": surah, "ayah": ayah, "word_start": None if whole else start,
+                 "word_end": None if whole else end, "text_uthmani": passage.text_uthmani,
+                 "audio": {"reciter": "pending", "url": f"mock-asset://factory/{self.run_id}/{self.id}.mp3",
+                           "words": None},
+                 "transliteration": None, "meaning": None, "source_id": item["source_id"],
+                 "max_duration_ms": RECITE_MAX_MS, "skippable": True}, None)
 
     def fill_blank(self) -> tuple[dict[str, Any], dict[str, Any] | None]:
         segments, words = self.x.segments or [], self.x.words or []
@@ -216,7 +304,8 @@ class Builder:
             return None
         body = {"exercise_id": self.id, "type": x.type, "concept_ids": list(x.concept_ids),
                 "prompt": compose.span(x.prompt), "time_limit_ms": None,
-                "scoring": {"accuracy": True, "combo": True, "layer": x.layer}, "framing": framing,
+                "scoring": {"accuracy": False, "combo": False, "layer": None} if x.type == "recite_verse"
+                else {"accuracy": True, "combo": True, "layer": x.layer}, "framing": framing,
                 "payload": payload, "answer_key": key, "option_misconceptions": self.option_misconceptions,
                 "duel_eligible": purpose == "duel"}
         try:
@@ -225,23 +314,32 @@ class Builder:
             self.errors.append(f"{x.exercise_id} ({x.type}): {error.errors()[0]['msg']}")
             return None
         feedback = {"explanation": compose.span(x.explanation), "option_feedback": self.option_feedback,
-                    "event_dates": [], "pin_labels": []}
+                    "event_dates": self.event_dates, "pin_labels": self.pin_labels}
         return {"exercise_id": self.id, "purpose": purpose, "exercise": exercise, "feedback": feedback,
                 "targets_misconception_id": target, "source_ids": sorted(set(self.sources)),
-                "slot_block_id": x.slot_block_id, "designer_id": x.exercise_id}
+                "slot_block_id": x.slot_block_id, "designer_id": x.exercise_id, "media": self.media}
 
 
-def check(designed: ExerciseSet, plan: dict[str, Any], slots: list[str]) -> list[str]:
+def check(designed: ExerciseSet, plan: dict[str, Any], slots: list[str],
+          recitation_slots: list[str] | None = None) -> list[str]:
     errors = [f"duplicate exercise id {e}" for e in duplicates([x.exercise_id for x in designed.exercises])]
     concepts = set(plan["introduced_concept_ids"]) | set(plan["prerequisite_concept_ids"])
-    placed = [x for x in designed.exercises if x.purpose == "lesson" and x.type != "flashcard"]
+    placed = [x for x in designed.exercises
+              if x.purpose == "lesson" and x.type not in ("flashcard", "recite_verse")]
     filled = [x.slot_block_id for x in placed]
     if sorted(s or "" for s in filled) != sorted(slots) or duplicates([s or "" for s in filled]):
         errors.append(f"exactly one graded lesson exercise fills each writer slot {slots} (got {filled}); unused "
                       "candidates are dropped, not kept")
+    recitations = [x.slot_block_id for x in designed.exercises if x.type == "recite_verse"]
+    if sorted(s or "" for s in recitations) != sorted(recitation_slots or []) or duplicates(
+            [s or "" for s in recitations]):
+        errors.append(f"exactly one recite_verse fills each recitation slot {recitation_slots or []} "
+                      f"(got {recitations})")
     for x in designed.exercises:
         if (x.purpose != "lesson" or x.type == "flashcard") and x.slot_block_id is not None:
-            errors.append(f"{x.exercise_id}: only graded lesson exercises fill slots")
+            errors.append(f"{x.exercise_id}: only lesson exercises fill slots")
+        if x.type in LESSON_ONLY and x.purpose != "lesson":
+            errors.append(f"{x.exercise_id}: {x.type} is bound to this lesson's own media (lesson purpose only)")
         unknown = set(x.concept_ids) - concepts
         if unknown:
             errors.append(f"{x.exercise_id}: concepts {sorted(unknown)} are neither taught nor required here")
@@ -269,7 +367,13 @@ async def run(ctx: StageContext) -> StageResult:
     verified = accepted(ctx, "verify_evidence")
     registry = {item["evidence_key"]: item for item in verified["evidence"]}
     first = next(iter(written["variants"].values()))
-    slots = [b["block_id"] for b in first["blocks"] if b["type"] == "exercise"]
+    slots = [b["block_id"] for b in first["blocks"] if b["type"] == "exercise" and b.get("activity") != "recitation"]
+    recitation_slots = [b["block_id"] for b in first["blocks"]
+                        if b["type"] == "exercise" and b.get("activity") == "recitation"]
+    decomposed = {c["claim_id"]: c for c in accepted(ctx, "decompose")["claims"]}
+    historical = frozenset(r["claim"]["claim_id"] for r in verified["claims"] if r["claim"]["status"] == "supported"
+                           and decomposed.get(r["claim"]["claim_id"], {}).get("kind") == "historical")
+    recitation = recitation_available(ctx)
     writer_first = written["writer"]["variants"][0]
     displayed = {b.get("evidence_id") for b in writer_first["blocks"] if b["type"] in ("evidence", "teach")}
     displayed |= {beat.get("quote_evidence_id") for b in writer_first["blocks"] if b["type"] == "story"
@@ -281,8 +385,9 @@ async def run(ctx: StageContext) -> StageResult:
     slot_steps = {block_id: row["step_id"] for row in written["arc_map"] for block_id in row["block_ids"]}
     data = {"plan": plan,
             "slots": [{"slot_block_id": b["block_id"], "intent": b["intent"],
-                       "arc_step": steps[slot_steps[b["block_id"]]]}
+                       "activity": b.get("activity", "graded"), "arc_step": steps[slot_steps[b["block_id"]]]}
                       for b in first["blocks"] if b["type"] == "exercise"],
+            "historical_claims": sorted(historical), "recitation_available": recitation,
             "lesson_text": written["writer"]["variants"][0],
             "supported_claims": [r["claim"] for r in verified["claims"] if r["claim"]["status"] == "supported"],
             "evidence": [{"evidence_id": k, "kind": v["kind"], "reference": v["reference"], "text": v["text"],
@@ -292,7 +397,7 @@ async def run(ctx: StageContext) -> StageResult:
             "previous_attempt_issues": ctx.run.previous_issues}
     result = await ctx.llm.structured("factory_exercises", data, ledger=ctx.ledger, call_key=ctx.call_key)
     designed = parse(ExerciseSet, result.data, "exercises_invalid")
-    errors = check(designed, plan, slots)
+    errors = check(designed, plan, slots, recitation_slots)
     key = key_of(ctx.run.id)
     new_ids = {m.misconception_id: f"mis_{key}_{i}" for i, m in enumerate(designed.misconceptions, start=1)
                if m.misconception_id not in existing}
@@ -307,12 +412,20 @@ async def run(ctx: StageContext) -> StageResult:
                                                                    set(plan["prerequisite_concept_ids"])):
             errors.append(f"{card.misconception_id}: concept {card.concept_id} is not part of this lesson")
     records = []
-    for index, x in enumerate(designed.exercises, start=1):
-        builder = Builder(f"ex_{key}_{index}", x, registry, {k for k in displayed if k}, misconception_id)
-        record = builder.build(x.purpose)
-        errors += builder.errors
-        if record is not None:
-            records.append(record)
+    make_tools = ctx.services.get("sources") if recitation else None
+    tools = make_tools() if make_tools is not None else None
+    try:
+        for index, x in enumerate(designed.exercises, start=1):
+            builder = Builder(f"ex_{key}_{index}", x, registry, {k for k in displayed if k}, misconception_id,
+                              historical=historical, mushaf=tools.mushaf if tools is not None else None,
+                              run_id=ctx.run.id, recitation=recitation and tools is not None)
+            record = builder.build(x.purpose)
+            errors += builder.errors
+            if record is not None:
+                records.append(record)
+    finally:
+        if tools is not None:
+            await tools.aclose()
     require(errors, "exercises_invalid")
     slot_exercise = {r["slot_block_id"]: r["exercise_id"] for r in records if r["slot_block_id"]}
     misconceptions = [{"misconception_id": new_ids[m.misconception_id], "concept_id": m.concept_id,

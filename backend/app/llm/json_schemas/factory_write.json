@@ -204,6 +204,14 @@
   "WExerciseSlot": {
    "additionalProperties": false,
    "properties": {
+    "activity": {
+     "enum": [
+      "graded",
+      "recitation"
+     ],
+     "title": "Activity",
+     "type": "string"
+    },
     "block_id": {
      "title": "Block Id",
      "type": "string"
@@ -224,7 +232,8 @@
    "required": [
     "block_id",
     "type",
-    "intent"
+    "intent",
+    "activity"
    ],
    "title": "WExerciseSlot",
    "type": "object"

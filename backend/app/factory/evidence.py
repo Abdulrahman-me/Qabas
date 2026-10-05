@@ -16,6 +16,7 @@ from __future__ import annotations
 import re
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass, replace
+from pathlib import Path
 from typing import Any, Protocol
 
 from pydantic import TypeAdapter
@@ -27,7 +28,7 @@ from app.sources.errors import SourceError
 from app.sources.mushaf import Mushaf, ReferenceNotFound
 from app.sources.normalize import normalize_ar
 from app.sources.records import Part, SourceRecord
-from app.sources.scripture import ScriptureBindings, prepare_references
+from app.sources.scripture import TRANSLATIONS, ScriptureBindings, prepare_references
 from app.sources.store import citable as store_citable
 from app.sources.store import source_id
 
@@ -43,12 +44,14 @@ class SourceTools(Protocol):
     """What the retrieve stage may call. Production: :class:`LiveSourceTools`; tests: a synthetic stand-in."""
 
     mushaf: Mushaf
+    translation_manifest: Path               # the specialist's translation selection the bundles were verified with
 
     async def scripture(self, references: Sequence[str]) -> ScriptureBindings: ...
     async def hadith_search(self, text: str) -> list[SourceRecord]: ...
     async def hadeethenc(self, hadith_id: str, language: str) -> SourceRecord: ...
     async def islamhouse(self, item_id: str, language: str) -> SourceRecord: ...
     async def tafsir(self, surah: int, ayah: int, book: str) -> SourceRecord: ...
+    async def quran_audio(self, surah: int, ayah: int, reciter_id: int) -> SourceRecord: ...
     async def aclose(self) -> None: ...
 
 
@@ -58,6 +61,7 @@ class LiveSourceTools:
 
     def __init__(self, settings: Settings, mushaf: Mushaf) -> None:
         self.settings, self.mushaf = settings, mushaf
+        self.translation_manifest = TRANSLATIONS
         self._adapters: dict[str, Any] = {}
 
     def _adapter(self, name: str) -> Any:
@@ -71,6 +75,9 @@ class LiveSourceTools:
             elif name == "islamhouse":
                 from app.sources.providers.islamhouse import IslamHouse
                 self._adapters[name] = IslamHouse.create(self.settings)
+            elif name == "quran_com":
+                from app.sources.providers.quran_foundation import QuranFoundation
+                self._adapters[name] = QuranFoundation.create(self.settings)
             elif name == "tafsir_center":
                 from app.sources.providers.tafsir_center import TafsirCenter
                 self._adapters[name] = TafsirCenter(self.settings)
@@ -95,6 +102,11 @@ class LiveSourceTools:
 
     async def tafsir(self, surah: int, ayah: int, book: str) -> SourceRecord:
         record: SourceRecord = await self._adapter("tafsir_center").get(surah, ayah, book)
+        return record
+
+    async def quran_audio(self, surah: int, ayah: int, reciter_id: int) -> SourceRecord:
+        """Capability data (audio URL + word timings) of the approved reciter; never cited, never the text."""
+        record: SourceRecord = await self._adapter("quran_com").audio(surah, ayah, reciter_id)
         return record
 
     async def aclose(self) -> None:

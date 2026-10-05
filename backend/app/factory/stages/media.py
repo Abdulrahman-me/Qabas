@@ -19,9 +19,11 @@ from app.llm.vision import VisionImage
 from app.media import coverage, jobs, medallions, objects, scenes
 from app.media.errors import MediaInvalid, MediaNotConfigured
 from app.media.policy import scene_author_inputs
+from app.media.recitation import recitation_available, reference_audio
 from app.media.service import service
 from app.media.stage_models import AuthoredScene, VisualAudit, VisualSelection
 from app.services.platform.storage import sha256_hex
+from app.sources.store import source_id
 
 
 def _material(ctx: StageContext) -> dict[str, Any]:
@@ -57,9 +59,13 @@ async def visuals(ctx: StageContext) -> StageResult:
             "brief_id": item["scene_id"],
             "brief": item["visual"]["alt"],
             "figures": written.get("figures", {}).get(item["scene_id"], []),
+            "anchors": [],
         }
         for item in written["visuals"]
     ]
+    # F-108: a map_place exercise's scene must anchor each labelled target statically (factory 13.8 rules).
+    briefs += [{"brief_id": eid, "brief": brief["brief"], "figures": [], "anchors": brief["anchors"]}
+               for eid, brief in map_briefs(ctx).items()]
     material = _material(ctx)
     inputs = {
         "briefs": briefs,
@@ -97,12 +103,19 @@ async def visuals(ctx: StageContext) -> StageResult:
         "point_states": {},
     }
     expected_figures = {b["brief_id"]: b["figures"] for b in briefs}
+    anchored = {b["brief_id"] for b in briefs if b["anchors"]}
     grouped: dict[str, list[dict[str, Any]]] = {}
     for item in selections:
         grouped.setdefault(item["group"], []).append(item)
         require(
             ["visual selector changed the writer's referenced figures"]
             if item["figures"] != expected_figures[item["brief_id"]]
+            else [],
+            "visual_selection_invalid",
+        )
+        require(
+            [f"{item['brief_id']}: a hotspot exercise needs a generated scene with static anchors"]
+            if item["brief_id"] in anchored and item["kind"] != "scene"
             else [],
             "visual_selection_invalid",
         )
@@ -220,6 +233,7 @@ async def scene_author(ctx: StageContext) -> StageResult:
             "authoring_references": references,
             "prompt": get_prompt("factory_scene_author").identity(),
             "visual_audit_feedback": ctx.run.artifacts.get("media_scene_audit_feedback", []),
+            "required_anchors": [a for m in members for a in map_briefs(ctx).get(m["brief_id"], {}).get("anchors", [])],
         }
         errors: list[str] = []
         manifest: dict[str, Any] = {}
@@ -281,6 +295,9 @@ async def scene_author(ctx: StageContext) -> StageResult:
                     if not built["audit"]["passed"]:
                         failed_assets.append(art.asset_id)
                 found = scenes.validate(authored, raw_assets)
+                declared = {a["anchor_id"] for a in authored.get("anchors", [])}
+                found += [f"required hotspot anchor {a['anchor_id']} ({a['label']}) is not declared"
+                          for a in base["required_anchors"] if a["anchor_id"] not in declared]
                 if not found:
                     try:
                         for member in members:
@@ -340,7 +357,9 @@ async def scene_render(ctx: StageContext) -> StageResult:
         "scenes": [],
         "issues": [*selected["issues"], *authored["issues"]],
         "point_states": selected["point_states"],
+        "pins": {},
     }
+    maps = map_briefs(ctx)
     for row in authored["scenes"]:
         if media.previewer is None:
             from app.media.preview_cli import configured
@@ -568,6 +587,9 @@ async def scene_render(ctx: StageContext) -> StageResult:
                 "overlays": overlays["ar"],
             }
             output["visuals"].append({**rendered["draft_visual"], "scene_id": member["brief_id"], "visual": visual})
+            if member["brief_id"] in maps:
+                output["pins"][member["brief_id"]] = pins_from_anchors(rendered["scene"]["manifest"],
+                                                                       maps[member["brief_id"]])
             for language in ("ar", "en"):
                 output["replacements"][language][member["brief_id"]] = {
                     **visual,
@@ -607,11 +629,158 @@ async def narration(ctx: StageContext) -> StageResult:
                 result["object"]
             ).public_url(media.storage)
             output["objects"].append(result["object"])
+    await reference_recitation(ctx, media, output)
     return StageResult(
         output=output,
         inputs={
             "localized_digest": content_digest(accepted(ctx, "localize")),
             "narration_enabled": ctx.settings.media_narration_enabled,
             "pronunciation_enabled": ctx.settings.media_pronunciation_enabled,
+            "recitation_available": recitation_available(ctx),
         },
     )
+
+
+async def reference_recitation(ctx: StageContext, media: Any, output: dict[str, Any]) -> None:
+    """Factory 13.1 stage 9, Qur'an part: licensed reference audio and word timings, never TTS (D-155).
+
+    * Each ``recite_verse`` gets an exact cut of the approved reciter's licensed recording; its audio and its own
+      activity source (the verified segment bundle carrying that clip) replace the reserved placeholders.
+    * Each displayed single-ayah Qur'an evidence gets the whole-ayah clip with word timings. The scripture source
+      identity binds its audio, so the evidence's source id changes; ``rebinds`` maps old → new and the package is
+      rebound consistently in QA (claims, blocks, exercises, sources). Multi-ayah passages stay without audio
+      (the capability timings identify one ayah).
+    Without an approved licence and library (O-06) nothing is attached: recitation activities were never offered
+    and evidence audio stays null, which the contract allows.
+    """
+    output.update(recitations={}, rebinds={}, scripture={})
+    if not recitation_available(ctx):
+        return
+    make_tools = ctx.services.get("sources")
+    if make_tools is None:
+        raise MediaNotConfigured("reference recitation needs the source tools")
+    tools = make_tools()
+    try:
+        localized = output["localized"]
+        for record in accepted(ctx, "exercises")["exercises"]:
+            binding = (record.get("media") or {}).get("recitation")
+            if not binding:
+                continue
+            word_range = tuple(binding["word_range"]) if binding["word_range"] else None
+            arabic, _, receipt = await reference_audio(ctx, media.storage, mushaf=tools.mushaf, tools=tools,
+                                                       surah=binding["surah"], ayah=binding["ayah"],
+                                                       word_range=word_range)
+            identity = source_id(arabic.source)
+            audio = arabic.evidence.quran.audio.model_dump(mode="json")
+            output["recitations"][record["exercise_id"]] = {"audio": audio, "source_id": identity}
+            output["scripture"][identity] = _scripture(arabic)
+            output["objects"].append(receipt.model_dump(mode="json"))
+            for language in ("ar", "en"):
+                payload = localized[language]["exercises"][record["exercise_id"]]["exercise"]["payload"]
+                payload.update(audio=audio, source_id=identity)
+        candidates = {c["source_id"]: c for c in accepted(ctx, "retrieve")["candidates"]}
+        used = _evidence_ids(localized)
+        for item in accepted(ctx, "verify_evidence")["evidence"]:
+            quran = (item["evidence"]["ar"] or {}).get("quran")
+            if item["kind"] != "quran" or item["source_id"] not in used or quran is None:
+                continue
+            if quran["ayah_start"] != quran["ayah_end"]:
+                output["issues"].append({"kind": "validation", "scene_id": None, "message":
+                                         f"{item['source_id']}: multi-ayah evidence has no reference audio"})
+                continue
+            from app.factory.evidence import load_record
+            chain = [load_record(r) for r in candidates[item["source_id"]]["records"][1:]]
+            translations = tuple(r for r in chain if r.provider == "quranenc")
+            arabic, english, receipt = await reference_audio(ctx, media.storage, mushaf=tools.mushaf, tools=tools,
+                                                             surah=quran["surah"], ayah=quran["ayah_start"],
+                                                             word_range=None, translations=translations)
+            identity = source_id(arabic.source)
+            output["rebinds"][item["source_id"]] = {
+                "source_id": identity, "ar": arabic.evidence.model_dump(mode="json"),
+                "en": (english or arabic).evidence.model_dump(mode="json")}
+            output["scripture"][identity] = _scripture(arabic)
+            output["objects"].append(receipt.model_dump(mode="json"))
+        for language in ("ar", "en"):
+            localized[language] = rebind(localized[language], output["rebinds"], language)
+    finally:
+        await tools.aclose()
+
+
+def _scripture(verified: Any) -> dict[str, Any]:
+    from app.factory.evidence import dump_record, public_source
+    return {"source": public_source(verified.source),
+            "records": [dump_record(r) for r in (verified.source, *verified.records)]}
+
+
+def _evidence_ids(node: Any) -> set[str]:
+    found: set[str] = set()
+
+    def walk(value: Any) -> None:
+        if isinstance(value, dict):
+            if "evidence_id" in value and "kind" in value:
+                found.add(value["evidence_id"])
+            for child in value.values():
+                walk(child)
+        elif isinstance(value, list):
+            for child in value:
+                walk(child)
+
+    walk(node)
+    return found
+
+
+def rebind(node: Any, rebinds: dict[str, dict[str, Any]], language: str | None) -> Any:
+    """Replace verified evidence objects by their audio-bearing bundle and rename the source id everywhere it is
+    cited (``evidence_id``/``source_id``/``source_ids``). Ids are hashes, so exact matches cannot collide."""
+    if not rebinds:
+        return node
+    renamed = {old: new["source_id"] for old, new in rebinds.items()}
+
+    def walk(value: Any, lang: str | None) -> Any:
+        if isinstance(value, dict):
+            if value.get("evidence_id") in rebinds and "kind" in value and lang in ("ar", "en"):
+                return copy.deepcopy(rebinds[value["evidence_id"]][lang])
+            out = {}
+            for key, child in value.items():
+                child_lang = key if key in ("ar", "en") else lang
+                if key in ("evidence_id", "source_id") and isinstance(child, str):
+                    out[key] = renamed.get(child, child)
+                elif key == "source_ids" and isinstance(child, list):
+                    out[key] = [renamed.get(s, s) if isinstance(s, str) else s for s in child]
+                else:
+                    out[key] = walk(child, child_lang)
+            return out
+        if isinstance(value, list):
+            return [walk(child, lang) for child in value]
+        return value
+
+    return walk(node, language)
+
+
+def map_briefs(ctx: StageContext) -> dict[str, dict[str, Any]]:
+    """map_place exercises authored by the Exercise Designer: their scene brief and labelled targets."""
+    if "exercises" not in ctx.run.artifacts:
+        return {}
+    found = {}
+    for record in accepted(ctx, "exercises")["exercises"]:
+        brief = (record.get("media") or {}).get("map")
+        if brief:
+            found[record["exercise_id"]] = {
+                "brief": brief["brief"], "targets": brief["targets"],
+                "anchors": [{"anchor_id": t["target_id"], "label": t["label"]} for t in brief["targets"]]}
+    return found
+
+
+def pins_from_anchors(manifest: dict[str, Any], brief: dict[str, Any]) -> list[dict[str, Any]]:
+    """Hotspot pins at the authored static anchors (percent of the view box, tap radius at most 25 %)."""
+    anchors = {a["anchor_id"]: a for a in manifest["anchors"]}
+    width, height = manifest["view_box"]["width"], manifest["view_box"]["height"]
+    pins = []
+    for target in brief["targets"]:
+        anchor = anchors.get(target["target_id"])
+        if anchor is None:
+            raise MediaInvalid(f"hotspot target {target['target_id']} has no static anchor")
+        pins.append({"pin_id": target["pin_id"], "anchor_id": anchor["anchor_id"],
+                     "x_pct": round(100 * anchor["x"] / width, 4), "y_pct": round(100 * anchor["y"] / height, 4),
+                     "radius_pct": min(25.0, round(100 * anchor["radius"] / width, 4))})
+    return pins

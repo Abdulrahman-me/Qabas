@@ -19,6 +19,38 @@
    "title": "XCategory",
    "type": "object"
   },
+  "XEvent": {
+   "additionalProperties": false,
+   "properties": {
+    "claim_id": {
+     "title": "Claim Id",
+     "type": "string"
+    },
+    "date_label": {
+     "minLength": 1,
+     "title": "Date Label",
+     "type": "string"
+    },
+    "event_id": {
+     "pattern": "^o_[0-9a-z_]{1,40}$",
+     "title": "Event Id",
+     "type": "string"
+    },
+    "text": {
+     "minLength": 1,
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "event_id",
+    "text",
+    "date_label",
+    "claim_id"
+   ],
+   "title": "XEvent",
+   "type": "object"
+  },
   "XExercise": {
    "additionalProperties": false,
    "properties": {
@@ -76,6 +108,20 @@
       }
      ],
      "title": "Correct Value"
+    },
+    "events": {
+     "anyOf": [
+      {
+       "items": {
+        "$ref": "#/$defs/XEvent"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Events"
     },
     "evidence_ids": {
      "items": {
@@ -148,6 +194,17 @@
       }
      ],
      "title": "Layer"
+    },
+    "map_brief": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Map Brief"
     },
     "myth_statement": {
      "anyOf": [
@@ -264,6 +321,20 @@
      ],
      "title": "Steps"
     },
+    "targets": {
+     "anyOf": [
+      {
+       "items": {
+        "$ref": "#/$defs/XTarget"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Targets"
+    },
     "targets_misconception_id": {
      "anyOf": [
       {
@@ -288,7 +359,10 @@
       "spot_error",
       "which_evidence",
       "verse_meaning",
-      "flashcard"
+      "flashcard",
+      "timeline_order",
+      "map_place",
+      "recite_verse"
      ],
      "title": "Type",
      "type": "string"
@@ -303,6 +377,28 @@
       }
      ],
      "title": "Verse Evidence Id"
+    },
+    "word_end": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Word End"
+    },
+    "word_start": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Word Start"
     },
     "words": {
      "anyOf": [
@@ -345,7 +441,12 @@
     "evidence_option_ids",
     "verse_evidence_id",
     "front",
-    "back"
+    "back",
+    "events",
+    "word_start",
+    "word_end",
+    "map_brief",
+    "targets"
    ],
    "title": "XExercise",
    "type": "object"
@@ -533,6 +634,27 @@
     "blank_id"
    ],
    "title": "XSegment",
+   "type": "object"
+  },
+  "XTarget": {
+   "additionalProperties": false,
+   "properties": {
+    "label": {
+     "minLength": 1,
+     "title": "Label",
+     "type": "string"
+    },
+    "target_id": {
+     "pattern": "^[a-z][a-z0-9_]{0,40}$",
+     "title": "Target Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "target_id",
+    "label"
+   ],
+   "title": "XTarget",
    "type": "object"
   },
   "XWord": {

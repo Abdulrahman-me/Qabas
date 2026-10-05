@@ -80,6 +80,7 @@ class SyntheticTools:
 
     def __post_init__(self) -> None:
         self.mushaf = synthetic.mushaf()
+        self.translation_manifest = self.translations or TRANSLATIONS
 
     def _enter(self, tool: str) -> None:
         self.calls.append(tool)
@@ -182,9 +183,9 @@ def write(data: dict[str, Any], **changes: Any) -> dict[str, Any]:
              {"point_id": "p1", "sentence": sentence("s_t1", "جملة تجريبية تدعمها الأدلة", "claim", ["c1"])},
              {"point_id": "p2", "sentence": sentence("s_t2", f"يسمى هذا {TERM_AR} في الدرس", "claim", ["c2"])}]},
         {"block_id": "b_ev", "type": "evidence", "evidence_id": keys["hadith"], "caption": "تعليق تجريبي"},
-        {"block_id": "b_x1", "type": "exercise_slot", "intent": "recognise the idea"},
-        {"block_id": "b_x2", "type": "exercise_slot", "intent": "apply the idea"},
-        {"block_id": "b_x3", "type": "exercise_slot", "intent": "order the steps"},
+        {"block_id": "b_x1", "type": "exercise_slot", "intent": "recognise the idea", "activity": "graded"},
+        {"block_id": "b_x2", "type": "exercise_slot", "intent": "apply the idea", "activity": "graded"},
+        {"block_id": "b_x3", "type": "exercise_slot", "intent": "order the steps", "activity": "graded"},
         {"block_id": "b_sum", "type": "teach", "eyebrow": None, "title": "خلاصة", "style": "summary",
          "evidence_id": None, "visual_brief": None, "points": [
              {"point_id": "q1", "sentence": sentence("s_sum1", "خلاصة تجريبية", "claim", ["c1"])},
@@ -208,7 +209,7 @@ EMPTY = {"slot_block_id": None, "layer": "understand", "myth_statement": None, "
          "evidence_ids": [], "statement": None, "correct_value": None, "situation": None, "options": None,
          "correct_option_id": None, "pairs": None, "categories": None, "items": None, "steps": None,
          "segments": None, "words": None, "evidence_option_ids": None, "verse_evidence_id": None, "front": None,
-         "back": None}
+         "back": None, "events": None, "word_start": None, "word_end": None, "map_brief": None, "targets": None}
 
 
 def item(xid: str, purpose: str, kind: str, **fields: Any) -> dict[str, Any]:

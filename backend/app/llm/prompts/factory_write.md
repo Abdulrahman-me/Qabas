@@ -1,6 +1,6 @@
 ---
 id: factory_write
-version: 3
+version: 4
 tier: strong
 effort: high
 thinking: adaptive
@@ -18,7 +18,7 @@ Write each variant with the same block skeleton (same block ids, types and order
 - `story`: only in a story or scenario step. A teaching scenario (`sourced: false`, `origin_title` null) is recognisably fictional, asserts nothing (no `claim` sentences), never quotes and never attributes words or deeds to prophets, companions, scholars or scripture. A sourced story (`sourced: true`) names its origin, its narration sentences are claims linked to supported claims, and quoted words appear only as `quote_evidence_id` (code inserts the verbatim text) with an optional `quote_meaning`. Narration never contains quoted speech or invented dialogue. Each beat has a `visual_brief`.
 - `teach` cards: `standard` (1-5 points revealed progressively, at most one `evidence_id`) or `summary` (2-5 points restating only what was taught, only in the takeaway step, at most one per lesson).
 - `paragraph`, `callout` (`tip`/`note`), `evidence` (a verified item by id, optional caption).
-- `exercise_slot`: where a graded exercise goes, with the `intent` it must test. Place exactly the plan's `exercise_budget` slots, after the content they test, spread along the arc.
+- `exercise_slot`: where an exercise goes, with the `intent` it must test and its `activity`. Place exactly the plan's `exercise_budget` slots with `activity: graded`, after the content they test, spread along the arc. Only when `recitation_available` is true may you add up to two `activity: recitation` slots (an ungraded recitation of a Qur'an passage displayed in this lesson); they never count toward the budget.
 
 Every sentence has a unique `sentence_id` (`s_` followed by lowercase letters, digits or underscores) and a `role`: `claim` (an assertion, linked to one or more supported `claim_ids`), `framing`, `hypothetical`, `instruction` or `question` (these link no claims and must not hide an assertion; when unsure it is a claim). A sentence shared by both variants keeps its id, role and claim links. At most 3 distinct evidence items are displayed per variant.
 

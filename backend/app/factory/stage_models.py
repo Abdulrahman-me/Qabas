@@ -179,7 +179,8 @@ class WEvidence(Closed):
 class WExerciseSlot(Closed):
     block_id: str
     type: Literal["exercise_slot"]
-    intent: str = Field(min_length=1)        # what the graded exercise placed here must test
+    intent: str = Field(min_length=1)        # what the exercise placed here must test or practise
+    activity: Literal["graded", "recitation"]  # recitation: an ungraded recite_verse (F-108), never in the budget
 
 
 WBlock = Annotated[WHook | WPredict | WStory | WTeach | WParagraph | WCallout | WEvidence | WExerciseSlot,
@@ -255,11 +256,24 @@ class XWord(Closed):
     fills_blank_id: str | None               # the blank this word correctly fills, if any
 
 
+class XEvent(Closed):
+    event_id: str = Field(pattern=r"^o_[0-9a-z_]{1,40}$")
+    text: str = Field(min_length=1)
+    date_label: str = Field(min_length=1)    # shown after checking (event_dates); stated by the cited claim
+    claim_id: str                            # the supported historical claim that dates this event
+
+
+class XTarget(Closed):
+    target_id: str = Field(pattern=r"^[a-z][a-z0-9_]{0,40}$")   # becomes the scene anchor id
+    label: str = Field(min_length=1)         # the pill label shown on the hotspot before evaluation
+
+
 class XExercise(Closed):
     exercise_id: str = Field(pattern=r"^x[0-9]{1,3}$")
     purpose: Literal["lesson", "pretest", "unit_test", "duel"]
     type: Literal["multiple_choice", "true_false", "true_false_reason", "scenario", "match_pairs", "fill_blank",
-                  "categorize", "order_steps", "spot_error", "which_evidence", "verse_meaning", "flashcard"]
+                  "categorize", "order_steps", "spot_error", "which_evidence", "verse_meaning", "flashcard",
+                  "timeline_order", "map_place", "recite_verse"]
     slot_block_id: str | None                # lesson exercises: the writer's exercise slot it fills
     concept_ids: list[str] = Field(min_length=1)
     prompt: str = Field(min_length=1)
@@ -280,9 +294,14 @@ class XExercise(Closed):
     segments: list[XSegment] | None          # fill_blank
     words: list[XWord] | None
     evidence_option_ids: list[str] | None    # which_evidence: verified evidence ids offered as options
-    verse_evidence_id: str | None            # verse_meaning
+    verse_evidence_id: str | None            # verse_meaning / recite_verse: a verified Qur'an evidence id
     front: str | None                        # flashcard
     back: str | None
+    events: list[XEvent] | None              # timeline_order, in the correct chronological order
+    word_start: int | None                   # recite_verse segment (both null = the whole ayah)
+    word_end: int | None
+    map_brief: str | None                    # map_place: what the generated scene shows (no answer hint)
+    targets: list[XTarget] | None            # map_place: 3-6 labelled places; correct_option_id = a target_id
 
 
 class XMisconception(Closed):

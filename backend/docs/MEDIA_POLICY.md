@@ -14,9 +14,9 @@ failure/blocker, not an instruction to downgrade a scene to a picture or builtin
 | Stage | Model work | Deterministic work |
 |---|---|---|
 | `visuals` | Strong Visual Selector; strong Image Prompt Writer; strong pixel-level Visual Auditor | Brief/figure parity, compiled-registry validation, related occurrence groups, maximum three image/audit attempts, resize/encode final WebP, immutable private staging |
-| `scene_author` | Strong Animated Scene Author, with complete revision 10 schema, capability limits, approved tokens/style and two reviewed example manifests; image generation/audit for artwork briefs | Assigned scene identity/version, actual asset metadata, bounded SVG/raster validation, complete `scene_check.py`, typed occurrence/point states; at most three corrected manifests |
+| `scene_author` | Strong Animated Scene Author, with complete revision 10 schema, capability limits, approved tokens/style, two reviewed example manifests and every required hotspot anchor; image generation/audit for artwork briefs | Assigned scene identity/version, actual asset metadata, bounded SVG/raster validation, complete `scene_check.py`, typed occurrence/point states; at most three corrected manifests |
 | `scene_render` | Strong visual audit of the actual rendered frames, in bounded batches | Renderer interface, complete state/time coverage, decoded frames/WebM, state-aligned fallbacks, performance/release evidence; private manifest and preview receipts |
-| `narration` | Approved TTS for optional story narration and term pronunciation | Exact language/track/text binding, actual MP3 decode, replay, immutable private staging; scripture/verified quotations never go to TTS |
+| `narration` | Approved TTS for optional story narration and term pronunciation; licensed reference recitation (never TTS) for Qur'an evidence and recitation activities | Exact language/track/text binding, actual MP3 decode, replay, immutable private staging; scripture/verified quotations never go to TTS |
 
 All language-model calls go through `app/llm` with locked prompts/schemas, structured output, budget accounting
 and model provenance. Factory code calls `MediaService` and the `ImageProvider`, `NarrationProvider` and
@@ -72,8 +72,30 @@ selected word boundaries, reject neighbouring words and preserve canonical posit
 The cut's original URL/hash, source response hash, reciter name/ID, dataset hash, range, licence and clip hash are retained.
 `scripture.insert` and gold verification can mechanically reconstruct the returned capability snapshot; whole-ayah
 audio still cannot masquerade as a segment (F-79). The clip receipt must accompany the reviewed bundle before
-publication. O-06 approval remains pending. The Exercise Designer's recitation/mapping follow-ups in F-108 are
-not declared resolved by providing this clip primitive; no licensed production bindings were fabricated.
+publication. Each cut is its own capability snapshot (`<record>#w<start>-<end>@<clip hash>`), so a whole-ayah
+evidence clip and a recited segment of the same ayah can never be confused in provenance (F-139).
+
+**Factory binding (stage 9 `narration`, D-157).** Licensed recordings come from an operator-supplied library
+(`MEDIA_REFERENCE_RECORDINGS_DIR`: `recordings.yaml` with `schema: qabas.reference_recordings/1`, the approved
+`reciter_id` and one `{surah, ayah, file, sha256}` entry per whole-ayah MP3; every read is digest-checked). With an
+approved recitation entry *and* a matching library, the stage (a) cuts each `recite_verse` segment and binds its
+audio, word timings and its own activity source (the verified segment bundle) into the exercise, and (b) attaches
+whole-ayah reference audio and word timings to every displayed single-ayah Qur'an evidence item. The scripture
+source identity covers its audio binding, so (b) rebinds that evidence's source id consistently across blocks,
+exercises, claims and sources. Multi-ayah passages keep `audio: null` (the capability timings identify one ayah).
+Without the licence or library nothing is attached and recitation activities are never offered (the Writer and
+Exercise Designer see `recitation_available: false`). O-06 (licence and recordings) remains a human input.
+
+## Exercise bindings (F-108)
+
+* `timeline_order`: 3-7 events, each dated by a supported claim whose decomposed kind is `historical`; events are
+  served rotated with ids by served position, and the dates reach the learner only as `event_dates` feedback.
+* `map_place` (lesson only): the designer names 3-6 labelled targets and a scene brief. The Visual Selector must
+  choose a generated scene for it, the Scene Author must declare one static anchor per target id, and
+  `scene_render` places each pin at its anchor (percent of the view box, tap radius ≤ 25 %), with the exercise
+  state as the fallback state. Pin ids are hash-ordered. Publication re-checks every pin against the manifest.
+* `recite_verse` (lesson only): fills an ungraded recitation slot (`accuracy/combo false, layer null`), never part
+  of the graded budget, only when licensed reference recitation is available (above).
 
 ## Storage, provenance and review identity
 
@@ -124,9 +146,18 @@ SDK details do not become QA messages. Review-frame and learner-fallback paths a
 
 ## Current release state
 
-No real lesson became publishable. Remaining inputs include approved O-03 model/provider/media terms,
-O-05/O-13 gold/style/characters/references, actual human medallion art, scene tokens/two reviewed manifests,
-O-02 normative renderer/capability release and joint Integration Gate 4, and O-06 licensed recitation.
-O-12 curriculum decisions, D-93 English Quran translation selection, F-116 live source re-fetch policy and
-earlier Unit 0 decisions remain open. These gates are not replaced by test geometry, tones or synthetic approvals.
-Phase 14 remains in progress until its real-art requirement and acceptance dependencies are satisfied.
+No real lesson became publishable. The engineering pipeline is complete (Phase 14, D-158); what remains are human
+and external inputs, each refused by a gate rather than worked around:
+
+* O-03: image/TTS provider, model, voices and terms (and Quran Foundation as audio capability).
+* O-05/O-13 (design): style guide, character reference sheet and reference artwork; real human medallion SVGs and a
+  non-empty registry (D-37); sign-off of the prepared scene token mapping and candidate example manifests.
+* O-06: reciter licence and the licensed recordings library.
+* O-02 / Integration Gate 4 (renderer owner + joint): `packages/qabas_scene`, `tools/scene_preview`, released
+  capabilities, app/preview equality and device evidence.
+
+The scene design tokens are prepared, not approved: `scripts/scene_design_tokens.py` derives
+`content/scene_design_tokens.json` mechanically from the delivered `QColors` (`token:<snake_case>`; naming to be
+confirmed by the renderer owner) and the policy lists the two revision 10 fixture manifests as candidate examples.
+O-12 curriculum decisions, D-93 English Quran translation selection, F-116 live source re-fetch policy and earlier
+Unit 0 decisions remain open. These gates are not replaced by test geometry, tones or synthetic approvals.

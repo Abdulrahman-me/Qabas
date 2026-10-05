@@ -1,10 +1,19 @@
 schema: qabas.media_policy/1
 scene_author:
+  # Candidates prepared by engineering (D-157), not approvals: the token mapping is derived mechanically from the
+  # delivered QColors (scripts/scene_design_tokens.py; naming pending renderer-owner confirmation, O-02) and the
+  # two example manifests are the revision 10 contract fixtures that pass scene_check. Design (O-13) reviews and
+  # signs off; until then the Scene Author refuses to run.
   status: pending
   approved_by: null
   approved_on: null
-  design_tokens: {path: content/scene_design_tokens.json, sha256: null}
-  examples: []
+  design_tokens: {path: content/scene_design_tokens.json,
+                  sha256: 9c026c7a8bc13563c64b7e356f022dba62b597b41f30c19b290a43813e58e537}
+  examples:
+    - {path: contract/03_API/contract_revision10/fixtures/scenes/asset_positive.scene.json,
+       sha256: 746e1f0449467c4640d7f466f29c41602d55d50666f24f8ac6108cc0f5176ff6}
+    - {path: contract/03_API/contract_revision10/fixtures/scenes/scn_test_desert_well.v2.scene.json,
+       sha256: 145f9fd45a554b9e5c77e2b796ba4814fd85d46d72a9b1a91543b3a155e0d7e7}
 renderer:
   status: pending
   approved_by: null

@@ -33,6 +33,7 @@ from app.factory.errors import StageOutputInvalid
 from app.factory.orchestrator import StageContext, StageResult
 from app.factory.stage_models import ModelReview
 from app.factory.stages.common import accepted, approved_plan, parse
+from app.factory.stages.media import rebind
 from app.media import scenes
 from app.media.service import overlay_bundle
 from app.models import Concept, Misconception, Source, Term, Unit
@@ -78,6 +79,9 @@ def assemble(ctx: StageContext) -> tuple[dict[str, Any], dict[str, list[dict[str
         media = accepted(ctx, "scene_render")
         localized = {lang: overlay_bundle(localized[lang], media["replacements"][lang], media["point_states"])
                      for lang in ("ar", "en")}
+        localized = {lang: place_pins(localized[lang], media.get("pins", {})) for lang in ("ar", "en")}
+    narrated = accepted(ctx, "narration") if "narration" in ctx.run.artifacts else {}
+    rebinds, scripture = narrated.get("rebinds", {}), narrated.get("scripture", {})
     terms = {lang: [(t["term_id"], (t["text_ar"] if lang == "ar" else
                                     localized["en"]["glossary"][t["term_id"]]["title"]))
                     for t in glossary["terms"]] for lang in ("ar", "en")}
@@ -126,8 +130,16 @@ def assemble(ctx: StageContext) -> tuple[dict[str, Any], dict[str, list[dict[str
     cited = {e["source"]["source_id"] for row in verified["claims"] for e in row["claim"]["evidence"]}
     cited |= {s for r in designed["exercises"] for s in r["source_ids"]}
     cited |= {item["source_id"] for item in verified["evidence"]}
+    # Reference audio (narration) rebinds Qur'an evidence to its audio-bearing bundle and adds the recitation
+    # activity sources; their verified bundles replace the retrieval candidates as citations and provenance.
+    cited = {rebinds[s]["source_id"] if s in rebinds else s for s in cited}
+    cited |= {r["source_id"] for r in narrated.get("recitations", {}).values()}
     sources, records = [], {}
     for source_id in sorted(cited):
+        if source_id in scripture:
+            sources.append(scripture[source_id]["source"])
+            records[source_id] = scripture[source_id]["records"]
+            continue
         candidate = candidates[source_id]
         sources.append({k: candidate[k] for k in ("source_id", "kind", "provider", "title", "reference", "url")}
                        | {"excerpt": candidate["excerpt"]})
@@ -136,8 +148,22 @@ def assemble(ctx: StageContext) -> tuple[dict[str, Any], dict[str, list[dict[str
                "plan": plan, "variants": variants, "claims": [row["claim"] for row in verified["claims"]],
                "sentence_map": written["sentence_map"], "arc_map": written["arc_map"], "exercises": exercises,
                "glossary": stored_terms, "misconceptions": misconceptions, "sources": sources}
+    package = rebind(package, rebinds, None)
     visuals = accepted(ctx, "scene_render")["visuals"] if "scene_render" in ctx.run.artifacts else written["visuals"]
     return package, records, visuals
+
+
+def place_pins(bundle: dict[str, Any], pins: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
+    """map_place pins at the scene's static anchors (F-108); labels and ids are untouched."""
+    for exercise_id, rows in pins.items():
+        payload = bundle["exercises"][exercise_id]["exercise"]["payload"]
+        located = {row["pin_id"]: row for row in rows}
+        if {pin["pin_id"] for pin in payload["pins"]} != set(located):
+            raise StageOutputInvalid("map_pins_invalid", [f"{exercise_id}: anchors do not cover every pin"])
+        payload["pins"] = [{**pin, **{k: located[pin["pin_id"]][k] for k in ("x_pct", "y_pct", "radius_pct",
+                                                                             "anchor_id")}}
+                           for pin in payload["pins"]]
+    return bundle
 
 
 def build_draft(package: LessonPackage, visuals: list[dict[str, Any]]) -> dict[str, Any]:
@@ -423,6 +449,8 @@ async def run(ctx: StageContext) -> StageResult:
             issues.append(issue("blocker", finding["kind"], finding["message"], scene_id=finding["scene_id"]))
     if "narration" in ctx.run.artifacts:
         media_objects = [*media_objects, *accepted(ctx, "narration")["objects"]]
+        for finding in accepted(ctx, "narration").get("issues", []):
+            issues.append(issue("info", finding["kind"], finding["message"]))
     if media_objects:
         media_objects = [{**record, "binding": {**record["binding"], "reviewed_package_sha256": package.digest()}}
                          for record in media_objects]
