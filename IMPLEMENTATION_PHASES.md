@@ -29,7 +29,7 @@
 | 10.1 | Phase 10 audit: Tarteel requirement, VAD truncation of sustained madd (corrective checkpoint) | ✅ Done | `phase-10.1` | Tarteel model confirmed in use; F-95 fixed (D-118); clip set 18/18 |
 | 11 | LLM adapter and agent infrastructure | ✅ Done | `phase-11` | Model approval, capabilities and prices remain O-03 |
 | 12 | Lesson Factory pipeline: plan → QA | ✅ Complete (sub-tag `phase-12.1`) | `phase-12` | |
-| 13 | Reviewer gates, publication, reviewer console API | ⏳ Not started | `phase-13` | |
+| 13 | Reviewer gates, publication, reviewer console API | ✅ Complete | `phase-13` | |
 | 14 | Visual and media pipeline (images, audio, production scenes) | ⏳ Not started | `phase-14` | Full scene quality (D-06) |
 | 15 | Metrics, blind tests, factory acceptance | ⏳ Not started | `phase-15` | **Milestone C: lesson generation and publishing** |
 | 16 | Raqeeb text pipeline | ⏳ Not started | `phase-16` | Starts after Milestone C |
@@ -932,3 +932,4 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | 2026-10-05 | 12 | Stages decompose → qa implemented with code-executed retrieval, code citability, composition, leaf localization and QA to Gate 2; findings F-103–F-109, decisions D-131–D-138. |
 | 2026-10-05 | 12 | ✅ Phase 12 complete: 837 passed / 1 local role skip; CI 37302351186 green (823 passed, 15 skips; contracts 595/279/105/382); sub-tag `phase-12.1` (CI 37296033672), tagged `phase-12`, merged to `main`. |
 | 2026-10-05 | 13 | Reviewer console and Gate 2 publication implemented on `phase/13-reviewer-console`: contract digest, one approval rule, atomic approve-and-publish with blockers, request_changes rounds, decision finality; F-110–F-119, D-139–D-146. |
+| 2026-10-05 | 13 | ✅ Phase 13 complete: 852 passed / 1 local role skip; CI 37315019351 green (838 passed, 15 skips; contracts 595/279/105/382); tagged `phase-13`, merged to `main`. No real lesson is publishable yet (placeholder media, Phase 14; O-03, O-12, D-93, O-05). |
