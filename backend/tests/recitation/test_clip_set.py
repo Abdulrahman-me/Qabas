@@ -61,6 +61,8 @@ def engine() -> Any:
 
 def test_clip_set(engine: Any) -> None:
     assert len(SPEC["clips"]) >= 10
+    covered = {r for c in SPEC["clips"] for r in c.get("classes", {})} | {c["expect"] for c in SPEC["clips"]}
+    assert covered >= {"correct", "missing", "substituted", "extra", "unclear"}     # QUALITY acceptance row
     mushaf = get_mushaf(Settings())
     outcomes, latencies = {}, []
     for clip in SPEC["clips"]:
@@ -82,6 +84,8 @@ def test_clip_set(engine: Any) -> None:
         latencies.append(time.perf_counter() - began)
         body = evaluate(passage, transcription, "ar", {})
         outcomes[clip["id"]] = "unclear" if body["status"] == "unclear" else ("passed" if body["passed"] else "failed")
+        for result, minimum in clip.get("classes", {}).items():
+            assert body["summary"][result] >= minimum, (clip["id"], body["summary"])
     p95 = statistics.quantiles(latencies, n=20)[-1]
     print(f"\nclip set: {len(latencies)} clips, median {statistics.median(latencies):.2f} s, p95 {p95:.2f} s")
     errors = sum(1 for clip in SPEC["clips"] if outcomes[clip["id"]] != clip["expect"])

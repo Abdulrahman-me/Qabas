@@ -6,7 +6,8 @@
 # errors, noise) is the O-06 acceptance gate and is not part of this set; these clips prove the pipeline end to end.
 # "check" is the verse/range checked (defaults to the clip's own verse).
 #
-# expect: passed | failed | unclear (the correct outcome); "observed" records a known model error that differs.
+# expect: passed | failed | unclear (the correct outcome); "observed" would record a known model error that differs.
+# classes: minimum word counts per outcome class (QUALITY acceptance: correct/missing/substituted/extra/unclear).
 # "cut" keeps only the first fraction of the decoded audio (a recitation that stops early).
 
 schema: qabas.recitation_clip_set/1
@@ -19,17 +20,19 @@ clips:
   - {id: fatiha_4, file: "001004.mp3", verse: [1, 4], expect: passed}
   - {id: fatiha_5, file: "001005.mp3", verse: [1, 5], expect: passed}
   - {id: fatiha_6, file: "001006.mp3", verse: [1, 6], expect: passed}
-  # Known model error (F-91): the final elongated word ٱلضَّآلِّينَ is transcribed as الضَّالَّا (ratio < 80), a false
-  # rejection of a correct recitation. Recorded, not hidden: the specified threshold is unchanged (O-03/O-06).
-  - {id: fatiha_7, file: "001007.mp3", verse: [1, 7], expect: passed, observed: failed}
+  # The six-count madd of ٱلضَّآلِّينَ: the VAD alone cut it off (F-91, F-95); kept through voicing (D-118).
+  - {id: fatiha_7, file: "001007.mp3", verse: [1, 7], expect: passed, classes: {correct: 9}}
   - {id: ikhlas_1, file: "112001.mp3", verse: [112, 1], expect: passed}
   - {id: ikhlas_2, file: "112002.mp3", verse: [112, 2], expect: passed}
   - {id: ikhlas_3, file: "112003.mp3", verse: [112, 3], expect: passed}
   - {id: ikhlas_4, file: "112004.mp3", verse: [112, 4], expect: passed}
   - {id: nisa_103, file: "004103.mp3", verse: [4, 103], expect: passed}
-  - {id: nisa_103_segment, file: "004103.mp3", verse: [4, 103], check: {words: [14, 20]}, expect: passed}
-  - {id: wrong_verse, file: "112001.mp3", verse: [112, 1], check: {verse: [112, 3]}, expect: failed}
-  - {id: wrong_fatiha, file: "001002.mp3", verse: [1, 2], check: {verse: [1, 5]}, expect: failed}
-  - {id: stopped_early, file: "004103.mp3", verse: [4, 103], cut: 0.45, expect: failed}
+  - {id: nisa_103_segment, file: "004103.mp3", verse: [4, 103], check: {words: [14, 20]}, expect: passed,
+     classes: {correct: 7, extra: 1}}
+  - {id: wrong_verse, file: "112001.mp3", verse: [112, 1], check: {verse: [112, 3]}, expect: failed,
+     classes: {substituted: 1}}
+  - {id: wrong_fatiha, file: "001002.mp3", verse: [1, 2], check: {verse: [1, 5]}, expect: failed,
+     classes: {substituted: 1}}
+  - {id: stopped_early, file: "004103.mp3", verse: [4, 103], cut: 0.45, expect: failed, classes: {missing: 1}}
   - {id: silence, generated: silence, verse: [112, 1], expect: unclear}
   - {id: noise, generated: noise, verse: [112, 1], expect: unclear}

@@ -14,6 +14,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Protocol
 
+from app.services.recitation import voicing
 from app.services.recitation.audio import SAMPLE_RATE
 
 UNCLEAR_LOGPROB = -1.0       # §8 step 3: mean avg_logprob below this is unclear
@@ -57,7 +58,8 @@ def verify_model(path: Path) -> dict[str, Any]:
 
 
 class FasterWhisperEngine:
-    """``language="ar"``, ``beam_size=5``, ``vad_filter=True``, int8 on CPU (§8 step 2)."""
+    """``language="ar"``, ``beam_size=5``, int8 on CPU, with the VAD filter of §8 step 2 (Silero, default options)
+    applied explicitly so its speech regions can be kept through sustained madd before recognition (D-118)."""
 
     def __init__(self, model_path: Path, *, cpu_threads: int = 0) -> None:
         self.manifest = verify_model(model_path)
@@ -67,17 +69,22 @@ class FasterWhisperEngine:
 
     def transcribe(self, pcm: bytes) -> Transcription:
         import numpy as np
+        from faster_whisper.vad import VadOptions, get_speech_timestamps
 
         audio = np.frombuffer(pcm, dtype=np.int16).astype(np.float32) / 32768.0
-        segments, _ = self.model.transcribe(audio, language="ar", beam_size=BEAM_SIZE, vad_filter=True,
+        regions = [(int(r["start"]), int(r["end"])) for r in get_speech_timestamps(audio, VadOptions())]
+        if not regions:
+            return Transcription("", 0, None)          # no speech segments: unclear (§8 step 3)
+        speech = np.concatenate([audio[start:end] for start, end in voicing.extend(pcm, regions)])
+        segments, _ = self.model.transcribe(speech, language="ar", beam_size=BEAM_SIZE, vad_filter=False,
                                             condition_on_previous_text=False)
         texts, logprobs = [], []
         for segment in segments:
             texts.append(segment.text.strip())
             logprobs.append(float(segment.avg_logprob))
-        del audio
+        del audio, speech
         mean = sum(logprobs) / len(logprobs) if logprobs else None
-        return Transcription(" ".join(t for t in texts if t), len(logprobs), mean)
+        return Transcription(" ".join(t for t in texts if t), len(regions) if logprobs else 0, mean)
 
 
 def duration_ms(pcm: bytes) -> int:
