@@ -16345,6 +16345,82 @@
     ]
    }
   },
+  "/v1/recitation/checks": {
+   "post": {
+    "description": "Check one recitation of a verse or word segment. Requires ``Idempotency-Key``.",
+    "operationId": "create_check_v1_recitation_checks_post",
+    "requestBody": {
+     "content": {
+      "multipart/form-data": {
+       "schema": {
+        "properties": {
+         "audio": {
+          "format": "binary",
+          "type": "string"
+         },
+         "ayah": {
+          "type": "integer"
+         },
+         "exercise_id": {
+          "type": "string"
+         },
+         "surah": {
+          "type": "integer"
+         },
+         "word_end": {
+          "type": "integer"
+         },
+         "word_start": {
+          "type": "integer"
+         }
+        },
+        "required": [
+         "audio",
+         "surah",
+         "ayah"
+        ],
+        "type": "object"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/RecitationCheck"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "503": {
+      "description": "The asr pool is at capacity or did not answer in time (`details.retry_after_ms`)"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Create Check",
+    "tags": [
+     "recitation"
+    ]
+   }
+  },
   "/v1/sessions": {
    "post": {
     "description": "A new session is ``201``; an existing active one for the same key is returned with ``200``.",

@@ -105,7 +105,8 @@ class Settings(BaseSettings):
     # Recitation (Phase 10).
     asr_queue_max: int = 8
     asr_timeout_seconds: int = 15
-    recitation_model_path: str = "/models/whisper-base-ar-quran-ct2"
+    # The converted model directory (scripts/convert_recitation_model.py), read only by the asr worker.
+    recitation_model_path: Path = BACKEND_DIR / "var" / "models" / "whisper-base-ar-quran-ct2"
     embedding_model: str = "BAAI/bge-m3"
     default_reciter: str = "alafasy"
 

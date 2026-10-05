@@ -10,7 +10,7 @@ Native Windows development; no Docker (decision D-03 in [IMPLEMENTATION_PHASES.m
 | uv | 0.12.23 | `winget install astral-sh.uv` |
 | PostgreSQL | 16.14 | Windows service `postgresql-x64-16`, `C:\Program Files\PostgreSQL\16`, port 5432 |
 | Redis | 7.4.11 | Native Windows build (`redis-windows/redis-windows`, msys2) in `%LOCALAPPDATA%\Programs\Redis`, config `redis.local.conf` (127.0.0.1:6379) |
-| ffmpeg | 9.0.2 | `winget install Gyan.FFmpeg` |
+| ffmpeg | 9.0.2 | `winget install Gyan.FFmpeg` (tooling only; the asr worker decodes with PyAV's bundled FFmpeg libraries) |
 | Node.js | 22.x | Pre-installed; used later for the native Dorar sidecar (Phase 9) |
 | pgvector | — | Not yet installed; needed from Phase 17 (decision D-05) |
 
@@ -51,6 +51,7 @@ py -3.12 scripts\dev\install_git_hooks.py              # pre-commit public-safet
 | Repository safety check | `uv run python scripts/check_public_safety.py` |
 | Refresh private-artifact fingerprints | `py -3.12 scripts/dev/update_private_fingerprints.py` (needs the local handoff) |
 | Worker (Windows dev) | `uv run celery -A app.workers.celery_app worker -Q maintenance,factory,media --pool=solo` |
+| Recitation worker (Windows dev) | `uv sync --group asr`, then `uv run celery -A app.workers.celery_app worker -Q asr --pool=solo --prefetch-multiplier=1` (see Recitation below) |
 | Scheduler (outbox relay every 5 s, cleanups) | `uv run celery -A app.workers.celery_app beat` |
 | Validate the curriculum file | `uv run python scripts/seed.py --check` (no database needed) |
 | Seed the curriculum structure | `uv run python scripts/seed.py` (units, lesson slots, concept graph; safe to re-run, refuses destructive changes) |
@@ -144,6 +145,23 @@ not a shell command. Nothing in the tests requires live provider credentials.
 HadeethEnc/IslamHouse REST text search is explicitly unsupported pending the association MCP schemas.
 Hadith collection-number bindings, source-based teaching claims, licensed reciter audio, curriculum approvals
 and scene media are still human/provider dependencies. This phase publishes no unfinished religious content.
+
+## Recitation checks (Phase 10)
+
+`POST /v1/recitation/checks` checks one recitation of a verse or word segment (API §6.6). The API process validates
+the upload (size, signature, the reference against the canonical mushaf), admits it to the bounded `asr` pool and
+waits at most `ASR_TIMEOUT_SECONDS`; decoding and speech recognition run only in the `asr` worker. Audio is never
+written to disk, stored or logged, and the transcript lives a few seconds in Redis. Only the check result is kept.
+
+| Step | Command |
+|---|---|
+| Install the worker dependencies | `uv sync --group asr` (faster-whisper, CTranslate2, PyAV; the API does not need them) |
+| Convert and pin the model (once per environment) | in a separate tooling venv with `ctranslate2==4.8.2`, `transformers<5`, `torch` (CPU) and `truststore`: `python scripts/convert_recitation_model.py [--system-ca]` → `var/models/whisper-base-ar-quran-ct2/` with `qabas-model.json` (file digests; the worker refuses altered files) |
+| Install the canonical mushaf | `uv run python scripts/fetch_mushaf.py` (expected words always come from it) |
+| Run the worker | `uv run celery -A app.workers.celery_app worker -Q asr --pool=solo --prefetch-multiplier=1` (Linux: `--concurrency=<physical cores>`) |
+| Local clip set (real model) | `uv run python scripts/recitation_clip_set.py [--system-ca]` then `uv run pytest tests/recitation/test_clip_set.py -s` (reciter clips stay in git-ignored `var/`, O-06) |
+
+CI has neither the model nor the clips: it covers the same pipeline with generated audio and an in-process engine.
 
 ## Staging environment
 

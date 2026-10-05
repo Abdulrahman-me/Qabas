@@ -8,7 +8,6 @@ specimen is appended. Recitation checks are inserted directly; the ASR worker th
 from __future__ import annotations
 
 import copy
-import hashlib
 import json
 from typing import Any
 
@@ -17,6 +16,7 @@ from fastapi.testclient import TestClient
 
 from app.config import Settings
 from app.contract import FIXTURES_DIR
+from app.services.recitation.align import expected_text_digest
 from tests.api.helpers import execute, query
 from tests.learning.conftest import learner, revise, user_id
 
@@ -98,7 +98,7 @@ def learner_misconception(settings: Settings, uid: str) -> dict[str, Any]:
 def add_check(settings: Settings, uid: str, check_id: str, *, passed: bool, word_start: int | None = None,
               word_end: int | None = None, text: str | None = None) -> None:
     payload = _load("exercises/recite_verse/exercise.json")["payload"]
-    digest = hashlib.sha256((text or payload["text_uthmani"]).encode()).hexdigest()
+    digest = expected_text_digest(text or payload["text_uthmani"])   # the producer's digest rule (D-109)
     execute(settings.database_url, "INSERT INTO recitation_checks (id, user_id, surah, ayah, word_start, word_end, "
             "checked_text_sha256, status, passed, words, summary) VALUES ($1, $2, 112, 1, $3, $4, $5, 'evaluated', "
             "$6, '[]'::jsonb, '{}'::jsonb)", check_id, uid, word_start, word_end, digest, passed)

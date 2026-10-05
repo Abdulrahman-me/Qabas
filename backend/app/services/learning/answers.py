@@ -20,7 +20,6 @@ the private result.
 
 from __future__ import annotations
 
-import hashlib
 import logging
 from decimal import Decimal
 from typing import Any
@@ -44,6 +43,7 @@ from app.services.learning import adaptation, grading, progress, xp
 from app.services.learning.grading import Identity
 from app.services.learning.locking import learner_lock
 from app.services.platform.auth_sessions import utcnow
+from app.services.recitation.align import expected_text_digest
 
 log = logging.getLogger("qabas.answers")
 
@@ -213,7 +213,7 @@ async def _bound_check(db: AsyncSession, user: User, exercise: dict[str, Any], c
     (API §6.6, backend §8 step 10); otherwise ``409 recitation_check_mismatch``."""
     payload = exercise["payload"]
     check = await db.get(RecitationCheckRecord, check_id)
-    digest = hashlib.sha256(payload["text_uthmani"].encode()).hexdigest()
+    digest = expected_text_digest(payload["text_uthmani"])
     if (check is None or check.user_id != user.id
             or (check.surah, check.ayah, check.word_start, check.word_end)
             != (payload["surah"], payload["ayah"], payload["word_start"], payload["word_end"])

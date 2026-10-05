@@ -24,9 +24,14 @@ dependencies = [
     "fsrs==6.3.1",
     "httpx>=0.28",
     "rapidfuzz>=3.14",
+    "python-multipart>=0.0.20",
 ]
 
 [dependency-groups]
+asr = [
+    "av>=14",
+    "faster-whisper>=1.2",
+]
 dev = [
     "pytest>=8.3",
     "pytest-asyncio>=0.24",
@@ -35,6 +40,7 @@ dev = [
     "boto3-stubs[s3]>=1.35",
     "types-pyyaml>=6.0",
     "types-jsonschema>=4.26.0.20260518",
+    "av>=14",
 ]
 
 [tool.uv]
@@ -73,7 +79,10 @@ exclude = ["^contract/", "^\\.private/"]
 plugins = ["pydantic.mypy"]
 
 [[tool.mypy.overrides]]
-module = ["qabas_contract", "contextual", "review", "display_fields", "celery", "celery.*", "kombu", "kombu.*", "asyncpg", "asyncpg.*"]
+module = ["qabas_contract", "contextual", "review", "display_fields", "celery", "celery.*", "kombu", "kombu.*", "asyncpg", "asyncpg.*",
+          # the asr dependency group and the one-off model-conversion tooling (not installed in CI)
+          "faster_whisper", "faster_whisper.*", "numpy", "numpy.*", "ctranslate2", "ctranslate2.*", "transformers",
+          "transformers.*", "huggingface_hub", "huggingface_hub.*", "truststore"]
 ignore_missing_imports = true
 follow_imports = "skip"
 
