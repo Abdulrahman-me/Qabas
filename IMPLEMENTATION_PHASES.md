@@ -27,7 +27,7 @@
 | 9.1 | Phase 9 audit corrections (corrective checkpoint) | ✅ Done | `phase-9.1` | Independent audit; 7 findings F-79–F-85 (6 fixed, 1 recorded gate) |
 | 10 | Recitation service (`asr` worker) | ✅ Done | `phase-10` | **Milestone B: complete learning experience** (learner-audio acceptance O-06, throughput O-03) |
 | 10.1 | Phase 10 audit: Tarteel requirement, VAD truncation of sustained madd (corrective checkpoint) | ✅ Done | `phase-10.1` | Tarteel model confirmed in use; F-95 fixed (D-118); clip set 18/18 |
-| 11 | LLM adapter and agent infrastructure | 🔄 In progress | `phase-11` | |
+| 11 | LLM adapter and agent infrastructure | ✅ Done | `phase-11` | Model approval, capabilities and prices remain O-03 |
 | 12 | Lesson Factory pipeline: plan → QA | ⏳ Not started | `phase-12` | |
 | 13 | Reviewer gates, publication, reviewer console API | ⏳ Not started | `phase-13` | |
 | 14 | Visual and media pipeline (images, audio, production scenes) | ⏳ Not started | `phase-14` | Full scene quality (D-06) |
@@ -537,6 +537,8 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 
 **Gates still open:** O-03 (model approval on the bilingual tasks with a private evaluation set; capability confirmation; prices), O-09 (provider data-processing terms before learner content is sent — Phase 16), P-04 (provider disclosure).
 
+**Exit:** ✅ CI green on GitHub (run 37278721432: 786 passed, 15 data/model-dependent skips; contract suites green); locally 800 passed. Tagged `phase-11`.
+
 
 ---
 
@@ -866,3 +868,4 @@ Independent re-review of the completed Phase 9 (`phase-8..phase-9`, 77 files): t
 | 2026-10-05 | 10.1 | Targeted Tarteel audit: the handoff's only Tarteel artefact is the `tarteel-ai/whisper-base-ar-quran` model, which Phase 10 uses (D-115); O-06 holds no Tarteel item. Found and fixed F-95 (VAD cut sustained madd; D-118); clip set asserts all acceptance classes, 18/18. |
 | 2026-10-05 | 10.1 | ✅ Phase 10.1 complete: 757 passed / 1 local role skip; CI 37277069615 green (743 passed, 15 skipped); tagged `phase-10.1`, merged to `main`. |
 | 2026-10-05 | 11 | Model-calling layer implemented on `phase/11-llm-adapter`: adapter, prompt registry/lock, strict schemas, framing, model policy, spend ledger, fakes, evaluation harness skeleton. Findings F-96–F-100, decisions D-119–D-124. |
+| 2026-10-05 | 11 | ✅ Phase 11 complete: 800 passed / 1 local role skip; CI 37278721432 green (786 passed, 15 skips; contracts 595/279/105/382); tagged `phase-11`, merged to `main`. |
