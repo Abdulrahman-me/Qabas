@@ -16,7 +16,7 @@ from app.factory.evidence import live_tools
 from app.factory.orchestrator import Orchestrator
 from app.factory.pipeline import MEDIA_STAGES
 from app.factory.stages import EXECUTORS
-from app.llm.client import AnthropicClient
+from app.llm.factory_client import factory_client
 from app.media.service import MediaService
 from app.runtime import Resources
 from app.workers.celery_app import celery_app
@@ -38,12 +38,14 @@ class CeleryDispatcher:
 def run_stage(run_id: str, stage: str, attempt: int) -> str:
     async def job(resources: Resources) -> str:
         media = MediaService(resources.storage)
-        orchestrator = Orchestrator(resources.sessionmaker, resources.settings, AnthropicClient(resources.settings),
+        client = factory_client(resources.settings)
+        orchestrator = Orchestrator(resources.sessionmaker, resources.settings, client,
                                     CeleryDispatcher(), EXECUTORS,
                                     services={"sources": live_tools(resources.settings), "media": media})
         try:
             return await orchestrator.run_stage(run_id, stage, attempt)
         finally:
             await media.aclose()
+            await client.aclose()
 
     return run_with_resources(job)

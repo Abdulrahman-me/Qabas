@@ -73,6 +73,8 @@ async def visuals(ctx: StageContext) -> StageResult:
         "builtin_registry": (BACKEND_DIR / "content/visual_registry.yaml").read_text("utf-8"),
         "previous_attempt_issues": ctx.run.previous_issues,
         "prompt": get_prompt("factory_visuals").identity(),
+        "allowed_visual_kinds": ["builtin", "scene", "none"] + (["image"] if ctx.settings.image_provider or
+                                  (ctx.settings.is_dev_like and media.image_provider is not None) else []),
     }
 
     async def select() -> dict[str, Any]:
@@ -86,6 +88,9 @@ async def visuals(ctx: StageContext) -> StageResult:
         else await jobs.once(ctx, media.storage, "visual_selection", inputs, select)
     )
     selections = chosen["visuals"]
+    require(["unconfigured raster images are not allowed; use the programmatic scene path"]
+            if any(item["kind"] not in inputs["allowed_visual_kinds"] for item in selections) else [],
+            "visual_selection_invalid")
     ids = [item["brief_id"] for item in selections]
     require(
         ["selector must return every requested brief exactly once"]
@@ -209,7 +214,7 @@ async def scene_author(ctx: StageContext) -> StageResult:
     material = _material(ctx)
     for members in groups.values():
         item = members[0]
-        _, style, _ = media.image_inputs(ctx)  # final-quality scene authoring uses approved style/character inputs too
+        style, _ = media.scene_inputs(ctx)
         references = media.scene_references if media.scene_references is not None else scene_author_inputs(ctx.settings)
         regeneration = ctx.run.artifacts.get("media_regeneration")
         identity = content_digest(
@@ -233,6 +238,8 @@ async def scene_author(ctx: StageContext) -> StageResult:
             "authoring_references": references,
             "prompt": get_prompt("factory_scene_author").identity(),
             "visual_audit_feedback": ctx.run.artifacts.get("media_scene_audit_feedback", []),
+            "allow_generated_raster_assets": bool(ctx.settings.image_provider or
+                                                   (ctx.settings.is_dev_like and media.image_provider is not None)),
             "required_anchors": [a for m in members for a in map_briefs(ctx).get(m["brief_id"], {}).get("anchors", [])],
         }
         errors: list[str] = []
@@ -266,6 +273,8 @@ async def scene_author(ctx: StageContext) -> StageResult:
                         raise ValueError("duplicate artwork/asset identifiers")
                     if set(assets) != {a.asset_id for a in value.artwork}:
                         raise ValueError("every generated scene asset requires an artwork brief")
+                    if value.artwork and not base["allow_generated_raster_assets"]:
+                        raise ValueError("no raster provider selected: author vector-only scenes")
                 except (ValueError, KeyError, TypeError) as exc:
                     return {"errors": [str(exc)], "manifest": {}, "objects": []}
                 receipts = []
@@ -384,7 +393,7 @@ async def scene_render(ctx: StageContext) -> StageResult:
             states = coverage.requested(manifest, row["occurrences"], _material(ctx))
             rendered = await media.previewer.render(manifest, raw_assets, states)
             coverage.validate(manifest, states, rendered)
-            terms = media.image_inputs(ctx)[2]["licence"]
+            terms = media.scene_inputs(ctx)[1]["licence"]
             receipts = []
             frames: list[dict[str, Any]] = []
             fallbacks: list[dict[str, Any]] = []
@@ -397,7 +406,7 @@ async def scene_render(ctx: StageContext) -> StageResult:
                         "brief": brief,
                         "content": _material(ctx),
                         "states": [f.state for f in batch],
-                        "style": {k: v for k, v in media.image_inputs(ctx)[1].items() if k != "references"},
+                        "style": {k: v for k, v in media.scene_inputs(ctx)[0].items() if k != "references"},
                     },
                     images=tuple(VisionImage(file.data, file.mime_type) for file in batch),
                     ledger=ctx.ledger,

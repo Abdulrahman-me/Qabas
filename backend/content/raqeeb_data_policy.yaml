@@ -1,6 +1,6 @@
 schema: qabas.raqeeb_data_policy/1
 status: pending
-provider: anthropic
+provider: openai
 provider_retention: null
 deletion_responsibilities: null
 learner_disclosure: null

@@ -42,6 +42,7 @@ class ModelPolicy(BaseModel):
 
     id: str
     role: str
+    provider: Literal["anthropic", "openai"] = "anthropic"
     status: Literal["pending", "approved"]
     evaluated_by: str | None
     evaluated_on: str | None

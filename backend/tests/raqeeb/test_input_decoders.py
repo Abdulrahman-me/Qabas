@@ -133,7 +133,7 @@ async def test_hosted_speech_retries_only_transient_and_sends_no_learner_identif
     assert result.text == "Neutral transcript" and len(seen) == 3
     assert seen[-1].url.path == "/v1/audio/transcriptions"
     body = seen[-1].content
-    assert b"whisper-large-v3" in body and b"question.wav" in body and b"usr_" not in body and b"att_" not in body
+    assert b"whisper-1" in body and b"question.wav" in body and b"usr_" not in body and b"att_" not in body
     refused, requests = stt(settings, [403])
     with pytest.raises(LLMUnavailable):
         await refused.transcribe(wav(), language_hint="en")

@@ -12,7 +12,7 @@ stt:
   status: pending
   provider: null
   base_url: null
-  model: whisper-large-v3
+  model: whisper-1
   provider_retention: null
   deletion_responsibilities: null
   approved_by: null
