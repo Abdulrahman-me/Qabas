@@ -12,7 +12,11 @@ Native Windows development; no Docker (decision D-03 in [IMPLEMENTATION_PHASES.m
 | Redis | 7.4.11 | Native Windows build (`redis-windows/redis-windows`, msys2) in `%LOCALAPPDATA%\Programs\Redis`, config `redis.local.conf` (127.0.0.1:6379) |
 | ffmpeg | 9.0.2 | `winget install Gyan.FFmpeg` (tooling only; the asr worker decodes with PyAV's bundled FFmpeg libraries) |
 | Node.js | 22.x | Pre-installed; used later for the native Dorar sidecar (Phase 9) |
-| pgvector | — | Not yet installed; needed from Phase 17 (decision D-05) |
+| pgvector | 0.8.3 | Required from Phase 17, native PostgreSQL 16 extension in `extensions`; administrator setup in [RAQEEB_PHASE17.md](docs/RAQEEB_PHASE17.md) (D-174 supersedes D-05's deferral) |
+
+Phase 17 input processing, private-file policy, the embeddings CPU worker and private benchmark/release workflow
+are documented in [RAQEEB_PHASE17.md](docs/RAQEEB_PHASE17.md). Hosted speech, source caching, local model approval
+and genuine private benchmark acceptance remain gated; synthetic CI tests do not enable production providers.
 
 ## First-time setup
 
