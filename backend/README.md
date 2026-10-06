@@ -34,6 +34,38 @@ backend\scripts\dev\check-env.ps1
 
 `backend/.env` holds local credentials and is git-ignored.
 
+## Render deployment
+
+Use `backend` as the service root directory and `/health/ready` as its health check path.
+The database must be migrated before the API serves traffic. With dependencies installed,
+run `uv run alembic upgrade head` as the pre-deploy command, using a database role with
+migration privileges. Run `uv run python scripts/seed.py` once to install the curriculum
+structure needed after guest onboarding. These commands use Render's environment variables.
+
+On Render's Free plan, which has no shell or pre-deploy command, run migrations in the
+Start Command instead (from the `backend` root directory):
+
+```bash
+uv run python scripts/start_render.py
+```
+
+The launcher runs migrations before starting Uvicorn, a Celery worker for the
+`maintenance,raqeeb,embeddings` queues, and Celery Beat. Reply generation needs both
+the worker and Beat: the API records requests in the outbox, and Beat schedules the
+relay that sends them to the worker. All processes inherit the service's environment.
+The launcher stops the whole instance if a required process exits. Migration errors
+appear in deploy logs. `upgrade head` leaves an already-current schema unchanged.
+Use this launcher on a single instance only; do not also run a separate Beat process.
+This shares the free instance's memory and CPU; a local embedding model or heavy
+reply workload may require a separate worker with more resources.
+
+Set `APP_ENV=production`, `DATABASE_URL` (a `postgresql+asyncpg://` URL), `REDIS_URL`,
+`AUTH_TOKEN_PEPPER` and `STORAGE_SIGNING_KEY` in Render. Keep the two secrets stable across
+deployments. For deployments with separate worker and Beat services, the API-only start
+command is `uv run uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
+Database connectivity alone does not establish that migrations have been applied;
+the launcher ensures migrations complete before the API starts.
+
 ```powershell
 cd backend
 uv sync                                                # Python 3.12 venv in backend\.venv (uv.lock)
