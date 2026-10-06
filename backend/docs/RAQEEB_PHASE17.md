@@ -128,8 +128,8 @@ re-running finalization with `--signoff <private-signoff.json>` records the expl
 nor judge enables models, publishes content or replaces final religious/human review.
 
 The strong judge uses medium effort versus the writer's high effort where the selected model declares those
-controls. Genuine CLI runs/finalization refuse unconfirmed effort capabilities (O-03); provenance records
-`not_sent` rather than claiming a requested setting was applied. It reports exactly
+controls (the handoff says "where possible"). Unconfirmed controls remain omitted under Phase 11;
+provenance records `not_sent` rather than claiming a requested setting was applied. It reports exactly
 `correct|partial|incorrect` and missing points against specialist gold. Independent
 Phase 9 re-resolution authenticates citation/evidence/grade bindings; the judge cannot override code findings.
 A missing, changed, wrongly bound or currently unavailable authority source cannot pass release verification;

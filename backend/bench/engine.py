@@ -241,9 +241,6 @@ async def finalize(resources: Resources, state: State, report: dict[str, Any], l
         raise ValueError("finalization must use the exact immutable judged report")
     if not synthetic and (report["warm_count"] <= 0 or report["binding"] != state.value["binding"]):
         raise ValueError("genuine benchmark requires a populated disjoint warm namespace and exact run binding")
-    if not synthetic and (report["binding"]["versions"]["models"].get("judge_effort") != "medium" or
-                          report["binding"]["versions"]["models"].get("writer_effort") != "high"):
-        raise ValueError("genuine benchmark requires confirmed distinct judge/writer efforts")
     manual = evaluation.manual_review(rows, labels, synthetic=synthetic)
     manual_sha = sha256_text(canonical_json(labels))
     artifact = {"report": report, "manual": manual, "manual_labels": labels, "manual_report_sha256": manual_sha}

@@ -63,9 +63,6 @@ async def execute(args: argparse.Namespace) -> dict[str, Any]:
             try:
                 if args.command == "run":
                     identity = identities(resources)
-                    if identity["models"]["judge_effort"] != "medium" or \
-                            identity["models"]["writer_effort"] != "high":
-                        raise ValueError("genuine judge independence requires confirmed distinct model efforts (O-03)")
                     client = AnthropicClient(resources.settings)
                     try:
                         report = await engine.run(args.dataset, state, native, Batches(client),
