@@ -759,6 +759,7 @@ Engineering-complete under D-163; no live provider acceptance, real private benc
 | F-166 | A judge's correct verdict or an average cannot prove scripture, grades, attribution or source binding. | Independent Phase 9 refresh/code findings, exhaustive factual-sentence inventory and zero-tolerance checks; outage is incomplete/unverified, never authenticity from model memory (D-178). |
 | F-167 | P-05 thresholds are proposals; language/latency/cost numeric limits and live batch/STT prices are not approved. Private gold is absent. | Report unrounded per-class/language measures and unknown cost honestly; exact policy/report human sign-off plus private coverage/external gates required (D-179/D-181). |
 | F-168 | Warm-up and crashed batch results can consume paid tokens before an evaluation budget exception is durable. | Per-case warm checkpoints, all paid usage preserved before raising, batch ID/result correlation and operator reconciliation for ambiguous submission (D-179). |
+| F-169 | Ubuntu runner PostgreSQL PGXS references unavailable clang-19, so native pgvector installation stopped before any tests. | Compile/install the same pinned extension's GCC shared library with optional LLVM bitcode disabled; no vector functionality or tests removed. CI rerun pending. |
 
 ---
 
