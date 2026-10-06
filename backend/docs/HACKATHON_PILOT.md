@@ -38,3 +38,21 @@ Credentials alone cannot resolve scholarly content, English Quran translation, p
 reviewer accreditation, source bindings, style/renderer releases or media rights. Use the existing bounded
 Factory admission (one unit, limit 1–4, resumable runs), human Gate 1 and digest-bound Gate 2. Do not
 automatically publish or launch all 93 slots before a successful pilot and confirmed budget.
+
+For the current owner-selected path leave `IMAGE_PROVIDER`, `IMAGE_API_KEY`, `TTS_PROVIDER`
+and `TTS_API_KEY` empty and keep `MEDIA_NARRATION_ENABLED=false` and
+`MEDIA_PRONUNCIATION_ENABLED=false`. The only OpenAI secret fields are `OPENAI_API_KEY`
+for text and `STT_API_KEY` for ordinary Raqeeb speech; both may hold the same project key.
+
+The existing authored Unit 0 plan metadata can be completed for human review with:
+
+```powershell
+python scripts/prepare_unit0_plan_text.py --source PATH_TO_AUTHORED_LESSONS --out .private/content/unit0-prepared
+python scripts/import_gold.py convert unit0 --source .private/content/unit0-prepared/lessons --out .private/content/gold --report .private/content/unit0-blockers.json
+```
+
+This sequential, resumable command preserves the English plan text, source/answer-key content and
+original files. Registered prompt/model identities, source/prepared digests and usage receipts stay
+outside Git in a separate provenance directory. Translation drafts do not grant content approval,
+register unapproved concepts, invent tool mappings or clear source/scene blockers. Owner approval
+of Unit 0 as the starting curriculum is resolved; it is distinct from specialist approval.

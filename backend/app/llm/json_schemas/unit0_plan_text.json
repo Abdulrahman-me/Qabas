@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["translations"],
+  "properties": {
+    "translations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "ar"],
+        "properties": {"id": {"type": "string"}, "ar": {"type": "string"}}
+      }
+    }
+  }
+}

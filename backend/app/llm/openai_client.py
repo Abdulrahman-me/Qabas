@@ -9,6 +9,7 @@ import asyncio
 import json
 import logging
 import random
+import ssl
 import time
 from collections.abc import Mapping
 from typing import Any
@@ -45,6 +46,7 @@ class OpenAIClient:
         if not settings.openai_api_key or not settings.openai_api_key.get_secret_value():
             raise LLMNotConfigured("OPENAI_API_KEY is not configured")
         self.http = httpx.AsyncClient(base_url="https://api.openai.com/v1/", transport=transport,
+            verify=ssl.create_default_context(),
             headers={"Authorization": f"Bearer {settings.openai_api_key.get_secret_value()}"},
             timeout=httpx.Timeout(settings.llm_timeout_seconds, connect=5), follow_redirects=False)
 

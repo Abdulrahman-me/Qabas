@@ -6,6 +6,7 @@ import base64
 import json
 import os
 import signal
+import ssl
 import sys
 import time
 from pathlib import Path
@@ -70,6 +71,7 @@ class HostedWhisper:
         breaker.before_call()
         try:
             async with httpx.AsyncClient(base_url=self.settings.stt_base_url.rstrip("/") + "/",
+                verify=ssl.create_default_context(),
                 transport=self.transport, timeout=default_timeout(), follow_redirects=False,
                 headers={"Authorization": f"Bearer {self.settings.stt_api_key.get_secret_value()}"}) as client:
                 for attempt in range(self.retry.retries + 1):
