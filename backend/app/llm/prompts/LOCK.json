@@ -40,8 +40,8 @@
   "version": 1
  },
  "factory_scene_author": {
-  "sha256": "a7c9509d6138e6b07aff6f48a979b1c9ec71af6b02d3d27791e84f14a8f7f82e",
-  "version": 2
+  "sha256": "7244dd277dd8748ac085fafc8e0490311874f22546f3ccab83bfd24ef2d33327",
+  "version": 3
  },
  "factory_verify": {
   "sha256": "77390317b39628547a9c273dfa8c79efef10d365da97e2d5f8fcadf6db4e7418",
@@ -52,8 +52,8 @@
   "version": 1
  },
  "factory_visuals": {
-  "sha256": "bf44b62680c9dca68aa50ac05b678dad5da37d91fed17b18eb6a883bdae67dd3",
-  "version": 2
+  "sha256": "eca06ac03918081803746413d91fdfb09a2cb4fad935ea781d7822a468c39ac0",
+  "version": 3
  },
  "factory_write": {
   "sha256": "119fd0d14d2cdfd152c4b5db365382ecc896a4ab3f301c0142fa18e18d7ddd2e",
