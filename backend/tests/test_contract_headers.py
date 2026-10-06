@@ -78,6 +78,18 @@ def test_cors_exposes_contract_header(settings_with_cors_client: TestClient) -> 
     assert "access-control-allow-origin" not in blocked.headers
 
 
+def test_pages_frontend_preflight(settings_with_cors_client: TestClient) -> None:
+    origin = "https://qabas-app.pages.dev"
+    headers = "Authorization,Content-Type,Accept-Language,Qabas-Contract,Qabas-Client,Idempotency-Key"
+    response = settings_with_cors_client.options("/v1/onboarding", headers={
+        "Origin": origin, "Access-Control-Request-Method": "POST", "Access-Control-Request-Headers": headers})
+    assert response.status_code == 200
+    assert response.headers["access-control-allow-origin"] == origin
+    assert "access-control-allow-credentials" not in response.headers
+    actual = settings_with_cors_client.get("/health/live", headers={"Origin": origin})
+    assert actual.headers["access-control-expose-headers"] == "Qabas-Contract"
+
+
 @pytest.fixture
 def settings_with_cors_client() -> TestClient:
     from app.config import Environment, Settings

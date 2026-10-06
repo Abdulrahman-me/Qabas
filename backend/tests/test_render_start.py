@@ -28,11 +28,13 @@ class RenderStartTests(unittest.TestCase):
     def test_worker_exit_stops_api(self, popen: MagicMock, _signal: MagicMock) -> None:
         migration = MagicMock(returncode=0)
         migration.poll.return_value = 0
+        seed = MagicMock(returncode=0)
+        seed.poll.return_value = 0
         worker = MagicMock()
         worker.poll.return_value = 1
         api = MagicMock()
         api.poll.return_value = None
-        popen.side_effect = [migration, api, worker]
+        popen.side_effect = [migration, seed, api, worker]
         with patch.dict(start_render.os.environ, {}, clear=True):
             self.assertEqual(start_render.main(), 1)
         api.terminate.assert_called_once()
@@ -53,12 +55,14 @@ class RenderStartTests(unittest.TestCase):
     def test_missing_dataset_install_failure_prevents_start(self, popen: MagicMock, _signal: MagicMock) -> None:
         migration = MagicMock(returncode=0)
         migration.poll.return_value = 0
+        seed = MagicMock(returncode=0)
+        seed.poll.return_value = 0
         dataset = MagicMock(returncode=1)
         dataset.poll.return_value = 1
-        popen.side_effect = [migration, dataset]
+        popen.side_effect = [migration, seed, dataset]
         with patch.dict(start_render.os.environ, {"MUSHAF_ARCHIVE_URL": "https://example.org/pinned.zip"}):
             self.assertEqual(start_render.main(), 1)
-        self.assertEqual(popen.call_count, 2)
+        self.assertEqual(popen.call_count, 3)
         self.assertIn("scripts/fetch_mushaf.py", popen.call_args.args[0])
 
     def test_stuck_child_is_killed(self) -> None:

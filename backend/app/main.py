@@ -52,7 +52,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.add_middleware(RequestContextMiddleware)
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=settings.cors_allowed_origins,
+        allow_origins=sorted(set(settings.cors_allowed_origins) | {"https://qabas-app.pages.dev"}),
         allow_credentials=False,  # bearer headers only, never cookies
         allow_methods=["GET", "POST", "PATCH", "DELETE"],
         allow_headers=["Authorization", "Content-Type", "Accept-Language", "Qabas-Contract",

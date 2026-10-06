@@ -55,13 +55,15 @@ def main() -> int:
     os.environ["PYTHONUNBUFFERED"] = "1"
     try:
         preparations = [[sys.executable, "-m", "alembic", "upgrade", "head"]]
+        preparations.append([sys.executable, "scripts/seed.py"])
         if os.environ.get("MUSHAF_ARCHIVE_URL"):
             preparations.append([sys.executable, "scripts/fetch_mushaf.py", "--if-missing"])
         else:
             print("Canonical dataset must be installed during build; "
                   "startup download disabled without MUSHAF_ARCHIVE_URL.", flush=True)
         for preparation in preparations:
-            label = "migrations" if "alembic" in preparation else "canonical dataset"
+            label = ("migrations" if "alembic" in preparation else
+                     "curriculum structure" if "scripts/seed.py" in preparation else "canonical dataset")
             print(f"Starting {label} (timeout {PREPARATION_TIMEOUT}s)", flush=True)
             child = subprocess.Popen(preparation, cwd=BACKEND)
             children.append(child)
