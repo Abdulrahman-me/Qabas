@@ -44,11 +44,21 @@ def main() -> int:
     if args.archive:
         archive = args.archive.read_bytes()
     else:
-        print(f"downloading {spec.url}")
-        with httpx.Client(timeout=httpx.Timeout(120, connect=10), follow_redirects=True) as client:
-            response = client.get(spec.url)
-            response.raise_for_status()
-            archive = response.content
+        print(f"downloading {spec.url}", flush=True)
+        # Cold deployments may encounter a slow or transiently unreachable origin.
+        # Retry connection failures, keeping TLS verification and both pinned digests.
+        transport = httpx.HTTPTransport(retries=2)
+        try:
+            with httpx.Client(transport=transport, timeout=httpx.Timeout(120, connect=30),
+                              follow_redirects=True) as client:
+                response = client.get(spec.url)
+                response.raise_for_status()
+                archive = response.content
+        except httpx.HTTPError as exc:
+            print(f"canonical dataset download failed ({type(exc).__name__}); "
+                  "the download origin must be reachable, or use --archive FILE with the pinned archive",
+                  file=sys.stderr, flush=True)
+            return 1
     digest = hashlib.sha256(archive).hexdigest()
     if digest != spec.archive_sha256:
         print(f"archive SHA-256 {digest} does not match the pinned {spec.archive_sha256}; nothing installed",
