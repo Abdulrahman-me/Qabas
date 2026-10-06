@@ -29,9 +29,15 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--archive", type=Path, help="use this local archive instead of downloading")
     parser.add_argument("--dataset", help="dataset id (default: the manifest's canonical dataset)")
+    parser.add_argument("--if-missing", action="store_true", help="validate and reuse an installed dataset")
     args = parser.parse_args()
     canonical, specs = load_manifest()
     spec = specs[args.dataset or canonical]
+    target = get_settings().mushaf_dir / f"{spec.id}.json"
+    if args.if_missing and target.is_file():
+        Mushaf.load(target, spec)
+        print(f"validated installed {spec.id}")
+        return 0
     if spec.url is None or spec.archive_sha256 is None:
         print(f"{spec.id} has no download source", file=sys.stderr)
         return 1
@@ -54,7 +60,6 @@ def main() -> int:
         print(f"{spec.member} SHA-256 {digest} does not match the pinned {spec.member_sha256}; nothing installed",
               file=sys.stderr)
         return 1
-    target = get_settings().mushaf_dir / f"{spec.id}.json"
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_bytes(member)
     mushaf = Mushaf.load(target, spec)  # parses and validates the whole text

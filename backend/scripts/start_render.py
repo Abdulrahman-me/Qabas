@@ -53,15 +53,17 @@ def main() -> int:
     signal.signal(signal.SIGTERM, request_stop)
     signal.signal(signal.SIGINT, request_stop)
     try:
-        migration = subprocess.Popen([sys.executable, "-m", "alembic", "upgrade", "head"], cwd=BACKEND)
-        children.append(migration)
-        while migration.poll() is None and not stopping:
-            time.sleep(0.25)
-        if stopping:
-            return 0
-        if migration.returncode != 0:
-            return 1
-        children.clear()
+        for preparation in ([sys.executable, "-m", "alembic", "upgrade", "head"],
+                            [sys.executable, "scripts/fetch_mushaf.py", "--if-missing"]):
+            child = subprocess.Popen(preparation, cwd=BACKEND)
+            children.append(child)
+            while child.poll() is None and not stopping:
+                time.sleep(0.25)
+            if stopping:
+                return 0
+            if child.returncode != 0:
+                return 1
+            children.clear()
         for command in commands(os.environ.get("PORT", "10000")):
             if stopping:
                 return 0

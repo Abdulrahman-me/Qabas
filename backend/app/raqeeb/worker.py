@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import copy
+import logging
 import uuid
 from datetime import timedelta
 from typing import Any
@@ -27,6 +28,8 @@ from app.services.platform.auth_sessions import utcnow
 from app.services.users import iso
 from app.sources.errors import SourceError
 from app.sources.store import persist, source_id
+
+log = logging.getLogger("qabas.raqeeb")
 
 
 class LostLease(Exception):
@@ -228,6 +231,11 @@ async def _process(resources: Resources, message_id: str, *, client: LLMClient |
             "upstream_unavailable" if isinstance(exc, (LLMError, SourceError, TimeoutError)) else "internal_error"
         if isinstance(exc, (LLMOutputInvalid, LLMRequestRejected, UnsafePromptData)):
             code = "internal_error"
+        # Exception text/tracebacks can include learner content or provider payloads.
+        log.error("reply processing failed", extra={"message_id": message_id,
+            "error_type": type(exc).__name__, "code": code,
+            "stage": trace.get("stages", [{}])[-1].get("stage", "received")
+            if trace.get("stages") else "received"})
         async with maker() as db, db.begin():
             row = (await db.execute(select(RaqeebMessage).where(RaqeebMessage.id == message_id)
                                    .with_for_update())).scalar_one_or_none()

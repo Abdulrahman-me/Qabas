@@ -49,7 +49,7 @@ Start Command instead (from the `backend` root directory):
 uv run python scripts/start_render.py
 ```
 
-The launcher runs migrations before starting Uvicorn, a Celery worker for the
+The launcher runs migrations and installs the digest-pinned canonical mushaf before starting Uvicorn, a Celery worker for the
 `maintenance,raqeeb,embeddings` queues, and Celery Beat. Reply generation needs both
 the worker and Beat: the API records requests in the outbox, and Beat schedules the
 relay that sends them to the worker. All processes inherit the service's environment.

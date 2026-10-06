@@ -32,10 +32,24 @@ class RenderStartTests(unittest.TestCase):
         worker.poll.return_value = 1
         beat, api = MagicMock(), MagicMock()
         beat.poll.return_value = api.poll.return_value = None
-        popen.side_effect = [migration, worker, beat, api]
+        dataset = MagicMock(returncode=0)
+        dataset.poll.return_value = 0
+        popen.side_effect = [migration, dataset, worker, beat, api]
         self.assertEqual(start_render.main(), 1)
         beat.terminate.assert_called_once()
         api.terminate.assert_called_once()
+
+    @patch.object(start_render.signal, "signal")
+    @patch.object(start_render.subprocess, "Popen")
+    def test_missing_dataset_install_failure_prevents_start(self, popen: MagicMock, _signal: MagicMock) -> None:
+        migration = MagicMock(returncode=0)
+        migration.poll.return_value = 0
+        dataset = MagicMock(returncode=1)
+        dataset.poll.return_value = 1
+        popen.side_effect = [migration, dataset]
+        self.assertEqual(start_render.main(), 1)
+        self.assertEqual(popen.call_count, 2)
+        self.assertIn("scripts/fetch_mushaf.py", popen.call_args.args[0])
 
     def test_stuck_child_is_killed(self) -> None:
         child = MagicMock()
