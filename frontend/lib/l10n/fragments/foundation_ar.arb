@@ -1,0 +1,276 @@
+{
+  "@@locale": "ar",
+  "commonRetry": "حاول مجددًا",
+  "@commonRetry": {
+    "description": "Foundation component / commonRetry. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonBrandArabic": "قبس",
+  "@commonBrandArabic": {
+    "description": "Foundation component / commonBrandArabic. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonBrandLatin": "Qabas",
+  "@commonBrandLatin": {
+    "description": "Foundation component / commonBrandLatin. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonEnglish": "English",
+  "@commonEnglish": {
+    "description": "Foundation component / commonEnglish. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonArabic": "العربية",
+  "@commonArabic": {
+    "description": "Foundation component / commonArabic. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonSendTooltip": "إرسال",
+  "@commonSendTooltip": {
+    "description": "Foundation component / commonSendTooltip. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonRecordTooltip": "سجّل سؤالًا",
+  "@commonRecordTooltip": {
+    "description": "Foundation component / commonRecordTooltip. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonRemoveAttachmentTooltip": "إزالة المرفق",
+  "@commonRemoveAttachmentTooltip": {
+    "description": "Foundation component / commonRemoveAttachmentTooltip. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonTabDiscover": "اكتشف",
+  "@commonTabDiscover": {
+    "description": "Foundation component / commonTabDiscover. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonUpdate": "حدّث قبس",
+  "@commonUpdate": {
+    "description": "Foundation component / commonUpdate. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonLoading": "جارٍ التحميل…",
+  "@commonLoading": {
+    "description": "Foundation component / commonLoading. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonOfflineBody": "أنت غير متصل. سنحفظ ما أنجزته.",
+  "@commonOfflineBody": {
+    "description": "Foundation component / commonOfflineBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorNetworkTitle": "لا يوجد اتصال",
+  "@errorNetworkTitle": {
+    "description": "Foundation component / errorNetworkTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorNetworkBody": "تحقّق من اتصالك بالإنترنت وحاول مجددًا.",
+  "@errorNetworkBody": {
+    "description": "Foundation component / errorNetworkBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorServerTitle": "لحظة من الانتظار",
+  "@errorServerTitle": {
+    "description": "Foundation component / errorServerTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorServerBody": "حدث خطأ لدينا. حاول مجددًا.",
+  "@errorServerBody": {
+    "description": "Foundation component / errorServerBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorSourcesTitle": "المصادر تحتاج بعض الوقت",
+  "@errorSourcesTitle": {
+    "description": "Foundation component / errorSourcesTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorSourcesBody": "المصادر غير متاحة مؤقتًا. حاول بعد قليل.",
+  "@errorSourcesBody": {
+    "description": "Foundation component / errorSourcesBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorGenericTitle": "حدث أمر غير متوقع",
+  "@errorGenericTitle": {
+    "description": "Foundation component / errorGenericTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorGenericBody": "لنحاول مرة أخرى.",
+  "@errorGenericBody": {
+    "description": "Foundation component / errorGenericBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorRateLimitedTitle": "لننتظر قليلًا",
+  "@errorRateLimitedTitle": {
+    "description": "Foundation component / errorRateLimitedTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorRateLimitedBody": "يمكنك المحاولة مجددًا بعد {time}.",
+  "@errorRateLimitedBody": {
+    "description": "Foundation component / errorRateLimitedBody. Short, warm interface wording.",
+    "x-review": true,
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "errorNotFoundTitle": "لم نتمكن من العثور عليه",
+  "@errorNotFoundTitle": {
+    "description": "Foundation component / errorNotFoundTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorNotFoundBody": "عُد وخذ خطوة أخرى.",
+  "@errorNotFoundBody": {
+    "description": "Foundation component / errorNotFoundBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorForbiddenTitle": "هذا غير متاح",
+  "@errorForbiddenTitle": {
+    "description": "Foundation component / errorForbiddenTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorForbiddenBody": "هذا غير متاح لحسابك.",
+  "@errorForbiddenBody": {
+    "description": "Foundation component / errorForbiddenBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorTooLargeTitle": "هذا الملف كبير جدًا",
+  "@errorTooLargeTitle": {
+    "description": "Foundation component / errorTooLargeTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorTooLargeBody": "اختر ملفًا أصغر وحاول مجددًا.",
+  "@errorTooLargeBody": {
+    "description": "Foundation component / errorTooLargeBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorFileTypeTitle": "جرّب ملفًا آخر",
+  "@errorFileTypeTitle": {
+    "description": "Foundation component / errorFileTypeTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "errorFileTypeBody": "نوع هذا الملف غير مدعوم.",
+  "@errorFileTypeBody": {
+    "description": "Foundation component / errorFileTypeBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonChooseAnother": "اختر غيره",
+  "@commonChooseAnother": {
+    "description": "Foundation component / commonChooseAnother. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonEdit": "تعديل",
+  "@commonEdit": {
+    "description": "Foundation component / commonEdit. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonUpdateTitle": "تحديث صغير، وطريق أكثر نورًا",
+  "@commonUpdateTitle": {
+    "description": "Foundation component / commonUpdateTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonUpdateBody": "حدّث قبس لتواصل التعلّم. رحلتك بانتظارك.",
+  "@commonUpdateBody": {
+    "description": "Foundation component / commonUpdateBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonSessionEndedTitle": "لنبدأ مجددًا",
+  "@commonSessionEndedTitle": {
+    "description": "Foundation component / commonSessionEndedTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "commonSessionEndedBody": "انتهت جلستك كضيف. سنساعدك على بدء رحلة جديدة.",
+  "@commonSessionEndedBody": {
+    "description": "Foundation component / commonSessionEndedBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "characterGuideSemantics": "رفيقك يحمل قبسًا صغيرًا",
+  "@characterGuideSemantics": {
+    "description": "Foundation component / characterGuideSemantics. Short, warm interface wording."
+  },
+  "characterLanternSemantics": "فانوس رقيب",
+  "@characterLanternSemantics": {
+    "description": "Foundation component / characterLanternSemantics. Short, warm interface wording."
+  },
+  "galleryTitle": "معرض المكوّنات",
+  "@galleryTitle": {
+    "description": "Foundation component / galleryTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryButtons": "الأزرار",
+  "@galleryButtons": {
+    "description": "Foundation component / galleryButtons. Short, warm interface wording.",
+    "x-review": true
+  },
+  "gallerySurfaces": "البطاقات والتقدّم",
+  "@gallerySurfaces": {
+    "description": "Foundation component / gallerySurfaces. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryInputs": "الحقول والإعدادات",
+  "@galleryInputs": {
+    "description": "Foundation component / galleryInputs. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryBrand": "الهوية والرسوم",
+  "@galleryBrand": {
+    "description": "Foundation component / galleryBrand. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryMotion": "الحركة",
+  "@galleryMotion": {
+    "description": "Foundation component / galleryMotion. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryStates": "التحميل والفراغ والخطأ",
+  "@galleryStates": {
+    "description": "Foundation component / galleryStates. Short, warm interface wording.",
+    "x-review": true
+  },
+  "gallerySheets": "النوافذ والإشعارات",
+  "@gallerySheets": {
+    "description": "Foundation component / gallerySheets. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryOpenSheet": "افتح النافذة",
+  "@galleryOpenSheet": {
+    "description": "Foundation component / galleryOpenSheet. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryConfirm": "نافذة التأكيد",
+  "@galleryConfirm": {
+    "description": "Foundation component / galleryConfirm. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryEmptyTitle": "خطوتك التالية في الطريق",
+  "@galleryEmptyTitle": {
+    "description": "Foundation component / galleryEmptyTitle. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryEmptyBody": "مساحة صغيرة لشيء جديد.",
+  "@galleryEmptyBody": {
+    "description": "Foundation component / galleryEmptyBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryCelebrate": "احتفل",
+  "@galleryCelebrate": {
+    "description": "Foundation component / galleryCelebrate. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryNudge": "جرّب حركة لطيفة",
+  "@galleryNudge": {
+    "description": "Foundation component / galleryNudge. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryCardBody": "قبسٌ صغير لرحلة كبيرة",
+  "@galleryCardBody": {
+    "description": "Foundation component / galleryCardBody. Short, warm interface wording.",
+    "x-review": true
+  },
+  "galleryDisabled": "غير مفعّل",
+  "@galleryDisabled": {
+    "description": "Foundation component / galleryDisabled. Short, warm interface wording.",
+    "x-review": true
+  }
+}

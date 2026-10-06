@@ -1,0 +1,51 @@
+{
+  "@@locale": "en",
+  "@challengeDone": {
+    "description": "Prototype interface copy: challenge / done. Preserve the original warm wording."
+  },
+  "@challengeFastest": {
+    "description": "Prototype interface copy: challenge / fastest. Preserve the original warm wording."
+  },
+  "@challengeGetReady": {
+    "description": "Prototype interface copy: challenge / getReady. Preserve the original warm wording."
+  },
+  "@challengeLiveLobby": {
+    "description": "Prototype interface copy: challenge / liveLobby. Preserve the original warm wording."
+  },
+  "@challengePlayAgain": {
+    "description": "Prototype interface copy: challenge / playAgain. Preserve the original warm wording."
+  },
+  "@challengePoints": {
+    "description": "Prototype interface copy: challenge / points. Preserve the original warm wording."
+  },
+  "@challengeQuestionOf": {
+    "description": "Prototype interface copy: challenge / questionOf. Preserve the original warm wording.",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@challengeResults": {
+    "description": "Prototype interface copy: challenge / results. Preserve the original warm wording."
+  },
+  "@challengeWellPlayed": {
+    "description": "Prototype interface copy: challenge / wellPlayed. Preserve the original warm wording."
+  },
+  "@challengeYouWon": {
+    "description": "Prototype interface copy: challenge / youWon. Preserve the original warm wording."
+  },
+  "challengeDone": "Done",
+  "challengeFastest": "Fastest",
+  "challengeGetReady": "Get ready",
+  "challengeLiveLobby": "Friends are joining…",
+  "challengePlayAgain": "Play again",
+  "challengePoints": "pts",
+  "challengeQuestionOf": "Question {current} of {total}",
+  "challengeResults": "Results",
+  "challengeWellPlayed": "Well played!",
+  "challengeYouWon": "You lit the way!"
+}

@@ -1,0 +1,178 @@
+{
+  "@@locale": "ar",
+  "@commonAppName": {
+    "description": "Prototype interface copy: common / appName. Preserve the original warm wording."
+  },
+  "@commonBack": {
+    "description": "Prototype interface copy: common / back. Preserve the original warm wording."
+  },
+  "@commonCancel": {
+    "description": "Prototype interface copy: common / cancel. Preserve the original warm wording."
+  },
+  "@commonCheck": {
+    "description": "Prototype interface copy: common / check. Preserve the original warm wording."
+  },
+  "@commonClose": {
+    "description": "Prototype interface copy: common / close. Preserve the original warm wording."
+  },
+  "@commonContinue": {
+    "description": "Prototype interface copy: common / continue. Preserve the original warm wording."
+  },
+  "@commonDayStreak": {
+    "description": "Prototype interface copy: common / dayStreak. Preserve the original warm wording.",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonDays": {
+    "description": "Prototype interface copy: common / days. Preserve the original warm wording.",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonDone": {
+    "description": "Prototype interface copy: common / done. Preserve the original warm wording."
+  },
+  "@commonEmbers": {
+    "description": "Prototype interface copy: common / embers. Preserve the original warm wording.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonEmbersName": {
+    "description": "Prototype interface copy: common / embersName. Preserve the original warm wording."
+  },
+  "@commonGotIt": {
+    "description": "Prototype interface copy: common / gotIt. Preserve the original warm wording."
+  },
+  "@commonLater": {
+    "description": "Prototype interface copy: common / later. Preserve the original warm wording."
+  },
+  "@commonMinutes": {
+    "description": "Prototype interface copy: common / minutes. Preserve the original warm wording.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonMinutesLong": {
+    "description": "Prototype interface copy: common / minutesLong. Preserve the original warm wording.",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonNew": {
+    "description": "Prototype interface copy: common / new. Preserve the original warm wording."
+  },
+  "@commonNext": {
+    "description": "Prototype interface copy: common / next. Preserve the original warm wording."
+  },
+  "@commonPathExplorer": {
+    "description": "Prototype interface copy: common / pathExplorer. Preserve the original warm wording."
+  },
+  "@commonPathExplorerLong": {
+    "description": "Prototype interface copy: common / pathExplorerLong. Preserve the original warm wording."
+  },
+  "@commonPathNewMuslim": {
+    "description": "Prototype interface copy: common / pathNewMuslim. Preserve the original warm wording."
+  },
+  "@commonPathNewMuslimLong": {
+    "description": "Prototype interface copy: common / pathNewMuslimLong. Preserve the original warm wording."
+  },
+  "@commonPercent": {
+    "description": "Prototype interface copy: common / percent. Preserve the original warm wording.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonPlusEmbers": {
+    "description": "Prototype interface copy: common / plusEmbers. Preserve the original warm wording.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonSeeAll": {
+    "description": "Prototype interface copy: common / seeAll. Preserve the original warm wording."
+  },
+  "@commonSkip": {
+    "description": "Prototype interface copy: common / skip. Preserve the original warm wording."
+  },
+  "@commonStart": {
+    "description": "Prototype interface copy: common / start. Preserve the original warm wording."
+  },
+  "@commonTabCommunity": {
+    "description": "Prototype interface copy: common / tabCommunity. Preserve the original warm wording."
+  },
+  "@commonTabJourney": {
+    "description": "Prototype interface copy: common / tabJourney. Preserve the original warm wording."
+  },
+  "@commonTabProfile": {
+    "description": "Prototype interface copy: common / tabProfile. Preserve the original warm wording."
+  },
+  "@commonTabRaqeeb": {
+    "description": "Prototype interface copy: common / tabRaqeeb. Preserve the original warm wording."
+  },
+  "@commonTabReview": {
+    "description": "Prototype interface copy: common / tabReview. Preserve the original warm wording."
+  },
+  "@commonTagline": {
+    "description": "Prototype interface copy: common / tagline. Preserve the original warm wording."
+  },
+  "commonAppName": "قبس",
+  "commonBack": "رجوع",
+  "commonCancel": "إلغاء",
+  "commonCheck": "تحقّق",
+  "commonClose": "إغلاق",
+  "commonContinue": "متابعة",
+  "commonDayStreak": "{count, plural, =0{{countText} أيام متتالية} =1{{countText} يوم متتالية} =2{{countText} يومان متتالية} few{{countText} أيام متتالية} other{{countText} يومًا متتالية}}",
+  "commonDays": "{count, plural, =0{{countText} أيام} =1{{countText} يوم} =2{{countText} أيام} few{{countText} أيام} other{{countText} يومًا}}",
+  "commonDone": "تم",
+  "commonEmbers": "{value} قبسة",
+  "commonEmbersName": "القبسات",
+  "commonGotIt": "فهمت",
+  "commonLater": "لاحقًا",
+  "commonMinutes": "{value} د",
+  "commonMinutesLong": "{count, plural, =0{{value} دقائق} =1{{value} دقائق} =2{{value} دقائق} few{{value} دقائق} other{{value} دقيقة}}",
+  "commonNew": "جديد",
+  "commonNext": "التالي",
+  "commonPathExplorer": "المستكشف",
+  "commonPathExplorerLong": "مسار المستكشف",
+  "commonPathNewMuslim": "المسلم الجديد",
+  "commonPathNewMuslimLong": "مسار المسلم الجديد",
+  "commonPercent": "{value}٪",
+  "commonPlusEmbers": "+{value} قبسة",
+  "commonSeeAll": "عرض الكل",
+  "commonSkip": "تخطَّ",
+  "commonStart": "ابدأ",
+  "commonTabCommunity": "المجتمع",
+  "commonTabJourney": "الرحلة",
+  "commonTabProfile": "حسابي",
+  "commonTabRaqeeb": "رقيب",
+  "commonTabReview": "المراجعة",
+  "commonTagline": "تعلّم الإسلام خطوة بخطوة، من أول سؤال إلى فهم متين."
+}

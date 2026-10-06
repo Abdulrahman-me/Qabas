@@ -1,0 +1,84 @@
+{
+  "@@locale": "ar",
+  "@communityCommunityTitle": {
+    "description": "Prototype interface copy: community / communityTitle. Preserve the original warm wording."
+  },
+  "@communityDailyQuests": {
+    "description": "Prototype interface copy: community / dailyQuests. Preserve the original warm wording."
+  },
+  "@communityEndsIn": {
+    "description": "Prototype interface copy: community / endsIn. Preserve the original warm wording.",
+    "placeholders": {
+      "days": {
+        "type": "String"
+      },
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "@communityFriends": {
+    "description": "Prototype interface copy: community / friends. Preserve the original warm wording."
+  },
+  "@communityInvite": {
+    "description": "Prototype interface copy: community / invite. Preserve the original warm wording."
+  },
+  "@communityJoinLeague": {
+    "description": "Prototype interface copy: community / joinLeague. Preserve the original warm wording."
+  },
+  "@communityLearningPrivately": {
+    "description": "Prototype interface copy: community / learningPrivately. Preserve the original warm wording."
+  },
+  "@communityLearningPrivatelyBody": {
+    "description": "Prototype interface copy: community / learningPrivatelyBody. Preserve the original warm wording."
+  },
+  "@communityLiveChallenge": {
+    "description": "Prototype interface copy: community / liveChallenge. Preserve the original warm wording."
+  },
+  "@communityLiveChallengeBody": {
+    "description": "Prototype interface copy: community / liveChallengeBody. Preserve the original warm wording."
+  },
+  "@communityPromoteLine": {
+    "description": "Prototype interface copy: community / promoteLine. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      },
+      "league": {
+        "type": "String"
+      }
+    }
+  },
+  "@communityPromotionZone": {
+    "description": "Prototype interface copy: community / promotionZone. Preserve the original warm wording."
+  },
+  "@communityStartChallenge": {
+    "description": "Prototype interface copy: community / startChallenge. Preserve the original warm wording."
+  },
+  "@communityStreakDays": {
+    "description": "Prototype interface copy: community / streakDays. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@communityYou": {
+    "description": "Prototype interface copy: community / you. Preserve the original warm wording."
+  },
+  "communityCommunityTitle": "المجتمع",
+  "communityDailyQuests": "مهام اليوم",
+  "communityEndsIn": "ينتهي خلال {days} يوم و{hours} ساعة",
+  "communityFriends": "الأصدقاء",
+  "communityInvite": "دعوة",
+  "communityJoinLeague": "انضم إلى الدوري",
+  "communityLearningPrivately": "أنت تتعلّم بخصوصية",
+  "communityLearningPrivatelyBody": "نشاطك مخفي عن الدوري والأصدقاء. يمكنك الانضمام في أي وقت.",
+  "communityLiveChallenge": "تحدٍّ مباشر",
+  "communityLiveChallengeBody": "تحدَّ أصدقاءك في مسابقة مباشرة، والأسرع بالإجابة الصحيحة يفوز.",
+  "communityPromoteLine": "أول {countText} ينتقلون إلى {league}",
+  "communityPromotionZone": "منطقة الترقّي",
+  "communityStartChallenge": "ابدأ تحدّيًا",
+  "communityStreakDays": "{countText} أيام متتالية",
+  "communityYou": "أنت"
+}

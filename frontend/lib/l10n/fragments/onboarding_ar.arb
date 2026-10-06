@@ -1,0 +1,213 @@
+{
+  "@@locale": "ar",
+  "@onboardingChooseLanguage": {
+    "description": "Prototype interface copy: onboarding / chooseLanguage. Preserve the original warm wording."
+  },
+  "@onboardingCompanionHello": {
+    "description": "Prototype interface copy: onboarding / companionHello. Preserve the original warm wording."
+  },
+  "@onboardingDiscreetBody": {
+    "description": "Prototype interface copy: onboarding / discreetBody. Preserve the original warm wording."
+  },
+  "@onboardingDiscreetTitle": {
+    "description": "Prototype interface copy: onboarding / discreetTitle. Preserve the original warm wording."
+  },
+  "@onboardingExplorerBody": {
+    "description": "Prototype interface copy: onboarding / explorerBody. Preserve the original warm wording."
+  },
+  "@onboardingExplorerTitle": {
+    "description": "Prototype interface copy: onboarding / explorerTitle. Preserve the original warm wording."
+  },
+  "@onboardingFamiliarBasics": {
+    "description": "Prototype interface copy: onboarding / familiarBasics. Preserve the original warm wording."
+  },
+  "@onboardingFamiliarNew": {
+    "description": "Prototype interface copy: onboarding / familiarNew. Preserve the original warm wording."
+  },
+  "@onboardingFamiliarNote": {
+    "description": "Prototype interface copy: onboarding / familiarNote. Preserve the original warm wording."
+  },
+  "@onboardingFamiliarSome": {
+    "description": "Prototype interface copy: onboarding / familiarSome. Preserve the original warm wording."
+  },
+  "@onboardingFamiliarTitle": {
+    "description": "Prototype interface copy: onboarding / familiarTitle. Preserve the original warm wording."
+  },
+  "@onboardingGetStarted": {
+    "description": "Prototype interface copy: onboarding / getStarted. Preserve the original warm wording."
+  },
+  "@onboardingGoalBubble": {
+    "description": "Prototype interface copy: onboarding / goalBubble. Preserve the original warm wording."
+  },
+  "@onboardingGoalDedicated": {
+    "description": "Prototype interface copy: onboarding / goalDedicated. Preserve the original warm wording."
+  },
+  "@onboardingGoalDeep": {
+    "description": "Prototype interface copy: onboarding / goalDeep. Preserve the original warm wording."
+  },
+  "@onboardingGoalGentle": {
+    "description": "Prototype interface copy: onboarding / goalGentle. Preserve the original warm wording."
+  },
+  "@onboardingGoalSteady": {
+    "description": "Prototype interface copy: onboarding / goalSteady. Preserve the original warm wording."
+  },
+  "@onboardingGoalTitle": {
+    "description": "Prototype interface copy: onboarding / goalTitle. Preserve the original warm wording."
+  },
+  "@onboardingHaveAccount": {
+    "description": "Prototype interface copy: onboarding / haveAccount. Preserve the original warm wording."
+  },
+  "@onboardingLanguageHint": {
+    "description": "Prototype interface copy: onboarding / languageHint. Preserve the original warm wording."
+  },
+  "@onboardingNewMuslimBody": {
+    "description": "Prototype interface copy: onboarding / newMuslimBody. Preserve the original warm wording."
+  },
+  "@onboardingNewMuslimTitle": {
+    "description": "Prototype interface copy: onboarding / newMuslimTitle. Preserve the original warm wording."
+  },
+  "@onboardingPerDay": {
+    "description": "Prototype interface copy: onboarding / perDay. Preserve the original warm wording.",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@onboardingPrivacyBody": {
+    "description": "Prototype interface copy: onboarding / privacyBody. Preserve the original warm wording."
+  },
+  "@onboardingPrivacyTitle": {
+    "description": "Prototype interface copy: onboarding / privacyTitle. Preserve the original warm wording."
+  },
+  "@onboardingPrivateBody": {
+    "description": "Prototype interface copy: onboarding / privateBody. Preserve the original warm wording."
+  },
+  "@onboardingPrivateTitle": {
+    "description": "Prototype interface copy: onboarding / privateTitle. Preserve the original warm wording."
+  },
+  "@onboardingReadyExplorer": {
+    "description": "Prototype interface copy: onboarding / readyExplorer. Preserve the original warm wording."
+  },
+  "@onboardingReadyNewMuslim": {
+    "description": "Prototype interface copy: onboarding / readyNewMuslim. Preserve the original warm wording."
+  },
+  "@onboardingReadyTitle": {
+    "description": "Prototype interface copy: onboarding / readyTitle. Preserve the original warm wording."
+  },
+  "@onboardingReminderTitle": {
+    "description": "Prototype interface copy: onboarding / reminderTitle. Preserve the original warm wording."
+  },
+  "@onboardingStartMyJourney": {
+    "description": "Prototype interface copy: onboarding / startMyJourney. Preserve the original warm wording."
+  },
+  "@onboardingStepOf": {
+    "description": "Prototype interface copy: onboarding / stepOf. Preserve the original warm wording.",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@onboardingWelcomeBody": {
+    "description": "Prototype interface copy: onboarding / welcomeBody. Preserve the original warm wording."
+  },
+  "@onboardingWelcomeExplorer": {
+    "description": "Prototype interface copy: onboarding / welcomeExplorer. Preserve the original warm wording."
+  },
+  "@onboardingWelcomeNewMuslim": {
+    "description": "Prototype interface copy: onboarding / welcomeNewMuslim. Preserve the original warm wording."
+  },
+  "@onboardingWelcomeTitle": {
+    "description": "Prototype interface copy: onboarding / welcomeTitle. Preserve the original warm wording."
+  },
+  "@onboardingWhoBubble": {
+    "description": "Prototype interface copy: onboarding / whoBubble. Preserve the original warm wording."
+  },
+  "@onboardingWhoTitle": {
+    "description": "Prototype interface copy: onboarding / whoTitle. Preserve the original warm wording."
+  },
+  "onboardingChooseLanguage": "اختر لغتك",
+  "onboardingCompanionHello": "أهلًا بك! سأحمل لك القبس وأنت تجد طريقك.",
+  "onboardingDiscreetBody": "«حان وقت درسك اليومي» — لا أكثر.",
+  "onboardingDiscreetTitle": "تذكيرات متحفّظة",
+  "onboardingExplorerBody": "أسئلة كبيرة، وأجوبة واضحة، بلا ضغط.",
+  "onboardingExplorerTitle": "أريد أن أتعرّف على الإسلام",
+  "onboardingFamiliarBasics": "أعرف الأساسيات",
+  "onboardingFamiliarNew": "جديد تمامًا",
+  "onboardingFamiliarNote": "سنبدأ بهدوء في كل الأحوال، واختبار قصير لاحقًا يتخطى ما تعرفه.",
+  "onboardingFamiliarSome": "أعرف القليل",
+  "onboardingFamiliarTitle": "ما مدى معرفتك؟",
+  "onboardingGetStarted": "لنبدأ",
+  "onboardingGoalBubble": "قليلٌ دائم خيرٌ من كثيرٍ منقطع.",
+  "onboardingGoalDedicated": "جادّ",
+  "onboardingGoalDeep": "معمّق",
+  "onboardingGoalGentle": "هادئ",
+  "onboardingGoalSteady": "منتظم",
+  "onboardingGoalTitle": "كم من الوقت يناسبك كل يوم؟",
+  "onboardingHaveAccount": "لديّ حساب بالفعل",
+  "onboardingLanguageHint": "يمكنك تغييرها في أي وقت من الإعدادات.",
+  "onboardingNewMuslimBody": "خطواتك الأولى في الإيمان والعبادة، خطوة بخطوة.",
+  "onboardingNewMuslimTitle": "أسلمتُ حديثًا",
+  "onboardingPerDay": "{count, plural, =0{{countText} دقائق يوميًا} =1{{countText} دقائق يوميًا} =2{{countText} دقائق يوميًا} few{{countText} دقائق يوميًا} other{{countText} دقيقة يوميًا}}",
+  "onboardingPrivacyBody": "تعلّم بخصوصية إن أردت. بعض الناس يفضّلون أن تبقى رحلتهم لأنفسهم، ولا بأس بذلك أبدًا.",
+  "onboardingPrivacyTitle": "رحلتك تبقى لك",
+  "onboardingPrivateBody": "إخفاء نشاطك عن الدوري والأصدقاء.",
+  "onboardingPrivateTitle": "ملف شخصي خاص",
+  "onboardingReadyExplorer": "سنبدأ بالأسئلة الكبرى، ثم نرى كيف يعيش المسلم إيمانه في يومه.",
+  "onboardingReadyNewMuslim": "سنبدأ بخطواتك الأولى، الشهادتين ثم الصلاة، بهدوء وخطوة خطوة.",
+  "onboardingReadyTitle": "طريقك جاهز",
+  "onboardingReminderTitle": "وقت التذكير",
+  "onboardingStartMyJourney": "ابدأ رحلتي",
+  "onboardingStepOf": "الخطوة {current} من {total}",
+  "onboardingWelcomeBody": "دروس قصيرة، ومصادر موثوقة، ورفيق يمشي معك — بالسرعة التي تناسبك.",
+  "onboardingWelcomeExplorer": "أهلًا بك. اسأل عن أي شيء، فأنت بين أصدقاء.",
+  "onboardingWelcomeNewMuslim": "أهلًا بك، ومبارك عليك. سنمشي معًا خطوة بخطوة.",
+  "onboardingWelcomeTitle": "قبسٌ صغير لرحلة كبيرة",
+  "onboardingWhoBubble": "لا توجد إجابة خاطئة. سأصمم الطريق على مقاسك.",
+  "onboardingWhoTitle": "ما الذي أتى بك إلى قبس؟",
+  "onboardingPreferNotToSay": "أفضل عدم الإجابة",
+  "@onboardingPreferNotToSay": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "onboardingSkipCuriosity": "تخطّ الآن",
+  "@onboardingSkipCuriosity": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "onboardingSubmitError": "تعذّر بدء رحلتك. احتفظنا باختياراتك.",
+  "@onboardingSubmitError": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "onboardingLanguageEnglishPrompt": "Choose your language",
+  "@onboardingLanguageEnglishPrompt": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "onboardingLanguageArabicPrompt": "اختر لغتك",
+  "@onboardingLanguageArabicPrompt": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "onboardingEnglishGlyph": "Aa",
+  "@onboardingEnglishGlyph": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "onboardingArabicGlyph": "أ",
+  "@onboardingArabicGlyph": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "onboardingReminderTime": "وقت التذكير: {time}",
+  "@onboardingReminderTime": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  }
+}

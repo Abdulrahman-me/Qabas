@@ -1,0 +1,48 @@
+{
+  "@@locale": "ar",
+  "@streakDayStreakLabel": {
+    "description": "Prototype interface copy: streak / dayStreakLabel. Preserve the original warm wording."
+  },
+  "@streakKeepFlameWarm": {
+    "description": "Prototype interface copy: streak / keepFlameWarm. Preserve the original warm wording."
+  },
+  "@streakLastFiveWeeks": {
+    "description": "Prototype interface copy: streak / lastFiveWeeks. Preserve the original warm wording."
+  },
+  "@streakRestDays": {
+    "description": "Prototype interface copy: streak / restDays. Preserve the original warm wording."
+  },
+  "@streakRestDaysBody": {
+    "description": "Prototype interface copy: streak / restDaysBody. Preserve the original warm wording."
+  },
+  "@streakStreakBody": {
+    "description": "Prototype interface copy: streak / streakBody. Preserve the original warm wording."
+  },
+  "@streakStreakKeep": {
+    "description": "Prototype interface copy: streak / streakKeep. Preserve the original warm wording."
+  },
+  "@streakStreakTitle": {
+    "description": "Prototype interface copy: streak / streakTitle. Preserve the original warm wording.",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "streakDayStreakLabel": "أيام متتالية",
+  "streakKeepFlameWarm": "تعلّم قليلًا اليوم لتبقى شعلتك دافئة.",
+  "streakLastFiveWeeks": "أسابيعك الخمسة الأخيرة",
+  "streakRestDays": "أيام الراحة",
+  "streakRestDaysBody": "الحياة لها ظروفها. يوم راحة في الأسبوع يحفظ شعلتك دافئة، بلا لوم ولا ضياع للتقدم.",
+  "streakStreakBody": "أوقدت شعلة اليوم. قليلٌ من النور كل يوم يصنع طريقًا.",
+  "streakStreakKeep": "حافظ على الشعلة",
+  "streakStreakTitle": "{count, plural, =0{{countText} أيام متتالية!} =1{{countText} يوم متتالية!} =2{{countText} يومان متتالية!} few{{countText} أيام متتالية!} other{{countText} يومًا متتالية!}}",
+  "streakToday": "اليوم",
+  "@streakToday": {
+    "description": "Accessible label for the current day in the streak week."
+  }
+}

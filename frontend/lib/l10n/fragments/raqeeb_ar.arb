@@ -1,0 +1,305 @@
+{
+  "@@locale": "ar",
+  "@raqeebAskAnything": {
+    "description": "Prototype interface copy: raqeeb / askAnything. Preserve the original warm wording."
+  },
+  "@raqeebAskSpecialist": {
+    "description": "Prototype interface copy: raqeeb / askSpecialist. Preserve the original warm wording."
+  },
+  "@raqeebAttachDoc": {
+    "description": "Prototype interface copy: raqeeb / attachDoc. Preserve the original warm wording."
+  },
+  "@raqeebAttachDocBody": {
+    "description": "Prototype interface copy: raqeeb / attachDocBody. Preserve the original warm wording."
+  },
+  "@raqeebAttachPhoto": {
+    "description": "Prototype interface copy: raqeeb / attachPhoto. Preserve the original warm wording."
+  },
+  "@raqeebAttachPhotoBody": {
+    "description": "Prototype interface copy: raqeeb / attachPhotoBody. Preserve the original warm wording."
+  },
+  "@raqeebAttachTitle": {
+    "description": "Prototype interface copy: raqeeb / attachTitle. Preserve the original warm wording."
+  },
+  "@raqeebAttachVoice": {
+    "description": "Prototype interface copy: raqeeb / attachVoice. Preserve the original warm wording."
+  },
+  "@raqeebAttachVoiceBody": {
+    "description": "Prototype interface copy: raqeeb / attachVoiceBody. Preserve the original warm wording."
+  },
+  "@raqeebAuthenticityCheck": {
+    "description": "Prototype interface copy: raqeeb / authenticityCheck. Preserve the original warm wording."
+  },
+  "@raqeebNewChat": {
+    "description": "Prototype interface copy: raqeeb / newChat. Preserve the original warm wording."
+  },
+  "@raqeebPrototypeAnswer": {
+    "description": "Prototype interface copy: raqeeb / prototypeAnswer. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebName": {
+    "description": "Prototype interface copy: raqeeb / raqeebName. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebTagline": {
+    "description": "Prototype interface copy: raqeeb / raqeebTagline. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebThinking": {
+    "description": "Prototype interface copy: raqeeb / raqeebThinking. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebTrust1": {
+    "description": "Prototype interface copy: raqeeb / raqeebTrust1. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebTrust2": {
+    "description": "Prototype interface copy: raqeeb / raqeebTrust2. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebTrust3": {
+    "description": "Prototype interface copy: raqeeb / raqeebTrust3. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebTrust4": {
+    "description": "Prototype interface copy: raqeeb / raqeebTrust4. Preserve the original warm wording."
+  },
+  "@raqeebSources": {
+    "description": "Prototype interface copy: raqeeb / sources. Preserve the original warm wording."
+  },
+  "@raqeebSpecialistSent": {
+    "description": "Prototype interface copy: raqeeb / specialistSent. Preserve the original warm wording."
+  },
+  "@raqeebSpecialistTitle": {
+    "description": "Prototype interface copy: raqeeb / specialistTitle. Preserve the original warm wording."
+  },
+  "@raqeebTryAsking": {
+    "description": "Prototype interface copy: raqeeb / tryAsking. Preserve the original warm wording."
+  },
+  "raqeebAskAnything": "اسأل عن أي شيء…",
+  "raqeebAskSpecialist": "اسأل مختصًا بشكل خاص",
+  "raqeebAttachDoc": "مستند",
+  "raqeebAttachDocBody": "يقرؤه رقيب ويجيب بالمصادر",
+  "raqeebAttachPhoto": "صورة",
+  "raqeebAttachPhotoBody": "لافتة، أو صفحة، أو منشور رأيته",
+  "raqeebAttachTitle": "اسأل عبر…",
+  "raqeebAttachVoice": "صوتك",
+  "raqeebAttachVoiceBody": "اسأل بصوتك فقط",
+  "raqeebAuthenticityCheck": "التحقق من الصحة",
+  "raqeebNewChat": "سؤال جديد",
+  "raqeebPrototypeAnswer": "في هذا النموذج الأولي أجيب عن بعض الأسئلة النموذجية، جرّب أحد الاقتراحات. في التطبيق الكامل أجيب من مصادر مراجَعة وأبيّن مصدر كل إجابة.",
+  "raqeebRaqeebName": "رقيب",
+  "raqeebRaqeebTagline": "دليلك إلى إجابات موثوقة",
+  "raqeebRaqeebThinking": "أراجع المصادر…",
+  "raqeebRaqeebTrust1": "يجيب من مصادر موثوقة ومراجَعة",
+  "raqeebRaqeebTrust2": "يبيّن مصدر كل إجابة",
+  "raqeebRaqeebTrust3": "يتحقق من صحة الأقوال والأحاديث",
+  "raqeebRaqeebTrust4": "يحيلك إلى مختص عند الحاجة",
+  "raqeebSources": "المصادر",
+  "raqeebSpecialistSent": "أُرسل بشكل خاص، وسنخبرك حين يصل الرد.",
+  "raqeebSpecialistTitle": "يمكن لمختص أن يساعدك",
+  "raqeebTryAsking": "جرّب أن تسأل",
+  "raqeebSuggestionPrayer": "لماذا يصلي المسلمون خمس مرات في اليوم؟",
+  "raqeebSuggestionHadith": "هل هذا الحديث صحيح؟ «الصلوات الخمس كنهر على باب أحدكم»",
+  "raqeebSuggestionArabic": "هل أستطيع أن أصلي قبل أن أتعلم العربية؟",
+  "raqeebSuggestionIslam": "ما معنى كلمة «إسلام»؟",
+  "raqeebStageReceived": "أستقبل سؤالك…",
+  "raqeebStageReading": "أقرأ ما أرسلته",
+  "raqeebStageClassifying": "أفهم سؤالك",
+  "raqeebStageRetrieving": "أبحث في المصادر",
+  "raqeebStageVerifying": "أتحقق من المصادر",
+  "raqeebStageWriting": "أكتب الإجابة",
+  "raqeebStageAdapting": "أبسّط الإجابة لك",
+  "raqeebProcessing": "رقيب ما زال يكتب الإجابة…",
+  "raqeebSending": "جارٍ الإرسال…",
+  "raqeebNotSent": "لم تُرسل",
+  "raqeebFailed": "لم أتمكن من إكمال الإجابة. لنحاول مرة أخرى.",
+  "raqeebTimeout": "استغرقت الإجابة وقتًا أطول من المتوقع. يمكنك المحاولة مرة أخرى.",
+  "raqeebUnderstood": "ما فهمته من رسالتك",
+  "raqeebTextOnly": "سؤالك المكتوب",
+  "raqeebTruncated": "تمت قراءة جزء من المستند فقط",
+  "raqeebOpen": "فتح",
+  "raqeebLearnMore": "تعلّم أكثر",
+  "raqeebRateUp": "إجابة مفيدة",
+  "raqeebRateDown": "الإجابة بحاجة إلى توضيح",
+  "raqeebRateFailed": "تعذّر حفظ تقييمك. حاول مرة أخرى.",
+  "raqeebQuranExact": "مطابق للمصحف",
+  "raqeebQuranInexact": "نص الآية غير دقيق",
+  "raqeebNotFound": "لم نجد له أصلاً في المصادر المتاحة",
+  "raqeebNeedsSpecialist": "يحتاج إلى مختص",
+  "raqeebAuthentic": "صحيح",
+  "raqeebAcceptable": "حسن",
+  "raqeebWeak": "ضعيف",
+  "raqeebFabricated": "موضوع",
+  "raqeebGradeOther": "حكم آخر",
+  "raqeebFoundIn": "موجود في",
+  "raqeebGrade": "الحكم",
+  "raqeebGrader": "حكم عليه",
+  "raqeebExactText": "النص الدقيق",
+  "raqeebAlternative": "نص صحيح ذو معنى قريب",
+  "raqeebTextLimit": "اكتب سؤالك في حدود ٢٠٠٠ حرف.",
+  "raqeebTextOnlyPhase": "يمكنك طرح سؤالك كتابةً هنا. ستتوفر الأسئلة بالصوت والصور والمستندات لاحقًا.",
+  "raqeebAbstained": "إحالة أو امتناع عن الإجابة",
+  "@raqeebSuggestionPrayer": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebSuggestionHadith": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebSuggestionArabic": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebSuggestionIslam": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageReceived": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageReading": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageClassifying": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageRetrieving": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageVerifying": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageWriting": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageAdapting": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebProcessing": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebSending": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebNotSent": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebFailed": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebTimeout": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebUnderstood": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebTextOnly": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebTruncated": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebOpen": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebLearnMore": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebRateUp": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebRateDown": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebRateFailed": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebQuranExact": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebQuranInexact": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebNotFound": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebNeedsSpecialist": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebAuthentic": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebAcceptable": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebWeak": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebFabricated": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebGradeOther": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebFoundIn": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebGrade": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebGrader": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebExactText": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebAlternative": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebTextLimit": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebTextOnlyPhase": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebAbstained": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "raqeebRateLimited": "طرحت أسئلة كثيرة في وقت قصير. لننتظر قليلاً قبل المحاولة مرة أخرى.",
+  "@raqeebRateLimited": {
+    "description": "Raqeeb request rate limit; calm retry guidance.",
+    "x-review": true
+  }
+}

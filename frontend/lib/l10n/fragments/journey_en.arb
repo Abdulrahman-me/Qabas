@@ -1,0 +1,259 @@
+{
+  "@@locale": "en",
+  "@journeyCheckpoint": {
+    "description": "Prototype interface copy: journey / checkpoint. Preserve the original warm wording."
+  },
+  "@journeyComingSoonBody": {
+    "description": "Prototype interface copy: journey / comingSoonBody. Preserve the original warm wording."
+  },
+  "@journeyComingSoonTitle": {
+    "description": "Prototype interface copy: journey / comingSoonTitle. Preserve the original warm wording."
+  },
+  "@journeyDailyGoal": {
+    "description": "Prototype interface copy: journey / dailyGoal. Preserve the original warm wording."
+  },
+  "@journeyDoneLabel": {
+    "description": "Prototype interface copy: journey / doneLabel. Preserve the original warm wording."
+  },
+  "@journeyExplorerPathHint": {
+    "description": "Prototype interface copy: journey / explorerPathHint. Preserve the original warm wording."
+  },
+  "@journeyGoalProgress": {
+    "description": "Prototype interface copy: journey / goalProgress. Preserve the original warm wording.",
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "goal": {
+        "type": "String"
+      }
+    }
+  },
+  "@journeyGreetingAfternoon": {
+    "description": "Prototype interface copy: journey / greetingAfternoon. Preserve the original warm wording."
+  },
+  "@journeyGreetingEvening": {
+    "description": "Prototype interface copy: journey / greetingEvening. Preserve the original warm wording."
+  },
+  "@journeyGreetingMorning": {
+    "description": "Prototype interface copy: journey / greetingMorning. Preserve the original warm wording."
+  },
+  "@journeyGuide": {
+    "description": "Prototype interface copy: journey / guide. Preserve the original warm wording."
+  },
+  "@journeyJumpBack": {
+    "description": "Prototype interface copy: journey / jumpBack. Preserve the original warm wording."
+  },
+  "@journeyKeepTheLight": {
+    "description": "Prototype interface copy: journey / keepTheLight. Preserve the original warm wording."
+  },
+  "@journeyLearnedTodayLine": {
+    "description": "Prototype interface copy: journey / learnedTodayLine. Preserve the original warm wording."
+  },
+  "@journeyLesson": {
+    "description": "Prototype interface copy: journey / lesson. Preserve the original warm wording."
+  },
+  "@journeyLockedBody": {
+    "description": "Prototype interface copy: journey / lockedBody. Preserve the original warm wording."
+  },
+  "@journeyLockedTitle": {
+    "description": "Prototype interface copy: journey / lockedTitle. Preserve the original warm wording."
+  },
+  "@journeyNewMuslimPathHint": {
+    "description": "Prototype interface copy: journey / newMuslimPathHint. Preserve the original warm wording."
+  },
+  "@journeyOpenPlayableLesson": {
+    "description": "Prototype interface copy: journey / openPlayableLesson. Preserve the original warm wording."
+  },
+  "@journeyPathUnfolds": {
+    "description": "Prototype interface copy: journey / pathUnfolds. Preserve the original warm wording."
+  },
+  "@journeyPillarNames1": {
+    "description": "Prototype interface copy: journey / pillarNames1. Preserve the original warm wording."
+  },
+  "@journeyPillarNames2": {
+    "description": "Prototype interface copy: journey / pillarNames2. Preserve the original warm wording."
+  },
+  "@journeyPillarNames3": {
+    "description": "Prototype interface copy: journey / pillarNames3. Preserve the original warm wording."
+  },
+  "@journeyPillarNames4": {
+    "description": "Prototype interface copy: journey / pillarNames4. Preserve the original warm wording."
+  },
+  "@journeyPillarNames5": {
+    "description": "Prototype interface copy: journey / pillarNames5. Preserve the original warm wording."
+  },
+  "@journeyPractice": {
+    "description": "Prototype interface copy: journey / practice. Preserve the original warm wording."
+  },
+  "@journeyQuickReview": {
+    "description": "Prototype interface copy: journey / quickReview. Preserve the original warm wording."
+  },
+  "@journeyReviewDue": {
+    "description": "Prototype interface copy: journey / reviewDue. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@journeyReviewLesson": {
+    "description": "Prototype interface copy: journey / reviewLesson. Preserve the original warm wording."
+  },
+  "@journeyStartHere": {
+    "description": "Prototype interface copy: journey / startHere. Preserve the original warm wording."
+  },
+  "@journeyStartLesson": {
+    "description": "Prototype interface copy: journey / startLesson. Preserve the original warm wording."
+  },
+  "@journeyStory": {
+    "description": "Prototype interface copy: journey / story. Preserve the original warm wording."
+  },
+  "@journeyUnitComplete": {
+    "description": "Prototype interface copy: journey / unitComplete. Preserve the original warm wording."
+  },
+  "@journeyUnitN": {
+    "description": "Prototype interface copy: journey / unitN. Preserve the original warm wording.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "@journeyWhatYoullLearn": {
+    "description": "Prototype interface copy: journey / whatYoullLearn. Preserve the original warm wording."
+  },
+  "@journeyYourPath": {
+    "description": "Prototype interface copy: journey / yourPath. Preserve the original warm wording."
+  },
+  "journeyCheckpoint": "Checkpoint",
+  "journeyComingSoonBody": "This prototype includes one complete lesson: “Prayer: a river at your door”. The rest of the journey shows how the path unfolds.",
+  "journeyComingSoonTitle": "Coming soon",
+  "journeyDailyGoal": "Daily goal",
+  "journeyDoneLabel": "Completed",
+  "journeyExplorerPathHint": "For the curious: big questions first",
+  "journeyGoalProgress": "{done} / {goal} min",
+  "journeyGreetingAfternoon": "Good afternoon",
+  "journeyGreetingEvening": "Good evening",
+  "journeyGreetingMorning": "Good morning",
+  "journeyGuide": "Guide",
+  "journeyJumpBack": "Continue",
+  "journeyKeepTheLight": "Your path is lit. One small step today?",
+  "journeyLearnedTodayLine": "Today’s flame is lit. Beautiful work.",
+  "journeyLesson": "Lesson",
+  "journeyLockedBody": "Finish the steps before this one and the path will light up.",
+  "journeyLockedTitle": "Not yet",
+  "journeyNewMuslimPathHint": "First steps in faith and practice",
+  "journeyOpenPlayableLesson": "Try the sample lesson",
+  "journeyPathUnfolds": "The path keeps unfolding as you grow",
+  "journeyPillarNames1": "Testimony",
+  "journeyPillarNames2": "Prayer",
+  "journeyPillarNames3": "Zakah",
+  "journeyPillarNames4": "Pilgrimage",
+  "journeyPillarNames5": "Fasting",
+  "journeyPractice": "Practice",
+  "journeyQuickReview": "Quick review",
+  "journeyReviewDue": "{countText} cards ready for a 60-second review",
+  "journeyReviewLesson": "Review lesson",
+  "journeyStartHere": "Start",
+  "journeyStartLesson": "Start lesson",
+  "journeyStory": "Story",
+  "journeyUnitComplete": "Unit complete",
+  "journeyUnitN": "Unit {number}",
+  "journeyWhatYoullLearn": "In this unit",
+  "journeyYourPath": "Your path",
+  "journeyLessonAction": "Start lesson  {reward}",
+  "@journeyLessonAction": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review.",
+    "placeholders": {
+      "reward": {
+        "type": "String"
+      }
+    }
+  },
+  "journeyNodeSemantics": "{title} — {status}",
+  "@journeyNodeSemantics": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "journeyAvailable": "Available",
+  "@journeyAvailable": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "journeySoftLockTitle": "One idea first",
+  "@journeySoftLockTitle": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "journeySoftLockBody": "You’re almost there. One earlier idea will make this lesson easier to understand.",
+  "@journeySoftLockBody": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "journeyStartWith": "Start with: {title}",
+  "@journeyStartWith": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "journeyLoading": "Lighting your path…",
+  "@journeyLoading": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "journeyEmptyTitle": "Your path is being prepared",
+  "@journeyEmptyTitle": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "journeyEmptyBody": "Your next steps will appear here. Try again in a moment.",
+  "@journeyEmptyBody": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "journeyStartReview": "Start review",
+  "@journeyStartReview": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "journeyTakeUnitTest": "Take the unit test",
+  "@journeyTakeUnitTest": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "journeySkipUnit": "Skip unit",
+  "@journeySkipUnit": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "discoverEmptyTitle": "More to explore",
+  "@discoverEmptyTitle": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "discoverEmptyBody": "New lessons to explore will appear here.",
+  "@discoverEmptyBody": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "discoverNotice": "Some lessons normally come later on your path. Earlier units can make them easier to understand.",
+  "@discoverNotice": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "discoverUnitHeading": "Unit {number} · {title}",
+  "@discoverUnitHeading": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "learningEntryBody": "This part of your path is being prepared. Your progress is saved.",
+  "@learningEntryBody": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  }
+}

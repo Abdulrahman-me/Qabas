@@ -1,0 +1,117 @@
+{
+  "@@locale": "ar",
+  "@settingsAboutQabas": {
+    "description": "Prototype interface copy: settings / aboutQabas. Preserve the original warm wording."
+  },
+  "@settingsContentNote": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "@settingsContentNoteBody": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "@settingsDailyGoalSetting": {
+    "description": "Prototype interface copy: settings / dailyGoalSetting. Preserve the original warm wording."
+  },
+  "@settingsDemoReset": {
+    "description": "Prototype interface copy: settings / demoReset. Preserve the original warm wording."
+  },
+  "@settingsDiscreetReminders": {
+    "description": "Prototype interface copy: settings / discreetReminders. Preserve the original warm wording."
+  },
+  "@settingsHapticsLabel": {
+    "description": "Prototype interface copy: settings / hapticsLabel. Preserve the original warm wording."
+  },
+  "@settingsLanguage": {
+    "description": "Prototype interface copy: settings / language. Preserve the original warm wording."
+  },
+  "@settingsLearnerPath": {
+    "description": "Prototype interface copy: settings / learnerPath. Preserve the original warm wording."
+  },
+  "@settingsPrivateProfileSetting": {
+    "description": "Prototype interface copy: settings / privateProfileSetting. Preserve the original warm wording."
+  },
+  "@settingsReduceMotion": {
+    "description": "Prototype interface copy: settings / reduceMotion. Preserve the original warm wording."
+  },
+  "@settingsReduceMotionBody": {
+    "description": "Prototype interface copy: settings / reduceMotionBody. Preserve the original warm wording."
+  },
+  "@settingsReminders": {
+    "description": "Prototype interface copy: settings / reminders. Preserve the original warm wording."
+  },
+  "@settingsReplayOnboarding": {
+    "description": "Prototype interface copy: settings / replayOnboarding. Preserve the original warm wording."
+  },
+  "@settingsResetDemo": {
+    "description": "Prototype interface copy: settings / resetDemo. Preserve the original warm wording."
+  },
+  "@settingsResetDemoBody": {
+    "description": "Prototype interface copy: settings / resetDemoBody. Preserve the original warm wording."
+  },
+  "@settingsSectionAbout": {
+    "description": "Prototype interface copy: settings / sectionAbout. Preserve the original warm wording."
+  },
+  "@settingsSectionAccount": {
+    "description": "Prototype interface copy: settings / sectionAccount. Preserve the original warm wording."
+  },
+  "@settingsSectionDemo": {
+    "description": "Prototype interface copy: settings / sectionDemo. Preserve the original warm wording."
+  },
+  "@settingsSectionExperience": {
+    "description": "Prototype interface copy: settings / sectionExperience. Preserve the original warm wording."
+  },
+  "@settingsSectionLearning": {
+    "description": "Prototype interface copy: settings / sectionLearning. Preserve the original warm wording."
+  },
+  "@settingsSectionPrivacy": {
+    "description": "Prototype interface copy: settings / sectionPrivacy. Preserve the original warm wording."
+  },
+  "@settingsSoundEffects": {
+    "description": "Prototype interface copy: settings / soundEffects. Preserve the original warm wording."
+  },
+  "settingsAboutQabas": "عن قبس",
+  "settingsContentNote": "عن هذا المحتوى",
+  "settingsContentNoteBody": "يستند محتوى قبس إلى مصادر موثوقة، وينتظر مراجعة مختص في الدراسات الإسلامية قبل النشر.",
+  "settingsDailyGoalSetting": "الهدف اليومي",
+  "settingsDemoReset": "أعيد تعيين تقدم العرض",
+  "settingsDiscreetReminders": "تذكيرات متحفّظة",
+  "settingsHapticsLabel": "الاهتزاز",
+  "settingsLanguage": "اللغة",
+  "settingsLearnerPath": "مسار التعلّم",
+  "settingsPrivateProfileSetting": "ملف شخصي خاص",
+  "settingsReduceMotion": "تقليل الحركة",
+  "settingsReduceMotionBody": "شاشات أهدأ، بلا قفز أو جزيئات",
+  "settingsReminders": "وقت التذكير",
+  "settingsReplayOnboarding": "إعادة الترحيب",
+  "settingsResetDemo": "إعادة تعيين تقدم العرض",
+  "settingsResetDemoBody": "العودة إلى ٣ أيام متتالية ودرس الصلاة بانتظارك",
+  "settingsSectionAbout": "عن قبس",
+  "settingsSectionAccount": "أنت",
+  "settingsSectionDemo": "النموذج الأولي",
+  "settingsSectionExperience": "التجربة",
+  "settingsSectionLearning": "التعلّم",
+  "settingsSectionPrivacy": "الخصوصية",
+  "settingsSoundEffects": "المؤثرات الصوتية",
+  "settingsEnglish": "English",
+  "@settingsEnglish": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "settingsArabic": "العربية",
+  "@settingsArabic": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "settingsCharacters": "الشخصيات",
+  "@settingsCharacters": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "settingsSaveFailed": "لم نتمكن من حفظ التغيير. حاول مرة أخرى.",
+  "@settingsSaveFailed": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  }
+}

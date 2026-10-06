@@ -1,0 +1,3642 @@
+{
+  "@@locale": "en",
+  "@aboutAiNotice": {
+    "description": "Phase 10 about interface copy.",
+    "x-review": true
+  },
+  "@aboutFullVerse": {
+    "description": "Phase 10 about interface copy.",
+    "x-review": true
+  },
+  "@aboutNameMeaning": {
+    "description": "Prototype interface copy: about / nameMeaning. Preserve the original warm wording."
+  },
+  "@aboutNameMeaningTitle": {
+    "description": "Prototype interface copy: about / nameMeaningTitle. Preserve the original warm wording."
+  },
+  "@aboutOurPromises": {
+    "description": "Prototype interface copy: about / ourPromises. Preserve the original warm wording."
+  },
+  "@aboutPromise1": {
+    "description": "Prototype interface copy: about / promise1. Preserve the original warm wording."
+  },
+  "@aboutPromise2": {
+    "description": "Prototype interface copy: about / promise2. Preserve the original warm wording."
+  },
+  "@aboutPromise3": {
+    "description": "Prototype interface copy: about / promise3. Preserve the original warm wording."
+  },
+  "@aboutPromise4": {
+    "description": "Prototype interface copy: about / promise4. Preserve the original warm wording."
+  },
+  "@aboutTahaReference": {
+    "description": "Prototype interface copy: about / tahaReference. Preserve the original warm wording."
+  },
+  "@aboutTranslationNote": {
+    "description": "Prototype interface copy: about / translationNote. Preserve the original warm wording."
+  },
+  "@aboutVerseTranslation": {
+    "description": "Phase 10 about interface copy.",
+    "x-review": true
+  },
+  "@aboutWhyItFits": {
+    "description": "Prototype interface copy: about / whyItFits. Preserve the original warm wording."
+  },
+  "@challengeAccept": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeAnswered": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeAsync": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeBotFill": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeChooseFriends": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeConnectionLost": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeDecline": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeDisconnected": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "String"
+      }
+    }
+  },
+  "@challengeDone": {
+    "description": "Prototype interface copy: challenge / done. Preserve the original warm wording."
+  },
+  "@challengeDraw": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeFastest": {
+    "description": "Prototype interface copy: challenge / fastest. Preserve the original warm wording."
+  },
+  "@challengeGetReady": {
+    "description": "Prototype interface copy: challenge / getReady. Preserve the original warm wording."
+  },
+  "@challengeGroup": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeInvitations": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeInviteFrom": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "@challengeLiveLobby": {
+    "description": "Prototype interface copy: challenge / liveLobby. Preserve the original warm wording."
+  },
+  "@challengeNoInvitations": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeNotJoinableTitle": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengePlayAgain": {
+    "description": "Prototype interface copy: challenge / playAgain. Preserve the original warm wording."
+  },
+  "@challengePoints": {
+    "description": "Prototype interface copy: challenge / points. Preserve the original warm wording."
+  },
+  "@challengePracticeBot": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeQuestionOf": {
+    "description": "Prototype interface copy: challenge / questionOf. Preserve the original warm wording.",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@challengeReconnecting": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeResults": {
+    "description": "Prototype interface copy: challenge / results. Preserve the original warm wording."
+  },
+  "@challengeSeconds": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@challengeSummary": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeWaitingFriend": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@challengeWellPlayed": {
+    "description": "Prototype interface copy: challenge / wellPlayed. Preserve the original warm wording."
+  },
+  "@challengeYouWon": {
+    "description": "Prototype interface copy: challenge / youWon. Preserve the original warm wording."
+  },
+  "@characterGuideSemantics": {
+    "description": "Foundation component / characterGuideSemantics. Short, warm interface wording."
+  },
+  "@characterLanternSemantics": {
+    "description": "Foundation component / characterLanternSemantics. Short, warm interface wording."
+  },
+  "@commonAppName": {
+    "description": "Prototype interface copy: common / appName. Preserve the original warm wording."
+  },
+  "@commonArabic": {
+    "description": "Foundation component / commonArabic. Short, warm interface wording."
+  },
+  "@commonBack": {
+    "description": "Prototype interface copy: common / back. Preserve the original warm wording."
+  },
+  "@commonBrandArabic": {
+    "description": "Foundation component / commonBrandArabic. Short, warm interface wording."
+  },
+  "@commonBrandLatin": {
+    "description": "Foundation component / commonBrandLatin. Short, warm interface wording."
+  },
+  "@commonCancel": {
+    "description": "Prototype interface copy: common / cancel. Preserve the original warm wording."
+  },
+  "@commonCheck": {
+    "description": "Prototype interface copy: common / check. Preserve the original warm wording."
+  },
+  "@commonChooseAnother": {
+    "description": "Foundation component / commonChooseAnother. Short, warm interface wording."
+  },
+  "@commonClose": {
+    "description": "Prototype interface copy: common / close. Preserve the original warm wording."
+  },
+  "@commonContinue": {
+    "description": "Prototype interface copy: common / continue. Preserve the original warm wording."
+  },
+  "@commonDayStreak": {
+    "description": "Prototype interface copy: common / dayStreak. Preserve the original warm wording.",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonDays": {
+    "description": "Prototype interface copy: common / days. Preserve the original warm wording.",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonDone": {
+    "description": "Prototype interface copy: common / done. Preserve the original warm wording."
+  },
+  "@commonEdit": {
+    "description": "Foundation component / commonEdit. Short, warm interface wording."
+  },
+  "@commonEmbers": {
+    "description": "Prototype interface copy: common / embers. Preserve the original warm wording.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonEmbersName": {
+    "description": "Prototype interface copy: common / embersName. Preserve the original warm wording."
+  },
+  "@commonEnglish": {
+    "description": "Foundation component / commonEnglish. Short, warm interface wording."
+  },
+  "@commonGotIt": {
+    "description": "Prototype interface copy: common / gotIt. Preserve the original warm wording."
+  },
+  "@commonLater": {
+    "description": "Prototype interface copy: common / later. Preserve the original warm wording."
+  },
+  "@commonLoading": {
+    "description": "Foundation component / commonLoading. Short, warm interface wording."
+  },
+  "@commonMinutes": {
+    "description": "Prototype interface copy: common / minutes. Preserve the original warm wording.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonMinutesLong": {
+    "description": "Prototype interface copy: common / minutesLong. Preserve the original warm wording.",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonNew": {
+    "description": "Prototype interface copy: common / new. Preserve the original warm wording."
+  },
+  "@commonNext": {
+    "description": "Prototype interface copy: common / next. Preserve the original warm wording."
+  },
+  "@commonOfflineBody": {
+    "description": "Foundation component / commonOfflineBody. Short, warm interface wording."
+  },
+  "@commonPathExplorer": {
+    "description": "Prototype interface copy: common / pathExplorer. Preserve the original warm wording."
+  },
+  "@commonPathExplorerLong": {
+    "description": "Prototype interface copy: common / pathExplorerLong. Preserve the original warm wording."
+  },
+  "@commonPathNewMuslim": {
+    "description": "Prototype interface copy: common / pathNewMuslim. Preserve the original warm wording."
+  },
+  "@commonPathNewMuslimLong": {
+    "description": "Prototype interface copy: common / pathNewMuslimLong. Preserve the original warm wording."
+  },
+  "@commonPercent": {
+    "description": "Prototype interface copy: common / percent. Preserve the original warm wording.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonPlusEmbers": {
+    "description": "Prototype interface copy: common / plusEmbers. Preserve the original warm wording.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@commonRecordTooltip": {
+    "description": "Foundation component / commonRecordTooltip. Short, warm interface wording."
+  },
+  "@commonRemoveAttachmentTooltip": {
+    "description": "Foundation component / commonRemoveAttachmentTooltip. Short, warm interface wording."
+  },
+  "@commonRetry": {
+    "description": "Foundation component / commonRetry. Short, warm interface wording."
+  },
+  "@commonSeeAll": {
+    "description": "Prototype interface copy: common / seeAll. Preserve the original warm wording."
+  },
+  "@commonSendTooltip": {
+    "description": "Foundation component / commonSendTooltip. Short, warm interface wording."
+  },
+  "@commonSessionEndedBody": {
+    "description": "Foundation component / commonSessionEndedBody. Short, warm interface wording."
+  },
+  "@commonSessionEndedTitle": {
+    "description": "Foundation component / commonSessionEndedTitle. Short, warm interface wording."
+  },
+  "@commonSkip": {
+    "description": "Prototype interface copy: common / skip. Preserve the original warm wording."
+  },
+  "@commonStart": {
+    "description": "Prototype interface copy: common / start. Preserve the original warm wording."
+  },
+  "@commonTabCommunity": {
+    "description": "Prototype interface copy: common / tabCommunity. Preserve the original warm wording."
+  },
+  "@commonTabDiscover": {
+    "description": "Foundation component / commonTabDiscover. Short, warm interface wording."
+  },
+  "@commonTabJourney": {
+    "description": "Prototype interface copy: common / tabJourney. Preserve the original warm wording."
+  },
+  "@commonTabProfile": {
+    "description": "Prototype interface copy: common / tabProfile. Preserve the original warm wording."
+  },
+  "@commonTabRaqeeb": {
+    "description": "Prototype interface copy: common / tabRaqeeb. Preserve the original warm wording."
+  },
+  "@commonTabReview": {
+    "description": "Prototype interface copy: common / tabReview. Preserve the original warm wording."
+  },
+  "@commonTagline": {
+    "description": "Prototype interface copy: common / tagline. Preserve the original warm wording."
+  },
+  "@commonUpdate": {
+    "description": "Foundation component / commonUpdate. Short, warm interface wording."
+  },
+  "@commonUpdateBody": {
+    "description": "Foundation component / commonUpdateBody. Short, warm interface wording."
+  },
+  "@commonUpdateTitle": {
+    "description": "Foundation component / commonUpdateTitle. Short, warm interface wording."
+  },
+  "@communityCommunityTitle": {
+    "description": "Prototype interface copy: community / communityTitle. Preserve the original warm wording."
+  },
+  "@communityDailyQuests": {
+    "description": "Prototype interface copy: community / dailyQuests. Preserve the original warm wording."
+  },
+  "@communityEndsIn": {
+    "description": "Prototype interface copy: community / endsIn. Preserve the original warm wording.",
+    "placeholders": {
+      "days": {
+        "type": "String"
+      },
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "@communityFriends": {
+    "description": "Prototype interface copy: community / friends. Preserve the original warm wording."
+  },
+  "@communityInvite": {
+    "description": "Prototype interface copy: community / invite. Preserve the original warm wording."
+  },
+  "@communityJoinLeague": {
+    "description": "Prototype interface copy: community / joinLeague. Preserve the original warm wording."
+  },
+  "@communityLearningPrivately": {
+    "description": "Prototype interface copy: community / learningPrivately. Preserve the original warm wording."
+  },
+  "@communityLearningPrivatelyBody": {
+    "description": "Prototype interface copy: community / learningPrivatelyBody. Preserve the original warm wording."
+  },
+  "@communityLiveChallenge": {
+    "description": "Prototype interface copy: community / liveChallenge. Preserve the original warm wording."
+  },
+  "@communityLiveChallengeBody": {
+    "description": "Prototype interface copy: community / liveChallengeBody. Preserve the original warm wording."
+  },
+  "@communityNoFriends": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@communityNoLeagueTitle": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@communityNoQuests": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@communityProgressCount": {
+    "description": "Progress count with locale-formatted values",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "@communityPromoteLine": {
+    "description": "Prototype interface copy: community / promoteLine. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      },
+      "league": {
+        "type": "String"
+      }
+    }
+  },
+  "@communityPromotionCount": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "@communityPromotionZone": {
+    "description": "Prototype interface copy: community / promotionZone. Preserve the original warm wording."
+  },
+  "@communityQuestReward": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "@communityResetsIn": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "@communityStartChallenge": {
+    "description": "Prototype interface copy: community / startChallenge. Preserve the original warm wording."
+  },
+  "@communityStreakDays": {
+    "description": "Prototype interface copy: community / streakDays. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@communityTopTier": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@communityYou": {
+    "description": "Prototype interface copy: community / you. Preserve the original warm wording."
+  },
+  "@contentArticle": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentAudioError": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentBook": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentFatwa": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentHadithLabel": {
+    "description": "Prototype interface copy: content / hadithLabel. Preserve the original warm wording."
+  },
+  "@contentLearnMore": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentLevelBasic": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentLevelIntermediate": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentLevelUnknown": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentProviderDorar": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentProviderHadeethenc": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentProviderIslamhouse": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentProviderQuranCom": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentProviderQuranenc": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentProviderTafsirCenter": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentQuranLabel": {
+    "description": "Prototype interface copy: content / quranLabel. Preserve the original warm wording."
+  },
+  "@contentSource": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentTafsir": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@contentViewSource": {
+    "description": "Prototype interface copy: content / viewSource. Preserve the original warm wording."
+  },
+  "@discoverEmptyBody": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@discoverEmptyTitle": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@discoverNotice": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@discoverUnitHeading": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "@errorFileTypeBody": {
+    "description": "Foundation component / errorFileTypeBody. Short, warm interface wording."
+  },
+  "@errorFileTypeTitle": {
+    "description": "Foundation component / errorFileTypeTitle. Short, warm interface wording."
+  },
+  "@errorForbiddenBody": {
+    "description": "Foundation component / errorForbiddenBody. Short, warm interface wording."
+  },
+  "@errorForbiddenTitle": {
+    "description": "Foundation component / errorForbiddenTitle. Short, warm interface wording."
+  },
+  "@errorGenericBody": {
+    "description": "Foundation component / errorGenericBody. Short, warm interface wording."
+  },
+  "@errorGenericTitle": {
+    "description": "Foundation component / errorGenericTitle. Short, warm interface wording."
+  },
+  "@errorNetworkBody": {
+    "description": "Foundation component / errorNetworkBody. Short, warm interface wording."
+  },
+  "@errorNetworkTitle": {
+    "description": "Foundation component / errorNetworkTitle. Short, warm interface wording."
+  },
+  "@errorNotFoundBody": {
+    "description": "Foundation component / errorNotFoundBody. Short, warm interface wording."
+  },
+  "@errorNotFoundTitle": {
+    "description": "Foundation component / errorNotFoundTitle. Short, warm interface wording."
+  },
+  "@errorRateLimitedBody": {
+    "description": "Foundation component / errorRateLimitedBody. Short, warm interface wording.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "@errorRateLimitedTitle": {
+    "description": "Foundation component / errorRateLimitedTitle. Short, warm interface wording."
+  },
+  "@errorServerBody": {
+    "description": "Foundation component / errorServerBody. Short, warm interface wording."
+  },
+  "@errorServerTitle": {
+    "description": "Foundation component / errorServerTitle. Short, warm interface wording."
+  },
+  "@errorSourcesBody": {
+    "description": "Foundation component / errorSourcesBody. Short, warm interface wording."
+  },
+  "@errorSourcesTitle": {
+    "description": "Foundation component / errorSourcesTitle. Short, warm interface wording."
+  },
+  "@errorTooLargeBody": {
+    "description": "Foundation component / errorTooLargeBody. Short, warm interface wording."
+  },
+  "@errorTooLargeTitle": {
+    "description": "Foundation component / errorTooLargeTitle. Short, warm interface wording."
+  },
+  "@friendsAccept": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@friendsAcceptCode": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@friendsAccepted": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@friendsAlreadyFriends": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@friendsCode": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@friendsInviteInvalid": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@friendsOffline": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@friendsOnline": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@friendsRemove": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@friendsRemoveBody": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "@friendsShare": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@galleryBrand": {
+    "description": "Foundation component / galleryBrand. Short, warm interface wording."
+  },
+  "@galleryButtons": {
+    "description": "Foundation component / galleryButtons. Short, warm interface wording."
+  },
+  "@galleryCardBody": {
+    "description": "Foundation component / galleryCardBody. Short, warm interface wording."
+  },
+  "@galleryCelebrate": {
+    "description": "Foundation component / galleryCelebrate. Short, warm interface wording."
+  },
+  "@galleryConfirm": {
+    "description": "Foundation component / galleryConfirm. Short, warm interface wording."
+  },
+  "@galleryDisabled": {
+    "description": "Foundation component / galleryDisabled. Short, warm interface wording."
+  },
+  "@galleryEmptyBody": {
+    "description": "Foundation component / galleryEmptyBody. Short, warm interface wording."
+  },
+  "@galleryEmptyTitle": {
+    "description": "Foundation component / galleryEmptyTitle. Short, warm interface wording."
+  },
+  "@galleryInputs": {
+    "description": "Foundation component / galleryInputs. Short, warm interface wording."
+  },
+  "@galleryMotion": {
+    "description": "Foundation component / galleryMotion. Short, warm interface wording."
+  },
+  "@galleryNudge": {
+    "description": "Foundation component / galleryNudge. Short, warm interface wording."
+  },
+  "@galleryOpenSheet": {
+    "description": "Foundation component / galleryOpenSheet. Short, warm interface wording."
+  },
+  "@gallerySheets": {
+    "description": "Foundation component / gallerySheets. Short, warm interface wording."
+  },
+  "@galleryStates": {
+    "description": "Foundation component / galleryStates. Short, warm interface wording."
+  },
+  "@gallerySurfaces": {
+    "description": "Foundation component / gallerySurfaces. Short, warm interface wording."
+  },
+  "@galleryTitle": {
+    "description": "Foundation component / galleryTitle. Short, warm interface wording."
+  },
+  "@glossaryAll": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@glossaryAskRaqeeb": {
+    "description": "Prototype interface copy: glossary / askRaqeeb. Preserve the original warm wording."
+  },
+  "@glossaryEmpty": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@glossaryIKnowThis": {
+    "description": "Prototype interface copy: glossary / iKnowThis. Preserve the original warm wording."
+  },
+  "@glossaryLearning": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@glossaryLevelExplorer": {
+    "description": "Prototype interface copy: glossary / levelExplorer. Preserve the original warm wording."
+  },
+  "@glossaryLevelNewMuslim": {
+    "description": "Prototype interface copy: glossary / levelNewMuslim. Preserve the original warm wording."
+  },
+  "@glossaryListen": {
+    "description": "Prototype interface copy: glossary / listen. Preserve the original warm wording."
+  },
+  "@glossaryLoadMore": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@glossaryMastered": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@glossaryNew": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@glossaryUnderlineHint": {
+    "description": "Prototype interface copy: glossary / underlineHint. Preserve the original warm wording."
+  },
+  "@glossaryYourDictionary": {
+    "description": "Prototype interface copy: glossary / yourDictionary. Preserve the original warm wording."
+  },
+  "@journeyAvailable": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@journeyCheckpoint": {
+    "description": "Prototype interface copy: journey / checkpoint. Preserve the original warm wording."
+  },
+  "@journeyComingSoonBody": {
+    "description": "Prototype interface copy: journey / comingSoonBody. Preserve the original warm wording."
+  },
+  "@journeyComingSoonTitle": {
+    "description": "Prototype interface copy: journey / comingSoonTitle. Preserve the original warm wording."
+  },
+  "@journeyDailyGoal": {
+    "description": "Prototype interface copy: journey / dailyGoal. Preserve the original warm wording."
+  },
+  "@journeyDoneLabel": {
+    "description": "Prototype interface copy: journey / doneLabel. Preserve the original warm wording."
+  },
+  "@journeyEmptyBody": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@journeyEmptyTitle": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@journeyExplorerPathHint": {
+    "description": "Prototype interface copy: journey / explorerPathHint. Preserve the original warm wording."
+  },
+  "@journeyGoalProgress": {
+    "description": "Prototype interface copy: journey / goalProgress. Preserve the original warm wording.",
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "goal": {
+        "type": "String"
+      }
+    }
+  },
+  "@journeyGreetingAfternoon": {
+    "description": "Prototype interface copy: journey / greetingAfternoon. Preserve the original warm wording."
+  },
+  "@journeyGreetingEvening": {
+    "description": "Prototype interface copy: journey / greetingEvening. Preserve the original warm wording."
+  },
+  "@journeyGreetingMorning": {
+    "description": "Prototype interface copy: journey / greetingMorning. Preserve the original warm wording."
+  },
+  "@journeyGuide": {
+    "description": "Prototype interface copy: journey / guide. Preserve the original warm wording."
+  },
+  "@journeyJumpBack": {
+    "description": "Prototype interface copy: journey / jumpBack. Preserve the original warm wording."
+  },
+  "@journeyKeepTheLight": {
+    "description": "Prototype interface copy: journey / keepTheLight. Preserve the original warm wording."
+  },
+  "@journeyLearnedTodayLine": {
+    "description": "Prototype interface copy: journey / learnedTodayLine. Preserve the original warm wording."
+  },
+  "@journeyLesson": {
+    "description": "Prototype interface copy: journey / lesson. Preserve the original warm wording."
+  },
+  "@journeyLessonAction": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review.",
+    "placeholders": {
+      "reward": {
+        "type": "String"
+      }
+    }
+  },
+  "@journeyLoading": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@journeyLockedBody": {
+    "description": "Prototype interface copy: journey / lockedBody. Preserve the original warm wording."
+  },
+  "@journeyLockedTitle": {
+    "description": "Prototype interface copy: journey / lockedTitle. Preserve the original warm wording."
+  },
+  "@journeyNewMuslimPathHint": {
+    "description": "Prototype interface copy: journey / newMuslimPathHint. Preserve the original warm wording."
+  },
+  "@journeyNodeSemantics": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "@journeyOpenPlayableLesson": {
+    "description": "Prototype interface copy: journey / openPlayableLesson. Preserve the original warm wording."
+  },
+  "@journeyPathUnfolds": {
+    "description": "Prototype interface copy: journey / pathUnfolds. Preserve the original warm wording."
+  },
+  "@journeyPillarNames1": {
+    "description": "Prototype interface copy: journey / pillarNames1. Preserve the original warm wording."
+  },
+  "@journeyPillarNames2": {
+    "description": "Prototype interface copy: journey / pillarNames2. Preserve the original warm wording."
+  },
+  "@journeyPillarNames3": {
+    "description": "Prototype interface copy: journey / pillarNames3. Preserve the original warm wording."
+  },
+  "@journeyPillarNames4": {
+    "description": "Prototype interface copy: journey / pillarNames4. Preserve the original warm wording."
+  },
+  "@journeyPillarNames5": {
+    "description": "Prototype interface copy: journey / pillarNames5. Preserve the original warm wording."
+  },
+  "@journeyPractice": {
+    "description": "Prototype interface copy: journey / practice. Preserve the original warm wording."
+  },
+  "@journeyQuickReview": {
+    "description": "Prototype interface copy: journey / quickReview. Preserve the original warm wording."
+  },
+  "@journeyReviewDue": {
+    "description": "Prototype interface copy: journey / reviewDue. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@journeyReviewLesson": {
+    "description": "Prototype interface copy: journey / reviewLesson. Preserve the original warm wording."
+  },
+  "@journeySkipUnit": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@journeySoftLockBody": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@journeySoftLockTitle": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@journeyStartHere": {
+    "description": "Prototype interface copy: journey / startHere. Preserve the original warm wording."
+  },
+  "@journeyStartLesson": {
+    "description": "Prototype interface copy: journey / startLesson. Preserve the original warm wording."
+  },
+  "@journeyStartReview": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@journeyStartWith": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "@journeyStory": {
+    "description": "Prototype interface copy: journey / story. Preserve the original warm wording."
+  },
+  "@journeyTakeUnitTest": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@journeyUnitComplete": {
+    "description": "Prototype interface copy: journey / unitComplete. Preserve the original warm wording."
+  },
+  "@journeyUnitN": {
+    "description": "Prototype interface copy: journey / unitN. Preserve the original warm wording.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "@journeyWhatYoullLearn": {
+    "description": "Prototype interface copy: journey / whatYoullLearn. Preserve the original warm wording."
+  },
+  "@journeyYourPath": {
+    "description": "Prototype interface copy: journey / yourPath. Preserve the original warm wording."
+  },
+  "@learningEntryBody": {
+    "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "@mediaCamera": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@mediaCaptureFailed": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@mediaCountLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@mediaDocumentLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@mediaImageLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@mediaMicrophoneDenied": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@mediaOpenSettings": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@mediaRecitationLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@mediaRecord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@mediaRecordingTime": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "seconds": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "@mediaStopRecording": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@mediaVoiceLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@onboardingArabicGlyph": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "@onboardingChooseLanguage": {
+    "description": "Prototype interface copy: onboarding / chooseLanguage. Preserve the original warm wording."
+  },
+  "@onboardingCompanionHello": {
+    "description": "Prototype interface copy: onboarding / companionHello. Preserve the original warm wording."
+  },
+  "@onboardingDiscreetBody": {
+    "description": "Prototype interface copy: onboarding / discreetBody. Preserve the original warm wording."
+  },
+  "@onboardingDiscreetTitle": {
+    "description": "Prototype interface copy: onboarding / discreetTitle. Preserve the original warm wording."
+  },
+  "@onboardingEnglishGlyph": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "@onboardingExplorerBody": {
+    "description": "Prototype interface copy: onboarding / explorerBody. Preserve the original warm wording."
+  },
+  "@onboardingExplorerTitle": {
+    "description": "Prototype interface copy: onboarding / explorerTitle. Preserve the original warm wording."
+  },
+  "@onboardingFamiliarBasics": {
+    "description": "Prototype interface copy: onboarding / familiarBasics. Preserve the original warm wording."
+  },
+  "@onboardingFamiliarNew": {
+    "description": "Prototype interface copy: onboarding / familiarNew. Preserve the original warm wording."
+  },
+  "@onboardingFamiliarNote": {
+    "description": "Prototype interface copy: onboarding / familiarNote. Preserve the original warm wording."
+  },
+  "@onboardingFamiliarSome": {
+    "description": "Prototype interface copy: onboarding / familiarSome. Preserve the original warm wording."
+  },
+  "@onboardingFamiliarTitle": {
+    "description": "Prototype interface copy: onboarding / familiarTitle. Preserve the original warm wording."
+  },
+  "@onboardingGetStarted": {
+    "description": "Prototype interface copy: onboarding / getStarted. Preserve the original warm wording."
+  },
+  "@onboardingGoalBubble": {
+    "description": "Prototype interface copy: onboarding / goalBubble. Preserve the original warm wording."
+  },
+  "@onboardingGoalDedicated": {
+    "description": "Prototype interface copy: onboarding / goalDedicated. Preserve the original warm wording."
+  },
+  "@onboardingGoalDeep": {
+    "description": "Prototype interface copy: onboarding / goalDeep. Preserve the original warm wording."
+  },
+  "@onboardingGoalGentle": {
+    "description": "Prototype interface copy: onboarding / goalGentle. Preserve the original warm wording."
+  },
+  "@onboardingGoalSteady": {
+    "description": "Prototype interface copy: onboarding / goalSteady. Preserve the original warm wording."
+  },
+  "@onboardingGoalTitle": {
+    "description": "Prototype interface copy: onboarding / goalTitle. Preserve the original warm wording."
+  },
+  "@onboardingHaveAccount": {
+    "description": "Prototype interface copy: onboarding / haveAccount. Preserve the original warm wording."
+  },
+  "@onboardingLanguageArabicPrompt": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "@onboardingLanguageEnglishPrompt": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "@onboardingLanguageHint": {
+    "description": "Prototype interface copy: onboarding / languageHint. Preserve the original warm wording."
+  },
+  "@onboardingNewMuslimBody": {
+    "description": "Prototype interface copy: onboarding / newMuslimBody. Preserve the original warm wording."
+  },
+  "@onboardingNewMuslimTitle": {
+    "description": "Prototype interface copy: onboarding / newMuslimTitle. Preserve the original warm wording."
+  },
+  "@onboardingPerDay": {
+    "description": "Prototype interface copy: onboarding / perDay. Preserve the original warm wording.",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@onboardingPreferNotToSay": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "@onboardingPrivacyBody": {
+    "description": "Prototype interface copy: onboarding / privacyBody. Preserve the original warm wording."
+  },
+  "@onboardingPrivacyTitle": {
+    "description": "Prototype interface copy: onboarding / privacyTitle. Preserve the original warm wording."
+  },
+  "@onboardingPrivateBody": {
+    "description": "Prototype interface copy: onboarding / privateBody. Preserve the original warm wording."
+  },
+  "@onboardingPrivateTitle": {
+    "description": "Prototype interface copy: onboarding / privateTitle. Preserve the original warm wording."
+  },
+  "@onboardingReadyExplorer": {
+    "description": "Prototype interface copy: onboarding / readyExplorer. Preserve the original warm wording."
+  },
+  "@onboardingReadyNewMuslim": {
+    "description": "Prototype interface copy: onboarding / readyNewMuslim. Preserve the original warm wording."
+  },
+  "@onboardingReadyTitle": {
+    "description": "Prototype interface copy: onboarding / readyTitle. Preserve the original warm wording."
+  },
+  "@onboardingReminderTime": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "@onboardingReminderTitle": {
+    "description": "Prototype interface copy: onboarding / reminderTitle. Preserve the original warm wording."
+  },
+  "@onboardingSkipCuriosity": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "@onboardingStartMyJourney": {
+    "description": "Prototype interface copy: onboarding / startMyJourney. Preserve the original warm wording."
+  },
+  "@onboardingStepOf": {
+    "description": "Prototype interface copy: onboarding / stepOf. Preserve the original warm wording.",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@onboardingSubmitError": {
+    "description": "Onboarding interface copy; Arabic new copy awaits owner review."
+  },
+  "@onboardingWelcomeBody": {
+    "description": "Prototype interface copy: onboarding / welcomeBody. Preserve the original warm wording."
+  },
+  "@onboardingWelcomeExplorer": {
+    "description": "Prototype interface copy: onboarding / welcomeExplorer. Preserve the original warm wording."
+  },
+  "@onboardingWelcomeNewMuslim": {
+    "description": "Prototype interface copy: onboarding / welcomeNewMuslim. Preserve the original warm wording."
+  },
+  "@onboardingWelcomeTitle": {
+    "description": "Prototype interface copy: onboarding / welcomeTitle. Preserve the original warm wording."
+  },
+  "@onboardingWhoBubble": {
+    "description": "Prototype interface copy: onboarding / whoBubble. Preserve the original warm wording."
+  },
+  "@onboardingWhoTitle": {
+    "description": "Prototype interface copy: onboarding / whoTitle. Preserve the original warm wording."
+  },
+  "@profileAchievementsTitle": {
+    "description": "Prototype interface copy: profile / achievementsTitle. Preserve the original warm wording."
+  },
+  "@profileEditName": {
+    "description": "Prototype interface copy: profile / editName. Preserve the original warm wording."
+  },
+  "@profileJoined": {
+    "description": "Prototype interface copy: profile / joined. Preserve the original warm wording.",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "@profileLeagueRank": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true,
+    "placeholders": {
+      "rank": {
+        "type": "String"
+      }
+    }
+  },
+  "@profileLearnerName": {
+    "description": "Prototype interface copy: profile / learnerName. Preserve the original warm wording."
+  },
+  "@profileNameValidation": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  },
+  "@profileNewBadge": {
+    "description": "Prototype interface copy: profile / newBadge. Preserve the original warm wording."
+  },
+  "@profileNoAchievements": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  },
+  "@profileNoLeague": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  },
+  "@profileNoWords": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  },
+  "@profilePrivateBadge": {
+    "description": "Prototype interface copy: profile / privateBadge. Preserve the original warm wording."
+  },
+  "@profileProfileTitle": {
+    "description": "Prototype interface copy: profile / profileTitle. Preserve the original warm wording."
+  },
+  "@profileSave": {
+    "description": "Prototype interface copy: profile / save. Preserve the original warm wording."
+  },
+  "@profileSettings": {
+    "description": "Prototype interface copy: profile / settings. Preserve the original warm wording."
+  },
+  "@profileStatBadges": {
+    "description": "Prototype interface copy: profile / statBadges. Preserve the original warm wording."
+  },
+  "@profileStatLeague": {
+    "description": "Prototype interface copy: profile / statLeague. Preserve the original warm wording."
+  },
+  "@profileStatLessons": {
+    "description": "Prototype interface copy: profile / statLessons. Preserve the original warm wording."
+  },
+  "@profileStatStreak": {
+    "description": "Prototype interface copy: profile / statStreak. Preserve the original warm wording."
+  },
+  "@profileStatTotal": {
+    "description": "Prototype interface copy: profile / statTotal. Preserve the original warm wording."
+  },
+  "@profileStatWords": {
+    "description": "Prototype interface copy: profile / statWords. Preserve the original warm wording."
+  },
+  "@profileStatistics": {
+    "description": "Prototype interface copy: profile / statistics. Preserve the original warm wording."
+  },
+  "@profileUnlockedOf": {
+    "description": "Prototype interface copy: profile / unlockedOf. Preserve the original warm wording.",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@raqeebAbstained": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebAcceptable": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebAlternative": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebAskAnything": {
+    "description": "Prototype interface copy: raqeeb / askAnything. Preserve the original warm wording."
+  },
+  "@raqeebAskSpecialist": {
+    "description": "Prototype interface copy: raqeeb / askSpecialist. Preserve the original warm wording."
+  },
+  "@raqeebAttachDoc": {
+    "description": "Prototype interface copy: raqeeb / attachDoc. Preserve the original warm wording."
+  },
+  "@raqeebAttachDocBody": {
+    "description": "Prototype interface copy: raqeeb / attachDocBody. Preserve the original warm wording."
+  },
+  "@raqeebAttachPhoto": {
+    "description": "Prototype interface copy: raqeeb / attachPhoto. Preserve the original warm wording."
+  },
+  "@raqeebAttachPhotoBody": {
+    "description": "Prototype interface copy: raqeeb / attachPhotoBody. Preserve the original warm wording."
+  },
+  "@raqeebAttachTitle": {
+    "description": "Prototype interface copy: raqeeb / attachTitle. Preserve the original warm wording."
+  },
+  "@raqeebAttachVoice": {
+    "description": "Prototype interface copy: raqeeb / attachVoice. Preserve the original warm wording."
+  },
+  "@raqeebAttachVoiceBody": {
+    "description": "Prototype interface copy: raqeeb / attachVoiceBody. Preserve the original warm wording."
+  },
+  "@raqeebAuthentic": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebAuthenticityCheck": {
+    "description": "Prototype interface copy: raqeeb / authenticityCheck. Preserve the original warm wording."
+  },
+  "@raqeebExactText": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebFabricated": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebFailed": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebFoundIn": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebGrade": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebGradeOther": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebGrader": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebHistory": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@raqeebLearnMore": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebNeedsSpecialist": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebNewChat": {
+    "description": "Prototype interface copy: raqeeb / newChat. Preserve the original warm wording."
+  },
+  "@raqeebNoHistory": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@raqeebNotFound": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebNotSent": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebOpen": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebProcessing": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebPrototypeAnswer": {
+    "description": "Prototype interface copy: raqeeb / prototypeAnswer. Preserve the original warm wording."
+  },
+  "@raqeebQuranExact": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebQuranInexact": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebRaqeebName": {
+    "description": "Prototype interface copy: raqeeb / raqeebName. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebTagline": {
+    "description": "Prototype interface copy: raqeeb / raqeebTagline. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebThinking": {
+    "description": "Prototype interface copy: raqeeb / raqeebThinking. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebTrust1": {
+    "description": "Prototype interface copy: raqeeb / raqeebTrust1. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebTrust2": {
+    "description": "Prototype interface copy: raqeeb / raqeebTrust2. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebTrust3": {
+    "description": "Prototype interface copy: raqeeb / raqeebTrust3. Preserve the original warm wording."
+  },
+  "@raqeebRaqeebTrust4": {
+    "description": "Prototype interface copy: raqeeb / raqeebTrust4. Preserve the original warm wording."
+  },
+  "@raqeebRateDown": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebRateFailed": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebRateLimited": {
+    "description": "Raqeeb request rate limit; calm retry guidance.",
+    "x-review": true
+  },
+  "@raqeebRateUp": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebSending": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebSources": {
+    "description": "Prototype interface copy: raqeeb / sources. Preserve the original warm wording."
+  },
+  "@raqeebSpecialistSent": {
+    "description": "Prototype interface copy: raqeeb / specialistSent. Preserve the original warm wording."
+  },
+  "@raqeebSpecialistTitle": {
+    "description": "Prototype interface copy: raqeeb / specialistTitle. Preserve the original warm wording."
+  },
+  "@raqeebStageAdapting": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageClassifying": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageReading": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageReceived": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageRetrieving": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageVerifying": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebStageWriting": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebSuggestionArabic": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebSuggestionHadith": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebSuggestionIslam": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebSuggestionPrayer": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebTextLimit": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebTextOnly": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebTextOnlyPhase": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebTimeout": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebTruncated": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebTryAsking": {
+    "description": "Prototype interface copy: raqeeb / tryAsking. Preserve the original warm wording."
+  },
+  "@raqeebUnderstood": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@raqeebWeak": {
+    "description": "Raqeeb text conversation interface; preserve the calm prototype wording.",
+    "x-review": true
+  },
+  "@recitationAgain": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@recitationBusy": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@recitationChecking": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@recitationContinue": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@recitationCorrectWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@recitationDeveloperMissingExtra": {
+    "description": "Developer-only synthetic fixture controls; Arabic pending review."
+  },
+  "@recitationDeveloperOutcome": {
+    "description": "Developer-only synthetic fixture controls; Arabic pending review."
+  },
+  "@recitationDeveloperUnclear": {
+    "description": "Developer-only synthetic fixture controls; Arabic pending review."
+  },
+  "@recitationExtraWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@recitationMissingWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@recitationRetry": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@recitationSubstitutedWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@recitationWordFeedback": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      },
+      "result": {
+        "type": "String"
+      }
+    }
+  },
+  "@reviewAgain": {
+    "description": "Prototype interface copy: review / again. Preserve the original warm wording."
+  },
+  "@reviewCardsReady": {
+    "description": "Prototype interface copy: review / cardsReady. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@reviewEasy": {
+    "description": "Prototype interface copy: review / easy. Preserve the original warm wording."
+  },
+  "@reviewGood": {
+    "description": "Prototype interface copy: review / good. Preserve the original warm wording."
+  },
+  "@reviewHard": {
+    "description": "Prototype interface copy: review / hard. Preserve the original warm wording."
+  },
+  "@reviewHowWell": {
+    "description": "Prototype interface copy: review / howWell. Preserve the original warm wording."
+  },
+  "@reviewIntervals1": {
+    "description": "Prototype interface copy: review / intervals1. Preserve the original warm wording."
+  },
+  "@reviewIntervals2": {
+    "description": "Prototype interface copy: review / intervals2. Preserve the original warm wording."
+  },
+  "@reviewIntervals3": {
+    "description": "Prototype interface copy: review / intervals3. Preserve the original warm wording."
+  },
+  "@reviewIntervals4": {
+    "description": "Prototype interface copy: review / intervals4. Preserve the original warm wording."
+  },
+  "@reviewReviewDone": {
+    "description": "Prototype interface copy: review / reviewDone. Preserve the original warm wording."
+  },
+  "@reviewReviewDoneBody": {
+    "description": "Prototype interface copy: review / reviewDoneBody. Preserve the original warm wording."
+  },
+  "@reviewReviewSubtitle": {
+    "description": "Prototype interface copy: review / reviewSubtitle. Preserve the original warm wording."
+  },
+  "@reviewReviewTiming": {
+    "description": "Prototype interface copy: review / reviewTiming. Preserve the original warm wording."
+  },
+  "@reviewReviewTitle": {
+    "description": "Prototype interface copy: review / reviewTitle. Preserve the original warm wording."
+  },
+  "@reviewStartReview": {
+    "description": "Prototype interface copy: review / startReview. Preserve the original warm wording."
+  },
+  "@reviewTapToFlip": {
+    "description": "Prototype interface copy: review / tapToFlip. Preserve the original warm wording."
+  },
+  "@reviewWordsMasteredOf": {
+    "description": "Prototype interface copy: review / wordsMasteredOf. Preserve the original warm wording.",
+    "placeholders": {
+      "mastered": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@reviewYourWords": {
+    "description": "Prototype interface copy: review / yourWords. Preserve the original warm wording."
+  },
+  "@reviewerAbstention": {
+    "description": "Reviewer work tool: reviewerAbstention"
+  },
+  "@reviewerAccuracy": {
+    "description": "Reviewer work tool: reviewerAccuracy"
+  },
+  "@reviewerAccurate": {
+    "description": "Reviewer work tool: reviewerAccurate"
+  },
+  "@reviewerActivated": {
+    "description": "Reviewer work tool: reviewerActivated"
+  },
+  "@reviewerAdd": {
+    "description": "Reviewer work tool: reviewerAdd"
+  },
+  "@reviewerAfter": {
+    "description": "Reviewer work tool: reviewerAfter"
+  },
+  "@reviewerAllStatuses": {
+    "description": "Reviewer work tool: reviewerAllStatuses"
+  },
+  "@reviewerAnswerKey": {
+    "description": "Reviewer work tool: reviewerAnswerKey"
+  },
+  "@reviewerApprove": {
+    "description": "Reviewer work tool: reviewerApprove"
+  },
+  "@reviewerArc": {
+    "description": "Reviewer work tool: reviewerArc"
+  },
+  "@reviewerArcMap": {
+    "description": "Reviewer work tool: reviewerArcMap"
+  },
+  "@reviewerBasis": {
+    "description": "Reviewer work tool: reviewerBasis"
+  },
+  "@reviewerBefore": {
+    "description": "Reviewer work tool: reviewerBefore"
+  },
+  "@reviewerBenchmark": {
+    "description": "Reviewer work tool: reviewerBenchmark"
+  },
+  "@reviewerBlindEmpty": {
+    "description": "Reviewer work tool: reviewerBlindEmpty"
+  },
+  "@reviewerBlindTest": {
+    "description": "Reviewer work tool: reviewerBlindTest"
+  },
+  "@reviewerBlockPosition": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    },
+    "description": "Reviewer work tool: reviewerBlockPosition"
+  },
+  "@reviewerBlocker": {
+    "description": "Reviewer work tool: reviewerBlocker"
+  },
+  "@reviewerBlockers": {
+    "description": "Reviewer work tool: reviewerBlockers"
+  },
+  "@reviewerBrief": {
+    "description": "Reviewer work tool: reviewerBrief"
+  },
+  "@reviewerClearer": {
+    "description": "Reviewer work tool: reviewerClearer"
+  },
+  "@reviewerCommaIds": {
+    "description": "Reviewer work tool: reviewerCommaIds"
+  },
+  "@reviewerCompiled": {
+    "description": "Reviewer work tool: reviewerCompiled"
+  },
+  "@reviewerConsole": {
+    "description": "Reviewer work tool: reviewerConsole"
+  },
+  "@reviewerContentBudget": {
+    "description": "Reviewer work tool: reviewerContentBudget"
+  },
+  "@reviewerCreate": {
+    "description": "Reviewer work tool: reviewerCreate"
+  },
+  "@reviewerDepth": {
+    "description": "Reviewer work tool: reviewerDepth"
+  },
+  "@reviewerDone": {
+    "description": "Reviewer work tool: reviewerDone"
+  },
+  "@reviewerEditAr": {
+    "description": "Reviewer work tool: reviewerEditAr"
+  },
+  "@reviewerEditEn": {
+    "description": "Reviewer work tool: reviewerEditEn"
+  },
+  "@reviewerEditPlan": {
+    "description": "Reviewer work tool: reviewerEditPlan"
+  },
+  "@reviewerEditSentence": {
+    "description": "Reviewer work tool: reviewerEditSentence"
+  },
+  "@reviewerEditsSaved": {
+    "description": "Reviewer work tool: reviewerEditsSaved"
+  },
+  "@reviewerEmail": {
+    "description": "Reviewer work tool: reviewerEmail"
+  },
+  "@reviewerEvidence": {
+    "description": "Reviewer work tool: reviewerEvidence"
+  },
+  "@reviewerExerciseBudget": {
+    "description": "Reviewer work tool: reviewerExerciseBudget"
+  },
+  "@reviewerExercises": {
+    "description": "Reviewer work tool: reviewerExercises"
+  },
+  "@reviewerExperience": {
+    "description": "Reviewer work tool: reviewerExperience"
+  },
+  "@reviewerFactory": {
+    "description": "Reviewer work tool: reviewerFactory"
+  },
+  "@reviewerGate1": {
+    "description": "Reviewer work tool: reviewerGate1"
+  },
+  "@reviewerGate2": {
+    "description": "Reviewer work tool: reviewerGate2"
+  },
+  "@reviewerGenerationMinutes": {
+    "description": "Reviewer work tool: reviewerGenerationMinutes"
+  },
+  "@reviewerHandwritten": {
+    "description": "Reviewer work tool: reviewerHandwritten"
+  },
+  "@reviewerIdentified": {
+    "description": "Reviewer work tool: reviewerIdentified"
+  },
+  "@reviewerIdsPair": {
+    "description": "Reviewer work tool formatted value",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "right": {
+        "type": "String"
+      }
+    }
+  },
+  "@reviewerInfo": {
+    "description": "Reviewer work tool: reviewerInfo"
+  },
+  "@reviewerInteractive": {
+    "description": "Reviewer work tool: reviewerInteractive"
+  },
+  "@reviewerIntroduced": {
+    "description": "Reviewer work tool: reviewerIntroduced"
+  },
+  "@reviewerInvalidPlan": {
+    "description": "Reviewer work tool: reviewerInvalidPlan"
+  },
+  "@reviewerLearning": {
+    "description": "Reviewer work tool: reviewerLearning"
+  },
+  "@reviewerLessonA": {
+    "description": "Reviewer work tool: reviewerLessonA"
+  },
+  "@reviewerLessonB": {
+    "description": "Reviewer work tool: reviewerLessonB"
+  },
+  "@reviewerLessonType": {
+    "description": "Reviewer work tool: reviewerLessonType"
+  },
+  "@reviewerLockout": {
+    "description": "Reviewer work tool: reviewerLockout"
+  },
+  "@reviewerMetrics": {
+    "description": "Reviewer work tool: reviewerMetrics"
+  },
+  "@reviewerMinutes": {
+    "description": "Reviewer work tool: reviewerMinutes"
+  },
+  "@reviewerMisconceptions": {
+    "description": "Reviewer work tool: reviewerMisconceptions"
+  },
+  "@reviewerMore": {
+    "description": "Reviewer work tool: reviewerMore"
+  },
+  "@reviewerNewRun": {
+    "description": "Reviewer work tool: reviewerNewRun"
+  },
+  "@reviewerNoIssues": {
+    "description": "Reviewer work tool: reviewerNoIssues"
+  },
+  "@reviewerNoKey": {
+    "description": "Reviewer work tool: reviewerNoKey"
+  },
+  "@reviewerNoMetrics": {
+    "description": "Reviewer work tool: reviewerNoMetrics"
+  },
+  "@reviewerNoRuns": {
+    "description": "Reviewer work tool: reviewerNoRuns"
+  },
+  "@reviewerNotMeasured": {
+    "description": "Reviewer work tool: reviewerNotMeasured"
+  },
+  "@reviewerNotSupporting": {
+    "description": "Reviewer work tool: reviewerNotSupporting"
+  },
+  "@reviewerNote": {
+    "description": "Reviewer work tool: reviewerNote"
+  },
+  "@reviewerObjectives": {
+    "description": "Reviewer work tool: reviewerObjectives"
+  },
+  "@reviewerOpenRun": {
+    "description": "Reviewer work tool: reviewerOpenRun"
+  },
+  "@reviewerOutcome": {
+    "description": "Reviewer work tool: reviewerOutcome"
+  },
+  "@reviewerPairedEnglish": {
+    "description": "Reviewer work tool: reviewerPairedEnglish"
+  },
+  "@reviewerParticipants": {
+    "description": "Reviewer work tool: reviewerParticipants"
+  },
+  "@reviewerParticipantsValue": {
+    "description": "Reviewer work tool formatted value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@reviewerPassword": {
+    "description": "Reviewer work tool: reviewerPassword"
+  },
+  "@reviewerPending": {
+    "description": "Reviewer work tool: reviewerPending"
+  },
+  "@reviewerPercentValue": {
+    "description": "Reviewer work tool formatted value",
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@reviewerPercentageNumber": {
+    "description": "Reviewer metric percentage, with localized digits.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "@reviewerPlaceholder": {
+    "description": "Reviewer work tool: reviewerPlaceholder"
+  },
+  "@reviewerPlan": {
+    "description": "Reviewer work tool: reviewerPlan"
+  },
+  "@reviewerPosition": {
+    "description": "Reviewer work tool: reviewerPosition"
+  },
+  "@reviewerPrePost": {
+    "description": "Reviewer work tool: reviewerPrePost"
+  },
+  "@reviewerPreferred": {
+    "description": "Reviewer work tool: reviewerPreferred"
+  },
+  "@reviewerPrerequisites": {
+    "description": "Reviewer work tool: reviewerPrerequisites"
+  },
+  "@reviewerPreview": {
+    "description": "Reviewer work tool: reviewerPreview"
+  },
+  "@reviewerPreviewEmpty": {
+    "description": "Reviewer work tool: reviewerPreviewEmpty"
+  },
+  "@reviewerPublished": {
+    "description": "Reviewer work tool: reviewerPublished"
+  },
+  "@reviewerQA": {
+    "description": "Reviewer work tool: reviewerQA"
+  },
+  "@reviewerQuestion": {
+    "description": "Reviewer work tool: reviewerQuestion"
+  },
+  "@reviewerRationale": {
+    "description": "Reviewer work tool: reviewerRationale"
+  },
+  "@reviewerReasonRequired": {
+    "description": "Reviewer work tool: reviewerReasonRequired"
+  },
+  "@reviewerReasoning": {
+    "description": "Reviewer work tool: reviewerReasoning"
+  },
+  "@reviewerReconfirm": {
+    "description": "Reviewer work tool: reviewerReconfirm"
+  },
+  "@reviewerReferral": {
+    "description": "Reviewer work tool: reviewerReferral"
+  },
+  "@reviewerRegenerate": {
+    "description": "Reviewer work tool: reviewerRegenerate"
+  },
+  "@reviewerRegenerationAccepted": {
+    "description": "Reviewer work tool: reviewerRegenerationAccepted"
+  },
+  "@reviewerReject": {
+    "description": "Reviewer work tool: reviewerReject"
+  },
+  "@reviewerRemove": {
+    "description": "Reviewer work tool: reviewerRemove"
+  },
+  "@reviewerRemoveExercise": {
+    "description": "Reviewer work tool: reviewerRemoveExercise"
+  },
+  "@reviewerRequestChanges": {
+    "description": "Reviewer work tool: reviewerRequestChanges"
+  },
+  "@reviewerResolutionRate": {
+    "description": "Reviewer work tool: reviewerResolutionRate"
+  },
+  "@reviewerResolved": {
+    "description": "Reviewer work tool: reviewerResolved"
+  },
+  "@reviewerResponses": {
+    "description": "Reviewer work tool: reviewerResponses"
+  },
+  "@reviewerReveal": {
+    "description": "Reviewer work tool: reviewerReveal"
+  },
+  "@reviewerReviewMinutes": {
+    "description": "Reviewer work tool: reviewerReviewMinutes"
+  },
+  "@reviewerRole": {
+    "description": "Reviewer work tool: reviewerRole"
+  },
+  "@reviewerRuns": {
+    "description": "Reviewer work tool: reviewerRuns"
+  },
+  "@reviewerSame": {
+    "description": "Reviewer work tool: reviewerSame"
+  },
+  "@reviewerSaveEdits": {
+    "description": "Reviewer work tool: reviewerSaveEdits"
+  },
+  "@reviewerSavePlan": {
+    "description": "Reviewer work tool: reviewerSavePlan"
+  },
+  "@reviewerSelectRun": {
+    "description": "Reviewer work tool: reviewerSelectRun"
+  },
+  "@reviewerSignIn": {
+    "description": "Reviewer work tool: reviewerSignIn"
+  },
+  "@reviewerSignOut": {
+    "description": "Reviewer work tool: reviewerSignOut"
+  },
+  "@reviewerSkipped": {
+    "description": "Reviewer work tool: reviewerSkipped"
+  },
+  "@reviewerStage": {
+    "description": "Reviewer work tool: reviewerStage"
+  },
+  "@reviewerStale": {
+    "description": "Reviewer work tool: reviewerStale"
+  },
+  "@reviewerStandalone": {
+    "description": "Reviewer work tool: reviewerStandalone"
+  },
+  "@reviewerStatusStage": {
+    "description": "Reviewer work tool formatted value",
+    "placeholders": {
+      "status": {
+        "type": "String"
+      },
+      "stage": {
+        "type": "String"
+      }
+    }
+  },
+  "@reviewerSubmit": {
+    "description": "Reviewer work tool: reviewerSubmit"
+  },
+  "@reviewerSupports": {
+    "description": "Reviewer work tool: reviewerSupports"
+  },
+  "@reviewerTargets": {
+    "description": "Reviewer work tool: reviewerTargets"
+  },
+  "@reviewerTerms": {
+    "description": "Reviewer work tool: reviewerTerms"
+  },
+  "@reviewerTitle": {
+    "description": "Reviewer work tool: reviewerTitle"
+  },
+  "@reviewerUnderstandings": {
+    "description": "Reviewer work tool: reviewerUnderstandings"
+  },
+  "@reviewerUnitId": {
+    "description": "Reviewer work tool: reviewerUnitId"
+  },
+  "@reviewerUnitsCompleted": {
+    "description": "Reviewer work tool: reviewerUnitsCompleted"
+  },
+  "@reviewerUnitsStarted": {
+    "description": "Reviewer work tool: reviewerUnitsStarted"
+  },
+  "@reviewerUnsupported": {
+    "description": "Reviewer work tool: reviewerUnsupported"
+  },
+  "@reviewerUnsure": {
+    "description": "Reviewer work tool: reviewerUnsure"
+  },
+  "@reviewerValidation": {
+    "description": "Reviewer work tool: reviewerValidation"
+  },
+  "@reviewerValueAddresseeSpecific": {
+    "description": "Reviewer work tool: reviewerValueAddresseeSpecific"
+  },
+  "@reviewerValueAwaitingGate1": {
+    "description": "Reviewer work tool: reviewerValueAwaitingGate1"
+  },
+  "@reviewerValueAwaitingGate2": {
+    "description": "Reviewer work tool: reviewerValueAwaitingGate2"
+  },
+  "@reviewerValueBaselineLlm": {
+    "description": "Reviewer work tool: reviewerValueBaselineLlm"
+  },
+  "@reviewerValueBeliefGrading": {
+    "description": "Reviewer work tool: reviewerValueBeliefGrading"
+  },
+  "@reviewerValueBeyondSource": {
+    "description": "Reviewer work tool: reviewerValueBeyondSource"
+  },
+  "@reviewerValueCausalReasoning": {
+    "description": "Reviewer work tool: reviewerValueCausalReasoning"
+  },
+  "@reviewerValueCircularReasoning": {
+    "description": "Reviewer work tool: reviewerValueCircularReasoning"
+  },
+  "@reviewerValueClaim": {
+    "description": "Reviewer work tool: reviewerValueClaim"
+  },
+  "@reviewerValueComparison": {
+    "description": "Reviewer work tool: reviewerValueComparison"
+  },
+  "@reviewerValueConcept": {
+    "description": "Reviewer work tool: reviewerValueConcept"
+  },
+  "@reviewerValueConsistency": {
+    "description": "Reviewer work tool: reviewerValueConsistency"
+  },
+  "@reviewerValueContextDependent": {
+    "description": "Reviewer work tool: reviewerValueContextDependent"
+  },
+  "@reviewerValueDecompose": {
+    "description": "Reviewer work tool: reviewerValueDecompose"
+  },
+  "@reviewerValueDemonstration": {
+    "description": "Reviewer work tool: reviewerValueDemonstration"
+  },
+  "@reviewerValueDifferingOpinions": {
+    "description": "Reviewer work tool: reviewerValueDifferingOpinions"
+  },
+  "@reviewerValueDone": {
+    "description": "Reviewer work tool: reviewerValueDone"
+  },
+  "@reviewerValueDoubtOrDeepCreed": {
+    "description": "Reviewer work tool: reviewerValueDoubtOrDeepCreed"
+  },
+  "@reviewerValueDropped": {
+    "description": "Reviewer work tool: reviewerValueDropped"
+  },
+  "@reviewerValueEvidence": {
+    "description": "Reviewer work tool: reviewerValueEvidence"
+  },
+  "@reviewerValueExact": {
+    "description": "Reviewer work tool: reviewerValueExact"
+  },
+  "@reviewerValueExample": {
+    "description": "Reviewer work tool: reviewerValueExample"
+  },
+  "@reviewerValueExercises": {
+    "description": "Reviewer work tool: reviewerValueExercises"
+  },
+  "@reviewerValueExplanation": {
+    "description": "Reviewer work tool: reviewerValueExplanation"
+  },
+  "@reviewerValueExplorer": {
+    "description": "Reviewer work tool: reviewerValueExplorer"
+  },
+  "@reviewerValueFailed": {
+    "description": "Reviewer work tool: reviewerValueFailed"
+  },
+  "@reviewerValueFatwaLike": {
+    "description": "Reviewer work tool: reviewerValueFatwaLike"
+  },
+  "@reviewerValueFocused": {
+    "description": "Reviewer work tool: reviewerValueFocused"
+  },
+  "@reviewerValueFoundational": {
+    "description": "Reviewer work tool: reviewerValueFoundational"
+  },
+  "@reviewerValueFraming": {
+    "description": "Reviewer work tool: reviewerValueFraming"
+  },
+  "@reviewerValueGeneralKnowledge": {
+    "description": "Reviewer work tool: reviewerValueGeneralKnowledge"
+  },
+  "@reviewerValueGeneralisedFromSpecific": {
+    "description": "Reviewer work tool: reviewerValueGeneralisedFromSpecific"
+  },
+  "@reviewerValueHistoricalEvidence": {
+    "description": "Reviewer work tool: reviewerValueHistoricalEvidence"
+  },
+  "@reviewerValueHypothetical": {
+    "description": "Reviewer work tool: reviewerValueHypothetical"
+  },
+  "@reviewerValueImagePolicy": {
+    "description": "Reviewer work tool: reviewerValueImagePolicy"
+  },
+  "@reviewerValueInference": {
+    "description": "Reviewer work tool: reviewerValueInference"
+  },
+  "@reviewerValueInstruction": {
+    "description": "Reviewer work tool: reviewerValueInstruction"
+  },
+  "@reviewerValueLocalization": {
+    "description": "Reviewer work tool: reviewerValueLocalization"
+  },
+  "@reviewerValueLocalize": {
+    "description": "Reviewer work tool: reviewerValueLocalize"
+  },
+  "@reviewerValueNeedsTafsir": {
+    "description": "Reviewer work tool: reviewerValueNeedsTafsir"
+  },
+  "@reviewerValueNewMuslim": {
+    "description": "Reviewer work tool: reviewerValueNewMuslim"
+  },
+  "@reviewerValueObservation": {
+    "description": "Reviewer work tool: reviewerValueObservation"
+  },
+  "@reviewerValueOutOfScope": {
+    "description": "Reviewer work tool: reviewerValueOutOfScope"
+  },
+  "@reviewerValueOversimplified": {
+    "description": "Reviewer work tool: reviewerValueOversimplified"
+  },
+  "@reviewerValuePartial": {
+    "description": "Reviewer work tool: reviewerValuePartial"
+  },
+  "@reviewerValuePedagogy": {
+    "description": "Reviewer work tool: reviewerValuePedagogy"
+  },
+  "@reviewerValuePending": {
+    "description": "Reviewer work tool: reviewerValuePending"
+  },
+  "@reviewerValuePersonalFatwa": {
+    "description": "Reviewer work tool: reviewerValuePersonalFatwa"
+  },
+  "@reviewerValuePlan": {
+    "description": "Reviewer work tool: reviewerValuePlan"
+  },
+  "@reviewerValuePractice": {
+    "description": "Reviewer work tool: reviewerValuePractice"
+  },
+  "@reviewerValuePrediction": {
+    "description": "Reviewer work tool: reviewerValuePrediction"
+  },
+  "@reviewerValuePublish": {
+    "description": "Reviewer work tool: reviewerValuePublish"
+  },
+  "@reviewerValuePublished": {
+    "description": "Reviewer work tool: reviewerValuePublished"
+  },
+  "@reviewerValueQa": {
+    "description": "Reviewer work tool: reviewerValueQa"
+  },
+  "@reviewerValueQuestion": {
+    "description": "Reviewer work tool: reviewerValueQuestion"
+  },
+  "@reviewerValueRaqeeb": {
+    "description": "Reviewer work tool: reviewerValueRaqeeb"
+  },
+  "@reviewerValueReadingLevel": {
+    "description": "Reviewer work tool: reviewerValueReadingLevel"
+  },
+  "@reviewerValueReasoning": {
+    "description": "Reviewer work tool: reviewerValueReasoning"
+  },
+  "@reviewerValueReflection": {
+    "description": "Reviewer work tool: reviewerValueReflection"
+  },
+  "@reviewerValueRejected": {
+    "description": "Reviewer work tool: reviewerValueRejected"
+  },
+  "@reviewerValueRetrieve": {
+    "description": "Reviewer work tool: reviewerValueRetrieve"
+  },
+  "@reviewerValueRunning": {
+    "description": "Reviewer work tool: reviewerValueRunning"
+  },
+  "@reviewerValueScenario": {
+    "description": "Reviewer work tool: reviewerValueScenario"
+  },
+  "@reviewerValueSceneAuthor": {
+    "description": "Reviewer work tool: reviewerValueSceneAuthor"
+  },
+  "@reviewerValueSceneRender": {
+    "description": "Reviewer work tool: reviewerValueSceneRender"
+  },
+  "@reviewerValueScholarlyDisagreement": {
+    "description": "Reviewer work tool: reviewerValueScholarlyDisagreement"
+  },
+  "@reviewerValueScholarlyReview": {
+    "description": "Reviewer work tool: reviewerValueScholarlyReview"
+  },
+  "@reviewerValueSensitive": {
+    "description": "Reviewer work tool: reviewerValueSensitive"
+  },
+  "@reviewerValueSensitiveHuman": {
+    "description": "Reviewer work tool: reviewerValueSensitiveHuman"
+  },
+  "@reviewerValueSingleOpinionAsConsensus": {
+    "description": "Reviewer work tool: reviewerValueSingleOpinionAsConsensus"
+  },
+  "@reviewerValueSkipped": {
+    "description": "Reviewer work tool: reviewerValueSkipped"
+  },
+  "@reviewerValueSource": {
+    "description": "Reviewer work tool: reviewerValueSource"
+  },
+  "@reviewerValueStandard": {
+    "description": "Reviewer work tool: reviewerValueStandard"
+  },
+  "@reviewerValueStory": {
+    "description": "Reviewer work tool: reviewerValueStory"
+  },
+  "@reviewerValueStretched": {
+    "description": "Reviewer work tool: reviewerValueStretched"
+  },
+  "@reviewerValueSupported": {
+    "description": "Reviewer work tool: reviewerValueSupported"
+  },
+  "@reviewerValueTakeaway": {
+    "description": "Reviewer work tool: reviewerValueTakeaway"
+  },
+  "@reviewerValueTestimony": {
+    "description": "Reviewer work tool: reviewerValueTestimony"
+  },
+  "@reviewerValueTextExplanation": {
+    "description": "Reviewer work tool: reviewerValueTextExplanation"
+  },
+  "@reviewerValueTranslationSensitive": {
+    "description": "Reviewer work tool: reviewerValueTranslationSensitive"
+  },
+  "@reviewerValueUnknown": {
+    "description": "Reviewer work tool: reviewerValueUnknown"
+  },
+  "@reviewerValueUnrelated": {
+    "description": "Reviewer work tool: reviewerValueUnrelated"
+  },
+  "@reviewerValueUnsupportedSentence": {
+    "description": "Reviewer work tool: reviewerValueUnsupportedSentence"
+  },
+  "@reviewerValueValidation": {
+    "description": "Reviewer work tool: reviewerValueValidation"
+  },
+  "@reviewerValueVerification": {
+    "description": "Reviewer work tool: reviewerValueVerification"
+  },
+  "@reviewerValueVerify": {
+    "description": "Reviewer work tool: reviewerValueVerify"
+  },
+  "@reviewerValueVisuals": {
+    "description": "Reviewer work tool: reviewerValueVisuals"
+  },
+  "@reviewerValueWrite": {
+    "description": "Reviewer work tool: reviewerValueWrite"
+  },
+  "@reviewerVisuals": {
+    "description": "Reviewer work tool: reviewerVisuals"
+  },
+  "@reviewerWarning": {
+    "description": "Reviewer work tool: reviewerWarning"
+  },
+  "@sessionAllCaughtUp": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionAnswerReview": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionApplying": {
+    "description": "Prototype interface copy: session / applying. Preserve the original warm wording."
+  },
+  "@sessionBackToJourney": {
+    "description": "Prototype interface copy: session / backToJourney. Preserve the original warm wording."
+  },
+  "@sessionBegin": {
+    "description": "Prototype interface copy: session / begin. Preserve the original warm wording."
+  },
+  "@sessionBlank": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "@sessionChooseReason": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "@sessionCombo": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "@sessionComesBack": {
+    "description": "Prototype interface copy: session / comesBack. Preserve the original warm wording."
+  },
+  "@sessionCompanionIntro": {
+    "description": "Prototype interface copy: session / companionIntro. Preserve the original warm wording."
+  },
+  "@sessionCorrectAnswerIs": {
+    "description": "Prototype interface copy: session / correctAnswerIs. Preserve the original warm wording."
+  },
+  "@sessionExercisePlaceholderBody": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@sessionExercisePlaceholderTitle": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@sessionExercisesCount": {
+    "description": "Prototype interface copy: session / exercisesCount. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@sessionFalseLabel": {
+    "description": "Prototype interface copy: session / falseLabel. Preserve the original warm wording."
+  },
+  "@sessionFillBlank": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionFindOut": {
+    "description": "Default hook CTA when the server sends null."
+  },
+  "@sessionGentle1": {
+    "description": "Prototype interface copy: session / gentle1. Preserve the original warm wording."
+  },
+  "@sessionGentle2": {
+    "description": "Prototype interface copy: session / gentle2. Preserve the original warm wording."
+  },
+  "@sessionGentle3": {
+    "description": "Prototype interface copy: session / gentle3. Preserve the original warm wording."
+  },
+  "@sessionIllTry": {
+    "description": "Prototype interface copy: session / illTry. Preserve the original warm wording."
+  },
+  "@sessionInTwoDays": {
+    "description": "Prototype interface copy: session / inTwoDays. Preserve the original warm wording."
+  },
+  "@sessionKeepLearning": {
+    "description": "Prototype interface copy: session / keepLearning. Preserve the original warm wording."
+  },
+  "@sessionKindChoose": {
+    "description": "Prototype interface copy: session / kindChoose. Preserve the original warm wording."
+  },
+  "@sessionKindDay": {
+    "description": "Prototype interface copy: session / kindDay. Preserve the original warm wording."
+  },
+  "@sessionKindDiscover": {
+    "description": "Prototype interface copy: session / kindDiscover. Preserve the original warm wording."
+  },
+  "@sessionKindFix": {
+    "description": "Prototype interface copy: session / kindFix. Preserve the original warm wording."
+  },
+  "@sessionKindGuess": {
+    "description": "Prototype interface copy: session / kindGuess. Preserve the original warm wording."
+  },
+  "@sessionKindMatch": {
+    "description": "Prototype interface copy: session / kindMatch. Preserve the original warm wording."
+  },
+  "@sessionKindOrder": {
+    "description": "Prototype interface copy: session / kindOrder. Preserve the original warm wording."
+  },
+  "@sessionKindRealLife": {
+    "description": "Prototype interface copy: session / kindRealLife. Preserve the original warm wording."
+  },
+  "@sessionKindRecite": {
+    "description": "Prototype interface copy: session / kindRecite. Preserve the original warm wording."
+  },
+  "@sessionKindSort": {
+    "description": "Prototype interface copy: session / kindSort. Preserve the original warm wording."
+  },
+  "@sessionKindTrueFalse": {
+    "description": "Prototype interface copy: session / kindTrueFalse. Preserve the original warm wording."
+  },
+  "@sessionLeave": {
+    "description": "Prototype interface copy: session / leave. Preserve the original warm wording."
+  },
+  "@sessionLessonComplete": {
+    "description": "Prototype interface copy: session / lessonComplete. Preserve the original warm wording."
+  },
+  "@sessionLessonCompleteSub": {
+    "description": "Prototype interface copy: session / lessonCompleteSub. Preserve the original warm wording."
+  },
+  "@sessionLessonPosition": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review.",
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      },
+      "lesson": {
+        "type": "String"
+      }
+    }
+  },
+  "@sessionListenReciter": {
+    "description": "Prototype interface copy: session / listenReciter. Preserve the original warm wording."
+  },
+  "@sessionListening": {
+    "description": "Prototype interface copy: session / listening. Preserve the original warm wording."
+  },
+  "@sessionMapPin": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "@sessionMasteryNote": {
+    "description": "Prototype interface copy: session / masteryNote. Preserve the original warm wording."
+  },
+  "@sessionMeaning": {
+    "description": "Prototype interface copy: session / meaning. Preserve the original warm wording."
+  },
+  "@sessionMistakenIdea": {
+    "description": "Prototype interface copy: session / mistakenIdea. Preserve the original warm wording."
+  },
+  "@sessionNextOnPath": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "Next-step title supplied verbatim by the stored server result."
+  },
+  "@sessionNextUnlocked": {
+    "description": "Prototype interface copy: session / nextUnlocked. Preserve the original warm wording.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "@sessionNiceThinking": {
+    "description": "Prototype interface copy: session / niceThinking. Preserve the original warm wording."
+  },
+  "@sessionOriginTitle": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@sessionPairHint": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "@sessionPerfectBonus": {
+    "description": "Prototype interface copy: session / perfectBonus. Preserve the original warm wording."
+  },
+  "@sessionPlaying": {
+    "description": "Prototype interface copy: session / playing. Preserve the original warm wording."
+  },
+  "@sessionPraise1": {
+    "description": "Prototype interface copy: session / praise1. Preserve the original warm wording."
+  },
+  "@sessionPraise2": {
+    "description": "Prototype interface copy: session / praise2. Preserve the original warm wording."
+  },
+  "@sessionPraise3": {
+    "description": "Prototype interface copy: session / praise3. Preserve the original warm wording."
+  },
+  "@sessionPraise4": {
+    "description": "Prototype interface copy: session / praise4. Preserve the original warm wording."
+  },
+  "@sessionPraise5": {
+    "description": "Prototype interface copy: session / praise5. Preserve the original warm wording."
+  },
+  "@sessionPretestThanks": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionPreviewEndBody": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@sessionPreviewEndTitle": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@sessionProgress": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    },
+    "description": "Accessible player progress label."
+  },
+  "@sessionQuickReview": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionQuitBody": {
+    "description": "Prototype interface copy: session / quitBody. Preserve the original warm wording."
+  },
+  "@sessionQuitTitle": {
+    "description": "Prototype interface copy: session / quitTitle. Preserve the original warm wording."
+  },
+  "@sessionReadLesson": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionReaderEmpty": {
+    "description": "Empty learning content or accessible review countdown, Phase 12.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionReciteBody": {
+    "description": "Prototype interface copy: session / reciteBody. Preserve the original warm wording."
+  },
+  "@sessionReciteGreat": {
+    "description": "Prototype interface copy: session / reciteGreat. Preserve the original warm wording."
+  },
+  "@sessionReciteTip": {
+    "description": "Prototype interface copy: session / reciteTip. Preserve the original warm wording."
+  },
+  "@sessionReciteTitle": {
+    "description": "Prototype interface copy: session / reciteTitle. Preserve the original warm wording."
+  },
+  "@sessionRecordingUnavailable": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "@sessionRemediation": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "@sessionRemembering": {
+    "description": "Prototype interface copy: session / remembering. Preserve the original warm wording."
+  },
+  "@sessionReport": {
+    "description": "Prototype interface copy: session / report. Preserve the original warm wording."
+  },
+  "@sessionResultPendingBody": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "@sessionResultPendingTitle": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "@sessionRetryBody": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "@sessionRetryTitle": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "@sessionReviewedBySpecialist": {
+    "description": "Prototype interface copy: session / reviewedBySpecialist. Preserve the original warm wording."
+  },
+  "@sessionSalahPreview": {
+    "description": "Developer launcher for the four authored Salah variants."
+  },
+  "@sessionSecondsRemaining": {
+    "placeholders": {
+      "seconds": {
+        "type": "String"
+      }
+    },
+    "description": "Empty learning content or accessible review countdown, Phase 12.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionSelectAnswer": {
+    "description": "Prototype interface copy: session / selectAnswer. Preserve the original warm wording."
+  },
+  "@sessionShowAll": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@sessionShowMore": {
+    "description": "Prototype interface copy: session / showMore. Preserve the original warm wording."
+  },
+  "@sessionSimulatedNote": {
+    "description": "Prototype interface copy: session / simulatedNote. Preserve the original warm wording."
+  },
+  "@sessionSituation": {
+    "description": "Prototype interface copy: session / situation. Preserve the original warm wording."
+  },
+  "@sessionSkipRecite": {
+    "description": "Prototype interface copy: session / skipRecite. Preserve the original warm wording."
+  },
+  "@sessionSkipped": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "@sessionSoon": {
+    "description": "Prototype interface copy: session / soon. Preserve the original warm wording."
+  },
+  "@sessionSourcesLine": {
+    "description": "Prototype interface copy: session / sourcesLine. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@sessionSourcesTitle": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "@sessionSpotError": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "@sessionStatAccuracy": {
+    "description": "Prototype interface copy: session / statAccuracy. Preserve the original warm wording."
+  },
+  "@sessionStatEmbers": {
+    "description": "Prototype interface copy: session / statEmbers. Preserve the original warm wording."
+  },
+  "@sessionStatTime": {
+    "description": "Prototype interface copy: session / statTime. Preserve the original warm wording."
+  },
+  "@sessionSubmitError": {
+    "description": "Phase 6 answer failure with retained draft."
+  },
+  "@sessionTapInOrder": {
+    "description": "Prototype interface copy: session / tapInOrder. Preserve the original warm wording."
+  },
+  "@sessionTapTheScene": {
+    "description": "Prototype interface copy: session / tapTheScene. Preserve the original warm wording."
+  },
+  "@sessionTapThenPlace": {
+    "description": "Prototype interface copy: session / tapThenPlace. Preserve the original warm wording."
+  },
+  "@sessionTapThenSlot": {
+    "description": "Prototype interface copy: session / tapThenSlot. Preserve the original warm wording."
+  },
+  "@sessionTapToContinue": {
+    "description": "Prototype interface copy: session / tapToContinue. Preserve the original warm wording."
+  },
+  "@sessionTestPassed": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionTestTryAgain": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionTheStory": {
+    "description": "Prototype interface copy: session / theStory. Preserve the original warm wording."
+  },
+  "@sessionThenAWeek": {
+    "description": "Prototype interface copy: session / thenAWeek. Preserve the original warm wording."
+  },
+  "@sessionThinkFirst": {
+    "description": "Prototype interface copy: session / thinkFirst. Preserve the original warm wording."
+  },
+  "@sessionTodaysChallenge": {
+    "description": "Prototype interface copy: session / todaysChallenge. Preserve the original warm wording."
+  },
+  "@sessionTomorrowWeAsk": {
+    "description": "Prototype interface copy: session / tomorrowWeAsk. Preserve the original warm wording."
+  },
+  "@sessionTransliteration": {
+    "description": "Toggle the server supplied pronunciation transliteration for a recitation segment."
+  },
+  "@sessionTrueLabel": {
+    "description": "Prototype interface copy: session / trueLabel. Preserve the original warm wording."
+  },
+  "@sessionUnderstanding": {
+    "description": "Prototype interface copy: session / understanding. Preserve the original warm wording."
+  },
+  "@sessionUnit0ContentPreview": {
+    "description": "Developer picker for Unit 0 lessons; normal prerequisites apply."
+  },
+  "@sessionUpdateRequired": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "@sessionVerseReference": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review.",
+    "placeholders": {
+      "surah": {
+        "type": "String"
+      },
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@sessionWhichEvidence": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionWhyLabel": {
+    "description": "Prototype interface copy: session / whyLabel. Preserve the original warm wording."
+  },
+  "@sessionYouWillLearn": {
+    "description": "Prototype interface copy: session / youWillLearn. Preserve the original warm wording."
+  },
+  "@sessionYourAnswer": {
+    "description": "Prototype interface copy: session / yourAnswer. Preserve the original warm wording."
+  },
+  "@sessionYourMastery": {
+    "description": "Prototype interface copy: session / yourMastery. Preserve the original warm wording."
+  },
+  "@sessionYourTurn": {
+    "description": "Prototype interface copy: session / yourTurn. Preserve the original warm wording."
+  },
+  "@settingsAboutQabas": {
+    "description": "Prototype interface copy: settings / aboutQabas. Preserve the original warm wording."
+  },
+  "@settingsArabic": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "@settingsCharacters": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "@settingsContentNote": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "@settingsContentNoteBody": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "@settingsDailyGoalSetting": {
+    "description": "Prototype interface copy: settings / dailyGoalSetting. Preserve the original warm wording."
+  },
+  "@settingsDeleteAccount": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@settingsDeleteAccountBody": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@settingsDemoReset": {
+    "description": "Prototype interface copy: settings / demoReset. Preserve the original warm wording."
+  },
+  "@settingsDiscreetReminders": {
+    "description": "Prototype interface copy: settings / discreetReminders. Preserve the original warm wording."
+  },
+  "@settingsEnglish": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "@settingsHapticsLabel": {
+    "description": "Prototype interface copy: settings / hapticsLabel. Preserve the original warm wording."
+  },
+  "@settingsLanguage": {
+    "description": "Prototype interface copy: settings / language. Preserve the original warm wording."
+  },
+  "@settingsLearnerPath": {
+    "description": "Prototype interface copy: settings / learnerPath. Preserve the original warm wording."
+  },
+  "@settingsPrivateProfileSetting": {
+    "description": "Prototype interface copy: settings / privateProfileSetting. Preserve the original warm wording."
+  },
+  "@settingsReduceMotion": {
+    "description": "Prototype interface copy: settings / reduceMotion. Preserve the original warm wording."
+  },
+  "@settingsReduceMotionBody": {
+    "description": "Prototype interface copy: settings / reduceMotionBody. Preserve the original warm wording."
+  },
+  "@settingsReminders": {
+    "description": "Prototype interface copy: settings / reminders. Preserve the original warm wording."
+  },
+  "@settingsReplayOnboarding": {
+    "description": "Prototype interface copy: settings / replayOnboarding. Preserve the original warm wording."
+  },
+  "@settingsResetDemo": {
+    "description": "Prototype interface copy: settings / resetDemo. Preserve the original warm wording."
+  },
+  "@settingsResetDemoBody": {
+    "description": "Prototype interface copy: settings / resetDemoBody. Preserve the original warm wording."
+  },
+  "@settingsSaveFailed": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "@settingsSectionAbout": {
+    "description": "Prototype interface copy: settings / sectionAbout. Preserve the original warm wording."
+  },
+  "@settingsSectionAccount": {
+    "description": "Prototype interface copy: settings / sectionAccount. Preserve the original warm wording."
+  },
+  "@settingsSectionDemo": {
+    "description": "Prototype interface copy: settings / sectionDemo. Preserve the original warm wording."
+  },
+  "@settingsSectionExperience": {
+    "description": "Prototype interface copy: settings / sectionExperience. Preserve the original warm wording."
+  },
+  "@settingsSectionLearning": {
+    "description": "Prototype interface copy: settings / sectionLearning. Preserve the original warm wording."
+  },
+  "@settingsSectionPrivacy": {
+    "description": "Prototype interface copy: settings / sectionPrivacy. Preserve the original warm wording."
+  },
+  "@settingsSoundEffects": {
+    "description": "Prototype interface copy: settings / soundEffects. Preserve the original warm wording."
+  },
+  "@streakDayStreakLabel": {
+    "description": "Prototype interface copy: streak / dayStreakLabel. Preserve the original warm wording."
+  },
+  "@streakKeepFlameWarm": {
+    "description": "Prototype interface copy: streak / keepFlameWarm. Preserve the original warm wording."
+  },
+  "@streakLastFiveWeeks": {
+    "description": "Prototype interface copy: streak / lastFiveWeeks. Preserve the original warm wording."
+  },
+  "@streakRestDays": {
+    "description": "Prototype interface copy: streak / restDays. Preserve the original warm wording."
+  },
+  "@streakRestDaysBody": {
+    "description": "Prototype interface copy: streak / restDaysBody. Preserve the original warm wording."
+  },
+  "@streakStreakBody": {
+    "description": "Prototype interface copy: streak / streakBody. Preserve the original warm wording."
+  },
+  "@streakStreakKeep": {
+    "description": "Prototype interface copy: streak / streakKeep. Preserve the original warm wording."
+  },
+  "@streakStreakTitle": {
+    "description": "Prototype interface copy: streak / streakTitle. Preserve the original warm wording.",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@streakToday": {
+    "description": "Accessible label for the current day in the streak week."
+  },
+  "@unitGuideEmpty": {
+    "description": "Empty learning content or accessible review countdown, Phase 12.",
+    "x-review": "owner/content review pending"
+  },
+  "aboutAiNotice": "Questions are processed by AI services. For personal rulings, consult a qualified specialist.",
+  "aboutFullVerse": "Read the full verse",
+  "aboutNameMeaning": "Qabas (قبس) is a small flame taken from a larger fire, carried to bring light and warmth. The word comes from the Quran, in the story of Prophet Musa (Moses), peace be upon him: travelling at night with his family, cold and unsure of the way, he saw a fire in the distance.",
+  "aboutNameMeaningTitle": "The name",
+  "aboutOurPromises": "Our promises",
+  "aboutPromise1": "Every lesson is reviewed by a specialist in Islamic studies",
+  "aboutPromise2": "Verses and hadiths are quoted exactly, with their sources",
+  "aboutPromise3": "Welcoming, never pressuring — safe to ask anything",
+  "aboutPromise4": "Your journey is private unless you choose to share it",
+  "aboutTahaReference": "Surah Taha, 20:10",
+  "aboutTranslationNote": "Translation: Saheeh International",
+  "aboutVerseTranslation": "“Perhaps I can bring you a torch or find at the fire some guidance.”",
+  "aboutWhyItFits": "This is our learner’s story: someone notices a light from afar, feels curious, walks toward it, and finds guidance. Qabas is that first flame — small, warm, inviting, and leading somewhere greater.",
+  "challengeAccept": "Join challenge",
+  "challengeAnswered": "Answer locked",
+  "challengeAsync": "Play now; your friend plays later",
+  "challengeBotFill": "Fill empty seats with practice bots",
+  "challengeChooseFriends": "Choose up to three friends",
+  "challengeConnectionLost": "Connection lost",
+  "challengeDecline": "Decline",
+  "challengeDisconnected": "{name} is reconnecting · {seconds}s",
+  "challengeDone": "Done",
+  "challengeDraw": "You lit the way together!",
+  "challengeFastest": "Fastest",
+  "challengeGetReady": "Get ready",
+  "challengeGroup": "Challenge friends",
+  "challengeInvitations": "Invitations",
+  "challengeInviteFrom": "Challenge from {name}",
+  "challengeLiveLobby": "Friends are joining…",
+  "challengeNoInvitations": "No invitations right now",
+  "challengeNotJoinableTitle": "This challenge has already started or ended",
+  "challengePlayAgain": "Play again",
+  "challengePoints": "pts",
+  "challengePracticeBot": "Practice with the bot",
+  "challengeQuestionOf": "Question {current} of {total}",
+  "challengeReconnecting": "Reconnecting…",
+  "challengeResults": "Results",
+  "challengeSeconds": "{value}s",
+  "challengeSummary": "Review answers",
+  "challengeWaitingFriend": "Waiting for your friend",
+  "challengeWellPlayed": "Well played!",
+  "challengeYouWon": "You lit the way!",
+  "characterGuideSemantics": "Your guide carrying a small light",
+  "characterLanternSemantics": "Raqeeb’s lantern",
+  "commonAppName": "Qabas",
+  "commonArabic": "العربية",
+  "commonBack": "Back",
+  "commonBrandArabic": "قبس",
+  "commonBrandLatin": "Qabas",
+  "commonCancel": "Cancel",
+  "commonCheck": "Check",
+  "commonChooseAnother": "Choose another",
+  "commonClose": "Close",
+  "commonContinue": "Continue",
+  "commonDayStreak": "{count, plural, other{{countText} day streak}}",
+  "commonDays": "{count, plural, =1{1 day} other{{countText} days}}",
+  "commonDone": "Done",
+  "commonEdit": "Edit",
+  "commonEmbers": "{value} embers",
+  "commonEmbersName": "Embers",
+  "commonEnglish": "English",
+  "commonGotIt": "Got it",
+  "commonLater": "Later",
+  "commonLoading": "Loading…",
+  "commonMinutes": "{value} min",
+  "commonMinutesLong": "{count, plural, other{{value} min}}",
+  "commonNew": "New",
+  "commonNext": "Next",
+  "commonOfflineBody": "You’re offline. We’ll keep what you’ve done.",
+  "commonPathExplorer": "Explorer",
+  "commonPathExplorerLong": "Explorer path",
+  "commonPathNewMuslim": "New Muslim",
+  "commonPathNewMuslimLong": "New Muslim path",
+  "commonPercent": "{value}%",
+  "commonPlusEmbers": "+{value} embers",
+  "commonRecordTooltip": "Record a question",
+  "commonRemoveAttachmentTooltip": "Remove attachment",
+  "commonRetry": "Try again",
+  "commonSeeAll": "See all",
+  "commonSendTooltip": "Send",
+  "commonSessionEndedBody": "Your guest session has ended. We’ll help you start a new journey.",
+  "commonSessionEndedTitle": "Let’s begin again",
+  "commonSkip": "Skip",
+  "commonStart": "Start",
+  "commonTabCommunity": "Community",
+  "commonTabDiscover": "Discover",
+  "commonTabJourney": "Journey",
+  "commonTabProfile": "Profile",
+  "commonTabRaqeeb": "Raqeeb",
+  "commonTabReview": "Review",
+  "commonTagline": "Learn Islam step by step, from your first question to real understanding.",
+  "commonUpdate": "Update Qabas",
+  "commonUpdateBody": "Update Qabas to keep learning. Your journey will be waiting.",
+  "commonUpdateTitle": "A little update, a brighter path",
+  "communityCommunityTitle": "Community",
+  "communityDailyQuests": "Daily quests",
+  "communityEndsIn": "Ends in {days}d {hours}h",
+  "communityFriends": "Friends",
+  "communityInvite": "Invite",
+  "communityJoinLeague": "Join the league",
+  "communityLearningPrivately": "You’re learning privately",
+  "communityLearningPrivatelyBody": "Your activity is hidden from leagues and friends. You can join any time.",
+  "communityLiveChallenge": "Live challenge",
+  "communityLiveChallengeBody": "Challenge friends to a live quiz — the fastest correct answer wins.",
+  "communityNoFriends": "Invite a friend to learn together",
+  "communityNoLeagueTitle": "Earn embers to join this week’s league",
+  "communityNoQuests": "You’re all caught up for today",
+  "communityProgressCount": "{current}/{target}",
+  "communityPromoteLine": "Top {countText} move up to {league}",
+  "communityPromotionCount": "Top {count} move up",
+  "communityPromotionZone": "Promotion zone",
+  "communityQuestReward": "+{count} embers",
+  "communityResetsIn": "Resets in {hours}h",
+  "communityStartChallenge": "Start a challenge",
+  "communityStreakDays": "{countText}-day streak",
+  "communityTopTier": "Keep your light shining",
+  "communityYou": "You",
+  "contentArticle": "Article",
+  "contentAudioError": "This audio isn’t available right now.",
+  "contentBook": "Book",
+  "contentFatwa": "Fatwa",
+  "contentHadithLabel": "Hadith",
+  "contentLearnMore": "Learn more",
+  "contentLevelBasic": "Basic",
+  "contentLevelIntermediate": "Intermediate",
+  "contentLevelUnknown": "Your level",
+  "contentProviderDorar": "Dorar",
+  "contentProviderHadeethenc": "HadeethEnc",
+  "contentProviderIslamhouse": "IslamHouse",
+  "contentProviderQuranCom": "Quran.com",
+  "contentProviderQuranenc": "QuranEnc",
+  "contentProviderTafsirCenter": "Tafsir Center",
+  "contentQuranLabel": "Quran",
+  "contentSource": "Source",
+  "contentTafsir": "Tafsir",
+  "contentViewSource": "View source",
+  "discoverEmptyBody": "New lessons to explore will appear here.",
+  "discoverEmptyTitle": "More to explore",
+  "discoverNotice": "Some lessons normally come later on your path. Earlier units can make them easier to understand.",
+  "discoverUnitHeading": "Unit {number} · {title}",
+  "errorFileTypeBody": "This file type isn’t supported.",
+  "errorFileTypeTitle": "Try another file",
+  "errorForbiddenBody": "This isn’t available for your account.",
+  "errorForbiddenTitle": "This isn’t available",
+  "errorGenericBody": "Let’s try that again.",
+  "errorGenericTitle": "Something unexpected happened",
+  "errorNetworkBody": "Check your internet and try again.",
+  "errorNetworkTitle": "No connection",
+  "errorNotFoundBody": "Go back and take another step.",
+  "errorNotFoundTitle": "We couldn’t find this",
+  "errorRateLimitedBody": "You can try again in {time}.",
+  "errorRateLimitedTitle": "Let’s pause for a moment",
+  "errorServerBody": "Something went wrong on our side. Please try again.",
+  "errorServerTitle": "A small pause",
+  "errorSourcesBody": "Sources are temporarily unavailable. Try again shortly.",
+  "errorSourcesTitle": "Sources are taking a moment",
+  "errorTooLargeBody": "Choose a smaller file and try again.",
+  "errorTooLargeTitle": "This file is too large",
+  "friendsAccept": "Accept invite",
+  "friendsAcceptCode": "Enter an invite code",
+  "friendsAccepted": "You’re now learning together",
+  "friendsAlreadyFriends": "You’re already friends.",
+  "friendsCode": "Invite code",
+  "friendsInviteInvalid": "That code doesn’t work. Check it and try again.",
+  "friendsOffline": "Offline",
+  "friendsOnline": "Online",
+  "friendsRemove": "Remove friend",
+  "friendsRemoveBody": "Remove {name} from your friends?",
+  "friendsShare": "Share invite",
+  "galleryBrand": "Brand and illustration",
+  "galleryButtons": "Buttons",
+  "galleryCardBody": "A small light for a big journey",
+  "galleryCelebrate": "Celebrate",
+  "galleryConfirm": "Confirmation sheet",
+  "galleryDisabled": "Disabled",
+  "galleryEmptyBody": "A little space for something new.",
+  "galleryEmptyTitle": "Your next step is on its way",
+  "galleryInputs": "Inputs and settings",
+  "galleryMotion": "Motion",
+  "galleryNudge": "Try a gentle nudge",
+  "galleryOpenSheet": "Open sheet",
+  "gallerySheets": "Sheets and notices",
+  "galleryStates": "Loading, empty and error",
+  "gallerySurfaces": "Cards and progress",
+  "galleryTitle": "Component gallery",
+  "glossaryAll": "All",
+  "glossaryAskRaqeeb": "Ask Raqeeb",
+  "glossaryEmpty": "Words you meet in lessons will appear here.",
+  "glossaryIKnowThis": "I know this",
+  "glossaryLearning": "Learning",
+  "glossaryLevelExplorer": "Explained for explorers",
+  "glossaryLevelNewMuslim": "Explained for new Muslims",
+  "glossaryListen": "Listen",
+  "glossaryLoadMore": "Show more words",
+  "glossaryMastered": "Mastered",
+  "glossaryNew": "New",
+  "glossaryUnderlineHint": "Once you’ve mastered a word, its underline disappears.",
+  "glossaryYourDictionary": "Your dictionary",
+  "journeyAvailable": "Available",
+  "journeyCheckpoint": "Checkpoint",
+  "journeyComingSoonBody": "This prototype includes one complete lesson: “Prayer: a river at your door”. The rest of the journey shows how the path unfolds.",
+  "journeyComingSoonTitle": "Coming soon",
+  "journeyDailyGoal": "Daily goal",
+  "journeyDoneLabel": "Completed",
+  "journeyEmptyBody": "Your next steps will appear here. Try again in a moment.",
+  "journeyEmptyTitle": "Your path is being prepared",
+  "journeyExplorerPathHint": "For the curious: big questions first",
+  "journeyGoalProgress": "{done} / {goal} min",
+  "journeyGreetingAfternoon": "Good afternoon",
+  "journeyGreetingEvening": "Good evening",
+  "journeyGreetingMorning": "Good morning",
+  "journeyGuide": "Guide",
+  "journeyJumpBack": "Continue",
+  "journeyKeepTheLight": "Your path is lit. One small step today?",
+  "journeyLearnedTodayLine": "Today’s flame is lit. Beautiful work.",
+  "journeyLesson": "Lesson",
+  "journeyLessonAction": "Start lesson  {reward}",
+  "journeyLoading": "Lighting your path…",
+  "journeyLockedBody": "Finish the steps before this one and the path will light up.",
+  "journeyLockedTitle": "Not yet",
+  "journeyNewMuslimPathHint": "First steps in faith and practice",
+  "journeyNodeSemantics": "{title} — {status}",
+  "journeyOpenPlayableLesson": "Try the sample lesson",
+  "journeyPathUnfolds": "The path keeps unfolding as you grow",
+  "journeyPillarNames1": "Testimony",
+  "journeyPillarNames2": "Prayer",
+  "journeyPillarNames3": "Zakah",
+  "journeyPillarNames4": "Pilgrimage",
+  "journeyPillarNames5": "Fasting",
+  "journeyPractice": "Practice",
+  "journeyQuickReview": "Quick review",
+  "journeyReviewDue": "{countText} cards ready for a 60-second review",
+  "journeyReviewLesson": "Review lesson",
+  "journeySkipUnit": "Skip unit",
+  "journeySoftLockBody": "You’re almost there. One earlier idea will make this lesson easier to understand.",
+  "journeySoftLockTitle": "One idea first",
+  "journeyStartHere": "Start",
+  "journeyStartLesson": "Start lesson",
+  "journeyStartReview": "Start review",
+  "journeyStartWith": "Start with: {title}",
+  "journeyStory": "Story",
+  "journeyTakeUnitTest": "Take the unit test",
+  "journeyUnitComplete": "Unit complete",
+  "journeyUnitN": "Unit {number}",
+  "journeyWhatYoullLearn": "In this unit",
+  "journeyYourPath": "Your path",
+  "learningEntryBody": "This part of your path is being prepared. Your progress is saved.",
+  "mediaCamera": "Take a photo",
+  "mediaCaptureFailed": "We couldn’t read that recording or file. Try again.",
+  "mediaCountLimit": "You can attach up to three images, one document and one voice recording.",
+  "mediaDocumentLimit": "Documents can be up to 10 MB",
+  "mediaImageLimit": "Images can be up to 8 MB",
+  "mediaMicrophoneDenied": "Allow microphone access to record. You can change this in settings.",
+  "mediaOpenSettings": "Open settings",
+  "mediaRecitationLimit": "Recitations can be up to 30 seconds and 5 MB",
+  "mediaRecord": "Your turn",
+  "mediaRecordingTime": "Recording · {seconds} / {limit}s",
+  "mediaStopRecording": "Stop recording",
+  "mediaVoiceLimit": "Voice recordings can be up to 60 seconds and 10 MB",
+  "onboardingArabicGlyph": "أ",
+  "onboardingChooseLanguage": "Choose your language",
+  "onboardingCompanionHello": "Hello! I’ll carry the light while you find your way.",
+  "onboardingDiscreetBody": "“Time for your daily lesson” — nothing more.",
+  "onboardingDiscreetTitle": "Discreet reminders",
+  "onboardingEnglishGlyph": "Aa",
+  "onboardingExplorerBody": "Big questions, clear answers, no pressure.",
+  "onboardingExplorerTitle": "I’m curious about Islam",
+  "onboardingFamiliarBasics": "I know the basics",
+  "onboardingFamiliarNew": "Completely new to this",
+  "onboardingFamiliarNote": "We’ll start gently either way — a quick check later can skip what you know.",
+  "onboardingFamiliarSome": "I know a little",
+  "onboardingFamiliarTitle": "How familiar are you?",
+  "onboardingGetStarted": "Get started",
+  "onboardingGoalBubble": "Small and steady beats big and rare.",
+  "onboardingGoalDedicated": "Dedicated",
+  "onboardingGoalDeep": "Deep",
+  "onboardingGoalGentle": "Gentle",
+  "onboardingGoalSteady": "Steady",
+  "onboardingGoalTitle": "How much time feels right each day?",
+  "onboardingHaveAccount": "I already have an account",
+  "onboardingLanguageArabicPrompt": "اختر لغتك",
+  "onboardingLanguageEnglishPrompt": "Choose your language",
+  "onboardingLanguageHint": "You can change this any time in settings.",
+  "onboardingNewMuslimBody": "First steps in faith and practice, one at a time.",
+  "onboardingNewMuslimTitle": "I recently embraced Islam",
+  "onboardingPerDay": "{count, plural, other{{countText} min a day}}",
+  "onboardingPreferNotToSay": "Prefer not to say",
+  "onboardingPrivacyBody": "Learn privately if you prefer. Some people keep their journey to themselves — that’s completely fine.",
+  "onboardingPrivacyTitle": "Your journey stays yours",
+  "onboardingPrivateBody": "Hide your activity from leagues and friends.",
+  "onboardingPrivateTitle": "Private profile",
+  "onboardingReadyExplorer": "We’ll begin with the big questions, then see how Muslims live their faith day to day.",
+  "onboardingReadyNewMuslim": "We’ll begin with your first steps — the testimony of faith, then prayer — gently, one at a time.",
+  "onboardingReadyTitle": "Your path is ready",
+  "onboardingReminderTime": "Reminder time: {time}",
+  "onboardingReminderTitle": "Reminder time",
+  "onboardingSkipCuriosity": "Skip for now",
+  "onboardingStartMyJourney": "Start my journey",
+  "onboardingStepOf": "Step {current} of {total}",
+  "onboardingSubmitError": "We couldn’t start your journey. Your choices are kept.",
+  "onboardingWelcomeBody": "Short lessons, authentic sources and a friendly guide — at your own pace.",
+  "onboardingWelcomeExplorer": "Welcome. Ask anything — you’re among friends here.",
+  "onboardingWelcomeNewMuslim": "Welcome, and congratulations. We’ll walk this together, one step at a time.",
+  "onboardingWelcomeTitle": "A small light for a big journey",
+  "onboardingWhoBubble": "There are no wrong answers. I’ll shape the path around you.",
+  "onboardingWhoTitle": "What brings you to Qabas?",
+  "profileAchievementsTitle": "Achievements",
+  "profileEditName": "Your name",
+  "profileJoined": "Joined {month}",
+  "profileLeagueRank": "Rank {rank}",
+  "profileLearnerName": "Learner",
+  "profileNameValidation": "Use 2–24 characters.",
+  "profileNewBadge": "New badge!",
+  "profileNoAchievements": "Your first badge is waiting ahead.",
+  "profileNoLeague": "No league yet",
+  "profileNoWords": "Your words will appear here as you learn.",
+  "profilePrivateBadge": "Private",
+  "profileProfileTitle": "Profile",
+  "profileSave": "Save",
+  "profileSettings": "Settings",
+  "profileStatBadges": "Badges",
+  "profileStatLeague": "League",
+  "profileStatLessons": "Lessons",
+  "profileStatStreak": "Day streak",
+  "profileStatTotal": "Total embers",
+  "profileStatWords": "Words mastered",
+  "profileStatistics": "Statistics",
+  "profileUnlockedOf": "{current} of {total} unlocked",
+  "raqeebAbstained": "Referred or left unanswered",
+  "raqeebAcceptable": "Acceptable",
+  "raqeebAlternative": "Related authentic text",
+  "raqeebAskAnything": "Ask anything…",
+  "raqeebAskSpecialist": "Ask a specialist privately",
+  "raqeebAttachDoc": "A document",
+  "raqeebAttachDocBody": "Raqeeb reads it and answers with sources",
+  "raqeebAttachPhoto": "A photo",
+  "raqeebAttachPhotoBody": "A sign, a page, a post you saw",
+  "raqeebAttachTitle": "Ask with…",
+  "raqeebAttachVoice": "Your voice",
+  "raqeebAttachVoiceBody": "Just ask out loud",
+  "raqeebAuthentic": "Authentic",
+  "raqeebAuthenticityCheck": "Authenticity check",
+  "raqeebExactText": "Exact text",
+  "raqeebFabricated": "Fabricated",
+  "raqeebFailed": "I couldn’t finish this answer. Let’s try again.",
+  "raqeebFoundIn": "Found in",
+  "raqeebGrade": "Grade",
+  "raqeebGradeOther": "Other grading",
+  "raqeebGrader": "Graded by",
+  "raqeebHistory": "Conversations",
+  "raqeebLearnMore": "Learn more",
+  "raqeebNeedsSpecialist": "Needs a specialist",
+  "raqeebNewChat": "New question",
+  "raqeebNoHistory": "Your conversations will appear here",
+  "raqeebNotFound": "Not found in the available sources",
+  "raqeebNotSent": "Not sent",
+  "raqeebOpen": "Open",
+  "raqeebProcessing": "Raqeeb is still answering…",
+  "raqeebPrototypeAnswer": "In this prototype I answer a few sample questions — try one of the suggestions. In the full app, I answer from reviewed sources and show where every answer comes from.",
+  "raqeebQuranExact": "Matches the Quran",
+  "raqeebQuranInexact": "The verse text is inexact",
+  "raqeebRaqeebName": "Raqeeb",
+  "raqeebRaqeebTagline": "Your trusted guide to reliable answers",
+  "raqeebRaqeebThinking": "Checking the sources…",
+  "raqeebRaqeebTrust1": "Answers from reviewed, reliable sources",
+  "raqeebRaqeebTrust2": "Shows where every answer comes from",
+  "raqeebRaqeebTrust3": "Checks whether quotes and hadiths are authentic",
+  "raqeebRaqeebTrust4": "Refers you to a specialist when needed",
+  "raqeebRateDown": "This answer could be clearer",
+  "raqeebRateFailed": "We couldn’t save your rating. Try again.",
+  "raqeebRateLimited": "You’ve asked a lot in a short time. Let’s pause before trying again.",
+  "raqeebRateUp": "This answer helped",
+  "raqeebSending": "Sending…",
+  "raqeebSources": "Sources",
+  "raqeebSpecialistSent": "Sent privately — you’ll be notified when they reply.",
+  "raqeebSpecialistTitle": "A specialist can help",
+  "raqeebStageAdapting": "Making the answer clearer for you…",
+  "raqeebStageClassifying": "Understanding your question…",
+  "raqeebStageReading": "Reading what you sent…",
+  "raqeebStageReceived": "Receiving your question…",
+  "raqeebStageRetrieving": "Looking through the sources…",
+  "raqeebStageVerifying": "Checking the sources…",
+  "raqeebStageWriting": "Writing your answer…",
+  "raqeebSuggestionArabic": "Can I pray before I know Arabic?",
+  "raqeebSuggestionHadith": "Is this hadith authentic? “The five prayers are like a river at your door.”",
+  "raqeebSuggestionIslam": "What does the word “Islam” mean?",
+  "raqeebSuggestionPrayer": "Why do Muslims pray five times a day?",
+  "raqeebTextLimit": "Keep your question within 2,000 characters.",
+  "raqeebTextOnly": "Your text question",
+  "raqeebTextOnlyPhase": "You can ask a written question here. Voice, photos and documents will be available later.",
+  "raqeebTimeout": "This answer is taking longer than expected. You can try again.",
+  "raqeebTruncated": "Only part of the document was read",
+  "raqeebTryAsking": "Try asking",
+  "raqeebUnderstood": "What I understood from your message",
+  "raqeebWeak": "Weak",
+  "recitationAgain": "Record again",
+  "recitationBusy": "Recitation checking is busy. Try again or skip.",
+  "recitationChecking": "Checking…",
+  "recitationContinue": "Continue with this reading",
+  "recitationCorrectWord": "Correct",
+  "recitationDeveloperMissingExtra": "Missing and extra words",
+  "recitationDeveloperOutcome": "Synthetic recitation outcome (development only)",
+  "recitationDeveloperUnclear": "Unclear recording",
+  "recitationExtraWord": "An extra word",
+  "recitationMissingWord": "Missing",
+  "recitationRetry": "Try checking again",
+  "recitationSubstitutedWord": "Try this word again",
+  "recitationWordFeedback": "{word}: {result}",
+  "reviewAgain": "Again",
+  "reviewCardsReady": "{countText} cards are ready",
+  "reviewEasy": "Easy",
+  "reviewGood": "Good",
+  "reviewHard": "Hard",
+  "reviewHowWell": "How well did you remember?",
+  "reviewIntervals1": "1 min",
+  "reviewIntervals2": "1 day",
+  "reviewIntervals3": "3 days",
+  "reviewIntervals4": "1 week",
+  "reviewReviewDone": "Review complete",
+  "reviewReviewDoneBody": "These will come back right before you’d forget them.",
+  "reviewReviewSubtitle": "Small, well-timed reviews help what you learn stay with you.",
+  "reviewReviewTiming": "Timed by how well you remember each one",
+  "reviewReviewTitle": "Review",
+  "reviewStartReview": "Start 60-second review",
+  "reviewTapToFlip": "Tap the card to see the answer",
+  "reviewWordsMasteredOf": "{mastered} of {total} mastered",
+  "reviewYourWords": "Your words",
+  "reviewerAbstention": "Correct abstention (%)",
+  "reviewerAccuracy": "Accuracy (%)",
+  "reviewerAccurate": "Which lesson is more accurate?",
+  "reviewerActivated": "Misconceptions activated",
+  "reviewerAdd": "Add",
+  "reviewerAfter": "After",
+  "reviewerAllStatuses": "All statuses",
+  "reviewerAnswerKey": "Answer key",
+  "reviewerApprove": "Approve",
+  "reviewerArc": "Lesson arc",
+  "reviewerArcMap": "Arc map",
+  "reviewerBasis": "Claim basis",
+  "reviewerBefore": "Before",
+  "reviewerBenchmark": "Raqeeb benchmark",
+  "reviewerBlindEmpty": "No blind-test pairs remain.",
+  "reviewerBlindTest": "Blind test",
+  "reviewerBlockPosition": "Block {current} of {total}",
+  "reviewerBlocker": "Blocker",
+  "reviewerBlockers": "Approval is unavailable while blockers remain.",
+  "reviewerBrief": "Lesson brief",
+  "reviewerClearer": "Which lesson is clearer?",
+  "reviewerCommaIds": "Comma-separated identifiers",
+  "reviewerCompiled": "Built-in · compiled",
+  "reviewerConsole": "Reviewer console",
+  "reviewerContentBudget": "Content blocks",
+  "reviewerCreate": "Create run",
+  "reviewerDepth": "Depth profile",
+  "reviewerDone": "Done",
+  "reviewerEditAr": "Replacement Arabic text",
+  "reviewerEditEn": "Replacement English text",
+  "reviewerEditPlan": "Edit plan",
+  "reviewerEditSentence": "Edit sentence",
+  "reviewerEditsSaved": "Edits saved for approval.",
+  "reviewerEmail": "Email",
+  "reviewerEvidence": "Sentences and evidence",
+  "reviewerExerciseBudget": "Graded exercises (2–6)",
+  "reviewerExercises": "Exercises and answer keys",
+  "reviewerExperience": "Learner experience",
+  "reviewerFactory": "Lesson factory",
+  "reviewerGate1": "Gate 1 · Plan review",
+  "reviewerGate2": "Gate 2 · Draft review",
+  "reviewerGenerationMinutes": "Average generation (minutes)",
+  "reviewerHandwritten": "Which lesson do you think was written by a person?",
+  "reviewerIdentified": "Handwritten identified (%)",
+  "reviewerIdsPair": "{left} → {right}",
+  "reviewerInfo": "Information",
+  "reviewerInteractive": "Learner acts",
+  "reviewerIntroduced": "Introduced concepts",
+  "reviewerInvalidPlan": "Check bilingual fields, objectives, concepts, arc and budgets before approval.",
+  "reviewerLearning": "Learning",
+  "reviewerLessonA": "Lesson A",
+  "reviewerLessonB": "Lesson B",
+  "reviewerLessonType": "Lesson type",
+  "reviewerLockout": "Too many attempts. Please wait before trying again.",
+  "reviewerMetrics": "Metrics",
+  "reviewerMinutes": "Estimated minutes",
+  "reviewerMisconceptions": "Target misconceptions",
+  "reviewerMore": "Load more",
+  "reviewerNewRun": "New run",
+  "reviewerNoIssues": "No QA findings.",
+  "reviewerNoKey": "Self-rated or checked recitation; no stored answer key.",
+  "reviewerNoMetrics": "No measurements are available.",
+  "reviewerNoRuns": "No runs match this filter.",
+  "reviewerNotMeasured": "Not measured yet",
+  "reviewerNotSupporting": "Does not support this claim",
+  "reviewerNote": "Review note",
+  "reviewerObjectives": "Objectives (1–3)",
+  "reviewerOpenRun": "Open run",
+  "reviewerOutcome": "Primary learning outcome",
+  "reviewerPairedEnglish": "An Arabic edit requires the matching English edit for this sentence and track.",
+  "reviewerParticipants": "Participants",
+  "reviewerParticipantsValue": "Participants: {value}",
+  "reviewerPassword": "Password",
+  "reviewerPending": "Pending",
+  "reviewerPercentValue": "{label} · {value}%",
+  "reviewerPercentageNumber": "{value}%",
+  "reviewerPlaceholder": "Placeholder / requires review",
+  "reviewerPlan": "Lesson plan",
+  "reviewerPosition": "Position in unit (from 0)",
+  "reviewerPrePost": "Before / after assessment",
+  "reviewerPreferred": "Generated preferred or same (%)",
+  "reviewerPrerequisites": "Prerequisite concepts",
+  "reviewerPreview": "Learner preview",
+  "reviewerPreviewEmpty": "No preview blocks are available.",
+  "reviewerPublished": "Lessons published",
+  "reviewerQA": "QA report",
+  "reviewerQuestion": "Central learner question",
+  "reviewerRationale": "Rationale",
+  "reviewerReasonRequired": "Add a review note explaining the requested changes.",
+  "reviewerReasoning": "Reasoning tools and justifications",
+  "reviewerReconfirm": "I have reviewed the latest version",
+  "reviewerReferral": "Correct referral (%)",
+  "reviewerRegenerate": "Regenerate image",
+  "reviewerRegenerationAccepted": "Regeneration accepted. The placeholder remains until an audited asset is available.",
+  "reviewerReject": "Reject",
+  "reviewerRemove": "Remove",
+  "reviewerRemoveExercise": "Remove on approval",
+  "reviewerRequestChanges": "Request changes",
+  "reviewerResolutionRate": "Resolution rate (%)",
+  "reviewerResolved": "Misconceptions resolved",
+  "reviewerResponses": "Blind-test responses",
+  "reviewerReveal": "Continue preview",
+  "reviewerReviewMinutes": "Average review (minutes)",
+  "reviewerRole": "Sentence role",
+  "reviewerRuns": "Runs",
+  "reviewerSame": "Same",
+  "reviewerSaveEdits": "Save paired edits",
+  "reviewerSavePlan": "Save plan",
+  "reviewerSelectRun": "Select a run to review its plan or draft.",
+  "reviewerSignIn": "Reviewer sign in",
+  "reviewerSignOut": "Sign out",
+  "reviewerSkipped": "Skipped",
+  "reviewerStage": "Stage",
+  "reviewerStale": "This review changed. The latest run has been loaded. Review it again before submitting a decision.",
+  "reviewerStandalone": "Eligible for Discover",
+  "reviewerStatusStage": "{status} · {stage}",
+  "reviewerSubmit": "Submit review",
+  "reviewerSupports": "Supporting evidence",
+  "reviewerTargets": "Guidance: 6–10 minutes; foundational lessons about 8–10. Usually 3–5 exercises (story: 2–4). Completeness takes priority; never pad or split by duration alone.",
+  "reviewerTerms": "New terms",
+  "reviewerTitle": "Title",
+  "reviewerUnderstandings": "Supporting understandings",
+  "reviewerUnitId": "Unit ID",
+  "reviewerUnitsCompleted": "Units completed",
+  "reviewerUnitsStarted": "Units started",
+  "reviewerUnsupported": "Unsupported claims (%)",
+  "reviewerUnsure": "Unsure",
+  "reviewerValidation": "Validation findings",
+  "reviewerValueAddresseeSpecific": "Addressee specific",
+  "reviewerValueAwaitingGate1": "Awaiting Gate 1",
+  "reviewerValueAwaitingGate2": "Awaiting Gate 2",
+  "reviewerValueBaselineLlm": "Baseline model",
+  "reviewerValueBeliefGrading": "Belief grading",
+  "reviewerValueBeyondSource": "Beyond the source",
+  "reviewerValueCausalReasoning": "Causal reasoning",
+  "reviewerValueCircularReasoning": "Circular reasoning",
+  "reviewerValueClaim": "Claim",
+  "reviewerValueComparison": "Comparison",
+  "reviewerValueConcept": "Concept",
+  "reviewerValueConsistency": "Consistency",
+  "reviewerValueContextDependent": "Context dependent",
+  "reviewerValueDecompose": "Decompose",
+  "reviewerValueDemonstration": "Demonstration",
+  "reviewerValueDifferingOpinions": "Differing opinions",
+  "reviewerValueDone": "Done",
+  "reviewerValueDoubtOrDeepCreed": "Doubt or deep creed",
+  "reviewerValueDropped": "Dropped",
+  "reviewerValueEvidence": "Evidence",
+  "reviewerValueExact": "Exact fit",
+  "reviewerValueExample": "Example",
+  "reviewerValueExercises": "Exercises",
+  "reviewerValueExplanation": "Explanation",
+  "reviewerValueExplorer": "Explorer",
+  "reviewerValueFailed": "Failed",
+  "reviewerValueFatwaLike": "Fatwa-like",
+  "reviewerValueFocused": "Focused",
+  "reviewerValueFoundational": "Foundational",
+  "reviewerValueFraming": "Framing",
+  "reviewerValueGeneralKnowledge": "General knowledge",
+  "reviewerValueGeneralisedFromSpecific": "Generalised from a specific case",
+  "reviewerValueHistoricalEvidence": "Historical evidence",
+  "reviewerValueHypothetical": "Hypothetical",
+  "reviewerValueImagePolicy": "Image policy",
+  "reviewerValueInference": "Inference",
+  "reviewerValueInstruction": "Instruction",
+  "reviewerValueLocalization": "Localization",
+  "reviewerValueLocalize": "Localize",
+  "reviewerValueNeedsTafsir": "Needs tafsir",
+  "reviewerValueNewMuslim": "New Muslim",
+  "reviewerValueObservation": "Observation",
+  "reviewerValueOutOfScope": "Out of scope",
+  "reviewerValueOversimplified": "Oversimplified",
+  "reviewerValuePartial": "Partial fit",
+  "reviewerValuePedagogy": "Pedagogy",
+  "reviewerValuePending": "Pending",
+  "reviewerValuePersonalFatwa": "Personal fatwa",
+  "reviewerValuePlan": "Plan",
+  "reviewerValuePractice": "Practice",
+  "reviewerValuePrediction": "Prediction",
+  "reviewerValuePublish": "Publish",
+  "reviewerValuePublished": "Published",
+  "reviewerValueQa": "Quality assurance",
+  "reviewerValueQuestion": "Question",
+  "reviewerValueRaqeeb": "Raqeeb",
+  "reviewerValueReadingLevel": "Reading level",
+  "reviewerValueReasoning": "Reasoning",
+  "reviewerValueReflection": "Reflection",
+  "reviewerValueRejected": "Rejected",
+  "reviewerValueRetrieve": "Retrieve",
+  "reviewerValueRunning": "Running",
+  "reviewerValueScenario": "Scenario",
+  "reviewerValueSceneAuthor": "Scene authoring",
+  "reviewerValueSceneRender": "Scene rendering",
+  "reviewerValueScholarlyDisagreement": "Scholarly disagreement",
+  "reviewerValueScholarlyReview": "Scholarly review",
+  "reviewerValueSensitive": "Sensitive",
+  "reviewerValueSensitiveHuman": "Sensitive personal question",
+  "reviewerValueSingleOpinionAsConsensus": "One opinion presented as consensus",
+  "reviewerValueSkipped": "Skipped",
+  "reviewerValueSource": "Source",
+  "reviewerValueStandard": "Standard",
+  "reviewerValueStory": "Story",
+  "reviewerValueStretched": "Stretched",
+  "reviewerValueSupported": "Supported",
+  "reviewerValueTakeaway": "Takeaway",
+  "reviewerValueTestimony": "Testimony",
+  "reviewerValueTextExplanation": "Text explanation",
+  "reviewerValueTranslationSensitive": "Translation sensitive",
+  "reviewerValueUnknown": "Unknown",
+  "reviewerValueUnrelated": "Unrelated",
+  "reviewerValueUnsupportedSentence": "Unsupported sentence",
+  "reviewerValueValidation": "Validation",
+  "reviewerValueVerification": "Verification",
+  "reviewerValueVerify": "Verify",
+  "reviewerValueVisuals": "Visuals",
+  "reviewerValueWrite": "Write",
+  "reviewerVisuals": "Visuals",
+  "reviewerWarning": "Warning",
+  "sessionAllCaughtUp": "All caught up",
+  "sessionAnswerReview": "Your answers",
+  "sessionApplying": "Applying",
+  "sessionBackToJourney": "Back to my journey",
+  "sessionBegin": "Begin",
+  "sessionBlank": "Gap {number}",
+  "sessionChooseReason": "Choose the reason",
+  "sessionCombo": "{count} in a row",
+  "sessionComesBack": "Coming back in review",
+  "sessionCompanionIntro": "I’ll walk with you. Tap any underlined word if it’s new.",
+  "sessionCorrectAnswerIs": "Correct answer:",
+  "sessionExercisePlaceholderBody": "Exercises will be interactive in the next phase. Continue to preview the lesson content.",
+  "sessionExercisePlaceholderTitle": "Exercise preview",
+  "sessionExercisesCount": "{countText} activities",
+  "sessionFalseLabel": "False",
+  "sessionFillBlank": "Fill the gaps",
+  "sessionFindOut": "Let’s find out",
+  "sessionGentle1": "Not quite — and that’s okay",
+  "sessionGentle2": "So close",
+  "sessionGentle3": "Good try",
+  "sessionIllTry": "I’ll try it",
+  "sessionInTwoDays": "In 2 days",
+  "sessionKeepLearning": "Keep learning",
+  "sessionKindChoose": "Choose",
+  "sessionKindDay": "Your day",
+  "sessionKindDiscover": "Discover",
+  "sessionKindFix": "Correct the idea",
+  "sessionKindGuess": "Your guess",
+  "sessionKindMatch": "Match",
+  "sessionKindOrder": "Put in order",
+  "sessionKindRealLife": "Real life",
+  "sessionKindRecite": "Recite",
+  "sessionKindSort": "Sort",
+  "sessionKindTrueFalse": "True or false",
+  "sessionLeave": "Leave",
+  "sessionLessonComplete": "Lesson complete!",
+  "sessionLessonCompleteSub": "Another step on your path — taken calmly and well.",
+  "sessionLessonPosition": "Unit {unit} · Lesson {lesson}",
+  "sessionListenReciter": "Listen to the reciter",
+  "sessionListening": "Listening…",
+  "sessionMapPin": "Place {number}",
+  "sessionMasteryNote": "Progress in Qabas follows mastery, not just finishing. Remembering is measured in review sessions.",
+  "sessionMeaning": "Meaning",
+  "sessionMistakenIdea": "A common misconception",
+  "sessionNextOnPath": "Next on your path: {title}",
+  "sessionNextUnlocked": "Next on your path: {title}",
+  "sessionNiceThinking": "Nice thinking!",
+  "sessionOriginTitle": "Where did this story come from?",
+  "sessionPairHint": "Tap a word, then its meaning. Tap a pair to change it.",
+  "sessionPerfectBonus": "Perfect lesson bonus",
+  "sessionPlaying": "Playing…",
+  "sessionPraise1": "Well done!",
+  "sessionPraise2": "Exactly right",
+  "sessionPraise3": "Beautiful!",
+  "sessionPraise4": "That’s it!",
+  "sessionPraise5": "Spot on",
+  "sessionPretestThanks": "Thank you for sharing what you know",
+  "sessionPreviewEndBody": "You’ve reached the end of the content preview. Exercises and lesson completion are coming in the next phases.",
+  "sessionPreviewEndTitle": "Content preview complete",
+  "sessionProgress": "{percent}% complete",
+  "sessionQuickReview": "Quick review",
+  "sessionQuitBody": "Your progress in this lesson won’t be saved. You can come back any time.",
+  "sessionQuitTitle": "Leave this lesson?",
+  "sessionReadLesson": "Read lesson",
+  "sessionReaderEmpty": "This lesson has no reading content yet.",
+  "sessionReciteBody": "The verse that tells us prayer has set times.",
+  "sessionReciteGreat": "Beautifully read",
+  "sessionReciteTip": "One gentle tip: blend the “-an” of kitāban into the m of mawqūtā — a soft nasal hum.",
+  "sessionReciteTitle": "Listen, then read it aloud",
+  "sessionRecordingUnavailable": "Recording isn’t available yet",
+  "sessionRemediation": "Let’s clarify this idea",
+  "sessionRemembering": "Remembering",
+  "sessionReport": "Report",
+  "sessionResultPendingBody": "The celebration screen is coming soon. You can return to your journey.",
+  "sessionResultPendingTitle": "Your session is saved",
+  "sessionRetryBody": "Let’s revisit the ideas you’re still practising.",
+  "sessionRetryTitle": "A chance to try again",
+  "sessionReviewedBySpecialist": "Reviewed by an Islamic-studies specialist",
+  "sessionSalahPreview": "Salah preview",
+  "sessionSecondsRemaining": "{seconds} seconds remaining",
+  "sessionSelectAnswer": "Choose an answer",
+  "sessionShowAll": "Show all",
+  "sessionShowMore": "Next idea",
+  "sessionSimulatedNote": "Prototype: audio and speech feedback are simulated.",
+  "sessionSituation": "A real moment",
+  "sessionSkipRecite": "I can’t speak now",
+  "sessionSkipped": "Skipped",
+  "sessionSoon": "In review",
+  "sessionSourcesLine": "{countText} authenticated sources",
+  "sessionSourcesTitle": "Sources for this lesson",
+  "sessionSpotError": "Find the mistaken part",
+  "sessionStatAccuracy": "Accuracy",
+  "sessionStatEmbers": "Embers",
+  "sessionStatTime": "Time",
+  "sessionSubmitError": "Your answer is kept. Please try again.",
+  "sessionTapInOrder": "Tap them in order.",
+  "sessionTapTheScene": "Tap the right place in the picture.",
+  "sessionTapThenPlace": "Tap a phrase, then the group it belongs to.",
+  "sessionTapThenSlot": "Tap a prayer, then its moment in the day.",
+  "sessionTapToContinue": "Tap to continue",
+  "sessionTestPassed": "Unit test passed",
+  "sessionTestTryAgain": "Keep building your understanding",
+  "sessionTheStory": "The story",
+  "sessionThenAWeek": "Then in a week",
+  "sessionThinkFirst": "Think about it for a moment — there’s no wrong answer here.",
+  "sessionTodaysChallenge": "Today’s small challenge",
+  "sessionTomorrowWeAsk": "Tomorrow we’ll ask",
+  "sessionTransliteration": "Transliteration",
+  "sessionTrueLabel": "True",
+  "sessionUnderstanding": "Understanding",
+  "sessionUnit0ContentPreview": "Unit 0 content preview",
+  "sessionUpdateRequired": "Update the app to continue",
+  "sessionVerseReference": "Surah {surah} · Ayah {ayah}",
+  "sessionWhichEvidence": "Choose the evidence",
+  "sessionWhyLabel": "Why",
+  "sessionYouWillLearn": "You’ll learn",
+  "sessionYourAnswer": "Your answer",
+  "sessionYourMastery": "Your mastery",
+  "sessionYourTurn": "Your turn — tap and read aloud",
+  "settingsAboutQabas": "About Qabas",
+  "settingsArabic": "العربية",
+  "settingsCharacters": "Characters",
+  "settingsContentNote": "About this content",
+  "settingsContentNoteBody": "Qabas content is drawn from verified sources. It is pending review by a specialist in Islamic studies before publication.",
+  "settingsDailyGoalSetting": "Daily goal",
+  "settingsDeleteAccount": "Delete account",
+  "settingsDeleteAccountBody": "Delete your account and learning progress? This cannot be undone. Your data will be removed within 30 days.",
+  "settingsDemoReset": "Demo progress reset",
+  "settingsDiscreetReminders": "Discreet reminders",
+  "settingsEnglish": "English",
+  "settingsHapticsLabel": "Haptics",
+  "settingsLanguage": "Language",
+  "settingsLearnerPath": "Learning path",
+  "settingsPrivateProfileSetting": "Private profile",
+  "settingsReduceMotion": "Reduce motion",
+  "settingsReduceMotionBody": "Calmer screens, no jumps or particles",
+  "settingsReminders": "Reminder time",
+  "settingsReplayOnboarding": "Replay onboarding",
+  "settingsResetDemo": "Reset demo progress",
+  "settingsResetDemoBody": "Back to a 3-day streak with the Prayer lesson waiting",
+  "settingsSaveFailed": "We couldn’t save that change. Please try again.",
+  "settingsSectionAbout": "About",
+  "settingsSectionAccount": "You",
+  "settingsSectionDemo": "Prototype",
+  "settingsSectionExperience": "Experience",
+  "settingsSectionLearning": "Learning",
+  "settingsSectionPrivacy": "Privacy",
+  "settingsSoundEffects": "Sound effects",
+  "streakDayStreakLabel": "day streak",
+  "streakKeepFlameWarm": "Learn a little today to keep your flame warm.",
+  "streakLastFiveWeeks": "Your last five weeks",
+  "streakRestDays": "Rest days",
+  "streakRestDaysBody": "Life happens. One rest day a week keeps your flame warm — no guilt, no lost progress.",
+  "streakStreakBody": "You lit today’s flame. A little light every day becomes a path.",
+  "streakStreakKeep": "Keep the flame",
+  "streakStreakTitle": "{count, plural, other{{countText}-day streak!}}",
+  "streakToday": "Today",
+  "unitGuideEmpty": "There is no guide content yet."
+}

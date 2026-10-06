@@ -1,0 +1,48 @@
+{
+  "@@locale": "en",
+  "@streakDayStreakLabel": {
+    "description": "Prototype interface copy: streak / dayStreakLabel. Preserve the original warm wording."
+  },
+  "@streakKeepFlameWarm": {
+    "description": "Prototype interface copy: streak / keepFlameWarm. Preserve the original warm wording."
+  },
+  "@streakLastFiveWeeks": {
+    "description": "Prototype interface copy: streak / lastFiveWeeks. Preserve the original warm wording."
+  },
+  "@streakRestDays": {
+    "description": "Prototype interface copy: streak / restDays. Preserve the original warm wording."
+  },
+  "@streakRestDaysBody": {
+    "description": "Prototype interface copy: streak / restDaysBody. Preserve the original warm wording."
+  },
+  "@streakStreakBody": {
+    "description": "Prototype interface copy: streak / streakBody. Preserve the original warm wording."
+  },
+  "@streakStreakKeep": {
+    "description": "Prototype interface copy: streak / streakKeep. Preserve the original warm wording."
+  },
+  "@streakStreakTitle": {
+    "description": "Prototype interface copy: streak / streakTitle. Preserve the original warm wording.",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "streakDayStreakLabel": "day streak",
+  "streakKeepFlameWarm": "Learn a little today to keep your flame warm.",
+  "streakLastFiveWeeks": "Your last five weeks",
+  "streakRestDays": "Rest days",
+  "streakRestDaysBody": "Life happens. One rest day a week keeps your flame warm — no guilt, no lost progress.",
+  "streakStreakBody": "You lit today’s flame. A little light every day becomes a path.",
+  "streakStreakKeep": "Keep the flame",
+  "streakStreakTitle": "{count, plural, other{{countText}-day streak!}}",
+  "streakToday": "Today",
+  "@streakToday": {
+    "description": "Accessible label for the current day in the streak week."
+  }
+}

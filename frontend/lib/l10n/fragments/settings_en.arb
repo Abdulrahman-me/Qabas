@@ -1,0 +1,117 @@
+{
+  "@@locale": "en",
+  "@settingsAboutQabas": {
+    "description": "Prototype interface copy: settings / aboutQabas. Preserve the original warm wording."
+  },
+  "@settingsContentNote": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "@settingsContentNoteBody": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "@settingsDailyGoalSetting": {
+    "description": "Prototype interface copy: settings / dailyGoalSetting. Preserve the original warm wording."
+  },
+  "@settingsDemoReset": {
+    "description": "Prototype interface copy: settings / demoReset. Preserve the original warm wording."
+  },
+  "@settingsDiscreetReminders": {
+    "description": "Prototype interface copy: settings / discreetReminders. Preserve the original warm wording."
+  },
+  "@settingsHapticsLabel": {
+    "description": "Prototype interface copy: settings / hapticsLabel. Preserve the original warm wording."
+  },
+  "@settingsLanguage": {
+    "description": "Prototype interface copy: settings / language. Preserve the original warm wording."
+  },
+  "@settingsLearnerPath": {
+    "description": "Prototype interface copy: settings / learnerPath. Preserve the original warm wording."
+  },
+  "@settingsPrivateProfileSetting": {
+    "description": "Prototype interface copy: settings / privateProfileSetting. Preserve the original warm wording."
+  },
+  "@settingsReduceMotion": {
+    "description": "Prototype interface copy: settings / reduceMotion. Preserve the original warm wording."
+  },
+  "@settingsReduceMotionBody": {
+    "description": "Prototype interface copy: settings / reduceMotionBody. Preserve the original warm wording."
+  },
+  "@settingsReminders": {
+    "description": "Prototype interface copy: settings / reminders. Preserve the original warm wording."
+  },
+  "@settingsReplayOnboarding": {
+    "description": "Prototype interface copy: settings / replayOnboarding. Preserve the original warm wording."
+  },
+  "@settingsResetDemo": {
+    "description": "Prototype interface copy: settings / resetDemo. Preserve the original warm wording."
+  },
+  "@settingsResetDemoBody": {
+    "description": "Prototype interface copy: settings / resetDemoBody. Preserve the original warm wording."
+  },
+  "@settingsSectionAbout": {
+    "description": "Prototype interface copy: settings / sectionAbout. Preserve the original warm wording."
+  },
+  "@settingsSectionAccount": {
+    "description": "Prototype interface copy: settings / sectionAccount. Preserve the original warm wording."
+  },
+  "@settingsSectionDemo": {
+    "description": "Prototype interface copy: settings / sectionDemo. Preserve the original warm wording."
+  },
+  "@settingsSectionExperience": {
+    "description": "Prototype interface copy: settings / sectionExperience. Preserve the original warm wording."
+  },
+  "@settingsSectionLearning": {
+    "description": "Prototype interface copy: settings / sectionLearning. Preserve the original warm wording."
+  },
+  "@settingsSectionPrivacy": {
+    "description": "Prototype interface copy: settings / sectionPrivacy. Preserve the original warm wording."
+  },
+  "@settingsSoundEffects": {
+    "description": "Prototype interface copy: settings / soundEffects. Preserve the original warm wording."
+  },
+  "settingsAboutQabas": "About Qabas",
+  "settingsContentNote": "About this content",
+  "settingsContentNoteBody": "Qabas content is drawn from verified sources. It is pending review by a specialist in Islamic studies before publication.",
+  "settingsDailyGoalSetting": "Daily goal",
+  "settingsDemoReset": "Demo progress reset",
+  "settingsDiscreetReminders": "Discreet reminders",
+  "settingsHapticsLabel": "Haptics",
+  "settingsLanguage": "Language",
+  "settingsLearnerPath": "Learning path",
+  "settingsPrivateProfileSetting": "Private profile",
+  "settingsReduceMotion": "Reduce motion",
+  "settingsReduceMotionBody": "Calmer screens, no jumps or particles",
+  "settingsReminders": "Reminder time",
+  "settingsReplayOnboarding": "Replay onboarding",
+  "settingsResetDemo": "Reset demo progress",
+  "settingsResetDemoBody": "Back to a 3-day streak with the Prayer lesson waiting",
+  "settingsSectionAbout": "About",
+  "settingsSectionAccount": "You",
+  "settingsSectionDemo": "Prototype",
+  "settingsSectionExperience": "Experience",
+  "settingsSectionLearning": "Learning",
+  "settingsSectionPrivacy": "Privacy",
+  "settingsSoundEffects": "Sound effects",
+  "settingsEnglish": "English",
+  "@settingsEnglish": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "settingsArabic": "العربية",
+  "@settingsArabic": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "settingsCharacters": "Characters",
+  "@settingsCharacters": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  },
+  "settingsSaveFailed": "We couldn’t save that change. Please try again.",
+  "@settingsSaveFailed": {
+    "description": "Phase 10 settings interface copy.",
+    "x-review": true
+  }
+}

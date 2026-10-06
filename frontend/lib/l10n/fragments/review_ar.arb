@@ -1,0 +1,92 @@
+{
+  "@@locale": "ar",
+  "@reviewAgain": {
+    "description": "Prototype interface copy: review / again. Preserve the original warm wording."
+  },
+  "@reviewCardsReady": {
+    "description": "Prototype interface copy: review / cardsReady. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@reviewEasy": {
+    "description": "Prototype interface copy: review / easy. Preserve the original warm wording."
+  },
+  "@reviewGood": {
+    "description": "Prototype interface copy: review / good. Preserve the original warm wording."
+  },
+  "@reviewHard": {
+    "description": "Prototype interface copy: review / hard. Preserve the original warm wording."
+  },
+  "@reviewHowWell": {
+    "description": "Prototype interface copy: review / howWell. Preserve the original warm wording."
+  },
+  "@reviewIntervals1": {
+    "description": "Prototype interface copy: review / intervals1. Preserve the original warm wording."
+  },
+  "@reviewIntervals2": {
+    "description": "Prototype interface copy: review / intervals2. Preserve the original warm wording."
+  },
+  "@reviewIntervals3": {
+    "description": "Prototype interface copy: review / intervals3. Preserve the original warm wording."
+  },
+  "@reviewIntervals4": {
+    "description": "Prototype interface copy: review / intervals4. Preserve the original warm wording."
+  },
+  "@reviewReviewDone": {
+    "description": "Prototype interface copy: review / reviewDone. Preserve the original warm wording."
+  },
+  "@reviewReviewDoneBody": {
+    "description": "Prototype interface copy: review / reviewDoneBody. Preserve the original warm wording."
+  },
+  "@reviewReviewSubtitle": {
+    "description": "Prototype interface copy: review / reviewSubtitle. Preserve the original warm wording."
+  },
+  "@reviewReviewTiming": {
+    "description": "Prototype interface copy: review / reviewTiming. Preserve the original warm wording."
+  },
+  "@reviewReviewTitle": {
+    "description": "Prototype interface copy: review / reviewTitle. Preserve the original warm wording."
+  },
+  "@reviewStartReview": {
+    "description": "Prototype interface copy: review / startReview. Preserve the original warm wording."
+  },
+  "@reviewTapToFlip": {
+    "description": "Prototype interface copy: review / tapToFlip. Preserve the original warm wording."
+  },
+  "@reviewWordsMasteredOf": {
+    "description": "Prototype interface copy: review / wordsMasteredOf. Preserve the original warm wording.",
+    "placeholders": {
+      "mastered": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@reviewYourWords": {
+    "description": "Prototype interface copy: review / yourWords. Preserve the original warm wording."
+  },
+  "reviewAgain": "مجددًا",
+  "reviewCardsReady": "{countText} بطاقات جاهزة",
+  "reviewEasy": "سهل",
+  "reviewGood": "جيد",
+  "reviewHard": "صعب",
+  "reviewHowWell": "ما مدى تذكّرك؟",
+  "reviewIntervals1": "١ د",
+  "reviewIntervals2": "يوم",
+  "reviewIntervals3": "٣ أيام",
+  "reviewIntervals4": "أسبوع",
+  "reviewReviewDone": "اكتملت المراجعة",
+  "reviewReviewDoneBody": "ستعود إليك قبل أن تنساها بقليل.",
+  "reviewReviewSubtitle": "مراجعات قصيرة في وقتها تجعل ما تعلّمته يبقى معك.",
+  "reviewReviewTiming": "مرتّبة بحسب قوة تذكّرك لكل واحدة",
+  "reviewReviewTitle": "المراجعة",
+  "reviewStartReview": "ابدأ مراجعة ٦٠ ثانية",
+  "reviewTapToFlip": "اضغط البطاقة لترى الإجابة",
+  "reviewWordsMasteredOf": "أتقنت {mastered} من {total}",
+  "reviewYourWords": "كلماتك"
+}

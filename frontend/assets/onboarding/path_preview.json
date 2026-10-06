@@ -1,0 +1,34 @@
+[
+  {
+    "number": 0,
+    "title": {
+      "ar": "ابدأ بسؤال",
+      "en": "Start With a Question"
+    },
+    "art_key": "unit_big_questions"
+  },
+  {
+    "number": 1,
+    "title": {
+      "ar": "الخطوة الأولى",
+      "en": "The First Step"
+    },
+    "art_key": "unit_first_steps"
+  },
+  {
+    "number": 2,
+    "title": {
+      "ar": "معرفة الله",
+      "en": "Knowing Allah"
+    },
+    "art_key": null
+  },
+  {
+    "number": 3,
+    "title": {
+      "ar": null,
+      "en": "Prayer: Your Daily Connection"
+    },
+    "art_key": null
+  }
+]

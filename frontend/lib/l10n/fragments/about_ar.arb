@@ -1,0 +1,58 @@
+{
+  "@@locale": "ar",
+  "@aboutNameMeaning": {
+    "description": "Prototype interface copy: about / nameMeaning. Preserve the original warm wording."
+  },
+  "@aboutNameMeaningTitle": {
+    "description": "Prototype interface copy: about / nameMeaningTitle. Preserve the original warm wording."
+  },
+  "@aboutOurPromises": {
+    "description": "Prototype interface copy: about / ourPromises. Preserve the original warm wording."
+  },
+  "@aboutPromise1": {
+    "description": "Prototype interface copy: about / promise1. Preserve the original warm wording."
+  },
+  "@aboutPromise2": {
+    "description": "Prototype interface copy: about / promise2. Preserve the original warm wording."
+  },
+  "@aboutPromise3": {
+    "description": "Prototype interface copy: about / promise3. Preserve the original warm wording."
+  },
+  "@aboutPromise4": {
+    "description": "Prototype interface copy: about / promise4. Preserve the original warm wording."
+  },
+  "@aboutTahaReference": {
+    "description": "Prototype interface copy: about / tahaReference. Preserve the original warm wording."
+  },
+  "@aboutTranslationNote": {
+    "description": "Prototype interface copy: about / translationNote. Preserve the original warm wording."
+  },
+  "@aboutWhyItFits": {
+    "description": "Prototype interface copy: about / whyItFits. Preserve the original warm wording."
+  },
+  "aboutNameMeaning": "القبس شعلة صغيرة تؤخذ من نار أكبر، تُحمل لتمنح النور والدفء. والكلمة من القرآن الكريم، في قصة موسى عليه السلام: كان يسير ليلًا مع أهله، في البرد، غير متيقّن من الطريق، فرأى نارًا من بعيد.",
+  "aboutNameMeaningTitle": "الاسم",
+  "aboutOurPromises": "وعودنا",
+  "aboutPromise1": "كل درس يراجعه مختص في العلوم الشرعية",
+  "aboutPromise2": "الآيات والأحاديث تُنقل بنصها مع مصادرها",
+  "aboutPromise3": "نرحّب ولا نضغط، واسأل عن أي شيء بأمان",
+  "aboutPromise4": "رحلتك خاصة إلا إذا اخترت مشاركتها",
+  "aboutTahaReference": "سورة طه: ١٠",
+  "aboutTranslationNote": "المصدر: Quran.com",
+  "aboutWhyItFits": "وهذه قصة متعلّمنا: يرى نورًا من بعيد، فيدفعه الفضول إليه، فيجد الهداية. قبس هو تلك الشعلة الأولى: صغيرة، دافئة، تدعو إليها، وتقود إلى ما هو أعظم.",
+  "aboutAiNotice": "تُعالج الأسئلة بواسطة خدمات الذكاء الاصطناعي. وللفتاوى الشخصية، استشر مختصًا مؤهلًا.",
+  "@aboutAiNotice": {
+    "description": "Phase 10 about interface copy.",
+    "x-review": true
+  },
+  "aboutVerseTranslation": "لعلّي آتيكم بقبس أو أجد عند النار هدى.",
+  "@aboutVerseTranslation": {
+    "description": "Phase 10 about interface copy.",
+    "x-review": true
+  },
+  "aboutFullVerse": "اقرأ الآية كاملة",
+  "@aboutFullVerse": {
+    "description": "Phase 10 about interface copy.",
+    "x-review": true
+  }
+}

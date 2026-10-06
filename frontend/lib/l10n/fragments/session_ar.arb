@@ -1,0 +1,587 @@
+{
+  "@@locale": "ar",
+  "@sessionApplying": {
+    "description": "Prototype interface copy: session / applying. Preserve the original warm wording."
+  },
+  "@sessionBackToJourney": {
+    "description": "Prototype interface copy: session / backToJourney. Preserve the original warm wording."
+  },
+  "@sessionBegin": {
+    "description": "Prototype interface copy: session / begin. Preserve the original warm wording."
+  },
+  "@sessionComesBack": {
+    "description": "Prototype interface copy: session / comesBack. Preserve the original warm wording."
+  },
+  "@sessionCompanionIntro": {
+    "description": "Prototype interface copy: session / companionIntro. Preserve the original warm wording."
+  },
+  "@sessionCorrectAnswerIs": {
+    "description": "Prototype interface copy: session / correctAnswerIs. Preserve the original warm wording."
+  },
+  "@sessionExercisesCount": {
+    "description": "Prototype interface copy: session / exercisesCount. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@sessionFalseLabel": {
+    "description": "Prototype interface copy: session / falseLabel. Preserve the original warm wording."
+  },
+  "@sessionGentle1": {
+    "description": "Prototype interface copy: session / gentle1. Preserve the original warm wording."
+  },
+  "@sessionGentle2": {
+    "description": "Prototype interface copy: session / gentle2. Preserve the original warm wording."
+  },
+  "@sessionGentle3": {
+    "description": "Prototype interface copy: session / gentle3. Preserve the original warm wording."
+  },
+  "@sessionIllTry": {
+    "description": "Prototype interface copy: session / illTry. Preserve the original warm wording."
+  },
+  "@sessionInTwoDays": {
+    "description": "Prototype interface copy: session / inTwoDays. Preserve the original warm wording."
+  },
+  "@sessionKeepLearning": {
+    "description": "Prototype interface copy: session / keepLearning. Preserve the original warm wording."
+  },
+  "@sessionKindChoose": {
+    "description": "Prototype interface copy: session / kindChoose. Preserve the original warm wording."
+  },
+  "@sessionKindDay": {
+    "description": "Prototype interface copy: session / kindDay. Preserve the original warm wording."
+  },
+  "@sessionKindDiscover": {
+    "description": "Prototype interface copy: session / kindDiscover. Preserve the original warm wording."
+  },
+  "@sessionKindFix": {
+    "description": "Prototype interface copy: session / kindFix. Preserve the original warm wording."
+  },
+  "@sessionKindGuess": {
+    "description": "Prototype interface copy: session / kindGuess. Preserve the original warm wording."
+  },
+  "@sessionKindMatch": {
+    "description": "Prototype interface copy: session / kindMatch. Preserve the original warm wording."
+  },
+  "@sessionKindOrder": {
+    "description": "Prototype interface copy: session / kindOrder. Preserve the original warm wording."
+  },
+  "@sessionKindRealLife": {
+    "description": "Prototype interface copy: session / kindRealLife. Preserve the original warm wording."
+  },
+  "@sessionKindRecite": {
+    "description": "Prototype interface copy: session / kindRecite. Preserve the original warm wording."
+  },
+  "@sessionKindSort": {
+    "description": "Prototype interface copy: session / kindSort. Preserve the original warm wording."
+  },
+  "@sessionKindTrueFalse": {
+    "description": "Prototype interface copy: session / kindTrueFalse. Preserve the original warm wording."
+  },
+  "@sessionLeave": {
+    "description": "Prototype interface copy: session / leave. Preserve the original warm wording."
+  },
+  "@sessionLessonComplete": {
+    "description": "Prototype interface copy: session / lessonComplete. Preserve the original warm wording."
+  },
+  "@sessionLessonCompleteSub": {
+    "description": "Prototype interface copy: session / lessonCompleteSub. Preserve the original warm wording."
+  },
+  "@sessionListenReciter": {
+    "description": "Prototype interface copy: session / listenReciter. Preserve the original warm wording."
+  },
+  "@sessionListening": {
+    "description": "Prototype interface copy: session / listening. Preserve the original warm wording."
+  },
+  "@sessionMasteryNote": {
+    "description": "Prototype interface copy: session / masteryNote. Preserve the original warm wording."
+  },
+  "@sessionMeaning": {
+    "description": "Prototype interface copy: session / meaning. Preserve the original warm wording."
+  },
+  "@sessionMistakenIdea": {
+    "description": "Prototype interface copy: session / mistakenIdea. Preserve the original warm wording."
+  },
+  "@sessionNextUnlocked": {
+    "description": "Prototype interface copy: session / nextUnlocked. Preserve the original warm wording.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "@sessionNiceThinking": {
+    "description": "Prototype interface copy: session / niceThinking. Preserve the original warm wording."
+  },
+  "@sessionPerfectBonus": {
+    "description": "Prototype interface copy: session / perfectBonus. Preserve the original warm wording."
+  },
+  "@sessionPlaying": {
+    "description": "Prototype interface copy: session / playing. Preserve the original warm wording."
+  },
+  "@sessionPraise1": {
+    "description": "Prototype interface copy: session / praise1. Preserve the original warm wording."
+  },
+  "@sessionPraise2": {
+    "description": "Prototype interface copy: session / praise2. Preserve the original warm wording."
+  },
+  "@sessionPraise3": {
+    "description": "Prototype interface copy: session / praise3. Preserve the original warm wording."
+  },
+  "@sessionPraise4": {
+    "description": "Prototype interface copy: session / praise4. Preserve the original warm wording."
+  },
+  "@sessionPraise5": {
+    "description": "Prototype interface copy: session / praise5. Preserve the original warm wording."
+  },
+  "@sessionQuitBody": {
+    "description": "Prototype interface copy: session / quitBody. Preserve the original warm wording."
+  },
+  "@sessionQuitTitle": {
+    "description": "Prototype interface copy: session / quitTitle. Preserve the original warm wording."
+  },
+  "@sessionReciteBody": {
+    "description": "Prototype interface copy: session / reciteBody. Preserve the original warm wording."
+  },
+  "@sessionReciteGreat": {
+    "description": "Prototype interface copy: session / reciteGreat. Preserve the original warm wording."
+  },
+  "@sessionReciteTip": {
+    "description": "Prototype interface copy: session / reciteTip. Preserve the original warm wording."
+  },
+  "@sessionReciteTitle": {
+    "description": "Prototype interface copy: session / reciteTitle. Preserve the original warm wording."
+  },
+  "@sessionRemembering": {
+    "description": "Prototype interface copy: session / remembering. Preserve the original warm wording."
+  },
+  "@sessionReport": {
+    "description": "Prototype interface copy: session / report. Preserve the original warm wording."
+  },
+  "@sessionReviewedBySpecialist": {
+    "description": "Prototype interface copy: session / reviewedBySpecialist. Preserve the original warm wording."
+  },
+  "@sessionSelectAnswer": {
+    "description": "Prototype interface copy: session / selectAnswer. Preserve the original warm wording."
+  },
+  "@sessionShowMore": {
+    "description": "Prototype interface copy: session / showMore. Preserve the original warm wording."
+  },
+  "@sessionSimulatedNote": {
+    "description": "Prototype interface copy: session / simulatedNote. Preserve the original warm wording."
+  },
+  "@sessionSituation": {
+    "description": "Prototype interface copy: session / situation. Preserve the original warm wording."
+  },
+  "@sessionSkipRecite": {
+    "description": "Prototype interface copy: session / skipRecite. Preserve the original warm wording."
+  },
+  "@sessionSoon": {
+    "description": "Prototype interface copy: session / soon. Preserve the original warm wording."
+  },
+  "@sessionSourcesLine": {
+    "description": "Prototype interface copy: session / sourcesLine. Preserve the original warm wording.",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "@sessionStatAccuracy": {
+    "description": "Prototype interface copy: session / statAccuracy. Preserve the original warm wording."
+  },
+  "@sessionStatEmbers": {
+    "description": "Prototype interface copy: session / statEmbers. Preserve the original warm wording."
+  },
+  "@sessionStatTime": {
+    "description": "Prototype interface copy: session / statTime. Preserve the original warm wording."
+  },
+  "@sessionTapInOrder": {
+    "description": "Prototype interface copy: session / tapInOrder. Preserve the original warm wording."
+  },
+  "@sessionTapTheScene": {
+    "description": "Prototype interface copy: session / tapTheScene. Preserve the original warm wording."
+  },
+  "@sessionTapThenPlace": {
+    "description": "Prototype interface copy: session / tapThenPlace. Preserve the original warm wording."
+  },
+  "@sessionTapThenSlot": {
+    "description": "Prototype interface copy: session / tapThenSlot. Preserve the original warm wording."
+  },
+  "@sessionTapToContinue": {
+    "description": "Prototype interface copy: session / tapToContinue. Preserve the original warm wording."
+  },
+  "@sessionTheStory": {
+    "description": "Prototype interface copy: session / theStory. Preserve the original warm wording."
+  },
+  "@sessionThenAWeek": {
+    "description": "Prototype interface copy: session / thenAWeek. Preserve the original warm wording."
+  },
+  "@sessionThinkFirst": {
+    "description": "Prototype interface copy: session / thinkFirst. Preserve the original warm wording."
+  },
+  "@sessionTodaysChallenge": {
+    "description": "Prototype interface copy: session / todaysChallenge. Preserve the original warm wording."
+  },
+  "@sessionTomorrowWeAsk": {
+    "description": "Prototype interface copy: session / tomorrowWeAsk. Preserve the original warm wording."
+  },
+  "@sessionTrueLabel": {
+    "description": "Prototype interface copy: session / trueLabel. Preserve the original warm wording."
+  },
+  "@sessionUnderstanding": {
+    "description": "Prototype interface copy: session / understanding. Preserve the original warm wording."
+  },
+  "@sessionWhyLabel": {
+    "description": "Prototype interface copy: session / whyLabel. Preserve the original warm wording."
+  },
+  "@sessionYouWillLearn": {
+    "description": "Prototype interface copy: session / youWillLearn. Preserve the original warm wording."
+  },
+  "@sessionYourAnswer": {
+    "description": "Prototype interface copy: session / yourAnswer. Preserve the original warm wording."
+  },
+  "@sessionYourMastery": {
+    "description": "Prototype interface copy: session / yourMastery. Preserve the original warm wording."
+  },
+  "@sessionYourTurn": {
+    "description": "Prototype interface copy: session / yourTurn. Preserve the original warm wording."
+  },
+  "sessionApplying": "التطبيق",
+  "sessionBackToJourney": "العودة إلى رحلتي",
+  "sessionBegin": "لنبدأ",
+  "sessionComesBack": "سيعود إليك في المراجعة",
+  "sessionCompanionIntro": "سأمشي معك. اضغط على أي كلمة مسطّرة إن كانت جديدة عليك.",
+  "sessionCorrectAnswerIs": "الإجابة الصحيحة:",
+  "sessionExercisesCount": "{countText} أنشطة",
+  "sessionFalseLabel": "خطأ",
+  "sessionGentle1": "ليس تمامًا — ولا بأس",
+  "sessionGentle2": "اقتربت كثيرًا",
+  "sessionGentle3": "محاولة جيدة",
+  "sessionIllTry": "سأجرّب",
+  "sessionInTwoDays": "بعد يومين",
+  "sessionKeepLearning": "أكمل التعلّم",
+  "sessionKindChoose": "اختيار",
+  "sessionKindDay": "يومك",
+  "sessionKindDiscover": "اكتشف",
+  "sessionKindFix": "صحّح الفكرة",
+  "sessionKindGuess": "توقّعك",
+  "sessionKindMatch": "طابق",
+  "sessionKindOrder": "رتّب",
+  "sessionKindRealLife": "موقف حقيقي",
+  "sessionKindRecite": "تلاوة",
+  "sessionKindSort": "صنّف",
+  "sessionKindTrueFalse": "صح أم خطأ",
+  "sessionLeave": "غادر",
+  "sessionLessonComplete": "أتممت الدرس!",
+  "sessionLessonCompleteSub": "خطوة جديدة في طريقك، بهدوء وإتقان.",
+  "sessionListenReciter": "استمع إلى القارئ",
+  "sessionListening": "أستمع إليك…",
+  "sessionMasteryNote": "التقدم في قبس مبني على الإتقان لا على إنهاء الدروس. التذكّر يُقاس في جلسات المراجعة.",
+  "sessionMeaning": "المعنى",
+  "sessionMistakenIdea": "فكرة شائعة خاطئة",
+  "sessionNextUnlocked": "التالي في طريقك: {title}",
+  "sessionNiceThinking": "فكرة جميلة!",
+  "sessionPerfectBonus": "مكافأة الدرس المتقن",
+  "sessionPlaying": "يُتلى الآن…",
+  "sessionPraise1": "أحسنت!",
+  "sessionPraise2": "إجابة صحيحة",
+  "sessionPraise3": "رائع!",
+  "sessionPraise4": "تمامًا!",
+  "sessionPraise5": "بالضبط",
+  "sessionQuitBody": "لن يُحفظ تقدمك في هذا الدرس. يمكنك العودة في أي وقت.",
+  "sessionQuitTitle": "تغادر الدرس؟",
+  "sessionReciteBody": "الآية التي تخبرنا أن للصلاة أوقاتًا محددة.",
+  "sessionReciteGreat": "قراءة جميلة",
+  "sessionReciteTip": "ملاحظة لطيفة: أدغم تنوين «كتابًا» في ميم «موقوتا» مع غنّة خفيفة.",
+  "sessionReciteTitle": "استمع، ثم اقرأ بصوتك",
+  "sessionRemembering": "التذكّر",
+  "sessionReport": "إبلاغ",
+  "sessionReviewedBySpecialist": "يراجعه مختص في العلوم الشرعية",
+  "sessionSelectAnswer": "اختر إجابة",
+  "sessionShowMore": "الفكرة التالية",
+  "sessionSimulatedNote": "نموذج أولي: الصوت وتقييم القراءة محاكاة.",
+  "sessionSituation": "موقف",
+  "sessionSkipRecite": "لا أستطيع التحدث الآن",
+  "sessionSoon": "في المراجعة",
+  "sessionSourcesLine": "{countText} مصادر موثّقة",
+  "sessionStatAccuracy": "الدقة",
+  "sessionStatEmbers": "قبسات",
+  "sessionStatTime": "الوقت",
+  "sessionTapInOrder": "اضغط عليها بالترتيب.",
+  "sessionTapTheScene": "اضغط على المكان الصحيح في الصورة.",
+  "sessionTapThenPlace": "اختر عبارة، ثم المجموعة التي تنتمي إليها.",
+  "sessionTapThenSlot": "اختر صلاة، ثم موضعها من اليوم.",
+  "sessionTapToContinue": "اضغط للمتابعة",
+  "sessionTheStory": "القصة",
+  "sessionThenAWeek": "ثم بعد أسبوع",
+  "sessionThinkFirst": "فكّر لحظة، لا توجد إجابة خاطئة هنا.",
+  "sessionTodaysChallenge": "تحدٍّ صغير لليوم",
+  "sessionTomorrowWeAsk": "غدًا سنسألك",
+  "sessionTrueLabel": "صحيح",
+  "sessionUnderstanding": "الفهم",
+  "sessionWhyLabel": "لماذا",
+  "sessionYouWillLearn": "ستتعلم",
+  "sessionYourAnswer": "إجابتك",
+  "sessionYourMastery": "إتقانك",
+  "sessionYourTurn": "دورك — اضغط واقرأ بصوتك",
+  "sessionLessonPosition": "الوحدة {unit} · الدرس {lesson}",
+  "@sessionLessonPosition": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review.",
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      },
+      "lesson": {
+        "type": "String"
+      }
+    }
+  },
+  "sessionExercisePlaceholderTitle": "معاينة التمرين",
+  "@sessionExercisePlaceholderTitle": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "sessionExercisePlaceholderBody": "ستصبح التمارين تفاعلية في المرحلة التالية. تابع لمعاينة محتوى الدرس.",
+  "@sessionExercisePlaceholderBody": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "sessionPreviewEndTitle": "اكتملت معاينة المحتوى",
+  "@sessionPreviewEndTitle": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "sessionPreviewEndBody": "وصلت إلى نهاية معاينة المحتوى. التمارين وإكمال الدرس سيأتيان في المراحل التالية.",
+  "@sessionPreviewEndBody": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "sessionSourcesTitle": "مصادر هذا الدرس",
+  "@sessionSourcesTitle": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "sessionOriginTitle": "من أين جاءت هذه القصة؟",
+  "@sessionOriginTitle": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "sessionShowAll": "اعرض الكل",
+  "@sessionShowAll": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "sessionFindOut": "لنكتشف",
+  "sessionProgress": "اكتمل {percent}٪",
+  "@sessionProgress": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    },
+    "description": "Accessible player progress label."
+  },
+  "@sessionFindOut": {
+    "description": "Default hook CTA when the server sends null."
+  },
+  "sessionSalahPreview": "معاينة درس الصلاة",
+  "@sessionSalahPreview": {
+    "description": "Developer launcher for the four authored Salah variants."
+  },
+  "sessionUnit0ContentPreview": "معاينة محتوى الوحدة ٠",
+  "@sessionUnit0ContentPreview": {
+    "description": "Developer picker for Unit 0 lessons; normal prerequisites apply."
+  },
+  "sessionChooseReason": "اختر السبب",
+  "@sessionChooseReason": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "sessionSpotError": "حدّد الجزء غير الصحيح",
+  "@sessionSpotError": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "sessionPairHint": "اضغط على كلمة ثم معناها. اضغط على الزوج لتغييره.",
+  "@sessionPairHint": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "sessionUpdateRequired": "حدّث التطبيق للمتابعة",
+  "@sessionUpdateRequired": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "sessionRecordingUnavailable": "التسجيل غير متاح بعد",
+  "@sessionRecordingUnavailable": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "sessionRetryTitle": "فرصة للمحاولة مرة أخرى",
+  "@sessionRetryTitle": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "sessionRetryBody": "لنراجع الأفكار التي ما زلت تتدرّب عليها.",
+  "@sessionRetryBody": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "sessionSkipped": "تم التخطي",
+  "@sessionSkipped": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "sessionRemediation": "لنوضّح هذه الفكرة",
+  "@sessionRemediation": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "sessionResultPendingTitle": "حُفظت جلستك",
+  "@sessionResultPendingTitle": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "sessionResultPendingBody": "شاشة الاحتفال ستتوفر قريبًا. يمكنك العودة إلى رحلتك.",
+  "@sessionResultPendingBody": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review."
+  },
+  "sessionCombo": "{count} إجابات متتالية",
+  "@sessionCombo": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "sessionMapPin": "الموضع {number}",
+  "@sessionMapPin": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "sessionVerseReference": "السورة {surah} · الآية {ayah}",
+  "@sessionVerseReference": {
+    "description": "Phase 6 interface copy; Arabic ready for owner review.",
+    "placeholders": {
+      "surah": {
+        "type": "String"
+      },
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "sessionSubmitError": "احتُفظ بإجابتك. حاول مرة أخرى.",
+  "@sessionSubmitError": {
+    "description": "Phase 6 answer failure with retained draft."
+  },
+  "sessionTransliteration": "النقل الصوتي",
+  "@sessionTransliteration": {
+    "description": "Toggle the server supplied pronunciation transliteration for a recitation segment."
+  },
+  "sessionNextOnPath": "التالي في رحلتك: {title}",
+  "@sessionNextOnPath": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "Next-step title supplied verbatim by the stored server result."
+  },
+  "sessionFillBlank": "أكمل الفراغات",
+  "@sessionFillBlank": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "sessionWhichEvidence": "اختر الدليل",
+  "@sessionWhichEvidence": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "sessionBlank": "الفراغ {number}",
+  "@sessionBlank": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "sessionQuickReview": "مراجعة سريعة",
+  "@sessionQuickReview": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "sessionAllCaughtUp": "أكملت كل المراجعات",
+  "@sessionAllCaughtUp": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "sessionPretestThanks": "شكرًا لمشاركتك ما تعرفه",
+  "@sessionPretestThanks": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "sessionTestPassed": "اجتزت اختبار الوحدة",
+  "@sessionTestPassed": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "sessionTestTryAgain": "واصل بناء فهمك",
+  "@sessionTestTryAgain": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "sessionAnswerReview": "إجاباتك",
+  "@sessionAnswerReview": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "sessionReadLesson": "اقرأ الدرس",
+  "@sessionReadLesson": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "glossaryEmpty": "ستظهر هنا الكلمات التي تتعرف عليها في الدروس.",
+  "@glossaryEmpty": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "glossaryAll": "الكل",
+  "@glossaryAll": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "glossaryNew": "جديدة",
+  "@glossaryNew": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "glossaryLearning": "قيد التعلم",
+  "@glossaryLearning": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "glossaryMastered": "متقنة",
+  "@glossaryMastered": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "glossaryLoadMore": "اعرض كلمات أخرى",
+  "@glossaryLoadMore": {
+    "description": "Phase 12 interface copy.",
+    "x-review": "owner/content review pending"
+  },
+  "sessionReaderEmpty": "لا يوجد محتوى للقراءة في هذا الدرس بعد.",
+  "unitGuideEmpty": "لا يوجد محتوى في الدليل بعد.",
+  "sessionSecondsRemaining": "متبقي {seconds} ثانية",
+  "@sessionSecondsRemaining": {
+    "placeholders": {
+      "seconds": {
+        "type": "String"
+      }
+    },
+    "description": "Empty learning content or accessible review countdown, Phase 12.",
+    "x-review": "owner/content review pending"
+  },
+  "@sessionReaderEmpty": {
+    "description": "Empty learning content or accessible review countdown, Phase 12.",
+    "x-review": "owner/content review pending"
+  },
+  "@unitGuideEmpty": {
+    "description": "Empty learning content or accessible review countdown, Phase 12.",
+    "x-review": "owner/content review pending"
+  }
+}

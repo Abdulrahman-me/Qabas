@@ -1,0 +1,19 @@
+include: package:flutter_lints/flutter.yaml
+analyzer:
+  exclude:
+    - '**/*.g.dart'
+    - lib/l10n/gen/**
+formatter:
+  page_width: 140
+linter:
+  rules:
+    prefer_const_constructors: true
+    prefer_final_locals: true
+    prefer_single_quotes: true
+    avoid_print: true
+    unawaited_futures: true
+    cancel_subscriptions: true
+    close_sinks: true
+    avoid_dynamic_calls: true
+    directives_ordering: true
+    always_declare_return_types: true

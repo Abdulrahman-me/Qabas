@@ -1,0 +1,114 @@
+{
+  "@@locale": "ar",
+  "@profileAchievementsTitle": {
+    "description": "Prototype interface copy: profile / achievementsTitle. Preserve the original warm wording."
+  },
+  "@profileEditName": {
+    "description": "Prototype interface copy: profile / editName. Preserve the original warm wording."
+  },
+  "@profileJoined": {
+    "description": "Prototype interface copy: profile / joined. Preserve the original warm wording.",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "@profileLearnerName": {
+    "description": "Prototype interface copy: profile / learnerName. Preserve the original warm wording."
+  },
+  "@profileNewBadge": {
+    "description": "Prototype interface copy: profile / newBadge. Preserve the original warm wording."
+  },
+  "@profilePrivateBadge": {
+    "description": "Prototype interface copy: profile / privateBadge. Preserve the original warm wording."
+  },
+  "@profileProfileTitle": {
+    "description": "Prototype interface copy: profile / profileTitle. Preserve the original warm wording."
+  },
+  "@profileSave": {
+    "description": "Prototype interface copy: profile / save. Preserve the original warm wording."
+  },
+  "@profileSettings": {
+    "description": "Prototype interface copy: profile / settings. Preserve the original warm wording."
+  },
+  "@profileStatBadges": {
+    "description": "Prototype interface copy: profile / statBadges. Preserve the original warm wording."
+  },
+  "@profileStatLeague": {
+    "description": "Prototype interface copy: profile / statLeague. Preserve the original warm wording."
+  },
+  "@profileStatLessons": {
+    "description": "Prototype interface copy: profile / statLessons. Preserve the original warm wording."
+  },
+  "@profileStatStreak": {
+    "description": "Prototype interface copy: profile / statStreak. Preserve the original warm wording."
+  },
+  "@profileStatTotal": {
+    "description": "Prototype interface copy: profile / statTotal. Preserve the original warm wording."
+  },
+  "@profileStatWords": {
+    "description": "Prototype interface copy: profile / statWords. Preserve the original warm wording."
+  },
+  "@profileStatistics": {
+    "description": "Prototype interface copy: profile / statistics. Preserve the original warm wording."
+  },
+  "@profileUnlockedOf": {
+    "description": "Prototype interface copy: profile / unlockedOf. Preserve the original warm wording.",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "profileAchievementsTitle": "الإنجازات",
+  "profileEditName": "اسمك",
+  "profileJoined": "انضممت في {month}",
+  "profileLearnerName": "متعلّم",
+  "profileNewBadge": "وسام جديد!",
+  "profilePrivateBadge": "خاص",
+  "profileProfileTitle": "حسابي",
+  "profileSave": "حفظ",
+  "profileSettings": "الإعدادات",
+  "profileStatBadges": "الأوسمة",
+  "profileStatLeague": "الدوري",
+  "profileStatLessons": "دروس",
+  "profileStatStreak": "أيام متتالية",
+  "profileStatTotal": "مجموع القبسات",
+  "profileStatWords": "كلمات أتقنتها",
+  "profileStatistics": "إحصاءات",
+  "profileUnlockedOf": "{current} من {total} مفتوحة",
+  "profileNameValidation": "استخدم من حرفين إلى ٢٤ حرفًا.",
+  "@profileNameValidation": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  },
+  "profileNoLeague": "لم تنضم إلى دوري بعد",
+  "@profileNoLeague": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  },
+  "profileLeagueRank": "المرتبة {rank}",
+  "@profileLeagueRank": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true,
+    "placeholders": {
+      "rank": {
+        "type": "String"
+      }
+    }
+  },
+  "profileNoWords": "ستظهر كلماتك هنا وأنت تتعلم.",
+  "@profileNoWords": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  },
+  "profileNoAchievements": "وسامك الأول ينتظرك في الطريق.",
+  "@profileNoAchievements": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  }
+}

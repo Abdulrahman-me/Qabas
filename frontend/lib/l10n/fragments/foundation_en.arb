@@ -1,0 +1,224 @@
+{
+  "@@locale": "en",
+  "commonRetry": "Try again",
+  "@commonRetry": {
+    "description": "Foundation component / commonRetry. Short, warm interface wording."
+  },
+  "commonBrandArabic": "قبس",
+  "@commonBrandArabic": {
+    "description": "Foundation component / commonBrandArabic. Short, warm interface wording."
+  },
+  "commonBrandLatin": "Qabas",
+  "@commonBrandLatin": {
+    "description": "Foundation component / commonBrandLatin. Short, warm interface wording."
+  },
+  "commonEnglish": "English",
+  "@commonEnglish": {
+    "description": "Foundation component / commonEnglish. Short, warm interface wording."
+  },
+  "commonArabic": "العربية",
+  "@commonArabic": {
+    "description": "Foundation component / commonArabic. Short, warm interface wording."
+  },
+  "commonSendTooltip": "Send",
+  "@commonSendTooltip": {
+    "description": "Foundation component / commonSendTooltip. Short, warm interface wording."
+  },
+  "commonRecordTooltip": "Record a question",
+  "@commonRecordTooltip": {
+    "description": "Foundation component / commonRecordTooltip. Short, warm interface wording."
+  },
+  "commonRemoveAttachmentTooltip": "Remove attachment",
+  "@commonRemoveAttachmentTooltip": {
+    "description": "Foundation component / commonRemoveAttachmentTooltip. Short, warm interface wording."
+  },
+  "commonTabDiscover": "Discover",
+  "@commonTabDiscover": {
+    "description": "Foundation component / commonTabDiscover. Short, warm interface wording."
+  },
+  "commonUpdate": "Update Qabas",
+  "@commonUpdate": {
+    "description": "Foundation component / commonUpdate. Short, warm interface wording."
+  },
+  "commonLoading": "Loading…",
+  "@commonLoading": {
+    "description": "Foundation component / commonLoading. Short, warm interface wording."
+  },
+  "commonOfflineBody": "You’re offline. We’ll keep what you’ve done.",
+  "@commonOfflineBody": {
+    "description": "Foundation component / commonOfflineBody. Short, warm interface wording."
+  },
+  "errorNetworkTitle": "No connection",
+  "@errorNetworkTitle": {
+    "description": "Foundation component / errorNetworkTitle. Short, warm interface wording."
+  },
+  "errorNetworkBody": "Check your internet and try again.",
+  "@errorNetworkBody": {
+    "description": "Foundation component / errorNetworkBody. Short, warm interface wording."
+  },
+  "errorServerTitle": "A small pause",
+  "@errorServerTitle": {
+    "description": "Foundation component / errorServerTitle. Short, warm interface wording."
+  },
+  "errorServerBody": "Something went wrong on our side. Please try again.",
+  "@errorServerBody": {
+    "description": "Foundation component / errorServerBody. Short, warm interface wording."
+  },
+  "errorSourcesTitle": "Sources are taking a moment",
+  "@errorSourcesTitle": {
+    "description": "Foundation component / errorSourcesTitle. Short, warm interface wording."
+  },
+  "errorSourcesBody": "Sources are temporarily unavailable. Try again shortly.",
+  "@errorSourcesBody": {
+    "description": "Foundation component / errorSourcesBody. Short, warm interface wording."
+  },
+  "errorGenericTitle": "Something unexpected happened",
+  "@errorGenericTitle": {
+    "description": "Foundation component / errorGenericTitle. Short, warm interface wording."
+  },
+  "errorGenericBody": "Let’s try that again.",
+  "@errorGenericBody": {
+    "description": "Foundation component / errorGenericBody. Short, warm interface wording."
+  },
+  "errorRateLimitedTitle": "Let’s pause for a moment",
+  "@errorRateLimitedTitle": {
+    "description": "Foundation component / errorRateLimitedTitle. Short, warm interface wording."
+  },
+  "errorRateLimitedBody": "You can try again in {time}.",
+  "@errorRateLimitedBody": {
+    "description": "Foundation component / errorRateLimitedBody. Short, warm interface wording.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "errorNotFoundTitle": "We couldn’t find this",
+  "@errorNotFoundTitle": {
+    "description": "Foundation component / errorNotFoundTitle. Short, warm interface wording."
+  },
+  "errorNotFoundBody": "Go back and take another step.",
+  "@errorNotFoundBody": {
+    "description": "Foundation component / errorNotFoundBody. Short, warm interface wording."
+  },
+  "errorForbiddenTitle": "This isn’t available",
+  "@errorForbiddenTitle": {
+    "description": "Foundation component / errorForbiddenTitle. Short, warm interface wording."
+  },
+  "errorForbiddenBody": "This isn’t available for your account.",
+  "@errorForbiddenBody": {
+    "description": "Foundation component / errorForbiddenBody. Short, warm interface wording."
+  },
+  "errorTooLargeTitle": "This file is too large",
+  "@errorTooLargeTitle": {
+    "description": "Foundation component / errorTooLargeTitle. Short, warm interface wording."
+  },
+  "errorTooLargeBody": "Choose a smaller file and try again.",
+  "@errorTooLargeBody": {
+    "description": "Foundation component / errorTooLargeBody. Short, warm interface wording."
+  },
+  "errorFileTypeTitle": "Try another file",
+  "@errorFileTypeTitle": {
+    "description": "Foundation component / errorFileTypeTitle. Short, warm interface wording."
+  },
+  "errorFileTypeBody": "This file type isn’t supported.",
+  "@errorFileTypeBody": {
+    "description": "Foundation component / errorFileTypeBody. Short, warm interface wording."
+  },
+  "commonChooseAnother": "Choose another",
+  "@commonChooseAnother": {
+    "description": "Foundation component / commonChooseAnother. Short, warm interface wording."
+  },
+  "commonEdit": "Edit",
+  "@commonEdit": {
+    "description": "Foundation component / commonEdit. Short, warm interface wording."
+  },
+  "commonUpdateTitle": "A little update, a brighter path",
+  "@commonUpdateTitle": {
+    "description": "Foundation component / commonUpdateTitle. Short, warm interface wording."
+  },
+  "commonUpdateBody": "Update Qabas to keep learning. Your journey will be waiting.",
+  "@commonUpdateBody": {
+    "description": "Foundation component / commonUpdateBody. Short, warm interface wording."
+  },
+  "commonSessionEndedTitle": "Let’s begin again",
+  "@commonSessionEndedTitle": {
+    "description": "Foundation component / commonSessionEndedTitle. Short, warm interface wording."
+  },
+  "commonSessionEndedBody": "Your guest session has ended. We’ll help you start a new journey.",
+  "@commonSessionEndedBody": {
+    "description": "Foundation component / commonSessionEndedBody. Short, warm interface wording."
+  },
+  "characterGuideSemantics": "Your guide carrying a small light",
+  "@characterGuideSemantics": {
+    "description": "Foundation component / characterGuideSemantics. Short, warm interface wording."
+  },
+  "characterLanternSemantics": "Raqeeb’s lantern",
+  "@characterLanternSemantics": {
+    "description": "Foundation component / characterLanternSemantics. Short, warm interface wording."
+  },
+  "galleryTitle": "Component gallery",
+  "@galleryTitle": {
+    "description": "Foundation component / galleryTitle. Short, warm interface wording."
+  },
+  "galleryButtons": "Buttons",
+  "@galleryButtons": {
+    "description": "Foundation component / galleryButtons. Short, warm interface wording."
+  },
+  "gallerySurfaces": "Cards and progress",
+  "@gallerySurfaces": {
+    "description": "Foundation component / gallerySurfaces. Short, warm interface wording."
+  },
+  "galleryInputs": "Inputs and settings",
+  "@galleryInputs": {
+    "description": "Foundation component / galleryInputs. Short, warm interface wording."
+  },
+  "galleryBrand": "Brand and illustration",
+  "@galleryBrand": {
+    "description": "Foundation component / galleryBrand. Short, warm interface wording."
+  },
+  "galleryMotion": "Motion",
+  "@galleryMotion": {
+    "description": "Foundation component / galleryMotion. Short, warm interface wording."
+  },
+  "galleryStates": "Loading, empty and error",
+  "@galleryStates": {
+    "description": "Foundation component / galleryStates. Short, warm interface wording."
+  },
+  "gallerySheets": "Sheets and notices",
+  "@gallerySheets": {
+    "description": "Foundation component / gallerySheets. Short, warm interface wording."
+  },
+  "galleryOpenSheet": "Open sheet",
+  "@galleryOpenSheet": {
+    "description": "Foundation component / galleryOpenSheet. Short, warm interface wording."
+  },
+  "galleryConfirm": "Confirmation sheet",
+  "@galleryConfirm": {
+    "description": "Foundation component / galleryConfirm. Short, warm interface wording."
+  },
+  "galleryEmptyTitle": "Your next step is on its way",
+  "@galleryEmptyTitle": {
+    "description": "Foundation component / galleryEmptyTitle. Short, warm interface wording."
+  },
+  "galleryEmptyBody": "A little space for something new.",
+  "@galleryEmptyBody": {
+    "description": "Foundation component / galleryEmptyBody. Short, warm interface wording."
+  },
+  "galleryCelebrate": "Celebrate",
+  "@galleryCelebrate": {
+    "description": "Foundation component / galleryCelebrate. Short, warm interface wording."
+  },
+  "galleryNudge": "Try a gentle nudge",
+  "@galleryNudge": {
+    "description": "Foundation component / galleryNudge. Short, warm interface wording."
+  },
+  "galleryCardBody": "A small light for a big journey",
+  "@galleryCardBody": {
+    "description": "Foundation component / galleryCardBody. Short, warm interface wording."
+  },
+  "galleryDisabled": "Disabled",
+  "@galleryDisabled": {
+    "description": "Foundation component / galleryDisabled. Short, warm interface wording."
+  }
+}

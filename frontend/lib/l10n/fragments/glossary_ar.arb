@@ -1,0 +1,31 @@
+{
+  "@@locale": "ar",
+  "@glossaryAskRaqeeb": {
+    "description": "Prototype interface copy: glossary / askRaqeeb. Preserve the original warm wording."
+  },
+  "@glossaryIKnowThis": {
+    "description": "Prototype interface copy: glossary / iKnowThis. Preserve the original warm wording."
+  },
+  "@glossaryLevelExplorer": {
+    "description": "Prototype interface copy: glossary / levelExplorer. Preserve the original warm wording."
+  },
+  "@glossaryLevelNewMuslim": {
+    "description": "Prototype interface copy: glossary / levelNewMuslim. Preserve the original warm wording."
+  },
+  "@glossaryListen": {
+    "description": "Prototype interface copy: glossary / listen. Preserve the original warm wording."
+  },
+  "@glossaryUnderlineHint": {
+    "description": "Prototype interface copy: glossary / underlineHint. Preserve the original warm wording."
+  },
+  "@glossaryYourDictionary": {
+    "description": "Prototype interface copy: glossary / yourDictionary. Preserve the original warm wording."
+  },
+  "glossaryAskRaqeeb": "اسأل رقيب",
+  "glossaryIKnowThis": "أعرفها",
+  "glossaryLevelExplorer": "مشروحة للمستكشف",
+  "glossaryLevelNewMuslim": "مشروحة للمسلم الجديد",
+  "glossaryListen": "استمع",
+  "glossaryUnderlineHint": "حين تتقن الكلمة، يختفي الخط تحتها.",
+  "glossaryYourDictionary": "قاموسك"
+}

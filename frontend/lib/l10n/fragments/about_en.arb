@@ -1,0 +1,58 @@
+{
+  "@@locale": "en",
+  "@aboutNameMeaning": {
+    "description": "Prototype interface copy: about / nameMeaning. Preserve the original warm wording."
+  },
+  "@aboutNameMeaningTitle": {
+    "description": "Prototype interface copy: about / nameMeaningTitle. Preserve the original warm wording."
+  },
+  "@aboutOurPromises": {
+    "description": "Prototype interface copy: about / ourPromises. Preserve the original warm wording."
+  },
+  "@aboutPromise1": {
+    "description": "Prototype interface copy: about / promise1. Preserve the original warm wording."
+  },
+  "@aboutPromise2": {
+    "description": "Prototype interface copy: about / promise2. Preserve the original warm wording."
+  },
+  "@aboutPromise3": {
+    "description": "Prototype interface copy: about / promise3. Preserve the original warm wording."
+  },
+  "@aboutPromise4": {
+    "description": "Prototype interface copy: about / promise4. Preserve the original warm wording."
+  },
+  "@aboutTahaReference": {
+    "description": "Prototype interface copy: about / tahaReference. Preserve the original warm wording."
+  },
+  "@aboutTranslationNote": {
+    "description": "Prototype interface copy: about / translationNote. Preserve the original warm wording."
+  },
+  "@aboutWhyItFits": {
+    "description": "Prototype interface copy: about / whyItFits. Preserve the original warm wording."
+  },
+  "aboutNameMeaning": "Qabas (قبس) is a small flame taken from a larger fire, carried to bring light and warmth. The word comes from the Quran, in the story of Prophet Musa (Moses), peace be upon him: travelling at night with his family, cold and unsure of the way, he saw a fire in the distance.",
+  "aboutNameMeaningTitle": "The name",
+  "aboutOurPromises": "Our promises",
+  "aboutPromise1": "Every lesson is reviewed by a specialist in Islamic studies",
+  "aboutPromise2": "Verses and hadiths are quoted exactly, with their sources",
+  "aboutPromise3": "Welcoming, never pressuring — safe to ask anything",
+  "aboutPromise4": "Your journey is private unless you choose to share it",
+  "aboutTahaReference": "Surah Taha, 20:10",
+  "aboutTranslationNote": "Translation: Saheeh International",
+  "aboutWhyItFits": "This is our learner’s story: someone notices a light from afar, feels curious, walks toward it, and finds guidance. Qabas is that first flame — small, warm, inviting, and leading somewhere greater.",
+  "aboutAiNotice": "Questions are processed by AI services. For personal rulings, consult a qualified specialist.",
+  "@aboutAiNotice": {
+    "description": "Phase 10 about interface copy.",
+    "x-review": true
+  },
+  "aboutVerseTranslation": "“Perhaps I can bring you a torch or find at the fire some guidance.”",
+  "@aboutVerseTranslation": {
+    "description": "Phase 10 about interface copy.",
+    "x-review": true
+  },
+  "aboutFullVerse": "Read the full verse",
+  "@aboutFullVerse": {
+    "description": "Phase 10 about interface copy.",
+    "x-review": true
+  }
+}

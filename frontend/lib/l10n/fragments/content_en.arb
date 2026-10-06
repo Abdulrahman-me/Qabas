@@ -1,0 +1,79 @@
+{
+  "@@locale": "en",
+  "@contentHadithLabel": {
+    "description": "Prototype interface copy: content / hadithLabel. Preserve the original warm wording."
+  },
+  "@contentQuranLabel": {
+    "description": "Prototype interface copy: content / quranLabel. Preserve the original warm wording."
+  },
+  "@contentViewSource": {
+    "description": "Prototype interface copy: content / viewSource. Preserve the original warm wording."
+  },
+  "contentHadithLabel": "Hadith",
+  "contentQuranLabel": "Quran",
+  "contentViewSource": "View source",
+  "contentLearnMore": "Learn more",
+  "@contentLearnMore": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentLevelBasic": "Basic",
+  "@contentLevelBasic": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentLevelIntermediate": "Intermediate",
+  "@contentLevelIntermediate": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentLevelUnknown": "Your level",
+  "@contentLevelUnknown": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentTafsir": "Tafsir",
+  "@contentTafsir": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentArticle": "Article",
+  "@contentArticle": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentBook": "Book",
+  "@contentBook": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentFatwa": "Fatwa",
+  "@contentFatwa": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentSource": "Source",
+  "@contentSource": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentAudioError": "This audio isn’t available right now.",
+  "@contentAudioError": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentProviderTafsirCenter": "Tafsir Center",
+  "@contentProviderTafsirCenter": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentProviderQuranCom": "Quran.com",
+  "@contentProviderQuranCom": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentProviderHadeethenc": "HadeethEnc",
+  "@contentProviderHadeethenc": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentProviderQuranenc": "QuranEnc",
+  "@contentProviderQuranenc": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentProviderIslamhouse": "IslamHouse",
+  "@contentProviderIslamhouse": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  },
+  "contentProviderDorar": "Dorar",
+  "@contentProviderDorar": {
+    "description": "Phase 5 interface copy; Arabic ready for owner review."
+  }
+}

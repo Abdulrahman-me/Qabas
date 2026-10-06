@@ -1,0 +1,917 @@
+{
+  "@@locale": "ar",
+  "reviewerConsole": "لوحة المراجعة",
+  "reviewerSignIn": "تسجيل دخول المراجع",
+  "reviewerEmail": "البريد الإلكتروني",
+  "reviewerPassword": "كلمة المرور",
+  "reviewerLockout": "محاولات كثيرة. انتظر قبل المحاولة مجدداً.",
+  "reviewerSignOut": "تسجيل الخروج",
+  "reviewerRuns": "عمليات الإنشاء",
+  "reviewerBlindTest": "اختبار أعمى",
+  "reviewerMetrics": "المؤشرات",
+  "reviewerNewRun": "إنشاء جديد",
+  "reviewerUnitId": "معرّف الوحدة",
+  "reviewerLessonType": "نوع الدرس",
+  "reviewerBrief": "وصف الدرس",
+  "reviewerPosition": "موضع الدرس في الوحدة (بدءاً من ٠)",
+  "reviewerCreate": "بدء الإنشاء",
+  "reviewerAllStatuses": "كل الحالات",
+  "reviewerMore": "تحميل المزيد",
+  "reviewerNoRuns": "لا توجد عمليات تطابق هذا المرشح.",
+  "reviewerOpenRun": "فتح العملية",
+  "reviewerSelectRun": "اختر عملية لمراجعة خطتها أو مسودتها.",
+  "reviewerGate1": "البوابة ١ · مراجعة الخطة",
+  "reviewerGate2": "البوابة ٢ · مراجعة المسودة",
+  "reviewerPlan": "خطة الدرس",
+  "reviewerTitle": "العنوان",
+  "reviewerOutcome": "الناتج التعلمي الرئيسي",
+  "reviewerQuestion": "سؤال المتعلم المركزي",
+  "reviewerUnderstandings": "الفهم الداعم",
+  "reviewerDepth": "عمق الدرس",
+  "reviewerObjectives": "الأهداف (١–٣)",
+  "reviewerPrerequisites": "المفاهيم المطلوبة مسبقاً",
+  "reviewerIntroduced": "المفاهيم المقدّمة",
+  "reviewerTerms": "المصطلحات الجديدة",
+  "reviewerMisconceptions": "التصورات الخاطئة المستهدفة",
+  "reviewerStandalone": "مؤهل للاستكشاف",
+  "reviewerReasoning": "أدوات الاستدلال ومبرراتها",
+  "reviewerArc": "مسار الدرس",
+  "reviewerArcMap": "خريطة المسار",
+  "reviewerRationale": "المبرر",
+  "reviewerExperience": "تجربة المتعلم",
+  "reviewerInteractive": "يتفاعل المتعلم",
+  "reviewerMinutes": "الدقائق المقدّرة",
+  "reviewerContentBudget": "كتل المحتوى",
+  "reviewerExerciseBudget": "تمارين مقيّمة (٢–٦)",
+  "reviewerTargets": "إرشاد: ٦–١٠ دقائق؛ الدروس التأسيسية نحو ٨–١٠. عادةً ٣–٥ تمارين (القصة: ٢–٤). الأولوية للاكتمال؛ لا يُطوّل الدرس ولا يُقسّم بسبب المدة وحدها.",
+  "reviewerApprove": "اعتماد",
+  "reviewerReject": "رفض",
+  "reviewerRequestChanges": "طلب تعديلات",
+  "reviewerNote": "ملاحظة المراجع",
+  "reviewerPairedEnglish": "يتطلب تعديل العربية تعديل الإنجليزية للجملة والمسار نفسيهما.",
+  "reviewerInvalidPlan": "راجع الحقول ثنائية اللغة والأهداف والمفاهيم والمسار والميزانيات قبل الاعتماد.",
+  "reviewerBlockers": "الاعتماد غير متاح ما دامت الموانع قائمة.",
+  "reviewerReasonRequired": "أضف ملاحظة توضّح التعديلات المطلوبة.",
+  "reviewerStale": "تغيّرت المراجعة. تم تحميل أحدث نسخة. راجعها مجدداً قبل إرسال القرار.",
+  "reviewerReconfirm": "راجعت أحدث نسخة",
+  "reviewerPreview": "معاينة المتعلم",
+  "reviewerPreviewEmpty": "لا تتوفر كتل للمعاينة.",
+  "reviewerReveal": "متابعة المعاينة",
+  "reviewerEvidence": "الجمل والأدلة",
+  "reviewerRole": "دور الجملة",
+  "reviewerBasis": "أساس الادّعاء",
+  "reviewerSupports": "دليل داعم",
+  "reviewerNotSupporting": "لا يدعم هذا الادّعاء",
+  "reviewerEditSentence": "تعديل الجملة",
+  "reviewerSaveEdits": "حفظ التعديلات المزدوجة",
+  "reviewerEditAr": "النص العربي البديل",
+  "reviewerEditEn": "النص الإنجليزي البديل",
+  "reviewerEditsSaved": "حُفظت التعديلات للاعتماد.",
+  "reviewerExercises": "التمارين ومفاتيح الإجابة",
+  "reviewerAnswerKey": "مفتاح الإجابة",
+  "reviewerNoKey": "تقييم ذاتي أو تلاوة مفحوصة؛ لا يوجد مفتاح مخزّن.",
+  "reviewerRemoveExercise": "إزالة عند الاعتماد",
+  "reviewerQA": "تقرير الجودة",
+  "reviewerNoIssues": "لا توجد ملاحظات جودة.",
+  "reviewerVisuals": "المرئيات",
+  "reviewerRegenerate": "إعادة إنشاء الصورة",
+  "reviewerRegenerationAccepted": "قُبل طلب إعادة الإنشاء. يبقى العنصر النائب حتى يتوفر أصل مُدقّق.",
+  "reviewerCompiled": "مدمج · جاهز",
+  "reviewerPlaceholder": "عنصر نائب / يحتاج مراجعة",
+  "reviewerBlindEmpty": "لا توجد أزواج متبقية للاختبار الأعمى.",
+  "reviewerLessonA": "الدرس أ",
+  "reviewerLessonB": "الدرس ب",
+  "reviewerClearer": "أي الدرسين أوضح؟",
+  "reviewerAccurate": "أي الدرسين أدق؟",
+  "reviewerHandwritten": "أي الدرسين تظن أنه كُتب بواسطة شخص؟",
+  "reviewerSame": "متساويان",
+  "reviewerUnsure": "غير متأكد",
+  "reviewerSubmit": "إرسال المراجعة",
+  "reviewerNotMeasured": "لم يُقَس بعد",
+  "reviewerLearning": "التعلم",
+  "reviewerPrePost": "التقييم القبلي / البعدي",
+  "reviewerBefore": "قبل",
+  "reviewerAfter": "بعد",
+  "reviewerActivated": "التصورات الخاطئة المكتشفة",
+  "reviewerResolved": "التصورات الخاطئة المعالجة",
+  "reviewerResolutionRate": "نسبة المعالجة (%)",
+  "reviewerUnitsStarted": "الوحدات المبدوءة",
+  "reviewerUnitsCompleted": "الوحدات المكتملة",
+  "reviewerFactory": "مصنع الدروس",
+  "reviewerPublished": "الدروس المنشورة",
+  "reviewerGenerationMinutes": "متوسط الإنشاء (دقائق)",
+  "reviewerReviewMinutes": "متوسط المراجعة (دقائق)",
+  "reviewerResponses": "إجابات الاختبار الأعمى",
+  "reviewerIdentified": "تمييز الكتابة البشرية (%)",
+  "reviewerPreferred": "تفضيل المنشأ آلياً أو مساواته (%)",
+  "reviewerBenchmark": "تقييم رقيب",
+  "reviewerAccuracy": "الدقة (%)",
+  "reviewerUnsupported": "الادّعاءات غير المدعومة (%)",
+  "reviewerAbstention": "الامتناع الصحيح (%)",
+  "reviewerReferral": "الإحالة الصحيحة (%)",
+  "reviewerNoMetrics": "لا تتوفر قياسات.",
+  "reviewerParticipants": "المشاركون",
+  "reviewerValidation": "ملاحظات التحقق",
+  "reviewerStage": "المرحلة",
+  "reviewerEditPlan": "تعديل الخطة",
+  "reviewerSavePlan": "حفظ الخطة",
+  "reviewerAdd": "إضافة",
+  "reviewerRemove": "إزالة",
+  "reviewerCommaIds": "معرّفات مفصولة بفواصل",
+  "reviewerPending": "قيد الانتظار",
+  "reviewerDone": "مكتمل",
+  "reviewerSkipped": "تم تجاوزه",
+  "reviewerBlocker": "مانع",
+  "reviewerWarning": "تنبيه",
+  "reviewerInfo": "معلومة",
+  "reviewerValueRunning": "قيد التنفيذ",
+  "reviewerValueAwaitingGate1": "بانتظار البوابة ١",
+  "reviewerValueAwaitingGate2": "بانتظار البوابة ٢",
+  "reviewerValuePublished": "منشور",
+  "reviewerValueRejected": "مرفوض",
+  "reviewerValueFailed": "فشل",
+  "reviewerValueConcept": "مفهوم",
+  "reviewerValueStory": "قصة",
+  "reviewerValuePractice": "تطبيق",
+  "reviewerValueFoundational": "تأسيسي",
+  "reviewerValueStandard": "قياسي",
+  "reviewerValueFocused": "محدّد",
+  "reviewerValueExplorer": "المستكشف",
+  "reviewerValueNewMuslim": "المسلم الجديد",
+  "reviewerValueClaim": "ادّعاء",
+  "reviewerValueFraming": "تمهيد",
+  "reviewerValueHypothetical": "افتراضي",
+  "reviewerValueInstruction": "تعليمات",
+  "reviewerValueQuestion": "سؤال",
+  "reviewerValueSource": "مصدر",
+  "reviewerValueReasoning": "استدلال",
+  "reviewerValueObservation": "ملاحظة",
+  "reviewerValueInference": "استنتاج",
+  "reviewerValueTestimony": "شهادة",
+  "reviewerValueHistoricalEvidence": "دليل تاريخي",
+  "reviewerValueCausalReasoning": "استدلال سببي",
+  "reviewerValueComparison": "مقارنة",
+  "reviewerValueScenario": "موقف",
+  "reviewerValuePrediction": "توقع",
+  "reviewerValueExample": "مثال",
+  "reviewerValueDemonstration": "عرض عملي",
+  "reviewerValueExplanation": "شرح",
+  "reviewerValueEvidence": "دليل",
+  "reviewerValueReflection": "تأمل",
+  "reviewerValueTakeaway": "خلاصة",
+  "reviewerValueSupported": "مدعوم",
+  "reviewerValueDropped": "محذوف",
+  "reviewerValueExact": "مطابقة تامة",
+  "reviewerValuePartial": "مطابقة جزئية",
+  "reviewerValueStretched": "تحميل زائد",
+  "reviewerValueUnrelated": "غير ذي صلة",
+  "reviewerValueUnknown": "غير معروف",
+  "reviewerValuePlan": "الخطة",
+  "reviewerValueDecompose": "تفكيك المحتوى",
+  "reviewerValueRetrieve": "جلب المصادر",
+  "reviewerValueVerify": "التحقق",
+  "reviewerValueWrite": "الكتابة",
+  "reviewerValueExercises": "التمارين",
+  "reviewerValueVisuals": "المرئيات",
+  "reviewerValueSceneAuthor": "تأليف المشهد",
+  "reviewerValueSceneRender": "رسم المشهد",
+  "reviewerValueLocalize": "التوطين",
+  "reviewerValueQa": "ضمان الجودة",
+  "reviewerValuePublish": "النشر",
+  "reviewerValuePending": "قيد الانتظار",
+  "reviewerValueDone": "مكتمل",
+  "reviewerValueSkipped": "تم تجاوزه",
+  "reviewerValueUnsupportedSentence": "جملة غير مدعومة",
+  "reviewerValueFatwaLike": "شبيه بالفتوى",
+  "reviewerValueReadingLevel": "مستوى القراءة",
+  "reviewerValueConsistency": "الاتساق",
+  "reviewerValueSensitive": "حساس",
+  "reviewerValueImagePolicy": "سياسة الصور",
+  "reviewerValueValidation": "التحقق",
+  "reviewerValuePedagogy": "التربية",
+  "reviewerValueBeliefGrading": "تقييم المعتقد",
+  "reviewerValueCircularReasoning": "استدلال دائري",
+  "reviewerValueLocalization": "التوطين",
+  "reviewerValueScholarlyReview": "مراجعة علمية",
+  "reviewerValueNeedsTafsir": "يحتاج تفسيراً",
+  "reviewerValueContextDependent": "يعتمد على السياق",
+  "reviewerValueAddresseeSpecific": "خاص بالمخاطب",
+  "reviewerValueGeneralisedFromSpecific": "تعميم من حالة خاصة",
+  "reviewerValueBeyondSource": "يتجاوز المصدر",
+  "reviewerValueScholarlyDisagreement": "خلاف علمي",
+  "reviewerValueSingleOpinionAsConsensus": "رأي واحد يُعرض إجماعاً",
+  "reviewerValueOversimplified": "تبسيط مخلّ",
+  "reviewerValueTranslationSensitive": "حساس للترجمة",
+  "reviewerValueRaqeeb": "رقيب",
+  "reviewerValueBaselineLlm": "النموذج المرجعي",
+  "reviewerValueGeneralKnowledge": "معرفة عامة",
+  "reviewerValueTextExplanation": "شرح النص",
+  "reviewerValueVerification": "توثيق",
+  "reviewerValueDifferingOpinions": "اختلاف الآراء",
+  "reviewerValuePersonalFatwa": "فتوى شخصية",
+  "reviewerValueDoubtOrDeepCreed": "شك أو اعتقاد عميق",
+  "reviewerValueSensitiveHuman": "سؤال شخصي حساس",
+  "reviewerValueOutOfScope": "خارج النطاق",
+  "reviewerBlockPosition": "الكتلة {current} من {total}",
+  "@reviewerBlockPosition": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    },
+    "description": "Reviewer work tool: reviewerBlockPosition"
+  },
+  "@reviewerConsole": {
+    "description": "Reviewer work tool: reviewerConsole"
+  },
+  "@reviewerSignIn": {
+    "description": "Reviewer work tool: reviewerSignIn"
+  },
+  "@reviewerEmail": {
+    "description": "Reviewer work tool: reviewerEmail"
+  },
+  "@reviewerPassword": {
+    "description": "Reviewer work tool: reviewerPassword"
+  },
+  "@reviewerLockout": {
+    "description": "Reviewer work tool: reviewerLockout"
+  },
+  "@reviewerSignOut": {
+    "description": "Reviewer work tool: reviewerSignOut"
+  },
+  "@reviewerRuns": {
+    "description": "Reviewer work tool: reviewerRuns"
+  },
+  "@reviewerBlindTest": {
+    "description": "Reviewer work tool: reviewerBlindTest"
+  },
+  "@reviewerMetrics": {
+    "description": "Reviewer work tool: reviewerMetrics"
+  },
+  "@reviewerNewRun": {
+    "description": "Reviewer work tool: reviewerNewRun"
+  },
+  "@reviewerUnitId": {
+    "description": "Reviewer work tool: reviewerUnitId"
+  },
+  "@reviewerLessonType": {
+    "description": "Reviewer work tool: reviewerLessonType"
+  },
+  "@reviewerBrief": {
+    "description": "Reviewer work tool: reviewerBrief"
+  },
+  "@reviewerPosition": {
+    "description": "Reviewer work tool: reviewerPosition"
+  },
+  "@reviewerCreate": {
+    "description": "Reviewer work tool: reviewerCreate"
+  },
+  "@reviewerAllStatuses": {
+    "description": "Reviewer work tool: reviewerAllStatuses"
+  },
+  "@reviewerMore": {
+    "description": "Reviewer work tool: reviewerMore"
+  },
+  "@reviewerNoRuns": {
+    "description": "Reviewer work tool: reviewerNoRuns"
+  },
+  "@reviewerOpenRun": {
+    "description": "Reviewer work tool: reviewerOpenRun"
+  },
+  "@reviewerSelectRun": {
+    "description": "Reviewer work tool: reviewerSelectRun"
+  },
+  "@reviewerGate1": {
+    "description": "Reviewer work tool: reviewerGate1"
+  },
+  "@reviewerGate2": {
+    "description": "Reviewer work tool: reviewerGate2"
+  },
+  "@reviewerPlan": {
+    "description": "Reviewer work tool: reviewerPlan"
+  },
+  "@reviewerTitle": {
+    "description": "Reviewer work tool: reviewerTitle"
+  },
+  "@reviewerOutcome": {
+    "description": "Reviewer work tool: reviewerOutcome"
+  },
+  "@reviewerQuestion": {
+    "description": "Reviewer work tool: reviewerQuestion"
+  },
+  "@reviewerUnderstandings": {
+    "description": "Reviewer work tool: reviewerUnderstandings"
+  },
+  "@reviewerDepth": {
+    "description": "Reviewer work tool: reviewerDepth"
+  },
+  "@reviewerObjectives": {
+    "description": "Reviewer work tool: reviewerObjectives"
+  },
+  "@reviewerPrerequisites": {
+    "description": "Reviewer work tool: reviewerPrerequisites"
+  },
+  "@reviewerIntroduced": {
+    "description": "Reviewer work tool: reviewerIntroduced"
+  },
+  "@reviewerTerms": {
+    "description": "Reviewer work tool: reviewerTerms"
+  },
+  "@reviewerMisconceptions": {
+    "description": "Reviewer work tool: reviewerMisconceptions"
+  },
+  "@reviewerStandalone": {
+    "description": "Reviewer work tool: reviewerStandalone"
+  },
+  "@reviewerReasoning": {
+    "description": "Reviewer work tool: reviewerReasoning"
+  },
+  "@reviewerArc": {
+    "description": "Reviewer work tool: reviewerArc"
+  },
+  "@reviewerArcMap": {
+    "description": "Reviewer work tool: reviewerArcMap"
+  },
+  "@reviewerRationale": {
+    "description": "Reviewer work tool: reviewerRationale"
+  },
+  "@reviewerExperience": {
+    "description": "Reviewer work tool: reviewerExperience"
+  },
+  "@reviewerInteractive": {
+    "description": "Reviewer work tool: reviewerInteractive"
+  },
+  "@reviewerMinutes": {
+    "description": "Reviewer work tool: reviewerMinutes"
+  },
+  "@reviewerContentBudget": {
+    "description": "Reviewer work tool: reviewerContentBudget"
+  },
+  "@reviewerExerciseBudget": {
+    "description": "Reviewer work tool: reviewerExerciseBudget"
+  },
+  "@reviewerTargets": {
+    "description": "Reviewer work tool: reviewerTargets"
+  },
+  "@reviewerApprove": {
+    "description": "Reviewer work tool: reviewerApprove"
+  },
+  "@reviewerReject": {
+    "description": "Reviewer work tool: reviewerReject"
+  },
+  "@reviewerRequestChanges": {
+    "description": "Reviewer work tool: reviewerRequestChanges"
+  },
+  "@reviewerNote": {
+    "description": "Reviewer work tool: reviewerNote"
+  },
+  "@reviewerPairedEnglish": {
+    "description": "Reviewer work tool: reviewerPairedEnglish"
+  },
+  "@reviewerInvalidPlan": {
+    "description": "Reviewer work tool: reviewerInvalidPlan"
+  },
+  "@reviewerBlockers": {
+    "description": "Reviewer work tool: reviewerBlockers"
+  },
+  "@reviewerReasonRequired": {
+    "description": "Reviewer work tool: reviewerReasonRequired"
+  },
+  "@reviewerStale": {
+    "description": "Reviewer work tool: reviewerStale"
+  },
+  "@reviewerReconfirm": {
+    "description": "Reviewer work tool: reviewerReconfirm"
+  },
+  "@reviewerPreview": {
+    "description": "Reviewer work tool: reviewerPreview"
+  },
+  "@reviewerPreviewEmpty": {
+    "description": "Reviewer work tool: reviewerPreviewEmpty"
+  },
+  "@reviewerReveal": {
+    "description": "Reviewer work tool: reviewerReveal"
+  },
+  "@reviewerEvidence": {
+    "description": "Reviewer work tool: reviewerEvidence"
+  },
+  "@reviewerRole": {
+    "description": "Reviewer work tool: reviewerRole"
+  },
+  "@reviewerBasis": {
+    "description": "Reviewer work tool: reviewerBasis"
+  },
+  "@reviewerSupports": {
+    "description": "Reviewer work tool: reviewerSupports"
+  },
+  "@reviewerNotSupporting": {
+    "description": "Reviewer work tool: reviewerNotSupporting"
+  },
+  "@reviewerEditSentence": {
+    "description": "Reviewer work tool: reviewerEditSentence"
+  },
+  "@reviewerSaveEdits": {
+    "description": "Reviewer work tool: reviewerSaveEdits"
+  },
+  "@reviewerEditAr": {
+    "description": "Reviewer work tool: reviewerEditAr"
+  },
+  "@reviewerEditEn": {
+    "description": "Reviewer work tool: reviewerEditEn"
+  },
+  "@reviewerEditsSaved": {
+    "description": "Reviewer work tool: reviewerEditsSaved"
+  },
+  "@reviewerExercises": {
+    "description": "Reviewer work tool: reviewerExercises"
+  },
+  "@reviewerAnswerKey": {
+    "description": "Reviewer work tool: reviewerAnswerKey"
+  },
+  "@reviewerNoKey": {
+    "description": "Reviewer work tool: reviewerNoKey"
+  },
+  "@reviewerRemoveExercise": {
+    "description": "Reviewer work tool: reviewerRemoveExercise"
+  },
+  "@reviewerQA": {
+    "description": "Reviewer work tool: reviewerQA"
+  },
+  "@reviewerNoIssues": {
+    "description": "Reviewer work tool: reviewerNoIssues"
+  },
+  "@reviewerVisuals": {
+    "description": "Reviewer work tool: reviewerVisuals"
+  },
+  "@reviewerRegenerate": {
+    "description": "Reviewer work tool: reviewerRegenerate"
+  },
+  "@reviewerRegenerationAccepted": {
+    "description": "Reviewer work tool: reviewerRegenerationAccepted"
+  },
+  "@reviewerCompiled": {
+    "description": "Reviewer work tool: reviewerCompiled"
+  },
+  "@reviewerPlaceholder": {
+    "description": "Reviewer work tool: reviewerPlaceholder"
+  },
+  "@reviewerBlindEmpty": {
+    "description": "Reviewer work tool: reviewerBlindEmpty"
+  },
+  "@reviewerLessonA": {
+    "description": "Reviewer work tool: reviewerLessonA"
+  },
+  "@reviewerLessonB": {
+    "description": "Reviewer work tool: reviewerLessonB"
+  },
+  "@reviewerClearer": {
+    "description": "Reviewer work tool: reviewerClearer"
+  },
+  "@reviewerAccurate": {
+    "description": "Reviewer work tool: reviewerAccurate"
+  },
+  "@reviewerHandwritten": {
+    "description": "Reviewer work tool: reviewerHandwritten"
+  },
+  "@reviewerSame": {
+    "description": "Reviewer work tool: reviewerSame"
+  },
+  "@reviewerUnsure": {
+    "description": "Reviewer work tool: reviewerUnsure"
+  },
+  "@reviewerSubmit": {
+    "description": "Reviewer work tool: reviewerSubmit"
+  },
+  "@reviewerNotMeasured": {
+    "description": "Reviewer work tool: reviewerNotMeasured"
+  },
+  "@reviewerLearning": {
+    "description": "Reviewer work tool: reviewerLearning"
+  },
+  "@reviewerPrePost": {
+    "description": "Reviewer work tool: reviewerPrePost"
+  },
+  "@reviewerBefore": {
+    "description": "Reviewer work tool: reviewerBefore"
+  },
+  "@reviewerAfter": {
+    "description": "Reviewer work tool: reviewerAfter"
+  },
+  "@reviewerActivated": {
+    "description": "Reviewer work tool: reviewerActivated"
+  },
+  "@reviewerResolved": {
+    "description": "Reviewer work tool: reviewerResolved"
+  },
+  "@reviewerResolutionRate": {
+    "description": "Reviewer work tool: reviewerResolutionRate"
+  },
+  "@reviewerUnitsStarted": {
+    "description": "Reviewer work tool: reviewerUnitsStarted"
+  },
+  "@reviewerUnitsCompleted": {
+    "description": "Reviewer work tool: reviewerUnitsCompleted"
+  },
+  "@reviewerFactory": {
+    "description": "Reviewer work tool: reviewerFactory"
+  },
+  "@reviewerPublished": {
+    "description": "Reviewer work tool: reviewerPublished"
+  },
+  "@reviewerGenerationMinutes": {
+    "description": "Reviewer work tool: reviewerGenerationMinutes"
+  },
+  "@reviewerReviewMinutes": {
+    "description": "Reviewer work tool: reviewerReviewMinutes"
+  },
+  "@reviewerResponses": {
+    "description": "Reviewer work tool: reviewerResponses"
+  },
+  "@reviewerIdentified": {
+    "description": "Reviewer work tool: reviewerIdentified"
+  },
+  "@reviewerPreferred": {
+    "description": "Reviewer work tool: reviewerPreferred"
+  },
+  "@reviewerBenchmark": {
+    "description": "Reviewer work tool: reviewerBenchmark"
+  },
+  "@reviewerAccuracy": {
+    "description": "Reviewer work tool: reviewerAccuracy"
+  },
+  "@reviewerUnsupported": {
+    "description": "Reviewer work tool: reviewerUnsupported"
+  },
+  "@reviewerAbstention": {
+    "description": "Reviewer work tool: reviewerAbstention"
+  },
+  "@reviewerReferral": {
+    "description": "Reviewer work tool: reviewerReferral"
+  },
+  "@reviewerNoMetrics": {
+    "description": "Reviewer work tool: reviewerNoMetrics"
+  },
+  "@reviewerParticipants": {
+    "description": "Reviewer work tool: reviewerParticipants"
+  },
+  "@reviewerValidation": {
+    "description": "Reviewer work tool: reviewerValidation"
+  },
+  "@reviewerStage": {
+    "description": "Reviewer work tool: reviewerStage"
+  },
+  "@reviewerEditPlan": {
+    "description": "Reviewer work tool: reviewerEditPlan"
+  },
+  "@reviewerSavePlan": {
+    "description": "Reviewer work tool: reviewerSavePlan"
+  },
+  "@reviewerAdd": {
+    "description": "Reviewer work tool: reviewerAdd"
+  },
+  "@reviewerRemove": {
+    "description": "Reviewer work tool: reviewerRemove"
+  },
+  "@reviewerCommaIds": {
+    "description": "Reviewer work tool: reviewerCommaIds"
+  },
+  "@reviewerPending": {
+    "description": "Reviewer work tool: reviewerPending"
+  },
+  "@reviewerDone": {
+    "description": "Reviewer work tool: reviewerDone"
+  },
+  "@reviewerSkipped": {
+    "description": "Reviewer work tool: reviewerSkipped"
+  },
+  "@reviewerBlocker": {
+    "description": "Reviewer work tool: reviewerBlocker"
+  },
+  "@reviewerWarning": {
+    "description": "Reviewer work tool: reviewerWarning"
+  },
+  "@reviewerInfo": {
+    "description": "Reviewer work tool: reviewerInfo"
+  },
+  "@reviewerValueRunning": {
+    "description": "Reviewer work tool: reviewerValueRunning"
+  },
+  "@reviewerValueAwaitingGate1": {
+    "description": "Reviewer work tool: reviewerValueAwaitingGate1"
+  },
+  "@reviewerValueAwaitingGate2": {
+    "description": "Reviewer work tool: reviewerValueAwaitingGate2"
+  },
+  "@reviewerValuePublished": {
+    "description": "Reviewer work tool: reviewerValuePublished"
+  },
+  "@reviewerValueRejected": {
+    "description": "Reviewer work tool: reviewerValueRejected"
+  },
+  "@reviewerValueFailed": {
+    "description": "Reviewer work tool: reviewerValueFailed"
+  },
+  "@reviewerValueConcept": {
+    "description": "Reviewer work tool: reviewerValueConcept"
+  },
+  "@reviewerValueStory": {
+    "description": "Reviewer work tool: reviewerValueStory"
+  },
+  "@reviewerValuePractice": {
+    "description": "Reviewer work tool: reviewerValuePractice"
+  },
+  "@reviewerValueFoundational": {
+    "description": "Reviewer work tool: reviewerValueFoundational"
+  },
+  "@reviewerValueStandard": {
+    "description": "Reviewer work tool: reviewerValueStandard"
+  },
+  "@reviewerValueFocused": {
+    "description": "Reviewer work tool: reviewerValueFocused"
+  },
+  "@reviewerValueExplorer": {
+    "description": "Reviewer work tool: reviewerValueExplorer"
+  },
+  "@reviewerValueNewMuslim": {
+    "description": "Reviewer work tool: reviewerValueNewMuslim"
+  },
+  "@reviewerValueClaim": {
+    "description": "Reviewer work tool: reviewerValueClaim"
+  },
+  "@reviewerValueFraming": {
+    "description": "Reviewer work tool: reviewerValueFraming"
+  },
+  "@reviewerValueHypothetical": {
+    "description": "Reviewer work tool: reviewerValueHypothetical"
+  },
+  "@reviewerValueInstruction": {
+    "description": "Reviewer work tool: reviewerValueInstruction"
+  },
+  "@reviewerValueQuestion": {
+    "description": "Reviewer work tool: reviewerValueQuestion"
+  },
+  "@reviewerValueSource": {
+    "description": "Reviewer work tool: reviewerValueSource"
+  },
+  "@reviewerValueReasoning": {
+    "description": "Reviewer work tool: reviewerValueReasoning"
+  },
+  "@reviewerValueObservation": {
+    "description": "Reviewer work tool: reviewerValueObservation"
+  },
+  "@reviewerValueInference": {
+    "description": "Reviewer work tool: reviewerValueInference"
+  },
+  "@reviewerValueTestimony": {
+    "description": "Reviewer work tool: reviewerValueTestimony"
+  },
+  "@reviewerValueHistoricalEvidence": {
+    "description": "Reviewer work tool: reviewerValueHistoricalEvidence"
+  },
+  "@reviewerValueCausalReasoning": {
+    "description": "Reviewer work tool: reviewerValueCausalReasoning"
+  },
+  "@reviewerValueComparison": {
+    "description": "Reviewer work tool: reviewerValueComparison"
+  },
+  "@reviewerValueScenario": {
+    "description": "Reviewer work tool: reviewerValueScenario"
+  },
+  "@reviewerValuePrediction": {
+    "description": "Reviewer work tool: reviewerValuePrediction"
+  },
+  "@reviewerValueExample": {
+    "description": "Reviewer work tool: reviewerValueExample"
+  },
+  "@reviewerValueDemonstration": {
+    "description": "Reviewer work tool: reviewerValueDemonstration"
+  },
+  "@reviewerValueExplanation": {
+    "description": "Reviewer work tool: reviewerValueExplanation"
+  },
+  "@reviewerValueEvidence": {
+    "description": "Reviewer work tool: reviewerValueEvidence"
+  },
+  "@reviewerValueReflection": {
+    "description": "Reviewer work tool: reviewerValueReflection"
+  },
+  "@reviewerValueTakeaway": {
+    "description": "Reviewer work tool: reviewerValueTakeaway"
+  },
+  "@reviewerValueSupported": {
+    "description": "Reviewer work tool: reviewerValueSupported"
+  },
+  "@reviewerValueDropped": {
+    "description": "Reviewer work tool: reviewerValueDropped"
+  },
+  "@reviewerValueExact": {
+    "description": "Reviewer work tool: reviewerValueExact"
+  },
+  "@reviewerValuePartial": {
+    "description": "Reviewer work tool: reviewerValuePartial"
+  },
+  "@reviewerValueStretched": {
+    "description": "Reviewer work tool: reviewerValueStretched"
+  },
+  "@reviewerValueUnrelated": {
+    "description": "Reviewer work tool: reviewerValueUnrelated"
+  },
+  "@reviewerValueUnknown": {
+    "description": "Reviewer work tool: reviewerValueUnknown"
+  },
+  "@reviewerValuePlan": {
+    "description": "Reviewer work tool: reviewerValuePlan"
+  },
+  "@reviewerValueDecompose": {
+    "description": "Reviewer work tool: reviewerValueDecompose"
+  },
+  "@reviewerValueRetrieve": {
+    "description": "Reviewer work tool: reviewerValueRetrieve"
+  },
+  "@reviewerValueVerify": {
+    "description": "Reviewer work tool: reviewerValueVerify"
+  },
+  "@reviewerValueWrite": {
+    "description": "Reviewer work tool: reviewerValueWrite"
+  },
+  "@reviewerValueExercises": {
+    "description": "Reviewer work tool: reviewerValueExercises"
+  },
+  "@reviewerValueVisuals": {
+    "description": "Reviewer work tool: reviewerValueVisuals"
+  },
+  "@reviewerValueSceneAuthor": {
+    "description": "Reviewer work tool: reviewerValueSceneAuthor"
+  },
+  "@reviewerValueSceneRender": {
+    "description": "Reviewer work tool: reviewerValueSceneRender"
+  },
+  "@reviewerValueLocalize": {
+    "description": "Reviewer work tool: reviewerValueLocalize"
+  },
+  "@reviewerValueQa": {
+    "description": "Reviewer work tool: reviewerValueQa"
+  },
+  "@reviewerValuePublish": {
+    "description": "Reviewer work tool: reviewerValuePublish"
+  },
+  "@reviewerValuePending": {
+    "description": "Reviewer work tool: reviewerValuePending"
+  },
+  "@reviewerValueDone": {
+    "description": "Reviewer work tool: reviewerValueDone"
+  },
+  "@reviewerValueSkipped": {
+    "description": "Reviewer work tool: reviewerValueSkipped"
+  },
+  "@reviewerValueUnsupportedSentence": {
+    "description": "Reviewer work tool: reviewerValueUnsupportedSentence"
+  },
+  "@reviewerValueFatwaLike": {
+    "description": "Reviewer work tool: reviewerValueFatwaLike"
+  },
+  "@reviewerValueReadingLevel": {
+    "description": "Reviewer work tool: reviewerValueReadingLevel"
+  },
+  "@reviewerValueConsistency": {
+    "description": "Reviewer work tool: reviewerValueConsistency"
+  },
+  "@reviewerValueSensitive": {
+    "description": "Reviewer work tool: reviewerValueSensitive"
+  },
+  "@reviewerValueImagePolicy": {
+    "description": "Reviewer work tool: reviewerValueImagePolicy"
+  },
+  "@reviewerValueValidation": {
+    "description": "Reviewer work tool: reviewerValueValidation"
+  },
+  "@reviewerValuePedagogy": {
+    "description": "Reviewer work tool: reviewerValuePedagogy"
+  },
+  "@reviewerValueBeliefGrading": {
+    "description": "Reviewer work tool: reviewerValueBeliefGrading"
+  },
+  "@reviewerValueCircularReasoning": {
+    "description": "Reviewer work tool: reviewerValueCircularReasoning"
+  },
+  "@reviewerValueLocalization": {
+    "description": "Reviewer work tool: reviewerValueLocalization"
+  },
+  "@reviewerValueScholarlyReview": {
+    "description": "Reviewer work tool: reviewerValueScholarlyReview"
+  },
+  "@reviewerValueNeedsTafsir": {
+    "description": "Reviewer work tool: reviewerValueNeedsTafsir"
+  },
+  "@reviewerValueContextDependent": {
+    "description": "Reviewer work tool: reviewerValueContextDependent"
+  },
+  "@reviewerValueAddresseeSpecific": {
+    "description": "Reviewer work tool: reviewerValueAddresseeSpecific"
+  },
+  "@reviewerValueGeneralisedFromSpecific": {
+    "description": "Reviewer work tool: reviewerValueGeneralisedFromSpecific"
+  },
+  "@reviewerValueBeyondSource": {
+    "description": "Reviewer work tool: reviewerValueBeyondSource"
+  },
+  "@reviewerValueScholarlyDisagreement": {
+    "description": "Reviewer work tool: reviewerValueScholarlyDisagreement"
+  },
+  "@reviewerValueSingleOpinionAsConsensus": {
+    "description": "Reviewer work tool: reviewerValueSingleOpinionAsConsensus"
+  },
+  "@reviewerValueOversimplified": {
+    "description": "Reviewer work tool: reviewerValueOversimplified"
+  },
+  "@reviewerValueTranslationSensitive": {
+    "description": "Reviewer work tool: reviewerValueTranslationSensitive"
+  },
+  "@reviewerValueRaqeeb": {
+    "description": "Reviewer work tool: reviewerValueRaqeeb"
+  },
+  "@reviewerValueBaselineLlm": {
+    "description": "Reviewer work tool: reviewerValueBaselineLlm"
+  },
+  "@reviewerValueGeneralKnowledge": {
+    "description": "Reviewer work tool: reviewerValueGeneralKnowledge"
+  },
+  "@reviewerValueTextExplanation": {
+    "description": "Reviewer work tool: reviewerValueTextExplanation"
+  },
+  "@reviewerValueVerification": {
+    "description": "Reviewer work tool: reviewerValueVerification"
+  },
+  "@reviewerValueDifferingOpinions": {
+    "description": "Reviewer work tool: reviewerValueDifferingOpinions"
+  },
+  "@reviewerValuePersonalFatwa": {
+    "description": "Reviewer work tool: reviewerValuePersonalFatwa"
+  },
+  "@reviewerValueDoubtOrDeepCreed": {
+    "description": "Reviewer work tool: reviewerValueDoubtOrDeepCreed"
+  },
+  "@reviewerValueSensitiveHuman": {
+    "description": "Reviewer work tool: reviewerValueSensitiveHuman"
+  },
+  "@reviewerValueOutOfScope": {
+    "description": "Reviewer work tool: reviewerValueOutOfScope"
+  },
+  "reviewerStatusStage": "{status} · {stage}",
+  "@reviewerStatusStage": {
+    "description": "Reviewer work tool formatted value",
+    "placeholders": {
+      "status": {
+        "type": "String"
+      },
+      "stage": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewerIdsPair": "{left} ← {right}",
+  "@reviewerIdsPair": {
+    "description": "Reviewer work tool formatted value",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "right": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewerPercentValue": "{label} · {value}٪",
+  "@reviewerPercentValue": {
+    "description": "Reviewer work tool formatted value",
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewerParticipantsValue": "المشاركون: {value}",
+  "@reviewerParticipantsValue": {
+    "description": "Reviewer work tool formatted value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewerPercentageNumber": "{value}٪",
+  "@reviewerPercentageNumber": {
+    "description": "Reviewer metric percentage, with localized digits.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}

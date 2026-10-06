@@ -1,0 +1,333 @@
+{
+  "@@locale": "en",
+  "communityNoLeagueTitle": "Earn embers to join this week’s league",
+  "@communityNoLeagueTitle": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "communityNoFriends": "Invite a friend to learn together",
+  "@communityNoFriends": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "communityNoQuests": "You’re all caught up for today",
+  "@communityNoQuests": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "communityPromotionCount": "Top {count} move up",
+  "@communityPromotionCount": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "communityTopTier": "Keep your light shining",
+  "@communityTopTier": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "communityQuestReward": "+{count} embers",
+  "@communityQuestReward": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "communityResetsIn": "Resets in {hours}h",
+  "@communityResetsIn": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "friendsAcceptCode": "Enter an invite code",
+  "@friendsAcceptCode": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsAccept": "Accept invite",
+  "@friendsAccept": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsShare": "Share invite",
+  "@friendsShare": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsCode": "Invite code",
+  "@friendsCode": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsInviteInvalid": "That code doesn’t work. Check it and try again.",
+  "@friendsInviteInvalid": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsAlreadyFriends": "You’re already friends.",
+  "@friendsAlreadyFriends": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsRemove": "Remove friend",
+  "@friendsRemove": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsRemoveBody": "Remove {name} from your friends?",
+  "@friendsRemoveBody": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "friendsAccepted": "You’re now learning together",
+  "@friendsAccepted": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsOnline": "Online",
+  "@friendsOnline": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsOffline": "Offline",
+  "@friendsOffline": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengePracticeBot": "Practice with the bot",
+  "@challengePracticeBot": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeGroup": "Challenge friends",
+  "@challengeGroup": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeBotFill": "Fill empty seats with practice bots",
+  "@challengeBotFill": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeInvitations": "Invitations",
+  "@challengeInvitations": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeNoInvitations": "No invitations right now",
+  "@challengeNoInvitations": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeAccept": "Join challenge",
+  "@challengeAccept": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeDecline": "Decline",
+  "@challengeDecline": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeReconnecting": "Reconnecting…",
+  "@challengeReconnecting": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeConnectionLost": "Connection lost",
+  "@challengeConnectionLost": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeNotJoinableTitle": "This challenge has already started or ended",
+  "@challengeNotJoinableTitle": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeDisconnected": "{name} is reconnecting · {seconds}s",
+  "@challengeDisconnected": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "String"
+      }
+    }
+  },
+  "challengeAnswered": "Answer locked",
+  "@challengeAnswered": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeDraw": "You lit the way together!",
+  "@challengeDraw": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeSeconds": "{value}s",
+  "@challengeSeconds": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "challengeAsync": "Play now; your friend plays later",
+  "@challengeAsync": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeWaitingFriend": "Waiting for your friend",
+  "@challengeWaitingFriend": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeChooseFriends": "Choose up to three friends",
+  "@challengeChooseFriends": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeSummary": "Review answers",
+  "@challengeSummary": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeInviteFrom": "Challenge from {name}",
+  "@challengeInviteFrom": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsDeleteAccount": "Delete account",
+  "settingsDeleteAccountBody": "Delete your account and learning progress? This cannot be undone. Your data will be removed within 30 days.",
+  "@settingsDeleteAccount": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@settingsDeleteAccountBody": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "raqeebHistory": "Conversations",
+  "@raqeebHistory": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "raqeebNoHistory": "Your conversations will appear here",
+  "@raqeebNoHistory": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaCamera": "Take a photo",
+  "@mediaCamera": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaStopRecording": "Stop recording",
+  "@mediaStopRecording": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaRecord": "Your turn",
+  "@mediaRecord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaRecordingTime": "Recording · {seconds} / {limit}s",
+  "@mediaRecordingTime": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "seconds": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "mediaMicrophoneDenied": "Allow microphone access to record. You can change this in settings.",
+  "@mediaMicrophoneDenied": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaOpenSettings": "Open settings",
+  "@mediaOpenSettings": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaCaptureFailed": "We couldn’t read that recording or file. Try again.",
+  "@mediaCaptureFailed": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaCountLimit": "You can attach up to three images, one document and one voice recording.",
+  "@mediaCountLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaImageLimit": "Images can be up to 8 MB",
+  "@mediaImageLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaDocumentLimit": "Documents can be up to 10 MB",
+  "@mediaDocumentLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaVoiceLimit": "Voice recordings can be up to 60 seconds and 10 MB",
+  "@mediaVoiceLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaRecitationLimit": "Recitations can be up to 30 seconds and 5 MB",
+  "@mediaRecitationLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationChecking": "Checking…",
+  "@recitationChecking": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationBusy": "Recitation checking is busy. Try again or skip.",
+  "@recitationBusy": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationAgain": "Record again",
+  "@recitationAgain": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationExtraWord": "An extra word",
+  "@recitationExtraWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationContinue": "Continue with this reading",
+  "@recitationContinue": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationWordFeedback": "{word}: {result}",
+  "@recitationWordFeedback": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      },
+      "result": {
+        "type": "String"
+      }
+    }
+  },
+  "recitationCorrectWord": "Correct",
+  "@recitationCorrectWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationMissingWord": "Missing",
+  "@recitationMissingWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationSubstitutedWord": "Try this word again",
+  "@recitationSubstitutedWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationRetry": "Try checking again",
+  "@recitationRetry": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "communityProgressCount": "{current}/{target}",
+  "@communityProgressCount": {
+    "description": "Progress count with locale-formatted values",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "recitationDeveloperOutcome": "Synthetic recitation outcome (development only)",
+  "@recitationDeveloperOutcome": {
+    "description": "Developer-only synthetic fixture controls; Arabic pending review."
+  },
+  "recitationDeveloperMissingExtra": "Missing and extra words",
+  "@recitationDeveloperMissingExtra": {
+    "description": "Developer-only synthetic fixture controls; Arabic pending review."
+  },
+  "recitationDeveloperUnclear": "Unclear recording",
+  "@recitationDeveloperUnclear": {
+    "description": "Developer-only synthetic fixture controls; Arabic pending review."
+  }
+}

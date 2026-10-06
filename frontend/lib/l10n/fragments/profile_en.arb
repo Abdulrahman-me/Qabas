@@ -1,0 +1,114 @@
+{
+  "@@locale": "en",
+  "@profileAchievementsTitle": {
+    "description": "Prototype interface copy: profile / achievementsTitle. Preserve the original warm wording."
+  },
+  "@profileEditName": {
+    "description": "Prototype interface copy: profile / editName. Preserve the original warm wording."
+  },
+  "@profileJoined": {
+    "description": "Prototype interface copy: profile / joined. Preserve the original warm wording.",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "@profileLearnerName": {
+    "description": "Prototype interface copy: profile / learnerName. Preserve the original warm wording."
+  },
+  "@profileNewBadge": {
+    "description": "Prototype interface copy: profile / newBadge. Preserve the original warm wording."
+  },
+  "@profilePrivateBadge": {
+    "description": "Prototype interface copy: profile / privateBadge. Preserve the original warm wording."
+  },
+  "@profileProfileTitle": {
+    "description": "Prototype interface copy: profile / profileTitle. Preserve the original warm wording."
+  },
+  "@profileSave": {
+    "description": "Prototype interface copy: profile / save. Preserve the original warm wording."
+  },
+  "@profileSettings": {
+    "description": "Prototype interface copy: profile / settings. Preserve the original warm wording."
+  },
+  "@profileStatBadges": {
+    "description": "Prototype interface copy: profile / statBadges. Preserve the original warm wording."
+  },
+  "@profileStatLeague": {
+    "description": "Prototype interface copy: profile / statLeague. Preserve the original warm wording."
+  },
+  "@profileStatLessons": {
+    "description": "Prototype interface copy: profile / statLessons. Preserve the original warm wording."
+  },
+  "@profileStatStreak": {
+    "description": "Prototype interface copy: profile / statStreak. Preserve the original warm wording."
+  },
+  "@profileStatTotal": {
+    "description": "Prototype interface copy: profile / statTotal. Preserve the original warm wording."
+  },
+  "@profileStatWords": {
+    "description": "Prototype interface copy: profile / statWords. Preserve the original warm wording."
+  },
+  "@profileStatistics": {
+    "description": "Prototype interface copy: profile / statistics. Preserve the original warm wording."
+  },
+  "@profileUnlockedOf": {
+    "description": "Prototype interface copy: profile / unlockedOf. Preserve the original warm wording.",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "profileAchievementsTitle": "Achievements",
+  "profileEditName": "Your name",
+  "profileJoined": "Joined {month}",
+  "profileLearnerName": "Learner",
+  "profileNewBadge": "New badge!",
+  "profilePrivateBadge": "Private",
+  "profileProfileTitle": "Profile",
+  "profileSave": "Save",
+  "profileSettings": "Settings",
+  "profileStatBadges": "Badges",
+  "profileStatLeague": "League",
+  "profileStatLessons": "Lessons",
+  "profileStatStreak": "Day streak",
+  "profileStatTotal": "Total embers",
+  "profileStatWords": "Words mastered",
+  "profileStatistics": "Statistics",
+  "profileUnlockedOf": "{current} of {total} unlocked",
+  "profileNameValidation": "Use 2–24 characters.",
+  "@profileNameValidation": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  },
+  "profileNoLeague": "No league yet",
+  "@profileNoLeague": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  },
+  "profileLeagueRank": "Rank {rank}",
+  "@profileLeagueRank": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true,
+    "placeholders": {
+      "rank": {
+        "type": "String"
+      }
+    }
+  },
+  "profileNoWords": "Your words will appear here as you learn.",
+  "@profileNoWords": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  },
+  "profileNoAchievements": "Your first badge is waiting ahead.",
+  "@profileNoAchievements": {
+    "description": "Phase 10 profile interface copy.",
+    "x-review": true
+  }
+}

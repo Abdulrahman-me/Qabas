@@ -1,0 +1,333 @@
+{
+  "@@locale": "ar",
+  "communityNoLeagueTitle": "اجمع جمرات لتنضم إلى دوري هذا الأسبوع",
+  "@communityNoLeagueTitle": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "communityNoFriends": "ادعُ صديقًا لتتعلموا معًا",
+  "@communityNoFriends": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "communityNoQuests": "أنجزت مهام اليوم",
+  "@communityNoQuests": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "communityPromotionCount": "أفضل {count} يصعدون",
+  "@communityPromotionCount": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "communityTopTier": "حافظ على نورك",
+  "@communityTopTier": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "communityQuestReward": "+{count} جمرة",
+  "@communityQuestReward": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "communityResetsIn": "تتجدد بعد {hours} س",
+  "@communityResetsIn": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "friendsAcceptCode": "أدخل رمز الدعوة",
+  "@friendsAcceptCode": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsAccept": "قبول الدعوة",
+  "@friendsAccept": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsShare": "مشاركة الدعوة",
+  "@friendsShare": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsCode": "رمز الدعوة",
+  "@friendsCode": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsInviteInvalid": "هذا الرمز لا يعمل. تحقق منه وأعد المحاولة.",
+  "@friendsInviteInvalid": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsAlreadyFriends": "أنتم أصدقاء بالفعل.",
+  "@friendsAlreadyFriends": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsRemove": "إزالة الصديق",
+  "@friendsRemove": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsRemoveBody": "هل تريد إزالة {name} من أصدقائك؟",
+  "@friendsRemoveBody": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "friendsAccepted": "يمكنكم الآن التعلم معًا",
+  "@friendsAccepted": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsOnline": "متصل",
+  "@friendsOnline": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "friendsOffline": "غير متصل",
+  "@friendsOffline": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengePracticeBot": "تدرّب مع المدرب",
+  "@challengePracticeBot": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeGroup": "تحدَّ الأصدقاء",
+  "@challengeGroup": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeBotFill": "أكمل المقاعد الفارغة بمدربين",
+  "@challengeBotFill": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeInvitations": "الدعوات",
+  "@challengeInvitations": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeNoInvitations": "لا توجد دعوات حاليًا",
+  "@challengeNoInvitations": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeAccept": "انضم إلى التحدي",
+  "@challengeAccept": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeDecline": "رفض",
+  "@challengeDecline": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeReconnecting": "جارٍ إعادة الاتصال…",
+  "@challengeReconnecting": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeConnectionLost": "انقطع الاتصال",
+  "@challengeConnectionLost": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeNotJoinableTitle": "بدأ هذا التحدي أو انتهى بالفعل",
+  "@challengeNotJoinableTitle": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeDisconnected": "{name} يعيد الاتصال · {seconds} ث",
+  "@challengeDisconnected": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "String"
+      }
+    }
+  },
+  "challengeAnswered": "تم تثبيت الإجابة",
+  "@challengeAnswered": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeDraw": "أضأتم الطريق معًا!",
+  "@challengeDraw": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeSeconds": "{value} ث",
+  "@challengeSeconds": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "challengeAsync": "العب الآن؛ صديقك يلعب لاحقًا",
+  "@challengeAsync": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeWaitingFriend": "في انتظار صديقك",
+  "@challengeWaitingFriend": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeChooseFriends": "اختر حتى ثلاثة أصدقاء",
+  "@challengeChooseFriends": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeSummary": "مراجعة الإجابات",
+  "@challengeSummary": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "challengeInviteFrom": "تحدٍّ من {name}",
+  "@challengeInviteFrom": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsDeleteAccount": "حذف الحساب",
+  "settingsDeleteAccountBody": "هل تريد حذف حسابك وتقدمك في التعلم؟ لا يمكن التراجع عن ذلك. ستُحذف بياناتك خلال ٣٠ يومًا.",
+  "@settingsDeleteAccount": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "@settingsDeleteAccountBody": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "raqeebHistory": "المحادثات",
+  "@raqeebHistory": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "raqeebNoHistory": "ستظهر محادثاتك هنا",
+  "@raqeebNoHistory": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaCamera": "التقط صورة",
+  "@mediaCamera": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaStopRecording": "إيقاف التسجيل",
+  "@mediaStopRecording": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaRecord": "دورك الآن",
+  "@mediaRecord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaRecordingTime": "جارٍ التسجيل · {seconds} / {limit} ث",
+  "@mediaRecordingTime": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "seconds": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "mediaMicrophoneDenied": "اسمح بالوصول إلى الميكروفون للتسجيل. يمكنك تغيير ذلك في الإعدادات.",
+  "@mediaMicrophoneDenied": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaOpenSettings": "فتح الإعدادات",
+  "@mediaOpenSettings": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaCaptureFailed": "تعذّر قراءة هذا التسجيل أو الملف. أعد المحاولة.",
+  "@mediaCaptureFailed": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaCountLimit": "يمكنك إرفاق ثلاث صور وملف واحد وتسجيل صوتي واحد.",
+  "@mediaCountLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaImageLimit": "يمكن أن يصل حجم الصور إلى ٨ ميجابايت",
+  "@mediaImageLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaDocumentLimit": "يمكن أن يصل حجم الملفات إلى ١٠ ميجابايت",
+  "@mediaDocumentLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaVoiceLimit": "يمكن أن تصل التسجيلات الصوتية إلى ٦٠ ثانية و١٠ ميجابايت",
+  "@mediaVoiceLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "mediaRecitationLimit": "يمكن أن تصل التلاوة إلى ٣٠ ثانية و٥ ميجابايت",
+  "@mediaRecitationLimit": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationChecking": "جارٍ التحقق…",
+  "@recitationChecking": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationBusy": "خدمة التحقق من التلاوة مشغولة. أعد المحاولة أو تخطَّ.",
+  "@recitationBusy": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationAgain": "سجّل مرة أخرى",
+  "@recitationAgain": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationExtraWord": "كلمة زائدة",
+  "@recitationExtraWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationContinue": "تابع بهذه القراءة",
+  "@recitationContinue": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationWordFeedback": "{word}: {result}",
+  "@recitationWordFeedback": {
+    "description": "Phase 13 interface copy; Arabic pending owner review.",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      },
+      "result": {
+        "type": "String"
+      }
+    }
+  },
+  "recitationCorrectWord": "صحيح",
+  "@recitationCorrectWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationMissingWord": "ناقص",
+  "@recitationMissingWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationSubstitutedWord": "أعد هذه الكلمة",
+  "@recitationSubstitutedWord": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "recitationRetry": "أعد التحقق",
+  "@recitationRetry": {
+    "description": "Phase 13 interface copy; Arabic pending owner review."
+  },
+  "communityProgressCount": "{current}/{target}",
+  "@communityProgressCount": {
+    "description": "Progress count with locale-formatted values",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "recitationDeveloperOutcome": "نتيجة تلاوة تجريبية (للتطوير فقط)",
+  "@recitationDeveloperOutcome": {
+    "description": "Developer-only synthetic fixture controls; Arabic pending review."
+  },
+  "recitationDeveloperMissingExtra": "كلمات ناقصة وزائدة",
+  "@recitationDeveloperMissingExtra": {
+    "description": "Developer-only synthetic fixture controls; Arabic pending review."
+  },
+  "recitationDeveloperUnclear": "تسجيل غير واضح",
+  "@recitationDeveloperUnclear": {
+    "description": "Developer-only synthetic fixture controls; Arabic pending review."
+  }
+}
