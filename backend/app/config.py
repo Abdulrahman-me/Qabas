@@ -69,6 +69,9 @@ class Settings(BaseSettings):
 
     # LLM and media providers (integrated in later phases).
     anthropic_api_key: SecretStr | None = None
+    openai_api_key: SecretStr | None = None
+    factory_llm_model: str | None = None  # preferred pilot: gpt-6.1-sol; confirm account access before activation
+    raqeeb_llm_model: str | None = None  # explicit owner choice; otherwise preserve existing tiers
     llm_model_strong: str = "claude-opus-5-5"
     llm_model_fast: str = "claude-haiku-4-5"
     # Per-request timeout; the SDK retries transport errors, 429 and 5xx with backoff this many times (Phase 11).
@@ -86,7 +89,7 @@ class Settings(BaseSettings):
     stt_provider: str | None = None
     stt_api_key: SecretStr | None = None
     stt_base_url: str | None = None  # approved OpenAI-compatible hosted transcription service (O-03/O-09)
-    stt_model: str = "whisper-large-v3"
+    stt_model: str = "whisper-1"
     raqeeb_input_policy_path: Path = BACKEND_DIR / "content" / "raqeeb_input_policy.yaml"
     raqeeb_input_timeout_seconds: float = Field(default=10, gt=0, le=30)
     raqeeb_input_memory_mb: int = Field(default=768, ge=256, le=2048)

@@ -1,4 +1,8 @@
 schema: qabas.media_policy/1
+scene_outputs:
+  # Programmatic scene/frame/fallback output: no image-provider credential is required.
+  # Actual asset rights and normative renderer/style review remain mandatory.
+  licence: {status: pending, approved_by: null, approved_on: null}
 scene_author:
   # Candidates prepared by engineering (D-157), not approvals: the token mapping is derived mechanically from the
   # delivered QColors (scripts/scene_design_tokens.py; naming pending renderer-owner confirmation, O-02) and the

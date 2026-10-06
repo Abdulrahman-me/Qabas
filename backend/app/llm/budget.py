@@ -42,6 +42,8 @@ class UsageRecord:
                 + self.cache_read_input_tokens)
 
     def cost_usd(self) -> float | None:
+        if self.model == "gpt-6.1-sol" and self.input_tokens + self.cache_read_input_tokens > 272_000:
+            return None  # extended-context rates differ; never report standard pricing for this tier
         if self.pricing_mode == "batch":
             return None  # Batch pricing/terms are not approved in O-03; never apply assumed discounts.
         policy = load_models().get(self.model)

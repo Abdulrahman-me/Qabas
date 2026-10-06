@@ -14,7 +14,7 @@ from app.media import jobs, objects
 from app.media.audio import mp3_duration
 from app.media.codecs import webp
 from app.media.errors import MediaInvalid, MediaNotConfigured
-from app.media.policy import POLICY, approved, provider_policy, style_inputs
+from app.media.policy import POLICY, approved, policy, provider_policy, style_inputs
 from app.media.providers import OpenAIImages, OpenAISpeech
 from app.media.stage_models import ImagePrompt, VisualAudit
 from app.media.types import ImageProvider, NarrationProvider, ScenePreviewer
@@ -51,6 +51,24 @@ class MediaService:
         if self.image_provider is None:
             self.image_provider = OpenAIImages(ctx.settings)
         return self.image_provider, style, terms
+
+    def scene_inputs(self, ctx: StageContext) -> tuple[dict[str, Any], dict[str, Any]]:
+        """Code-rendered output needs reviewed style/rights, not an image-provider key.
+
+        Explicit injected fixture terms remain test-only; actual scene output rights have
+        their own policy entry and cannot be authorized by an unrelated provider licence.
+        """
+        path = ctx.settings.media_policy_path or POLICY
+        style = self.style if self.style is not None else style_inputs(path)
+        document = policy(path)
+        if document.get("fixture_only") and not ctx.settings.is_dev_like:
+            raise MediaNotConfigured("synthetic scene rights cannot enable staging or production output")
+        terms = (self.image_terms if ctx.settings.is_dev_like and self.image_terms is not None
+                 else document.get("scene_outputs", {}))
+        if "licence" not in terms:
+            raise MediaNotConfigured("code-rendered scene distribution approval is pending")
+        approved(terms["licence"], "code-rendered scene distribution licence")
+        return style, terms
 
     async def artwork(
         self, ctx: StageContext, *, name: str, brief: dict[str, Any], content: dict[str, Any], width: int, height: int

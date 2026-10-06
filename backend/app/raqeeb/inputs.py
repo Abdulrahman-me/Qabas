@@ -6,6 +6,7 @@ import base64
 import json
 import os
 import signal
+import ssl
 import sys
 import time
 from pathlib import Path
@@ -35,15 +36,16 @@ class InputUnreadable(Exception):
 
 
 class HostedWhisper:
-    """Whisper large-v3 behind an approved OpenAI-compatible endpoint; no recitation model reuse."""
+    """Hosted Whisper through the existing intake; Quran-specific recitation remains local."""
     def __init__(self, settings: Settings, *, transport: httpx.AsyncBaseTransport | None = None,
                  retry: RetryPolicy | None = None) -> None:
         self.settings, self.transport, self.retry = settings, transport, retry or RetryPolicy()
 
     def approval(self) -> None:
         s = self.settings
-        if not s.stt_provider or not s.stt_base_url or not s.stt_api_key or s.stt_model != "whisper-large-v3":
-            raise LLMNotConfigured("Hosted Whisper large-v3 is not configured (O-03)")
+        if not s.stt_provider or not s.stt_base_url or not s.stt_api_key or s.stt_model not in {
+                "whisper-1", "whisper-large-v3"}:
+            raise LLMNotConfigured("Hosted Whisper is not configured (O-03)")
         parsed = urlsplit(s.stt_base_url)
         if parsed.scheme != "https" or not parsed.netloc or parsed.username or parsed.password or parsed.query:
             raise LLMNotConfigured("STT endpoint must be a configured HTTPS origin")
@@ -69,6 +71,7 @@ class HostedWhisper:
         breaker.before_call()
         try:
             async with httpx.AsyncClient(base_url=self.settings.stt_base_url.rstrip("/") + "/",
+                verify=ssl.create_default_context(),
                 transport=self.transport, timeout=default_timeout(), follow_redirects=False,
                 headers={"Authorization": f"Bearer {self.settings.stt_api_key.get_secret_value()}"}) as client:
                 for attempt in range(self.retry.retries + 1):

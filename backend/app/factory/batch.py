@@ -20,6 +20,10 @@ from app.models import CurriculumSlot, FactoryRun, LessonVersion, User
 
 
 def preflight(settings: Settings) -> None:
+    if settings.factory_llm_model and model_policy(settings.factory_llm_model, settings).provider == "openai":
+        if not settings.openai_api_key or not settings.openai_api_key.get_secret_value():
+            raise LLMNotConfigured("Factory generation requires configured OPENAI_API_KEY (O-03).")
+        return
     if not settings.anthropic_api_key or not settings.anthropic_api_key.get_secret_value():
         raise LLMNotConfigured("Factory generation requires configured ANTHROPIC_API_KEY (O-03).")
     for identifier in (settings.llm_model_strong, settings.llm_model_fast):

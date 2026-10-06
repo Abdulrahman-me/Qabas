@@ -13,6 +13,8 @@ from app.factory.evidence import LiveSourceTools
 from app.llm.budget import Ledger
 from app.llm.client import AnthropicClient, LLMResult
 from app.llm.errors import LLMNotConfigured
+from app.llm.models import model_policy
+from app.llm.openai_client import OpenAIClient
 from app.llm.prompts import Effort
 from app.llm.vision import VisionImage
 from app.sources.discovery import AssociationDiscovery
@@ -25,7 +27,7 @@ from app.sources.scripture import VerifiedScripture
 class HostedClient:
     def __init__(self, settings: Settings) -> None:
         self.settings = settings
-        self.client: AnthropicClient | None = None
+        self.client: AnthropicClient | OpenAIClient | None = None
 
     async def aclose(self) -> None:
         if self.client is not None:
@@ -35,6 +37,8 @@ class HostedClient:
                          call_key: str | None = None, effort: Effort | None = None,
                          images: tuple[VisionImage, ...] = ()) -> LLMResult:
         if self.client is None:
+            selected = self.settings.raqeeb_llm_model
+            provider = model_policy(selected, self.settings).provider if selected else "anthropic"
             if self.settings.app_env in (Environment.production, Environment.staging):
                 try:
                     policy = yaml.safe_load(self.settings.raqeeb_data_policy_path.read_text(encoding="utf-8"))
@@ -43,10 +47,11 @@ class HostedClient:
                 if not isinstance(policy, dict) or policy.get("schema") != "qabas.raqeeb_data_policy/1" or \
                         policy.get("status") != "approved" or \
                         not all(policy.get(k) for k in ("approved_by", "approved_on", "report")) or \
-                        policy.get("provider") != "anthropic" or not all(policy.get(k) for k in (
+                        policy.get("provider") != provider or not all(policy.get(k) for k in (
                             "provider_retention", "deletion_responsibilities", "learner_disclosure")):
                     raise LLMNotConfigured("Raqeeb hosted question processing is pending O-09")
-            self.client = AnthropicClient(self.settings)
+            self.client = (OpenAIClient(self.settings, model=selected) if provider == "openai" and selected
+                           else AnthropicClient(self.settings))
         return await self.client.structured(prompt_id, data, ledger=ledger, call_key=call_key, effort=effort,
                                             images=images)
 
