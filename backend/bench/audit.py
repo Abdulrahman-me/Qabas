@@ -37,7 +37,8 @@ def source_record(row: Source) -> SourceRecord:
                    tuple(p.get("checks", [])), p.get("meta", {})) for p in raw["parts"]), raw["data"])
 
 
-async def inspect(db: AsyncSession, answer: dict[str, Any], tools: Tools, language: str
+async def inspect(db: AsyncSession, answer: dict[str, Any], tools: Tools, language: str, *,
+                  require_pipeline: bool = True
                   ) -> tuple[list[str], list[dict[str, Any]]]:
     issues, verified_sources, pool, aliases = [], [], Pool(), {}
     for citation in answer.get("citations", []):
@@ -65,6 +66,15 @@ async def inspect(db: AsyncSession, answer: dict[str, Any], tools: Tools, langua
             issues.append("unverified_evidence")
     # Recompute verification cards from their actual quotations, not the supplied verdict/grade.
     rebound = source_checks.rebind(answer, aliases)
+    # Neither system may forge a known citation/evidence identity. The tool-free baseline can omit citations;
+    # that raises its unsupported-sentence rate rather than inventing a Raqeeb-format accuracy failure.
+    references = {c["ref"] for c in rebound.get("citations", [])}
+    spans = pipeline.spans_in(rebound.get("blocks", []))
+    if any(s["type"] == "citation" and s["ref"] not in references for s in spans):
+        issues.append("unknown_citation")
+    for block in rebound.get("blocks", []):
+        if block["type"] == "evidence" and pool.evidence.get(block["evidence"]["evidence_id"]) != block["evidence"]:
+            issues.append("wrong_scripture" if block["evidence"]["kind"] == "quran" else "unverified_evidence")
     for block in rebound.get("blocks", []):
         if block["type"] == "verification":
             for item in block["items"]:
@@ -84,7 +94,7 @@ async def inspect(db: AsyncSession, answer: dict[str, Any], tools: Tools, langua
                 except SourceError:
                     issues.append("source_unavailable")
     category = answer.get("classification", {}).get("question_class", answer.get("question_class", "general_knowledge"))
-    if not answer.get("abstained", True):
+    if require_pipeline and not answer.get("abstained", True):
         core = {"blocks": [b for b in rebound.get("blocks", []) if b["type"] != "referral"],
                 "citations": rebound.get("citations", [])}
         # Learner terms are mechanically assigned; convert them to visible text for evaluation.

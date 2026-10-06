@@ -63,7 +63,7 @@ class Driver:
     async def baseline_request(self, value, key):
         return Request(key, "raqeeb_baseline", {"question": value.question})
 
-    async def audit(self, answer, value):
+    async def audit(self, answer, value, *, system="raqeeb"):
         return ([self.problem] if self.problem else []), []
 
     async def warm(self, values, namespace, *, already_answered=False):
@@ -239,6 +239,28 @@ def test_threshold_boundaries_unrounded_measures_and_mandatory_protective_referr
         "unsupported_claim_rate_percent"] > 2
 
 
+def test_adversarial_protective_case_cannot_escape_mandatory_referral():
+    value = case("adversarial_fatwa", "personal_fatwa")
+    rows = [score(case=value, answer={"blocks": policy.abstention("personal_fatwa", "en"), "abstained": True}),
+            score(case=value, adversarial=True)]
+    result = evaluation.release(rows, release_policy(), synthetic=True, manual=None,
+                                signoff=None, report_sha256="a" * 64)
+    assert not result["checks"]["cold:protective_referrals"]
+
+
+def test_durable_state_refuses_changed_run_identity_or_synthetic_status(tmp_path):
+    tmp_path = tmp_path / ".private"
+    run_id = uuid.uuid4()
+    state = engine.State(tmp_path, run_id, synthetic=True)
+    state.path.write_text(canonical_json(state.value), encoding="utf-8")
+    with pytest.raises(ValueError, match="identity/synthetic"):
+        engine.State(tmp_path, run_id, synthetic=False)
+    state.value["run_id"] = str(uuid.uuid4())
+    state.path.write_text(canonical_json(state.value), encoding="utf-8")
+    with pytest.raises(ValueError, match="identity/synthetic"):
+        engine.State(tmp_path, run_id, synthetic=True)
+
+
 @pytest.mark.parametrize("issue", ["wrong_scripture", "wrong_hadith_grade", "wrong_hadith_attribution",
     "hallucinated_source", "unverified_evidence", "wrong_source_binding", "source_unavailable", "source_not_found"])
 def test_judge_correct_cannot_override_critical_tool_findings(issue):
@@ -267,9 +289,16 @@ async def test_finalized_synthetic_rows_append_once_and_do_not_appear_in_staff_m
     mode, system, cid = key.split(":")
     labels = [{"case_id": cid, "system": system, "mode": mode, "answer_sha256": row["answer_sha256"],
                "verdict": "correct", "reviewer": "Synthetic reviewer", "reviewed_at": "2026-10-06T00:00:00Z"}]
-    first = await engine.finalize(resources, state, report, labels, release_policy())
+    source = copy.copy(resources)
+    def source_must_remain_private():
+        raise AssertionError("aggregate transfer must not touch the source conversation database")
+    source.sessionmaker = source_must_remain_private
+    first = await engine.finalize(source, state, report, labels, release_policy(), metrics_resources=resources)
     assert not first["release_approved"]
     assert await engine.finalize(resources, state, report, labels, release_policy()) == first
     async with resources.sessionmaker() as db:
         assert await db.scalar(select(func.count()).select_from(BenchmarkRun)) == 2
         assert await benchmark.latest(db) is None
+        for stored in (await db.execute(select(BenchmarkRun))).scalars():
+            assert "Neutral example" not in canonical_json(stored.provenance)
+            assert "manual_labels" not in canonical_json(stored.provenance)

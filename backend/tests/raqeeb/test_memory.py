@@ -34,6 +34,23 @@ async def test_empty_memory_namespace_does_not_depend_on_an_embedding_worker(api
         assert (await db.get(RaqeebMessage, aid)).trace["memory"]["outcome"] == "miss"
 
 
+@pytest.mark.parametrize("change", ["model", "ttl"])
+async def test_changed_model_or_expiry_policy_invalidates_old_memory(api, resources, change):
+    headers, tools = guest(api), Tools()
+    await answer(api, resources, headers, tools, script())
+    async with resources.sessionmaker() as db:
+        mid = (await db.execute(select(RaqeebMemory.id))).scalar_one()
+    await store_embedding(resources, mid, Embedder())
+    resources.settings = resources.settings.model_copy(update={"llm_model_strong": "claude-sonnet-5-5"}
+        if change == "model" else {"raqeeb_memory_ttl_days": 1})
+    client = script()
+    await answer(api, resources, headers, tools, client)
+    assert any(c[0] == "raqeeb_write" for c in client.calls)
+    assert await memory.purge_expired(resources) == 1
+    async with resources.sessionmaker() as db:
+        assert await db.get(RaqeebMemory, mid) is None
+
+
 def script(*, equivalent=True, private=False, standalone=True):
     client = model("general_knowledge")
     client.script["raqeeb_classify"]["standalone"] = standalone

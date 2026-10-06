@@ -158,11 +158,12 @@ class Native:
         return Request(key, "raqeeb_baseline", {"question": question, "material": "\n".join(material),
                        "history": case.history, "language": case.language}, tuple(images))
 
-    async def audit(self, answer: dict[str, Any], case: Case) -> tuple[list[str], list[dict[str, Any]]]:
+    async def audit(self, answer: dict[str, Any], case: Case, *,
+                    system: str = "raqeeb") -> tuple[list[str], list[dict[str, Any]]]:
         tools = self.tools_factory()
         try:
             async with self.resources.sessionmaker() as db:
-                return await audit.inspect(db, answer, tools, case.language)
+                return await audit.inspect(db, answer, tools, case.language, require_pipeline=system == "raqeeb")
         finally:
             await tools.aclose()
 

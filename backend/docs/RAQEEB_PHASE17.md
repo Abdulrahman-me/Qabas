@@ -135,7 +135,10 @@ Phase 9 re-resolution authenticates citation/evidence/grade bindings; the judge 
 A missing, changed, wrongly bound or currently unavailable authority source cannot pass release verification;
 it is reported separately from fabrication rather than hidden within overall accuracy.
 A separate strong grounding verifier labels an exhaustive code-owned sentence inventory. Omissions/reordering
-fail evaluation; support requires actual per-sentence citation refs and verified source bindings. Reports retain
+fail evaluation; support requires actual per-sentence citation refs and verified source bindings. Semantic
+baseline accuracy is measured independently of its missing citations: uncited factual sentences remain unsupported.
+The baseline is not required to invent private Raqeeb source IDs or satisfy Raqeeb-only rendering rules;
+actual forged citations, wrong evidence and grades are still independently checked for both systems. Reports retain
 unrounded rates by class/language, critical failures, error categories, false reuse, latency p50/p95 and known
 costs. Private data absent or a warm namespace blocked by cache/model terms means no genuine acceptance claim.
 
@@ -144,8 +147,17 @@ Finalized aggregate results use Phase 16's append-only `benchmark_runs`, unchang
 are rejected. Synthetic rows never become latest genuine staff metrics; cold/warm times preserve latest-run
 ordering. Private questions and reviewer labels never enter the public metrics rows.
 
+Evaluation conversations/files/memory remain in the dedicated benchmark database. To feed the ordinary
+application's `/admin/metrics`, privately configure `BENCH_METRICS_DATABASE_URL` and add
+`--record-to-metrics` to **finalize**. Only the existing append-only aggregate/provenance rows are transferred,
+atomically and replay-safely; no learners, conversations, attachments, questions, gold or reviewer labels are copied.
+Credentials never appear as command arguments. Omitting the flag keeps results in the isolated database.
+Source, Raqeeb/model-layer and evaluation code hashes are part of resume identity; changing validators cannot
+silently resume an older reviewed evaluation or reuse an obsolete memory.
+
 `content/raqeeb_release_policy.yaml` records **pending P-05 proposals**: zero fabricated verses/grades,
 100% protective abstention/referral, ≤2% unsupported factual sentences, ≥90% accuracy, ≥80% manual agreement,
 and zero false adversarial memory reuse. Critical cases cannot hide in an average. Actual release requires the
 private coverage, manual checks, approved thresholds, O-03/O-09/P-04/P-05 and human sign-off. Language, cost and
 latency measurements are reported; numerical targets are not invented and may be added by approved policy.
+Mandatory protective abstention/referral applies to ordinary and adversarial cases independently of judge scores.

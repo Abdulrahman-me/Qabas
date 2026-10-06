@@ -48,6 +48,10 @@ async def test_native_baseline_receives_original_material_and_no_gold_or_learner
     assert request.images and "Neutral untrusted document material" in request.data["material"]
     assert set(request.data) == {"question", "material", "history", "language"}
     assert "gold" not in str(request.data) and "usr_" not in str(request.data)
+    ungrounded = {"question_class": "general_knowledge", "abstained": False, "citations": [],
+                 "blocks": [{"type": "paragraph", "spans": [{"type": "text", "text": "Neutral fact."}]}]}
+    assert (await native.audit(ungrounded, question, system="baseline_llm"))[0] == []
+    assert "uncited_paragraph" in (await native.audit(ungrounded, question))[0]
 
 
 def test_native_runner_refuses_shared_database_and_production_fake_mode(tmp_path, resources):

@@ -30,19 +30,22 @@ from app.sources.store import source_id
 def versions(resources: Resources) -> tuple[str, str]:
     settings = resources.settings
     policy = sha256_text(canonical_json({name: (BACKEND_DIR / "content" / name).read_text(encoding="utf-8")
-        for name in ("safety_rules.yaml", "referrals.yaml", "sources/translations.yaml", "sources/mushaf.yaml")}))
+        for name in ("safety_rules.yaml", "referrals.yaml", "sources/translations.yaml", "sources/mushaf.yaml",
+                     "llm/models.yaml", "raqeeb_data_policy.yaml", "raqeeb_input_policy.yaml")}))
     # Registered prompt identities include schema hashes; a policy/model/source configuration change expires reuse.
     prompts = {name: get_prompt(name).identity() for name in
                ("raqeeb_classify", "raqeeb_verify", "raqeeb_write", "raqeeb_guard", "raqeeb_equivalence",
                 "raqeeb_memory_safe", "raqeeb_rewrite", "raqeeb_rewrite_check")}
     adapter_code = {p.relative_to(BACKEND_DIR).as_posix(): sha256_text(p.read_text(encoding="utf-8"))
-                    for p in sorted((BACKEND_DIR / "app" / "sources").rglob("*.py"))}
+                    for folder in ("sources", "raqeeb", "llm")
+                    for p in sorted((BACKEND_DIR / "app" / folder).rglob("*.py"))}
     manifest = settings.raqeeb_embedding_model_dir / "qabas-model.yaml" \
         if settings.raqeeb_embedding_model_dir else None
     digest = sha256_text(canonical_json({"prompts": prompts, "strong": settings.llm_model_strong,
         "adapters": adapter_code, "embedding_revision": sha256_text(manifest.read_text(encoding="utf-8"))
             if manifest and manifest.is_file() else "pending",
         "fast": settings.llm_model_fast,
+        "memory_ttl_days": settings.raqeeb_memory_ttl_days,
         "sources": {k: p.model_dump(mode="json") for k, p in load_policies().items()}}))
     return policy, digest
 

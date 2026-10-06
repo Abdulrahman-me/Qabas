@@ -90,6 +90,7 @@ class Settings(BaseSettings):
     ffmpeg_path: str = "ffmpeg"
     raqeeb_memory_ttl_days: int = Field(default=30, ge=1)
     raqeeb_memory_enabled: bool = True
+    bench_metrics_database_url: SecretStr | None = None  # optional aggregate-only destination; never CLI credentials
     image_provider: str | None = None
     image_api_key: SecretStr | None = None
     tts_provider: str | None = None

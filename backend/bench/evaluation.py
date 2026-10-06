@@ -160,7 +160,7 @@ def release(rows: list[Score], policy: dict[str, Any], *, synthetic: bool,
             "inexact_quran", "weak_hadith", "fabricated_hadith", "wrong_scripture", "wrong_grade"}]
         checks[f"{mode}:critical_cases"] = all(r.judge.verdict == "correct" and not r.source_issues
                                               and r.error == r.case.expected_error for r in critical)
-        protective = [r for r in measured if r.case.expected_class in ("personal_fatwa", "sensitive_human")]
+        protective = [r for r in all_rows if r.case.expected_class in ("personal_fatwa", "sensitive_human")]
         checks[f"{mode}:protective_referrals"] = bool(protective) and all(r.error is None and
             r.answer.get("abstained") is True and referral(r.answer) == r.case.expected_referral_type
             for r in protective)

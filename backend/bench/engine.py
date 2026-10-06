@@ -27,7 +27,8 @@ class Driver(Protocol):
     async def answer(self, case: Case, namespace: uuid.UUID, *,
                      remaining_tokens: int | None = None) -> dict[str, Any]: ...
     async def baseline_request(self, case: Case, key: str) -> Request: ...
-    async def audit(self, answer: dict[str, Any], case: Case) -> tuple[list[str], list[dict[str, Any]]]: ...
+    async def audit(self, answer: dict[str, Any], case: Case, *,
+                    system: str = "raqeeb") -> tuple[list[str], list[dict[str, Any]]]: ...
     async def warm(self, cases: list[Case], namespace: uuid.UUID, *,
                    already_answered: bool = False) -> dict[str, Any]: ...
 
@@ -48,6 +49,8 @@ class State:
         self.value: dict[str, Any] = json.loads(self.path.read_text(encoding="utf-8")) if self.path.exists() else {
             "schema": "qabas.raqeeb_evaluation/1", "run_id": str(run_id), "synthetic": synthetic,
             "run_at": datetime.now(UTC).isoformat(), "answers": {}, "scores": {}, "batches": {}}
+        if self.value["run_id"] != str(run_id) or self.value["synthetic"] is not synthetic:
+            raise ValueError("stored run identity/synthetic status differs from the requested evaluation")
 
     async def save(self) -> None:
         temporary = self.root / f".{uuid.uuid4().hex}.tmp"
@@ -170,7 +173,8 @@ async def run(root: Path, state: State, driver: Driver, batches: Batch, ledger: 
                     continue
                 value = state.value["answers"][key]
                 answer = value["answer"]
-                findings, sources = await driver.audit(answer, case) if value["error"] is None else ([], [])
+                findings, sources = await driver.audit(answer, case, system=system) \
+                    if value["error"] is None else ([], [])
                 actual_class = answer.get("classification", {}).get("question_class", answer.get("question_class"))
                 if value["error"] is None and actual_class != case.expected_class:
                     findings.append("wrong_classification")
@@ -234,7 +238,8 @@ async def run(root: Path, state: State, driver: Driver, batches: Batch, ledger: 
 
 
 async def finalize(resources: Resources, state: State, report: dict[str, Any], labels: list[dict[str, Any]],
-                   policy: dict[str, Any], signoff: dict[str, Any] | None = None) -> dict[str, Any]:
+                   policy: dict[str, Any], signoff: dict[str, Any] | None = None, *,
+                   metrics_resources: Resources | None = None) -> dict[str, Any]:
     rows = [evaluation.Score.model_validate(v) for v in report["scores"].values()]
     synthetic = bool(report["synthetic"])
     if (state.root / "judged.json").read_text(encoding="utf-8") != canonical_json(report):
@@ -250,7 +255,8 @@ async def finalize(resources: Resources, state: State, report: dict[str, Any], l
     state.immutable("release-" + sha256_text(canonical_json({"policy": policy, "signoff": signoff})) + ".json",
                     assessment | {"reviewed_report_sha256": reviewed_sha, "policy": policy, "signoff": signoff})
     versions = report["binding"]["versions"]
-    async with resources.sessionmaker() as db, db.begin():
+    destination = metrics_resources or resources
+    async with destination.sessionmaker() as db, db.begin():
         for mode in ("cold", "warm"):
             measured = [r for r in rows if r.mode == mode and not r.adversarial]
             systems = [{"name": system, **{k: round(v) for k, v in evaluation.aggregate([
@@ -279,6 +285,6 @@ async def finalize(resources: Resources, state: State, report: dict[str, Any], l
                 evaluation={"reviewed_report_sha256": reviewed_sha, "summary": summary,
                             "warm_set_sha256": report["binding"]["digests"]["warm"],
                             "warm_count": report["warm_count"]})
-            await benchmark.record(db, resources.settings,
+            await benchmark.record(db, destination.settings,
                 uuid.uuid5(uuid.UUID(report["run_id"]), "benchmark:" + mode), results, provenance, synthetic=synthetic)
     return assessment | {"reviewed_report_sha256": reviewed_sha}
