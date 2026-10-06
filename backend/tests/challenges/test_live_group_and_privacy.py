@@ -12,9 +12,10 @@ from sqlalchemy import func, select
 
 from app.contract import FIXTURES_DIR
 from app.contract import models as C
-from app.models import DuelAnswer, DuelLiveEvent, User, XpEvent
+from app.models import DuelAnswer, DuelLiveEvent, LeagueMember, User, XpEvent
 from app.runtime import Resources
-from app.services.challenges import coordinator, live
+from app.services.challenges import coordinator, duels, live
+from app.services.learning import xp
 from app.services.platform import deletion
 from tests.challenges import live_support as L
 from tests.challenges import support as S
@@ -216,3 +217,65 @@ async def test_beat_claims_ownerless_question_without_resetting_time(world: tupl
     closed = await room.question(0)
     assert closed.deadline_at == q.deadline_at and closed.closed_at is not None
     assert (await room.status()).phase == "result"
+
+
+async def test_deletion_racing_completion_removes_new_league_seat(world: tuple[TestClient, Resources],
+                                                               monkeypatch: pytest.MonkeyPatch) -> None:
+    """A finish that already owns the duel may commit first; deletion must then remove all its community effects."""
+    _, r = world
+    room = await L.make(r, humans=2, preset="group")
+    start = (await room.status()).starts_at
+    assert start is not None
+    await room.pulse(start)
+    for index in range(3):
+        q = await room.question(index)
+        assert q.issued_at is not None
+        for seat in range(2):
+            await room.send(seat, "answer", {"question_index": index, "answer": await S.key(r, room.duel_id, index)},
+                            q.issued_at + timedelta(seconds=1))
+        await room.pulse(q.issued_at + timedelta(seconds=1))
+        reveal = (await room.question(index)).reveal_until
+        assert reveal is not None
+        if index < 2:
+            await room.pulse(reveal)
+    user = await S.user(r, room.users[0])
+    rewarding, deleting, proceed = asyncio.Event(), asyncio.Event(), asyncio.Event()
+    original_grant, original_close = xp.grant, duels.close_for_deleted
+
+    async def paused_grant(db, learner, reason, amount, ref_type, ref_id, at, **kwargs):
+        if learner.id == user.id and ref_id == room.duel_id:
+            rewarding.set()
+            await asyncio.wait_for(proceed.wait(), 8)
+        return await original_grant(db, learner, reason, amount, ref_type, ref_id, at, **kwargs)
+
+    async def announce_delete(db, uid, now):
+        if uid == user.id:
+            deleting.set()
+        await original_close(db, uid, now)
+
+    async def delete_account():
+        async with r.sessionmaker() as db:
+            await deletion.request_deletion(db, user, now=reveal)
+
+    monkeypatch.setattr(xp, "grant", paused_grant)
+    monkeypatch.setattr(duels, "close_for_deleted", announce_delete)
+    keeper = asyncio.create_task(coordinator.keepalive(r, room.lease))
+    tasks = []
+    try:
+        tasks.append(asyncio.create_task(room.pulse(reveal)))
+        await asyncio.wait_for(rewarding.wait(), 8)
+        tasks.append(asyncio.create_task(delete_account()))
+        await asyncio.wait_for(deleting.wait(), 8)
+        proceed.set()
+        await asyncio.wait_for(asyncio.gather(*tasks), 10)
+    finally:
+        proceed.set()
+        for task in [keeper, *tasks]:
+            task.cancel()
+        await asyncio.gather(keeper, *tasks, return_exceptions=True)
+    assert (await room.status()).status == "finished"  # result owned the duel before the deletion
+    async with r.sessionmaker() as db:
+        deleted = await db.get(User, user.id)
+        assert deleted is not None and deleted.deleted_at is not None
+        assert await db.scalar(select(func.count()).select_from(LeagueMember).where(
+            LeagueMember.user_id == user.id)) == 0

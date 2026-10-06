@@ -58,7 +58,9 @@ Reconnect during grace resumes. After grace the learner keeps previously earned 
 score zero; subsequent reconnect is read-only. A crashed API's durable socket receipt expires after 30 seconds of
 inactivity, and grace starts at that recorded expiry, not when a later worker notices it. A nonempty connected quorum
 may close early; an empty quorum does not finish instantly during grace. Account deletion expires an open game
-without rewards and masks the removed profile immediately.
+without rewards and masks the removed profile immediately. Completion and deletion serialize on the same duel:
+an already-owning completion may remain historical, then deletion removes community presence after that boundary,
+including any newly created league seat. A deletion that owns the duel first prevents its completion/rewards.
 
 ## Running, recovery and abuse controls
 

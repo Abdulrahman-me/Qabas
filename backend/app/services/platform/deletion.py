@@ -96,9 +96,11 @@ async def request_deletion(db: AsyncSession, user: User, *, now: datetime | None
     async with db.begin():
         await auth_sessions.revoke_all(db, user.id, now=now)
         await db.execute(update(User).where(User.id == user.id, User.deleted_at.is_(None)).values(deleted_at=now))
-        await forget_community(db, user.id)
         from app.services.challenges import duels  # lazy: the challenge services import user projections
         await duels.close_for_deleted(db, user.id, now)
+        # Wait for an already-owning result transaction before cleanup: its first XP may create a league seat.
+        # A completed result stays historical; a deletion that owns the duel first expires it without rewards.
+        await forget_community(db, user.id)
         for step in REQUEST_STEPS:
             await step(db, user.id)
         await db.execute(insert(DeletionJob).values(user_id=user.id, requested_at=now)
