@@ -249,7 +249,8 @@ private benchmark runner; no synthetic benchmark appears as release quality in s
   seen within 60 s.
 - **Achievements** (`GET /v1/me/achievements`): the eight registry badges. Progress is recomputed from
   authoritative tables on `session.finished`, completed Raqeeb answers and reads; unlocks are permanent.
-  `challenges_won` counts 0 until Phase 19. Backfill after deploy: `achievements.refresh_all(sessionmaker)`.
+  `challenges_won` counts completed live wins against friends through the Phase 19 counter and the shared
+  `duel.finished` outbox path. Backfill after deploy: `achievements.refresh_all(sessionmaker)`.
 - **Synthetic league members** (demo/staging only, P-01; refused in production): 60 members from
   `content/synthetic_league_members.json`, seeded by `scripts/seed.py` with `SYNTHETIC_LEAGUE_MEMBERS=true`. The
   beat job seats up to 15 per league, keeping 5 seats for learners, and grants their XP through the normal ledger
@@ -268,7 +269,7 @@ private benchmark runner; no synthetic benchmark appears as release quality in s
 - **Async** (duel vs a friend, after 60 s pending): the server issues each question with `issued_at`/
   `deadline_at`, `next` and `answer` are idempotent, late answers score 0, and the duel closes when both finish or
   24 h after the switch (the friend forfeits if unfinished). Live play (bot duels, groups, accepted duels) is the
-  Phase 20 WebSocket; until then an unstarted live challenge expires after 2 minutes.
+  Phase 20 WebSocket; an unstarted live challenge still expires after 2 minutes.
 - **Results** (one transaction, shared with Phase 20): ranking with the response-time tie-break and shared ranks;
   XP through `xp_events` (15/8/4; at most 5 rewarded challenges per learner per day); the day qualifies;
   `win_challenge` quests advance; `duel.finished` refreshes achievements (`quickLight` = live wins against

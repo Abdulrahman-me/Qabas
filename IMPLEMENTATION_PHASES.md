@@ -36,7 +36,7 @@
 | 17 | Raqeeb inputs, guarded memory and benchmark | Engineering complete | `phase-17` | Main CI 37429186542 green on d18eaf7; branch CI 37417059512 green (1,107 passed / 15 expected skips). External acceptance remains [~] (D-163/D-181). |
 | 18 | Community: leagues, friends, achievements | Engineering complete | `phase-18` | Tagged 5fb2148; full local 1,163 passed, branch CI 37430362558 green (1,148 passed / 15 expected skips). Main CI 37433336373 green; synthetic production members remain off (P-01). |
 | 19 | Challenges: REST, selection, bot, async | Engineering complete | `phase-19` | Tagged d74607b; main CI 37437458675 green (1,173 passed / 15 expected skips); local 1,188 passed. Migration 0013 after 0012; D-192–D-201 / F-187–F-193. Daily challenge XP cap awaits owner confirmation. |
-| 20 | Challenges: live WebSocket and durable coordinator | In progress: validation | Pending | Durable coordinator and native socket tests implemented; full release gates pending. O-04 deployment acceptance remains external. |
+| 20 | Challenges: live WebSocket and durable coordinator | ✅ Engineering complete | `phase-20` | Full local 1,224 passed; corrected branch CI 37475067013 green (1,209 passed / 15 expected skips). Revision 10 unchanged; migration 0014 after 0013. O-04 deployment/Phase 21 acceptance remains external. |
 | 21 | Production hardening and deployment | ⏳ Not started | `phase-21` | |
 
 Legend: ⏳ Not started · 🔄 In progress · ✅ Done · ⛔ Blocked (state the reason in Notes)
@@ -783,7 +783,8 @@ Engineering-complete under D-163; no live provider acceptance, real private benc
 - [x] Leagues: Riyadh-week `week_key`, assignment under an advisory lock, ranking, idempotent week-end promotion beat job, privacy masking, synthetic members behind `SYNTHETIC_LEAGUE_MEMBERS` (P-01), seeded by `scripts/seed.py` (D-37) with authored `content/synthetic_league_members.json`.
 - [x] Friends: invite codes, accept with brute-force limits, online status, privacy.
 - [x] Achievements as outbox consumers from authoritative tables (definitions already in `registries.json`, Phase 4); `GET /me/achievements`.
-- [~] `challenges_won` (badge `quickLight`) counts 0 until Phase 19 registers its `duels` counter (F-182). Synthetic members in production remain product decision P-01 (refused by configuration).
+- [x] `challenges_won` (badge `quickLight`) deferred at Phase 18, then completed by Phase 19's `duels` counter and exercised by Phase 20 live completion (F-182).
+- [~] Synthetic members in production remain product decision P-01 (refused by configuration).
 
 **Exit achieved:** annotated `phase-18` on 5fb2148, main fast-forwarded/pushed, main CI 37433336373 green.
 
@@ -799,7 +800,7 @@ privacy, brute-force, idempotency and deletion tests).
 | F-179 | The spec places a learner in a league "on their first XP of the week", but XP is granted from several transactions (finish, recitation answers, quests; challenges later). | Assignment lives in `xp.grant` itself, in the grant's transaction; standings are sums of `xp_events`, so there is one XP ledger and no second reward system (D-182). |
 | F-180 | "Fill leagues to 20" with 60 synthetic members and one league per learner per week would exhaust the synthetic pool after three leagues and leave learners unable to share a league. | Synthetic fill keeps 5 learner seats (15 synthetic per league; 60 = one league per tier) under the same per-(week, tier) lock (D-186). |
 | F-181 | During Phase 18 testing, a failed invite code returned 500: the rollback expired the loaded learner, and recording the failure read `user.id` lazily outside the async context. | The learner id is captured before the transaction; per-learner and per-address limit tests cover it. |
-| F-182 | `challenges_won` (`quickLight`) is derived from Phase 19 `duels`, which do not exist yet. | Counter registry with `register_counter`; 0 until Phase 19 registers the `duels` count (no fabricated progress). |
+| F-182 | At Phase 18, `challenges_won` (`quickLight`) depended on the not-yet-created Phase 19 `duels`. | Counter registry with `register_counter`; initially 0, then Phase 19 registered real completed live wins against friends. Phase 20 invokes the same result/outbox path (no fabricated progress). |
 | F-183 | A Phase 7 outbox test registered a probe subscriber named `achievements`, now a real subscriber whose effect key is already claimed. | Probe renamed `late_subscriber`; the test's intent (a later subscriber applies once) and assertions are unchanged. |
 | F-184 | Phase 16 left a no-op `raqeeb.completed` consumer reserved for Phase 18 (D-77). | It now refreshes the learner's achievements; one isolated change, no other Raqeeb code touched. |
 | F-185 | The API example `lg_2026w40_07` for the week starting 2026-10-04 differs from the D-60 key of that week (`2026-W41`). | Examples are illustrative; ids are opaque. Format `lg_{year}w{week}_{tier}_{seq}` from the stored `week_key` (D-185). |
@@ -817,12 +818,12 @@ privacy, brute-force, idempotency and deletion tests).
 - [x] `POST /duels`, invitations, accept/decline, get, history; presets `duel`/`group` with `config`; question selection (7/3, no repeats); shared `challenge_points()`.
 - [x] Bot user seeded by `scripts/seed.py` (D-37). Deterministic seeded bot; async flow (`async`, `async/next`, `async/answer`), idempotency, 24 h forfeit beat job, expiry jobs.
 - [x] Results transaction: ranking, ties, XP/quests; achievements/leagues through the outbox (`challenges_won` now real; leagues through the XP grant).
-- [~] Live play of bot duels, accepted friend duels and group challenges is the Phase 20 WebSocket/coordinator; until then such a `ready` challenge expires unstarted at `expires_at` (F-187).
+- [x] Live play of bot duels, accepted friend duels and group challenges was deferred to and implemented by the Phase 20 WebSocket/coordinator. An unstarted `ready` challenge still expires at `expires_at` (F-187).
 
 **Tests:** `test_challenge_scoring`, `test_async_duel_idempotency` (plus `test_challenge_lifecycle`).
-**Exit:** tag `phase-19` (after Phase 18 is integrated and the rebased branch passes the full suite).
+**Exit achieved:** annotated `phase-19` on d74607b, main fast-forwarded/pushed, main CI 37437458675 green (1,173 passed / 15 expected skips), full local suite 1,188 passed.
 
-**Delivered (pending integration):** `app/models/challenges.py`, migration `0013`, `app/services/challenges/`
+**Delivered:** `app/models/challenges.py`, migration `0013`, `app/services/challenges/`
 (`selection`, `bot`, `duels`, `play`, `results`), `app/api/challenges.py` (nine endpoints), the 5 s
 `community.sweep_challenges` job, bot seeding, the `challenges_won` counter, deletion coverage and
 `tests/challenges/` (25 tests: scoring, ranking, async idempotency/timing, races, lobby, expiry, privacy, deletion).
@@ -847,9 +848,9 @@ privacy, brute-force, idempotency and deletion tests).
 
 **Refs:** BACKEND_HANDOFF §11.2; API §8; AD-23.
 
-- [ ] Single-use 60 s WebSocket tickets in `Duel.ws_url`; validation at upgrade.
-- [ ] Coordinator: fenced Redis lease + epoch, persisted deadlines, takeover/reload, beat scan for unowned duels, Redis snapshot + pub/sub, sockets on any instance.
-- [ ] Protocol: lobby, ready/countdown, question/answer/close/reveal, disconnect grace, reconnect `state` with `live`, `player_left`, finish; 5 messages/s per socket.
+- [x] Single-use 60 s WebSocket tickets in `Duel.ws_url`; validation at upgrade.
+- [x] Coordinator: fenced Redis lease + epoch, persisted deadlines, takeover/reload, beat scan for unowned duels, Redis snapshot + pub/sub, sockets on any instance.
+- [x] Protocol: lobby, ready/countdown, question/answer/close/reveal, disconnect grace, reconnect `state` with `live`, `player_left`, finish; 5 messages/s per socket.
 
 Implementation: [live protocol and operations](backend/docs/LIVE_CHALLENGES.md). PostgreSQL authority, immutable closed
 score snapshots, fenced database transitions and append-only event coordinates; no new grading/reward path.
@@ -870,6 +871,18 @@ score snapshots, fenced database transitions and append-only event coordinates; 
 **Tests:** full bot duel event order (§8.4), four-player group script (`fixtures/challenges/group_ws_script.json`), `test_ws_tickets`, `test_coordinator_takeover`.
 **Gates:** O-04 (durable coordinator vs approved single-process pilot).
 **Exit:** tag `phase-20`.
+
+**Validation:** full native PostgreSQL/Redis suite **1,224 passed** (35:37, no skips), including all 36 live tests,
+earlier Factory/Gate 2/community/async challenge suites, schema parity, role grants and migration round trips.
+The broader focused challenge/community/learning/metrics suite passed 164 tests; final socket/privacy/deletion
+regressions passed 29. A prior complete run exposed F-203 (1,222 passed / one authentication race); it was fixed
+and the entire suite rerun without weakening or skipping tests. Corrected runtime checkpoint f7ec3fa has green
+GitHub CI [37475067013](https://github.com/Abdulrahman-me/Qabas/actions/runs/37475067013): **1,209 passed / 15 expected
+private/local-integration skips**. Ruff, strict mypy (246 files), current OpenAPI, LLM schemas, all 28 locked prompt
+versions/digests, repository safety and revision 10 suites **595 / 279 / 105 / 382** pass. Single head `0014` follows
+`0013`; no dependency or public contract changes. Final release bookkeeping is documentation-only; branch/main CI
+is verified again on the final checkpoint. Deployment topology, load/restore/mobile acceptance stays O-04/Phase 21,
+and the first-five challenge XP cap remains a product-owner decision (D-195).
 
 ---
 
@@ -1176,4 +1189,6 @@ score snapshots, fenced database transitions and append-only event coordinates; 
 | 2026-10-06 | 18 integration | Phase 18 original commits preserved with merge 5fb2148; migration 0012 after 0011; D-182 through D-191 / F-179 through F-186. Focused community 41 passed; full local 1,163 passed; Ruff, strict mypy (230 files), OpenAPI, LLM schemas, Alembic and safety green; contracts 595/279/105/382. Branch CI 37430362558 green (1,148/15 expected skips). Annotated phase-18 tag and main pushed; final main CI 37433336373 green. |
 
 | 2026-10-06 | 19 integration checkpoint | Original Claude Phase 19 commit preserved over finalized Phase 18 main 5fb2148. Migration 0013 after 0012; D-192 through D-201 / F-187 through F-193. Focused challenges/community 66 passed; Ruff, strict Windows/Linux mypy (238 files), OpenAPI, LLM schemas, safety and contracts 595/279/105/382 green. Full local suite and integrated branch CI pending; five-per-day challenge XP cap explicitly awaits product-owner confirmation. |
+| 2026-10-06 | 19 integration completed | Annotated phase-19 on d74607b, branch/main pushed and main CI 37437458675 green (1,173 passed / 15 expected skips); full local 1,188 passed. Original stacked commits retained; migration/log reconciliation complete. |
+| 2026-10-06 | 20 | Durable live challenge transport/coordinator on the same Phase 19 domain: tickets, fencing, persisted timing/score snapshots, journal recovery, reconnect/grace, bounded sockets and beat recovery. D-202–D-210 / F-194–F-203; migration 0014 after 0013. Full native 1,224 passed; final focused regressions 29 passed; corrected runtime CI 37475067013 green (1,209 passed / 15 expected skips), all static/schema/prompt/migration/safety and 595/279/105/382 contract checks green. Two real deletion races fixed and tested, no test weakened or private data committed. Existing ignored product notes updated; ignored Arabic owner report contains 26 decisions, including the provisional XP cap. O-04/Phase 21 production acceptance and other external/product gates remain open. |
 | 2026-10-06 | 19 final integration | ✅ Full local suite 1,188 passed; branch CI 37434599971 and main CI 37437458675 green (1,173 passed / 15 expected skips). Contracts 595/279/105/382, Ruff, strict mypy, OpenAPI, schemas, migrations and safety green. Annotated `phase-19` on d74607b, branch/tag/main pushed. Original Claude commit history preserved; anti-farming owner decision remains open. |
