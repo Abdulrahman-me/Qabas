@@ -65,7 +65,8 @@ def _exercise(version: ExerciseVersion, duel: Duel, lang: str) -> dict[str, Any]
 
 
 def _ms(delta: timedelta) -> int:
-    return max(0, int(delta.total_seconds() * 1000))
+    # Integer division preserves exact millisecond offsets (float 4.007 * 1000 may be 4006.999...).
+    return max(0, delta // timedelta(milliseconds=1))
 
 
 async def _record(db: AsyncSession, duel: Duel, me: DuelPlayer, issue: DuelQuestion, answer: dict[str, Any] | None,
