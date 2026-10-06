@@ -11,7 +11,9 @@ A tracked (or, with ``--staged``, a staged) file fails when it:
   4. is named like a hidden evaluation dataset (held-out, adversarial, golden/reference answers,
      benchmark data). Those live in ``backend/.private/eval/``;
   5. is byte-identical (LF-normalized) to a fingerprinted private handoff artifact
-     (``backend/security/private_fingerprints.json``).
+     (``backend/security/private_fingerprints.json``), unless that exact runtime path and
+     digest belong to the owner-imported Flutter application. This exception never skips
+     secret/private/evaluation-path checks or secret-content scanning.
 
 Usage: python scripts/check_public_safety.py [--staged]
 """
@@ -47,6 +49,7 @@ SECRET_CONTENT = {
     "Google API key": re.compile(r"\bAIza[0-9A-Za-z_\-]{35}\b"),
 }
 FINGERPRINTS = Path("backend/security/private_fingerprints.json")
+PUBLIC_RUNTIME = Path("backend/security/public_runtime_fingerprints.json")
 
 
 def repo_root() -> Path:
@@ -76,6 +79,17 @@ def load_fingerprints(root: Path) -> set[str]:
     return set(json.loads(path.read_text(encoding="utf-8"))["sha256"])
 
 
+def load_public_runtime(root: Path, staged: bool) -> dict[str, str]:
+    """Explicit production import, bound to exact paths/bytes; staged checks use staged policy."""
+    try:
+        value = json.loads(read_blob(root, PUBLIC_RUNTIME.as_posix(), staged))
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        return {}
+    return {path: digest for path, digest in value["files"].items()
+            if path.startswith("frontend/") and ".." not in path.split("/")
+            and re.fullmatch(r"[0-9a-f]{64}", digest)}
+
+
 def normalized_digest(data: bytes) -> str:
     return hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()
 
@@ -93,6 +107,7 @@ def _matches(path: str, patterns: tuple[str, ...]) -> str | None:
 def check(root: Path, staged: bool) -> list[str]:
     problems: list[str] = []
     fingerprints = load_fingerprints(root)
+    public_runtime = load_public_runtime(root, staged)
     for path in list_files(root, staged):
         if path.startswith(FORBIDDEN_PREFIXES):
             problems.append(f"{path}: handoff/private path must never be committed")
@@ -108,7 +123,8 @@ def check(root: Path, staged: bool) -> list[str]:
                                 "keep it in backend/.private/eval/")
                 continue
         data = read_blob(root, path, staged)
-        if path != FINGERPRINTS.as_posix() and digests(data) & fingerprints:
+        if (path != FINGERPRINTS.as_posix() and digests(data) & fingerprints
+                and public_runtime.get(path) not in digests(data)):
             problems.append(f"{path}: identical to a private handoff artifact")
             continue
         if b"\0" in data[:8192]:

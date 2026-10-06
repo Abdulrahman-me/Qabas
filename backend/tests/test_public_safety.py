@@ -97,3 +97,58 @@ def test_repository_fingerprints_exclude_vendored_contract(guard: ModuleType) ->
     for path in vendored.rglob("*"):
         if path.is_file():
             assert not guard.digests(path.read_bytes()) & fingerprints, path
+
+
+def test_runtime_exception_is_exact_path_and_digest_only(guard: ModuleType, tmp_path: Path) -> None:
+    data = b"synthetic runtime template\n"
+    digest = guard.normalized_digest(data)
+    root = _repo(tmp_path, {
+        "frontend/android/template.txt": data,
+        "backend/content/copied.txt": data,
+        "backend/security/private_fingerprints.json": json.dumps({"sha256": [digest]}).encode(),
+        "backend/security/public_runtime_fingerprints.json": json.dumps({"files": {
+            "frontend/android/template.txt": digest}}).encode(),
+    })
+    assert guard.check(root, staged=True) == ["backend/content/copied.txt: identical to a private handoff artifact"]
+    (root / "frontend/android/template.txt").write_bytes(b"changed private material\n")
+    other = guard.normalized_digest(b"changed private material\n")
+    (root / "backend/security/private_fingerprints.json").write_text(json.dumps({"sha256": [digest, other]}))
+    assert "frontend/android/template.txt: identical to a private handoff artifact" in guard.check(root, staged=False)
+
+
+def test_runtime_exception_cannot_suppress_secret_content(guard: ModuleType, tmp_path: Path) -> None:
+    data = ("token = " + "ghp_" + "x" * 36).encode()
+    digest = guard.normalized_digest(data)
+    root = _repo(tmp_path, {
+        "frontend/lib/example.dart": data,
+        "backend/security/private_fingerprints.json": json.dumps({"sha256": [digest]}).encode(),
+        "backend/security/public_runtime_fingerprints.json": json.dumps({"files": {
+            "frontend/lib/example.dart": digest}}).encode(),
+    })
+    assert any("possible GitHub token" in issue for issue in guard.check(root, staged=True))
+
+
+def test_unstaged_runtime_exception_cannot_authorize_staged_file(guard: ModuleType, tmp_path: Path) -> None:
+    data = b"synthetic runtime template\n"
+    digest = guard.normalized_digest(data)
+    root = _repo(tmp_path, {
+        "frontend/android/template.txt": data,
+        "backend/security/private_fingerprints.json": json.dumps({"sha256": [digest]}).encode(),
+        "backend/security/public_runtime_fingerprints.json": json.dumps({"files": {}}).encode(),
+    })
+    (root / "backend/security/public_runtime_fingerprints.json").write_text(json.dumps({"files": {
+        "frontend/android/template.txt": digest}}))
+    assert guard.check(root, staged=True) == ["frontend/android/template.txt: identical to a private handoff artifact"]
+    assert guard.check(root, staged=False) == []
+
+
+@pytest.mark.parametrize("name", ["frontend/.env", "frontend/heldout_cases.json"])
+def test_runtime_exception_cannot_suppress_private_path_rules(guard: ModuleType, tmp_path: Path, name: str) -> None:
+    data = b"synthetic material\n"
+    digest = guard.normalized_digest(data)
+    root = _repo(tmp_path, {
+        name: data,
+        "backend/security/private_fingerprints.json": json.dumps({"sha256": [digest]}).encode(),
+        "backend/security/public_runtime_fingerprints.json": json.dumps({"files": {name: digest}}).encode(),
+    })
+    assert len(guard.check(root, staged=True)) == 1
