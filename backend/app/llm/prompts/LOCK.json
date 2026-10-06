@@ -59,13 +59,37 @@
   "sha256": "119fd0d14d2cdfd152c4b5db365382ecc896a4ab3f301c0142fa18e18d7ddd2e",
   "version": 4
  },
+ "raqeeb_baseline": {
+  "sha256": "65c44fd1db78df8408d7a6eb26270122c5aae966c8954a7c3b6475590c280c44",
+  "version": 1
+ },
  "raqeeb_classify": {
-  "sha256": "f9d38e0d089adc6e7ebf46dd3352ed3d321cb05f67e6882083093514874092c5",
+  "sha256": "ccf85493fc94da3cd3d87723741b878b26d3ae43e2846a69aff1772a137e765e",
+  "version": 3
+ },
+ "raqeeb_equivalence": {
+  "sha256": "7d2457a5c861f59f133abc2ba3b382934b709c4d5b22a8377733d02d8c0b2ad1",
   "version": 2
+ },
+ "raqeeb_extract": {
+  "sha256": "1834ee8a39c2b46929e35265d5ebc677414f1c7429764c1cae985420d88af0ee",
+  "version": 1
+ },
+ "raqeeb_grounding": {
+  "sha256": "d9b1ebfd7e8bd5598e3b48454579a562b58fddab0be06d92010705337ecbaf62",
+  "version": 1
  },
  "raqeeb_guard": {
   "sha256": "c53603d6dafaf7a0c83d9ea192120f2ac991b721ff3eded3fe895df22b08a648",
   "version": 2
+ },
+ "raqeeb_judge": {
+  "sha256": "5d47541f8ad1a7bbe168521ae2e07b701c4bfdcbd664409cf16133476fb61c9f",
+  "version": 1
+ },
+ "raqeeb_memory_safe": {
+  "sha256": "289ee21654f871a7341c5c60386672a4cb79829931002879a80541698574a199",
+  "version": 1
  },
  "raqeeb_rewrite": {
   "sha256": "d6a1d03cddf8d451f74bd82e84a4733ff8c8bee5035d86af03169210d812bd9c",
@@ -73,6 +97,10 @@
  },
  "raqeeb_rewrite_check": {
   "sha256": "bfbf714a4ba357b179e00c311bd45019f935c75f38a13a3c3c9d2365d6b993e2",
+  "version": 1
+ },
+ "raqeeb_summary": {
+  "sha256": "7e6c657192c1afa582b92384b3ee5507f92772118c8a84ef2b972ae3beab7142",
   "version": 1
  },
  "raqeeb_verify": {

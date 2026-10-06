@@ -27,6 +27,10 @@ class HostedClient:
         self.settings = settings
         self.client: AnthropicClient | None = None
 
+    async def aclose(self) -> None:
+        if self.client is not None:
+            await self.client.aclose()
+
     async def structured(self, prompt_id: str, data: Mapping[str, Any], *, ledger: Ledger | None = None,
                          call_key: str | None = None, effort: Effort | None = None,
                          images: tuple[VisionImage, ...] = ()) -> LLMResult:
@@ -118,6 +122,34 @@ class LiveTools:
 
     async def tafsir(self, surah: int, ayah: int, book: str) -> SourceRecord:
         return await self.tools.tafsir(surah, ayah, book)
+
+    async def resolve(self, record: SourceRecord, language: str) -> SourceRecord:
+        """Refresh a known identity, not a search query or a model's proposed citation."""
+        from app.sources.errors import OperationUnsupported
+        args = record.retrieval.arguments
+        if record.provider == "dorar":
+            if record.retrieval.operation == "sharh":
+                result: SourceRecord = await self.tools._adapter("dorar").sharh(args["sharh_id"])
+                return result
+            return await self.hadith(record.provider_record_id)
+        if record.provider == "hadeethenc":
+            identifier = str(args["id"])
+            result = await self.tools.hadeethenc(identifier, language)
+            if record.provider_record_id.endswith(":explanation"):
+                result = replace(result, provider_record_id=record.provider_record_id,
+                                 text=str(result.data["explanation"]))
+            return result
+        if record.provider == "islamhouse":
+            return await self.tools.islamhouse(str(args["item_id"]), language)
+        if record.provider == "quranenc":
+            verified = await self.quran(f"{args['surah']}:{args['ayah']}", language)
+            for translation in verified.records:
+                if translation.provider == "quranenc" and translation.provider_record_id == record.provider_record_id:
+                    return translation
+            raise RecordNotFound("quranenc", "approved canonical binding no longer includes this translation")
+        if record.provider == "tafsir_center":
+            return await self.tafsir(args["surah"], args["ayah"], args["book"])
+        raise OperationUnsupported(record.provider, "record has no approved identity resolver")
 
     async def aclose(self) -> None:
         for discovery in self.discovery.values():

@@ -1,20 +1,21 @@
-"""Raqeeb text endpoints (API §6.8). Attachment processing is introduced in Phase 17."""
+"""Raqeeb text/private-attachment endpoints (API §3.7/§6.8)."""
 
 from __future__ import annotations
 
-from collections.abc import AsyncGenerator
 from datetime import timedelta
 from typing import Any
 
 from fastapi import APIRouter, Request, Response
-from starlette.formparsers import MultiPartException, MultiPartParser
+from sqlalchemy import select
 from starlette.responses import JSONResponse
 
-from app.api.deps import CurrentLearner, DbDep, RedisDep, RequestLanguage, SettingsDep
+from app.api.deps import CurrentLearner, DbDep, RedisDep, RequestLanguage, ResourcesDep, SettingsDep
 from app.contract import models as C
 from app.errors import ApiError, ErrorCode
-from app.raqeeb import service
+from app.models import RaqeebMessage
+from app.raqeeb import intake, service
 from app.services.platform import idempotency
+from app.services.platform.auth_sessions import utcnow
 from app.services.platform.rate_limits import RateLimiter
 
 router = APIRouter(prefix="/raqeeb", tags=["raqeeb"])
@@ -23,36 +24,6 @@ OPENAPI = {"requestBody": {"required": True, "content": {"multipart/form-data": 
         "audio": {"type": "string", "format": "binary"},
         "images": {"type": "array", "items": {"type": "string", "format": "binary"}},
         "document": {"type": "string", "format": "binary"}}}}}}}
-
-
-async def text_input(request: Request) -> str:
-    if not request.headers.get("content-type", "").startswith("multipart/form-data"):
-        raise ApiError(ErrorCode.validation_error, "Send multipart/form-data.")
-    body = bytearray()
-    async for chunk in request.stream():
-        if len(body) + len(chunk) > 32 * 1024:
-            raise ApiError(ErrorCode.payload_too_large, "Text input exceeds the message limit.")
-        body.extend(chunk)
-
-    async def stream() -> AsyncGenerator[bytes, None]:
-        yield bytes(body)
-
-    parser = MultiPartParser(request.headers, stream(), max_files=0, max_fields=1)
-    try:
-        form = await parser.parse()
-    except MultiPartException:
-        raise ApiError(ErrorCode.validation_error,
-                       "Phase 16 accepts one text field; attachments require Phase 17.") from None
-    try:
-        fields = form.multi_items()
-        if len(fields) != 1 or fields[0][0] != "text" or not isinstance(fields[0][1], str):
-            raise ApiError(ErrorCode.validation_error, "A text message is required.")
-        text = fields[0][1]
-        if not text.strip() or len(text) > 2000:
-            raise ApiError(ErrorCode.validation_error, "text must contain 1-2000 characters.", {"field": "text"})
-        return text
-    finally:
-        await form.close()
 
 
 @router.post("/conversations", status_code=201, response_model=C.Conversation)
@@ -80,27 +51,51 @@ async def page(user: CurrentLearner, db: DbDep, cursor: str | None = None, limit
 
 
 @router.get("/conversations/{conversation_id}", response_model=C.ConvDetail)
-async def detail(conversation_id: str, user: CurrentLearner, db: DbDep) -> Any:
+async def detail(conversation_id: str, user: CurrentLearner, db: DbDep, resources: ResourcesDep) -> Any:
     async with db.begin():
-        return await service.detail(db, user.id, conversation_id)
+        result = await service.detail(db, user.id, conversation_id)
+        result["messages"] = [await intake.refresh(db, m, user.id, resources.storage, resources.settings)
+                              for m in result["messages"]]
+        return result
 
 
 @router.post("/conversations/{conversation_id}/messages", status_code=202, response_model=C.PostMessageResp,
              openapi_extra=OPENAPI)
 async def submit(conversation_id: str, request: Request, user: CurrentLearner, db: DbDep,
-                 redis: RedisDep, settings: SettingsDep) -> Any:
+                 redis: RedisDep, settings: SettingsDep, resources: ResourcesDep) -> Any:
     key = idempotency.parse_key(request.headers.get(idempotency.HEADER), required=True)
     assert key is not None
-    text = await text_input(request)
+    payload = await intake.parse(request)
+    request_hash = idempotency.fingerprint("POST", request.url.path, payload.identity())
 
     async def rate_limit() -> None:
         await RateLimiter(redis, settings).hit("raqeeb_message", user.id)
 
     async def action() -> tuple[int, dict[str, Any]]:
-        return await service.submit(db, user, conversation_id, text, rate_limit)
+        if not payload.uploads:
+            return await service.submit(db, user, conversation_id, payload.text, rate_limit)
+        # Preflight before any private write. Admission still repeats owner/status checks under its locks.
+        # Idempotency has already rejected changed-body replays; rate bounds upload work too.
+        await service.conversation(db, user.id, conversation_id)
+        processing = await db.scalar(select(RaqeebMessage.id).where(
+            RaqeebMessage.conversation_id == conversation_id, RaqeebMessage.status == "processing",
+            RaqeebMessage.created_at > utcnow() - timedelta(seconds=service.DEADLINE)))
+        if processing:
+            raise ApiError(ErrorCode.answer_in_progress, "An answer is already in progress.")
+        await rate_limit()
+        ids = await intake.prepare(resources, user.id, key, request_hash, payload.uploads)
+
+        async def already_limited() -> None:
+            return None
+
+        status, result = await service.submit(db, user, conversation_id, payload.text, already_limited,
+                                               attachment_ids=ids, settings=settings)
+        result["user_message"] = await intake.refresh(db, result["user_message"], user.id,
+                                                       resources.storage, settings)
+        return status, result
 
     stored = await idempotency.run_idempotent(db, user_id=user.id, key=key,
-        request_hash=idempotency.fingerprint("POST", request.url.path, {"text": text}),
+        request_hash=request_hash,
         ttl=timedelta(hours=settings.idempotency_ttl_hours), create=action)
     return JSONResponse(stored.body, status_code=stored.status)
 

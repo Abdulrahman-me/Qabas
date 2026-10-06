@@ -53,6 +53,13 @@ class Tools:
         from dataclasses import replace
         return replace(record("tafsir_center"), kind="tafsir")
 
+    async def resolve(self, original: SourceRecord, language: str) -> SourceRecord:
+        self.calls.append(("resolve", original.provider_record_id, language))
+        if self.error:
+            raise self.error
+        return next(r for r in (*self.articles, *self.hadith_records)
+                    if r.provider_record_id == original.provider_record_id)
+
     async def aclose(self) -> None:
         pass
 

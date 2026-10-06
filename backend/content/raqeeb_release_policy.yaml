@@ -1,0 +1,18 @@
+schema: qabas.raqeeb_release_policy/1
+status: pending
+approved_by: null
+approved_on: null
+report: null
+# P-05 proposals, not product approval. No invented language/latency/cost limits.
+thresholds:
+  accuracy_min_percent: 90
+  unsupported_max_percent: 2
+  manual_agreement_min_percent: 80
+  language_accuracy_min_percent: {}
+  latency_p95_max_ms: null
+  mean_cost_max_usd: null
+external_gates:
+  O-03: {status: pending, approved_by: null, approved_on: null, report: null}
+  O-09: {status: pending, approved_by: null, approved_on: null, report: null}
+  P-04: {status: pending, approved_by: null, approved_on: null, report: null}
+  P-05: {status: pending, approved_by: null, approved_on: null, report: null}

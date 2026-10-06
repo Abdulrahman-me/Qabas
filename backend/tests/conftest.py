@@ -60,6 +60,8 @@ def migrated_url() -> Iterator[str]:
 
 def test_redis_url() -> str:
     """The configured Redis with database index 15, reserved for tests (flushed between tests)."""
+    if get_settings().test_redis_url:
+        return get_settings().test_redis_url or ""
     parts = urlsplit(get_settings().redis_url)
     return urlunsplit((parts.scheme, parts.netloc, "/15", "", ""))
 

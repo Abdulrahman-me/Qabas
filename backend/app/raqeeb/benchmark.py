@@ -39,6 +39,7 @@ class Provenance(BaseModel):
     latency_p95_ms: int = Field(ge=0)
     cost_usd: float | None = Field(ge=0, allow_inf_nan=False)
     false_memory_reuse: int = Field(ge=0)
+    evaluation: dict[str, Any] | None = None
 
 
 async def record(db: AsyncSession, settings: Settings, run_id: uuid.UUID, results: dict[str, Any],
@@ -68,6 +69,8 @@ async def record(db: AsyncSession, settings: Settings, run_id: uuid.UUID, result
                 provenance.models["raqeeb_strong"] != provenance.models.get("baseline_llm"):
             raise ValueError("a real benchmark records versions and compares the same strong model")
     value = provenance.model_dump(mode="json")
+    if value["evaluation"] is None:
+        del value["evaluation"]  # preserve exact replay digests of Phase 16 rows
     digest = sha256_text(canonical_json({"results": metrics, "provenance": value, "synthetic": synthetic}))
     result = await db.execute(insert(BenchmarkRun).values(id=run_id,
         run_at=datetime.fromisoformat(metrics["run_at"].replace("Z", "+00:00")),

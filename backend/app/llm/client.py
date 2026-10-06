@@ -141,6 +141,9 @@ class AnthropicClient:
     def model_for(self, prompt: Prompt) -> str:
         return self.settings.llm_model_strong if prompt.meta.tier == "strong" else self.settings.llm_model_fast
 
+    async def aclose(self) -> None:
+        await self.sdk.close()
+
     async def structured(self, prompt_id: str, data: Mapping[str, Any], *, ledger: Ledger | None = None,
                          call_key: str | None = None, effort: Effort | None = None,
                          images: tuple[VisionImage, ...] = ()) -> LLMResult:

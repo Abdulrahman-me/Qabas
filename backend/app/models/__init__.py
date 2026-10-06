@@ -33,6 +33,7 @@ from app.models.media import MediaAssetRecord, MediaJob
 from app.models.metrics import BlindPair, BlindResponse, MetricLearnerFact, MetricUnitFact
 from app.models.platform import EffectLedger, OutboxEvent, ReviewDecision
 from app.models.raqeeb import BenchmarkRun, RaqeebConversation, RaqeebMessage
+from app.models.raqeeb_memory import RaqeebMemory, RaqeebUploadReceipt
 from app.models.social import (
     AchievementDefinition,
     FriendInvite,
@@ -56,7 +57,8 @@ __all__ = [
     "LearnerTerm", "LearnerTier", "LearnerUnit", "LearningSession", "Lesson", "LessonVersion", "MediaAssetRecord",
     "MediaJob",
     "MetricLearnerFact", "MetricUnitFact", "Misconception",
-    "OutboxEvent", "Quest", "RaqeebConversation", "RaqeebMessage", "RecitationCheckRecord", "ReviewDecision",
+    "OutboxEvent", "Quest", "RaqeebConversation", "RaqeebMemory", "RaqeebMessage", "RaqeebUploadReceipt",
+    "RecitationCheckRecord", "ReviewDecision",
     "SceneAsset", "SceneVersion",
     "SentenceRecord", "SessionAnswer", "Source", "Term", "Unit", "User", "XpEvent",
 ]

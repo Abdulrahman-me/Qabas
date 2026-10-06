@@ -1,0 +1,21 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "description": {
+   "maxLength": 2000,
+   "title": "Description",
+   "type": "string"
+  },
+  "extracted_text": {
+   "maxLength": 30000,
+   "title": "Extracted Text",
+   "type": "string"
+  }
+ },
+ "required": [
+  "extracted_text",
+  "description"
+ ],
+ "title": "raqeeb_extract",
+ "type": "object"
+}

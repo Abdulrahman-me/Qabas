@@ -1,0 +1,27 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "missing_points": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Missing Points",
+   "type": "array"
+  },
+  "verdict": {
+   "enum": [
+    "correct",
+    "partial",
+    "incorrect"
+   ],
+   "title": "Verdict",
+   "type": "string"
+  }
+ },
+ "required": [
+  "verdict",
+  "missing_points"
+ ],
+ "title": "raqeeb_judge",
+ "type": "object"
+}
