@@ -77,7 +77,19 @@ class Batches:
             await save()
             try:
                 batch = await sdk.messages.batches.create(requests=prepared)
-            except Exception:
+            except Exception as exc:
+                import anthropic
+
+                rejection: LLMError | None = None
+                if isinstance(exc, (anthropic.AuthenticationError, anthropic.PermissionDeniedError)):
+                    rejection = LLMNotConfigured("batch provider refused configured credentials")
+                elif isinstance(exc, anthropic.APIStatusError) and 400 <= exc.status_code < 500 and \
+                        exc.status_code != 429:
+                    rejection = LLMRequestRejected("batch provider rejected the request")
+                if rejection is not None:
+                    del checkpoints[fingerprint]  # a definite rejected submission created no paid batch
+                    await save()
+                    raise rejection from None
                 raise LLMUnavailable("batch submission outcome is ambiguous; reconcile before retrying") from None
             previous = {"state": "submitted", "id": batch.id, "started": time.time()}
             checkpoints[fingerprint] = previous

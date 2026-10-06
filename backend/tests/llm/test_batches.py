@@ -128,3 +128,20 @@ async def test_poll_failure_classified_and_existing_batch_resumed(settings, stat
     sdk.messages.batches.retrieve = original
     assert isinstance((await batches.run([request()], Ledger(100_000), checkpoints, save))["opaque"], LLMResult)
     assert sdk.submissions == 1
+
+
+async def test_definite_rejected_submission_does_not_require_ambiguous_delivery_reconciliation(settings):
+    import anthropic
+    import httpx
+
+    from app.llm.errors import LLMNotConfigured
+
+    sdk = SDK([message('{"verdict":"correct","missing_points":[]}')])
+    sdk.problem = anthropic.AuthenticationError("Synthetic invalid credentials", body={}, response=
+        httpx.Response(401, request=httpx.Request("POST", "https://example.test/batches")))
+    batches, checkpoints, ledger = Batches(AnthropicClient(settings, sdk=sdk)), {}, Ledger(100_000)
+    with pytest.raises(LLMNotConfigured):
+        await batches.run([request()], ledger, checkpoints, save)
+    assert not checkpoints and not ledger.records
+    sdk.problem = None
+    assert isinstance((await batches.run([request()], ledger, checkpoints, save))["opaque"], LLMResult)

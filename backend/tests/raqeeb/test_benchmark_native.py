@@ -56,3 +56,12 @@ def test_native_runner_refuses_shared_database_and_production_fake_mode(tmp_path
     resources.settings = resources.settings.model_copy(update={"app_env": Environment.production})
     with pytest.raises(ValueError, match="test-only"):
         Native(resources, tmp_path, synthetic=True)
+
+
+async def test_run_budget_limits_actual_worker_calls_and_preserves_spent_usage(tmp_path, resources):
+    client = script()
+    native = Native(resources, tmp_path, synthetic=True, client_factory=lambda: client, tools_factory=Tools,
+                    embedder=Embedder())
+    result = await native.answer(case(), uuid.uuid4(), remaining_tokens=1)
+    assert result["error"] == "upstream_unavailable" and len(client.calls) == 1
+    assert len(result["usage"]) == 1 and result["usage"][0]["input_tokens"] > 1

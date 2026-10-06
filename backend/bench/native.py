@@ -15,8 +15,9 @@ from sqlalchemy import func, select
 from app.config import Environment
 from app.errors import ApiError
 from app.llm.batches import Request
+from app.llm.budget import UsageRecord
 from app.llm.client import LLMClient
-from app.llm.errors import LLMError
+from app.llm.errors import BudgetExceeded, LLMError
 from app.llm.vision import VisionImage
 from app.models import RaqeebMemory, RaqeebMessage, User
 from app.raqeeb import inputs, intake, memory, service, worker
@@ -64,7 +65,8 @@ class Native:
             raise ValueError("too many private benchmark attachments")
         return intake.Payload(case.question or None, tuple(uploads))
 
-    async def answer(self, case: Case, namespace: uuid.UUID) -> dict[str, Any]:
+    async def answer(self, case: Case, namespace: uuid.UUID, *,
+                     remaining_tokens: int | None = None) -> dict[str, Any]:
         # Derived stable IDs make full worker/crash recovery available without duplicating paid calls.
         identifier = sha256_text(canonical_json({"namespace": str(namespace), "input": input_digest(case, self.root)}))
         uid, conv_id = "usr_" + identifier[:24], "conv_" + identifier[:24]
@@ -107,11 +109,16 @@ class Native:
                             attachment_ids=receipt_ids, settings=resources.settings)
                         aid = response["assistant_message"]["message_id"]
                 assert aid is not None
+                remaining = None if remaining_tokens is None else remaining_tokens - sum(
+                    UsageRecord(**{k: v for k, v in raw.items() if k != "cost_usd"}).tokens for raw in usage)
+                if remaining is not None and remaining <= 0:
+                    raise BudgetExceeded("evaluation budget spent before the next dependent turn")
                 client = self.client_factory()
                 try:
                     await worker.process(resources, aid, client=client, tools=self.tools_factory(),
                         memory_gateway=memory.Gateway(resources, aid, namespace=namespace,
-                                                     synthetic=self.synthetic, embedder=self.embedder))
+                                                     synthetic=self.synthetic, embedder=self.embedder),
+                        budget_tokens=remaining)
                 finally:
                     close = getattr(client, "aclose", None)
                     if close is not None:
@@ -131,7 +138,8 @@ class Native:
         except (ApiError, LLMError, inputs.InputUnreadable) as exc:
             return {"answer": {}, "error": exc.code.value if isinstance(exc, ApiError) else
                 "input_unreadable" if isinstance(exc, inputs.InputUnreadable) else type(exc).__name__,
-                "latency_ms": round((time.monotonic() - started) * 1000), "cost_usd": None, "reused": False}
+                "latency_ms": round((time.monotonic() - started) * 1000), "cost_usd": None,
+                "reused": False, "usage": usage}
 
     async def baseline_request(self, case: Case, key: str) -> Request:
         payload = self.payload(case)

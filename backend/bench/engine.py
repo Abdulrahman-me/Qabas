@@ -24,7 +24,8 @@ from bench.dataset import Case, load
 
 
 class Driver(Protocol):
-    async def answer(self, case: Case, namespace: uuid.UUID) -> dict[str, Any]: ...
+    async def answer(self, case: Case, namespace: uuid.UUID, *,
+                     remaining_tokens: int | None = None) -> dict[str, Any]: ...
     async def baseline_request(self, case: Case, key: str) -> Request: ...
     async def audit(self, answer: dict[str, Any], case: Case) -> tuple[list[str], list[dict[str, Any]]]: ...
     async def warm(self, cases: list[Case], namespace: uuid.UUID, *,
@@ -101,6 +102,8 @@ async def run(root: Path, state: State, driver: Driver, batches: Batch, ledger: 
         if exceeded:
             raise BudgetExceeded("evaluation token budget exceeded")
     scores = state.value["scores"]
+    def remaining() -> int | None:
+        return None if ledger.budget_tokens is None else ledger.budget_tokens - ledger.tokens
     for mode in ("cold", "warm"):
         state.value.setdefault("mode_run_at", {}).setdefault(mode, datetime.now(UTC).isoformat())
         namespace = uuid.uuid5(uuid.UUID(state.value["run_id"]), mode)
@@ -110,7 +113,7 @@ async def run(root: Path, state: State, driver: Driver, batches: Batch, ledger: 
                 key = f"warming:raqeeb:{case.id}"
                 if key not in state.value["answers"]:
                     ledger.check_available()
-                    state.value["answers"][key] = await driver.answer(case, namespace)
+                    state.value["answers"][key] = await driver.answer(case, namespace, remaining_tokens=remaining())
                     try:
                         charge(state.value["answers"][key], key)
                     finally:
@@ -138,7 +141,7 @@ async def run(root: Path, state: State, driver: Driver, batches: Batch, ledger: 
             key = f"{mode}:raqeeb:{case.id}"
             if key not in state.value["answers"]:
                 ledger.check_available()
-                state.value["answers"][key] = await driver.answer(case, namespace)
+                state.value["answers"][key] = await driver.answer(case, namespace, remaining_tokens=remaining())
                 try:
                     charge(state.value["answers"][key], key)
                 finally:
@@ -238,6 +241,9 @@ async def finalize(resources: Resources, state: State, report: dict[str, Any], l
         raise ValueError("finalization must use the exact immutable judged report")
     if not synthetic and (report["warm_count"] <= 0 or report["binding"] != state.value["binding"]):
         raise ValueError("genuine benchmark requires a populated disjoint warm namespace and exact run binding")
+    if not synthetic and (report["binding"]["versions"]["models"].get("judge_effort") != "medium" or
+                          report["binding"]["versions"]["models"].get("writer_effort") != "high"):
+        raise ValueError("genuine benchmark requires confirmed distinct judge/writer efforts")
     manual = evaluation.manual_review(rows, labels, synthetic=synthetic)
     manual_sha = sha256_text(canonical_json(labels))
     artifact = {"report": report, "manual": manual, "manual_labels": labels, "manual_report_sha256": manual_sha}

@@ -55,7 +55,7 @@ class Driver:
         return {"question_class": value.expected_class, "abstained": value.should_abstain,
                 "blocks": blocks, "citations": []}
 
-    async def answer(self, value, namespace):
+    async def answer(self, value, namespace, *, remaining_tokens=None):
         self.calls.append((value.id, namespace))
         return {"answer": self.output(value), "error": None, "reused": False,
                 "latency_ms": 100, "cost_usd": None}
@@ -132,8 +132,8 @@ async def test_warming_budget_checkpoints_every_paid_call_before_next_case(tmp_p
     usage = UsageRecord("fake-model", "synthetic", 1, "a" * 64, None, "disabled", 1,
                         1_000_000, 0, 0, 0, "end_turn", 1)
     original = driver.answer
-    async def paid_answer(value, namespace):
-        result = await original(value, namespace)
+    async def paid_answer(value, namespace, *, remaining_tokens=None):
+        result = await original(value, namespace, remaining_tokens=remaining_tokens)
         if value.id == "neutral_warm":
             result["usage"] = [usage.__dict__, usage.__dict__]
         return result
@@ -177,6 +177,17 @@ def test_judge_semantic_input_excludes_private_attachment_identifiers():
         {"attachment_id": "att_private", "extracted_text": "Neutral caption", "description": "A shape"}],
         "document": {"attachment_id": "att_private", "summary": "Neutral summary"}}})
     assert "att_private" not in str(result) and result["transcript"] == "Neutral spoken question"
+
+
+def test_identity_does_not_claim_unverified_model_effort(settings):
+    from types import SimpleNamespace
+
+    from bench.run import identities as configured_identities
+    unknown = settings.model_copy(update={"llm_model_strong": "claude-sonnet-5-5"})
+    value = configured_identities(SimpleNamespace(settings=unknown))
+    assert value["models"]["judge_effort"] == value["models"]["writer_effort"] == "not_sent"
+    declared = configured_identities(SimpleNamespace(settings=settings))
+    assert declared["models"]["judge_effort"] == "medium" and declared["models"]["writer_effort"] == "high"
 
 
 def test_private_absence_path_traversal_and_warm_overlap(tmp_path):
@@ -229,7 +240,7 @@ def test_threshold_boundaries_unrounded_measures_and_mandatory_protective_referr
 
 
 @pytest.mark.parametrize("issue", ["wrong_scripture", "wrong_hadith_grade", "wrong_hadith_attribution",
-                                  "hallucinated_source", "unverified_evidence"])
+    "hallucinated_source", "unverified_evidence", "wrong_source_binding", "source_unavailable", "source_not_found"])
 def test_judge_correct_cannot_override_critical_tool_findings(issue):
     result = evaluation.release([score(source_issues=[issue]), score(mode="warm")], release_policy(),
         synthetic=False, manual={"count": 20, "agreement_percent": 100}, signoff=None, report_sha256="a" * 64)

@@ -21,6 +21,7 @@ from app.config import BACKEND_DIR, get_settings
 from app.llm.batches import Batches
 from app.llm.budget import Ledger
 from app.llm.client import AnthropicClient
+from app.llm.models import model_policy
 from app.llm.prompts import all_prompts
 from app.raqeeb.memory import versions
 from app.runtime import Resources
@@ -31,6 +32,7 @@ from bench.native import Native
 
 def identities(resources: Resources) -> dict[str, Any]:
     policy, _ = versions(resources)
+    effort = model_policy(resources.settings.llm_model_strong, resources.settings).capabilities.effort or []
     digest = hashlib.sha256()
     for path in sorted((BACKEND_DIR / "app" / "sources").rglob("*.py")):
         digest.update(path.relative_to(BACKEND_DIR).as_posix().encode())
@@ -39,7 +41,9 @@ def identities(resources: Resources) -> dict[str, Any]:
         "adapters": {"phase9_source_code": digest.hexdigest(), "memory": "guarded/1", "inputs": "isolated/1"},
         "models": {"raqeeb_strong": resources.settings.llm_model_strong,
                    "baseline_llm": resources.settings.llm_model_strong, "judge": resources.settings.llm_model_strong,
-                   "judge_effort": "medium", "writer_effort": "high", "fast": resources.settings.llm_model_fast,
+                   "judge_effort": "medium" if "medium" in effort else "not_sent",
+                   "writer_effort": "high" if "high" in effort else "not_sent",
+                   "fast": resources.settings.llm_model_fast,
                    "speech": resources.settings.stt_model, "embeddings": "BAAI/bge-m3"}}
 
 
@@ -58,10 +62,14 @@ async def execute(args: argparse.Namespace) -> dict[str, Any]:
                 raise ValueError("this evaluation already has an active runner")
             try:
                 if args.command == "run":
+                    identity = identities(resources)
+                    if identity["models"]["judge_effort"] != "medium" or \
+                            identity["models"]["writer_effort"] != "high":
+                        raise ValueError("genuine judge independence requires confirmed distinct model efforts (O-03)")
                     client = AnthropicClient(resources.settings)
                     try:
                         report = await engine.run(args.dataset, state, native, Batches(client),
-                                                  Ledger(args.budget_tokens), identities(resources))
+                                                  Ledger(args.budget_tokens), identity)
                     finally:
                         await client.aclose()
                     return {"run_id": report["run_id"], "stage": "awaiting_manual_review",

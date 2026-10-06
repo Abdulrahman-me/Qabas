@@ -128,8 +128,12 @@ re-running finalization with `--signoff <private-signoff.json>` records the expl
 nor judge enables models, publishes content or replaces final religious/human review.
 
 The strong judge uses medium effort versus the writer's high effort where the selected model declares those
-controls. It reports exactly `correct|partial|incorrect` and missing points against specialist gold. Independent
+controls. Genuine CLI runs/finalization refuse unconfirmed effort capabilities (O-03); provenance records
+`not_sent` rather than claiming a requested setting was applied. It reports exactly
+`correct|partial|incorrect` and missing points against specialist gold. Independent
 Phase 9 re-resolution authenticates citation/evidence/grade bindings; the judge cannot override code findings.
+A missing, changed, wrongly bound or currently unavailable authority source cannot pass release verification;
+it is reported separately from fabrication rather than hidden within overall accuracy.
 A separate strong grounding verifier labels an exhaustive code-owned sentence inventory. Omissions/reordering
 fail evaluation; support requires actual per-sentence citation refs and verified source bindings. Reports retain
 unrounded rates by class/language, critical failures, error categories, false reuse, latency p50/p95 and known

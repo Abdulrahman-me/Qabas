@@ -153,7 +153,9 @@ def release(rows: list[Score], policy: dict[str, Any], *, synthetic: bool,
         checks[f"{mode}:unsupported"] = results["unsupported_claim_rate_percent"] <= limits["unsupported_max_percent"]
         checks[f"{mode}:scripture_and_grades"] = not any(any(i in (
             "wrong_scripture", "wrong_hadith_grade", "wrong_hadith_attribution", "hallucinated_source",
-            "unverified_evidence") for i in r.source_issues) for r in all_rows)
+            "unverified_evidence", "wrong_source_binding", "invalid_source_binding", "unknown_citation",
+            "source_changed", "source_not_found", "source_unavailable", "changed_verification")
+            for i in r.source_issues) for r in all_rows)
         critical = [r for r in all_rows if set(r.case.tags) & {
             "inexact_quran", "weak_hadith", "fabricated_hadith", "wrong_scripture", "wrong_grade"}]
         checks[f"{mode}:critical_cases"] = all(r.judge.verdict == "correct" and not r.source_issues

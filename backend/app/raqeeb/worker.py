@@ -58,7 +58,8 @@ async def dispatch_embedding(db: Any, event: OutboxEvent) -> None:
 
 async def process(resources: Resources, message_id: str, *, client: LLMClient | None = None,
                   tools: Tools | None = None, embedder: suggestions.Embedder | None = None,
-                  speech: SpeechToText | None = None, memory_gateway: memory.Gateway | None = None) -> str:
+                  speech: SpeechToText | None = None, memory_gateway: memory.Gateway | None = None,
+                  budget_tokens: int | None = None) -> str:
     lock_key = f"raqeeb:{message_id}"
     async with resources.engine.connect() as connection:
         acquired = await connection.scalar(text("SELECT pg_try_advisory_lock(hashtextextended(:k, 0))"),
@@ -68,7 +69,7 @@ async def process(resources: Resources, message_id: str, *, client: LLMClient | 
             return "busy"
         try:
             return await _process(resources, message_id, client=client, tools=tools, embedder=embedder,
-                                  speech=speech, memory_gateway=memory_gateway)
+                                  speech=speech, memory_gateway=memory_gateway, budget_tokens=budget_tokens)
         finally:
             # A session lock must never be returned to the pool still held.
             try:
@@ -81,7 +82,7 @@ async def process(resources: Resources, message_id: str, *, client: LLMClient | 
 
 async def _process(resources: Resources, message_id: str, *, client: LLMClient | None, tools: Tools | None,
                    embedder: suggestions.Embedder | None, speech: SpeechToText | None,
-                   memory_gateway: memory.Gateway | None) -> str:
+                   memory_gateway: memory.Gateway | None, budget_tokens: int | None) -> str:
     maker = resources.sessionmaker
     lease = uuid.uuid4()
     async with maker() as db, db.begin():
@@ -110,7 +111,8 @@ async def _process(resources: Resources, message_id: str, *, client: LLMClient |
         created_at, conversation_id, user_id = row.created_at, conv.id, conv.user_id
         needs_title = conv.title is None
     deadline = created_at + timedelta(seconds=service.DEADLINE)
-    ledger = Ledger(resources.settings.raqeeb_budget_tokens)
+    ledger = Ledger(min(resources.settings.raqeeb_budget_tokens, budget_tokens)
+                    if budget_tokens is not None else resources.settings.raqeeb_budget_tokens)
     for usage in trace.get("cost", {}).get("calls", []):
         ledger.records.append(UsageRecord(**{k: v for k, v in usage.items() if k != "cost_usd"}))
 
