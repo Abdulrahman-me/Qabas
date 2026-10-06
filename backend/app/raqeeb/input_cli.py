@@ -13,7 +13,7 @@ from typing import Any
 
 
 def constrain(megabytes: int) -> Any:
-    if os.name != "nt":
+    if sys.platform != "win32":
         resource = importlib.import_module("resource")
         resource.setrlimit(resource.RLIMIT_AS, (megabytes * 1024**2, megabytes * 1024**2))
         return None

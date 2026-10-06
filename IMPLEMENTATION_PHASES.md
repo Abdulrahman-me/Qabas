@@ -760,6 +760,7 @@ Engineering-complete under D-163; no live provider acceptance, real private benc
 | F-167 | P-05 thresholds are proposals; language/latency/cost numeric limits and live batch/STT prices are not approved. Private gold is absent. | Report unrounded per-class/language measures and unknown cost honestly; exact policy/report human sign-off plus private coverage/external gates required (D-179/D-181). |
 | F-168 | Warm-up and crashed batch results can consume paid tokens before an evaluation budget exception is durable. | Per-case warm checkpoints, all paid usage preserved before raising, batch ID/result correlation and operator reconciliation for ambiguous submission (D-179). |
 | F-169 | Ubuntu runner PostgreSQL PGXS references unavailable clang-19, so native pgvector installation stopped before any tests. | Compile/install the same pinned extension's GCC shared library with optional LLVM bitcode disabled; no vector functionality or tests removed. CI rerun pending. |
+| F-170 | Linux typing reached a Windows-only ctypes WinDLL branch guarded by os.name; local Windows typing had passed. | Use a platform guard understood by strict mypy, and validate both Linux and Windows configurations. No type suppression or resource-limit bypass. |
 
 ---
 
