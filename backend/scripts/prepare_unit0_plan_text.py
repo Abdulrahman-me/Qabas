@@ -56,10 +56,14 @@ async def execute(source: Path, out: Path) -> int:
             provenance = receipts / (path.stem + ".json")
             if target.exists() and provenance.exists():
                 previous = json.loads(provenance.read_text(encoding="utf-8"))
-                if previous["source_digest"] == digest(original):
+                prepared = json.loads(target.read_text(encoding="utf-8"))
+                if previous["source_digest"] == digest(original) and previous["prepared_digest"] == digest(prepared):
                     print(f"{path.stem}: retained private translation; human review still required", flush=True)
                     continue
-                raise ValueError("authored source changed; use a new private output directory")
+                failed += 1
+                print(f"{path.stem}: source or prepared digest changed; use a new private output directory",
+                      flush=True)
+                continue
             ledger = Ledger(budget_tokens=30_000)
             try:
                 targets = fields(original)
