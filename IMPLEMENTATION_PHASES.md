@@ -924,7 +924,14 @@ was started. See `backend/docs/OWNER_DECISIONS_PASS.md` for scope, commands and 
 - [~] Actual generation blocked by absent model configuration/active reviewer; no new Factory runs or publication.
 - [~] Genuine Raqeeb acceptance, licensed files, source/content decisions, renderer/device validation and hosting
   remain unverified. Numerical release thresholds still need explicit approval beyond the organizer-case strategy.
-- [~] Final local/CI validation is in progress; no `phase-21` tag or completion claim.
+- [x] Final validation: complete native suite 1,224 passed / four skips at its initial collection; final
+  focused suite 33 passed includes eight subsequently added cases and the three private-handoff tests
+  re-enabled after the local reference junction was restored. Only the real-reciter clip set remains
+  unavailable locally. Code CI [37495183301](https://github.com/Abdulrahman-me/Qabas/actions/runs/37495183301)
+  is green: 1,221 passed / 15 expected private/local-integration skips. Contracts 595/279/105/382,
+  Ruff, strict Windows/Linux mypy (248 files), OpenAPI, LLM schemas, 28 unchanged prompt locks,
+  migration round trips/Alembic parity, role checks and staged repository safety pass. Main CI is
+  checked again at integration; no `phase-21` tag or production acceptance claim.
 
 ### Findings (owner pass)
 
@@ -1236,4 +1243,5 @@ was started. See `backend/docs/OWNER_DECISIONS_PASS.md` for scope, commands and 
 | 2026-10-06 | 19 integration checkpoint | Original Claude Phase 19 commit preserved over finalized Phase 18 main 5fb2148. Migration 0013 after 0012; D-192 through D-201 / F-187 through F-193. Focused challenges/community 66 passed; Ruff, strict Windows/Linux mypy (238 files), OpenAPI, LLM schemas, safety and contracts 595/279/105/382 green. Full local suite and integrated branch CI pending; five-per-day challenge XP cap explicitly awaits product-owner confirmation. |
 | 2026-10-06 | 19 integration completed | Annotated phase-19 on d74607b, branch/main pushed and main CI 37437458675 green (1,173 passed / 15 expected skips); full local 1,188 passed. Original stacked commits retained; migration/log reconciliation complete. |
 | 2026-10-06 | 20 | Durable live challenge transport/coordinator on the same Phase 19 domain: tickets, fencing, persisted timing/score snapshots, journal recovery, reconnect/grace, bounded sockets and beat recovery. D-202–D-210 / F-194–F-203; migration 0014 after 0013. Full native 1,224 passed; final focused regressions 29 passed; corrected runtime CI 37475067013 green (1,209 passed / 15 expected skips), all static/schema/prompt/migration/safety and 595/279/105/382 contract checks green. Two real deletion races fixed and tested, no test weakened or private data committed. Existing ignored product notes updated; ignored Arabic owner report contains 26 decisions, including the provisional XP cap. O-04/Phase 21 production acceptance and other external/product gates remain open. |
+| 2026-10-06 | Owner decisions after 20 | Seven-day original uploads, disclosed opt-in training members, bilingual learner copy, private 93-slot inventory and bounded/resumable Factory admission. D-211–D-217 / F-204–F-209. Native full suite 1,224 passed; final focus 33 passed rescues the three private-reference skips and covers eight later cases. Real-reciter clips unavailable locally. CI 37495183301 green: 1,221 passed / 15 expected skips; contracts and all static/schema/migration/safety gates pass. Owner report now has 27 entries (16 resolved, 9 pilot/future follow-ups, 2 unresolved final choices); product notes updated, both ignored. Zero real generation/evaluation/publication; frontend linking expressly deferred, provider settings and licensed files absent. Main integration preserves all tags; no Phase 21 completion is claimed. |
 | 2026-10-06 | 19 final integration | ✅ Full local suite 1,188 passed; branch CI 37434599971 and main CI 37437458675 green (1,173 passed / 15 expected skips). Contracts 595/279/105/382, Ruff, strict mypy, OpenAPI, schemas, migrations and safety green. Annotated `phase-19` on d74607b, branch/tag/main pushed. Original Claude commit history preserved; anti-farming owner decision remains open. |
