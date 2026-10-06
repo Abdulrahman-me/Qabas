@@ -7,13 +7,17 @@ abstract interface class TokenStore {
 }
 
 final class SecureTokenStore implements TokenStore {
-  const SecureTokenStore(this._storage);
+  const SecureTokenStore(this._storage, {this.key = accessKey});
   final FlutterSecureStorage _storage;
-  static const _key = 'qabas_access_token';
+  final String key;
+  static const accessKey = 'qabas_access_token';
+
+  /// Holds the learner's credential while a reviewer is signed in on this device.
+  static const suspendedLearnerKey = 'qabas_suspended_learner_token';
   @override
-  Future<String?> read() => _storage.read(key: _key);
+  Future<String?> read() => _storage.read(key: key);
   @override
-  Future<void> write(String token) => _storage.write(key: _key, value: token);
+  Future<void> write(String token) => _storage.write(key: key, value: token);
   @override
-  Future<void> clear() => _storage.delete(key: _key);
+  Future<void> clear() => _storage.delete(key: key);
 }

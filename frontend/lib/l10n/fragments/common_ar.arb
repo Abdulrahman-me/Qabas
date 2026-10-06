@@ -174,5 +174,9 @@
   "commonTabProfile": "حسابي",
   "commonTabRaqeeb": "رقيب",
   "commonTabReview": "المراجعة",
-  "commonTagline": "تعلّم الإسلام خطوة بخطوة، من أول سؤال إلى فهم متين."
+  "commonTagline": "تعلّم الإسلام خطوة بخطوة، من أول سؤال إلى فهم متين.",
+  "commonConnectingSlow": "جارٍ الاتصال بقبس… قد تستغرق الزيارة الأولى دقيقة واحدة.",
+  "@commonConnectingSlow": {
+    "description": "Splash hint while a sleeping hosted server wakes up on the first request."
+  }
 }

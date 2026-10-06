@@ -13,10 +13,14 @@ import 'package:qabas/shared/data/mappers/core_mappers.dart';
 import 'package:qabas/shared/domain/entities/user_profile.dart';
 
 final class ReviewerRepositoryImpl implements ReviewerRepository {
-  ReviewerRepositoryImpl(this.api, this.tokens, {this.sampleEnabled = false});
+  ReviewerRepositoryImpl(this.api, this.tokens, {this.sampleEnabled = false, this.suspendedLearner});
   final bool sampleEnabled;
   final ApiClient api;
   final TokenStore tokens;
+
+  /// Live only: the learner's guest credential, kept aside while a reviewer is signed in.
+  /// Mock builds suspend the learner server-side instead (A-54).
+  final TokenStore? suspendedLearner;
   @override
   String newKey() => newIdempotencyKey();
   @override
@@ -24,6 +28,10 @@ final class ReviewerRepositoryImpl implements ReviewerRepository {
     final r = await api.post('/auth/reviewer', body: {'email': email, 'password': password}, decode: AuthResponseDto.fromJson);
     final user = r.user.toEntity();
     if (user.role != UserRole.reviewer) throw const ReviewerRoleError();
+    // TODO(contract): A-59 — keep the learner credential so reviewer sign-out returns to the same progress.
+    if (suspendedLearner case final stash? when await stash.read() == null) {
+      if (await tokens.read() case final learner?) await stash.write(learner);
+    }
     await tokens.write(r.accessToken);
     return user;
   });
@@ -33,7 +41,12 @@ final class ReviewerRepositoryImpl implements ReviewerRepository {
       ? signIn('reviewer@qabas.app', 'qabas-review')
       : Future.value(const Err<UserProfile>(ForbiddenFailure()));
   @override
-  Future<Result<void>> signOut() => guard(tokens.clear);
+  Future<Result<void>> signOut() => guard(() async {
+    final learner = await suspendedLearner?.read();
+    if (learner == null) return tokens.clear();
+    await tokens.write(learner);
+    await suspendedLearner!.clear();
+  });
   @override
   Future<Result<ReviewerRunPage>> runs({String? status, String? cursor}) => guard(
     () => api.get(

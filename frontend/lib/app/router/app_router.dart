@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:qabas/app/config/app_config.dart';
 import 'package:qabas/app/di/injector.dart';
 import 'package:qabas/app/presentation/home_shell.dart';
 import 'package:qabas/app/presentation/placeholder_page.dart';
@@ -143,6 +144,7 @@ GoRouter createRouter(AppDependencies dependencies, RouterRefresh refresh, Galle
                     create: (_) => dependencies.reviewerAuthBloc(),
                     child: ReviewerLoginPage(
                       sampleEnabled: dependencies.config.judgesDemo,
+                      accountNote: dependencies.config.isLive(LiveGroup.reviewer),
                       onSignedIn: (user) {
                         dependencies.session.add(UserProfileReceived(user));
                         c.go('/reviewer/runs');
@@ -337,7 +339,11 @@ GoRouter createRouter(AppDependencies dependencies, RouterRefresh refresh, Galle
                       child: BlocListener<LocaleCubit, LocaleState>(
                         listenWhen: (a, b) => a.language != b.language,
                         listener: (context, _) => context.read<ProfileBloc>().add(const ProfileOpened()),
-                        child: ProfilePage(developerEnabled: developer, reviewerSampleEnabled: dependencies.config.judgesDemo),
+                        child: ProfilePage(
+                          developerEnabled: developer,
+                          reviewerSampleEnabled: dependencies.config.judgesDemo,
+                          reviewerSignInEnabled: dependencies.config.isLive(LiveGroup.reviewer),
+                        ),
                       ),
                     ),
                     _ => PlaceholderPage(index: entry.key, developerEnabled: developer),

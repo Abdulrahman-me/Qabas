@@ -410,6 +410,12 @@ abstract class AppLocalizations {
   /// **'Close'**
   String get commonClose;
 
+  /// Splash hint while a sleeping hosted server wakes up on the first request.
+  ///
+  /// In en, this message translates to:
+  /// **'Connecting to Qabas… The first visit can take up to a minute.'**
+  String get commonConnectingSlow;
+
   /// Prototype interface copy: common / continue. Preserve the original warm wording.
   ///
   /// In en, this message translates to:
@@ -2696,6 +2702,12 @@ abstract class AppLocalizations {
   /// **'Correct abstention (%)'**
   String get reviewerAbstention;
 
+  /// Explain live reviewer sign-in and preserved learner progress.
+  ///
+  /// In en, this message translates to:
+  /// **'Reviewers sign in with their account to review lesson plans and drafts, run blind comparisons and view metrics. Your learning progress on this device returns when you sign out.'**
+  String get reviewerAccountDescription;
+
   /// Reviewer work tool: reviewerAccuracy
   ///
   /// In en, this message translates to:
@@ -2977,6 +2989,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Introduced concepts'**
   String get reviewerIntroduced;
+
+  /// Reviewer sign-in rejected the email or password.
+  ///
+  /// In en, this message translates to:
+  /// **'That email or password isn\'t right. Please try again.'**
+  String get reviewerInvalidCredentials;
 
   /// Reviewer work tool: reviewerInvalidPlan
   ///

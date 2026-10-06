@@ -921,5 +921,13 @@
   },
   "@reviewerSampleDescription": {
     "description": "Explain sample reviewer content and preserved learner progress."
+  },
+  "reviewerAccountDescription": "يسجّل المراجعون الدخول بحساباتهم لمراجعة خطط الدروس ومسوداتها، وإجراء المقارنات مجهولة المصدر، والاطلاع على المؤشرات. يعود تقدمك في التعلم على هذا الجهاز عند تسجيل الخروج.",
+  "reviewerInvalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة. حاول مجددًا.",
+  "@reviewerAccountDescription": {
+    "description": "Explain live reviewer sign-in and preserved learner progress."
+  },
+  "@reviewerInvalidCredentials": {
+    "description": "Reviewer sign-in rejected the email or password."
   }
 }

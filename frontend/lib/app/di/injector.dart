@@ -145,6 +145,7 @@ final class AppDependencies {
   static Future<AppDependencies> create({
     required AppConfig config,
     TokenStore? tokens,
+    TokenStore? suspendedLearnerTokens,
     Fixtures? mockFixtures,
     AssetBundle? profileCopyBundle,
     PreferencesStore? store,
@@ -180,7 +181,10 @@ final class AppDependencies {
       );
       sl.registerSingleton<MockBackend>(mock);
     }
-    final platform = kIsWeb ? 'web' : defaultTargetPlatform.name.toLowerCase();
+    // TODO(contract): A-58 — Qabas-Client accepts only android, ios and web; desktop builds identify as web.
+    final platform = !kIsWeb && [TargetPlatform.android, TargetPlatform.iOS].contains(defaultTargetPlatform)
+        ? defaultTargetPlatform.name.toLowerCase()
+        : 'web';
     final api = ApiClient.create(
       config: config,
       tokens: sl<TokenStore>(),
@@ -191,7 +195,11 @@ final class AppDependencies {
     );
     sl.registerSingleton<ApiClient>(api, dispose: (api) => api.dispose());
     registerAuth(sl, initialState: initialSessionState);
-    registerReviewerFeature(sl);
+    registerReviewerFeature(
+      sl,
+      suspendedLearner:
+          suspendedLearnerTokens ?? const SecureTokenStore(FlutterSecureStorage(), key: SecureTokenStore.suspendedLearnerKey),
+    );
     registerOnboarding(sl, curiosityEnabled: () => mock?.controls.curiosityOnboarding ?? config.curiosityOnboarding);
     registerJourneyFeature(sl);
     registerDiscover(sl);

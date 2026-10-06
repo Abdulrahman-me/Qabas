@@ -192,6 +192,9 @@
   "@commonClose": {
     "description": "Prototype interface copy: common / close. Preserve the original warm wording."
   },
+  "@commonConnectingSlow": {
+    "description": "Splash hint while a sleeping hosted server wakes up on the first request."
+  },
   "@commonContinue": {
     "description": "Prototype interface copy: common / continue. Preserve the original warm wording."
   },
@@ -1650,6 +1653,9 @@
   "@reviewerAbstention": {
     "description": "Reviewer work tool: reviewerAbstention"
   },
+  "@reviewerAccountDescription": {
+    "description": "Explain live reviewer sign-in and preserved learner progress."
+  },
   "@reviewerAccuracy": {
     "description": "Reviewer work tool: reviewerAccuracy"
   },
@@ -1806,6 +1812,9 @@
   },
   "@reviewerIntroduced": {
     "description": "Reviewer work tool: reviewerIntroduced"
+  },
+  "@reviewerInvalidCredentials": {
+    "description": "Reviewer sign-in rejected the email or password."
   },
   "@reviewerInvalidPlan": {
     "description": "Reviewer work tool: reviewerInvalidPlan"
@@ -2965,6 +2974,7 @@
   "commonCheck": "تحقّق",
   "commonChooseAnother": "اختر غيره",
   "commonClose": "إغلاق",
+  "commonConnectingSlow": "جارٍ الاتصال بقبس… قد تستغرق الزيارة الأولى دقيقة واحدة.",
   "commonContinue": "متابعة",
   "commonDayStreak": "{count, plural, =0{{countText} أيام متتالية} =1{{countText} يوم متتالية} =2{{countText} يومان متتالية} few{{countText} أيام متتالية} other{{countText} يومًا متتالية}}",
   "commonDays": "{count, plural, =0{{countText} أيام} =1{{countText} يوم} =2{{countText} أيام} few{{countText} أيام} other{{countText} يومًا}}",
@@ -3346,6 +3356,7 @@
   "reviewWordsMasteredOf": "أتقنت {mastered} من {total}",
   "reviewYourWords": "كلماتك",
   "reviewerAbstention": "الامتناع الصحيح (%)",
+  "reviewerAccountDescription": "يسجّل المراجعون الدخول بحساباتهم لمراجعة خطط الدروس ومسوداتها، وإجراء المقارنات مجهولة المصدر، والاطلاع على المؤشرات. يعود تقدمك في التعلم على هذا الجهاز عند تسجيل الخروج.",
   "reviewerAccuracy": "الدقة (%)",
   "reviewerAccurate": "أي الدرسين أدق؟",
   "reviewerActivated": "التصورات الخاطئة المكتشفة",
@@ -3393,6 +3404,7 @@
   "reviewerInfo": "معلومة",
   "reviewerInteractive": "يتفاعل المتعلم",
   "reviewerIntroduced": "المفاهيم المقدّمة",
+  "reviewerInvalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة. حاول مجددًا.",
   "reviewerInvalidPlan": "راجع الحقول ثنائية اللغة والأهداف والمفاهيم والمسار والميزانيات قبل الاعتماد.",
   "reviewerLearning": "التعلم",
   "reviewerLessonA": "الدرس أ",

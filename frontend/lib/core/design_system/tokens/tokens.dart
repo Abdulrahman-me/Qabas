@@ -131,6 +131,9 @@ abstract final class QMotion {
   static const splash = Duration(milliseconds: 2600);
   static const splashMinimum = Duration(milliseconds: 2900);
   static const splashAssetTimeout = Duration(seconds: 4);
+
+  /// After this long without a session, splash explains that the server may be waking up.
+  static const splashSlowConnection = Duration(seconds: 5);
   static const languageChoice = Duration(milliseconds: 380);
   static const onboardingChoiceReveal = Duration(milliseconds: 80);
   static const onboardingReadyReveal = Duration(milliseconds: 260);

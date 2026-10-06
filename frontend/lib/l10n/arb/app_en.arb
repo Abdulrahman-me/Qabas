@@ -188,6 +188,9 @@
   "@commonClose": {
     "description": "Prototype interface copy: common / close. Preserve the original warm wording."
   },
+  "@commonConnectingSlow": {
+    "description": "Splash hint while a sleeping hosted server wakes up on the first request."
+  },
   "@commonContinue": {
     "description": "Prototype interface copy: common / continue. Preserve the original warm wording."
   },
@@ -1598,6 +1601,9 @@
   "@reviewerAbstention": {
     "description": "Reviewer work tool: reviewerAbstention"
   },
+  "@reviewerAccountDescription": {
+    "description": "Explain live reviewer sign-in and preserved learner progress."
+  },
   "@reviewerAccuracy": {
     "description": "Reviewer work tool: reviewerAccuracy"
   },
@@ -1754,6 +1760,9 @@
   },
   "@reviewerIntroduced": {
     "description": "Reviewer work tool: reviewerIntroduced"
+  },
+  "@reviewerInvalidCredentials": {
+    "description": "Reviewer sign-in rejected the email or password."
   },
   "@reviewerInvalidPlan": {
     "description": "Reviewer work tool: reviewerInvalidPlan"
@@ -2913,6 +2922,7 @@
   "commonCheck": "Check",
   "commonChooseAnother": "Choose another",
   "commonClose": "Close",
+  "commonConnectingSlow": "Connecting to Qabas… The first visit can take up to a minute.",
   "commonContinue": "Continue",
   "commonDayStreak": "{count, plural, other{{countText} day streak}}",
   "commonDays": "{count, plural, =1{1 day} other{{countText} days}}",
@@ -3294,6 +3304,7 @@
   "reviewWordsMasteredOf": "{mastered} of {total} mastered",
   "reviewYourWords": "Your words",
   "reviewerAbstention": "Correct abstention (%)",
+  "reviewerAccountDescription": "Reviewers sign in with their account to review lesson plans and drafts, run blind comparisons and view metrics. Your learning progress on this device returns when you sign out.",
   "reviewerAccuracy": "Accuracy (%)",
   "reviewerAccurate": "Which lesson is more accurate?",
   "reviewerActivated": "Misconceptions activated",
@@ -3341,6 +3352,7 @@
   "reviewerInfo": "Information",
   "reviewerInteractive": "Learner acts",
   "reviewerIntroduced": "Introduced concepts",
+  "reviewerInvalidCredentials": "That email or password isn't right. Please try again.",
   "reviewerInvalidPlan": "Check bilingual fields, objectives, concepts, arc and budgets before approval.",
   "reviewerLearning": "Learning",
   "reviewerLessonA": "Lesson A",

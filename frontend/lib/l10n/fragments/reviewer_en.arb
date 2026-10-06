@@ -921,5 +921,13 @@
   },
   "@reviewerSampleDescription": {
     "description": "Explain sample reviewer content and preserved learner progress."
+  },
+  "reviewerAccountDescription": "Reviewers sign in with their account to review lesson plans and drafts, run blind comparisons and view metrics. Your learning progress on this device returns when you sign out.",
+  "reviewerInvalidCredentials": "That email or password isn't right. Please try again.",
+  "@reviewerAccountDescription": {
+    "description": "Explain live reviewer sign-in and preserved learner progress."
+  },
+  "@reviewerInvalidCredentials": {
+    "description": "Reviewer sign-in rejected the email or password."
   }
 }

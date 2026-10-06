@@ -18,8 +18,13 @@ import 'package:qabas/shared/presentation/brand/achievement_badge.dart';
 import 'package:qabas/shared/presentation/brand/brand.dart';
 
 class ProfilePage extends StatefulWidget {
-  const ProfilePage({super.key, this.developerEnabled = false, this.reviewerSampleEnabled = false});
-  final bool developerEnabled, reviewerSampleEnabled;
+  const ProfilePage({
+    super.key,
+    this.developerEnabled = false,
+    this.reviewerSampleEnabled = false,
+    this.reviewerSignInEnabled = false,
+  });
+  final bool developerEnabled, reviewerSampleEnabled, reviewerSignInEnabled;
   @override
   State<ProfilePage> createState() => _ProfilePageState();
 }
@@ -190,18 +195,21 @@ class _ProfilePageState extends State<ProfilePage> {
                                 onPressed: () => context.read<ProfileBloc>().add(const ProfileOpened()),
                               ),
                             ),
-                          if (widget.reviewerSampleEnabled) ...[
+                          if (widget.reviewerSampleEnabled || widget.reviewerSignInEnabled) ...[
                             QCard(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
                                   Text(l.reviewerConsole, style: context.text.titleLarge),
                                   const SizedBox(height: QSpace.sm),
-                                  Text(l.reviewerSampleDescription, style: context.text.bodyMedium),
+                                  Text(
+                                    widget.reviewerSampleEnabled ? l.reviewerSampleDescription : l.reviewerAccountDescription,
+                                    style: context.text.bodyMedium,
+                                  ),
                                   const SizedBox(height: QSpace.md),
                                   QButton(
-                                    key: const ValueKey('profile-reviewer-sample'),
-                                    label: l.reviewerSampleOpen,
+                                    key: ValueKey(widget.reviewerSampleEnabled ? 'profile-reviewer-sample' : 'profile-reviewer-sign-in'),
+                                    label: widget.reviewerSampleEnabled ? l.reviewerSampleOpen : l.reviewerSignIn,
                                     onPressed: () => context.push('/reviewer/login'),
                                   ),
                                 ],
