@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import io
+import os
 import sys
 import zipfile
 from pathlib import Path
@@ -44,14 +45,18 @@ def main() -> int:
     if args.archive:
         archive = args.archive.read_bytes()
     else:
-        print(f"downloading {spec.url}", flush=True)
+        download_url = os.environ.get("MUSHAF_ARCHIVE_URL") or spec.url
+        if not download_url.startswith("https://"):
+            print("dataset download requires HTTPS", file=sys.stderr)
+            return 1
+        print(f"downloading pinned dataset {spec.id}", flush=True)
         # Cold deployments may encounter a slow or transiently unreachable origin.
         # Retry connection failures, keeping TLS verification and both pinned digests.
         transport = httpx.HTTPTransport(retries=2)
         try:
             with httpx.Client(transport=transport, timeout=httpx.Timeout(120, connect=30),
                               follow_redirects=True) as client:
-                response = client.get(spec.url)
+                response = client.get(download_url)
                 response.raise_for_status()
                 archive = response.content
         except httpx.HTTPError as exc:

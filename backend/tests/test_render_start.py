@@ -32,10 +32,9 @@ class RenderStartTests(unittest.TestCase):
         worker.poll.return_value = 1
         beat, api = MagicMock(), MagicMock()
         beat.poll.return_value = api.poll.return_value = None
-        dataset = MagicMock(returncode=0)
-        dataset.poll.return_value = 0
-        popen.side_effect = [migration, dataset, worker, beat, api]
-        self.assertEqual(start_render.main(), 1)
+        popen.side_effect = [migration, worker, beat, api]
+        with patch.dict(start_render.os.environ, {}, clear=True):
+            self.assertEqual(start_render.main(), 1)
         beat.terminate.assert_called_once()
         api.terminate.assert_called_once()
 
@@ -47,7 +46,8 @@ class RenderStartTests(unittest.TestCase):
         dataset = MagicMock(returncode=1)
         dataset.poll.return_value = 1
         popen.side_effect = [migration, dataset]
-        self.assertEqual(start_render.main(), 1)
+        with patch.dict(start_render.os.environ, {"MUSHAF_ARCHIVE_URL": "https://example.org/pinned.zip"}):
+            self.assertEqual(start_render.main(), 1)
         self.assertEqual(popen.call_count, 2)
         self.assertIn("scripts/fetch_mushaf.py", popen.call_args.args[0])
 

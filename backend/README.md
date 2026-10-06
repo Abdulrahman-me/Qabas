@@ -49,7 +49,7 @@ Start Command instead (from the `backend` root directory):
 uv run python scripts/start_render.py
 ```
 
-The launcher runs migrations and installs the digest-pinned canonical mushaf before starting Uvicorn, a Celery worker for the
+The launcher runs migrations before starting Uvicorn, a Celery worker for the
 `maintenance,raqeeb,embeddings` queues, and Celery Beat. Reply generation needs both
 the worker and Beat: the API records requests in the outbox, and Beat schedules the
 relay that sends them to the worker. All processes inherit the service's environment.
@@ -58,6 +58,14 @@ appear in deploy logs. `upgrade head` leaves an already-current schema unchanged
 Use this launcher on a single instance only; do not also run a separate Beat process.
 This shares the free instance's memory and CPU; a local embedding model or heavy
 reply workload may require a separate worker with more resources.
+
+The canonical mushaf must be installed in the build environment with
+`uv run python scripts/fetch_mushaf.py`. The official download server may be unreachable
+from Render. In that case configure `MUSHAF_ARCHIVE_URL` with an HTTPS URL for the exact
+pinned ZIP in operator-controlled storage accessible to Render; the launcher then
+installs it at startup. Both archive and member digests remain mandatory. Without
+that variable, startup does not download from the unreachable origin, so login and
+the API can run, but religious retrieval still needs the installed dataset.
 
 Set `APP_ENV=production`, `DATABASE_URL` (a `postgresql+asyncpg://` URL), `REDIS_URL`,
 `AUTH_TOKEN_PEPPER` and `STORAGE_SIGNING_KEY` in Render. Keep the two secrets stable across

@@ -53,8 +53,13 @@ def main() -> int:
     signal.signal(signal.SIGTERM, request_stop)
     signal.signal(signal.SIGINT, request_stop)
     try:
-        for preparation in ([sys.executable, "-m", "alembic", "upgrade", "head"],
-                            [sys.executable, "scripts/fetch_mushaf.py", "--if-missing"]):
+        preparations = [[sys.executable, "-m", "alembic", "upgrade", "head"]]
+        if os.environ.get("MUSHAF_ARCHIVE_URL"):
+            preparations.append([sys.executable, "scripts/fetch_mushaf.py", "--if-missing"])
+        else:
+            print("Canonical dataset must be installed during build; "
+                  "startup download disabled without MUSHAF_ARCHIVE_URL.", flush=True)
+        for preparation in preparations:
             child = subprocess.Popen(preparation, cwd=BACKEND)
             children.append(child)
             while child.poll() is None and not stopping:
