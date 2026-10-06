@@ -74,6 +74,7 @@ async def current_user(request: Request, resources: ResourcesDep, db: DbDep) -> 
     token = _bearer_token(request)
     principal = await auth_sessions.authenticate(db, resources.settings, token)
     request.state.user_id = principal.user.id
+    request.state.auth_session_id = principal.session_id
     return principal.user
 
 

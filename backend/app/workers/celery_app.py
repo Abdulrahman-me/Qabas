@@ -21,7 +21,7 @@ settings = get_settings()
 celery_app = Celery("qabas", broker=settings.redis_url, backend=settings.redis_url,
                     include=["app.workers.tasks_maintenance", "app.workers.tasks_asr", "app.workers.tasks_factory",
                              "app.workers.tasks_raqeeb", "app.workers.tasks_embeddings",
-                             "app.workers.tasks_community"])
+                             "app.workers.tasks_community", "app.workers.tasks_challenges"])
 celery_app.conf.update(
     task_queues=[Queue(name) for name in QUEUES],
     task_default_queue="maintenance",

@@ -278,6 +278,18 @@ private benchmark runner; no synthetic benchmark appears as release quality in s
 - **Jobs:** `community.sweep_challenges` every 5 s (lobbies, expiry, 24 h async close). Account deletion closes
   open challenges without rewards.
 
+## Live challenges (Phase 20)
+
+`/v1/ws/duels/{id}` uses the single-use 60-second ticket returned by a fresh challenge create/get/accept. Fetch a
+new GET before reconnecting; bearer tokens never go in the URL. Questions, locked answers, deadlines and finished
+results survive API/coordinator restarts. PostgreSQL is authoritative; a fenced Redis lease selects the coordinator,
+and committed journal events feed sockets on any API instance. Existing grading, bots and reward transactions are
+reused. Run `uv run python scripts/run_api.py --workers 2` for bounded socket transport; the ordinary worker/beat
+registers `maintenance.recover_live_challenges` every second. See [protocol, privacy and operations](docs/LIVE_CHALLENGES.md)
+for client events, reconnect/grace, NTP/proxy log requirements, draining and deployment gates.
+
+The first-five-rewarded-challenges-per-day limit remains a provisional product decision requiring owner confirmation.
+
 ## Staging environment
 
 Staging is a non-production environment for frontend integration (`APP_ENV=staging`): the same code, migrations and

@@ -7,6 +7,7 @@ from __future__ import annotations
 import asyncio
 import uuid
 from datetime import timedelta
+from urllib.parse import parse_qs, urlsplit
 
 import pytest
 from fastapi.testclient import TestClient
@@ -15,7 +16,7 @@ from sqlalchemy import func, select, text
 from app.contract import models as C
 from app.models import Duel, DuelPlayer, DuelQuestion
 from app.runtime import Resources
-from app.services.challenges import bot, duels, selection
+from app.services.challenges import bot, coordinator, duels, selection
 from app.services.platform import deletion
 from app.services.platform.auth_sessions import utcnow
 from tests.challenges import support as S
@@ -40,7 +41,9 @@ async def test_bot_duel_is_ready_with_seven_pinned_distinct_questions(world: tup
     assert [(p.user_id, p.display_name, p.is_me, p.is_bot, p.status) for p in duel.players] == [
         (a, "Seeker 4", True, False, "joined"), (bot.BOT_IDS[0], "Coach", False, True, "joined")]
     assert duel.players[1].avatar_key == "traveler_bot" and duel.result is None
-    assert duel.ws_url == f"ws://testserver/v1/ws/duels/{duel.duel_id}"
+    url = urlsplit(duel.ws_url)
+    assert (url.scheme, url.netloc, url.path) == ("ws", "testserver", f"/v1/ws/duels/{duel.duel_id}")
+    assert len(parse_qs(url.query)["ticket"][0]) >= 43
     arabic = api.get(f"/v1/duels/{duel.duel_id}", headers=ha | {"Accept-Language": "ar"}).json()
     assert arabic["players"][1]["display_name"] == "المدرّب"
     async with resources.sessionmaker() as db:
@@ -129,7 +132,9 @@ async def test_invitations_expire_and_unstarted_live_duels_close(world: tuple[Te
         await S.accept(resources, b, pending, t + timedelta(minutes=3))
     started = await S.create(resources, a, t + timedelta(minutes=5), opponent_type="bot")
     async with resources.sessionmaker() as db, db.begin():                 # a coordinator started it
-        await db.execute(text("UPDATE duels SET status = 'in_progress', phase = 'question' WHERE id = :d"),
+        await coordinator.fencing_context(db, 1)
+        await db.execute(text("UPDATE duels SET coordinator_epoch = 1, status = 'in_progress', phase = 'question' "
+                              "WHERE id = :d"),
                          {"d": started})
     assert await duels.sweep(resources.sessionmaker, t + timedelta(minutes=30)) == 0
     assert (await S.load(resources, started))[0].status == "in_progress"   # live play is the coordinator's

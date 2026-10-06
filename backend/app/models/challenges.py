@@ -79,6 +79,8 @@ class Duel(Base):
     lobby_deadline_at: Mapped[datetime | None]
     async_at: Mapped[datetime | None]
     coordinator_epoch: Mapped[int] = mapped_column(BigInteger, server_default="0")
+    live_connected_at: Mapped[datetime | None]
+    starts_at: Mapped[datetime | None]
     result: Mapped[dict[str, Any] | None]
     finished_at: Mapped[datetime | None]
 
@@ -106,6 +108,8 @@ class DuelPlayer(Base):
     forfeited: Mapped[bool] = mapped_column(Boolean, server_default="false")
     completed_at: Mapped[datetime | None]     # async: the player answered (or timed out on) every question
     xp_awarded: Mapped[int | None] = mapped_column(Integer)
+    ready_at: Mapped[datetime | None]
+    disconnected_at: Mapped[datetime | None]
 
 
 class DuelQuestion(Base):
@@ -119,6 +123,13 @@ class DuelQuestion(Base):
                         name="deadline_after_issue"),
         CheckConstraint("user_id IS NULL OR (issued_at IS NOT NULL AND deadline_at IS NOT NULL)",
                         name="player_rows_are_issued"),
+        CheckConstraint("(issued_at IS NULL) = (deadline_at IS NULL)", name="timing_pair"),
+        CheckConstraint("closed_at IS NULL OR (issued_at IS NOT NULL AND closed_at >= issued_at)",
+                        name="close_after_issue"),
+        CheckConstraint("(closed_at IS NULL) = (reveal_until IS NULL) AND "
+                        "(reveal_until IS NULL OR reveal_until >= closed_at)", name="reveal_after_close"),
+        CheckConstraint("user_id IS NOT NULL OR closed_at IS NULL OR result_snapshot IS NOT NULL",
+                        name="closed_has_public_result"),
         Index("uq_duel_questions_shared", "duel_id", "question_index", unique=True,
               postgresql_where=sql_text("user_id IS NULL")),
         Index("uq_duel_questions_player", "duel_id", "user_id", "question_index", unique=True,
@@ -138,6 +149,7 @@ class DuelQuestion(Base):
     deadline_at: Mapped[datetime | None]
     closed_at: Mapped[datetime | None]
     reveal_until: Mapped[datetime | None]
+    result_snapshot: Mapped[dict[str, Any] | None]  # public per-question scores survive private-answer purge
 
 
 class DuelAnswer(Base):

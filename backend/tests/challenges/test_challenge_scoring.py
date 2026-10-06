@@ -12,9 +12,9 @@ from fastapi.testclient import TestClient
 from sqlalchemy import func, select, text
 
 from app.contract import models as C
-from app.models import Duel, DuelAnswer, LearnerAchievement, Quest, XpEvent
+from app.models import Duel, DuelAnswer, DuelQuestion, LearnerAchievement, Quest, XpEvent
 from app.runtime import Resources
-from app.services.challenges import bot, results
+from app.services.challenges import bot, coordinator, play, results
 from app.services.challenges.duels import PRESETS
 from app.services.learning import xp
 from app.services.platform import outbox
@@ -66,11 +66,28 @@ def test_bot_is_deterministic_and_plausible() -> None:
 
 async def live(resources: Resources, duel_id: str, user_id: str, index: int, correct: bool, elapsed: int,
                config: C.DuelConfig) -> None:
-    """Record one live answer as the Phase 20 coordinator will (server times, shared points)."""
-    now = utcnow()
+    """Synthetic standings for result-unit tests, with the real pinned answer and an explicit test fence.
+
+    Phase 20 socket/coordinator tests exercise actual sequential question timing separately.
+    """
     async with resources.sessionmaker() as db, db.begin():
-        db.add(DuelAnswer(duel_id=duel_id, user_id=user_id, question_index=index, answer=None, correct=correct,
-                          received_at=now, elapsed_ms=elapsed,
+        duel = await db.scalar(select(Duel).where(Duel.id == duel_id).with_for_update())
+        assert duel is not None
+        await coordinator.fencing_context(db, max(duel.coordinator_epoch, 1))
+        duel.coordinator_epoch = max(duel.coordinator_epoch, 1)
+        duel.status, duel.phase = "in_progress", "question"
+        q = await db.scalar(select(DuelQuestion).where(DuelQuestion.duel_id == duel_id,
+            DuelQuestion.question_index == index, DuelQuestion.user_id.is_(None)))
+        assert q is not None
+        if q.issued_at is None:
+            q.issued_at = duel.created_at
+            q.deadline_at = duel.created_at + timedelta(milliseconds=config.time_limit_ms)
+        await db.flush()
+        version = await play._version(db, duel_id, index)
+        exercise = play._exercise(version, duel, "en")
+        chosen = version.answer_key if correct else S.wrong(version.answer_key, exercise)
+        db.add(DuelAnswer(duel_id=duel_id, user_id=user_id, question_index=index, answer=chosen, correct=correct,
+                          received_at=duel.created_at + timedelta(milliseconds=elapsed), elapsed_ms=elapsed,
                           points=C.challenge_points(correct, config.time_limit_ms - elapsed, config)))
 
 

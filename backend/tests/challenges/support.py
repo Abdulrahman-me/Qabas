@@ -11,7 +11,7 @@ from sqlalchemy import select
 from app.contract import models as C
 from app.models import Duel, DuelPlayer, DuelQuestion, ExerciseVersion, Friendship, User
 from app.runtime import Resources
-from app.services.challenges import duels, play, results
+from app.services.challenges import coordinator, duels, live, play, results
 from app.services.community.friends import pair
 from tests.community.support import make_user, signed_in
 
@@ -121,4 +121,25 @@ async def load(resources: Resources, duel_id: str) -> tuple[Duel, list[DuelPlaye
 async def finish(resources: Resources, duel_id: str, now: datetime) -> bool:
     async with resources.sessionmaker() as db, db.begin():
         duel = (await db.execute(select(Duel).where(Duel.id == duel_id).with_for_update())).scalar_one()
+        if duel.mode == "live" and duel.status in duels.OPEN:
+            # Phase 19 result tests seed synthetic standings, not a socket game. Supply a valid fenced
+            # closed-question fixture; production never has a bypass flag for these database guards.
+            await coordinator.fencing_context(db, max(duel.coordinator_epoch, 1))
+            duel.coordinator_epoch = max(duel.coordinator_epoch, 1)
+            duel.status, duel.phase = "in_progress", "question"
+            await db.flush()
+            players = results.participants(await duels.players_of(db, duel.id))
+            for q in await live.questions(db, duel.id):
+                if q.issued_at is None:
+                    q.issued_at = duel.created_at
+                    q.deadline_at = duel.created_at + timedelta(milliseconds=duel.config["time_limit_ms"])
+                    await db.flush()
+                for player in players:
+                    await live.record(db, duel, player, q, None, now, absent=True)
+                coordinates = live.result_coordinates(players, await live.answers(db, duel.id), q.question_index)
+                q.closed_at, q.reveal_until = now, now + timedelta(milliseconds=duel.config["reveal_ms"])
+                q.result_snapshot = coordinates
+                await db.flush()
+            duel.phase = "result"
+            await db.flush()
         return await results.finish(db, duel, now)

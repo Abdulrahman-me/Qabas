@@ -13,7 +13,7 @@ from starlette.responses import JSONResponse
 from app.api.deps import CurrentLearner, DbDep, RedisDep, RequestLanguage, SettingsDep
 from app.contract import models as C
 from app.errors import ApiError, ErrorCode
-from app.services.challenges import duels, play
+from app.services.challenges import duels, play, tickets
 from app.services.learning.profile import PAGE_DEFAULT
 from app.services.platform import idempotency
 from app.services.platform.auth_sessions import utcnow
@@ -23,9 +23,16 @@ router = APIRouter(prefix="/duels", tags=["challenges"])
 
 
 def ws_base(request: Request) -> str:
-    """The WebSocket origin of this API (``wss`` behind TLS). Phase 20 adds the single-use ticket."""
+    """The WebSocket origin of this API (``wss`` behind TLS)."""
     base = str(request.base_url).rstrip("/")
     return "wss" + base[len("https"):] if base.startswith("https") else "ws" + base[len("http"):]
+
+
+async def ticketed(duel: C.Duel, request: Request, redis: RedisDep, settings: SettingsDep,
+                   lang: str) -> C.Duel:
+    ticket = await tickets.mint(redis, settings, request.state.user_id, request.state.auth_session_id,
+                                duel.duel_id, lang)
+    return duel.model_copy(update={"ws_url": f"{duel.ws_url}?ticket={ticket}"})
 
 
 @router.post("", status_code=201, response_model=C.Duel)
@@ -37,7 +44,8 @@ async def create(body: C.DuelCreate, request: Request, user: CurrentLearner, db:
     async def action() -> tuple[int, dict[str, Any]]:
         await RateLimiter(redis, settings).hit("duel_create", user.id)
         duel = await duels.create(db, user, body, utcnow())
-        return 201, (await duels.project(db, duel, user, lang, base)).model_dump(mode="json")
+        projection = await ticketed(await duels.project(db, duel, user, lang, base), request, redis, settings, lang)
+        return 201, projection.model_dump(mode="json")
 
     if key:
         request_hash = idempotency.fingerprint("POST", request.url.path, body.model_dump(mode="json"))
@@ -62,17 +70,21 @@ async def history(request: Request, user: CurrentLearner, db: DbDep, lang: Reque
 
 
 @router.get("/{duel_id}", response_model=C.Duel)
-async def get(duel_id: str, request: Request, user: CurrentLearner, db: DbDep, lang: RequestLanguage) -> C.Duel:
+async def get(duel_id: str, request: Request, user: CurrentLearner, db: DbDep, lang: RequestLanguage,
+              redis: RedisDep, settings: SettingsDep) -> C.Duel:
     async with db.begin():
         duel, _ = await duels.locked(db, duel_id, user, utcnow())
-        return await duels.project(db, duel, user, lang, ws_base(request))
+        projection = await duels.project(db, duel, user, lang, ws_base(request))
+        return await ticketed(projection, request, redis, settings, lang)
 
 
 @router.post("/{duel_id}/accept", response_model=C.Duel)
-async def accept(duel_id: str, request: Request, user: CurrentLearner, db: DbDep, lang: RequestLanguage) -> C.Duel:
+async def accept(duel_id: str, request: Request, user: CurrentLearner, db: DbDep, lang: RequestLanguage,
+                 redis: RedisDep, settings: SettingsDep) -> C.Duel:
     async with db.begin():
         duel = await duels.accept(db, user, duel_id, utcnow())
-        return await duels.project(db, duel, user, lang, ws_base(request))
+        projection = await duels.project(db, duel, user, lang, ws_base(request))
+        return await ticketed(projection, request, redis, settings, lang)
 
 
 @router.post("/{duel_id}/decline", status_code=204, response_class=Response)

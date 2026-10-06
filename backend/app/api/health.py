@@ -30,6 +30,8 @@ async def ready(resources: ResourcesDep) -> JSONResponse:
         await resources.redis.ping()
 
     checks: dict[str, Any] = {}
+    if resources.live_manager is not None:
+        checks["live_coordinator"] = "ok" if resources.live_manager.healthy else "draining"
     for name, check in (("database", database), ("redis", redis)):
         try:
             await asyncio.wait_for(check(), CHECK_TIMEOUT_S)

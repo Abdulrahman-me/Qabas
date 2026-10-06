@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 import sys
 from datetime import UTC, datetime
 from typing import Any
@@ -23,6 +24,16 @@ SENSITIVE_KEYS = frozenset({
 SENSITIVE_QUERY_PARAMS = frozenset({"ticket", "token", "access_token", "signature", "sig"})
 
 _STANDARD_ATTRS = frozenset(vars(logging.LogRecord("", 0, "", 0, "", None, None))) | {"message", "asctime"}
+
+
+class SocketURLFilter(logging.Filter):
+    """Uvicorn logs WS upgrade URLs on its error logger, not just its disabled access logger."""
+
+    def filter(self, record: logging.LogRecord) -> bool:
+        message = record.getMessage()
+        record.msg = re.sub(r"(/v1/ws/duels/[^?\s\"']+)\?[^\s\"']+", r"\1?[redacted]", message)
+        record.args = ()
+        return True
 
 
 def redact(value: Any) -> Any:
@@ -47,7 +58,7 @@ class JsonFormatter(logging.Formatter):
             "ts": datetime.fromtimestamp(record.created, UTC).isoformat().replace("+00:00", "Z"),
             "level": record.levelname,
             "logger": record.name,
-            "msg": record.getMessage(),
+            "msg": re.sub(r"(/v1/ws/duels/[^?\s\"']+)\?[^\s\"']+", r"\1?[redacted]", record.getMessage()),
         }
         extras = {k: v for k, v in record.__dict__.items() if k not in _STANDARD_ATTRS and not k.startswith("_")}
         payload.update(redact(extras))
@@ -64,3 +75,10 @@ def configure_logging(level: str = "INFO") -> None:
     root.setLevel(level.upper())
     # Uvicorn's access log prints raw URLs (query strings could hold tickets); we log requests ourselves.
     logging.getLogger("uvicorn.access").disabled = True
+    for name in ("uvicorn", "uvicorn.error"):
+        logger = logging.getLogger(name)
+        if not any(isinstance(f, SocketURLFilter) for f in logger.filters):
+            logger.addFilter(SocketURLFilter())
+        # Transport debug logs can print raw client frames, including answers.
+        logger.setLevel(logging.INFO)
+    logging.getLogger("websockets").setLevel(logging.WARNING)

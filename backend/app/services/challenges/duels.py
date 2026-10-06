@@ -28,12 +28,11 @@ from app.contract import models as C
 from app.db.ids import new_id
 from app.errors import ApiError, ErrorCode
 from app.models import Duel, DuelAnswer, DuelPlayer, DuelQuestion, User
-from app.registries import deleted_learner_name
+from app.registries import default_avatar_key, deleted_learner_name
 from app.services.challenges import bot, results, selection
 from app.services.community.friends import are_friends, can_befriend
 from app.services.learning.locking import learner_lock
 from app.services.learning.profile import page_args
-from app.services.platform.deletion import DELETED_DISPLAY_NAME
 from app.services.users import iso
 
 PRESETS: dict[str, dict[str, Any]] = {
@@ -88,8 +87,8 @@ async def project(db: AsyncSession, duel: Duel, viewer: User, lang: str, ws_base
         user = users[p.user_id]
         if p.is_bot:
             name, avatar = bot.NAME[lang], bot.AVATAR
-        elif user.deleted_at is not None and user.display_name == DELETED_DISPLAY_NAME:
-            name, avatar = deleted_learner_name(lang), user.avatar_key
+        elif user.deleted_at is not None:
+            name, avatar = deleted_learner_name(lang), default_avatar_key()
         else:
             name, avatar = user.display_name, user.avatar_key
         rows.append({"user_id": p.user_id, "display_name": name, "avatar_key": avatar, "is_me": p.user_id == viewer.id,

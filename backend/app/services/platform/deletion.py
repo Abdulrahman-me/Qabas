@@ -28,6 +28,7 @@ from app.models import (
     DailyActivity,
     DeletionJob,
     DuelAnswer,
+    DuelConnection,
     DuelQuestion,
     FriendInvite,
     Friendship,
@@ -67,7 +68,8 @@ REQUEST_STEPS: list[RequestStep] = []
 
 # Learner-owned rows deleted by the purge, in dependency-safe order (answers cascade from sessions).
 PURGED_TABLES: tuple[Any, ...] = (
-    LearningSession, RecitationCheckRecord, LearnerConcept, LearnerTerm, LearnerMisconception, LearnerLesson,
+    DuelConnection, LearningSession, RecitationCheckRecord, LearnerConcept, LearnerTerm, LearnerMisconception,
+    LearnerLesson,
     LearnerUnit, XpEvent, DailyActivity, Quest, IdempotencyKey, AuthSession, MetricUnitFact, MetricLearnerFact,
     RaqeebUploadReceipt, RaqeebConversation, LeagueMember, LearnerTier, LearnerAchievement, DuelAnswer, DuelQuestion,
 )

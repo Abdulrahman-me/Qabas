@@ -33,6 +33,7 @@ PROFILES: dict[str, dict[str, tuple[Limit, ...]]] = {
         "friend_invite": (Limit(20, 86400),),
         "duel_create": (Limit(30, 3600),),
         "ws_message": (Limit(5, 1),),                         # per socket
+        "ws_connect": (Limit(30, 60),),                        # per learner; operational reconnect abuse bound
         "factory_run": (Limit(20, 86400),),                   # per reviewer
     },
 }

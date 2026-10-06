@@ -1,6 +1,7 @@
 """All ORM models; importing this package registers every table on ``Base.metadata``."""
 
 from app.models.challenges import Duel, DuelAnswer, DuelPlayer, DuelQuestion
+from app.models.challenges_live import DuelConnection, DuelLiveEvent
 from app.models.community import DailyActivity, Quest, XpEvent
 from app.models.content import (
     Claim,
@@ -50,7 +51,8 @@ from app.models.users import AuthSession, DeletionJob, IdempotencyKey, User
 __all__ = [
     "AchievementDefinition",
     "AuthSession", "BenchmarkRun", "BlindPair", "BlindResponse", "Claim", "Concept", "CurriculumSlot", "DailyActivity",
-    "DeletionJob", "Duel", "DuelAnswer", "DuelPlayer", "DuelQuestion", "EffectLedger", "Exercise",
+    "DeletionJob", "Duel", "DuelAnswer", "DuelConnection", "DuelLiveEvent", "DuelPlayer", "DuelQuestion",
+    "EffectLedger", "Exercise",
     "ExerciseVersion", "FactoryRun", "FriendInvite", "Friendship", "IdempotencyKey",
     "League", "LeagueMember", "LeaguePromotion", "LeagueTier", "LearnerAchievement",
     "LearnerConcept", "LearnerLesson", "LearnerMisconception",

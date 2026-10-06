@@ -14,7 +14,8 @@ pytestmark = pytest.mark.integration
 def test_ready_with_real_services(api: TestClient) -> None:
     response = api.get("/health/ready")
     assert response.status_code == 200, response.json()
-    assert response.json() == {"status": "ready", "checks": {"database": "ok", "redis": "ok"}}
+    assert response.json() == {"status": "ready", "checks": {
+        "database": "ok", "redis": "ok", "live_coordinator": "ok"}}
 
 
 def test_not_ready_reports_failing_dependency_without_secrets(integration_settings: Settings) -> None:

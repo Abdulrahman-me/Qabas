@@ -42,7 +42,10 @@ class Settings(BaseSettings):
     # Auth (rev 10): HMAC pepper for stored token hashes; the previous value is accepted during rotation.
     auth_token_pepper: SecretStr | None = None
     auth_token_pepper_previous: SecretStr | None = None
-    ws_ticket_ttl_seconds: int = 60
+    ws_ticket_ttl_seconds: int = Field(default=60, ge=60, le=60)  # closed revision 10 requirement
+    live_ws_max_connections: int = Field(default=4, ge=2, le=20)
+    live_ws_max_frame_bytes: int = Field(default=16_384, ge=1024, le=65_536)
+    live_ws_send_timeout_seconds: float = Field(default=5, gt=0, le=10)
     signed_url_ttl_seconds: int = 900
     auth_cache_ttl_seconds: int = 30          # revocation takes effect within this window (backend §5)
     guest_inactivity_days: int = 180

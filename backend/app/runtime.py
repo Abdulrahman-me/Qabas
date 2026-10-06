@@ -9,6 +9,7 @@ from __future__ import annotations
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
+from typing import TYPE_CHECKING
 
 import redis.asyncio as aioredis
 from fastapi import FastAPI
@@ -19,6 +20,9 @@ from app.db.engine import make_engine
 from app.services.platform import deletion
 from app.services.platform.storage import ObjectStorage, build_storage
 
+if TYPE_CHECKING:
+    from app.services.challenges.runtime import LiveManager
+
 
 @dataclass
 class Resources:
@@ -27,6 +31,7 @@ class Resources:
     sessionmaker: async_sessionmaker[AsyncSession]
     redis: aioredis.Redis
     storage: ObjectStorage
+    live_manager: LiveManager | None = None
 
     @classmethod
     def create(cls, settings: Settings, **engine_kwargs: object) -> Resources:
@@ -40,6 +45,8 @@ class Resources:
         )
 
     async def close(self) -> None:
+        if self.live_manager is not None:
+            await self.live_manager.close()
         await self.redis.aclose()
         await self.engine.dispose()
 
@@ -49,6 +56,11 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     resources = Resources.create(app.state.settings)
     app.state.resources = resources
     deletion.configure_storage(resources.storage)
+    from app.services.challenges.runtime import LiveManager
+    manager = LiveManager(resources)
+    resources.live_manager = manager
+    app.state.live_manager = manager
+    manager.start()
     try:
         yield
     finally:
