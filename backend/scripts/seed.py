@@ -11,7 +11,7 @@ occupied slot or drop curriculum that holds lessons are refused.
 
 Every run also syncs the seeded community configuration (league tiers and achievements) with
 ``content/registries.json``, creates the practice-bot users (D-37) and, only when ``SYNTHETIC_LEAGUE_MEMBERS=true``
-(demo/staging; refused in production, P-01), creates the synthetic league members of
+(owner-approved opt-in pilot; labelled Training Opponent, P-01), creates the synthetic league members of
 ``content/synthetic_league_members.json``.
 
 The test curriculum and the production curriculum use different unit ids and positions; load the test curriculum

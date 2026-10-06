@@ -39,8 +39,9 @@ receipts, conversations and origin-owned memory, including after backup restorat
 
 Staging/production uploads require an actually approved `content/raqeeb_input_policy.yaml`: retention, private
 storage, disclosure, owner/date/report. STT additionally requires exact approved provider/HTTPS origin/model,
-retention and deletion responsibilities. Pending O-03/O-09/P-04 gates send no hosted audio. The 30-day local
-test default is a proposal, not production approval. Configure FFmpeg using forward slashes on Windows.
+retention and deletion responsibilities. Pending O-03/O-09/P-04 gates send no hosted audio. The owner selected
+seven-day original-upload retention for the pilot; this also applies locally, and is separate from provider
+terms/storage approval. Configure FFmpeg using forward slashes on Windows.
 
 ## Guarded memory
 

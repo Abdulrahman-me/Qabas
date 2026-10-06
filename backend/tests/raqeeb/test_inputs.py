@@ -131,6 +131,9 @@ async def test_retention_removes_private_bytes_preserves_extraction_and_replay(a
     async with resources.sessionmaker() as db, db.begin():
         receipt = (await db.execute(select(RaqeebUploadReceipt))).scalar_one()
         object_key = receipt.object_key
+        reply = await db.get(RaqeebMessage, aid)
+        assert reply is not None and reply.completed_at is not None
+        assert receipt.expires_at == reply.completed_at + timedelta(days=7)
         receipt.expires_at = utcnow() - timedelta(seconds=1)
     assert await intake.sweep(resources) == 1 and await intake.sweep(resources) == 0
     assert not resources.storage.exists(Bucket.private, object_key)

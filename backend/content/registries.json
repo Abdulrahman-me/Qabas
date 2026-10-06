@@ -258,6 +258,10 @@
     "ar": "مسافر",
     "en": "Traveler"
   },
+  "training_opponent": {
+    "ar": "منافس تدريبي",
+    "en": "Training Opponent"
+  },
   "goal_anchors": {
     "_about": "Onboarding curiosity choices (User.goal_anchor), from the contract registry template. Bridges are reviewed onboarding copy bundled in the app; the server only validates keys and never uses them for ordering, recommendations, adaptation or inference.",
     "keys": [

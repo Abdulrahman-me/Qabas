@@ -1,6 +1,6 @@
 """Synthetic league members (backend §10.3, SEED_AND_IMPORT §15), only where ``SYNTHETIC_LEAGUE_MEMBERS=true``.
 
-Production use is the open product decision P-01; the setting is refused in production (``app.config``). The 60
+Owner-approved pilot use is opt-in and visibly labelled in league projections (P-01, D-211). The 60
 members of ``content/synthetic_league_members.json`` are seeded by ``scripts/seed.py`` as ``is_synthetic`` users
 (no credentials, so they can never sign in, accept invites or be befriended) and are excluded from metrics and
 achievements. The beat job (``community.synthetic_leagues``):

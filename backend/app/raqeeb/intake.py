@@ -23,6 +23,7 @@ from app.services.platform.storage import Bucket, ObjectStorage, user_prefix
 from app.sources.records import sha256_bytes, sha256_text
 
 MIB = 1024 * 1024
+ATTACHMENT_RETENTION_DAYS = 7  # owner-selected original-file policy, not provider retention
 MIMES = {
     "audio": {"audio/mp4", "audio/webm", "audio/wav", "audio/mpeg"},
     "image": {"image/jpeg", "image/png", "image/webp"},
@@ -111,14 +112,14 @@ async def parse(request: Request) -> Payload:
 
 def retention_days(settings: Settings) -> int:
     if settings.app_env in (Environment.dev, Environment.test):
-        return 30  # explicitly proposed/test default, never a production approval
+        return ATTACHMENT_RETENTION_DAYS
     try:
         value = yaml.safe_load(settings.raqeeb_input_policy_path.read_text(encoding="utf-8"))
         days = value.get("attachment_retention_days")
         if value.get("schema") != "qabas.raqeeb_input_policy/1" or value.get("status") != "approved" or \
                 not all(value.get(k) for k in ("approved_by", "approved_on", "report", "private_storage",
                                               "learner_disclosure")) or \
-                not isinstance(days, int) or isinstance(days, bool) or days <= 0:
+                not isinstance(days, int) or isinstance(days, bool) or days != ATTACHMENT_RETENTION_DAYS:
             raise ValueError
         return days
     except (OSError, UnicodeError, yaml.YAMLError, ValueError, AttributeError):

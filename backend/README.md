@@ -251,10 +251,11 @@ private benchmark runner; no synthetic benchmark appears as release quality in s
   authoritative tables on `session.finished`, completed Raqeeb answers and reads; unlocks are permanent.
   `challenges_won` counts completed live wins against friends through the Phase 19 counter and the shared
   `duel.finished` outbox path. Backfill after deploy: `achievements.refresh_all(sessionmaker)`.
-- **Synthetic league members** (demo/staging only, P-01; refused in production): 60 members from
+- **Training league members** (owner-approved opt-in pilot, P-01): 60 members from
   `content/synthetic_league_members.json`, seeded by `scripts/seed.py` with `SYNTHETIC_LEAGUE_MEMBERS=true`. The
   beat job seats up to 15 per league, keeping 5 seats for learners, and grants their XP through the normal ledger
-  once per 30 minutes. They never sign in, befriend, earn badges or enter metrics.
+  once per 30 minutes. Every training member is visibly labeled "Training Opponent" / "منافس تدريبي",
+  including privacy-masked profiles. They never sign in, befriend, earn badges or enter metrics.
 - Account deletion removes friendships, sent invites and league seats at once; the purge also removes tiers,
   memberships and achievement progress.
 
@@ -289,7 +290,9 @@ reused. Run `uv run python scripts/run_api.py --workers 2` for bounded socket tr
 registers `maintenance.recover_live_challenges` every second. See [protocol, privacy and operations](docs/LIVE_CHALLENGES.md)
 for client events, reconnect/grace, NTP/proxy log requirements, draining and deployment gates.
 
-The first-five-rewarded-challenges-per-day limit remains a provisional product decision requiring owner confirmation.
+The first-five-eligible-rewarded-challenges-per-local-day limit is owner-approved pilot behavior; additional
+play remains available. See [the owner decisions backend pass](docs/OWNER_DECISIONS_PASS.md) for the seven-day
+upload policy, private curriculum inventory/batch commands, approved learner copy and remaining live gates.
 
 ## Staging environment
 

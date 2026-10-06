@@ -784,7 +784,8 @@ Engineering-complete under D-163; no live provider acceptance, real private benc
 - [x] Friends: invite codes, accept with brute-force limits, online status, privacy.
 - [x] Achievements as outbox consumers from authoritative tables (definitions already in `registries.json`, Phase 4); `GET /me/achievements`.
 - [x] `challenges_won` (badge `quickLight`) deferred at Phase 18, then completed by Phase 19's `duels` counter and exercised by Phase 20 live completion (F-182).
-- [~] Synthetic members in production remain product decision P-01 (refused by configuration).
+- [x] P-01 resolved for the pilot by the subsequent owner pass: explicitly enabled, visibly disclosed training
+  members are allowed in production (D-211); actual deployment/seed remains separate.
 
 **Exit achieved:** annotated `phase-18` on 5fb2148, main fast-forwarded/pushed, main CI 37433336373 green.
 
@@ -842,7 +843,8 @@ privacy, brute-force, idempotency and deletion tests).
 
 ---
 
-**Owner confirmation required:** the five-rewarded-challenges-per-local-day cap remains conservative and provisional. The authoritative challenge/reward sections do not specify this cap; it is included in the private owner-decision report. Repeated play remains available.
+**Subsequent owner confirmation:** the five-eligible-rewarded-challenges-per-local-day cap is approved for the
+pilot (D-211). The original engineering choice remains recorded in D-195; repeated play remains available.
 
 ## Phase 20 — Challenges: live WebSocket and durable coordinator
 
@@ -901,6 +903,42 @@ and the first-five challenge XP cap remains a product-owner decision (D-195).
 
 ---
 
+## Owner decisions implementation pass — after Phase 20 (not Phase 21)
+
+The owner supplied the complete pilot decisions, the 44-page participant guide, the 15-page scientific package
+and the final judging weights. Both documents were reviewed completely. The subsequent clarification defers
+frontend linking until backend completion and confirms that live provider configuration and reciter assets are
+not available. No broad hardening audit, provider migration, religious generation shortcut or automatic approval
+was started. See `backend/docs/OWNER_DECISIONS_PASS.md` for scope, commands and actual delivery limits.
+
+- [x] Seven-day original Raqeeb upload retention; existing cleanup/extraction/deletion behavior retained.
+- [x] Owner-approved training league members can be enabled explicitly, with bilingual disclosure even on
+  masked members; credential, friend, achievement and metrics exclusions preserved.
+- [x] Backend-owned bilingual review labels and minimal disclosures prepared for deferred client integration.
+- [x] Inventory all 93 registered slots before generation; bounded unit-by-unit admission and pending-stage
+  redispatch use the existing Factory pipeline, budgets, workers, source/model/media tools and both human gates.
+- [x] Record owner confirmation of first-five eligible challenge rewards and calm league promotion.
+- [x] Preserve the Salah reference as internal/test-only; Unit 0 position approval does not publish its lessons.
+- [x] Prepare private organizer-based acceptance candidates and hidden variants; never commit them or report
+  synthetic checks as genuine acceptance.
+- [~] Actual generation blocked by absent model configuration/active reviewer; no new Factory runs or publication.
+- [~] Genuine Raqeeb acceptance, licensed files, source/content decisions, renderer/device validation and hosting
+  remain unverified. Numerical release thresholds still need explicit approval beyond the organizer-case strategy.
+- [~] Final local/CI validation is in progress; no `phase-21` tag or completion claim.
+
+### Findings (owner pass)
+
+| ID | Finding | Resolution / remaining gate |
+|---|---|---|
+| F-204 | Original-upload retention was still the proposed 30 days despite the owner's seven-day choice. | Select seven locally and in the policy manifest; actual processing/storage terms remain separate approvals. Test exact expiry and byte deletion with preserved extraction. |
+| F-205 | Revision 10 `LeagueMember` has no training/synthetic flag, and production rejected all training members. | Owner explicitly permits disclosed pilot members. Use the existing display name to disclose in both languages, including privacy-masked members; no response-shape amendment. |
+| F-206 | A completed code checkpoint did not mean the existing default development DB was deployed: it remains at 0008, with 93 slots, zero lesson versions/runs and no active reviewer. | Read-only full inventory records this distinction; isolated tests migrate through 0014. No fixture lesson or failed/empty generation is presented as real content. |
+| F-207 | The organizer sheet specifies 12 behavior scenarios, two generic rather than concrete inputs; it does not approve private gold/source IDs or all proposed numerical thresholds. | 24 bilingual candidates and 24 private variants remain pending specialist review/concrete canonical input binding. Zero genuine evaluations; P-05 strategy approval is not a fabricated 90/2/80 approval. |
+| F-208 | Raqeeb referrals are typed, approved guidance/targets, not an internal scholar inbox. | Preserve the existing contract and human boundaries; do not claim a reviewer has received a referred question or silently add a new support workflow. |
+| F-209 | An old approved upload policy could still select 30 days while the new learner disclosure promised seven. | Require an approved operational receipt to match the owner-selected seven days; stale/invalid periods fail closed. Provider-side retention is a separate field and is not inferred to be seven days. |
+
+---
+
 ## External dependencies (not backend work)
 
 | Dependency | Owner | Needed by phase |
@@ -908,11 +946,11 @@ and the first-five challenge XP cap remains a product-owner decision (D-195).
 | Dart DTOs generated from our `docs/openapi.json` + round trips (O-01) | Frontend | Integration after 1 |
 | `tools/export_reference_lesson` gold output | Frontend | 8 |
 | `packages/qabas_scene`, `tools/scene_preview`, capability release (O-02) | Flutter renderer owner | 14 (normative preview and go-live only; generation proceeds) |
-| Reviewed curriculum titles, guides, bridges (O-12); unit art for units 4 and 10 (D-32); confirmation of the corrected achievement copy (D-39) | Content specialist / design | 4 (production seed), 12 |
-| Unit 0: approved reasoning-tool mapping (D-40), Arabic plan text, concept registration (O-12), restructured span-field claims; Salah completion record and slot decision (D-83, P-07) | Content team + specialist + product | 8 (import), 13 |
+| Reviewed curriculum titles, guides, bridges (O-12); unit art for units 4 and 10 (D-32). Corrected achievement wording is owner-approved; actual client display is deferred (D-216/D-217). | Content specialist / design | 4 (production seed), 12 |
+| Unit 0: approved reasoning-tool mapping (D-40), Arabic plan text, concept registration (O-12), restructured span-field claims. Salah is owner-selected as internal/test-only; its completion record remains necessary for any future real import (D-83/D-216). | Content team + specialist | 8 (import), 13 |
 | Staging host provisioning (D-86) | Operations | 8 onward (frontend integration) |
 | Source re-verification, registries, reciter licensing (O-05, O-06) | Content/media | 8, 9, 10 |
-| Product decisions P-01–P-08 | Product owner | Defaults are used until decided |
+| Product decisions P-01–P-08 | Product owner | Pilot choices recorded in D-211–D-217; actual external acceptance and unapproved numerical P-05 thresholds remain separate |
 
 ## Decision log
 
@@ -1127,6 +1165,13 @@ and the first-five challenge XP cap remains a product-owner decision (D-195).
 | 2026-10-06 | D-208 | **Reuse bot/grading/rewards.** Live bot auto-ready 1 s after first human connection and its own join, seeded choices/delays reuse Phase 19. A group bot whose due time exceeds 10 s times out. All live completion uses the same atomic `results.finish`, XP/quest/league/outbox path. D-195's five rewarded challenges/local day remains provisional pending owner confirmation; repeat play stays available. | No second grader, bot, reward ledger or Raqeeb dependency. |
 | 2026-10-06 | D-209 | **Bound and drain the transport.** Five messages/s/socket, 30 upgrades/min/learner, default 16 KiB frames, queue 32, 5 s sends, 30 s idle; malformed frames return a contract error without closing, oversize closes 1009, slow delivery reconnects, shutdown closes 1012 and releases leases. Ticket query logging is redacted on Uvicorn error logs; proxy queries must also be redacted. | API §8/operations; F-194. O-04 deployment and Phase 21 load/restore/mobile acceptance are still external. |
 | 2026-10-06 | D-210 | **Deletion follows result serialization before community cleanup.** Request deletion still revokes/marks the account immediately in its atomic transaction, then waits on/closes open duels, then removes community presence. If a result already owns the duel it may finish first and remain historical; if deletion owns it first it expires without rewards. Cleanup after that boundary removes any seat the earlier completion created. | F-202; preserves D-190/D-200 and the single authoritative result path. |
+| 2026-10-06 | D-211 | **Owner-approved pilot competition.** The first five eligible challenges per learner/local day may award XP; further play remains allowed. Existing bot/forfeit/idempotency limits and promotion-with-activity/no-demotion/top-tier behavior remain. Opt-in training league members are allowed with visible Arabic/English Training Opponent labels, even under profile masking. | Supersedes pending product wording in D-186/D-195/D-208 and P-01; actual reward/ranking algorithms unchanged. |
+| 2026-10-06 | D-212 | **Seven-day originals and honest disclosures.** Raqeeb upload expiry is seven days from processing completion, with the existing orphan cleanup, extraction/history and account/conversation deletion. Recitation-check audio remains never-persisted. Prepare AI/external-processing/guest/training disclosures; actual provider retention/deletion/storage approval remains a gate. | Owner decisions 8–10/17, O-09/P-04; no invented contractual approval. |
+| 2026-10-06 | D-213 | **Robust backend, simple pilot operations.** Web/Android via Render/APK are the pilot target; iOS, global residency/legal/age, broad MFA, extra guest verification, HA/account recovery/video are deferred. Riyadh weeks and RPO ~15 min/RTO ~4 h targets accepted; the durable coordinator remains mandatory. | O-04/O-10/O-11/P-02/P-03/P-04/P-06/P-08; acceptance requires actual measurement, not owner choice alone. |
+| 2026-10-06 | D-214 | **Inventory before real Factory batches.** Unit 0 is the official starting unit; existing track membership is preserved. All 93 slots are inventoried. A bounded operator admits explicit lesson types through existing runs/workers with budgets, pending-stage recovery and both specialist gates; missing model configuration fails before mutation. Existing attempted/authored slots are not overwritten. | Owner decision 11; O-12 concept/source decisions remain. No real generation without configuration; no manual religious authorship or auto Gate 1/2 approval. |
+| 2026-10-06 | D-215 | **Organizer acceptance is core, not a fabricated release.** Private official bilingual cases/hidden variants supplement the Phase 17 benchmark. Critical scripture/grade/fatwa/protected-reuse failures remain zero-tolerance. Unapproved numerical thresholds, actual private gold/source bindings, provider evaluation/terms and human sign-off stay gated; no provider migration. | P-05 acceptance strategy approved, O-03 and long-term model choice still open; preserves D-19/D-181. |
+| 2026-10-06 | D-216 | **Approved product copy/style scope.** Use مراجعة البطاقات / مراجعة سريعة and Flashcard Review / Quick Review; corrected فُز already in registry. Real computed progress only. Current calm/faceless visual direction and licensed reciter path approved; actual device/assets/licence receipts are not inferred. Salah reference stays internal/test-only. | O-06/O-07/O-08/O-13/P-07; no generated Quran audio or dummy production visuals. |
+| 2026-10-06 | D-217 | **Subsequent owner clarification limits this pass to backend.** Frontend linking is deferred until backend completion; no configured live providers or licensed recordings are locally supplied. Complete possible backend/config/workflow work and report blocked generation/evaluation/deployment honestly. | No claimed APK/public demo/Render acceptance, no invented credentials or scholar review. |
 | 2026-10-04 | D-13 | Git HTTPS failed certificate verification with Git's bundled OpenSSL. The repo-local config now sets `http.sslBackend=schannel` (Windows certificate store); global config is untouched. The first push made `phase/0-workspace` GitHub's default branch, so switch the default to `main` when `phase-0` is tagged. | — |
 
 ## Progress log

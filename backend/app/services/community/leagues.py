@@ -168,9 +168,15 @@ async def current(db: AsyncSession, user: User, lang: str, now: datetime) -> C.L
     for standing in ranked:
         me = standing.user.id == user.id
         public = me or not standing.user.private_profile
+        name = standing.user.display_name if public else masked
+        if standing.user.is_synthetic:
+            # Revision 10 has no synthetic flag: disclose within the existing display_name,
+            # including masked profiles. Never make simulated activity look like a real learner.
+            label = registries()["training_opponent"][lang]
+            name = f"{name} · {label}"
         members.append(C.LeagueMember(
             rank=standing.rank, user_id=standing.user.id,
-            display_name=standing.user.display_name if public else masked, xp_week=standing.xp_week, is_me=me,
+            display_name=name, xp_week=standing.xp_week, is_me=me,
             avatar_key=standing.user.avatar_key if public else default_avatar_key(),
             in_promotion_zone=in_zone(standing, tier)))
     start, end = week_start(now), week_end(now)

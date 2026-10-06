@@ -1,0 +1,30 @@
+{
+  "schema": "qabas.learner_copy/1",
+  "review": {"status": "owner_approved", "scope": "hackathon/pilot", "date": "2026-10-06"},
+  "review_options": {
+    "flashcards": {"ar": "مراجعة البطاقات", "en": "Flashcard Review"},
+    "quick": {"ar": "مراجعة سريعة", "en": "Quick Review"}
+  },
+  "disclosures": {
+    "raqeeb": {
+      "ar": "رقيب مساعد تعلّم بالذكاء الاصطناعي، وليس عالمًا شرعيًا. يعتمد على المصادر الموثوقة ولا يصدر فتوى شخصية؛ يحيلك إلى جهة مؤهلة عند الحاجة.",
+      "en": "Raqeeb is an AI learning assistant, not a scholar. It uses trusted sources and does not issue personal fatwas; it refers you to qualified help when needed."
+    },
+    "external_processing": {
+      "ar": "قد تعالج خدمات ذكاء اصطناعي خارجية سؤالك أو الملفات التي ترسلها، بالقدر اللازم للإجابة.",
+      "en": "External AI services may process your question or uploaded files as needed to answer."
+    },
+    "uploads": {
+      "ar": "تُحفظ ملفات رقيب الأصلية لمدة ٧ أيام بعد اكتمال معالجة الرسالة، ثم تُحذف. يبقى النص المستخلص والمحادثة حتى تحذف المحادثة أو الحساب. لا يُحفظ صوت تمارين التسميع.",
+      "en": "Original Raqeeb uploads are kept for 7 days after message processing completes, then deleted. Extracted text and conversations remain until you delete the conversation or account. Recitation exercise audio is never stored."
+    },
+    "guest": {
+      "ar": "تقدّمك مرتبط بهوية الضيف على هذا الجهاز أو المتصفح. فقدان بيانات التطبيق أو المتصفح قد يفقدك الوصول إليه؛ لا يتوفر استرداد الحساب حاليًا.",
+      "en": "Your progress is tied to this device or browser's guest identity. Losing app or browser data may remove your access; account recovery is not available yet."
+    },
+    "training_opponents": {
+      "ar": "قد يظهر منافسون تدريبيون في الدوري أو التحديات، ويُميّزون بوضوح عن المتعلمين الحقيقيين.",
+      "en": "Leagues or challenges may include clearly labelled training opponents rather than real learners."
+    }
+  }
+}

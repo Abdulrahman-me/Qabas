@@ -3,8 +3,9 @@ status: pending
 approved_by: null
 approved_on: null
 report: null
-# Proposed default only; staging/production intake requires actual O-09 approval.
-attachment_retention_days: 30
+# Owner selected seven days for original uploads. Actual storage/disclosure and STT processing
+# receipts still gate staging/production; this choice is not a provider-terms approval.
+attachment_retention_days: 7
 private_storage: null
 learner_disclosure: null
 stt:

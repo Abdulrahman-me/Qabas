@@ -153,8 +153,6 @@ class Settings(BaseSettings):
             ]
             if missing:
                 raise ValueError(f"{self.app_env} requires: {', '.join(missing)}")
-            if self.app_env is Environment.production and self.synthetic_league_members:
-                raise ValueError("SYNTHETIC_LEAGUE_MEMBERS must be false in production (P-01)")
         return self
 
     @property

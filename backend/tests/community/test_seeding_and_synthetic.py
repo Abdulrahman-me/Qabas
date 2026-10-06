@@ -1,6 +1,6 @@
 """Seeded community configuration (migration snapshot = ``registries.json``; ``seed.py`` sync and drift refusal) and
 synthetic league members (P-01): deterministic idempotent seed, seats left for learners, XP once per 30-minute slot
-through the ordinary ledger, never befriended, tracked or counted in metrics, and refused in production."""
+through the ordinary ledger, never befriended, tracked or counted in metrics, and clearly disclosed."""
 
 from __future__ import annotations
 
@@ -9,7 +9,6 @@ from collections import Counter
 from datetime import timedelta
 
 import pytest
-from pydantic import ValidationError
 from sqlalchemy import func, select, text
 
 from app.config import Environment, Settings
@@ -117,13 +116,37 @@ async def test_synthetic_members_are_excluded_everywhere(resources: Resources) -
         assert member.id not in set((await db.execute(_eligible())).scalars())     # metrics population
 
 
-def test_production_refuses_synthetic_members() -> None:
-    with pytest.raises(ValidationError, match="P-01"):
-        Settings(app_env=Environment.production, synthetic_league_members=True, auth_token_pepper="p" * 32,
-                 storage_signing_key="k" * 32, _env_file=None)  # type: ignore[call-arg, arg-type]
+def test_owner_approved_training_members_are_opt_in_in_production() -> None:
+    production = Settings(app_env=Environment.production, synthetic_league_members=True, auth_token_pepper="p" * 32,
+                          storage_signing_key="k" * 32, _env_file=None)  # type: ignore[call-arg, arg-type]
+    assert production.synthetic_league_members
     staging = Settings(app_env=Environment.staging, synthetic_league_members=True, auth_token_pepper="p" * 32,
                        storage_signing_key="k" * 32, _env_file=None)  # type: ignore[call-arg, arg-type]
     assert staging.synthetic_league_members and not Settings(_env_file=None).synthetic_league_members  # type: ignore[call-arg]
+
+
+async def test_training_disclosure_survives_privacy_masking_in_both_languages(resources: Resources) -> None:
+    uid = await make_user(resources, display_name="Real Learner")
+    await earn(resources, uid, 10)
+    async with resources.sessionmaker() as db, db.begin():
+        await synthetic.seed(db)
+        await synthetic.fill(db, MIDWEEK)
+        # Check every trained member, including both public and masked profiles.
+        trained = list((await db.execute(select(User).join(LeagueMember).where(User.is_synthetic))).scalars())
+        assert trained
+        for index, member in enumerate(trained):
+            member.private_profile = index % 2 == 0
+    async with resources.sessionmaker() as db:
+        user = await db.get(User, uid)
+        assert user is not None
+        for language, label in (("ar", "منافس تدريبي"), ("en", "Training Opponent")):
+            projection = await leagues.current(db, user, language, MIDWEEK)
+            assert next(m for m in projection.members if m.is_me).display_name == "Real Learner"
+            for member in trained:
+                shown = next(m for m in projection.members if m.user_id == member.id)
+                assert shown.display_name.endswith(" · " + label)
+                if member.private_profile:
+                    assert member.display_name not in shown.display_name
 
 
 def test_activity_profile_respects_active_hours() -> None:

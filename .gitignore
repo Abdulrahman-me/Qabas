@@ -8,6 +8,7 @@
 
 # Owner's private, product-level progress notes (not part of the public product)
 /PRODUCT_PROGRESS_NOTES.md
+/OWNER_DECISIONS_REQUIRED.md
 
 # Secrets and local configuration
 .env
