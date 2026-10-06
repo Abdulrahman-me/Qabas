@@ -5,6 +5,7 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import threading
 from contextlib import ExitStack
 from datetime import datetime, timedelta
 from typing import Any
@@ -266,12 +267,34 @@ async def test_expired_challenge_flushes_state_to_open_socket(world: tuple[TestC
         assert closed.value.code == 1000
 
 
-async def test_deletion_revokes_socket_authentication(world: tuple[TestClient, Resources]) -> None:
+@pytest.mark.parametrize("blocked_lock", [False, True])
+async def test_deletion_revokes_socket_authentication(world: tuple[TestClient, Resources],
+                                                     monkeypatch: pytest.MonkeyPatch, blocked_lock: bool) -> None:
     api, r = world
     room = await fresh_room(r)
+    waiting, released = threading.Event(), asyncio.Event()
+    original = live.authorize
+    calls = 0
+
+    async def authorize(*args: Any, **kwargs: Any) -> Any:
+        nonlocal calls
+        calls += 1
+        # Open and initial projection are calls 1/2; pause the journal reader after its principal lookup.
+        if calls == 3:
+            waiting.set()
+            await asyncio.wait_for(released.wait(), 8)
+        return await original(*args, **kwargs)
+
+    if blocked_lock:
+        monkeypatch.setattr(live, "authorize", authorize)
     with api.websocket_connect(url(api, room)) as ws:
         receive(ws)
-        assert api.delete("/v1/me", headers=room.headers[0]).status_code == 204
+        try:
+            if blocked_lock:
+                assert await asyncio.to_thread(waiting.wait, 5)
+            assert api.delete("/v1/me", headers=room.headers[0]).status_code == 204
+        finally:
+            api.portal.call(released.set)
         ws.send_json({"type": "ping", "data": {}})
         assert until(ws, "error")["code"] == "unauthorized"
         with pytest.raises(WebSocketDisconnect) as closed:

@@ -61,6 +61,9 @@ may close early; an empty quorum does not finish instantly during grace. Account
 without rewards and masks the removed profile immediately. Completion and deletion serialize on the same duel:
 an already-owning completion may remain historical, then deletion removes community presence after that boundary,
 including any newly created league seat. A deletion that owns the duel first prevents its completion/rewards.
+Upgrades, journal reads and messages refresh authentication after acquiring the duel lock, so deletion/revocation
+committing during that wait cannot reuse an earlier authenticated ORM snapshot or deliver a terminal state instead
+of the unauthorized error/closure.
 
 ## Running, recovery and abuse controls
 

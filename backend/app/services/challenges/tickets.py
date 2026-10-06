@@ -62,7 +62,8 @@ async def consume(redis: aioredis.Redis, settings: Settings, duel_id: str, token
 async def principal(db: AsyncSession, ticket: Ticket, settings: Settings, now: datetime, *, touch: bool = False
                     ) -> User:
     row = (await db.execute(select(AuthSession, User).join(User, User.id == AuthSession.user_id).where(
-        AuthSession.id == ticket.session_id, AuthSession.user_id == ticket.user_id))).first()
+        AuthSession.id == ticket.session_id, AuthSession.user_id == ticket.user_id)
+        .execution_options(populate_existing=True))).first()
     if row is None:
         raise unauthorized()
     auth, user = row

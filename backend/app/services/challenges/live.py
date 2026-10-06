@@ -72,6 +72,8 @@ async def open_connection(r: Resources, ticket: tickets.Ticket, now: datetime) -
     async with r.sessionmaker() as db, db.begin():
         await tickets.principal(db, ticket, r.settings, now, touch=True)
         duel, me = await authorize(db, ticket.duel_id, ticket.user_id)
+        # Deletion/revocation may commit while the duel lock is awaited; refresh the principal afterward.
+        await tickets.principal(db, ticket, r.settings, now)
         # Different from the learner reward lock; all connects for a learner serialize without reversing it.
         await db.execute(text("SELECT pg_advisory_xact_lock(hashtextextended(:key, 0))"),
                          {"key": f"live-connections:{me.user_id}"})
@@ -149,6 +151,7 @@ async def message(r: Resources, ticket: tickets.Ticket, cid: uuid.UUID, frame: d
     async with r.sessionmaker() as db, db.begin():
         await tickets.principal(db, ticket, r.settings, now, touch=True)
         duel, me = await authorize(db, ticket.duel_id, ticket.user_id)
+        await tickets.principal(db, ticket, r.settings, now)
         conn = await db.get(DuelConnection, cid)
         if conn is None or conn.user_id != ticket.user_id or conn.duel_id != ticket.duel_id \
                 or conn.auth_session_id != ticket.session_id or conn.closed_at is not None or conn.expires_at <= now:

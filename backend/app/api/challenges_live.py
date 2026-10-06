@@ -53,6 +53,7 @@ async def socket(websocket: WebSocket, duel_id: str) -> None:
         async with r.sessionmaker() as db, db.begin():
             viewer = await tickets.principal(db, ticket, r.settings, manager.clock())
             duel, me = await live.authorize(db, duel_id, ticket.user_id)
+            viewer = await tickets.principal(db, ticket, r.settings, manager.clock())
             initial, cursor = await live.state(db, r, duel, me, viewer, ticket.language, base, manager.clock())
             completed = await live.finished(db, duel, me, ticket.language) if duel.status == "finished" else None
             closed = duel.status in ("expired", "declined")
@@ -126,6 +127,7 @@ async def socket(websocket: WebSocket, duel_id: str) -> None:
                 async with r.sessionmaker() as db, db.begin():
                     viewer = await tickets.principal(db, ticket, r.settings, manager.clock())
                     duel, me = await live.authorize(db, duel_id, ticket.user_id)
+                    viewer = await tickets.principal(db, ticket, r.settings, manager.clock())
                     rows = list((await db.execute(select(DuelLiveEvent).where(DuelLiveEvent.duel_id == duel_id,
                         DuelLiveEvent.epoch.is_not(None), DuelLiveEvent.id > cursor)
                         .order_by(DuelLiveEvent.id).limit(32))).scalars())
