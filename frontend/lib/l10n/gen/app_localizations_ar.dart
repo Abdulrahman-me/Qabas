@@ -178,6 +178,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get commonClose => 'إغلاق';
 
   @override
+  String get commonConnectingSlow => 'جارٍ الاتصال بقبس… قد تستغرق الزيارة الأولى دقيقة واحدة.';
+
+  @override
   String get commonContinue => 'متابعة';
 
   @override
@@ -1425,6 +1428,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get reviewerAbstention => 'الامتناع الصحيح (%)';
 
   @override
+  String get reviewerAccountDescription =>
+      'يسجّل المراجعون الدخول بحساباتهم لمراجعة خطط الدروس ومسوداتها، وإجراء المقارنات مجهولة المصدر، والاطلاع على المؤشرات. يعود تقدمك في التعلم على هذا الجهاز عند تسجيل الخروج.';
+
+  @override
   String get reviewerAccuracy => 'الدقة (%)';
 
   @override
@@ -1568,6 +1575,9 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get reviewerIntroduced => 'المفاهيم المقدّمة';
+
+  @override
+  String get reviewerInvalidCredentials => 'البريد الإلكتروني أو كلمة المرور غير صحيحة. حاول مجددًا.';
 
   @override
   String get reviewerInvalidPlan => 'راجع الحقول ثنائية اللغة والأهداف والمفاهيم والمسار والميزانيات قبل الاعتماد.';

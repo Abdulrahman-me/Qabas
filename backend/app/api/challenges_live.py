@@ -41,7 +41,7 @@ async def socket(websocket: WebSocket, duel_id: str) -> None:
         if manager.draining:
             raise ApiError(ErrorCode.upstream_unavailable, "The server is restarting. Please reconnect.")
         origin = websocket.headers.get("origin")
-        if origin is not None and origin not in r.settings.cors_allowed_origins:
+        if origin is not None and origin not in {*r.settings.cors_allowed_origins, "https://qabas-app.pages.dev"}:
             raise ApiError(ErrorCode.forbidden, "Challenge access denied.")
         tokens = websocket.query_params.getlist("ticket")
         if len(tokens) != 1:

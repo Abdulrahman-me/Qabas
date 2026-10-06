@@ -23,7 +23,8 @@ final class ApiException implements FailureSource {
     415 => const UnsupportedMediaFailure(),
     426 => const ClientOutdatedFailure(),
     429 => RateLimitedFailure(retryAfter ?? Duration.zero),
-    503 => UpstreamUnavailableFailure(retryAfter: retryAfter),
+    // Contract 503s carry an envelope; bare gateway pages mean the service itself is unavailable.
+    503 when code != 'unknown' => UpstreamUnavailableFailure(retryAfter: retryAfter),
     _ => const ServerFailure(),
   };
   // Intentionally omits envelope contents from accidental exception logging.

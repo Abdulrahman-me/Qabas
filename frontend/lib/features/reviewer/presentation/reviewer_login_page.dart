@@ -8,8 +8,8 @@ import 'package:qabas/features/reviewer/presentation/reviewer_auth_bloc.dart';
 import 'package:qabas/shared/domain/entities/user_profile.dart';
 
 class ReviewerLoginPage extends StatefulWidget {
-  const ReviewerLoginPage({super.key, required this.onSignedIn, this.sampleEnabled = false});
-  final bool sampleEnabled;
+  const ReviewerLoginPage({super.key, required this.onSignedIn, this.sampleEnabled = false, this.accountNote = false});
+  final bool sampleEnabled, accountNote;
   final ValueChanged<UserProfile> onSignedIn;
   @override
   State<ReviewerLoginPage> createState() => _ReviewerLoginPageState();
@@ -51,6 +51,10 @@ class _ReviewerLoginPageState extends State<ReviewerLoginPage> {
                     ),
                   ),
                   const SizedBox(height: QSpace.xl),
+                  if (widget.accountNote && !widget.sampleEnabled) ...[
+                    Text(c.l10n.reviewerAccountDescription, style: c.text.bodyMedium),
+                    const SizedBox(height: QSpace.xl),
+                  ],
                   if (widget.sampleEnabled) ...[
                     Text(c.l10n.reviewerSampleDescription, style: c.text.bodyMedium),
                     const SizedBox(height: QSpace.md),
@@ -89,7 +93,11 @@ class _ReviewerLoginPageState extends State<ReviewerLoginPage> {
                     Padding(
                       padding: const EdgeInsets.only(bottom: QSpace.md),
                       child: Text(
-                        s.failure is RateLimitedFailure ? c.l10n.reviewerLockout : failureBody(s.failure!, c.l10n),
+                        switch (s.failure!) {
+                          RateLimitedFailure() => c.l10n.reviewerLockout,
+                          UnauthorizedFailure() => c.l10n.reviewerInvalidCredentials,
+                          final failure => failureBody(failure, c.l10n),
+                        },
                         style: c.text.bodyMedium?.copyWith(color: QColors.statusFabricated),
                       ),
                     ),

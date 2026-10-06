@@ -15,7 +15,7 @@ flutter analyze
 
 ## Configuration
 
-`config/live.json` is a production configuration template. Replace its placeholder API URL with your backend URL before running:
+`config/live.json` is the production configuration for the hosted backend (`https://qabas-zdcz.onrender.com/v1`). Learners start as guests automatically; reviewers sign in from Profile → Reviewer sign in with an account created by `backend/scripts/create_reviewer.py`. Run it with:
 
 ```sh
 flutter run --dart-define-from-file=config/live.json

@@ -93,4 +93,45 @@ void main() {
       });
     }
   }
+  for (final language in ['en', 'ar']) {
+    testWidgets('Splash explains a slow first connection, then hides it: $language', (tester) async {
+      tester.view.devicePixelRatio = 1;
+      tester.view.physicalSize = sizes.first;
+      tester.platformDispatcher.textScaleFactorTestValue = 1.35;
+      addTearDown(tester.view.resetDevicePixelRatio);
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
+      final notices = StreamController<AuthEvent>.broadcast();
+      final bloc = FakeAuth().bloc(notices.stream, initial: const AppSessionState(status: SessionStatus.authenticating));
+      addTearDown(bloc.close);
+      addTearDown(notices.close);
+      await tester.pumpWidget(
+        BlocProvider.value(
+          value: bloc,
+          child: MaterialApp(
+            theme: QTheme.light(arabic: language == 'ar'),
+            locale: Locale(language),
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
+            home: SplashPage(warmup: Future.value()),
+          ),
+        ),
+      );
+      final hint = find.byKey(const ValueKey('splash-slow-connection'));
+      await tester.pump(const Duration(seconds: 1));
+      expect(hint, findsNothing);
+      await tester.pump(QMotion.splashSlowConnection);
+      expect(hint, findsOneWidget);
+      for (final size in sizes) {
+        tester.view.physicalSize = size;
+        await tester.pump(const Duration(milliseconds: 100));
+        expect(tester.takeException(), isNull);
+      }
+      bloc.emit(const AppSessionState(status: SessionStatus.failure, failure: ServerFailure()));
+      await tester.pump();
+      expect(hint, findsNothing);
+      expect(find.byType(TextButton), findsOneWidget);
+      await tester.pumpWidget(const SizedBox.shrink());
+    });
+  }
 }

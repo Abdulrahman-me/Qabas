@@ -11,9 +11,14 @@ import 'package:qabas/features/reviewer/presentation/reviewer_dashboard_bloc.dar
 import 'package:qabas/features/reviewer/presentation/reviewer_detail_bloc.dart';
 import 'package:qabas/features/reviewer/presentation/reviewer_runs_bloc.dart';
 
-void registerReviewerFeature(GetIt sl) {
+void registerReviewerFeature(GetIt sl, {TokenStore? suspendedLearner}) {
   sl.registerSingleton<ReviewerRepository>(
-    ReviewerRepositoryImpl(sl<ApiClient>(), sl<TokenStore>(), sampleEnabled: sl<AppConfig>().judgesDemo),
+    ReviewerRepositoryImpl(
+      sl<ApiClient>(),
+      sl<TokenStore>(),
+      sampleEnabled: sl<AppConfig>().judgesDemo,
+      suspendedLearner: sl<AppConfig>().isLive(LiveGroup.reviewer) ? suspendedLearner : null,
+    ),
   );
   sl.registerSingleton<ReviewerActions>(ReviewerActions(sl<ReviewerRepository>()));
   sl.registerFactory<ReviewerAuthBloc>(() => ReviewerAuthBloc(sl<ReviewerActions>()));

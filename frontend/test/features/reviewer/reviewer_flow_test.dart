@@ -82,6 +82,25 @@ void main() {
     expect(tokens.value, isNull);
     await auth.close();
   });
+  test('live reviewer sign-in keeps the learner credential and sign-out restores it', () async {
+    final stash = MemoryTokens();
+    final live = ReviewerRepositoryImpl(api, tokens, suspendedLearner: stash);
+    tokens.value = 'learner';
+    expect(await live.signIn('reviewer@qabas.app', 'wrong'), isA<Err<UserProfile>>());
+    expect(stash.value, isNull);
+    expect(await live.signIn('reviewer@qabas.app', 'qabas-review'), isA<Ok<UserProfile>>());
+    expect(stash.value, 'learner');
+    final reviewer = tokens.value;
+    expect(reviewer, isNot('learner'));
+    // Signing in again while already a reviewer never stashes the reviewer credential.
+    expect(await live.signIn('reviewer@qabas.app', 'qabas-review'), isA<Ok<UserProfile>>());
+    expect(stash.value, 'learner');
+    expect(await live.signOut(), isA<Ok<void>>());
+    expect(tokens.value, 'learner');
+    expect(stash.value, isNull);
+    expect(await live.signOut(), isA<Ok<void>>());
+    expect(tokens.value, isNull);
+  });
   test('five rejected credentials lock out, login 401 does not clear learner session', () async {
     tokens.value = 'existing';
     for (var i = 0; i < 4; i++) {

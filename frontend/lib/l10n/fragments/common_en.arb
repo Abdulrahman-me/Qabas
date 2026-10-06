@@ -174,5 +174,9 @@
   "commonTabProfile": "Profile",
   "commonTabRaqeeb": "Raqeeb",
   "commonTabReview": "Review",
-  "commonTagline": "Learn Islam step by step, from your first question to real understanding."
+  "commonTagline": "Learn Islam step by step, from your first question to real understanding.",
+  "commonConnectingSlow": "Connecting to Qabas… The first visit can take up to a minute.",
+  "@commonConnectingSlow": {
+    "description": "Splash hint while a sleeping hosted server wakes up on the first request."
+  }
 }

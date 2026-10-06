@@ -178,6 +178,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get commonClose => 'Close';
 
   @override
+  String get commonConnectingSlow => 'Connecting to Qabas… The first visit can take up to a minute.';
+
+  @override
   String get commonContinue => 'Continue';
 
   @override
@@ -1394,6 +1397,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get reviewerAbstention => 'Correct abstention (%)';
 
   @override
+  String get reviewerAccountDescription =>
+      'Reviewers sign in with their account to review lesson plans and drafts, run blind comparisons and view metrics. Your learning progress on this device returns when you sign out.';
+
+  @override
   String get reviewerAccuracy => 'Accuracy (%)';
 
   @override
@@ -1537,6 +1544,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reviewerIntroduced => 'Introduced concepts';
+
+  @override
+  String get reviewerInvalidCredentials => 'That email or password isn\'t right. Please try again.';
 
   @override
   String get reviewerInvalidPlan => 'Check bilingual fields, objectives, concepts, arc and budgets before approval.';

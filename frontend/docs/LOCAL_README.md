@@ -16,7 +16,7 @@ Demo onboarding has seven pages. Mock mode enables the optional curiosity page w
 
 Web layouts support narrow and short windows, centred reading content and a navigation rail from 840 px. Native phones use portrait orientation; browser orientation is unrestricted.
 
-`config/hybrid.json` currently has no live groups because no backend service is available. `config/live.json` uses a reserved placeholder origin; replace it with the backend's HTTPS origin before live integration. Production requires live mode and excludes developer tools. Before a production build, remove the marked mock-asset block as specified in [handoff 07 §8](docs/handoff/07_MOCKS_AND_BACKEND_SYNC.md#8-keeping-mocks-out-of-production).
+`config/hybrid.json` targets a local backend and has no live groups by default. `config/live.json` targets the hosted backend at `https://qabas-zdcz.onrender.com/v1` (every group live). The hosted service sleeps when idle, so the first launch can take up to a minute; splash explains the wait. Its CORS list allows `https://qabas-app.pages.dev`; to run the live web app from another origin (including `flutter run -d chrome` on localhost), add that origin to the backend's `CORS_ALLOWED_ORIGINS`. Production requires live mode and excludes developer tools. Before a production build, remove the marked mock-asset block as specified in [handoff 07 §8](docs/handoff/07_MOCKS_AND_BACKEND_SYNC.md#8-keeping-mocks-out-of-production).
 
 ```sh
 dart run tool/merge_arb.dart && flutter gen-l10n

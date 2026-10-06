@@ -19,12 +19,15 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateMixin {
   late final _controller = AnimationController(vsync: this, duration: QMotion.splash);
-  Timer? _minimum;
-  bool _warm = false, _elapsed = false;
+  Timer? _minimum, _slow;
+  bool _warm = false, _elapsed = false, _slowConnection = false;
   @override
   void initState() {
     super.initState();
     _controller.forward();
+    _slow = Timer(QMotion.splashSlowConnection, () {
+      if (mounted) setState(() => _slowConnection = true);
+    });
     _minimum = Timer(QMotion.splashMinimum, () {
       _elapsed = true;
       _proceed();
@@ -53,6 +56,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
   @override
   void dispose() {
     _minimum?.cancel();
+    _slow?.cancel();
     _controller.dispose();
     super.dispose();
   }
@@ -133,6 +137,23 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
                                   ],
                                 ),
                               ),
+                              if (_slowConnection && [SessionStatus.unknown, SessionStatus.authenticating].contains(state.status))
+                                Positioned(
+                                  bottom: QSpace.xl,
+                                  left: QSpace.page,
+                                  right: QSpace.page,
+                                  child: SafeArea(
+                                    child: Semantics(
+                                      liveRegion: true,
+                                      child: Text(
+                                        context.l10n.commonConnectingSlow,
+                                        key: const ValueKey('splash-slow-connection'),
+                                        textAlign: TextAlign.center,
+                                        style: context.text.bodyMedium?.copyWith(color: QColors.softEmber.withValues(alpha: 0.7)),
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               if (state.status == SessionStatus.failure)
                                 Positioned(
                                   bottom: QSpace.xl,

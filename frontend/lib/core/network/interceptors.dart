@@ -74,7 +74,9 @@ final class RetryInterceptor extends Interceptor {
           DioExceptionType.sendTimeout,
         ].contains(err.type) ||
         status == 429 ||
-        status == 503;
+        status == 502 ||
+        status == 503 ||
+        status == 504;
     // At most three total attempts; never replay cancelled actions.
     if (!_safe(options) || !transient || attempts >= 2 || options.cancelToken?.isCancelled == true) {
       handler.next(err);

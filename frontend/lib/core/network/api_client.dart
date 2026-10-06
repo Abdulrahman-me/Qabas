@@ -26,8 +26,9 @@ final class ApiClient {
     final dio = Dio(
       BaseOptions(
         baseUrl: config.baseUrl,
-        connectTimeout: const Duration(seconds: 10),
-        receiveTimeout: const Duration(seconds: 20),
+        // Hosted services can sleep when idle; the first live request may wait for a cold start.
+        connectTimeout: Duration(seconds: config.mode == ApiMode.mock ? 10 : 30),
+        receiveTimeout: Duration(seconds: config.mode == ApiMode.mock ? 20 : 60),
         responseType: ResponseType.json,
         contentType: Headers.jsonContentType,
       ),

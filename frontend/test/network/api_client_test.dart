@@ -35,6 +35,27 @@ void main() {
       );
     });
   }
+  test('Bare gateway 503 is a server failure; contract 503 keeps its upstream meaning', () {
+    expect(ApiException(status: 503, code: 'unknown', message: 'Request failed').toFailure(), isA<ServerFailure>());
+    expect(ApiException(status: 503, code: 'upstream_unavailable', message: 'Busy').toFailure(), isA<UpstreamUnavailableFailure>());
+  });
+  test('Safe GET retries gateway errors while a hosted server wakes', () async {
+    var calls = 0;
+    final transport = RecordingTransport(
+      (_) async => ++calls < 3 ? const BackendResponse(502, '<html>Bad gateway</html>') : const BackendResponse(200, {'ok': true}),
+    );
+    final api = ApiClient.create(
+      config: AppConfig(),
+      tokens: tokens,
+      platform: 'web',
+      language: () => 'en',
+      mock: transport,
+      retryDelay: (_) async {},
+    );
+    addTearDown(api.dispose);
+    expect(await api.get('/me', decode: (json) => json), {'ok': true});
+    expect(transport.requests.length, 3);
+  });
   test('Prerequisite conflict keeps code and guidance', () {
     final failure =
         ApiException(
