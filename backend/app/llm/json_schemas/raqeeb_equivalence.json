@@ -1,0 +1,20 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "reason": {
+   "maxLength": 1000,
+   "title": "Reason",
+   "type": "string"
+  },
+  "same_question": {
+   "title": "Same Question",
+   "type": "boolean"
+  }
+ },
+ "required": [
+  "same_question",
+  "reason"
+ ],
+ "title": "raqeeb_equivalence",
+ "type": "object"
+}

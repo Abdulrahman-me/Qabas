@@ -39,6 +39,8 @@ from app.models import (
     OutboxEvent,
     Quest,
     RaqeebConversation,
+    RaqeebMemory,
+    RaqeebUploadReceipt,
     RecitationCheckRecord,
     User,
     XpEvent,
@@ -60,7 +62,7 @@ REQUEST_STEPS: list[RequestStep] = []
 PURGED_TABLES: tuple[Any, ...] = (
     LearningSession, RecitationCheckRecord, LearnerConcept, LearnerTerm, LearnerMisconception, LearnerLesson,
     LearnerUnit, XpEvent, DailyActivity, Quest, IdempotencyKey, AuthSession, MetricUnitFact, MetricLearnerFact,
-    RaqeebConversation,
+    RaqeebUploadReceipt, RaqeebConversation,
 )
 
 
@@ -90,6 +92,8 @@ async def purge_user(db: AsyncSession, storage: ObjectStorage, user_id: str) -> 
     if user is None or user.deleted_at is None:
         raise RuntimeError(f"refusing to purge {user_id}: not a deleted user")
     steps: dict[str, int] = {}
+    removed = await db.execute(delete(RaqeebMemory).where(RaqeebMemory.origin_user_id == user_id))
+    steps["raqeeb_memory"] = int(removed.rowcount or 0)  # type: ignore[attr-defined]
     for model in PURGED_TABLES:
         result = await db.execute(delete(model).where(model.user_id == user_id))
         steps[model.__tablename__] = int(result.rowcount or 0)  # type: ignore[attr-defined]

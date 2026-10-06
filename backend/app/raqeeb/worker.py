@@ -10,6 +10,7 @@ from typing import Any
 
 from sqlalchemy import select, text
 
+from app.adapters import SpeechToText
 from app.contract import models as C
 from app.errors import ApiError
 from app.factory.evidence import load_record
@@ -17,7 +18,7 @@ from app.llm.budget import Ledger, UsageRecord
 from app.llm.client import LLMClient
 from app.llm.errors import LLMError, LLMOutputInvalid, LLMRequestRejected, UnsafePromptData
 from app.models import OutboxEvent, RaqeebConversation, RaqeebMessage
-from app.raqeeb import level, pipeline, service, suggestions
+from app.raqeeb import inputs, intake, level, memory, pipeline, service, suggestions
 from app.raqeeb.providers import HostedClient, LiveTools
 from app.raqeeb.retrieval import Tools
 from app.runtime import Resources
@@ -49,8 +50,15 @@ async def completed(db: Any, event: OutboxEvent) -> None:
     return None
 
 
+@outbox.consumer("raqeeb.memory_embedding")
+async def dispatch_embedding(db: Any, event: OutboxEvent) -> None:
+    from app.workers.celery_app import celery_app
+    celery_app.send_task("embeddings.store", args=[event.payload["memory_id"]], queue="embeddings")
+
+
 async def process(resources: Resources, message_id: str, *, client: LLMClient | None = None,
-                  tools: Tools | None = None, embedder: suggestions.Embedder | None = None) -> str:
+                  tools: Tools | None = None, embedder: suggestions.Embedder | None = None,
+                  speech: SpeechToText | None = None, memory_gateway: memory.Gateway | None = None) -> str:
     lock_key = f"raqeeb:{message_id}"
     async with resources.engine.connect() as connection:
         acquired = await connection.scalar(text("SELECT pg_try_advisory_lock(hashtextextended(:k, 0))"),
@@ -59,7 +67,8 @@ async def process(resources: Resources, message_id: str, *, client: LLMClient | 
         if not acquired:
             return "busy"
         try:
-            return await _process(resources, message_id, client=client, tools=tools, embedder=embedder)
+            return await _process(resources, message_id, client=client, tools=tools, embedder=embedder,
+                                  speech=speech, memory_gateway=memory_gateway)
         finally:
             # A session lock must never be returned to the pool still held.
             try:
@@ -71,7 +80,8 @@ async def process(resources: Resources, message_id: str, *, client: LLMClient | 
 
 
 async def _process(resources: Resources, message_id: str, *, client: LLMClient | None, tools: Tools | None,
-                   embedder: suggestions.Embedder | None) -> str:
+                   embedder: suggestions.Embedder | None, speech: SpeechToText | None,
+                   memory_gateway: memory.Gateway | None) -> str:
     maker = resources.sessionmaker
     lease = uuid.uuid4()
     async with maker() as db, db.begin():
@@ -94,8 +104,9 @@ async def _process(resources: Resources, message_id: str, *, client: LLMClient |
             return "expired"
         row.lease = lease
         original = await db.get(RaqeebMessage, row.reply_to)
-        assert original is not None and original.text is not None
-        question, snapshot, trace = original.text, copy.deepcopy(row.input_snapshot), copy.deepcopy(row.trace)
+        assert original is not None
+        question, original_id = original.text or "", original.id
+        snapshot, trace = copy.deepcopy(row.input_snapshot), copy.deepcopy(row.trace)
         created_at, conversation_id, user_id = row.created_at, conv.id, conv.user_id
         needs_title = conv.title is None
     deadline = created_at + timedelta(seconds=service.DEADLINE)
@@ -121,12 +132,25 @@ async def _process(resources: Resources, message_id: str, *, client: LLMClient |
     async def stage(name: str) -> None:
         await checkpoint(trace, stage=name)
 
-    calls = pipeline.Calls(client or HostedClient(resources.settings), ledger, trace, checkpoint)
+    models = client or HostedClient(resources.settings)
+    calls = pipeline.Calls(models, ledger, trace, checkpoint)
     sources = tools or LiveTools(resources.settings)
+    memories = memory_gateway or memory.Gateway(resources, message_id)
     title = None
     try:
         async with asyncio.timeout(max(0, (deadline - utcnow()).total_seconds())):
-            answer = await pipeline.run(question, snapshot, calls, sources, stage)
+            async def read_inputs() -> dict[str, Any]:
+                return await inputs.read(resources, original_id, original.text, calls,
+                                         snapshot["profile"]["language"], speech=speech)
+
+            answer = await pipeline.run(question, snapshot, calls, sources, stage, reader=read_inputs,
+                                        memory=memories)
+            try:
+                prepared_memory = await memories.prepare(calls)
+            except LLMError as exc:
+                prepared_memory = None
+                trace["memory_store"] = {"outcome": "unavailable", "type": type(exc).__name__}
+            question = trace["input_checkpoint"]["output"]["question"]
             answer["blocks"], answer["terms"] = level.link(answer["blocks"], snapshot["cards"])
             if not answer["abstained"]:
                 try:
@@ -180,6 +204,8 @@ async def _process(resources: Resources, message_id: str, *, client: LLMClient |
                 answer = rebind(answer)
                 C.RaqeebCompleted.model_validate(wire | answer)
                 trace["source_registry_ids"] = aliases
+                await memories.commit(db, trace, prepared_memory, user_id)
+                await intake.complete(db, original_id, completed_at, resources.settings)
                 for key, value in answer.items():
                     setattr(row, key, value)
                 row.status, row.stage, row.completed_at, row.lease = "completed", "done", completed_at, None
@@ -195,7 +221,8 @@ async def _process(resources: Resources, message_id: str, *, client: LLMClient |
     except ApiError:
         return "deleted"
     except Exception as exc:
-        code = "upstream_unavailable" if isinstance(exc, (LLMError, SourceError, TimeoutError)) else "internal_error"
+        code = "input_unreadable" if isinstance(exc, inputs.InputUnreadable) else \
+            "upstream_unavailable" if isinstance(exc, (LLMError, SourceError, TimeoutError)) else "internal_error"
         if isinstance(exc, (LLMOutputInvalid, LLMRequestRejected, UnsafePromptData)):
             code = "internal_error"
         async with maker() as db, db.begin():
@@ -204,10 +231,15 @@ async def _process(resources: Resources, message_id: str, *, client: LLMClient |
             if row is not None and row.status == "processing" and row.lease == lease:
                 row.trace = trace | {"failure": {"type": type(exc).__name__, "code": code}, "cost": ledger.summary()}
                 row.status, row.lease = "failed", None
+                row.completed_at = utcnow()
                 row.error = {"code": code, "message": "The answer could not be completed safely. Please try again."}
+                await intake.complete(db, original_id, row.completed_at, resources.settings)
         return "failed"
     finally:
         await sources.aclose()
+        if client is None:
+            assert isinstance(models, HostedClient)
+            await models.aclose()
 
 
 async def sweep(resources: Resources) -> int:

@@ -1,0 +1,980 @@
+{
+ "$defs": {
+  "ABEvidence": {
+   "additionalProperties": false,
+   "properties": {
+    "evidence": {
+     "$ref": "#/$defs/Evidence"
+    },
+    "type": {
+     "enum": [
+      "evidence"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "evidence"
+   ],
+   "title": "ABEvidence",
+   "type": "object"
+  },
+  "ABParagraph": {
+   "additionalProperties": false,
+   "properties": {
+    "spans": {
+     "items": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/SpanText"
+       },
+       {
+        "$ref": "#/$defs/SpanStrong"
+       },
+       {
+        "$ref": "#/$defs/SpanTerm"
+       },
+       {
+        "$ref": "#/$defs/SpanCitation"
+       }
+      ]
+     },
+     "title": "Spans",
+     "type": "array"
+    },
+    "type": {
+     "enum": [
+      "paragraph"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "spans"
+   ],
+   "title": "ABParagraph",
+   "type": "object"
+  },
+  "ABReferral": {
+   "additionalProperties": false,
+   "properties": {
+    "referral": {
+     "$ref": "#/$defs/Referral"
+    },
+    "type": {
+     "enum": [
+      "referral"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "referral"
+   ],
+   "title": "ABReferral",
+   "type": "object"
+  },
+  "ABVerification": {
+   "additionalProperties": false,
+   "properties": {
+    "items": {
+     "items": {
+      "$ref": "#/$defs/VerificationItem"
+     },
+     "title": "Items",
+     "type": "array"
+    },
+    "type": {
+     "enum": [
+      "verification"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "items"
+   ],
+   "title": "ABVerification",
+   "type": "object"
+  },
+  "ABViews": {
+   "additionalProperties": false,
+   "properties": {
+    "intro": {
+     "items": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/SpanText"
+       },
+       {
+        "$ref": "#/$defs/SpanStrong"
+       },
+       {
+        "$ref": "#/$defs/SpanTerm"
+       },
+       {
+        "$ref": "#/$defs/SpanCitation"
+       }
+      ]
+     },
+     "title": "Intro",
+     "type": "array"
+    },
+    "type": {
+     "enum": [
+      "differing_views"
+     ],
+     "title": "Type",
+     "type": "string"
+    },
+    "views": {
+     "items": {
+      "$ref": "#/$defs/View"
+     },
+     "title": "Views",
+     "type": "array"
+    }
+   },
+   "required": [
+    "type",
+    "intro",
+    "views"
+   ],
+   "title": "ABViews",
+   "type": "object"
+  },
+  "Audio": {
+   "additionalProperties": false,
+   "properties": {
+    "reciter": {
+     "title": "Reciter",
+     "type": "string"
+    },
+    "url": {
+     "title": "Url",
+     "type": "string"
+    },
+    "words": {
+     "anyOf": [
+      {
+       "items": {
+        "$ref": "#/$defs/WordTiming"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Words"
+    }
+   },
+   "required": [
+    "reciter",
+    "url",
+    "words"
+   ],
+   "title": "Audio",
+   "type": "object"
+  },
+  "Citation": {
+   "additionalProperties": false,
+   "properties": {
+    "ref": {
+     "title": "Ref",
+     "type": "integer"
+    },
+    "source": {
+     "$ref": "#/$defs/Source"
+    }
+   },
+   "required": [
+    "ref",
+    "source"
+   ],
+   "title": "Citation",
+   "type": "object"
+  },
+  "Evidence": {
+   "additionalProperties": false,
+   "properties": {
+    "evidence_id": {
+     "title": "Evidence Id",
+     "type": "string"
+    },
+    "hadith": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/HadithBody"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "kind": {
+     "enum": [
+      "quran",
+      "hadith"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "quran": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/QuranBody"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    }
+   },
+   "required": [
+    "evidence_id",
+    "kind",
+    "quran",
+    "hadith"
+   ],
+   "title": "Evidence",
+   "type": "object"
+  },
+  "HadithBody": {
+   "additionalProperties": false,
+   "properties": {
+    "collections": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Collections",
+     "type": "array"
+    },
+    "excerpt": {
+     "title": "Excerpt",
+     "type": "boolean"
+    },
+    "grade_category": {
+     "enum": [
+      "authentic",
+      "acceptable",
+      "weak",
+      "fabricated",
+      "other"
+     ],
+     "title": "Grade Category",
+     "type": "string"
+    },
+    "grade_label": {
+     "title": "Grade Label",
+     "type": "string"
+    },
+    "grade_source": {
+     "title": "Grade Source",
+     "type": "string"
+    },
+    "narrator": {
+     "title": "Narrator",
+     "type": "string"
+    },
+    "text_ar": {
+     "title": "Text Ar",
+     "type": "string"
+    },
+    "translation": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Translation"
+    }
+   },
+   "required": [
+    "text_ar",
+    "translation",
+    "narrator",
+    "collections",
+    "grade_label",
+    "grade_category",
+    "grade_source",
+    "excerpt"
+   ],
+   "title": "HadithBody",
+   "type": "object"
+  },
+  "HadithGrade": {
+   "additionalProperties": false,
+   "properties": {
+    "grade_category": {
+     "enum": [
+      "authentic",
+      "acceptable",
+      "weak",
+      "fabricated",
+      "other"
+     ],
+     "title": "Grade Category",
+     "type": "string"
+    },
+    "grade_label": {
+     "title": "Grade Label",
+     "type": "string"
+    },
+    "grader": {
+     "title": "Grader",
+     "type": "string"
+    },
+    "reference": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Reference"
+    },
+    "source_book": {
+     "title": "Source Book",
+     "type": "string"
+    }
+   },
+   "required": [
+    "grade_label",
+    "grade_category",
+    "grader",
+    "source_book",
+    "reference"
+   ],
+   "title": "HadithGrade",
+   "type": "object"
+  },
+  "QuranBody": {
+   "additionalProperties": false,
+   "properties": {
+    "audio": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Audio"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "ayah_end": {
+     "title": "Ayah End",
+     "type": "integer"
+    },
+    "ayah_start": {
+     "title": "Ayah Start",
+     "type": "integer"
+    },
+    "segment": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Segment"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "surah": {
+     "maximum": 114,
+     "minimum": 1,
+     "title": "Surah",
+     "type": "integer"
+    },
+    "surah_name": {
+     "title": "Surah Name",
+     "type": "string"
+    },
+    "text_uthmani": {
+     "title": "Text Uthmani",
+     "type": "string"
+    },
+    "translation": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Translation"
+    },
+    "translation_source": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Translation Source"
+    }
+   },
+   "required": [
+    "surah",
+    "surah_name",
+    "ayah_start",
+    "ayah_end",
+    "segment",
+    "text_uthmani",
+    "translation",
+    "translation_source",
+    "audio"
+   ],
+   "title": "QuranBody",
+   "type": "object"
+  },
+  "Referral": {
+   "additionalProperties": false,
+   "properties": {
+    "reason": {
+     "items": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/SpanText"
+       },
+       {
+        "$ref": "#/$defs/SpanStrong"
+       },
+       {
+        "$ref": "#/$defs/SpanTerm"
+       },
+       {
+        "$ref": "#/$defs/SpanCitation"
+       }
+      ]
+     },
+     "title": "Reason",
+     "type": "array"
+    },
+    "referral_type": {
+     "enum": [
+      "fatwa_authority",
+      "specialist",
+      "human_support"
+     ],
+     "title": "Referral Type",
+     "type": "string"
+    },
+    "targets": {
+     "items": {
+      "$ref": "#/$defs/ReferralTarget"
+     },
+     "title": "Targets",
+     "type": "array"
+    }
+   },
+   "required": [
+    "referral_type",
+    "reason",
+    "targets"
+   ],
+   "title": "Referral",
+   "type": "object"
+  },
+  "ReferralTarget": {
+   "additionalProperties": false,
+   "properties": {
+    "contact": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Contact"
+    },
+    "description": {
+     "title": "Description",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "url": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Url"
+    }
+   },
+   "required": [
+    "name",
+    "description",
+    "url",
+    "contact"
+   ],
+   "title": "ReferralTarget",
+   "type": "object"
+  },
+  "Segment": {
+   "additionalProperties": false,
+   "properties": {
+    "word_end": {
+     "minimum": 1,
+     "title": "Word End",
+     "type": "integer"
+    },
+    "word_start": {
+     "minimum": 1,
+     "title": "Word Start",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "word_start",
+    "word_end"
+   ],
+   "title": "Segment",
+   "type": "object"
+  },
+  "Source": {
+   "additionalProperties": false,
+   "properties": {
+    "display_role": {
+     "anyOf": [
+      {
+       "enum": [
+        "content",
+        "activity"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Display Role"
+    },
+    "displayed": {
+     "title": "Displayed",
+     "type": "boolean"
+    },
+    "excerpt": {
+     "title": "Excerpt",
+     "type": "string"
+    },
+    "kind": {
+     "enum": [
+      "quran",
+      "hadith",
+      "tafsir",
+      "article",
+      "book",
+      "fatwa"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "provider": {
+     "enum": [
+      "tafsir_center",
+      "quran_com",
+      "hadeethenc",
+      "quranenc",
+      "islamhouse",
+      "dorar"
+     ],
+     "title": "Provider",
+     "type": "string"
+    },
+    "reference": {
+     "title": "Reference",
+     "type": "string"
+    },
+    "source_id": {
+     "title": "Source Id",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "url": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Url"
+    }
+   },
+   "required": [
+    "source_id",
+    "kind",
+    "provider",
+    "title",
+    "reference",
+    "excerpt",
+    "url",
+    "displayed",
+    "display_role"
+   ],
+   "title": "Source",
+   "type": "object"
+  },
+  "SpanCitation": {
+   "additionalProperties": false,
+   "properties": {
+    "ref": {
+     "title": "Ref",
+     "type": "integer"
+    },
+    "type": {
+     "enum": [
+      "citation"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "ref"
+   ],
+   "title": "SpanCitation",
+   "type": "object"
+  },
+  "SpanStrong": {
+   "additionalProperties": false,
+   "properties": {
+    "text": {
+     "title": "Text",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "strong"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "text"
+   ],
+   "title": "SpanStrong",
+   "type": "object"
+  },
+  "SpanTerm": {
+   "additionalProperties": false,
+   "properties": {
+    "term_id": {
+     "title": "Term Id",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "term"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "text",
+    "term_id"
+   ],
+   "title": "SpanTerm",
+   "type": "object"
+  },
+  "SpanText": {
+   "additionalProperties": false,
+   "properties": {
+    "text": {
+     "title": "Text",
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "text"
+     ],
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "text"
+   ],
+   "title": "SpanText",
+   "type": "object"
+  },
+  "VerificationItem": {
+   "additionalProperties": false,
+   "properties": {
+    "alternative": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Evidence"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "correct_text": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Evidence"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "detected_kind": {
+     "enum": [
+      "quran",
+      "hadith",
+      "claim"
+     ],
+     "title": "Detected Kind",
+     "type": "string"
+    },
+    "hadith_grade": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/HadithGrade"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "item_id": {
+     "title": "Item Id",
+     "type": "string"
+    },
+    "note": {
+     "items": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/SpanText"
+       },
+       {
+        "$ref": "#/$defs/SpanStrong"
+       },
+       {
+        "$ref": "#/$defs/SpanTerm"
+       },
+       {
+        "$ref": "#/$defs/SpanCitation"
+       }
+      ]
+     },
+     "title": "Note",
+     "type": "array"
+    },
+    "quote_text": {
+     "title": "Quote Text",
+     "type": "string"
+    },
+    "source_ids": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Source Ids",
+     "type": "array"
+    },
+    "status": {
+     "enum": [
+      "quran_exact",
+      "quran_inexact",
+      "hadith_graded",
+      "not_found",
+      "needs_specialist"
+     ],
+     "title": "Status",
+     "type": "string"
+    }
+   },
+   "required": [
+    "item_id",
+    "quote_text",
+    "detected_kind",
+    "status",
+    "hadith_grade",
+    "correct_text",
+    "alternative",
+    "note",
+    "source_ids"
+   ],
+   "title": "VerificationItem",
+   "type": "object"
+  },
+  "View": {
+   "additionalProperties": false,
+   "properties": {
+    "holder": {
+     "title": "Holder",
+     "type": "string"
+    },
+    "source_ids": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Source Ids",
+     "type": "array"
+    },
+    "spans": {
+     "items": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/SpanText"
+       },
+       {
+        "$ref": "#/$defs/SpanStrong"
+       },
+       {
+        "$ref": "#/$defs/SpanTerm"
+       },
+       {
+        "$ref": "#/$defs/SpanCitation"
+       }
+      ]
+     },
+     "title": "Spans",
+     "type": "array"
+    }
+   },
+   "required": [
+    "holder",
+    "spans",
+    "source_ids"
+   ],
+   "title": "View",
+   "type": "object"
+  },
+  "WordTiming": {
+   "additionalProperties": false,
+   "properties": {
+    "ayah": {
+     "title": "Ayah",
+     "type": "integer"
+    },
+    "end_ms": {
+     "title": "End Ms",
+     "type": "integer"
+    },
+    "position": {
+     "title": "Position",
+     "type": "integer"
+    },
+    "start_ms": {
+     "title": "Start Ms",
+     "type": "integer"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "ayah",
+    "position",
+    "text",
+    "start_ms",
+    "end_ms"
+   ],
+   "title": "WordTiming",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "abstained": {
+   "title": "Abstained",
+   "type": "boolean"
+  },
+  "blocks": {
+   "items": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/ABParagraph"
+     },
+     {
+      "$ref": "#/$defs/ABEvidence"
+     },
+     {
+      "$ref": "#/$defs/ABVerification"
+     },
+     {
+      "$ref": "#/$defs/ABViews"
+     },
+     {
+      "$ref": "#/$defs/ABReferral"
+     }
+    ]
+   },
+   "title": "Blocks",
+   "type": "array"
+  },
+  "citations": {
+   "items": {
+    "$ref": "#/$defs/Citation"
+   },
+   "title": "Citations",
+   "type": "array"
+  },
+  "question_class": {
+   "enum": [
+    "general_knowledge",
+    "text_explanation",
+    "verification",
+    "differing_opinions",
+    "personal_fatwa",
+    "doubt_or_deep_creed",
+    "sensitive_human",
+    "out_of_scope"
+   ],
+   "title": "Question Class",
+   "type": "string"
+  }
+ },
+ "required": [
+  "question_class",
+  "abstained",
+  "blocks",
+  "citations"
+ ],
+ "title": "raqeeb_baseline",
+ "type": "object"
+}

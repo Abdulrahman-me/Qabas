@@ -15,12 +15,12 @@ from kombu import Queue
 
 from app.config import get_settings
 
-QUEUES = ("maintenance", "factory", "media", "raqeeb", "asr")
+QUEUES = ("maintenance", "factory", "media", "raqeeb", "asr", "embeddings")
 
 settings = get_settings()
 celery_app = Celery("qabas", broker=settings.redis_url, backend=settings.redis_url,
                     include=["app.workers.tasks_maintenance", "app.workers.tasks_asr", "app.workers.tasks_factory",
-                             "app.workers.tasks_raqeeb"])
+                             "app.workers.tasks_raqeeb", "app.workers.tasks_embeddings"])
 celery_app.conf.update(
     task_queues=[Queue(name) for name in QUEUES],
     task_default_queue="maintenance",

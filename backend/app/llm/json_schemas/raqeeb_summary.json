@@ -1,0 +1,15 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "summary": {
+   "maxLength": 2000,
+   "title": "Summary",
+   "type": "string"
+  }
+ },
+ "required": [
+  "summary"
+ ],
+ "title": "raqeeb_summary",
+ "type": "object"
+}

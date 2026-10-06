@@ -10,6 +10,7 @@ from typing import Any
 from sqlalchemy import select, tuple_
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.config import Settings
 from app.content import catalog
 from app.content.package import VariantContent
 from app.content.projection import select_variant, term_card
@@ -23,6 +24,7 @@ from app.models import (
     Misconception,
     RaqeebConversation,
     RaqeebMessage,
+    RaqeebUploadReceipt,
     User,
 )
 from app.raqeeb.pipeline import spans_in
@@ -83,6 +85,7 @@ def expire(row: RaqeebMessage, *, seconds: int = DEADLINE, code: str = "upstream
         row.status = "failed"
         row.error = {"code": code, "message": "The answer could not finish in time."}
         row.lease = None
+        row.completed_at = row.created_at + timedelta(seconds=seconds)
         return True
     return False
 
@@ -172,8 +175,9 @@ def answer_text(row: RaqeebMessage) -> str:
     return " ".join(text)
 
 
-async def submit(db: AsyncSession, user: User, conversation_id: str, text: str,
-                 rate_limit: Any) -> tuple[int, dict[str, Any]]:
+async def submit(db: AsyncSession, user: User, conversation_id: str, text: str | None,
+                 rate_limit: Any, *, attachment_ids: list[str] | None = None,
+                 settings: Settings | None = None) -> tuple[int, dict[str, Any]]:
     user = await active_user(db, user.id)
     conv = await conversation(db, user.id, conversation_id, lock=True)
     previous = (await db.execute(select(RaqeebMessage).where(
@@ -187,14 +191,33 @@ async def submit(db: AsyncSession, user: User, conversation_id: str, text: str,
     await rate_limit()
     snapshot = await profile_snapshot(db, user, conv)
     snapshot["context"] = conv.context_snapshot
-    snapshot["history"] = [{"role": r.role, "text": answer_text(r), "understood_input": r.understood_input}
+    snapshot["history"] = [{"role": r.role, "text": answer_text(r), "understood_input": r.understood_input,
+                            "classification": r.classification}
                            for r in reversed(previous[:6])]
     now = utcnow()
     common = {"conversation_id": conv.id, "created_at": now, "attachments": [], "trace": {}, "input_snapshot": {}}
     original = RaqeebMessage(id=new_id("msg_u"), role="user", status="received", stage="received", text=text,
                              **common)
+    attached, receipts = [], []
+    for identifier in attachment_ids or []:
+        receipt = (await db.execute(select(RaqeebUploadReceipt).where(
+            RaqeebUploadReceipt.id == identifier, RaqeebUploadReceipt.user_id == user.id)
+            .with_for_update())).scalar_one_or_none()
+        if receipt is None or receipt.status != "pending":
+            raise ApiError(ErrorCode.validation_error, "Upload receipt cannot be attached to this message.")
+        from app.raqeeb.intake import retention_days
+        assert settings is not None
+        receipts.append(receipt)
+        attached.append({"attachment_id": receipt.id, "kind": receipt.kind, "filename": receipt.filename,
+                         "mime": receipt.mime, "size_bytes": receipt.size_bytes, "url": None,
+                         "duration_ms": receipt.duration_ms, "pages": receipt.pages})
+    original.attachments = attached
     db.add(original)
     await db.flush()
+    for receipt in receipts:
+        receipt.message_id, receipt.status = original.id, "attached"
+        assert settings is not None
+        receipt.expires_at = now + timedelta(days=retention_days(settings), seconds=DEADLINE)
     assistant = RaqeebMessage(id=new_id("msg_a"), role="assistant", status="processing", stage="received",
                               reply_to=original.id, **(common | {"input_snapshot": snapshot}))
     db.add(assistant)

@@ -1,0 +1,19 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "contains_private_details": {
+   "title": "Contains Private Details",
+   "type": "boolean"
+  },
+  "depersonalised": {
+   "title": "Depersonalised",
+   "type": "boolean"
+  }
+ },
+ "required": [
+  "depersonalised",
+  "contains_private_details"
+ ],
+ "title": "raqeeb_memory_safe",
+ "type": "object"
+}

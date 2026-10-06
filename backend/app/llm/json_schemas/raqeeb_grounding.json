@@ -1,0 +1,51 @@
+{
+ "$defs": {
+  "FactualSentence": {
+   "additionalProperties": false,
+   "properties": {
+    "citation_refs": {
+     "items": {
+      "type": "integer"
+     },
+     "title": "Citation Refs",
+     "type": "array"
+    },
+    "factual": {
+     "title": "Factual",
+     "type": "boolean"
+    },
+    "supported": {
+     "title": "Supported",
+     "type": "boolean"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "text",
+    "factual",
+    "supported",
+    "citation_refs"
+   ],
+   "title": "FactualSentence",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "sentences": {
+   "items": {
+    "$ref": "#/$defs/FactualSentence"
+   },
+   "title": "Sentences",
+   "type": "array"
+  }
+ },
+ "required": [
+  "sentences"
+ ],
+ "title": "raqeeb_grounding",
+ "type": "object"
+}

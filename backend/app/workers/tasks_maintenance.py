@@ -66,6 +66,7 @@ def expire_guest_sessions() -> int:
 SCHEDULE = {
     "outbox-relay": {"task": "maintenance.outbox_relay", "schedule": 5.0},
     "raqeeb-sweeper": {"task": "maintenance.sweep_raqeeb_messages", "schedule": 10.0},
+    "raqeeb-private-cleanup": {"task": "maintenance.raqeeb_private_cleanup", "schedule": 3600.0},
     "purge-idempotency-keys": {"task": "maintenance.purge_idempotency_keys", "schedule": 3600.0},
     "expire-guest-sessions": {"task": "maintenance.expire_guest_sessions", "schedule": 86400.0},
 }

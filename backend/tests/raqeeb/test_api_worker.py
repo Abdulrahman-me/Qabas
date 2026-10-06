@@ -239,7 +239,7 @@ def test_cross_user_visibility_and_text_limits(api):
         assert send(api, one, conv, question=question).status_code == 400
     response = api.post(f"/v1/raqeeb/conversations/{conv}/messages", files={"audio": ("x.mp3", b"x")},
                          headers=one | {"Idempotency-Key": str(uuid.uuid4())})
-    assert response.status_code == 400
+    assert response.status_code == 409  # Phase 17 accepts audio; the existing answer still owns admission.
 
 
 async def test_terminal_content_immutable_but_feedback_and_purge_allowed(api, resources):
