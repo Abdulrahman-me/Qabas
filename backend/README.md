@@ -52,9 +52,9 @@ py -3.12 scripts\dev\install_git_hooks.py              # pre-commit public-safet
 | Refresh private-artifact fingerprints | `py -3.12 scripts/dev/update_private_fingerprints.py` (needs the local handoff) |
 | Worker (Windows dev) | `uv run celery -A app.workers.celery_app worker -Q maintenance,factory,media --pool=solo` |
 | Recitation worker (Windows dev) | `uv sync --group asr`, then `uv run celery -A app.workers.celery_app worker -Q asr --pool=solo --prefetch-multiplier=1` (see Recitation below) |
-| Scheduler (outbox relay every 5 s, cleanups, league promotion, synthetic league members) | `uv run celery -A app.workers.celery_app beat` |
+| Scheduler (outbox relay every 5 s, cleanups, league promotion, synthetic league members, challenge expiry) | `uv run celery -A app.workers.celery_app beat` |
 | Validate the curriculum file | `uv run python scripts/seed.py --check` (no database needed) |
-| Seed the curriculum structure | `uv run python scripts/seed.py` (units, lesson slots, concept graph, league tiers and achievements from `content/registries.json`; synthetic league members only when `SYNTHETIC_LEAGUE_MEMBERS=true`; safe to re-run, refuses destructive changes) |
+| Seed the curriculum structure | `uv run python scripts/seed.py` (units, lesson slots, concept graph, league tiers and achievements from `content/registries.json`, the practice-bot users; synthetic league members only when `SYNTHETIC_LEAGUE_MEMBERS=true`; safe to re-run, refuses destructive changes) |
 | Load the contract test curriculum (dev/test/staging DB only) | `uv run python scripts/seed.py --test-curriculum` (publishes the synthetic test lessons through the real pipeline; refused in production, D-84) |
 | Create or re-key a reviewer | `uv run python scripts/create_reviewer.py --email reviewer@example.org --name "Reviewer"` (prompts for the password) |
 | Before `alembic upgrade` past 0003 on a database with old active sessions | `uv run python scripts/abandon_legacy_sessions.py` lists them; add `--confirm` to abandon them (migration 0004 refuses to run otherwise) |
@@ -252,6 +252,27 @@ private benchmark runner; no synthetic benchmark appears as release quality in s
   once per 30 minutes. They never sign in, befriend, earn badges or enter metrics.
 - Account deletion removes friendships, sent invites and league seats at once; the purge also removes tiers,
   memberships and achievement progress.
+
+## Challenges: REST, selection, bot, async (Phase 19)
+
+- **Endpoints** (`/v1/duels`): create (`duel` vs the practice bot or a friend, `group` with 1–3 friends;
+  30/hour, optional `Idempotency-Key`), `invitations`, `accept`/`decline`, get, history, `async`,
+  `async/next`, `async/answer`. Opponents must be friends; there is one open challenge per friend.
+- **Questions:** 7 (duel) or 3 (group) duel-eligible closed questions, chosen at creation from concepts every
+  player mastered, then lessons every player completed, then the first shared unit. Pinned versions, no repeats,
+  graded by key comparison on the server; no answer leaves the server before the player answers.
+- **Async** (duel vs a friend, after 60 s pending): the server issues each question with `issued_at`/
+  `deadline_at`, `next` and `answer` are idempotent, late answers score 0, and the duel closes when both finish or
+  24 h after the switch (the friend forfeits if unfinished). Live play (bot duels, groups, accepted duels) is the
+  Phase 20 WebSocket; until then an unstarted live challenge expires after 2 minutes.
+- **Results** (one transaction, shared with Phase 20): ranking with the response-time tie-break and shared ranks;
+  XP through `xp_events` (15/8/4; at most 5 rewarded challenges per learner per day); the day qualifies;
+  `win_challenge` quests advance; `duel.finished` refreshes achievements (`quickLight` = live wins against
+  friends).
+- **Bot:** three seeded `is_bot` users ("Coach"), 70% correct, log-normal response time (median 6 s), seeded by
+  duel and question so replays and takeovers repeat exactly.
+- **Jobs:** `community.sweep_challenges` every 5 s (lobbies, expiry, 24 h async close). Account deletion closes
+  open challenges without rewards.
 
 ## Staging environment
 

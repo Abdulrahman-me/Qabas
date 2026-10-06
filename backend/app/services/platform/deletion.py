@@ -27,6 +27,8 @@ from app.models import (
     AuthSession,
     DailyActivity,
     DeletionJob,
+    DuelAnswer,
+    DuelQuestion,
     FriendInvite,
     Friendship,
     IdempotencyKey,
@@ -65,7 +67,7 @@ REQUEST_STEPS: list[RequestStep] = []
 PURGED_TABLES: tuple[Any, ...] = (
     LearningSession, RecitationCheckRecord, LearnerConcept, LearnerTerm, LearnerMisconception, LearnerLesson,
     LearnerUnit, XpEvent, DailyActivity, Quest, IdempotencyKey, AuthSession, MetricUnitFact, MetricLearnerFact,
-    RaqeebConversation, LeagueMember, LearnerTier, LearnerAchievement,
+    RaqeebConversation, LeagueMember, LearnerTier, LearnerAchievement, DuelAnswer, DuelQuestion,
 )
 
 
@@ -91,6 +93,8 @@ async def request_deletion(db: AsyncSession, user: User, *, now: datetime | None
         await auth_sessions.revoke_all(db, user.id, now=now)
         await db.execute(update(User).where(User.id == user.id, User.deleted_at.is_(None)).values(deleted_at=now))
         await forget_community(db, user.id)
+        from app.services.challenges import duels  # lazy: the challenge services import user projections
+        await duels.close_for_deleted(db, user.id, now)
         for step in REQUEST_STEPS:
             await step(db, user.id)
         await db.execute(insert(DeletionJob).values(user_id=user.id, requested_at=now)

@@ -1,5 +1,5 @@
-"""Community beat jobs: week-end promotion at Sunday 00:00 Asia/Riyadh plus hourly catch-up, and the synthetic
-member job, on the maintenance queue."""
+"""Community beat jobs: week-end promotion at Sunday 00:00 Asia/Riyadh plus hourly catch-up, the synthetic
+member job and the challenge expiry/forfeit sweep, on the maintenance queue."""
 
 from __future__ import annotations
 
@@ -21,7 +21,9 @@ def test_community_jobs_are_scheduled_on_the_maintenance_queue() -> None:
     assert schedule["league-promotion-catch-up"]["schedule"] == 3600.0
     assert schedule["synthetic-league-members"]["task"] == "community.synthetic_leagues"
     router = celery_app.amqp.router
-    for name in ("community.promote_leagues", "community.synthetic_leagues"):
+    assert schedule["challenge-expiry"]["task"] == "community.sweep_challenges"
+    assert schedule["challenge-expiry"]["schedule"] <= 5                    # lobbies close at 60 s, duels at 2 min
+    for name in ("community.promote_leagues", "community.synthetic_leagues", "community.sweep_challenges"):
         assert name in celery_app.tasks
         assert router.route({}, name)["queue"].name == "maintenance"
     assert tasks_community.CONSUMER_MODULES

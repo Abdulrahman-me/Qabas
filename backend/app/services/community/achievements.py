@@ -14,7 +14,9 @@ Counters (anti-farming in brackets):
 * ``recitations_passed``: distinct passages with a passed check [repeating a verse does not count twice].
 * ``reviews_completed``: finished review sessions.
 * ``perfect_lessons``: ``lesson_perfect`` grants [already one per lesson reward key].
-* ``challenges_won``: Phase 19 (``duels``) registers its counter; until then no challenge can be won, so 0.
+* ``challenges_won``: finished *live* challenges against friends that the learner won outright (a rank-1 winner of
+  a non-draw), from ``duels`` [the badge is "Win a live challenge with friends": bot duels, async forfeits and draws
+  never count].
 """
 
 from __future__ import annotations
@@ -29,6 +31,8 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 from app.contract import models as C
 from app.models import (
     AchievementDefinition,
+    Duel,
+    DuelPlayer,
     LearnerAchievement,
     LearnerLesson,
     LearnerMisconception,
@@ -104,7 +108,10 @@ async def perfect_lessons(db: AsyncSession, user: User) -> int:
 
 
 async def challenges_won(db: AsyncSession, user: User) -> int:
-    return 0
+    return await _count(db, select(func.count()).select_from(Duel).join(
+        DuelPlayer, (DuelPlayer.duel_id == Duel.id) & (DuelPlayer.user_id == user.id)).where(
+        Duel.status == "finished", Duel.mode == "live", Duel.opponent_type.in_(("friend", "friends")),
+        Duel.result["is_draw"].as_boolean().is_(False), Duel.result["winner_user_ids"].contains([user.id])))
 
 
 COUNTERS: dict[str, Counter] = {
@@ -117,7 +124,7 @@ COUNTERS: dict[str, Counter] = {
 
 
 def register_counter(name: str, counter: Counter) -> None:
-    """Later phases supply counters over their own tables (Phase 19: ``challenges_won`` from ``duels``)."""
+    """Replace a counter with one over another phase's tables (the registry is closed to new names)."""
     if name not in COUNTERS:
         raise ValueError(f"unknown achievement counter {name}")
     COUNTERS[name] = counter

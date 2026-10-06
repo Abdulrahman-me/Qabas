@@ -16213,6 +16213,464 @@
     ]
    }
   },
+  "/v1/duels": {
+   "get": {
+    "operationId": "history_v1_duels_get",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "cursor",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Cursor"
+      }
+     },
+     {
+      "in": "query",
+      "name": "limit",
+      "required": false,
+      "schema": {
+       "default": 20,
+       "title": "Limit",
+       "type": "integer"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/DuelPage"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "History",
+    "tags": [
+     "challenges"
+    ]
+   },
+   "post": {
+    "operationId": "create_v1_duels_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/DuelCreate"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Duel"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Create",
+    "tags": [
+     "challenges"
+    ]
+   }
+  },
+  "/v1/duels/invitations": {
+   "get": {
+    "operationId": "invitations_v1_duels_invitations_get",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "cursor",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Cursor"
+      }
+     },
+     {
+      "in": "query",
+      "name": "limit",
+      "required": false,
+      "schema": {
+       "default": 20,
+       "title": "Limit",
+       "type": "integer"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/InvitationPage"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Invitations",
+    "tags": [
+     "challenges"
+    ]
+   }
+  },
+  "/v1/duels/{duel_id}": {
+   "get": {
+    "operationId": "get_v1_duels__duel_id__get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "duel_id",
+      "required": true,
+      "schema": {
+       "title": "Duel Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Duel"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Get",
+    "tags": [
+     "challenges"
+    ]
+   }
+  },
+  "/v1/duels/{duel_id}/accept": {
+   "post": {
+    "operationId": "accept_v1_duels__duel_id__accept_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "duel_id",
+      "required": true,
+      "schema": {
+       "title": "Duel Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Duel"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Accept",
+    "tags": [
+     "challenges"
+    ]
+   }
+  },
+  "/v1/duels/{duel_id}/async": {
+   "post": {
+    "operationId": "to_async_v1_duels__duel_id__async_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "duel_id",
+      "required": true,
+      "schema": {
+       "title": "Duel Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Duel"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "To Async",
+    "tags": [
+     "challenges"
+    ]
+   }
+  },
+  "/v1/duels/{duel_id}/async/answer": {
+   "post": {
+    "description": "The body is read raw: the answer is graded exactly as sent, without union coercion.",
+    "operationId": "async_answer_v1_duels__duel_id__async_answer_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "duel_id",
+      "required": true,
+      "schema": {
+       "title": "Duel Id",
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/AsyncAnswer"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AsyncAnswerResp"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Async Answer",
+    "tags": [
+     "challenges"
+    ]
+   }
+  },
+  "/v1/duels/{duel_id}/async/next": {
+   "post": {
+    "operationId": "async_next_v1_duels__duel_id__async_next_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "duel_id",
+      "required": true,
+      "schema": {
+       "title": "Duel Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AsyncNext"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Async Next",
+    "tags": [
+     "challenges"
+    ]
+   }
+  },
+  "/v1/duels/{duel_id}/decline": {
+   "post": {
+    "operationId": "decline_v1_duels__duel_id__decline_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "duel_id",
+      "required": true,
+      "schema": {
+       "title": "Duel Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "default": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ErrorEnvelope"
+        }
+       }
+      },
+      "description": "Error envelope (API §3.4)"
+     }
+    },
+    "security": [
+     {
+      "bearer": []
+     }
+    ],
+    "summary": "Decline",
+    "tags": [
+     "challenges"
+    ]
+   }
+  },
   "/v1/friends": {
    "get": {
     "operationId": "friend_page_v1_friends_get",

@@ -781,13 +781,36 @@ privacy, brute-force, idempotency and deletion tests).
 
 **Refs:** BACKEND_HANDOFF §11, §11.1, §11.3, §11.4; API §6.10.
 
-- [ ] Additive migration: `duels`, `duel_players`, `duel_questions`, `duel_answers`.
-- [ ] `POST /duels`, invitations, accept/decline, get, history; presets `duel`/`group` with `config`; question selection (7/3, no repeats); shared `challenge_points()`.
-- [ ] Bot user seeded by `scripts/seed.py` (D-37). Deterministic seeded bot; async flow (`async`, `async/next`, `async/answer`), idempotency, 24 h forfeit beat job, expiry jobs.
-- [ ] Results transaction: ranking, ties, XP/quests; achievements/leagues through the outbox.
+> **Stacked parallel development:** built on `phase/19-challenges` from `phase/18-community-challenges` (a049af5),
+> itself unmerged while Phase 17 is integrated. F-/D- numbers are **provisional** (`F-P19-n`, `D-P19-n`); the
+> migration `p19_challenges` (revises `p18_community`) and SQLSTATE QB007 are renumbered/confirmed at integration.
+> Order: Phase 17 → `main`, then Phase 18 (tag), then Phase 19 rebased on it (tag).
 
-**Tests:** `test_challenge_scoring`, `test_async_duel_idempotency`.
-**Exit:** tag `phase-19`.
+- [x] Additive migration: `duels`, `duel_players`, `duel_questions`, `duel_answers`; closed duels are immutable (trigger QB007), answers insert-only.
+- [x] `POST /duels`, invitations, accept/decline, get, history; presets `duel`/`group` with `config`; question selection (7/3, no repeats); shared `challenge_points()`.
+- [x] Bot user seeded by `scripts/seed.py` (D-37). Deterministic seeded bot; async flow (`async`, `async/next`, `async/answer`), idempotency, 24 h forfeit beat job, expiry jobs.
+- [x] Results transaction: ranking, ties, XP/quests; achievements/leagues through the outbox (`challenges_won` now real; leagues through the XP grant).
+- [~] Live play of bot duels, accepted friend duels and group challenges is the Phase 20 WebSocket/coordinator; until then such a `ready` challenge expires unstarted at `expires_at` (F-P19-1).
+
+**Tests:** `test_challenge_scoring`, `test_async_duel_idempotency` (plus `test_challenge_lifecycle`).
+**Exit:** tag `phase-19` (after Phase 18 is integrated and the rebased branch passes the full suite).
+
+**Delivered (pending integration):** `app/models/challenges.py`, migration `p19_challenges`, `app/services/challenges/`
+(`selection`, `bot`, `duels`, `play`, `results`), `app/api/challenges.py` (nine endpoints), the 5 s
+`community.sweep_challenges` job, bot seeding, the `challenges_won` counter, deletion coverage and
+`tests/challenges/` (25 tests: scoring, ranking, async idempotency/timing, races, lobby, expiry, privacy, deletion).
+
+### Handoff review findings (Phase 19)
+
+| # | Finding | Resolution |
+|---|---|---|
+| F-P19-1 | Bot duels start `ready` and accepted friend duels/group challenges are live-only (WebSocket, Phase 20); Phase 19 has no engine to play them. | Phase 19 delivers their lifecycle, selection, bot model and the shared results transaction; an unstarted `ready` challenge expires at `expires_at`. The coordinator (Phase 20) sets `in_progress`/`phase` and calls `results.finish` (D-P19-10). |
+| F-P19-2 | `duel_questions` must hold both the chosen questions and, for async duels, each player's own issue times ("add `user_id`"). | Nullable `user_id`: one shared row per index (pinned exercise version) plus one issued row per player and index, enforced by partial unique indexes; no exercise twice per duel. |
+| F-P19-3 | `bot_fill` seats bots for friends who did not join, but the contract allows at most 4 players. | Bots take seats 4–6; once a group starts it lists its participants only (joined friends and bots), never more than the group size. |
+| F-P19-4 | The `quickLight` badge reads "Win a live challenge with friends" while the backend counter is the generic `challenges_won`. | Counted from finished *live* challenges against friends where the learner is a rank-1 winner of a non-draw; bot duels, async forfeits and draws never count (D-P19-5). |
+| F-P19-5 | During Phase 19 testing, declining a challenge the learner had already joined returned `204` and silently did nothing. | Now `409 duel_not_joinable` (`already_joined`); a repeated decline stays `204`. |
+| F-P19-6 | The spec limits creation to 30/hour but says nothing about challenge XP farming (bot, alternate accounts, rematches). | Conservative rules: at most 5 rewarded challenges per learner and local day, one open challenge per friend, forfeiting/declining players and bots get no XP, and deletion closes open challenges without rewards (D-P19-4/D-P19-9). |
+| F-P19-7 | The bot's log-normal response time has a 6 s median but no spread. | σ = 0.5, clamped to [1.5 s, 14 s] as specified (D-P19-7). |
 
 ---
 
@@ -1016,6 +1039,16 @@ privacy, brute-force, idempotency and deletion tests).
 | 2026-10-06 | D-P18-8 | **Seeded configuration is migration-snapshotted and seed-synced.** The migration inserts the registry snapshot so a fresh schema works; `seed.py` upserts names/targets/zone sizes and refuses removed keys (contract identities). Test truncation keeps these two tables. | D-37; registries are frozen contract data. |
 | 2026-10-06 | D-P18-9 | **Deletion removes community presence at request time** (friendships, invites sent, league seats; accepted invites keep no id of the deleted learner) and the purge repeats it and deletes tiers, memberships and achievements; re-purge after restore stays correct. | AD-21; API §6.2. |
 | 2026-10-06 | D-P18-10 | **Parallel-phase numbering.** Phase 18 migration id `p18_community` and these provisional F/D numbers are renumbered after the Phase 16/17 migrations and log entries are integrated; Phase 17 entries are never rewritten. | Owner instruction for parallel work. |
+| 2026-10-06 | D-P19-1 | **Question selection.** Duel-purpose exercises pinned by current published lesson versions, whose pinned version is `duel_eligible` and closed-type; an exercise qualifies for a tier when *all* its concepts are in the tier's set (mastery >= 0.5 for every human player; then also concepts of lessons every human completed; then the first unit shared by both tracks). Chosen at creation for the invited humans (bots excluded), shuffled within a tier by a duel-seeded PRNG, pinned in `duel_questions`; not enough questions → `409 duel_not_joinable` (`not_enough_questions`). | Backend §11.1. |
+| 2026-10-06 | D-P19-2 | **Lifecycle timing.** Live challenges expire 2 minutes after creation unless started; group lobbies resolve at 60 s or when every invitee responded (≥ 1 friend joined → `ready`, `bot_fill` seats bots; else `expired`). Async: inviter only, after 60 s pending, open 24 h; the friend accepts to play. Time transitions run in the 5 s sweep and before any read or write of the duel, under its row lock. Closed states never change (QB007). | API §6.10; backend §11.4. |
+| 2026-10-06 | D-P19-3 | **Creation guards.** Opponents must be current friends (never bots, synthetic or deleted users); one open challenge per challenger and friend; a learner's creations are serialized; 30/hour; optional `Idempotency-Key`. Non-players get `404` for a duel. | Backend §5.1; Phase 18 friends. |
+| 2026-10-06 | D-P19-4 | **Results.** Rank by points, then lower total time of correct answers, then shared rank; forfeiting players rank last. XP via `xp.grant` (`duel`/id; leagues follow): duel win/draw/loss 15/8/4, group rank 1/2/other 15/8/4, every rank-1 player gets rank-1 XP; bots and forfeiters none; at most 5 rewarded challenges per learner and local day. A finished challenge qualifies the day, adds capped play time toward the daily goal and advances `win_challenge` for winners of a non-draw; `duel.finished` refreshes achievements. Written once under the duel lock. | Backend §10.1, §10.2, §11.2; anti-farming where silent. |
+| 2026-10-06 | D-P19-5 | **`challenges_won`** counts finished live challenges against friends won outright (rank-1, not a draw); read from `duels`, never incremented. | F-P19-4; backend §10.7. |
+| 2026-10-06 | D-P19-6 | **Async play details.** Late answers (after `deadline_at`) and `answer: null` are 0-point timeouts (`correct: false`); malformed answers → `400`; an answered index replays its stored response (even after the duel finished); `next` after the last question → `409 duel_not_joinable` (`completed`). A decline after the switch is a forfeit (the inviter wins when they finish or at 24 h). Challenge answers never change mastery, FSRS or misconceptions. | API §6.10 rev 10. |
+| 2026-10-06 | D-P19-7 | **Bot.** Three seeded practice-bot users (D-37; also created on first use), localized "المدرّب"/"Coach", avatar `traveler_bot`; correct with p = 0.7, log-normal time median 6 s, σ 0.5, clamped [1.5, 14] s, from a PRNG seeded by (duel, question, bot); wrong answers are served options. | Backend §11.3; F-P19-7. |
+| 2026-10-06 | D-P19-8 | **Privacy.** Challenge players are friends or bots: the `Duel` shows display name and avatar only (no email, mastery, history); deleted players appear as "Deleted learner"; results carry ids, ranks and points only. | API §6.10; Phase 18 privacy. |
+| 2026-10-06 | D-P19-9 | **Deletion.** Open challenges with the learner close as `expired` without rewards (a pending group invitee is recorded as declined); the purge removes the learner's answers and issued questions; finished results and seats remain on the anonymized placeholder. | AD-21. |
+| 2026-10-06 | D-P19-10 | **Phase 20 interface.** The coordinator owns `phase`, `coordinator_epoch`, `lobby_deadline_at` and the live timing columns of `duel_questions`, records answers with `challenge_points`, uses `bot.answer` and calls `results.finish`; `ws_url` is the API's WebSocket origin + `/v1/ws/duels/{id}` until Phase 20 adds tickets. | Backend §11.2; AD-23. |
 | 2026-10-04 | D-13 | Git HTTPS failed certificate verification with Git's bundled OpenSSL. The repo-local config now sets `http.sslBackend=schannel` (Windows certificate store); global config is untouched. The first push made `phase/0-workspace` GitHub's default branch, so switch the default to `main` when `phase-0` is tagged. | — |
 
 ## Progress log
@@ -1071,3 +1104,4 @@ privacy, brute-force, idempotency and deletion tests).
 | 2026-10-05 | 15 | ✅ Phase 15 engineering-complete: 937 passed / 1 local role skip; CI 37360126635 green (923 passed, 15 skipped; contracts 595/279/105/382); tagged `phase-15`, merged to `main`. Live staging acceptance gated (O-03, O-13, O-02). |
 | 2026-10-06 | 16 | ✅ Phase 16 engineering-complete: durable Raqeeb text API/pipeline, Phase 9 tool-backed evidence, guarded responses, pinned context, append-only benchmark storage and existing metrics integration. F-147–F-156, D-163–D-170. Full local suite 1,033 passed / 1 expected role skip; final focused suite 125 passed / 1 role skip includes four subsequently added context cases. Release CI 37375137666 green: 1,023 passed / 15 expected skips, contracts 595/279/105/382; Ruff, strict mypy, OpenAPI, LLM schemas/prompt locks, Alembic and safety green. Tagged `phase-16` on `f7f7ea5`, fast-forwarded to `main`. Private product notes updated and ignored. O-03/O-09/P-04/D-93/native-model acceptance remain open; Phase 17 owns attachments/voice/memory/private benchmark runner. |
 | 2026-10-06 | 18 | Built on `phase/18-community-challenges` in parallel with Phase 17 (separate worktree, database and Redis): leagues, friends, achievements, synthetic members, migration `p18_community` (provisional), F-P18-1–8 and D-P18-1–10 (provisional numbering). Awaiting Phase 16/17 integration before rebase, renumbering, full rerun, tag and merge. |
+| 2026-10-06 | 19 | Built on `phase/19-challenges`, stacked on unmerged Phase 18 (separate worktree, database and Redis): REST lifecycle, selection, bot, async play, results transaction, sweep, deletion; migration `p19_challenges` (provisional), F-P19-1–7 and D-P19-1–10 (provisional). Awaiting Phase 17 and then Phase 18 integration. |
