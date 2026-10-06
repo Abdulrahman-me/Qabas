@@ -50,11 +50,12 @@ uv run python scripts/start_render.py
 ```
 
 The launcher runs migrations before starting Uvicorn, a Celery worker for the
-`maintenance,raqeeb,embeddings` queues, and Celery Beat. Reply generation needs both
+`maintenance,raqeeb,embeddings` queues, with an embedded Celery Beat scheduler. Reply generation needs both
 the worker and Beat: the API records requests in the outbox, and Beat schedules the
 relay that sends them to the worker. All processes inherit the service's environment.
 The launcher stops the whole instance if a required process exits. Migration errors
-appear in deploy logs. `upgrade head` leaves an already-current schema unchanged.
+appear in deploy logs, and preparation steps time out after 120 seconds rather than
+silently blocking the port scan. `upgrade head` leaves an already-current schema unchanged.
 Use this launcher on a single instance only; do not also run a separate Beat process.
 This shares the free instance's memory and CPU; a local embedding model or heavy
 reply workload may require a separate worker with more resources.
