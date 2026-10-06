@@ -48,6 +48,21 @@ async def test_audio_actual_duration_boundary_and_mime_mismatch(settings):
             await inputs.decode(settings, "audio", mime, data)
 
 
+async def test_non_faststart_m4a_decodes_and_overlong_audio_still_rejects(settings, tmp_path):
+    for seconds in (20, 61):
+        target = tmp_path / f"neutral-{seconds}.m4a"
+        subprocess.run([settings.ffmpeg_path, "-nostdin", "-hide_banner", "-loglevel", "error", "-f", "lavfi",
+            "-i", f"sine=frequency=440:duration={seconds}", "-c:a", "aac", "-b:a", "96k", str(target)],
+            check=True, capture_output=True)
+        data = target.read_bytes()
+        assert len(data) > 200_000 and data.index(b"mdat") < data.index(b"moov")
+        if seconds == 20:
+            assert 20_000 <= (await inputs.decode(settings, "audio", "audio/mp4", data))["duration_ms"] <= 20_150
+        else:
+            with pytest.raises(inputs.InputUnreadable):
+                await inputs.decode(settings, "audio", "audio/mp4", data)
+
+
 async def test_decoded_image_limit_is_not_compressed_file_size(settings):
     buffer = io.BytesIO()
     Image.new("RGB", (6400, 6400), "white").save(buffer, format="PNG")

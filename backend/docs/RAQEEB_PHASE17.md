@@ -17,6 +17,8 @@ limit; Windows job-object memory/process-tree limits). FFmpeg accepts only in-me
 decodes WAV, AAC/M4A, Opus/WebM or MP3 into mono 16-kHz WAV, and rejects audio exceeding 60 seconds. Ordinary
 speech then uses the configured Whisper large-v3 compatible STT provider. This is separate from Phase 10's
 local Tarteel recitation model and its never-persisted recitation audio.
+Non-faststart M4A is demuxed from seekable memory and its verified AAC packets remuxed in memory to pipe-safe
+ADTS before FFmpeg conversion. No temporary audio files or file/network protocol permissions are needed.
 
 Images use the Phase 11 fast vision prompt. A bounded JPEG model rendition fits Phase 11's image envelope;
 the original private object and its identity remain unchanged. DOCX uses python-docx paragraphs with a

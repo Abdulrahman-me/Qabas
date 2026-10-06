@@ -87,6 +87,18 @@ def decode(value: dict[str, Any]) -> dict[str, Any]:
                     "audio/mp4": {"aac", "aac_fixed"}, "audio/webm": {"opus"},
                     "audio/mpeg": {"mp3", "mp3float"}}[mime]:
                 raise ValueError("unsupported audio codec")
+            if mime == "audio/mp4":
+                # Ordinary M4A can put moov after mdat: FFmpeg's stdin cannot seek back to the audio.
+                # Demux seekable memory, then remux the verified AAC stream to pipe-safe ADTS without
+                # decoding, disk writes, external references or enabling the file/network protocols.
+                buffer = io.BytesIO()
+                with av.open(buffer, mode="w", format="adts") as target:
+                    output_stream = target.add_stream_from_template(source.streams.audio[0])
+                    for packet in source.demux(audio=0):
+                        if packet.dts is not None:
+                            packet.stream = output_stream
+                            target.mux(packet)
+                data = buffer.getvalue()
         result = subprocess.run([value["ffmpeg"], "-nostdin", "-hide_banner", "-loglevel", "error",  # noqa: S603
             "-protocol_whitelist", "pipe,data", "-i", "pipe:0",
             "-t", "61", "-vn", "-ac", "1", "-ar", "16000", "-c:a", "pcm_s16le", "-f", "wav", "pipe:1"],
