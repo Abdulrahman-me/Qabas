@@ -4,8 +4,8 @@
 snapshot (``content/registries.json`` at this revision; ``scripts/seed.py`` keeps them in sync afterwards), so a
 fresh schema is usable before any seed runs. Weekly XP is not stored: standings are derived from ``xp_events``.
 
-Revision ID: p18_community (provisional; renumbered after the Phase 16/17 migrations are integrated)
-Revises: 0009
+Revision ID: 0012
+Revises: 0011
 """
 from __future__ import annotations
 
@@ -16,8 +16,8 @@ import sqlalchemy as sa
 from alembic import op
 from sqlalchemy.dialects import postgresql
 
-revision: str = "p18_community"
-down_revision: str | None = "0009"
+revision: str = "0012"
+down_revision: str | None = "0011"
 branch_labels: str | Sequence[str] | None = None
 depends_on: str | Sequence[str] | None = None
 

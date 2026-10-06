@@ -36,6 +36,7 @@ class Settings(BaseSettings):
 
     database_url: str = "postgresql+asyncpg://qabas@127.0.0.1:5432/qabas_dev"
     test_database_url: str | None = None
+    test_redis_url: str | None = None  # isolated concurrent worktrees; defaults to Redis DB 15 in tests
     redis_url: str = "redis://127.0.0.1:6379/0"
 
     # Auth (rev 10): HMAC pepper for stored token hashes; the previous value is accepted during rotation.
@@ -81,6 +82,15 @@ class Settings(BaseSettings):
     raqeeb_embedding_timeout_seconds: float = Field(default=8, gt=0, le=20)
     stt_provider: str | None = None
     stt_api_key: SecretStr | None = None
+    stt_base_url: str | None = None  # approved OpenAI-compatible hosted transcription service (O-03/O-09)
+    stt_model: str = "whisper-large-v3"
+    raqeeb_input_policy_path: Path = BACKEND_DIR / "content" / "raqeeb_input_policy.yaml"
+    raqeeb_input_timeout_seconds: float = Field(default=10, gt=0, le=30)
+    raqeeb_input_memory_mb: int = Field(default=768, ge=256, le=2048)
+    ffmpeg_path: str = "ffmpeg"
+    raqeeb_memory_ttl_days: int = Field(default=30, ge=1)
+    raqeeb_memory_enabled: bool = True
+    bench_metrics_database_url: SecretStr | None = None  # optional aggregate-only destination; never CLI credentials
     image_provider: str | None = None
     image_api_key: SecretStr | None = None
     tts_provider: str | None = None

@@ -8,6 +8,7 @@ from typing import Any
 
 from app.llm.budget import Ledger
 from app.llm.client import LLMClient
+from app.llm.vision import VisionImage
 from app.raqeeb import policy
 from app.raqeeb import schemas as S
 from app.raqeeb.retrieval import Pool, Tools, retrieve
@@ -23,16 +24,18 @@ class Calls:
     def __init__(self, client: LLMClient, ledger: Ledger, trace: dict[str, Any], save: Save) -> None:
         self.client, self.ledger, self.trace, self.save = client, ledger, trace, save
 
-    async def __call__(self, prompt: str, data: dict[str, Any], *, key: str | None = None) -> dict[str, Any]:
+    async def __call__(self, prompt: str, data: dict[str, Any], *, key: str | None = None,
+                       images: tuple[VisionImage, ...] = ()) -> dict[str, Any]:
         from app.llm.prompts import get_prompt
         identity = get_prompt(prompt).identity()
-        fingerprint = sha256_text(canonical_json({"data": data, "prompt": identity}))
+        fingerprint = sha256_text(canonical_json({"data": data, "prompt": identity,
+                                                 **({"images": [i.sha256 for i in images]} if images else {})}))
         call_key = key or prompt
         previous = self.trace.setdefault("calls", {}).get(call_key)
         if previous is not None and previous["fingerprint"] == fingerprint:
             return copy.deepcopy(previous["output"])
         try:
-            result = await self.client.structured(prompt, data, ledger=self.ledger, call_key=call_key)
+            result = await self.client.structured(prompt, data, ledger=self.ledger, call_key=call_key, images=images)
             self.trace["calls"][call_key] = {"fingerprint": fingerprint, "output": result.data,
                                              "prompt": result.prompt, "model": result.model}
             return result.data
@@ -143,32 +146,53 @@ async def adapt(core: dict[str, Any], calls: Calls, profile: dict[str, Any], *, 
     return adapted
 
 
-async def run(question: str, snapshot: dict[str, Any], calls: Calls, tools: Tools, stage: Stage) -> dict[str, Any]:
+async def run(question: str, snapshot: dict[str, Any], calls: Calls, tools: Tools, stage: Stage, *,
+              reader: Callable[[], Awaitable[dict[str, Any]]] | None = None,
+              memory: Any = None) -> dict[str, Any]:
     language = snapshot["profile"]["language"]
+    # Conversation history keeps understood inputs, but never sends attachment IDs/filenames to models.
+    history = []
+    for turn in snapshot["history"]:
+        understood = turn.get("understood_input") or {}
+        document = understood.get("document")
+        history.append({"role": turn["role"], "text": turn["text"],
+            "classification": turn.get("classification"),
+            "understood_input": {"transcript": understood.get("transcript"),
+                "images": [{k: image[k] for k in ("extracted_text", "description")}
+                           for image in understood.get("images", [])],
+                "document": {"summary": document["summary"]} if document else None}})
     await stage("reading_inputs")
+    inputs: dict[str, Any] = await reader() if reader else {
+                                          "question": question, "material": "", "has_attachments": False,
+                                          "understood_input": {"transcript": None, "images": [], "document": None}}
+    question, material = inputs["question"], inputs["material"]
+    input_text = question + "\n" + material
     await stage("classifying")
-    if policy.matches(question, "sensitive_human"):
+    if policy.matches(input_text, "sensitive_human"):
         classified = S.Classified(question_class="sensitive_human", confidence=1, language=language,
                                   quotes=[], retrieval_queries=[], concept_hint=None, standalone=False,
                                   canonical_question="")
     else:
         classified = S.Classified.model_validate(await calls("raqeeb_classify", {
-            "question": question, "history": snapshot["history"], "context": snapshot["context"],
+            "question": question, "material": material, "history": history, "context": snapshot["context"],
             "language": language}))
-        if policy.matches(question, "personal_fatwa") and (classified.confidence < .6 or
+        if policy.matches(input_text, "personal_fatwa") and (classified.confidence < .6 or
                 classified.question_class not in ("personal_fatwa", "sensitive_human")):
             classified.question_class = "personal_fatwa"
         if classified.confidence < .6 and not classified.standalone:
             for protective in ("sensitive_human", "personal_fatwa"):
-                if any(policy.matches(h["text"], protective) for h in snapshot["history"] if h["role"] == "user"):
+                if any(policy.matches(h["text"], protective) or
+                       (h.get("classification") or {}).get("question_class") == protective or
+                       policy.matches(h["understood_input"].get("transcript") or "", protective) for h in history):
                     classified.question_class = protective
                     break
         # Exact input binding: an injected classifier cannot fabricate quotes for verification or retrieval.
-        if len(classified.quotes) > 10 or any(not q.text.strip() or q.text not in question for q in classified.quotes):
+        if len(classified.quotes) > 10 or any(not q.text.strip() or
+                (q.text not in question and q.text not in material) for q in classified.quotes):
             raise ValueError("classifier quotes do not bind to submitted text")
     category = classified.question_class
     calls.trace["classification"] = classified.model_dump(mode="json")
-    result: dict[str, Any] = {"understood_input": {"transcript": None, "images": [], "document": None},
+    result: dict[str, Any] = {"understood_input": inputs["understood_input"],
         "classification": {"question_class": category, "label": policy.label(category, language)},
         "abstained": True, "blocks": policy.abstention(category, language), "citations": [],
         "terms": {}, "suggested_lessons": [], "feedback": None}
@@ -192,6 +216,21 @@ async def run(question: str, snapshot: dict[str, Any], calls: Calls, tools: Tool
         return value
     if category in ("personal_fatwa", "sensitive_human", "out_of_scope"):
         return finish(result)
+    eligible = classified.standalone and classified.language == language and \
+        not inputs["has_attachments"] and not snapshot["context"] and \
+        category in ("general_knowledge", "text_explanation")
+    if eligible and memory is not None:
+        from app.llm.errors import LLMError
+        try:
+            reused = await memory.reuse(classified, calls, tools, snapshot["profile"],
+                                        question=question, history=history)
+        except LLMError as exc:
+            reused = None
+            calls.trace["memory"] = {"outcome": "check_unavailable", "type": type(exc).__name__}
+        if reused is not None:
+            core, pool = reused
+            result.update(abstained=False, blocks=core["blocks"], citations=core["citations"])
+            return finish(result, pool)
     await stage("retrieving")
     from app.factory.evidence import dump_record, load_record
     retrieval_key = sha256_text(canonical_json({"classified": classified.model_dump(mode="json"),
@@ -212,7 +251,8 @@ async def run(question: str, snapshot: dict[str, Any], calls: Calls, tools: Tool
     await stage("verifying")
     candidates = support_sources(pool, category)
     verified = S.Verified.model_validate(await calls("raqeeb_verify", {
-        "question": question, "sources": [s for s in pool.sources() if s["source_id"] in candidates],
+        "question": question, "material": material,
+        "sources": [s for s in pool.sources() if s["source_id"] in candidates],
         "verification": pool.items})) if candidates else S.Verified(claims=[])
     supported = [c.model_dump(mode="json") for c in verified.claims if c.supported and c.source_ids
                  and not set(c.source_ids) - candidates]
@@ -247,15 +287,16 @@ async def run(question: str, snapshot: dict[str, Any], calls: Calls, tools: Tool
         key = f"answer:{attempt}"
         previous_findings = [] if attempt == 0 else calls.trace.get("guard_findings", [])
         core = S.Core.model_validate(await calls("raqeeb_write", {
-            "question": question, "language": language, "question_class": category,
-            "history": snapshot["history"], "supported_claims": supported,
+            "question": question, "material": material, "language": language, "question_class": category,
+            "history": history, "supported_claims": supported,
             **pool.model_data(), "guard_findings": previous_findings}, key=f"{key}:write"
         )).model_dump(mode="json")
         await stage("adapting")
+        unadapted = copy.deepcopy(core)
         core = await adapt(core, calls, snapshot["profile"], key=key)
         issues = guard(core, pool, category)
         model_guard = S.Guarded.model_validate(await calls("raqeeb_guard", {
-            "question": question, "question_class": category, "answer": core,
+            "question": question, "material": material, "question_class": category, "answer": core,
             "supported_claims": supported, "sources": pool.sources(), "verification": pool.items,
             "canonical_evidence": list(pool.evidence.values())}, key=f"{key}:guard"))
         issues += model_guard.violations
@@ -268,7 +309,9 @@ async def run(question: str, snapshot: dict[str, Any], calls: Calls, tools: Tool
         result.update(abstained=False, blocks=core["blocks"], citations=core["citations"])
         if category == "differing_opinions" or (category == "verification" and any(needs_human(i) for i in pool.items)):
             result["blocks"].append(policy.referral("specialist", language))
-        calls.trace["core"] = copy.deepcopy(core)
+        calls.trace["core"] = unadapted
+        if eligible:
+            calls.trace["memory_eligible"] = True
         return finish(result, pool)
     if category == "verification":
         # Keep valid deterministic cards when optional prose fails; never discard verified grades in favor of guesses.

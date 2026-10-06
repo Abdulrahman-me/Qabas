@@ -239,7 +239,7 @@ def test_cross_user_visibility_and_text_limits(api):
         assert send(api, one, conv, question=question).status_code == 400
     response = api.post(f"/v1/raqeeb/conversations/{conv}/messages", files={"audio": ("x.mp3", b"x")},
                          headers=one | {"Idempotency-Key": str(uuid.uuid4())})
-    assert response.status_code == 400
+    assert response.status_code == 409  # Phase 17 accepts audio; the existing answer still owns admission.
 
 
 async def test_terminal_content_immutable_but_feedback_and_purge_allowed(api, resources):
@@ -267,21 +267,33 @@ async def test_durable_dispatch_contains_only_message_id(api, resources, monkeyp
 
 
 async def test_overall_timeout_cancels_provider_and_terminates(api, resources, monkeypatch):
+    from types import SimpleNamespace
+
     headers = guest(api)
     aid = send(api, headers, start(api, headers)).json()["assistant_message"]["message_id"]
-    monkeypatch.setattr(service, "DEADLINE", .5)
+    deadline = asyncio.timeout(None)
+    durations = []
+    def controlled_timeout(seconds):
+        assert 0 < seconds <= service.DEADLINE
+        durations.append(seconds)
+        return deadline
+    # Arm the real timeout once the provider entered; database setup must not consume a tiny test deadline.
+    monkeypatch.setattr(worker, "asyncio", SimpleNamespace(timeout=controlled_timeout))
     cancelled = asyncio.Event()
 
     class Slow:
         async def structured(self, *args, **kwargs):
             try:
-                await asyncio.sleep(10)
+                deadline.reschedule(asyncio.get_running_loop().time())
+                await asyncio.Event().wait()
             finally:
                 cancelled.set()
 
     assert await worker.process(resources, aid, client=Slow(), tools=Tools()) == "failed"
-    assert cancelled.is_set()
+    assert cancelled.is_set() and len(durations) == 1
     assert api.get(f"/v1/raqeeb/messages/{aid}", headers=headers).json()["status"] == "failed"
+    async with resources.sessionmaker() as db:
+        assert (await db.get(RaqeebMessage, aid)).trace["failure"]["type"] == "TimeoutError"
 
 
 async def test_optional_title_failure_preserves_safe_answer(api, resources):

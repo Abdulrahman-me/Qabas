@@ -36,12 +36,24 @@ jobs:
       - uses: astral-sh/setup-uv@v6
 
       # Native services on the runner (no Docker, D-03).
+      - name: Install native pgvector and input decoders (Phase 17)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq postgresql-server-dev-16 build-essential ffmpeg
+          git clone --depth 1 --branch v0.8.3 https://github.com/pgvector/pgvector.git "$RUNNER_TEMP/pgvector"
+          test "$(git -C "$RUNNER_TEMP/pgvector" rev-parse HEAD)" = "586e7515bafe6912c425164d186d56550657c349"
+          # The runner's PGXS references clang-19 without installing it. Native GCC objects are sufficient;
+          # skip optional LLVM JIT bitcode, preserving the real pgvector shared library and SQL extension.
+          make -C "$RUNNER_TEMP/pgvector" PG_CONFIG=/usr/lib/postgresql/16/bin/pg_config with_llvm=no
+          sudo make -C "$RUNNER_TEMP/pgvector" PG_CONFIG=/usr/lib/postgresql/16/bin/pg_config with_llvm=no install
+
       - name: Start PostgreSQL 16
         run: |
           sudo systemctl start postgresql.service
           until pg_isready -h 127.0.0.1; do sleep 1; done
           sudo -u postgres psql -v ON_ERROR_STOP=1 -c "CREATE ROLE qabas LOGIN CREATEDB PASSWORD 'ci-only-password';"
           sudo -u postgres psql -v ON_ERROR_STOP=1 -c "CREATE DATABASE qabas_test OWNER qabas ENCODING 'UTF8' TEMPLATE template0;"
+          sudo -u postgres psql -v ON_ERROR_STOP=1 -d qabas_test -c "CREATE SCHEMA extensions AUTHORIZATION qabas; CREATE EXTENSION vector WITH SCHEMA extensions;"
           for role in qabas_app qabas_worker qabas_readonly; do
             sudo -u postgres psql -v ON_ERROR_STOP=1 -c "CREATE ROLE $role NOLOGIN;"
           done

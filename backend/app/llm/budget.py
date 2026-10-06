@@ -34,6 +34,7 @@ class UsageRecord:
     latency_ms: int
     request_id: str | None = None
     call_key: str | None = None     # caller identity, e.g. "<run_id>:<stage>:<attempt>"
+    pricing_mode: str = "standard"
 
     @property
     def tokens(self) -> int:
@@ -41,6 +42,8 @@ class UsageRecord:
                 + self.cache_read_input_tokens)
 
     def cost_usd(self) -> float | None:
+        if self.pricing_mode == "batch":
+            return None  # Batch pricing/terms are not approved in O-03; never apply assumed discounts.
         policy = load_models().get(self.model)
         prices = policy.price_per_mtok if policy else None
         if prices is None or not prices.complete:

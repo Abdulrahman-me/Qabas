@@ -1,0 +1,19 @@
+schema: qabas.raqeeb_input_policy/1
+status: pending
+approved_by: null
+approved_on: null
+report: null
+# Proposed default only; staging/production intake requires actual O-09 approval.
+attachment_retention_days: 30
+private_storage: null
+learner_disclosure: null
+stt:
+  status: pending
+  provider: null
+  base_url: null
+  model: whisper-large-v3
+  provider_retention: null
+  deletion_responsibilities: null
+  approved_by: null
+  approved_on: null
+  report: null
