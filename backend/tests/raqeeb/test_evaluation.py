@@ -46,7 +46,7 @@ def write_sets(root, *, overlap=False):
 class Driver:
     def __init__(self, cases):
         self.cases = {c.question: c for group in cases.values() for c in group}
-        self.calls, self.warms, self.problem = [], [], None
+        self.calls, self.warms, self.baseline_calls, self.problem = [], [], [], None
 
     def output(self, value):
         blocks = policy.abstention(value.expected_class, value.language) if value.should_abstain else []
@@ -61,6 +61,7 @@ class Driver:
                 "latency_ms": 100, "cost_usd": None}
 
     async def baseline_request(self, value, key):
+        self.baseline_calls.append(key)
         return Request(key, "raqeeb_baseline", {"question": value.question})
 
     async def audit(self, answer, value, *, system="raqeeb"):
@@ -80,6 +81,7 @@ class Batches:
                 "supported": False, "citation_refs": s["citation_refs"]} for s in d["sentences"]]}})
 
     async def run(self, requests, ledger, checkpoints, save, *, retry=True):
+        assert len(requests) <= 100
         if self.failure:
             raise self.failure
         results = {r.key: await self.client.structured(r.prompt, r.data, ledger=ledger, call_key=r.key)
@@ -96,6 +98,11 @@ def identities():
 
 async def test_all_classes_bilingual_cold_warm_resume_exact_report_and_changed_versions(tmp_path):
     values = write_sets(tmp_path)
+    prior_question = values["questions"][0].question
+    dependent = values["questions"][1].model_copy(update={"history": [prior_question]})
+    values["questions"][1] = dependent
+    (tmp_path / "questions.jsonl").write_text("\n".join(c.model_dump_json() for c in values["questions"]),
+                                             encoding="utf-8")
     driver = Driver(values)
     batches = Batches(driver)
     state = engine.State(tmp_path, uuid.uuid4(), synthetic=True)
@@ -104,6 +111,10 @@ async def test_all_classes_bilingual_cold_warm_resume_exact_report_and_changed_v
     assert len(rows) == 68 and len(driver.calls) == 35 and len(driver.warms) == 1
     assert len(report["summaries"]["cold:raqeeb"]["by_class"]) == 8
     assert set(report["summaries"]["cold:raqeeb"]["by_language"]) == {"ar", "en"}
+    baseline = report["scores"][f"cold:baseline_llm:{dependent.id}"]
+    assert baseline["history"][0]["question"] == prior_question
+    assert baseline["history"][0]["answer"] == driver.output(values["questions"][0])
+    assert report["summaries"]["cold:baseline_llm"]["latency_measurement"] == "batch_turnaround"
     assert {ns for _, ns in driver.calls} == {
         uuid.uuid5(uuid.UUID(report["run_id"]), "cold"), uuid.uuid5(uuid.UUID(report["run_id"]), "warm")}
     before = len(batches.client.calls)
@@ -124,6 +135,32 @@ async def test_judge_outage_never_creates_completed_or_perfect_evaluation(tmp_pa
     with pytest.raises(LLMRefusal):
         await engine.run(tmp_path, state, driver, batches, Ledger(200_000), identities())
     assert not (state.root / "judged.json").exists()
+
+
+async def test_prepared_baseline_input_survives_failed_batch_without_retranscription(tmp_path):
+    driver = Driver(write_sets(tmp_path))
+    batches = Batches(driver)
+    batches.failure = LLMRefusal("Synthetic failed batch")
+    run_id = uuid.uuid4()
+    state = engine.State(tmp_path, run_id, synthetic=True)
+    with pytest.raises(LLMRefusal):
+        await engine.run(tmp_path, state, driver, batches, Ledger(200_000), identities())
+    prepared = list(driver.baseline_calls)
+    batches.failure = None
+    state = engine.State(tmp_path, run_id, synthetic=True)
+    await engine.run(tmp_path, state, driver, batches, Ledger(200_000), identities())
+    assert all(driver.baseline_calls.count(key) == 1 for key in prepared)
+
+
+async def test_large_adversarial_set_uses_bounded_batches_without_omitting_cases(tmp_path):
+    values = write_sets(tmp_path)
+    values["adversarial"] = [case(f"neutral_adversarial_{i}", must_not_reuse=True) for i in range(201)]
+    (tmp_path / "adversarial.jsonl").write_text("\n".join(c.model_dump_json() for c in values["adversarial"]),
+                                               encoding="utf-8")
+    driver = Driver(values)
+    state = engine.State(tmp_path, uuid.uuid4(), synthetic=True)
+    report = await engine.run(tmp_path, state, driver, Batches(driver), Ledger(5_000_000), identities())
+    assert len(report["scores"]) == 4 * (len(values["questions"]) + 201)
 
 
 async def test_warming_budget_checkpoints_every_paid_call_before_next_case(tmp_path):

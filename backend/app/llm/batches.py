@@ -13,7 +13,7 @@ from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
 from typing import Any
 
-from app.llm.budget import Ledger
+from app.llm.budget import Ledger, UsageRecord
 from app.llm.client import AnthropicClient, LLMResult, OutputProblem, request_arguments, validate_output
 from app.llm.errors import (
     BudgetExceeded,
@@ -45,7 +45,7 @@ class Batches:
         self.client, self.poll_seconds, self.deadline_seconds = client, poll_seconds, deadline_seconds
 
     async def run(self, requests: list[Request], ledger: Ledger, checkpoints: dict[str, Any],
-                  save: Callable[[], Awaitable[None]], *, retry: bool = True
+                  save: Callable[[], Awaitable[None]], *, retry: bool = True, attempt: int = 1
                   ) -> dict[str, LLMResult | LLMError]:
         if not requests or len(requests) > 200 or len({r.key for r in requests}) != len(requests):
             raise ValueError("batch requires 1-200 unique requests")
@@ -98,7 +98,8 @@ class Batches:
             raise LLMUnavailable("unfinished batch submission requires operator reconciliation")
         if previous.get("state") == "completed":
             # Cached results are private structured outputs, not provider-side prompt caching.
-            return {key: LLMResult(value["data"], (), value["model"], value["prompt"])
+            return {key: LLMResult(value["data"], tuple(UsageRecord(**r) for r in value.get("usage", [])),
+                                  value["model"], value["prompt"])
                     if "data" in value else {"LLMRefusal": LLMRefusal, "LLMTruncated": LLMTruncated,
                         "LLMOutputInvalid": LLMOutputInvalid}.get(value["error"], LLMUnavailable)(value["error"])
                     for key, value in previous["results"].items()}
@@ -122,7 +123,7 @@ class Batches:
                         results[request.key] = LLMUnavailable(f"batch request {item.result.type}")
                         continue
                     response = item.result.message
-                    usage = dataclasses.replace(self.client._record(prompt, response, arguments, 1,
+                    usage = dataclasses.replace(self.client._record(prompt, response, arguments, attempt,
                         started, f"{fingerprint}:{request.key}"), pricing_mode="batch")
                     if not any(r.call_key == usage.call_key and r.request_id == usage.request_id
                                for r in ledger.records):
@@ -162,9 +163,16 @@ class Batches:
         for request in requests:
             results.setdefault(request.key, LLMUnavailable("batch result is missing"))
         if corrections:
-            results.update(await self.run(corrections, ledger, checkpoints, save, retry=False))
+            results.update(await self.run(corrections, ledger, checkpoints, save, retry=False, attempt=2))
+        for key, value in results.items():
+            if isinstance(value, LLMResult):
+                # Include corrective attempts too, without charging replay a second time.
+                usage_for_answer = tuple(r for r in ledger.records if r.call_key and
+                                         r.call_key.partition(":")[2] == key)
+                results[key] = dataclasses.replace(value, usage=usage_for_answer)
         previous["state"], previous["results"] = "completed", {
-            key: {"data": value.data, "model": value.model, "prompt": value.prompt}
+            key: {"data": value.data, "model": value.model, "prompt": value.prompt,
+                  "usage": [dataclasses.asdict(r) for r in value.usage]}
                  if isinstance(value, LLMResult) else {"error": type(value).__name__}
             for key, value in results.items()}
         await save()

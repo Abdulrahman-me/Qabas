@@ -69,3 +69,16 @@ async def test_run_budget_limits_actual_worker_calls_and_preserves_spent_usage(t
     result = await native.answer(case(), uuid.uuid4(), remaining_tokens=1)
     assert result["error"] == "upstream_unavailable" and len(client.calls) == 1
     assert len(result["usage"]) == 1 and result["usage"][0]["input_tokens"] > 1
+
+
+async def test_native_judge_history_contains_actual_answers_without_private_ids(tmp_path, resources):
+    native = Native(resources, tmp_path, synthetic=True, client_factory=script, tools_factory=Tools,
+                    embedder=Embedder())
+    question = case().model_copy(update={"history": ["A neutral earlier question"]})
+    namespace = uuid.uuid4()
+    result = await native.answer(question, namespace)
+    assert result["error"] is None and len(result["history"]) == 1
+    prior = result["history"][0]
+    assert prior["question"] == question.history[0] and prior["answer"]["blocks"]
+    assert set(prior["answer"]) == {"blocks", "citations", "classification", "abstained"}
+    assert await native.answer(question, namespace) == result

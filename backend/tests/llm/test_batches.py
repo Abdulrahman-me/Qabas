@@ -57,6 +57,8 @@ async def test_batch_out_of_order_checkpoint_recovery_usage_and_unknown_prices(s
     assert all(isinstance(r, LLMResult) for r in results.values())
     replay = await client.run(calls, ledger, checkpoints, save)
     assert replay["second"].data == results["second"].data and len(ledger.records) == 2 and sdk.submissions == 1
+    assert replay["first"].usage == results["first"].usage
+    assert replay["second"].usage == results["second"].usage
 
 
 @pytest.mark.parametrize("stop,expected", [("refusal", LLMRefusal), ("max_tokens", LLMTruncated),
@@ -73,6 +75,16 @@ async def test_batch_invalid_output_has_one_corrective_batch_then_typed_failure(
     sdk = SDK([message("{}"), message("{}")])
     result = await Batches(AnthropicClient(settings, sdk=sdk)).run([request()], Ledger(100_000), {}, save)
     assert isinstance(result["opaque"], LLMOutputInvalid) and sdk.submissions == 2
+
+
+async def test_successful_correction_preserves_both_attempts_and_replay_measurements(settings):
+    sdk = SDK([message("{}"), message('{"verdict":"correct","missing_points":[]}')])
+    batches = Batches(AnthropicClient(settings, sdk=sdk))
+    checkpoints, ledger = {}, Ledger(100_000)
+    first = (await batches.run([request()], ledger, checkpoints, save))["opaque"]
+    assert isinstance(first, LLMResult) and [u.attempt for u in first.usage] == [1, 2]
+    replay = (await batches.run([request()], ledger, checkpoints, save))["opaque"]
+    assert replay == first and len(ledger.records) == 2 and sdk.submissions == 2
 
 
 async def test_crash_after_batch_submission_resumes_without_duplicate_paid_submission(settings):

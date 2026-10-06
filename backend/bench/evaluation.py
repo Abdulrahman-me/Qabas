@@ -71,6 +71,7 @@ class Score(BaseModel):
     reused: bool
     latency_ms: int = Field(ge=0)
     cost_usd: float | None = Field(ge=0, allow_inf_nan=False)
+    history: list[dict[str, Any]] = Field(default_factory=list)
 
 
 def percent(n: int, total: int) -> float:
@@ -109,6 +110,8 @@ def summary(rows: list[Score]) -> dict[str, Any]:
                         for k in sorted({r.case.language for r in rows})},
         "latency_p50_ms": quantile([r.latency_ms for r in rows], .5),
         "latency_p95_ms": quantile([r.latency_ms for r in rows], .95),
+        "latency_measurement": "batch_turnaround" if all(r.system == "baseline_llm" for r in rows)
+                               else "worker_completion",
         "cost_usd": sum(r.cost_usd for r in rows if r.cost_usd is not None)
                     if all(r.cost_usd is not None for r in rows) else None,
         "false_memory_reuse": sum(r.reused and r.case.must_not_reuse for r in rows),

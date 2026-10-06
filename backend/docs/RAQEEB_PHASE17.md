@@ -155,6 +155,11 @@ Credentials never appear as command arguments. Omitting the flag keeps results i
 Source, Raqeeb/model-layer and evaluation code hashes are part of resume identity; changing validators cannot
 silently resume an older reviewed evaluation or reuse an obsolete memory.
 
+Dependent questions receive each system's own actual prior answers; the private judged report preserves that
+context. Prepared baseline transcripts/renditions and batch usage are durable, so recovery does not silently
+re-transcribe a submitted request or erase per-answer measurements. Baseline latency is explicitly batch
+turnaround, whereas Raqeeb latency is worker completion; these are not interchangeable interactive-service SLAs.
+
 `content/raqeeb_release_policy.yaml` records **pending P-05 proposals**: zero fabricated verses/grades,
 100% protective abstention/referral, ≤2% unsupported factual sentences, ≥90% accuracy, ≥80% manual agreement,
 and zero false adversarial memory reuse. Critical cases cannot hide in an average. Actual release requires the

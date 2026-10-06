@@ -1,6 +1,7 @@
 """Resumable cold/warm comparisons, private reports and existing append-only metrics persistence."""
 from __future__ import annotations
 
+import base64
 import json
 import os
 import uuid
@@ -15,6 +16,7 @@ from app.llm.batches import Request
 from app.llm.budget import Ledger, UsageRecord
 from app.llm.client import LLMResult
 from app.llm.errors import BudgetExceeded, LLMError
+from app.llm.vision import VisionImage
 from app.raqeeb import benchmark
 from app.raqeeb.inputs import InputUnreadable
 from app.runtime import Resources
@@ -107,6 +109,33 @@ async def run(root: Path, state: State, driver: Driver, batches: Batch, ledger: 
     scores = state.value["scores"]
     def remaining() -> int | None:
         return None if ledger.budget_tokens is None else ledger.budget_tokens - ledger.tokens
+    async def prepared_baseline(case: Case, key: str) -> Request:
+        prepared = state.value.setdefault("baseline_requests", {})
+        if key not in prepared:
+            request = await driver.baseline_request(case, key)
+            prepared[key] = {"prompt": request.prompt, "data": request.data, "images": [
+                {"data": base64.b64encode(i.data).decode(), "mime": i.mime_type} for i in request.images]}
+            await save()  # decoded/transcribed input remains identical when a submitted batch resumes
+        value = prepared[key]
+        return Request(key, value["prompt"], value["data"], tuple(
+            VisionImage(base64.b64decode(i["data"]), i["mime"]) for i in value["images"]))
+    async def baseline_request(case: Case, key: str) -> Request:
+        history: list[dict[str, Any]] = []
+        for index, question in enumerate(case.history):
+            turn_key = f"{key}:history:{index}"
+            if turn_key not in state.value["answers"]:
+                prior = case.model_copy(update={"question": question, "attachments": None, "history": []})
+                request = await prepared_baseline(prior, turn_key)
+                request = replace(request, data=request.data | {"history": history})
+                outcome = (await batches.run([request], ledger, state.value["batches"], save))[turn_key]
+                if isinstance(outcome, LLMError):
+                    raise outcome
+                state.value["answers"][turn_key] = {"answer": outcome.data}
+                await save()
+            history.append({"question": question, "answer": state.value["answers"][turn_key]["answer"]})
+        request = await prepared_baseline(case, key)
+        state.value.setdefault("baseline_history", {})[key] = history
+        return replace(request, data=request.data | {"history": history})
     for mode in ("cold", "warm"):
         state.value.setdefault("mode_run_at", {}).setdefault(mode, datetime.now(UTC).isoformat())
         namespace = uuid.uuid5(uuid.UUID(state.value["run_id"]), mode)
@@ -126,7 +155,7 @@ async def run(root: Path, state: State, driver: Driver, batches: Batch, ledger: 
                 warm_jobs = []
                 for case in sets["warm"]:
                     try:
-                        warm_jobs.append(await driver.baseline_request(case, f"warming:baseline:{case.id}"))
+                        warm_jobs.append(await baseline_request(case, f"warming:baseline:{case.id}"))
                     except (InputUnreadable, ApiError, LLMError):
                         continue
                 for index in range(0, len(warm_jobs), 100):
@@ -152,14 +181,16 @@ async def run(root: Path, state: State, driver: Driver, batches: Batch, ledger: 
             baseline_key = f"{mode}:baseline_llm:{case.id}"
             if baseline_key not in state.value["answers"]:
                 try:
-                    jobs.append(await driver.baseline_request(case, baseline_key))
+                    jobs.append(await baseline_request(case, baseline_key))
                 except (InputUnreadable, ApiError, LLMError) as exc:
                     state.value["answers"][baseline_key] = {"answer": {}, "error": exc.code.value
                         if isinstance(exc, ApiError) else "input_unreadable" if isinstance(exc, InputUnreadable)
                         else type(exc).__name__, "latency_ms": 0, "cost_usd": None, "reused": False}
                     await save()
         if jobs:
-            outcomes = await batches.run(jobs, ledger, state.value["batches"], save)
+            outcomes: dict[str, LLMResult | LLMError] = {}
+            for index in range(0, len(jobs), 100):
+                outcomes.update(await batches.run(jobs[index:index + 100], ledger, state.value["batches"], save))
             for key, result in outcomes.items():
                 state.value["answers"][key] = ({"answer": result.data, "error": None,
                     "latency_ms": sum(u.latency_ms for u in result.usage), "cost_usd": None, "reused": False}
@@ -173,6 +204,8 @@ async def run(root: Path, state: State, driver: Driver, batches: Batch, ledger: 
                     continue
                 value = state.value["answers"][key]
                 answer = value["answer"]
+                history = value.get("history", []) if system == "raqeeb" else \
+                    state.value.get("baseline_history", {}).get(key, [])
                 findings, sources = await driver.audit(answer, case, system=system) \
                     if value["error"] is None else ([], [])
                 actual_class = answer.get("classification", {}).get("question_class", answer.get("question_class"))
@@ -181,7 +214,7 @@ async def run(root: Path, state: State, driver: Driver, batches: Batch, ledger: 
                 inventory = audit.inventory(answer)
                 requests = [Request(key + ":judge", "raqeeb_judge", {
                     "question": case.question, "language": case.language, "gold_points": case.gold_points,
-                    "history": case.history,
+                    "history": history or case.history,
                     "understood_input": audit.understood(answer),
                     "gold_refs": case.gold_refs, "expected_class": case.expected_class,
                     "should_abstain": case.should_abstain, "expected_referral_type": case.expected_referral_type,
@@ -222,7 +255,8 @@ async def run(root: Path, state: State, driver: Driver, batches: Batch, ledger: 
                     answer_sha256=sha256_text(canonical_json(answer)), judge=verdict,
                     factual_sentences=factual, unsupported_sentences=unsupported, source_issues=findings,
                     error=value["error"], reused=value["reused"], latency_ms=value["latency_ms"],
-                    cost_usd=value["cost_usd"])
+                    cost_usd=value["cost_usd"], history=value.get("history", []) if system == "raqeeb" else
+                        state.value.get("baseline_history", {}).get(key, []))
                 scores[key] = score.model_dump(mode="json")
                 await save()
     rows = [evaluation.Score.model_validate(v) for v in scores.values()]

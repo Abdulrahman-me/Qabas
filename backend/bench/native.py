@@ -130,11 +130,19 @@ class Native:
             async with resources.sessionmaker() as db:
                 row = await db.get(RaqeebMessage, aid)
                 assert row is not None
+                prior_rows = list((await db.execute(select(RaqeebMessage).where(
+                    RaqeebMessage.conversation_id == conv_id, RaqeebMessage.role == "assistant")
+                    .order_by(RaqeebMessage.created_at))).scalars())[:len(case.history)]
+                history = [{"question": question, "answer": {k: v for k, v in
+                    service.project_message(prior_row).items() if k in ("blocks", "citations", "classification",
+                                                                       "abstained")}}
+                    for question, prior_row in zip(case.history, prior_rows, strict=True)]
                 costs = row.trace.get("cost", {})
                 return {"answer": service.project_message(row), "error": row.error["code"] if row.error else None,
                     "latency_ms": round(((row.completed_at or row.created_at) - row.created_at).total_seconds() * 1000),
                     "cost_usd": None if row.trace.get("speech") else costs.get("usd"),
-                    "reused": row.trace.get("memory", {}).get("outcome") == "reused", "usage": usage}
+                    "reused": row.trace.get("memory", {}).get("outcome") == "reused", "usage": usage,
+                    "history": history}
         except (ApiError, LLMError, inputs.InputUnreadable) as exc:
             return {"answer": {}, "error": exc.code.value if isinstance(exc, ApiError) else
                 "input_unreadable" if isinstance(exc, inputs.InputUnreadable) else type(exc).__name__,
