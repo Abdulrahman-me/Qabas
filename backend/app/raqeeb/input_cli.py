@@ -136,10 +136,11 @@ def decode(value: dict[str, Any]) -> dict[str, Any]:
         with zipfile.ZipFile(io.BytesIO(data)) as archive:
             entries = archive.infolist()
             if len(entries) > 2000 or sum(e.file_size for e in entries) > 50 * 1024**2 or any(
-                    e.flag_bits & 1 or e.filename.endswith("vbaProject.bin") for e in entries):
+                    e.flag_bits & 1 or e.filename.lower().endswith("vbaproject.bin") for e in entries):
                 raise ValueError("encrypted/macro/expanded DOCX")
             content_types = archive.read("[Content_Types].xml")
-            if b"macroEnabled" in content_types or "word/document.xml" not in archive.namelist():
+            if b"macroenabled" in content_types.lower() or b"vbaproject" in content_types.lower() or \
+                    "word/document.xml" not in archive.namelist():
                 raise ValueError("not plain DOCX")
         document = Document(io.BytesIO(data))
         text = "\n".join(p.text for p in document.paragraphs)

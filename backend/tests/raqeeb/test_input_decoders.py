@@ -70,6 +70,19 @@ async def test_encrypted_pdf_and_macro_docx_are_rejected_before_models(settings)
     with pytest.raises(inputs.InputUnreadable):
         await inputs.decode(settings, "document",
             "application/vnd.openxmlformats-officedocument.wordprocessingml.document", buffer.getvalue())
+    for marker, content_type in (("VbaPROJECT.bin", None), ("renamed.bin", "application/vnd.ms-office.vbaProject")):
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(io.BytesIO(docx())) as original, zipfile.ZipFile(buffer, "w") as archive:
+            for part in original.infolist():
+                body = original.read(part.filename)
+                if content_type and part.filename == "[Content_Types].xml":
+                    body = body.replace(b"</Types>", f'<Override PartName="/word/{marker}" '
+                        f'ContentType="{content_type}"/></Types>'.encode())
+                archive.writestr(part, body)
+            archive.writestr(f"word/{marker}", b"neutral macro marker")
+        with pytest.raises(inputs.InputUnreadable):
+            await inputs.decode(settings, "document",
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document", buffer.getvalue())
 
 
 async def test_docx_material_truncates_at_30000_and_native_timeout_is_unreadable(settings):

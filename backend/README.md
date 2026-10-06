@@ -10,7 +10,7 @@ Native Windows development; no Docker (decision D-03 in [IMPLEMENTATION_PHASES.m
 | uv | 0.12.23 | `winget install astral-sh.uv` |
 | PostgreSQL | 16.14 | Windows service `postgresql-x64-16`, `C:\Program Files\PostgreSQL\16`, port 5432 |
 | Redis | 7.4.11 | Native Windows build (`redis-windows/redis-windows`, msys2) in `%LOCALAPPDATA%\Programs\Redis`, config `redis.local.conf` (127.0.0.1:6379) |
-| ffmpeg | 9.0.2 | `winget install Gyan.FFmpeg` (tooling only; the asr worker decodes with PyAV's bundled FFmpeg libraries) |
+| ffmpeg | 9.0.2 | `winget install Gyan.FFmpeg` (Phase 17 input workers use the CLI; recitation workers use PyAV's bundled FFmpeg libraries) |
 | Node.js | 22.x | Pre-installed; used later for the native Dorar sidecar (Phase 9) |
 | pgvector | 0.8.3 | Required from Phase 17, native PostgreSQL 16 extension in `extensions`; administrator setup in [RAQEEB_PHASE17.md](docs/RAQEEB_PHASE17.md) (D-174 supersedes D-05's deferral) |
 

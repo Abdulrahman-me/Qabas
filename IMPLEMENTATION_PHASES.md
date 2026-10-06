@@ -761,6 +761,7 @@ Engineering-complete under D-163; no live provider acceptance, real private benc
 | F-168 | Warm-up and crashed batch results can consume paid tokens before an evaluation budget exception is durable. | Per-case warm checkpoints, all paid usage preserved before raising, batch ID/result correlation and operator reconciliation for ambiguous submission (D-179). |
 | F-169 | Ubuntu runner PostgreSQL PGXS references unavailable clang-19, so native pgvector installation stopped before any tests. | Compile/install the same pinned extension's GCC shared library with optional LLVM bitcode disabled; no vector functionality or tests removed. CI rerun pending. |
 | F-170 | Linux typing reached a Windows-only ctypes WinDLL branch guarded by os.name; local Windows typing had passed. | Use a platform guard understood by strict mypy, and validate both Linux and Windows configurations. No type suppression or resource-limit bypass. |
+| F-171 | A DOCX macro marker can use a differently cased filename or a renamed binary part with a VBA content type. | Reject case-insensitive VBA names and macro/VBA content types before paragraph extraction; encrypted and renamed/cased macro fixtures are tested. |
 
 ---
 
