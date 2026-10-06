@@ -1,0 +1,1212 @@
+{
+  "session_id": "ses_mock_u0_l4_ar_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l4",
+  "lesson_version": 1,
+  "title": "كيف يكون الخالق؟",
+  "subtitle": "فكّر في السبب، وحدّد حدود النتيجة.",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "افهم لماذا يجب أن يكون التفسير النهائي لوجود المعتمدات غير معتمد عليها، وحدّد حدود تشبيه الخالق بالمخلوقات."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l04_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "تخيّل سوقاً ليلياً، وبائعاً يريد إضاءة صف من المصابيح قبل وصول الزوّار."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "ينقل الشعلة من مصباح مضاء إلى مصباح آخر، ثم يواصل على طول الصف."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "إذا أخذ كل مصباح شعلته من غيره، فما السؤال الذي بقي عن أصل الشعلة؟"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l04_lantern_market",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+          "mime_type": "application/json",
+          "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_76f20ad9e8_574148c8238ddc91986b92a3829ae2c4b8f5b2ee46dd3c4d68e2eab5914bd617.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "مصابيح معلّقة في سوق ليلي وبائع بلا ملامح؛ بعض الضوء خافت.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_u0_l04_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي جواب ستسأل عنه أكثر؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أخذها من المصباح قبله."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أريد معرفة ما أضاء الصف أصلاً."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "لم تتضح لي المقارنة."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "تابع مصدر الشعلة، وافصل سؤال المصباح الواحد عن سؤال الصف كله."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l04_03",
+      "type": "story",
+      "label": "موقف",
+      "title": "يمرّر الشعلة",
+      "origin": null,
+      "provenance": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l04_005",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يريد البائع أن تكون آخر زاوية مضاءة، فيشعل المصباح الأخير من سابقه."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 0
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l04_lantern_market",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+              "mime_type": "application/json",
+              "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_76f20ad9e8_574148c8238ddc91986b92a3829ae2c4b8f5b2ee46dd3c4d68e2eab5914bd617.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 0
+            },
+            "alt": "صف مصابيح معلّقة فوق سوق ليلي.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l04_006",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يسأله زائر عن مصدر هذه الشعلة؛ فيشير إلى المصباح السابق."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l04_007",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يتابع الزائر السؤال، فيظهر أن المصباح السابق أخذها أيضاً من غيره."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l04_lantern_market",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+              "mime_type": "application/json",
+              "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_cd92849bcd_9ed96c613c565cb4d379c1a065108f1cdc145b70cad89ab9d2744dc25c41226f.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "مصباحان مضاءان بين مصابيح السوق.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l04_008",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يعود البائع إلى مصباح أشعله أولاً باستخدام أداة إشعال."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l04_009",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "صار للصف تفسير عملي في الموقف: بداية إشعال، ثم انتقال بين المصابيح."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l04_lantern_market",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+              "mime_type": "application/json",
+              "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_fcb38353b5_b3f538a4e7418d41c76024bce6bc29cad63a6a8487d3a854aada2a03977264bc.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "ثلاثة مصابيح في ضوء دافئ فوق السوق.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_4",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l04_010",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يدرك الزائر أن «من المصباح السابق» يشرح انتقالاً، ولا يشرح وحده بداية الإضاءة."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l04_011",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كما يدرك أن أداة الإشعال نفسها شيء عادي يمكن السؤال عن مصدره."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l04_lantern_market",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+              "mime_type": "application/json",
+              "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_19cf76ac47_bcd9bbd798ced567021461a8894628c49e244717071025fb24e02f3da8688f48.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "صف مصابيح مضاء في سوق ليلي هادئ.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l04_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "ما الذي شرحه جواب «أخذها من المصباح السابق»؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "صفات الخالق كلها."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كيف انتقلت شعلة إلى هذا المصباح."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أن المصباح الأول لم يحتج شيئاً."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l04_05",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ما الذي نحمله من الصورة؟"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l04_lantern_market",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+          "mime_type": "application/json",
+          "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_76f20ad9e8_574148c8238ddc91986b92a3829ae2c4b8f5b2ee46dd3c4d68e2eab5914bd617.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "مصابيح مضاءة بضوء ذهبي فوق طريق السوق.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l04_013",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الفكرة هي الاعتماد: شيء يحصل على ما يحتاجه من شيء آخر."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l04_014",
+            "spans": [
+              {
+                "type": "text",
+                "text": "نقل الشعلة يشرح وصولها إلى مصباح؛ المصابيح في الموقف ليست مصدر إشعال مستقل."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l04_015",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لكن كل مصباح وأداة ووقود أشياء في المشهد؛ لا يمثل أي منها الخالق."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 2
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l04_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "المقارنة توضّح سؤال الاعتماد فقط؛ لا تجعل الخالق نوراً أو لهباً أو شيئاً داخل السوق."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 3
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_06",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l04_02",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي جزء تجاوز حدود المقارنة؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "المصابيح هنا أخذت شعلتها من غيرها."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "نستخدم هذا لنفهم سؤال الاعتماد."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إذن الخالق يحتاج إلى وقود مثل المصابيح."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l04_07",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "من مثال إلى سؤال أوسع"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l04_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "افترض أن ما يعتمد على غيره في وجوده يحتاج إلى تفسير، وأننا نطلب تفسيراً كاملاً لهذا الاعتماد."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l04_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إضافة شيء آخر يعتمد بالطريقة نفسها تنقل السؤال إليه، ولا تنهيه."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l04_020",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إذا كان التفسير النهائي يعتمد على الأشياء التي يفسّرها، بقي الاعتماد الذي أردنا تفسيره."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l04_021",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ضمن هذا الاستدلال، يجب أن يكون الأساس الذي ينهي السؤال غير محتاج إليها ليكون موجوداً."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l04_022",
+            "spans": [
+              {
+                "type": "text",
+                "text": "نسأل هنا عن تفسير الاعتماد، لا فقط عن أول حدث في تسلسل زمني."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_08",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l04_03",
+        "type": "match_pairs",
+        "concept_ids": [
+          "con_u0_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "صل السؤال بما يطابقه."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "left": [
+            {
+              "item_id": "l_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تفسير حلقة واحدة"
+                }
+              ]
+            },
+            {
+              "item_id": "l_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تفسير نهائي للاعتماد"
+                }
+              ]
+            },
+            {
+              "item_id": "l_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "حدّ المقارنة"
+                }
+              ]
+            }
+          ],
+          "right": [
+            {
+              "item_id": "r_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لا ننقل شكل المصباح إلى الخالق."
+                }
+              ]
+            },
+            {
+              "item_id": "r_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "هذا المصباح أخذ الشعلة من سابقه."
+                }
+              ]
+            },
+            {
+              "item_id": "r_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لا يعتمد على الأشياء التي يفسّر وجودها."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l04_09",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "ما الفكرة التي تريد التفكير فيها أكثر؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "هل كل اعتماد يحتاج تفسيراً كاملاً؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "هل إضافة معتمد آخر تحل السؤال؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "كيف نحافظ على حدود التشبيه؟"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "هذه أسئلة عن أسباب الحجة؛ فهمها لا يتطلب منك إعلان موافقتك عليها."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l04_10",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "«من أوجد الخالق؟»"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l04_025",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ليس الاستدلال هنا «كل شيء يحتاج من يوجده» ثم إعفاء الخالق من العبارة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l04_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "نقطة البداية المحدّدة هي الأشياء التي تعتمد على غيرها؛ نسأل عن تفسير هذا الاعتماد."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l04_027",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إن سمّيت شيئاً محتاجاً إلى غيره «خالقاً»، لم تجعله بذلك التفسير النهائي الذي نبحث عنه."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l04_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "وإن كان الأساس غير معتمد حقاً، فسؤال مصدر اعتماده يفترض فيه ما ينفيه هذا الوصف."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l04_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يبقى إثبات وجود هذا الأساس وفحص شروط الحجة عملاً مطلوباً؛ الاسم وحده لا يكفي."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l04_04",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي جواب يوضح الاستدلال بأمانة؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كل شيء له خالق، إلا ما نختاره بلا سبب."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إذا سمّينا المصباح خالقاً فقد أثبتنا استقلاله."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إن احتاج الاعتماد لتفسير نهائي، فلا ينهيه شيء يعتمد بالطريقة نفسها."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l04_12",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "صفات بقدر الاستدلال"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l04_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لو وُجد خالق مستقل يفسّر هذه الموجودات، فلا يكون محتاجاً إليها ليستمد وجوده."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l04_032",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ويجب أن تكون له قدرة كافية لما ننسب إليه إيجاده؛ وإلا لم يؤدّ دور التفسير."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l04_033",
+            "spans": [
+              {
+                "type": "text",
+                "text": "هذه خطوة محدّدة؛ لا نستخرج منها وحدها اسماً، أو هيئة، أو رسالة، أو كل صفات الخالق."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l04_034",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إطالة الصف، أو قول «هو بلا نهاية»، لا تكفي وحدها لإثبات الجواب أو نفيه."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l04_035",
+            "spans": [
+              {
+                "type": "text",
+                "text": "السؤال المطروح يظل: هل فُسّر الاعتماد، أم نُقل فقط إلى اعتماد آخر؟"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_13",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ماذا تحمل إلى الدرس التالي؟"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l04_036",
+            "spans": [
+              {
+                "type": "text",
+                "text": "حدّد أن الاستدلال مشروط بطلب تفسير كامل للأشياء المعتمدة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l04_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ميّز الأساس غير المعتمد عن حلقة إضافية تعتمد مثل سابقاتها."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l04_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "خذ علاقة الاعتماد من المثال، واترك شكل المصابيح ومادتها في السوق."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "اختر شيئاً عادياً يحتاج إلى غيره، ثم افصل سؤال سبب مباشر عن سؤال تفسير اعتماده."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l4_topic_1",
+        "title": "خالق غير معتمد",
+        "concept_ids": [
+          "con_u0_independent_creator"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "هل تستطيع شرح شرط الاستقلال في الحجة، دون تحويل المصابيح إلى وصف للخالق؟"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_independence": {
+      "term_id": "term_independence",
+      "text": "عدم الاعتماد",
+      "arabic": "عدم الاعتماد",
+      "transliteration": "adam al-itimad",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "ألا يحتاج الشيء إلى غيره ليكون موجوداً؛ وهو غير القدرة على العمل منفرداً."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "السؤال عن أصل النور المستعار يختلف عن السؤال عن عدد المصابيح."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l4",
+      "lesson_title": "كيف يكون الخالق؟"
+    }
+  },
+  "answers": []
+}

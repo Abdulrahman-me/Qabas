@@ -31,6 +31,8 @@ final class JourneyState extends Equatable {
     this.softLock,
     this.lessonToOpen,
     this.openReview = false,
+    this.downloadBannerDismissed = false,
+    this.openAndroidDownload = false,
     this.actionSerial = 0,
   });
   final JourneyStatus status;
@@ -38,7 +40,7 @@ final class JourneyState extends Equatable {
   final NextStep? nextStep;
   final Stats? stats;
   final String? selectedLessonId, lessonToOpen, selectedUnitId, unitToOpen, pretestUnitToOpen;
-  final bool refreshing, openReview;
+  final bool refreshing, openReview, downloadBannerDismissed, openAndroidDownload;
   final Failure? failure;
   final SoftLock? softLock;
   final int actionSerial;
@@ -58,6 +60,8 @@ final class JourneyState extends Equatable {
     SoftLock? softLock,
     String? lessonToOpen,
     bool openReview = false,
+    bool? downloadBannerDismissed,
+    bool openAndroidDownload = false,
     int? actionSerial,
   }) => JourneyState(
     status: status ?? this.status,
@@ -73,6 +77,8 @@ final class JourneyState extends Equatable {
     softLock: softLock,
     lessonToOpen: lessonToOpen,
     openReview: openReview,
+    downloadBannerDismissed: downloadBannerDismissed ?? this.downloadBannerDismissed,
+    openAndroidDownload: openAndroidDownload,
     actionSerial: actionSerial ?? this.actionSerial,
   );
   @override
@@ -90,12 +96,22 @@ final class JourneyState extends Equatable {
     softLock,
     lessonToOpen,
     openReview,
+    downloadBannerDismissed,
+    openAndroidDownload,
     actionSerial,
   ];
 }
 
 sealed class JourneyEvent {
   const JourneyEvent();
+}
+
+final class AndroidDownloadOpened extends JourneyEvent {
+  const AndroidDownloadOpened();
+}
+
+final class DownloadBannerDismissed extends JourneyEvent {
+  const DownloadBannerDismissed();
 }
 
 final class JourneyOpened extends JourneyEvent {
@@ -161,6 +177,8 @@ final class JourneyBloc extends Bloc<JourneyEvent, JourneyState> {
     required this.resolveLock,
     required AppEventBus events,
   }) : super(const JourneyState()) {
+    on<AndroidDownloadOpened>((_, emit) => emit(state.copyWith(openAndroidDownload: true, actionSerial: state.actionSerial + 1)));
+    on<DownloadBannerDismissed>((_, emit) => emit(state.copyWith(downloadBannerDismissed: true)));
     on<JourneyOpened>((_, emit) => _load(emit, refresh: false));
     on<JourneyRefreshed>((_, emit) => _load(emit, refresh: true), transformer: restartable());
     on<NodePicked>((event, emit) {

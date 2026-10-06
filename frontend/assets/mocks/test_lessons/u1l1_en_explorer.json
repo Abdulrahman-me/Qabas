@@ -1,0 +1,1028 @@
+{
+ "session_id": "ses_test_u1l1_en_explorer",
+ "kind": "lesson",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": "unit_1",
+ "lesson_id": "les_u1_l1",
+ "lesson_version": null,
+ "title": "What Does Islam Mean?",
+ "subtitle": "Understanding the first step into Islam",
+ "lesson_type": "concept",
+ "reviewed_by": null,
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "Explain what Muslims mean by Islam, and what makes it more than a word or a belonging."
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 6,
+  "exercises": 4,
+  "scored": 4
+ },
+ "source_count": 0,
+ "total_exercises": 4,
+ "answered_exercises": 0,
+ "started_at": "2026-10-03T10:00:00Z",
+ "items": [
+  {
+   "block_id": "blk_u1l1_hook",
+   "type": "hook",
+   "situation": [
+    {
+     "type": "text",
+     "text": "In the Islamic art gallery of a museum, a visitor says to her companion: “Islam is the religion of the Arabs, isn’t it?” He answers: “No, it’s an identity you’re born into, like a family name.”"
+    }
+   ],
+   "question": [
+    {
+     "type": "text",
+     "text": "So what is Islam, really?"
+    }
+   ],
+   "visual": {
+    "kind": "image",
+    "key": null,
+    "version": null,
+    "params": null,
+    "image": {
+     "url": "https://cdn.example.com/test/u1l1/museum_gallery.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "scene": null,
+    "fallback_image": null,
+    "fallback_params": null,
+    "alt": "A museum gallery with geometric tilework and lamps, without lettering or people",
+    "overlays": []
+   },
+   "cta": null
+  },
+  {
+   "block_id": "blk_u1l1_predict",
+   "type": "predict",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Which of these answers seems closest to you?"
+    }
+   ],
+   "options": [
+    {
+     "option_id": "prd_a",
+     "spans": [
+      {
+       "type": "text",
+       "text": "One people's religion"
+      }
+     ]
+    },
+    {
+     "option_id": "prd_b",
+     "spans": [
+      {
+       "type": "text",
+       "text": "An identity inherited from your family"
+      }
+     ]
+    },
+    {
+     "option_id": "prd_c",
+     "spans": [
+      {
+       "type": "text",
+       "text": "A relationship between a person and God"
+      }
+     ]
+    }
+   ],
+   "reveal": [
+    {
+     "type": "text",
+     "text": "We will come back to these answers after starting from the word itself."
+    }
+   ],
+   "visual": null
+  },
+  {
+   "block_id": "blk_u1l1_word",
+   "type": "teach",
+   "eyebrow": "Where the word comes from",
+   "title": [
+    {
+     "type": "text",
+     "text": "A word with a meaning"
+    }
+   ],
+   "style": "standard",
+   "visual": null,
+   "evidence": null,
+   "points": [
+    {
+     "point_id": "pt_u1l1_1",
+     "sentence": {
+      "sentence_id": "sen_u1l1_01",
+      "spans": [
+       {
+        "type": "term",
+        "text": "“Islam”",
+        "term_id": "term_islam"
+       },
+       {
+        "type": "text",
+        "text": " is an Arabic word from the verb aslama, which means to submit and yield."
+       }
+      ],
+      "source_ids": [
+       "src_tafsir_islam_meaning"
+      ]
+     },
+     "visual_params": null
+    },
+    {
+     "point_id": "pt_u1l1_2",
+     "sentence": {
+      "sentence_id": "sen_u1l1_02",
+      "spans": [
+       {
+        "type": "text",
+        "text": "But the root of the word is where the answer begins, not the whole answer."
+       }
+      ],
+      "source_ids": []
+     },
+     "visual_params": null
+    }
+   ]
+  },
+  {
+   "block_id": "blk_u1l1_boundaries",
+   "type": "teach",
+   "eyebrow": "What it is not",
+   "title": [
+    {
+     "type": "text",
+     "text": "Not a belonging, and not a compulsion"
+    }
+   ],
+   "style": "standard",
+   "visual": null,
+   "evidence": null,
+   "points": [
+    {
+     "point_id": "pt_u1l1_3",
+     "sentence": {
+      "sentence_id": "sen_u1l1_03",
+      "spans": [
+       {
+        "type": "text",
+        "text": "The name describes a relationship with God, not a people or a country."
+       }
+      ],
+      "source_ids": [
+       "src_tafsir_islam_meaning"
+      ]
+     },
+     "visual_params": null
+    },
+    {
+     "point_id": "pt_u1l1_4",
+     "sentence": {
+      "sentence_id": "sen_u1l1_04",
+      "spans": [
+       {
+        "type": "text",
+        "text": "And this submission is willing: the Qur’an states that there is no compulsion in religion."
+       }
+      ],
+      "source_ids": [
+       "src_q_2_256"
+      ]
+     },
+     "visual_params": null
+    }
+   ]
+  },
+  {
+   "block_id": "blk_u1l1_x1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_u1l1_01",
+    "type": "true_false_reason",
+    "concept_ids": [
+     "con_islam_meaning"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Is the statement true, given the meaning of the word? Choose the answer and the reason."
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": {
+     "kind": "myth",
+     "statement": [
+      {
+       "type": "text",
+       "text": "Islam is the religion of one particular people."
+      }
+     ]
+    },
+    "payload": {
+     "statement": [
+      {
+       "type": "text",
+       "text": "“Islam” is the name of one particular people's religion."
+      }
+     ],
+     "reasons": [
+      {
+       "option_id": "rsn_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Because the word describes a relationship with God, not belonging to a people"
+        }
+       ]
+      },
+      {
+       "option_id": "rsn_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Because the word isn't Arabic"
+        }
+       ]
+      },
+      {
+       "option_id": "rsn_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Because Islam is the name of a book"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "blk_u1l1_story",
+   "type": "story",
+   "label": "A story from the Qur’an",
+   "title": "Ibrahim's answer",
+   "provenance": {
+    "source_id": "src_q_2_130_132",
+    "provider": "quran_com",
+    "reference": "Al-Baqarah 2:130–132",
+    "grade_label": null
+   },
+   "beats": [
+    {
+     "beat_id": "beat_u1l1_0",
+     "beat_index": 0,
+     "narration_audio_url": null,
+     "quote": null,
+     "quote_meaning": null,
+     "visual": {
+      "kind": "image",
+      "key": null,
+      "version": null,
+      "params": null,
+      "image": {
+       "url": "https://cdn.example.com/test/u1l1/desert_dawn.webp",
+       "mime_type": "image/webp",
+       "width": 1600,
+       "height": 1000
+      },
+      "scene": null,
+      "fallback_image": null,
+      "fallback_params": null,
+      "alt": "A desert at dawn with a single tent, and no people",
+      "overlays": []
+     },
+     "narration": [
+      {
+       "sentence_id": "sen_u1l1_05",
+       "spans": [
+        {
+         "type": "text",
+         "text": "The Qur’an tells that God called Ibrahim (peace be upon him) to submit, and he answered that he had submitted to the Lord of all the worlds."
+        }
+       ],
+       "source_ids": [
+        "src_q_2_130_132"
+       ]
+      }
+     ]
+    },
+    {
+     "beat_id": "beat_u1l1_1",
+     "beat_index": 1,
+     "narration_audio_url": null,
+     "quote": null,
+     "quote_meaning": null,
+     "visual": {
+      "kind": "image",
+      "key": null,
+      "version": null,
+      "params": null,
+      "image": {
+       "url": "https://cdn.example.com/test/u1l1/desert_dawn.webp",
+       "mime_type": "image/webp",
+       "width": 1600,
+       "height": 1000
+      },
+      "scene": null,
+      "fallback_image": null,
+      "fallback_params": null,
+      "alt": "A desert at dawn with a single tent, and no people",
+      "overlays": []
+     },
+     "narration": [
+      {
+       "sentence_id": "sen_u1l1_06",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Then Ibrahim urged his sons to keep to this way — and so did Yaqub — until the end of their lives."
+        }
+       ],
+       "source_ids": [
+        "src_q_2_130_132"
+       ]
+      }
+     ]
+    }
+   ],
+   "origin": {
+    "title": "Where does this story come from?",
+    "source_ids": [
+     "src_q_2_130_132"
+    ],
+    "show_card": false
+   }
+  },
+  {
+   "block_id": "blk_u1l1_deeper",
+   "type": "teach",
+   "eyebrow": "Deeper than words",
+   "title": [
+    {
+     "type": "text",
+     "text": "Turning the whole of life toward God"
+    }
+   ],
+   "style": "standard",
+   "visual": null,
+   "evidence": null,
+   "points": [
+    {
+     "point_id": "pt_u1l1_5",
+     "sentence": {
+      "sentence_id": "sen_u1l1_07",
+      "spans": [
+       {
+        "type": "text",
+        "text": "The Qur’an describes this submission as a person’s prayer and worship — indeed their life and death — being for God, the Lord of all the worlds."
+       }
+      ],
+      "source_ids": [
+       "src_q_6_162_163"
+      ]
+     },
+     "visual_params": null
+    },
+    {
+     "point_id": "pt_u1l1_6",
+     "sentence": {
+      "sentence_id": "sen_u1l1_08",
+      "spans": [
+       {
+        "type": "text",
+        "text": "The Qur’an pairs submitting oneself to God with doing good; so Islam is not just a word that is said."
+       }
+      ],
+      "source_ids": [
+       "src_q_2_112"
+      ]
+     },
+     "visual_params": null
+    },
+    {
+     "point_id": "pt_u1l1_7",
+     "sentence": {
+      "sentence_id": "sen_u1l1_09",
+      "spans": [
+       {
+        "type": "text",
+        "text": "The Qur’an links Islam with trusting God, relying on Him in one’s heart."
+       }
+      ],
+      "source_ids": [
+       "src_q_10_84"
+      ]
+     },
+     "visual_params": null
+    },
+    {
+     "point_id": "pt_u1l1_8",
+     "sentence": {
+      "sentence_id": "sen_u1l1_10",
+      "spans": [
+       {
+        "type": "text",
+        "text": "So for Muslims, Islam is a relationship in which the whole person turns to God: worshipping Him alone, obeying Him, trusting Him and following His guidance."
+       }
+      ],
+      "source_ids": [
+       "src_tafsir_islam_meaning",
+       "src_q_10_84"
+      ]
+     },
+     "visual_params": null
+    }
+   ]
+  },
+  {
+   "block_id": "blk_u1l1_x2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_u1l1_02",
+    "type": "categorize",
+    "concept_ids": [
+     "con_islam_meaning"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Which of these descriptions express the meaning of Islam as we have seen it, and which are an incomplete idea?"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "buckets",
+     "categories": [
+      {
+       "category_id": "cat_meaning",
+       "label": "Expresses the meaning",
+       "art_key": "compass",
+       "phase": null,
+       "capacity": null
+      },
+      {
+       "category_id": "cat_partial",
+       "label": "An incomplete idea",
+       "art_key": null,
+       "phase": null,
+       "capacity": null
+      }
+     ],
+     "items": [
+      {
+       "item_id": "itm_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "A person turning their whole life toward God"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Repeating a phrase that changes nothing in life"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Prayer and worship as part of a life turned toward God"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Worshipping God, obeying Him, trusting Him and following His guidance"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_5",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Belonging to a people or a country"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_6",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Only a list of prohibitions"
+        }
+       ],
+       "secondary_label": null
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "blk_u1l1_reflect",
+   "type": "predict",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Which of these was furthest from what you pictured before this lesson?"
+    }
+   ],
+   "options": [
+    {
+     "option_id": "prd_a",
+     "spans": [
+      {
+       "type": "text",
+       "text": "That it is not an ethnic or inherited identity"
+      }
+     ]
+    },
+    {
+     "option_id": "prd_b",
+     "spans": [
+      {
+       "type": "text",
+       "text": "That worship in it is part of turning the whole of life toward God"
+      }
+     ]
+    },
+    {
+     "option_id": "prd_c",
+     "spans": [
+      {
+       "type": "text",
+       "text": "That it is a submission by choice"
+      }
+     ]
+    }
+   ],
+   "reveal": [
+    {
+     "type": "text",
+     "text": "Together these draw the overall picture that the coming lessons will fill in."
+    }
+   ],
+   "visual": null
+  },
+  {
+   "block_id": "blk_u1l1_muslim",
+   "type": "teach",
+   "eyebrow": "The Muslim",
+   "title": [
+    {
+     "type": "text",
+     "text": "Who is a Muslim?"
+    }
+   ],
+   "style": "standard",
+   "visual": null,
+   "evidence": null,
+   "points": [
+    {
+     "point_id": "pt_u1l1_9",
+     "sentence": {
+      "sentence_id": "sen_u1l1_11",
+      "spans": [
+       {
+        "type": "text",
+        "text": "A "
+       },
+       {
+        "type": "term",
+        "text": "“Muslim”",
+        "term_id": "term_muslim"
+       },
+       {
+        "type": "text",
+        "text": " is one who has submitted to God."
+       }
+      ],
+      "source_ids": [
+       "src_tafsir_islam_meaning"
+      ]
+     },
+     "visual_params": null
+    },
+    {
+     "point_id": "pt_u1l1_10",
+     "sentence": {
+      "sentence_id": "sen_u1l1_12",
+      "spans": [
+       {
+        "type": "text",
+        "text": "The Qur’an presents this submission as the way of the prophets before Muhammad ﷺ, as we saw in Ibrahim’s answer."
+       }
+      ],
+      "source_ids": [
+       "src_q_2_130_132"
+      ]
+     },
+     "visual_params": null
+    },
+    {
+     "point_id": "pt_u1l1_11",
+     "sentence": {
+      "sentence_id": "sen_u1l1_13",
+      "spans": [
+       {
+        "type": "text",
+        "text": "This is the overall picture; the coming lessons will fill in the details."
+       }
+      ],
+      "source_ids": []
+     },
+     "visual_params": null
+    }
+   ]
+  },
+  {
+   "block_id": "blk_u1l1_x3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_u1l1_03",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_islam_meaning"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Which statement accurately sums up what Muslims mean by Islam?"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "The name of one people's religion"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Willing submission to God, so that worship, obedience and the whole of life are directed to Him"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Knowing the Arabic root of the word"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_d",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Only avoiding what is forbidden"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "blk_u1l1_x4",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_u1l1_04",
+    "type": "scenario",
+    "concept_ids": [
+     "con_islam_meaning"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Which correction is closest to the meaning of the word as the lesson explained it?"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "situation": [
+      {
+       "type": "text",
+       "text": "Someone writes: “A Muslim is only someone born to Muslim parents.”"
+      }
+     ],
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Right — a Muslim is defined by their family"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "A Muslim is one who has submitted to God, whatever their family"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "A Muslim is someone who lives in a Muslim country"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "blk_u1l1_takeaway",
+   "type": "teach",
+   "eyebrow": null,
+   "title": [
+    {
+     "type": "text",
+     "text": "In short"
+    }
+   ],
+   "style": "summary",
+   "visual": null,
+   "evidence": null,
+   "points": [
+    {
+     "point_id": "pt_u1l1_12",
+     "sentence": {
+      "sentence_id": "sen_u1l1_14",
+      "spans": [
+       {
+        "type": "term",
+        "text": "“Islam”",
+        "term_id": "term_islam"
+       },
+       {
+        "type": "text",
+        "text": " comes from aslama: willingly submitting to God."
+       }
+      ],
+      "source_ids": [
+       "src_tafsir_islam_meaning"
+      ]
+     },
+     "visual_params": null
+    },
+    {
+     "point_id": "pt_u1l1_13",
+     "sentence": {
+      "sentence_id": "sen_u1l1_15",
+      "spans": [
+       {
+        "type": "text",
+        "text": "It is not a people’s identity or a word with no effect, but submission to God through which worship and the whole of life are turned toward Him."
+       }
+      ],
+      "source_ids": [
+       "src_tafsir_islam_meaning",
+       "src_q_6_162_163"
+      ]
+     },
+     "visual_params": null
+    },
+    {
+     "point_id": "pt_u1l1_14",
+     "sentence": {
+      "sentence_id": "sen_u1l1_16",
+      "spans": [
+       {
+        "type": "text",
+        "text": "And a "
+       },
+       {
+        "type": "term",
+        "text": "“Muslim”",
+        "term_id": "term_muslim"
+       },
+       {
+        "type": "text",
+        "text": " is one who submits to God, on the way of the prophets before."
+       }
+      ],
+      "source_ids": [
+       "src_tafsir_islam_meaning",
+       "src_q_2_130_132"
+      ]
+     },
+     "visual_params": null
+    }
+   ]
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "If you hear someone today reduce Islam to a people or to an inherited identity, think: what does that picture leave out?"
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_u1l1_1",
+    "title": "The meaning of Islam",
+    "concept_ids": [
+     "con_islam_meaning"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "Tomorrow we will ask: why is the root of the word not enough to understand what Islam means?"
+   }
+  ]
+ },
+ "sources": [
+  {
+   "source_id": "src_tafsir_islam_meaning",
+   "kind": "tafsir",
+   "provider": "tafsir_center",
+   "title": "المختصر في التفسير",
+   "reference": "آل عمران: 19 (موضع التحقق يحدده الاسترجاع)",
+   "excerpt": "⟨TEST: نص التفسير يُدرَج بالكود من مركز تفسير بعد التحقق⟩",
+   "url": null,
+   "displayed": false,
+   "display_role": null
+  },
+  {
+   "source_id": "src_q_2_256",
+   "kind": "quran",
+   "provider": "quran_com",
+   "title": "سورة البقرة",
+   "reference": "البقرة: 256",
+   "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+   "url": null,
+   "displayed": false,
+   "display_role": null
+  },
+  {
+   "source_id": "src_q_2_130_132",
+   "kind": "quran",
+   "provider": "quran_com",
+   "title": "سورة البقرة",
+   "reference": "البقرة: 130–132",
+   "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+   "url": null,
+   "displayed": false,
+   "display_role": null
+  },
+  {
+   "source_id": "src_q_6_162_163",
+   "kind": "quran",
+   "provider": "quran_com",
+   "title": "سورة الأنعام",
+   "reference": "الأنعام: 162–163",
+   "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+   "url": null,
+   "displayed": false,
+   "display_role": null
+  },
+  {
+   "source_id": "src_q_2_112",
+   "kind": "quran",
+   "provider": "quran_com",
+   "title": "سورة البقرة",
+   "reference": "البقرة: 112",
+   "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+   "url": null,
+   "displayed": false,
+   "display_role": null
+  },
+  {
+   "source_id": "src_q_10_84",
+   "kind": "quran",
+   "provider": "quran_com",
+   "title": "سورة يونس",
+   "reference": "يونس: 84",
+   "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+   "url": null,
+   "displayed": false,
+   "display_role": null
+  }
+ ],
+ "terms": {
+  "term_islam": {
+   "term_id": "term_islam",
+   "text": "Islam",
+   "arabic": "الإِسْلَام",
+   "transliteration": "Islām",
+   "state": "new",
+   "level": "basic",
+   "definition": [
+    {
+     "type": "text",
+     "text": "Willingly submitting and yielding to God."
+    }
+   ],
+   "example": [
+    {
+     "type": "text",
+     "text": "The name “Islam” comes from the verb aslama."
+    }
+   ],
+   "pronunciation_audio_url": null,
+   "source_id": "src_tafsir_islam_meaning",
+   "lesson_id": "les_u1_l1",
+   "lesson_title": "What Does Islam Mean?"
+  },
+  "term_muslim": {
+   "term_id": "term_muslim",
+   "text": "Muslim",
+   "arabic": "المُسْلِم",
+   "transliteration": "Muslim",
+   "state": "new",
+   "level": "basic",
+   "definition": [
+    {
+     "type": "text",
+     "text": "One who has submitted to God."
+    }
+   ],
+   "example": [
+    {
+     "type": "text",
+     "text": "A person is called a “Muslim” because they have handed themselves over to God."
+    }
+   ],
+   "pronunciation_audio_url": null,
+   "source_id": "src_tafsir_islam_meaning",
+   "lesson_id": "les_u1_l1",
+   "lesson_title": "What Does Islam Mean?"
+  }
+ },
+ "answers": []
+}

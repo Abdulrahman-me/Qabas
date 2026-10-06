@@ -1,0 +1,30 @@
+{
+ "timezone": "Asia/Riyadh",
+ "from": "2026-09-27",
+ "to": "2026-10-10",
+ "streak": {
+  "current": 3,
+  "longest": 5,
+  "today_completed": true
+ },
+ "days": [
+  {
+   "date": "2026-10-02",
+   "qualifying": true,
+   "minutes": 9,
+   "xp": 25
+  },
+  {
+   "date": "2026-10-03",
+   "qualifying": true,
+   "minutes": 14,
+   "xp": 40
+  },
+  {
+   "date": "2026-10-04",
+   "qualifying": true,
+   "minutes": 12,
+   "xp": 35
+  }
+ ]
+}

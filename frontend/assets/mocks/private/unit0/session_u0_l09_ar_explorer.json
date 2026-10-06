@@ -1,0 +1,141 @@
+{
+  "session_id": "ses_mock_u0_l9_ar_explorer",
+  "lesson_id": "les_u0_l9",
+  "answers": {
+    "ex_u0_l09_01": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l09_02": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_2"
+        }
+      ]
+    },
+    "ex_u0_l09_03": {
+      "segment_id": "seg_3"
+    },
+    "ex_u0_l09_04": {
+      "option_id": "opt_c"
+    }
+  },
+  "feedback": {
+    "ex_u0_l09_01": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "وصف الكتاب لمصدره يعرّفك بادّعائه، لكنه لا يكفي وحده لإثباته."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l09_self_proof"
+      }
+    },
+    "ex_u0_l09_02": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_2"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "اسأل عن الادّعاء بدقة، ثم اختر الشواهد التي تتعلّق به."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l09_03": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "فهم التحدّي يحتاج معرفة المقصود بالمماثلة، ومعايير الحكم على المحاولة."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "قراءة ترجمة وحدها لا تتيح فحص كل خصائص النص العربي الأصلي."
+        }
+      ],
+      "option_misconceptions": {},
+      "targets_misconception_id": "mis_u0_l09_translation_test"
+    },
+    "ex_u0_l09_04": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "لإثبات تناقض، يجب أن تتعارض عبارتان في المعنى نفسه والظروف نفسها."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "عدم فهم عبارتين فورًا لا يثبت تناقضهما، ولا يحسم أن كل اعتراض بلا أساس."
+        }
+      ],
+      "option_misconceptions": {},
+      "option_feedback": {
+        "opt_a": [
+          {
+            "type": "text",
+            "text": "اختلاف النقل يحتاج فحصًا قبل نسبة التعارض إلى الأصل."
+          }
+        ],
+        "opt_b": [
+          {
+            "type": "text",
+            "text": "تحديد الادّعاء لا يُغني عن فحص الاعتراض."
+          }
+        ],
+        "opt_c": [
+          {
+            "type": "text",
+            "text": "هذه الخطوة تتعامل مع موضع الإشكال الذي وجده القارئ."
+          }
+        ]
+      }
+    }
+  }
+}

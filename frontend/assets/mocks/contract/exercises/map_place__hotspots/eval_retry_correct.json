@@ -1,0 +1,48 @@
+{
+ "exercise_id": "ex_map_place__hotspots",
+ "recorded": true,
+ "correct": true,
+ "correct_answer": {
+  "pin_id": "pin_m4"
+ },
+ "details": {
+  "pin_labels": [
+   {
+    "pin_id": "pin_h3",
+    "label": "النخلة"
+   },
+   {
+    "pin_id": "pin_q8",
+    "label": "الباب"
+   },
+   {
+    "pin_id": "pin_z1",
+    "label": "النافذة"
+   },
+   {
+    "pin_id": "pin_m4",
+    "label": "النهر"
+   }
+  ]
+ },
+ "explanation": [
+  {
+   "type": "text",
+   "text": "شرح مختصر مرتبط بالدليل."
+  }
+ ],
+ "source_ids": [
+  "src_q_112_1"
+ ],
+ "misconception": null,
+ "mastery_changes": [
+  {
+   "concept_id": "con_test",
+   "title": "مفهوم اختباري",
+   "before": 0.4,
+   "after": 0.46
+  }
+ ],
+ "term_changes": [],
+ "xp_awarded": 0
+}

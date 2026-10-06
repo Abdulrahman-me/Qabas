@@ -1,0 +1,41 @@
+{
+ "exercise_id": "ex_u2_l1_07",
+ "recorded": true,
+ "correct": false,
+ "correct_answer": {
+  "segment_id": "seg_2"
+ },
+ "details": null,
+ "explanation": [
+  {
+   "type": "text",
+   "text": "الكعبة قِبلة يتّجه إليها المسلمون لتوحيد الوجهة، والعبادة لله وحده."
+  }
+ ],
+ "source_ids": [
+  "src_q_2_144"
+ ],
+ "misconception": {
+  "misconception_id": "mis_kaaba_worship",
+  "title": "المسلمون يعبدون الكعبة",
+  "card": [
+   {
+    "type": "text",
+    "text": "فكرة شائعة لكنها غير صحيحة: المسلمون يعبدون الله وحده، ويتّجهون إلى الكعبة في صلاتهم امتثالاً لأمره، لا عبادةً لها."
+   }
+  ],
+  "source_ids": [
+   "src_q_2_144"
+  ]
+ },
+ "mastery_changes": [
+  {
+   "concept_id": "con_qibla",
+   "title": "القِبلة",
+   "before": 0.4,
+   "after": 0.3
+  }
+ ],
+ "term_changes": [],
+ "xp_awarded": 0
+}

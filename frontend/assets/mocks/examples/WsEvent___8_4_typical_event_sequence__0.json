@@ -1,0 +1,191 @@
+[
+ {
+  "type": "state",
+  "data": {
+   "duel": {
+    "duel_id": "duel_8a1",
+    "status": "ready",
+    "mode": "live",
+    "preset": "duel",
+    "opponent_type": "bot",
+    "players": [
+     {
+      "user_id": "usr_7f3k2a",
+      "display_name": "مسافر ٤٧",
+      "avatar_key": "traveler_03",
+      "is_me": true,
+      "is_bot": false,
+      "status": "joined"
+     },
+     {
+      "user_id": "usr_bot_1",
+      "display_name": "المدرّب",
+      "avatar_key": "traveler_bot",
+      "is_me": false,
+      "is_bot": true,
+      "status": "joined"
+     }
+    ],
+    "config": {
+     "question_count": 7,
+     "time_limit_ms": 15000,
+     "scoring": {
+      "base": 100,
+      "speed_bonus": 100,
+      "rounding": "floor"
+     },
+     "reveal_ms": 3000
+    },
+    "ws_url": "wss://api.example.com/v1/ws/duels/duel_8a1",
+    "created_at": "2026-10-04T13:00:00Z",
+    "expires_at": "2026-10-04T13:02:00Z",
+    "result": null
+   },
+   "server_ts": "2026-10-04T13:00:01Z",
+   "live": null
+  }
+ },
+ {
+  "type": "player_ready",
+  "data": {
+   "user_id": "usr_bot_1"
+  }
+ },
+ {
+  "type": "countdown",
+  "data": {
+   "starts_at": "2026-10-04T13:00:05Z",
+   "seconds": 3
+  }
+ },
+ {
+  "type": "question",
+  "data": {
+   "question_index": 0,
+   "total": 7,
+   "exercise": {
+    "exercise_id": "ex_duel_u2_01",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_allah_one"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "ما معنى «أحد» في سورة الإخلاص؟"
+     }
+    ],
+    "time_limit_ms": 15000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": null
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "واحد لا شريك له"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أول الآلهة"
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "issued_at": "2026-10-04T13:00:05Z",
+   "deadline_at": "2026-10-04T13:00:20Z"
+  }
+ },
+ {
+  "type": "answer_received",
+  "data": {
+   "question_index": 0
+  }
+ },
+ {
+  "type": "opponent_answered",
+  "data": {
+   "question_index": 0,
+   "user_id": "usr_bot_1"
+  }
+ },
+ {
+  "type": "question_result",
+  "data": {
+   "question_index": 0,
+   "correct_answer": {
+    "option_id": "opt_a"
+   },
+   "explanation": [
+    {
+     "type": "text",
+     "text": "«أحد» تعني أن الله واحد لا شريك له."
+    }
+   ],
+   "players": [
+    {
+     "user_id": "usr_7f3k2a",
+     "correct": true,
+     "elapsed_ms": 5200,
+     "points": 165
+    },
+    {
+     "user_id": "usr_bot_1",
+     "correct": false,
+     "elapsed_ms": 7900,
+     "points": 0
+    }
+   ],
+   "totals": [
+    {
+     "user_id": "usr_7f3k2a",
+     "points": 165
+    },
+    {
+     "user_id": "usr_bot_1",
+     "points": 0
+    }
+   ]
+  }
+ },
+ {
+  "type": "finished",
+  "data": {
+   "result": {
+    "winner_user_ids": [
+     "usr_7f3k2a"
+    ],
+    "is_draw": false,
+    "scores": [
+     {
+      "user_id": "usr_7f3k2a",
+      "rank": 1,
+      "points": 845,
+      "correct": 6
+     },
+     {
+      "user_id": "usr_bot_1",
+      "rank": 2,
+      "points": 610,
+      "correct": 5
+     }
+    ],
+    "xp_awarded": 15
+   },
+   "summary": []
+  }
+ }
+]

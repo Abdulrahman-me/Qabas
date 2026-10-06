@@ -1,0 +1,1139 @@
+{
+ "schema_version": "qabas.scene/1",
+ "scene_id": "scn_u0_l03_workshop",
+ "version": 1,
+ "view_box": {
+  "width": 1600,
+  "height": 1000
+ },
+ "required_capabilities": [
+  "scene/1",
+  "shape.rect/1",
+  "shape.ellipse/1",
+  "shape.path/1",
+  "paint.gradient/1",
+  "track/1",
+  "fx.sparkles/1"
+ ],
+ "palette": {
+  "wall_top": "#0F4A44",
+  "wall_low": "#0A3934",
+  "plank_line": "#083430",
+  "frame": "#5A3A22",
+  "sky_top": "#1E2F4D",
+  "sky_low": "#E9B872",
+  "roof_far": "#24364F",
+  "beam": "#F6E3B42E",
+  "beam_clear": "#F6E3B400",
+  "dust": "#F6E3B4",
+  "board": "#7A5233",
+  "metal": "#A3AEB9",
+  "metal_dark": "#6B7785",
+  "handle": "#B5763E",
+  "floor_top": "#7B5134",
+  "floor_low": "#4E321F",
+  "floor_line": "#3E2817",
+  "bench": "#6E4528",
+  "bench_top": "#9A653C",
+  "bench_dark": "#4A2E1A",
+  "shaving": "#E6BC85",
+  "chair_wood": "#D9A264",
+  "chair_mid": "#B98045",
+  "chair_dark": "#8E5C2D",
+  "chair_hi": "#F0C48A",
+  "raw_wood": "#C8935A",
+  "raw_end": "#9C6C3C",
+  "skin": "#C9A285",
+  "apron": "#0B5A52",
+  "shirt": "#E3D3B5",
+  "shirt_shade": "#CBB894",
+  "cap": "#3F4A5A",
+  "clock_body": "#3B2A1E",
+  "clock_face": "#F3EAD6",
+  "ink": "#16233A",
+  "shade": "#0B5A52",
+  "ember": "#F6E3B4",
+  "pool": "#F6E3B455",
+  "pool_clear": "#F6E3B400",
+  "cone": "#F6E3B433",
+  "cone_clear": "#F6E3B400",
+  "gold": "#E0A526CC",
+  "gold_mid": "#E0A52655",
+  "gold_clear": "#E0A52600",
+  "shadow": "#1A0F0870",
+  "shadow_clear": "#1A0F0800"
+ },
+ "assets": [],
+ "states": {
+  "focus": {
+   "type": "int",
+   "min": -1,
+   "max": 5,
+   "default": -1
+  }
+ },
+ "layers": [
+  {
+   "id": "wall",
+   "type": "rect",
+   "x": 0,
+   "y": 0,
+   "w": 1600,
+   "h": 740,
+   "fill": {
+    "gradient": "linear",
+    "from": [
+     0,
+     0
+    ],
+    "to": [
+     0,
+     740
+    ],
+    "stops": [
+     {
+      "at": 0.0,
+      "color": "wall_top"
+     },
+     {
+      "at": 1.0,
+      "color": "wall_low"
+     }
+    ]
+   }
+  },
+  {
+   "id": "wall_planks",
+   "type": "path",
+   "d": "M96 0 L101 0 L101 724 L96 724 Z M214 0 L219 0 L219 724 L214 724 Z M332 0 L337 0 L337 724 L332 724 Z M450 0 L455 0 L455 724 L450 724 Z M568 0 L573 0 L573 724 L568 724 Z M686 0 L691 0 L691 724 L686 724 Z M804 0 L809 0 L809 724 L804 724 Z M922 0 L927 0 L927 724 L922 724 Z M1040 0 L1045 0 L1045 724 L1040 724 Z M1158 0 L1163 0 L1163 724 L1158 724 Z M1276 0 L1281 0 L1281 724 L1276 724 Z M1394 0 L1399 0 L1399 724 L1394 724 Z M1512 0 L1517 0 L1517 724 L1512 724 Z",
+   "fill": "plank_line"
+  },
+  {
+   "id": "window",
+   "type": "group",
+   "children": [
+    {
+     "id": "win_frame",
+     "type": "path",
+     "d": "M10 0 L290 0 Q300 0 300 10 L300 290 Q300 300 290 300 L10 300 Q0 300 0 290 L0 10 Q0 0 10 0 Z M-12 292 L312 292 Q316 292 316 296 L316 308 Q316 312 312 312 L-12 312 Q-16 312 -16 308 L-16 296 Q-16 292 -12 292 Z",
+     "fill": "frame"
+    },
+    {
+     "id": "win_sky",
+     "type": "rect",
+     "x": 16,
+     "y": 16,
+     "w": 268,
+     "h": 268,
+     "fill": {
+      "gradient": "linear",
+      "from": [
+       0,
+       16
+      ],
+      "to": [
+       0,
+       284
+      ],
+      "stops": [
+       {
+        "at": 0.0,
+        "color": "sky_top"
+       },
+       {
+        "at": 1.0,
+        "color": "sky_low"
+       }
+      ]
+     }
+    },
+    {
+     "id": "win_roofs",
+     "type": "path",
+     "d": "M16 284 L16 236 L58 236 L58 204 L104 204 L104 226 L150 226 L150 190 L176 176 L202 190 L202 222 L246 222 L246 208 L284 208 L284 284 Z",
+     "fill": "roof_far"
+    },
+    {
+     "id": "win_bars",
+     "type": "path",
+     "d": "M146 16 L154 16 L154 284 L146 284 Z M16 146 L284 146 L284 154 L16 154 Z",
+     "fill": "frame"
+    }
+   ],
+   "transform": {
+    "x": 1110,
+    "y": 150
+   }
+  },
+  {
+   "id": "window_beam",
+   "type": "path",
+   "d": "M1126 450 L1394 450 L1530 930 L1020 930 Z",
+   "fill": {
+    "gradient": "linear",
+    "from": [
+     0,
+     450
+    ],
+    "to": [
+     0,
+     930
+    ],
+    "stops": [
+     {
+      "at": 0.0,
+      "color": "beam"
+     },
+     {
+      "at": 1.0,
+      "color": "beam_clear"
+     }
+    ]
+   }
+  },
+  {
+   "id": "dust",
+   "type": "sparkles",
+   "x": 1060,
+   "y": 470,
+   "w": 380,
+   "h": 380,
+   "count": 16,
+   "seed": 11,
+   "fill": "dust",
+   "opacity": 0.55
+  },
+  {
+   "id": "clock",
+   "type": "group",
+   "children": [
+    {
+     "id": "clock_glow",
+     "type": "path",
+     "d": "M-140 0 C-140 -77.3 -77.3 -140 0 -140 C77.3 -140 140 -77.3 140 0 C140 77.3 77.3 140 0 140 C-77.3 140 -140 77.3 -140 0 Z",
+     "fill": {
+      "gradient": "radial",
+      "center": [
+       0,
+       0
+      ],
+      "radius": 140,
+      "stops": [
+       {
+        "at": 0,
+        "color": "gold"
+       },
+       {
+        "at": 0.55,
+        "color": "gold_mid"
+       },
+       {
+        "at": 1,
+        "color": "gold_clear"
+       }
+      ]
+     },
+     "opacity": 0,
+     "state_rules": [
+      {
+       "when": {
+        "focus": {
+         "eq": 4
+        }
+       },
+       "set": {
+        "opacity": 0.7
+       },
+       "transition_ms": 500,
+       "easing": "ease_in_out"
+      }
+     ],
+     "transform": {
+      "origin_x": 0,
+      "origin_y": 0
+     },
+     "tracks": [
+      {
+       "property": "scale",
+       "duration_ms": 2600,
+       "easing": "ease_in_out",
+       "loop": "ping_pong",
+       "keyframes": [
+        {
+         "t": 0,
+         "v": 0.96
+        },
+        {
+         "t": 1,
+         "v": 1.04
+        }
+       ],
+       "active_when": {
+        "focus": {
+         "eq": 4
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "clock_body",
+     "type": "ellipse",
+     "x": 0,
+     "y": 0,
+     "rx": 72,
+     "ry": 72,
+     "fill": "clock_body"
+    },
+    {
+     "id": "clock_face",
+     "type": "ellipse",
+     "x": 0,
+     "y": 0,
+     "rx": 60,
+     "ry": 60,
+     "fill": "clock_face"
+    },
+    {
+     "id": "clock_ticks",
+     "type": "path",
+     "d": "M-3.5 -54.5 L3.5 -54.5 L3.5 -39.5 L-3.5 -39.5 Z M23.8 -46.3 L28.2 -43.8 L23.2 -35.1 L18.8 -37.6 Z M43.8 -28.2 L46.3 -23.8 L37.6 -18.8 L35.1 -23.2 Z M54.5 -3.5 L54.5 3.5 L39.5 3.5 L39.5 -3.5 Z M46.3 23.8 L43.8 28.2 L35.1 23.2 L37.6 18.8 Z M28.2 43.8 L23.8 46.3 L18.8 37.6 L23.2 35.1 Z M3.5 54.5 L-3.5 54.5 L-3.5 39.5 L3.5 39.5 Z M-23.8 46.3 L-28.2 43.8 L-23.2 35.1 L-18.8 37.6 Z M-43.8 28.2 L-46.3 23.8 L-37.6 18.8 L-35.1 23.2 Z M-54.5 3.5 L-54.5 -3.5 L-39.5 -3.5 L-39.5 3.5 Z M-46.3 -23.8 L-43.8 -28.2 L-35.1 -23.2 L-37.6 -18.8 Z M-28.2 -43.8 L-23.8 -46.3 L-18.8 -37.6 L-23.2 -35.1 Z",
+     "fill": "ink"
+    },
+    {
+     "id": "clock_hour",
+     "type": "path",
+     "d": "M-4 4 L-3 -30 L0 -34 L3 -30 L4 4 Z M-7 0 C-7 -3.9 -3.9 -7 0 -7 C3.9 -7 7 -3.9 7 0 C7 3.9 3.9 7 0 7 C-3.9 7 -7 3.9 -7 0 Z",
+     "fill": "ink",
+     "transform": {
+      "rotation": -60
+     }
+    },
+    {
+     "id": "clock_minute",
+     "type": "path",
+     "d": "M-2.5 4 L-2 -44 L0 -48 L2 -44 L2.5 4 Z",
+     "fill": "ink",
+     "transform": {
+      "rotation": 40
+     },
+     "tracks": [
+      {
+       "property": "rotation",
+       "duration_ms": 60000,
+       "easing": "linear",
+       "loop": "repeat",
+       "keyframes": [
+        {
+         "t": 0,
+         "v": 0
+        },
+        {
+         "t": 1,
+         "v": 360
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "transform": {
+    "x": 960,
+    "y": 236
+   }
+  },
+  {
+   "id": "pegboard",
+   "type": "group",
+   "children": [
+    {
+     "id": "tools_glow",
+     "type": "path",
+     "d": "M-130 210 C-130 71.9 17.7 -40 200 -40 C382.3 -40 530 71.9 530 210 C530 348.1 382.3 460 200 460 C17.7 460 -130 348.1 -130 210 Z",
+     "fill": {
+      "gradient": "radial",
+      "center": [
+       200,
+       210
+      ],
+      "radius": 330,
+      "stops": [
+       {
+        "at": 0,
+        "color": "gold"
+       },
+       {
+        "at": 0.55,
+        "color": "gold_mid"
+       },
+       {
+        "at": 1,
+        "color": "gold_clear"
+       }
+      ]
+     },
+     "opacity": 0,
+     "state_rules": [
+      {
+       "when": {
+        "focus": {
+         "eq": 0
+        }
+       },
+       "set": {
+        "opacity": 0.65
+       },
+       "transition_ms": 500,
+       "easing": "ease_in_out"
+      }
+     ],
+     "transform": {
+      "origin_x": 200,
+      "origin_y": 210
+     },
+     "tracks": [
+      {
+       "property": "scale",
+       "duration_ms": 2600,
+       "easing": "ease_in_out",
+       "loop": "ping_pong",
+       "keyframes": [
+        {
+         "t": 0,
+         "v": 0.96
+        },
+        {
+         "t": 1,
+         "v": 1.04
+        }
+       ],
+       "active_when": {
+        "focus": {
+         "eq": 0
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "board",
+     "type": "path",
+     "d": "M12 0 L408 0 Q420 0 420 12 L420 250 Q420 262 408 262 L12 262 Q0 262 0 250 L0 12 Q0 0 12 0 Z",
+     "fill": "board"
+    },
+    {
+     "id": "tools_metal",
+     "type": "path",
+     "d": "M40 66 L196 66 L196 104 L40 128 Z M48 126 L57 136 L66 124 Z M66 123.4 L75 133.4 L84 121.1 Z M84 120.8 L93 130.8 L102 118.2 Z M102 118.2 L111 128.2 L120 115.3 Z M120 115.6 L129 125.6 L138 112.4 Z M138 113 L147 123 L156 109.5 Z M156 110.4 L165 120.4 L174 106.6 Z M174 107.8 L183 117.8 L192 103.7 Z M237 46 L311 46 Q316 46 316 51 L316 67 Q316 72 311 72 L237 72 Q232 72 232 67 L232 51 Q232 46 237 46 Z M330 118 L342 118 L340 176 L332 176 Z M356 118 L368 118 L366 176 L358 176 Z M382 118 L394 118 L392 176 L384 176 Z M48 168 L64 168 L64 222 L196 222 L196 236 L48 236 Z",
+     "fill": "metal"
+    },
+    {
+     "id": "tools_wood",
+     "type": "path",
+     "d": "M206 58 L222 58 Q236 58 236 72 L236 100 Q236 114 222 114 L206 114 Q192 114 192 100 L192 72 Q192 58 206 58 Z M273 70 L275 70 Q281 70 281 76 L281 196 Q281 202 275 202 L273 202 Q267 202 267 196 L267 76 Q267 70 273 70 Z M334 48 L338 48 Q344 48 344 54 L344 114 Q344 120 338 120 L334 120 Q328 120 328 114 L328 54 Q328 48 334 48 Z M360 48 L364 48 Q370 48 370 54 L370 114 Q370 120 364 120 L360 120 Q354 120 354 114 L354 54 Q354 48 360 48 Z M386 48 L390 48 Q396 48 396 54 L396 114 Q396 120 390 120 L386 120 Q380 120 380 114 L380 54 Q380 48 386 48 Z",
+     "fill": "handle"
+    }
+   ],
+   "transform": {
+    "x": 196,
+    "y": 172
+   }
+  },
+  {
+   "id": "floor",
+   "type": "rect",
+   "x": 0,
+   "y": 724,
+   "w": 1600,
+   "h": 276,
+   "fill": {
+    "gradient": "linear",
+    "from": [
+     0,
+     724
+    ],
+    "to": [
+     0,
+     1000
+    ],
+    "stops": [
+     {
+      "at": 0.0,
+      "color": "floor_top"
+     },
+     {
+      "at": 1.0,
+      "color": "floor_low"
+     }
+    ]
+   }
+  },
+  {
+   "id": "floor_lines",
+   "type": "path",
+   "d": "M0 716 L1600 716 L1600 740 L0 740 Z M0 808 L1600 800 L1600 805 L0 813 Z M0 890 L1600 878 L1600 884 L0 896 Z M0 972 L1600 958 L1600 965 L0 979 Z",
+   "fill": "floor_line"
+  },
+  {
+   "id": "lamp_pool",
+   "type": "ellipse",
+   "x": 820,
+   "y": 860,
+   "rx": 420,
+   "ry": 80,
+   "fill": {
+    "gradient": "radial",
+    "center": [
+     820,
+     860
+    ],
+    "radius": 420,
+    "stops": [
+     {
+      "at": 0,
+      "color": "pool"
+     },
+     {
+      "at": 1,
+      "color": "pool_clear"
+     }
+    ]
+   }
+  },
+  {
+   "id": "plank_pile",
+   "type": "group",
+   "children": [
+    {
+     "id": "planks_glow",
+     "type": "path",
+     "d": "M1010 720 C1010 604 1139.8 510 1300 510 C1460.2 510 1590 604 1590 720 C1590 836 1460.2 930 1300 930 C1139.8 930 1010 836 1010 720 Z",
+     "fill": {
+      "gradient": "radial",
+      "center": [
+       1300,
+       720
+      ],
+      "radius": 290,
+      "stops": [
+       {
+        "at": 0,
+        "color": "gold"
+       },
+       {
+        "at": 0.55,
+        "color": "gold_mid"
+       },
+       {
+        "at": 1,
+        "color": "gold_clear"
+       }
+      ]
+     },
+     "opacity": 0,
+     "state_rules": [
+      {
+       "when": {
+        "focus": {
+         "eq": 2
+        }
+       },
+       "set": {
+        "opacity": 0.7
+       },
+       "transition_ms": 500,
+       "easing": "ease_in_out"
+      }
+     ],
+     "transform": {
+      "origin_x": 1300,
+      "origin_y": 720
+     },
+     "tracks": [
+      {
+       "property": "scale",
+       "duration_ms": 2600,
+       "easing": "ease_in_out",
+       "loop": "ping_pong",
+       "keyframes": [
+        {
+         "t": 0,
+         "v": 0.96
+        },
+        {
+         "t": 1,
+         "v": 1.04
+        }
+       ],
+       "active_when": {
+        "focus": {
+         "eq": 2
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "planks_lean",
+     "type": "path",
+     "d": "M1420 760 L1458 760 L1486 410 L1450 410 Z M1466 760 L1504 760 L1526 430 L1490 430 Z M1512 760 L1550 760 L1566 450 L1530 450 Z",
+     "fill": "raw_end"
+    },
+    {
+     "id": "planks_stack",
+     "type": "path",
+     "d": "M1124 822 L1436 822 Q1440 822 1440 826 L1440 840 Q1440 844 1436 844 L1124 844 Q1120 844 1120 840 L1120 826 Q1120 822 1124 822 Z M1146 796 L1428 796 Q1432 796 1432 800 L1432 814 Q1432 818 1428 818 L1146 818 Q1142 818 1142 814 L1142 800 Q1142 796 1146 796 Z M1124 770 L1436 770 Q1440 770 1440 774 L1440 788 Q1440 792 1436 792 L1124 792 Q1120 792 1120 788 L1120 774 Q1120 770 1124 770 Z M1146 744 L1428 744 Q1432 744 1432 748 L1432 762 Q1432 766 1428 766 L1146 766 Q1142 766 1142 762 L1142 748 Q1142 744 1146 744 Z",
+     "fill": "raw_wood"
+    },
+    {
+     "id": "planks_ends",
+     "type": "path",
+     "d": "M1123 822 L1131 822 Q1134 822 1134 825 L1134 841 Q1134 844 1131 844 L1123 844 Q1120 844 1120 841 L1120 825 Q1120 822 1123 822 Z M1145 796 L1153 796 Q1156 796 1156 799 L1156 815 Q1156 818 1153 818 L1145 818 Q1142 818 1142 815 L1142 799 Q1142 796 1145 796 Z M1123 770 L1131 770 Q1134 770 1134 773 L1134 789 Q1134 792 1131 792 L1123 792 Q1120 792 1120 789 L1120 773 Q1120 770 1123 770 Z M1145 744 L1153 744 Q1156 744 1156 747 L1156 763 Q1156 766 1153 766 L1145 766 Q1142 766 1142 763 L1142 747 Q1142 744 1145 744 Z",
+     "fill": "raw_end"
+    }
+   ]
+  },
+  {
+   "id": "carpenter",
+   "type": "group",
+   "children": [
+    {
+     "id": "carpenter_glow",
+     "type": "path",
+     "d": "M-190 440 C-190 296.4 -104.9 180 0 180 C104.9 180 190 296.4 190 440 C190 583.6 104.9 700 0 700 C-104.9 700 -190 583.6 -190 440 Z",
+     "fill": {
+      "gradient": "radial",
+      "center": [
+       0,
+       440
+      ],
+      "radius": 260,
+      "stops": [
+       {
+        "at": 0,
+        "color": "gold"
+       },
+       {
+        "at": 0.55,
+        "color": "gold_mid"
+       },
+       {
+        "at": 1,
+        "color": "gold_clear"
+       }
+      ]
+     },
+     "opacity": 0,
+     "state_rules": [
+      {
+       "when": {
+        "focus": {
+         "eq": 1
+        }
+       },
+       "set": {
+        "opacity": 0.65
+       },
+       "transition_ms": 500,
+       "easing": "ease_in_out"
+      }
+     ],
+     "transform": {
+      "origin_x": 0,
+      "origin_y": 440
+     },
+     "tracks": [
+      {
+       "property": "scale",
+       "duration_ms": 2600,
+       "easing": "ease_in_out",
+       "loop": "ping_pong",
+       "keyframes": [
+        {
+         "t": 0,
+         "v": 0.96
+        },
+        {
+         "t": 1,
+         "v": 1.04
+        }
+       ],
+       "active_when": {
+        "focus": {
+         "eq": 1
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "carp_body",
+     "type": "path",
+     "d": "M-98 600 C-104 470 -92 392 -44 366 L44 366 C92 392 104 470 98 600 Z",
+     "fill": "shirt"
+    },
+    {
+     "id": "carp_apron",
+     "type": "path",
+     "d": "M-62 600 L-56 432 C-40 420 40 420 56 432 L62 600 Z M-46 432 L-30 370 L-20 370 L-33 432 Z M46 432 L30 370 L20 370 L33 432 Z",
+     "fill": "apron"
+    },
+    {
+     "id": "carp_arms",
+     "type": "path",
+     "d": "M-96 402 C-130 462 -124 532 -86 568 L-58 560 C-88 524 -88 470 -70 424 Z M96 402 C130 462 124 532 86 568 L58 560 C88 524 88 470 70 424 Z",
+     "fill": "shirt_shade"
+    },
+    {
+     "id": "carp_skin",
+     "type": "path",
+     "d": "M-17 336 L17 336 L19 372 L-19 372 Z M-98 566 C-98 558.8 -87.3 553 -74 553 C-60.7 553 -50 558.8 -50 566 C-50 573.2 -60.7 579 -74 579 C-87.3 579 -98 573.2 -98 566 Z M50 566 C50 558.8 60.7 553 74 553 C87.3 553 98 558.8 98 566 C98 573.2 87.3 579 74 579 C60.7 579 50 573.2 50 566 Z",
+     "fill": "skin"
+    },
+    {
+     "id": "carp_head",
+     "type": "ellipse",
+     "x": 0,
+     "y": 300,
+     "rx": 44,
+     "ry": 52,
+     "fill": "skin"
+    },
+    {
+     "id": "carp_cap",
+     "type": "path",
+     "d": "M-47 292 C-48 236 48 232 50 288 C30 276 -30 276 -47 292 Z M28 280 L76 292 L44 298 Z",
+     "fill": "cap"
+    }
+   ],
+   "transform": {
+    "x": 372,
+    "y": 0
+   }
+  },
+  {
+   "id": "bench",
+   "type": "group",
+   "children": [
+    {
+     "id": "bench_legs",
+     "type": "path",
+     "d": "M196 590 L226 590 L226 866 L196 866 Z M594 590 L624 590 L624 866 L594 866 Z M196 770 L624 770 L624 796 L196 796 Z",
+     "fill": "bench_dark"
+    },
+    {
+     "id": "bench_apron",
+     "type": "rect",
+     "x": 172,
+     "y": 592,
+     "w": 476,
+     "h": 44,
+     "fill": "bench",
+     "corner": 4
+    },
+    {
+     "id": "bench_top",
+     "type": "rect",
+     "x": 158,
+     "y": 560,
+     "w": 504,
+     "h": 36,
+     "fill": "bench_top",
+     "corner": 5
+    },
+    {
+     "id": "bench_items",
+     "type": "path",
+     "d": "M494 524 L590 524 Q598 524 598 532 L598 552 Q598 560 590 560 L494 560 Q486 560 486 552 L486 532 Q486 524 494 524 Z M526 506 L536 506 Q542 506 542 512 L542 522 Q542 528 536 528 L526 528 Q520 528 520 522 L520 512 Q520 506 526 506 Z M250 560 Q262 530 286 544 Q270 548 268 560 Z M300 560 Q318 524 344 540 Q326 546 322 560 Z M640 560 Q660 536 684 552 Q666 552 660 560 Z",
+     "fill": "shaving"
+    }
+   ]
+  },
+  {
+   "id": "chair_glow",
+   "type": "path",
+   "d": "M572 640 C572 474.3 683.9 340 822 340 C960.1 340 1072 474.3 1072 640 C1072 805.7 960.1 940 822 940 C683.9 940 572 805.7 572 640 Z",
+   "fill": {
+    "gradient": "radial",
+    "center": [
+     822,
+     640
+    ],
+    "radius": 300,
+    "stops": [
+     {
+      "at": 0,
+      "color": "gold"
+     },
+     {
+      "at": 0.55,
+      "color": "gold_mid"
+     },
+     {
+      "at": 1,
+      "color": "gold_clear"
+     }
+    ]
+   },
+   "opacity": 0,
+   "state_rules": [
+    {
+     "when": {
+      "focus": {
+       "eq": 3
+      }
+     },
+     "set": {
+      "opacity": 0.75
+     },
+     "transition_ms": 500,
+     "easing": "ease_in_out"
+    }
+   ],
+   "transform": {
+    "origin_x": 822,
+    "origin_y": 640
+   },
+   "tracks": [
+    {
+     "property": "scale",
+     "duration_ms": 2600,
+     "easing": "ease_in_out",
+     "loop": "ping_pong",
+     "keyframes": [
+      {
+       "t": 0,
+       "v": 0.96
+      },
+      {
+       "t": 1,
+       "v": 1.04
+      }
+     ],
+     "active_when": {
+      "focus": {
+       "eq": 3
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "chair",
+   "type": "group",
+   "children": [
+    {
+     "id": "chair_shadow",
+     "type": "ellipse",
+     "x": 822,
+     "y": 852,
+     "rx": 170,
+     "ry": 26,
+     "fill": {
+      "gradient": "radial",
+      "center": [
+       822,
+       852
+      ],
+      "radius": 170,
+      "stops": [
+       {
+        "at": 0,
+        "color": "shadow"
+       },
+       {
+        "at": 1,
+        "color": "shadow_clear"
+       }
+      ]
+     }
+    },
+    {
+     "id": "chair_back_dark",
+     "type": "path",
+     "d": "M754 600 L770 600 L770 792 L754 792 Z M926 612 L940 612 L940 800 L926 800 Z M752 604 L768 604 L760 404 L744 404 Z M924 614 L940 614 L934 414 L918 414 Z M796 460 L808 461 L808 592 L796 592 Z M836 460 L848 461 L848 592 L836 592 Z M876 460 L888 461 L888 592 L876 592 Z",
+     "fill": "chair_dark"
+    },
+    {
+     "id": "chair_rails",
+     "type": "path",
+     "d": "M742 412 Q838 398 936 420 L936 462 Q838 442 742 454 Z M748 516 L930 524 L930 540 L748 532 Z",
+     "fill": "chair_wood"
+    },
+    {
+     "id": "chair_front",
+     "type": "path",
+     "d": "M700 640 L902 652 L902 670 L700 658 Z M902 652 L944 602 L944 618 L902 670 Z M704 652 L724 653 L724 846 L704 846 Z M880 664 L900 665 L900 858 L880 858 Z M724 780 L880 788 L880 800 L724 792 Z",
+     "fill": "chair_mid"
+    },
+    {
+     "id": "chair_seat",
+     "type": "path",
+     "d": "M700 640 L902 652 L944 602 L752 590 Z",
+     "fill": "chair_wood"
+    },
+    {
+     "id": "chair_hi",
+     "type": "path",
+     "d": "M726 632 L880 640 L900 618 L760 610 Z",
+     "fill": "chair_hi",
+     "opacity": 0.55
+    }
+   ],
+   "state_rules": [
+    {
+     "when": {
+      "focus": {
+       "eq": 2
+      }
+     },
+     "set": {
+      "opacity": 0.08
+     },
+     "transition_ms": 700,
+     "easing": "ease_in_out"
+    },
+    {
+     "when": {
+      "focus": {
+       "eq": 3
+      }
+     },
+     "set": {
+      "opacity": 0.3
+     },
+     "transition_ms": 700,
+     "easing": "ease_in_out"
+    }
+   ]
+  },
+  {
+   "id": "offcuts",
+   "type": "group",
+   "children": [
+    {
+     "id": "offcuts_glow",
+     "type": "path",
+     "d": "M520 912 C520 867.8 596.1 832 690 832 C783.9 832 860 867.8 860 912 C860 956.2 783.9 992 690 992 C596.1 992 520 956.2 520 912 Z",
+     "fill": {
+      "gradient": "radial",
+      "center": [
+       690,
+       912
+      ],
+      "radius": 170,
+      "stops": [
+       {
+        "at": 0,
+        "color": "gold"
+       },
+       {
+        "at": 0.55,
+        "color": "gold_mid"
+       },
+       {
+        "at": 1,
+        "color": "gold_clear"
+       }
+      ]
+     },
+     "opacity": 0,
+     "state_rules": [
+      {
+       "when": {
+        "focus": {
+         "eq": 5
+        }
+       },
+       "set": {
+        "opacity": 0.8
+       },
+       "transition_ms": 500,
+       "easing": "ease_in_out"
+      }
+     ],
+     "transform": {
+      "origin_x": 690,
+      "origin_y": 912
+     },
+     "tracks": [
+      {
+       "property": "scale",
+       "duration_ms": 2600,
+       "easing": "ease_in_out",
+       "loop": "ping_pong",
+       "keyframes": [
+        {
+         "t": 0,
+         "v": 0.96
+        },
+        {
+         "t": 1,
+         "v": 1.04
+        }
+       ],
+       "active_when": {
+        "focus": {
+         "eq": 5
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "offcut_pieces",
+     "type": "path",
+     "d": "M609.2 918.3 L668.6 909.9 L670.8 925.7 L611.4 934.1 Z M665.6 901.6 L735.5 906.5 L734.4 922.4 L664.5 917.5 Z M642.7 892.4 L696.6 889.6 L697.3 903.6 L643.4 906.4 Z M727.1 911.2 L765.2 923.5 L760.9 936.8 L722.8 924.5 Z M685 877 L728.6 883.1 L727 895 L683.4 888.9 Z",
+     "fill": "chair_mid"
+    }
+   ]
+  },
+  {
+   "id": "lamp",
+   "type": "group",
+   "children": [
+    {
+     "id": "lamp_cone",
+     "type": "path",
+     "d": "M-58 226 L58 226 L330 880 L-330 880 Z",
+     "fill": {
+      "gradient": "linear",
+      "from": [
+       0,
+       226
+      ],
+      "to": [
+       0,
+       880
+      ],
+      "stops": [
+       {
+        "at": 0.0,
+        "color": "cone"
+       },
+       {
+        "at": 1.0,
+        "color": "cone_clear"
+       }
+      ]
+     }
+    },
+    {
+     "id": "lamp_halo",
+     "type": "path",
+     "d": "M-130 236 C-130 191.8 -71.8 156 0 156 C71.8 156 130 191.8 130 236 C130 280.2 71.8 316 0 316 C-71.8 316 -130 280.2 -130 236 Z",
+     "fill": {
+      "gradient": "radial",
+      "center": [
+       0,
+       236
+      ],
+      "radius": 130,
+      "stops": [
+       {
+        "at": 0,
+        "color": "gold_mid"
+       },
+       {
+        "at": 1,
+        "color": "gold_clear"
+       }
+      ]
+     }
+    },
+    {
+     "id": "lamp_shade",
+     "type": "path",
+     "d": "M-3 0 L3 0 L3 176 L-3 176 Z M-28 172 L28 172 L74 228 L-74 228 Z",
+     "fill": "shade"
+    },
+    {
+     "id": "lamp_bulb",
+     "type": "ellipse",
+     "x": 0,
+     "y": 230,
+     "rx": 26,
+     "ry": 12,
+     "fill": "ember",
+     "tracks": [
+      {
+       "property": "opacity",
+       "duration_ms": 3400,
+       "easing": "ease_in_out",
+       "loop": "ping_pong",
+       "keyframes": [
+        {
+         "t": 0,
+         "v": 0.85
+        },
+        {
+         "t": 0.5,
+         "v": 1
+        },
+        {
+         "t": 1,
+         "v": 0.9
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "transform": {
+    "x": 820,
+    "y": 0
+   },
+   "tracks": [
+    {
+     "property": "rotation",
+     "duration_ms": 7000,
+     "easing": "ease_in_out",
+     "loop": "ping_pong",
+     "keyframes": [
+      {
+       "t": 0,
+       "v": -1.2
+      },
+      {
+       "t": 1,
+       "v": 1.2
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anchors": [],
+ "reduced_motion": {
+  "still_time_ms": 0
+ },
+ "preview": {
+  "frames_ms": [
+   0,
+   1500
+  ],
+  "states": [
+   {
+    "focus": -1
+   },
+   {
+    "focus": 0
+   },
+   {
+    "focus": 1
+   },
+   {
+    "focus": 2
+   },
+   {
+    "focus": 3
+   },
+   {
+    "focus": 4
+   },
+   {
+    "focus": 5
+   }
+  ]
+ }
+}

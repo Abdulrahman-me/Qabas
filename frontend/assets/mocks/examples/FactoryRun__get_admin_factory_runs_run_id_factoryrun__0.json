@@ -1,0 +1,162 @@
+{
+ "run_id": "run_42",
+ "unit_id": "unit_7",
+ "lesson_type": "story",
+ "brief": "الدرس 7.4: قصة إبراهيم عليه السلام مع الكوكب والقمر والشمس من سورة الأنعام.",
+ "status": "awaiting_gate1",
+ "stage": "plan",
+ "stages": [
+  {
+   "stage": "plan",
+   "status": "done",
+   "started_at": "2026-10-04T14:19:00Z",
+   "finished_at": "2026-10-04T14:20:00Z"
+  },
+  {
+   "stage": "decompose",
+   "status": "pending",
+   "started_at": null,
+   "finished_at": null
+  }
+ ],
+ "plan": {
+  "title": {
+   "ar": "إبراهيم يبحث عن ربه",
+   "en": "Ibrahim Searches for His Lord"
+  },
+  "central_question": {
+   "ar": "كيف انتهى إبراهيم إلى أن ما يغيب لا يستحق العبادة؟",
+   "en": "How did Ibrahim conclude that what sets does not deserve worship?"
+  },
+  "supporting_understandings": [
+   {
+    "ar": "ما رآه إبراهيم: الكوكب والقمر والشمس تظهر ثم تغيب.",
+    "en": "What Ibrahim saw: the star, the moon and the sun appear and then set."
+   },
+   {
+    "ar": "ما استنتجه: ما يتغيّر ويغيب لا يكون رباً يستحق العبادة.",
+    "en": "What he concluded: what changes and disappears cannot be a Lord worthy of worship."
+   },
+   {
+    "ar": "عِظَم المخلوقات يدل على عظمة خالقها، ولا يجعلها معبودة.",
+    "en": "The greatness of created things points to their Creator's greatness; it does not make them worthy of worship."
+   }
+  ],
+  "depth_profile": "standard",
+  "primary_learning_outcome": {
+   "ar": "أن يشرح المتعلم، كما يروي القرآن، لماذا انتهى إبراهيم إلى أن ما يغيب لا يستحق العبادة.",
+   "en": "The learner can explain, as the Qur'an narrates it, why Ibrahim concluded that what sets does not deserve worship."
+  },
+  "objectives": [
+   {
+    "ar": "بعد الدرس يستطيع المتعلم أن يشرح لماذا لا يستحق الكوكب أو القمر أو الشمس العبادة.",
+    "en": "After the lesson, the learner can explain why stars, the moon, or the sun do not deserve worship."
+   }
+  ],
+  "prerequisite_concept_ids": [
+   "con_allah_one"
+  ],
+  "introduced_concept_ids": [
+   "con_creation_not_worshipped"
+  ],
+  "new_terms": [
+   {
+    "ar": "الآفلين",
+    "en": "Those that set"
+   }
+  ],
+  "target_misconceptions": [
+   {
+    "misconception_id": null,
+    "title": {
+     "ar": "كل ما هو عظيم في الكون يستحق التقديس",
+     "en": "Anything great in the universe deserves worship"
+    },
+    "description": {
+     "ar": "…",
+     "en": "…"
+    }
+   }
+  ],
+  "lesson_type": "story",
+  "estimated_minutes": 6,
+  "lesson_arc": {
+   "pattern": "story",
+   "rationale": {
+    "ar": "يعيش المتعلم الملاحظة مع إبراهيم ويتوقع قبل أن يرى الخلاصة، ثم يطبقها على مثال معاصر.",
+    "en": "The learner follows Ibrahim's observations and predicts before seeing the conclusion, then applies it to a modern example."
+   },
+   "steps": [
+    {
+     "step_id": "setting",
+     "technique": "scenario",
+     "experience": {
+      "ar": "ليلة في الصحراء ونجم لامع يلفت النظر.",
+      "en": "A night in the desert and a bright star that draws the eye."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "predict",
+     "technique": "prediction",
+     "experience": {
+      "ar": "يتوقع المتعلم ماذا يستنتج من يرى النجم يغيب.",
+      "en": "The learner predicts what someone would conclude when the star sets."
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "turning_point",
+     "technique": "story",
+     "experience": {
+      "ar": "القمر ثم الشمس يغيبان كذلك.",
+      "en": "The moon and then the sun set as well."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "consequence",
+     "technique": "explanation",
+     "experience": {
+      "ar": "خلاصة إبراهيم كما ترويها الآيات.",
+      "en": "Ibrahim's conclusion as the verses narrate it."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "apply",
+     "technique": "practice",
+     "experience": {
+      "ar": "يطبق المتعلم الفكرة على أشياء عظيمة في حياتنا اليوم.",
+      "en": "The learner applies the idea to great things in today's life."
+     },
+     "interactive": true
+    }
+   ]
+  },
+  "reasoning_tools": [
+   {
+    "tool": "observation",
+    "justification": {
+     "ar": "القصة قائمة على مشاهدة النجم والقمر والشمس وهي تغيب.",
+     "en": "The story turns on watching the star, the moon and the sun set."
+    }
+   },
+   {
+    "tool": "inference",
+    "justification": {
+     "ar": "هدف الدرس هو الخلاصة المستنتجة مما شوهد: ما يغيب لا يكون رباً.",
+     "en": "The outcome is the conclusion drawn from what was observed: what disappears cannot be the Lord."
+    }
+   }
+  ],
+  "standalone_eligible": false,
+  "content_budget": 4,
+  "exercise_budget": 3
+ },
+ "draft": null,
+ "qa_report": null,
+ "error": null,
+ "review_digest": "4eb85084abe69ff1342e1a476aa9d4280d51cc67afc2815b0b9578d330a33e1a",
+ "published": null
+}

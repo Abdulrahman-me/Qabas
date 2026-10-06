@@ -1,0 +1,621 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l12_nightpath",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "emerald": "#0B5A52",
+    "night": "#073C37",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "ink": "#16233A",
+    "slate": "#566476",
+    "clear": "#F6E3B400",
+    "sand": "#D8C1A0",
+    "wood": "#86664C",
+    "wood_dark": "#604B3D",
+    "paper": "#FFF9E9",
+    "stone": "#89978B",
+    "far": "#9CB3B0",
+    "skin": "#C79C78",
+    "sky": "#DCEBE7"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 5,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "sky",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "ink"
+          },
+          {
+            "at": 1,
+            "color": "night"
+          }
+        ]
+      }
+    },
+    {
+      "id": "moon",
+      "type": "ellipse",
+      "x": 1265,
+      "y": 197,
+      "rx": 55,
+      "ry": 55,
+      "fill": "mint",
+      "opacity": 0.85
+    },
+    {
+      "id": "far_hills",
+      "type": "path",
+      "d": "M0 624 Q250 481 500 626 Q770 420 1080 605 Q1320 449 1600 588 V1000 H0 Z",
+      "fill": "slate",
+      "opacity": 0.36
+    },
+    {
+      "id": "near_hills",
+      "type": "path",
+      "d": "M0 810 Q380 601 738 788 Q1110 630 1600 762 V1000 H0 Z",
+      "fill": "night"
+    },
+    {
+      "id": "path",
+      "type": "path",
+      "d": "M428 1000 Q561 850 835 790 Q1174 716 1068 639 Q1002 591 839 558 L860 548 Q1058 568 1142 626 Q1278 722 959 832 Q772 897 760 1000 Z",
+      "fill": "wood_dark"
+    },
+    {
+      "id": "path_inner",
+      "type": "path",
+      "d": "M498 1000 Q616 859 874 803 Q1174 728 1113 658 Q1068 602 849 553 L861 548 Q1090 589 1142 650 Q1236 748 943 832 Q781 895 703 1000 Z",
+      "fill": "sand",
+      "opacity": 0.23
+    },
+    {
+      "id": "glow_0",
+      "type": "ellipse",
+      "x": 625,
+      "y": 842,
+      "rx": 122,
+      "ry": 122,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          625,
+          842
+        ],
+        "radius": 122,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 0
+            }
+          },
+          "set": {
+            "opacity": 0.65
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "post_0",
+      "type": "rect",
+      "x": 620,
+      "y": 851,
+      "w": 10,
+      "h": 83,
+      "fill": "wood"
+    },
+    {
+      "id": "lantern_0",
+      "type": "rect",
+      "x": 600,
+      "y": 799,
+      "w": 50,
+      "h": 57,
+      "fill": "ember",
+      "corner": 9,
+      "opacity": 0.12,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 0
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 550,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "glow_1",
+      "type": "ellipse",
+      "x": 872,
+      "y": 757.26,
+      "rx": 100.03999999999999,
+      "ry": 100.03999999999999,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          872,
+          757.26
+        ],
+        "radius": 100.03999999999999,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 0.65
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "post_1",
+      "type": "rect",
+      "x": 867.9,
+      "y": 764.64,
+      "w": 8.2,
+      "h": 68.06,
+      "fill": "wood"
+    },
+    {
+      "id": "lantern_1",
+      "type": "rect",
+      "x": 851.5,
+      "y": 722.0,
+      "w": 41.0,
+      "h": 46.739999999999995,
+      "fill": "ember",
+      "corner": 7.38,
+      "opacity": 0.12,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 550,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "glow_2",
+      "type": "ellipse",
+      "x": 1088,
+      "y": 700.1,
+      "rx": 85.39999999999999,
+      "ry": 85.39999999999999,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          1088,
+          700.1
+        ],
+        "radius": 85.39999999999999,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 0.65
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "post_2",
+      "type": "rect",
+      "x": 1084.5,
+      "y": 706.4,
+      "w": 7.0,
+      "h": 58.099999999999994,
+      "fill": "wood"
+    },
+    {
+      "id": "lantern_2",
+      "type": "rect",
+      "x": 1070.5,
+      "y": 670.0,
+      "w": 35.0,
+      "h": 39.9,
+      "fill": "ember",
+      "corner": 6.3,
+      "opacity": 0.12,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 550,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "glow_3",
+      "type": "ellipse",
+      "x": 1132,
+      "y": 625.37,
+      "rx": 71.97999999999999,
+      "ry": 71.97999999999999,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          1132,
+          625.37
+        ],
+        "radius": 71.97999999999999,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 3
+            }
+          },
+          "set": {
+            "opacity": 0.65
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "post_3",
+      "type": "rect",
+      "x": 1129.05,
+      "y": 630.68,
+      "w": 5.8999999999999995,
+      "h": 48.97,
+      "fill": "wood"
+    },
+    {
+      "id": "lantern_3",
+      "type": "rect",
+      "x": 1117.25,
+      "y": 600.0,
+      "w": 29.5,
+      "h": 33.629999999999995,
+      "fill": "ember",
+      "corner": 5.31,
+      "opacity": 0.12,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 3
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 550,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "glow_4",
+      "type": "ellipse",
+      "x": 993,
+      "y": 566.64,
+      "rx": 58.559999999999995,
+      "ry": 58.559999999999995,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          993,
+          566.64
+        ],
+        "radius": 58.559999999999995,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 4
+            }
+          },
+          "set": {
+            "opacity": 0.65
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "post_4",
+      "type": "rect",
+      "x": 990.6,
+      "y": 570.96,
+      "w": 4.8,
+      "h": 39.839999999999996,
+      "fill": "wood"
+    },
+    {
+      "id": "lantern_4",
+      "type": "rect",
+      "x": 981.0,
+      "y": 546.0,
+      "w": 24.0,
+      "h": 27.36,
+      "fill": "ember",
+      "corner": 4.32,
+      "opacity": 0.12,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 4
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 550,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "glow_5",
+      "type": "ellipse",
+      "x": 839,
+      "y": 531.77,
+      "rx": 47.58,
+      "ry": 47.58,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          839,
+          531.77
+        ],
+        "radius": 47.58,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 5
+            }
+          },
+          "set": {
+            "opacity": 0.65
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "post_5",
+      "type": "rect",
+      "x": 837.05,
+      "y": 535.28,
+      "w": 3.9000000000000004,
+      "h": 32.370000000000005,
+      "fill": "wood"
+    },
+    {
+      "id": "lantern_5",
+      "type": "rect",
+      "x": 829.25,
+      "y": 515.0,
+      "w": 19.5,
+      "h": 22.23,
+      "fill": "ember",
+      "corner": 3.5100000000000002,
+      "opacity": 0.12,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 5
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 550,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "foreground",
+      "type": "path",
+      "d": "M0 1000 V886 Q142 861 266 956 L303 1000 Z M1600 1000 V875 Q1435 902 1320 1000 Z",
+      "fill": "ink"
+    },
+    {
+      "id": "leaves",
+      "type": "path",
+      "d": "M155 912 Q107 842 90 819 Q154 846 174 899 Q193 839 224 830 Q214 885 183 923 Z M1470 928 Q1430 871 1405 839 Q1469 861 1486 908 Q1508 861 1546 846 Q1531 901 1501 939 Z",
+      "fill": "emerald",
+      "tracks": [
+        {
+          "property": "rotation",
+          "duration_ms": 5500,
+          "easing": "ease_in_out",
+          "loop": "ping_pong",
+          "keyframes": [
+            {
+              "t": 0,
+              "v": -0.7
+            },
+            {
+              "t": 1,
+              "v": 0.7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      },
+      {
+        "beat": 4
+      },
+      {
+        "beat": 5
+      }
+    ]
+  }
+}

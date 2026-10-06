@@ -1,0 +1,141 @@
+{
+  "session_id": "ses_mock_u0_l9_en_explorer",
+  "lesson_id": "les_u0_l9",
+  "answers": {
+    "ex_u0_l09_01": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l09_02": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_2"
+        }
+      ]
+    },
+    "ex_u0_l09_03": {
+      "segment_id": "seg_3"
+    },
+    "ex_u0_l09_04": {
+      "option_id": "opt_c"
+    }
+  },
+  "feedback": {
+    "ex_u0_l09_01": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A book's account of its source identifies its claim, but does not establish that claim by itself."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l09_self_proof"
+      }
+    },
+    "ex_u0_l09_02": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_2"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "State the claim accurately, then choose evidence relevant to it."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l09_03": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Understanding the challenge requires knowing what likeness means and how an attempted response would be assessed."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "Reading a translation alone does not allow examination of every feature of the original Arabic text."
+        }
+      ],
+      "option_misconceptions": {},
+      "targets_misconception_id": "mis_u0_l09_translation_test"
+    },
+    "ex_u0_l09_04": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "To establish a contradiction, two statements must conflict in the same meaning and under the same conditions."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "Not immediately understanding two statements proves neither a contradiction nor that every objection is unfounded."
+        }
+      ],
+      "option_misconceptions": {},
+      "option_feedback": {
+        "opt_a": [
+          {
+            "type": "text",
+            "text": "Examine the difference in rendering before attributing a conflict to the original."
+          }
+        ],
+        "opt_b": [
+          {
+            "type": "text",
+            "text": "Identifying the claim does not replace examining the objection."
+          }
+        ],
+        "opt_c": [
+          {
+            "type": "text",
+            "text": "This step addresses the particular difficulty the reader encountered."
+          }
+        ]
+      }
+    }
+  }
+}

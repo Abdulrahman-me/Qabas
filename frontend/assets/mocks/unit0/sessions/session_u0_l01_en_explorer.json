@@ -1,0 +1,1348 @@
+{
+  "session_id": "ses_mock_u0_l1_en_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l1",
+  "lesson_version": 1,
+  "title": "Do You Have to See It to Know It?",
+  "subtitle": "Follow the reasoning and mark its limits.",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "Distinguish how you know something, what your evidence establishes, and when a report needs further checking."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 7,
+    "exercises": 5,
+    "scored": 5
+  },
+  "source_count": 0,
+  "total_exercises": 5,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l01_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "Imagine your grandmother calls from the village and says the apricot tree you planted has fruit."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "You are far away. She stands beside the tree, looking at its branches."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "Must you see it yourself before you can know that it has fruit?"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l01_apricot",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l01_apricot_v1_a2dd5316274d56bc8548652bfae28de472e5b8a533788c4ad0ea52b0647f5890.json",
+          "mime_type": "application/json",
+          "sha256": "a2dd5316274d56bc8548652bfae28de472e5b8a533788c4ad0ea52b0647f5890",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_apricot_v1_76f20ad9e8_40ece025f7bc614ca5764f94a58a0b2279aa687d942992a10592be7790767b36.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "A faceless grandmother beside an apricot tree with a phone.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_u0_l01_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Can you know something you have not seen with your own eyes?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Yes, depending on the evidence."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I need to see it myself."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I have not decided."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Keep your answer in mind and examine three situations before returning to it."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l01_03",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "A box at the door"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l01_parcel",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l01_parcel_v1_719a68571b968a2e4c11d160b73bcfb75dc56971603cda749b97c09f7882b78d.json",
+          "mime_type": "application/json",
+          "sha256": "719a68571b968a2e4c11d160b73bcfb75dc56971603cda749b97c09f7882b78d",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_parcel_v1_76f20ad9e8_86a7c039fd57e740c8db8c46f7bd03cff795f7336ac0b2dc6b76e185ecb7241d.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "A closed box with a blank label at a house door.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l01_005",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Imagine stepping outside and finding a closed box at your door, with a label bearing your name."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l01_006",
+            "spans": [
+              {
+                "type": "text",
+                "text": "What you observed was the box and label. You did not see anyone bring it."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l01_007",
+            "spans": [
+              {
+                "type": "text",
+                "text": "In this ordinary situation, the parcel strongly supports the conclusion that someone brought it."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l01_008",
+            "spans": [
+              {
+                "type": "text",
+                "text": "It may reasonably be your expected order, but the label alone does not reveal its contents."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l01_009",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The evidence identifies neither the person who brought it nor its arrival time. Those are separate questions."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l01_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_knowledge_routes",
+          "con_u0_evidence_limits"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which statement separates observation from inference?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "I saw a delivery worker place it, because the box is there."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "I observed a box and inferred that someone brought it."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "I saw the contents from my name on the label."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l01_05",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "An open book and warm tea"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l01_library",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l01_library_v1_b3c4fb50b05c65857dcb921a3727e687397d7ea5648ff656ba16ce149f8aca25.json",
+          "mime_type": "application/json",
+          "sha256": "b3c4fb50b05c65857dcb921a3727e687397d7ea5648ff656ba16ce149f8aca25",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_library_v1_76f20ad9e8_b09a2adfdd748d9a74ad537a65f9a60c351c1b22bfaac83fe7734d1611d7e377.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "A library table with an open book and gently steaming tea.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l01_011",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Imagine a table in a quiet library, with an open book and a cup of tea."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l01_012",
+            "spans": [
+              {
+                "type": "text",
+                "text": "You touch the cup and feel its warmth. You see nobody at the table."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l01_013",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The cup’s warmth is a direct observation. Someone having been here recently is a reasonable inference, not an observation."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l01_014",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The tea might be kept warm another way, so the cup alone cannot establish when someone left."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_06",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l01_02",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_knowledge_routes",
+          "con_u0_evidence_limits"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which wording best fits these traces?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The reader left exactly two minutes ago."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Nothing can be inferred."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Someone was probably here recently, without knowing who."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l01_07",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "The routes you just used"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l01_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Direct observation includes more than sight. You sense the cup’s warmth through touch."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l01_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Inference connects a trace with an explanation while keeping reasonable alternatives in view."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l01_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Your grandmother’s report is a third route, if she is truthful and actually looking at the tree."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l01_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "There are two different questions about a source: are they truthful, and are they placed to know?"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_08",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l01_03",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_knowledge_routes",
+          "con_u0_evidence_limits"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Classify the route of knowledge, rather than its subject."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "Direct observation",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "Inference",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_3",
+              "label": "Report",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "You taste a piece and sense its sweetness."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "You smell coffee from a nearby cup."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "You see a parcel and infer that someone brought it."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Your truthful grandmother reports what she sees on the tree."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_5",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "From warm tea, you infer that someone was probably here recently."
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l01_09",
+      "type": "story",
+      "label": "Scenario",
+      "title": "The last bus",
+      "origin": null,
+      "provenance": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l01_021",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Imagine a traveller who needs the last bus to get home."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l01_022",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A nearby passenger confidently says it was cancelled. The traveller begins looking for another way home."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 0
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l01_last_bus",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l01_last_bus_v1_7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f.json",
+              "mime_type": "application/json",
+              "sha256": "7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_last_bus_v1_76f20ad9e8_c0521768373e1503b21441bfa455e32f5ef24021fd57ddfa3833426064a8b824.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 0
+            },
+            "alt": "Two faceless passengers beside a bus at a night station.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l01_023",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveller asks how the passenger knows, and learns that he overheard another passenger."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l01_024",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The passenger cannot see the departure system and has not asked station staff."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l01_last_bus",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l01_last_bus_v1_7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f.json",
+              "mime_type": "application/json",
+              "sha256": "7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_last_bus_v1_cd92849bcd_c0521768373e1503b21441bfa455e32f5ef24021fd57ddfa3833426064a8b824.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "Two passengers near a bus, with a ticket window behind them.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l01_025",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveller goes to the ticket window before changing plans."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l01_026",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The clerk checks the current operating record and confirms that the bus is delayed but still running."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l01_last_bus",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l01_last_bus_v1_7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f.json",
+              "mime_type": "application/json",
+              "sha256": "7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_last_bus_v1_fcb38353b5_47ddde118e0bb0a2db315ef55fe23767af30d499c202c3de9763d6419c6c4cb5.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "A traveller and a lit ticket window with a clerk and text-free screen.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_4",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l01_027",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveller waits near the platform, having distinguished someone repeating a report from someone who checked it."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l01_last_bus",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l01_last_bus_v1_7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f.json",
+              "mime_type": "application/json",
+              "sha256": "7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_last_bus_v1_19cf76ac47_47ddde118e0bb0a2db315ef55fe23767af30d499c202c3de9763d6419c6c4cb5.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "A bus beside the station platform and ticket window.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_10",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l01_04",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_knowledge_routes",
+          "con_u0_evidence_limits"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Why was the clerk’s answer stronger here?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "He checked the current operating record available to him."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The latest report is always right."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The passenger must have been lying."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l01_11",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which report would you check more carefully?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "A neighbour who uses the bakery tells you its opening time."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "A stranger says the tap water is unsafe today."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I would check both equally."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Consider the source’s access, the stakes of the decision, and whether the report is unusual."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l01_12",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Checking that fits the decision"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l01_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "An ordinary report from someone truthful and placed to know may be enough for a simple decision."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l01_032",
+            "spans": [
+              {
+                "type": "text",
+                "text": "As the consequences grow, you need clearer evidence. Confidence in a voice is not verification."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l01_033",
+            "spans": [
+              {
+                "type": "text",
+                "text": "For the water report, look for a notice from the relevant local authority instead of relying on an anonymous warning."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l01_034",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Asking for verification does not accuse the speaker of lying. They may be honest but uninformed."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_13",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l01_05",
+        "type": "scenario",
+        "concept_ids": [
+          "con_u0_knowledge_routes",
+          "con_u0_evidence_limits"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "What is the best way to evaluate this clip?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Believe it because he speaks confidently."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Check the source’s identity and evidence, and consult a qualified professional before a health decision."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Reject every report from one person."
+                }
+              ]
+            }
+          ],
+          "situation": [
+            {
+              "type": "text",
+              "text": "Imagine a clip of an unnamed man claiming that a herbal drink can replace diabetes medication."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l01_14",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "What can you now do?"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l01_036",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Ask whether you sensed this yourself, inferred it, or received a report."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l01_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Separate a trace from its interpretation, and choose wording that matches your evidence."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l01_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Check the source’s truthfulness and access, and investigate more carefully when the stakes grow."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "Notice three things you know today. Identify how you know each and the limits of what you can say."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l1_topic_1",
+        "title": "Ways of knowing",
+        "concept_ids": [
+          "con_u0_knowledge_routes"
+        ]
+      },
+      {
+        "topic_id": "les_u0_l1_topic_2",
+        "title": "Limits of evidence",
+        "concept_ids": [
+          "con_u0_evidence_limits"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "Can you now explain how you know something and what your evidence does not establish?"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_direct_observation": {
+      "term_id": "term_direct_observation",
+      "text": "Direct observation",
+      "arabic": "الملاحظة المباشرة",
+      "transliteration": "al-mulahaza al-mubashira",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "What you sense for yourself, through sight, hearing, smell, or another sense."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "You touch the cup and feel its warmth."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l1",
+      "lesson_title": "Do You Have to See It to Know It?"
+    },
+    "term_inference": {
+      "term_id": "term_inference",
+      "text": "Inference",
+      "arabic": "الاستنتاج",
+      "transliteration": "al-istintaj",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "A conclusion reached by thinking about evidence, distinct from what you observed."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "You see a parcel at the door and infer that someone brought it."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l1",
+      "lesson_title": "Do You Have to See It to Know It?"
+    }
+  },
+  "answers": []
+}

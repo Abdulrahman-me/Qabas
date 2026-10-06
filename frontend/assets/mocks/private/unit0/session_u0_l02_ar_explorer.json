@@ -1,0 +1,111 @@
+{
+  "session_id": "ses_mock_u0_l2_ar_explorer",
+  "lesson_id": "les_u0_l2",
+  "answers": {
+    "ex_u0_l02_01": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l02_02": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_1"
+        }
+      ]
+    },
+    "ex_u0_l02_03": {
+      "segment_id": "seg_3"
+    },
+    "ex_u0_l02_04": {
+      "value": false,
+      "reason_option_id": "opt_b"
+    }
+  },
+  "feedback": {
+    "ex_u0_l02_01": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "حدود المشاهدة تخص ما يعرفه الحارس؛ لا تحوّل غياب المعلومة إلى غياب السبب."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l02_unknown_is_absent"
+      }
+    },
+    "ex_u0_l02_02": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_1"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الصندوق والمطبخ والغرفة أشياء موجودة، حتى مع غياب محتواها المقصود."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l02_03": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الانتظار والإنتاج نُسبا إلى شيء يعمل؛ وهذا يخالف تعريف العدم الذي بدأت به العبارة."
+        }
+      ],
+      "option_misconceptions": {
+        "seg_3": "mis_u0_l02_nothing_power"
+      }
+    },
+    "ex_u0_l02_04": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "يمكن أن تفوتك المعلومة؛ لا يجيز ذلك إثبات غياب السبب، ولا تصديق أي تفسير بلا فحص."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l02_unknown_is_absent",
+        "opt_c": "mis_u0_l02_automatic_proof"
+      }
+    }
+  }
+}

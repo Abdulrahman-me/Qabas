@@ -1,0 +1,368 @@
+{
+ "session_id": "ses_t12_ar_explorer",
+ "kind": "lesson",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": "unit_test_1",
+ "lesson_id": "les_t1_2",
+ "lesson_version": 1,
+ "title": "[explorer] نص اختباري: درس 1.3",
+ "subtitle": null,
+ "lesson_type": "practice",
+ "reviewed_by": "لجنة المراجعة الشرعية",
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "هدف اختباري."
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 4,
+  "exercises": 4,
+  "scored": 4
+ },
+ "source_count": 0,
+ "total_exercises": 4,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_p",
+   "type": "paragraph",
+   "sentences": [
+    {
+     "sentence_id": "s1",
+     "spans": [
+      {
+       "type": "text",
+       "text": "[explorer] نص اختباري: الدرس 1.3"
+      }
+     ],
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "block_id": "b_v",
+   "type": "visual",
+   "visual": {
+    "kind": "image",
+    "key": null,
+    "version": null,
+    "params": null,
+    "image": {
+     "url": "mock-asset://test/u1l2.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "scene": null,
+    "fallback_image": null,
+    "fallback_params": null,
+    "alt": "[explorer] نص اختباري: صورة",
+    "overlays": []
+   },
+   "caption": null
+  },
+  {
+   "block_id": "b_x0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t12_0",
+    "type": "order_steps",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "remember"
+    },
+    "framing": null,
+    "payload": {
+     "steps": [
+      {
+       "step_id": "st_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "غسل الوجه"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "step_id": "st_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "النية"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "step_id": "st_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "غسل اليدين إلى المرفقين"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "step_id": "st_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "المضمضة والاستنشاق"
+        }
+       ],
+       "secondary_label": null
+      }
+     ],
+     "presentation": "plain"
+    }
+   }
+  },
+  {
+   "block_id": "b_x1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t12_1",
+    "type": "scenario",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "situation": [
+      {
+       "type": "text",
+       "text": "دعاك زميلك إلى عشاء عمل، وسيُقدَّم فيه الخمر."
+      }
+     ],
+     "options": [
+      {
+       "option_id": "s_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أحضر وأعتذر بلطف عن الخمر، وأشرب شيئاً آخر."
+        }
+       ]
+      },
+      {
+       "option_id": "s_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أشرب قليلاً حتى لا أُحرج زميلي."
+        }
+       ]
+      },
+      {
+       "option_id": "s_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أقاطع زميلي ولا أكلّمه."
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t12_2",
+    "type": "timeline_order",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "events": [
+      {
+       "event_id": "t_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الهجرة إلى المدينة"
+        }
+       ]
+      },
+      {
+       "event_id": "t_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "فتح مكة"
+        }
+       ]
+      },
+      {
+       "event_id": "t_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "نزول الوحي في غار حراء"
+        }
+       ]
+      },
+      {
+       "event_id": "t_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "غزوة بدر"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t12_3",
+    "type": "map_place",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "map_pins",
+     "visual": {
+      "kind": "image",
+      "key": null,
+      "version": null,
+      "params": null,
+      "image": {
+       "url": "mock-asset://maps/hijaz_test.webp",
+       "mime_type": "image/webp",
+       "width": 1600,
+       "height": 1200
+      },
+      "scene": null,
+      "fallback_image": null,
+      "fallback_params": null,
+      "alt": "خريطة منطقة الحجاز بلا أسماء",
+      "overlays": []
+     },
+     "question": [
+      {
+       "type": "text",
+       "text": "أين تقع المدينة المنورة؟"
+      }
+     ],
+     "pins": [
+      {
+       "pin_id": "p_1",
+       "x_pct": 58.0,
+       "y_pct": 71.5,
+       "label": null,
+       "radius_pct": null,
+       "anchor_id": null
+      },
+      {
+       "pin_id": "p_2",
+       "x_pct": 52.5,
+       "y_pct": 38.0,
+       "label": null,
+       "radius_pct": null,
+       "anchor_id": null
+      },
+      {
+       "pin_id": "p_3",
+       "x_pct": 47.0,
+       "y_pct": 45.2,
+       "label": null,
+       "radius_pct": null,
+       "anchor_id": null
+      }
+     ],
+     "interaction": null
+    }
+   }
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "تحدٍّ اختباري."
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_1",
+    "title": "موضوع اختباري",
+    "concept_ids": [
+     "con_test"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "سؤال الغد الاختباري."
+   }
+  ]
+ },
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

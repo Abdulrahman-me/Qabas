@@ -1,0 +1,1348 @@
+{
+  "session_id": "ses_mock_u0_l1_ar_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l1",
+  "lesson_version": 1,
+  "title": "هل يجب أن تراه لتعرفه؟",
+  "subtitle": "فكّر في السبب، وحدّد حدود النتيجة.",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "ميّز كيف عرفت شيئاً، وما الذي يثبته دليلك، ومتى يحتاج الخبر إلى فحص إضافي."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 7,
+    "exercises": 5,
+    "scored": 5
+  },
+  "source_count": 0,
+  "total_exercises": 5,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l01_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "تخيّل أن جدّتك تتصل من القرية، وتخبرك أن شجرة المشمش التي زرعتها أثمرت."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "أنت بعيد، وهي تقف بجوار الشجرة وتنظر إلى أغصانها."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "هل يلزم أن تراها بنفسك قبل أن تعرف أن لها ثمراً؟"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l01_apricot",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l01_apricot_v1_a2dd5316274d56bc8548652bfae28de472e5b8a533788c4ad0ea52b0647f5890.json",
+          "mime_type": "application/json",
+          "sha256": "a2dd5316274d56bc8548652bfae28de472e5b8a533788c4ad0ea52b0647f5890",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_apricot_v1_76f20ad9e8_40ece025f7bc614ca5764f94a58a0b2279aa687d942992a10592be7790767b36.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "جدّة بوجه خالٍ من الملامح بجوار شجرة مشمش وهاتف.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_u0_l01_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "هل يمكن أن تعرف شيئاً لم تره بعينيك؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "نعم، بحسب الدليل."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أحتاج إلى رؤيته بنفسي."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "لم أحسم ذلك."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "احتفظ بإجابتك، وافحص ثلاثة مواقف قبل أن تعود إليها."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l01_03",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "صندوق عند الباب"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l01_parcel",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l01_parcel_v1_719a68571b968a2e4c11d160b73bcfb75dc56971603cda749b97c09f7882b78d.json",
+          "mime_type": "application/json",
+          "sha256": "719a68571b968a2e4c11d160b73bcfb75dc56971603cda749b97c09f7882b78d",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_parcel_v1_76f20ad9e8_86a7c039fd57e740c8db8c46f7bd03cff795f7336ac0b2dc6b76e185ecb7241d.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "صندوق مغلق وبطاقة بلا كتابة عند باب منزل.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l01_005",
+            "spans": [
+              {
+                "type": "text",
+                "text": "تخيّل أنك خرجت فوجدت صندوقاً مغلقاً عند بابك، وعليه بطاقة باسمك."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l01_006",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ما شاهدته هو الصندوق والبطاقة؛ لم تشاهد أحداً يحضره."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l01_007",
+            "spans": [
+              {
+                "type": "text",
+                "text": "في هذا الموقف العادي، وجود طرد هناك يدعم بقوة أن أحداً أحضره."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l01_008",
+            "spans": [
+              {
+                "type": "text",
+                "text": "أنه طلبك المنتظر احتمال معقول، لكن البطاقة وحدها لا تكشف محتواه."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l01_009",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الدليل لا يحدّد من أحضره، ولا ساعة وصوله؛ هذه أسئلة أخرى."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l01_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_knowledge_routes",
+          "con_u0_evidence_limits"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي عبارة تفصل المشاهدة عن الاستنتاج؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "رأيت عامل التوصيل يضع الصندوق؛ لأن الصندوق موجود."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "شاهدت صندوقاً، واستنتجت أن أحداً أحضره."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "رأيت محتوى الصندوق من اسمي على البطاقة."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l01_05",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "كتاب مفتوح، وشاي دافئ"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l01_library",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l01_library_v1_b3c4fb50b05c65857dcb921a3727e687397d7ea5648ff656ba16ce149f8aca25.json",
+          "mime_type": "application/json",
+          "sha256": "b3c4fb50b05c65857dcb921a3727e687397d7ea5648ff656ba16ce149f8aca25",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_library_v1_76f20ad9e8_b09a2adfdd748d9a74ad537a65f9a60c351c1b22bfaac83fe7734d1611d7e377.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "طاولة مكتبة عليها كتاب مفتوح وكوب شاي يتصاعد منه بخار خفيف.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l01_011",
+            "spans": [
+              {
+                "type": "text",
+                "text": "تخيّل طاولة في مكتبة هادئة، عليها كتاب مفتوح وكوب شاي."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l01_012",
+            "spans": [
+              {
+                "type": "text",
+                "text": "تلمس الكوب فتشعر بدفئه؛ لا ترى أحداً عند الطاولة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l01_013",
+            "spans": [
+              {
+                "type": "text",
+                "text": "دفء الكوب ملاحظة مباشرة؛ أن شخصاً كان هنا قريباً استنتاج معقول، لا مشاهدة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l01_014",
+            "spans": [
+              {
+                "type": "text",
+                "text": "قد يُحفظ الشاي دافئاً بوسيلة أخرى؛ لذلك لا نحدّد وقت مغادرة شخص من الكوب وحده."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_06",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l01_02",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_knowledge_routes",
+          "con_u0_evidence_limits"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "ما العبارة الأنسب لهذا الأثر؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "القارئ غادر قبل دقيقتين بالضبط."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لا يمكن استنتاج أي شيء."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يرجّح أن أحداً كان هنا قريباً، دون معرفة من هو."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l01_07",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "الطرق التي استخدمتها"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l01_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الملاحظة المباشرة ليست الرؤية فقط؛ دفء الكوب تدركه باللمس."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l01_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الاستنتاج يربط الأثر بتفسيره، مع إبقاء البدائل المعقولة في الحساب."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l01_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "خبر جدّتك طريق ثالث، إذا كانت صادقة وتنظر فعلاً إلى الشجرة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l01_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "للمصدر سؤالان مختلفان: هل يصدق، وهل هو في موضع يسمح له بأن يعرف؟"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_08",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l01_03",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_knowledge_routes",
+          "con_u0_evidence_limits"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "صنّف طريق المعرفة، لا موضوعها."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "ملاحظة مباشرة",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "استنتاج",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_3",
+              "label": "خبر",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تذوق قطعة فتشعر بطعمها الحلو."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تشم رائحة قهوة من كوب قريب."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ترى طرداً فتستنتج أن أحداً أحضره."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "جدّتك الصادقة تخبرك بما تراه على الشجرة."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_5",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "من الشاي الدافئ ترجّح حضور شخص قريباً."
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l01_09",
+      "type": "story",
+      "label": "موقف",
+      "title": "الحافلة الأخيرة",
+      "origin": null,
+      "provenance": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l01_021",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تخيّل مسافراً يحتاج إلى آخر حافلة ليصل إلى بيته."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l01_022",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "راكب بجواره يؤكد أنها أُلغيت؛ فيبدأ المسافر بالبحث عن بديل."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 0
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l01_last_bus",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l01_last_bus_v1_7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f.json",
+              "mime_type": "application/json",
+              "sha256": "7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_last_bus_v1_76f20ad9e8_c0521768373e1503b21441bfa455e32f5ef24021fd57ddfa3833426064a8b824.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 0
+            },
+            "alt": "راكبان بوجهين خاليين من الملامح قرب حافلة في محطة ليلية.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l01_023",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يسأل المسافر كيف عرف الراكب؛ فيتبيّن أنه سمع الحديث من مسافر آخر."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l01_024",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الراكب لا يرى نظام المغادرة، ولم يسأل موظف المحطة."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l01_last_bus",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l01_last_bus_v1_7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f.json",
+              "mime_type": "application/json",
+              "sha256": "7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_last_bus_v1_cd92849bcd_c0521768373e1503b21441bfa455e32f5ef24021fd57ddfa3833426064a8b824.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "راكبان قرب حافلة، وشباك تذاكر في الخلف.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l01_025",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يتجه المسافر إلى شباك التذاكر قبل أن يغيّر خطته."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l01_026",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يفحص الموظف سجل التشغيل الحالي، ويؤكد تأخر الحافلة، مع استمرار الرحلة."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l01_last_bus",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l01_last_bus_v1_7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f.json",
+              "mime_type": "application/json",
+              "sha256": "7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_last_bus_v1_fcb38353b5_47ddde118e0bb0a2db315ef55fe23767af30d499c202c3de9763d6419c6c4cb5.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "مسافر وشباك تذاكر مضاء فيه موظف وشاشة بلا نص.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_4",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l01_027",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ينتظر المسافر قرب الرصيف، وقد فهم الفرق بين ناقل الخبر ومن تحقّق منه."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l01_last_bus",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l01_last_bus_v1_7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f.json",
+              "mime_type": "application/json",
+              "sha256": "7945d055f5868c8a8c7b84f6f226df34d176adcd185d097b8d4b55135af9b24f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l01_last_bus_v1_19cf76ac47_47ddde118e0bb0a2db315ef55fe23767af30d499c202c3de9763d6419c6c4cb5.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "حافلة واقفة قرب رصيف المحطة وشباك التذاكر.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_10",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l01_04",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_knowledge_routes",
+          "con_u0_evidence_limits"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "لماذا كان جواب الموظف أقوى في هذا الموقف؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لأنه فحص سجل التشغيل الحالي الذي يصل إليه."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لأن آخر خبر تسمعه هو الصحيح دائماً."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لأن الراكب كان يكذب حتماً."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l01_11",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي الخبرين ستفحصه أكثر؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "جار يتعامل مع المخبز يخبرك بوقت فتحه."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "غريب يقول إن ماء الصنبور غير آمن اليوم."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أفحص كليهما بالقدر نفسه."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "انظر إلى قرب المصدر من المعلومة، وخطورة القرار، وما إذا كان الخبر غير معتاد."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l01_12",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "فحص يتناسب مع القرار"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l01_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "خبر عادي من شخص صادق يعرف ما يقول قد يكون كافياً لقرار بسيط."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l01_032",
+            "spans": [
+              {
+                "type": "text",
+                "text": "كلما كبرت العواقب، احتجت إلى دليل أوضح؛ الثقة في الصوت ليست تحققاً."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l01_033",
+            "spans": [
+              {
+                "type": "text",
+                "text": "في خبر الماء، ابحث عن إعلان الجهة المختصة المحلية، ولا تكتفِ بتحذير مجهول."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l01_034",
+            "spans": [
+              {
+                "type": "text",
+                "text": "طلب التحقق ليس حكماً بأن المخبر كاذب؛ قد يكون صادقاً لكنه لا يعرف."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l01_13",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l01_05",
+        "type": "scenario",
+        "concept_ids": [
+          "con_u0_knowledge_routes",
+          "con_u0_evidence_limits"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "ما التصرف الأنسب لفحص هذا المقطع؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أصدّقه لأنه يتحدث بثقة."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أبحث عن هوية المصدر ودليله، وأراجع مختصاً مؤهلاً قبل قرار صحي."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أرفض أي خبر يأتي من شخص واحد."
+                }
+              ]
+            }
+          ],
+          "situation": [
+            {
+              "type": "text",
+              "text": "تخيّل مقطعاً لرجل مجهول يزعم أن شراباً عشبياً يمكن أن يحل محل دواء السكري."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l01_14",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ما الذي عرفت كيف تفعله؟"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l01_036",
+            "spans": [
+              {
+                "type": "text",
+                "text": "اسأل: هل أدركت هذا بنفسي، أم استنتجته، أم أخبرني به مصدر؟"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l01_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "فرّق بين الأثر وتفسيره، واختر كلمة تساوي قوة دليلك."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l01_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "افحص صدق المصدر ووصوله للمعلومة، وزد التحقق عندما تكبر العواقب."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "لاحظ اليوم ثلاثة أشياء تعرفها، وحدّد طريق معرفتك وحدود ما تستطيع قوله عنها."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l1_topic_1",
+        "title": "طرق المعرفة",
+        "concept_ids": [
+          "con_u0_knowledge_routes"
+        ]
+      },
+      {
+        "topic_id": "les_u0_l1_topic_2",
+        "title": "حدود الدليل",
+        "concept_ids": [
+          "con_u0_evidence_limits"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "هل تستطيع الآن أن تشرح كيف عرفت شيئاً، وما الذي لا يسمح دليلك باستنتاجه؟"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_direct_observation": {
+      "term_id": "term_direct_observation",
+      "text": "الملاحظة المباشرة",
+      "arabic": "الملاحظة المباشرة",
+      "transliteration": "al-mulahaza al-mubashira",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "ما تدركه بنفسك بحاسة، كالرؤية أو السمع أو الشم."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "تلمس الكوب فتشعر بدفئه."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l1",
+      "lesson_title": "هل يجب أن تراه لتعرفه؟"
+    },
+    "term_inference": {
+      "term_id": "term_inference",
+      "text": "الاستنتاج",
+      "arabic": "الاستنتاج",
+      "transliteration": "al-istintaj",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "نتيجة تصل إليها بالتفكير في دليل، وليست الشيء الذي شاهدته نفسه."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "ترى طرداً عند الباب فتستنتج أن أحداً أحضره."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l1",
+      "lesson_title": "هل يجب أن تراه لتعرفه؟"
+    }
+  },
+  "answers": []
+}

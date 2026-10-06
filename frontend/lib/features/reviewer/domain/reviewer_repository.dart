@@ -13,6 +13,7 @@ final class ReviewerRunPage extends Equatable {
 
 abstract interface class ReviewerRepository {
   Future<Result<UserProfile>> signIn(String email, String password);
+  Future<Result<UserProfile>> signInSample();
   Future<Result<void>> signOut();
   Future<Result<ReviewerRunPage>> runs({String? status, String? cursor});
   Future<Result<ReviewFactoryRun>> run(String id);

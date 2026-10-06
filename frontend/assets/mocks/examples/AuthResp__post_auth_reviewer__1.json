@@ -1,0 +1,18 @@
+{
+ "access_token": "eyJhbGciOi...reviewer",
+ "user": {
+  "user_id": "usr_rev01",
+  "display_name": "المراجع الشرعي",
+  "role": "reviewer",
+  "language": "ar",
+  "track": "explorer",
+  "daily_goal_minutes": 10,
+  "timezone": "Asia/Riyadh",
+  "onboarding_completed": true,
+  "avatar_key": "traveler_03",
+  "familiarity": "some",
+  "private_profile": true,
+  "goal_anchor": null,
+  "created_at": "2026-10-01T08:00:00Z"
+ }
+}

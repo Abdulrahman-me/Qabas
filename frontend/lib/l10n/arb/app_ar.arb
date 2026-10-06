@@ -808,6 +808,24 @@
   "@journeyDoneLabel": {
     "description": "Prototype interface copy: journey / doneLabel. Preserve the original warm wording."
   },
+  "@journeyDownloadAction": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadBody": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadDismiss": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadEyebrow": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadFailed": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadTitle": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
   "@journeyEmptyBody": {
     "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
   },
@@ -1981,6 +1999,12 @@
   "@reviewerSame": {
     "description": "Reviewer work tool: reviewerSame"
   },
+  "@reviewerSampleDescription": {
+    "description": "Explain sample reviewer content and preserved learner progress."
+  },
+  "@reviewerSampleOpen": {
+    "description": "Open the local competition reviewer preview."
+  },
   "@reviewerSaveEdits": {
     "description": "Reviewer work tool: reviewerSaveEdits"
   },
@@ -3092,6 +3116,12 @@
   "journeyComingSoonTitle": "قريبًا",
   "journeyDailyGoal": "هدفك اليومي",
   "journeyDoneLabel": "مكتمل",
+  "journeyDownloadAction": "تحميل تطبيق أندرويد",
+  "journeyDownloadBody": "مصمم لأندرويد وiOS والويب وويندوز وmacOS ولينكس. جرّب قبس على أندرويد اليوم.",
+  "journeyDownloadDismiss": "إغلاق إعلان تحميل تطبيق أندرويد",
+  "journeyDownloadEyebrow": "أبعد من المتصفح",
+  "journeyDownloadFailed": "تعذّر فتح رابط التحميل. حاول مرة أخرى.",
+  "journeyDownloadTitle": "رحلة واحدة، عبر أجهزتك.",
   "journeyEmptyBody": "ستظهر خطواتك التالية هنا. حاول مجدداً بعد قليل.",
   "journeyEmptyTitle": "نعدّ طريقك",
   "journeyExplorerPathHint": "للمهتمين: الأسئلة الكبرى أولًا",
@@ -3421,6 +3451,8 @@
   "reviewerRole": "دور الجملة",
   "reviewerRuns": "عمليات الإنشاء",
   "reviewerSame": "متساويان",
+  "reviewerSampleDescription": "راجع خطط الدروس ومسوداتها، وقارن الدروس في اختبار مجهول المصدر، واستكشف مؤشرات توضيحية. تستخدم هذه المعاينة محتوى تجريبياً، ويُحفظ تقدمك في التعلم عند العودة.",
+  "reviewerSampleOpen": "استكشف لوحة المراجع",
   "reviewerSaveEdits": "حفظ التعديلات المزدوجة",
   "reviewerSavePlan": "حفظ الخطة",
   "reviewerSelectRun": "اختر عملية لمراجعة خطتها أو مسودتها.",

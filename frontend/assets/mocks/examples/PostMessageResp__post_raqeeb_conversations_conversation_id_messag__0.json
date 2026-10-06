@@ -1,0 +1,28 @@
+{
+ "user_message": {
+  "message_id": "msg_u_101",
+  "role": "user",
+  "status": "received",
+  "text": "هل هذا الحديث صحيح؟",
+  "attachments": [
+   {
+    "attachment_id": "att_img_1",
+    "kind": "image",
+    "filename": "screenshot.jpg",
+    "mime": "image/jpeg",
+    "size_bytes": 482133,
+    "url": "https://cdn.example.com/att/att_img_1.jpg",
+    "duration_ms": null,
+    "pages": null
+   }
+  ],
+  "created_at": "2026-10-04T10:05:00Z"
+ },
+ "assistant_message": {
+  "message_id": "msg_a_102",
+  "role": "assistant",
+  "status": "processing",
+  "stage": "received",
+  "created_at": "2026-10-04T10:05:00Z"
+ }
+}

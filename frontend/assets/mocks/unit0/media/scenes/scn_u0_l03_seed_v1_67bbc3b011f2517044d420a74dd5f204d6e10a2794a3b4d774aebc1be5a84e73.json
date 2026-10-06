@@ -1,0 +1,243 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l03_seed",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "night": "#16233A",
+    "dark": "#073C37",
+    "green": "#0B5A52",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "slate": "#566476",
+    "sand": "#D8C6A5",
+    "wood": "#996A45",
+    "wood_dark": "#624630",
+    "skin": "#C9A285",
+    "clear": "#E0A52600",
+    "glow": "#E0A52655",
+    "glass": "#BBD8D766",
+    "white": "#FFFFFF"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 3,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "mint"
+          },
+          {
+            "at": 1,
+            "color": "sand"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "floor",
+      "type": "rect",
+      "x": 0,
+      "y": 770,
+      "w": 1600,
+      "h": 230,
+      "fill": "sand",
+      "corner": 0
+    },
+    {
+      "id": "ground_shadow",
+      "type": "ellipse",
+      "x": 800,
+      "y": 850,
+      "rx": 430,
+      "ry": 55,
+      "fill": "dark",
+      "opacity": 0.15
+    },
+    {
+      "id": "hedge",
+      "type": "path",
+      "d": "M0 530 Q90 350 200 520 Q350 365 460 520 Q640 375 780 520 Q960 350 1080 520 Q1290 380 1430 520 Q1530 390 1600 500 L1600 780 L0 780 Z",
+      "fill": "green",
+      "opacity": 0.4
+    },
+    {
+      "id": "soil",
+      "type": "path",
+      "d": "M400 695 Q800 580 1200 695 L1300 870 Q800 980 300 870 Z",
+      "fill": "wood"
+    },
+    {
+      "id": "soil_surface",
+      "type": "path",
+      "d": "M400 695 Q800 580 1200 695 L1100 790 Q800 725 500 790 Z",
+      "fill": "wood_dark"
+    },
+    {
+      "id": "seed",
+      "type": "ellipse",
+      "x": 765,
+      "y": 760,
+      "rx": 31,
+      "ry": 20,
+      "fill": "sand"
+    },
+    {
+      "id": "stem",
+      "type": "path",
+      "d": "M758 770 Q780 680 760 585 L773 585 Q792 690 769 770 Z",
+      "fill": "green",
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "leaves",
+      "type": "path",
+      "d": "M767 648 Q670 657 674 577 Q746 575 767 648 Z M775 614 Q866 620 865 549 Q789 548 775 614 Z",
+      "fill": "green",
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "translate_x",
+          "duration_ms": 5500,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": -3
+            },
+            {
+              "t": 1,
+              "v": 3
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "ping_pong",
+          "active_when": {
+            "beat": {
+              "gte": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "watering_can",
+      "type": "path",
+      "d": "M1080 565 L1190 565 L1190 650 L1080 650 Z M1185 584 L1260 542 L1271 565 L1185 628 Z M1095 566 Q1085 516 1120 510 Q1167 513 1164 566 L1152 566 Q1155 527 1121 524 Q1100 528 1108 566 Z",
+      "fill": "slate"
+    },
+    {
+      "id": "gardener_shadow",
+      "type": "ellipse",
+      "x": 420,
+      "y": 745,
+      "rx": 85,
+      "ry": 17,
+      "fill": "wood_dark",
+      "opacity": 0.25
+    },
+    {
+      "id": "gardener_body",
+      "type": "path",
+      "d": "M355 715 Q344 543 384 521 L456 521 Q496 543 485 715 Z",
+      "fill": "green"
+    },
+    {
+      "id": "gardener_head",
+      "type": "ellipse",
+      "x": 420,
+      "y": 472,
+      "rx": 37,
+      "ry": 46,
+      "fill": "skin"
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      }
+    ]
+  }
+}

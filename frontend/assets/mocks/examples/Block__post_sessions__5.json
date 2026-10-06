@@ -1,0 +1,88 @@
+{
+ "block_id": "blk_u7_l4_story",
+ "type": "story",
+ "label": "قصة",
+ "title": "إبراهيم يبحث عن ربه",
+ "provenance": {
+  "source_id": "src_q_6_74_79",
+  "provider": "quran_com",
+  "reference": "الأنعام: 74–79",
+  "grade_label": null
+ },
+ "beats": [
+  {
+   "beat_id": "beat_u7_l4_0",
+   "beat_index": 0,
+   "narration": [
+    {
+     "sentence_id": "sen_u7_l4_01",
+     "spans": [
+      {
+       "type": "text",
+       "text": "نشأ إبراهيم عليه السلام في قوم يعبدون الكواكب والأصنام، فأراد أن يبيّن لهم أنها لا تستحق العبادة."
+      }
+     ],
+     "source_ids": [
+      "src_q_6_74_79"
+     ]
+    }
+   ],
+   "narration_audio_url": null,
+   "quote": {
+    "evidence_id": "src_q_6_76",
+    "kind": "quran",
+    "quran": {
+     "surah": 6,
+     "surah_name": "الأنعام",
+     "ayah_start": 76,
+     "ayah_end": 76,
+     "segment": null,
+     "text_uthmani": "فَلَمَّا جَنَّ عَلَيْهِ اللَّيْلُ رَأَىٰ كَوْكَبًا ۖ قَالَ هَٰذَا رَبِّي ۖ فَلَمَّا أَفَلَ قَالَ لَا أُحِبُّ الْآفِلِينَ",
+     "translation": null,
+     "translation_source": null,
+     "audio": null
+    },
+    "hadith": null
+   },
+   "quote_meaning": [
+    {
+     "type": "text",
+     "text": "لما أظلم الليل رأى كوكباً، فلما غاب بيّن أن ما يغيب لا يصلح أن يكون رباً."
+    }
+   ],
+   "visual": {
+    "kind": "image",
+    "key": null,
+    "version": null,
+    "params": null,
+    "image": {
+     "url": "https://cdn.example.com/scenes/u7_l4_s1_night_sky.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "scene": null,
+    "fallback_image": null,
+    "fallback_params": null,
+    "alt": "سماء ليل صافية فيها كوكب لامع فوق صحراء",
+    "overlays": [
+     {
+      "type": "medallion",
+      "asset_url": "https://cdn.example.com/medallions/ibrahim.svg",
+      "label": "إبراهيم عليه السلام",
+      "anchor": "top_start",
+      "size_pct": 22
+     }
+    ]
+   }
+  }
+ ],
+ "origin": {
+  "title": "من أين جاءت هذه القصة؟",
+  "source_ids": [
+   "src_q_6_74_79",
+   "src_tafsir_6_76_mukhtasar"
+  ],
+  "show_card": true
+ }
+}

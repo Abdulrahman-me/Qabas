@@ -1,0 +1,1798 @@
+{
+  "_mock_source_revision": "a3ca6da6f859b05bbde911faee78ebdb8fb8d1daf0ba3eb58c42e9274e456605",
+  "_mock_role": "structural reference candidate; NOT publication-ready",
+  "_mock_blockers": [
+    "licensed seven-word reciter clip and actual word timings absent",
+    "scripture/attribution copied from bundled prototype; renewed specialist/source verification pending",
+    "complete API-driven fourteen-step Session playback/parity not run",
+    "concept/assessment/review registries and completion evaluations not finalized"
+  ],
+  "session_id": "ses_5bf316ec406a6a31",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_1",
+  "lesson_id": "les_u1_l3",
+  "lesson_version": 1,
+  "title": "Prayer: a river at your door",
+  "subtitle": "What is prayer — and why do Muslims pray five times a day?",
+  "lesson_type": "concept",
+  "reviewed_by": "UNREVIEWED prototype export; publication blocked",
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "What prayer is, and how it differs from free supplication"
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "Why it comes five times a day — the river parable"
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "Where the five prayers sit in your real day"
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 8,
+    "exercises": 7,
+    "scored": 6
+  },
+  "source_count": 4,
+  "total_exercises": 7,
+  "answered_exercises": 0,
+  "started_at": "2026-10-02T00:00:00Z",
+  "items": [
+    {
+      "block_id": "blk_c9166ca7466cd9af",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "You’re at work. Your Muslim colleague glances at the time and says calmly: “Back in a few minutes — I’m going to pray.” A little later they return, looking calm, almost rested."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "Why would someone pause what they’re doing five times a day to pray? Wouldn’t once be enough?"
+        }
+      ],
+      "visual": {
+        "kind": "builtin",
+        "key": "workplace",
+        "version": 1,
+        "params": {},
+        "image": null,
+        "scene": null,
+        "fallback_image": null,
+        "fallback_params": null,
+        "alt": "workplace",
+        "overlays": []
+      },
+      "cta": "Continue"
+    },
+    {
+      "block_id": "blk_2d6b94ef2aea358e",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What do you think your colleague was doing in those minutes?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_e6b190f6cd6fa4b8",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Calling a family member"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_70a37d8f972f2494",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Standing briefly before God"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_13113e084fdad328",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Taking a coffee break"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_8e0375adfc1f4563",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Reflecting in silence"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Let’s find out together. Your colleague was praying — and Muslims do this five times every day. The story next tells you why."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "blk_ddaf36ce9cf175eb",
+      "type": "story",
+      "label": "The story",
+      "title": "The river at the door",
+      "provenance": {
+        "source_id": "src_5f5a8ed8f139be6d",
+        "provider": "hadeethenc",
+        "reference": "Agreed upon (al-Bukhari & Muslim)",
+        "grade_label": "Authentic"
+      },
+      "beats": [
+        {
+          "beat_id": "beat_eab817087de37b4d",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "sen_eab817087de37b4d",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "In an authentic "
+                },
+                {
+                  "type": "term",
+                  "text": "hadith",
+                  "term_id": "term_e7f6afdf7fd1a8a7"
+                },
+                {
+                  "type": "text",
+                  "text": ", the Prophet ﷺ asked his companions a question."
+                }
+              ],
+              "source_ids": [
+                "src_5f5a8ed8f139be6d"
+              ]
+            }
+          ],
+          "narration_audio_url": null,
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "builtin",
+            "key": "river_house",
+            "version": 1,
+            "params": {
+              "beat": 0
+            },
+            "image": null,
+            "scene": null,
+            "fallback_image": null,
+            "fallback_params": null,
+            "alt": "river house",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "beat_59a5a0c7c39734d9",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "sen_59a5a0c7c39734d9",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Imagine a river running past your front door…"
+                }
+              ],
+              "source_ids": [
+                "src_5f5a8ed8f139be6d"
+              ]
+            }
+          ],
+          "narration_audio_url": null,
+          "quote": {
+            "evidence_id": "src_5f5a8ed8f139be6d",
+            "kind": "hadith",
+            "quran": null,
+            "hadith": {
+              "text_ar": "لَوْ أَنَّ نَهَرًا بِبَابِ أَحَدِكُمْ يَغْتَسِلُ فِيهِ كُلَّ يَوْمٍ خَمْسًا، مَا تَقُولُ ذَلِكَ يُبْقِي مِنْ دَرَنِهِ؟",
+              "translation": "“That is like the five prayers: through them God wipes away sins.”",
+              "narrator": "Abu Hurairah reported that the Prophet ﷺ said:",
+              "collections": [
+                "Agreed upon (al-Bukhari & Muslim)"
+              ],
+              "grade_label": "Authentic",
+              "grade_category": "authentic",
+              "grade_source": "HadeethEnc prototype attribution; not independently reverified",
+              "excerpt": true
+            }
+          },
+          "quote_meaning": [
+            {
+              "type": "text",
+              "text": "“If there were a river at the door of one of you, and he bathed in it five times every day — would any of his dirt remain?”"
+            }
+          ],
+          "visual": {
+            "kind": "builtin",
+            "key": "river_house",
+            "version": 1,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": null,
+            "fallback_image": null,
+            "fallback_params": null,
+            "alt": "river house",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "beat_749ce3286f349c68",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "sen_749ce3286f349c68",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "They answered:"
+                }
+              ],
+              "source_ids": [
+                "src_5f5a8ed8f139be6d"
+              ]
+            }
+          ],
+          "narration_audio_url": null,
+          "quote": {
+            "evidence_id": "src_5f5a8ed8f139be6d",
+            "kind": "hadith",
+            "quran": null,
+            "hadith": {
+              "text_ar": "لَا يُبْقِي مِنْ دَرَنِهِ شَيْئًا",
+              "translation": "“That is like the five prayers: through them God wipes away sins.”",
+              "narrator": "Abu Hurairah reported that the Prophet ﷺ said:",
+              "collections": [
+                "Agreed upon (al-Bukhari & Muslim)"
+              ],
+              "grade_label": "Authentic",
+              "grade_category": "authentic",
+              "grade_source": "HadeethEnc prototype attribution; not independently reverified",
+              "excerpt": true
+            }
+          },
+          "quote_meaning": [
+            {
+              "type": "text",
+              "text": "“No dirt would remain on him at all.”"
+            }
+          ],
+          "visual": {
+            "kind": "builtin",
+            "key": "river_house",
+            "version": 1,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": null,
+            "fallback_image": null,
+            "fallback_params": null,
+            "alt": "river house",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "beat_bb352f840be20602",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "sen_bb352f840be20602",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "He ﷺ said:"
+                }
+              ],
+              "source_ids": [
+                "src_5f5a8ed8f139be6d"
+              ]
+            }
+          ],
+          "narration_audio_url": null,
+          "quote": {
+            "evidence_id": "src_5f5a8ed8f139be6d",
+            "kind": "hadith",
+            "quran": null,
+            "hadith": {
+              "text_ar": "فَذَلِكَ مِثْلُ الصَّلَوَاتِ الخَمْسِ، يَمْحُو اللَّهُ بِهِ الخَطَايَا",
+              "translation": "“That is like the five prayers: through them God wipes away sins.”",
+              "narrator": "Abu Hurairah reported that the Prophet ﷺ said:",
+              "collections": [
+                "Agreed upon (al-Bukhari & Muslim)"
+              ],
+              "grade_label": "Authentic",
+              "grade_category": "authentic",
+              "grade_source": "HadeethEnc prototype attribution; not independently reverified",
+              "excerpt": true
+            }
+          },
+          "quote_meaning": [
+            {
+              "type": "text",
+              "text": "“That is like the five prayers: through them God wipes away sins.”"
+            }
+          ],
+          "visual": {
+            "kind": "builtin",
+            "key": "river_house",
+            "version": 1,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": null,
+            "fallback_image": null,
+            "fallback_params": null,
+            "alt": "river house",
+            "overlays": []
+          }
+        }
+      ],
+      "origin": {
+        "title": "The river at the door",
+        "source_ids": [
+          "src_5f5a8ed8f139be6d"
+        ],
+        "show_card": false
+      }
+    },
+    {
+      "block_id": "blk_e2b811300ee7c884",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_e2b811300ee7c884",
+        "type": "map_place",
+        "concept_ids": [
+          "con_efad0f3248c2d144"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "In the story, where did the person bathe five times a day?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "hotspots",
+          "visual": {
+            "kind": "builtin",
+            "key": "river_house",
+            "version": 1,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": null,
+            "fallback_image": null,
+            "fallback_params": null,
+            "alt": "river house",
+            "overlays": []
+          },
+          "question": [
+            {
+              "type": "text",
+              "text": "In the story, where did the person bathe five times a day?"
+            }
+          ],
+          "pins": [
+            {
+              "pin_id": "pin_592506cf9dae29d0",
+              "label": "Palm tree",
+              "x_pct": 16.0,
+              "y_pct": 36.0,
+              "radius_pct": null,
+              "anchor_id": null
+            },
+            {
+              "pin_id": "pin_d4803e17ed18d3d4",
+              "label": "Front door",
+              "x_pct": 55.00000000000001,
+              "y_pct": 52.0,
+              "radius_pct": null,
+              "anchor_id": null
+            },
+            {
+              "pin_id": "pin_d29b9bf02d7daea9",
+              "label": "Window",
+              "x_pct": 80.0,
+              "y_pct": 34.0,
+              "radius_pct": null,
+              "anchor_id": null
+            },
+            {
+              "pin_id": "pin_3be52504bc360151",
+              "label": "River",
+              "x_pct": 42.0,
+              "y_pct": 86.0,
+              "radius_pct": null,
+              "anchor_id": null
+            }
+          ],
+          "interaction": null
+        }
+      }
+    },
+    {
+      "block_id": "blk_bbe8d8af0e1f31ff",
+      "type": "teach",
+      "eyebrow": "The evidence",
+      "title": [
+        {
+          "type": "text",
+          "text": "The river parable: why five times?"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "builtin",
+        "key": "river_house",
+        "version": 1,
+        "params": {
+          "beat": 3
+        },
+        "image": null,
+        "scene": null,
+        "fallback_image": null,
+        "fallback_params": null,
+        "alt": "river house",
+        "overlays": []
+      },
+      "evidence": {
+        "evidence_id": "src_5f5a8ed8f139be6d",
+        "kind": "hadith",
+        "quran": null,
+        "hadith": {
+          "text_ar": "فَذَلِكَ مِثْلُ الصَّلَوَاتِ الخَمْسِ، يَمْحُو اللَّهُ بِهِ الخَطَايَا",
+          "translation": "“That is like the five prayers: through them God wipes away sins.”",
+          "narrator": "Abu Hurairah reported that the Prophet ﷺ said:",
+          "collections": [
+            "Agreed upon (al-Bukhari & Muslim)"
+          ],
+          "grade_label": "Authentic",
+          "grade_category": "authentic",
+          "grade_source": "HadeethEnc prototype attribution; not independently reverified",
+          "excerpt": true
+        }
+      },
+      "points": [
+        {
+          "point_id": "pt_b3d8acb98c59e4a8",
+          "sentence": {
+            "sentence_id": "sen_b3d8acb98c59e4a8",
+            "spans": [
+              {
+                "type": "term",
+                "text": "Prayer",
+                "term_id": "term_055654e9d79b0bfa"
+              },
+              {
+                "type": "text",
+                "text": " is, first of all, a connection with God. One of its fruits is in the river parable: a cleanness renewed five times every day."
+              }
+            ],
+            "source_ids": [
+              "src_5f5a8ed8f139be6d"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_a5886f21fcb5f028",
+          "sentence": {
+            "sentence_id": "sen_a5886f21fcb5f028",
+            "spans": [
+              {
+                "type": "term",
+                "text": "Sins",
+                "term_id": "term_d548379c7db8b906"
+              },
+              {
+                "type": "text",
+                "text": " are wrongs and mistakes. Through the five prayers, God wipes away the minor sins of whoever keeps them up and performs them as they should."
+              }
+            ],
+            "source_ids": [
+              "src_5f5a8ed8f139be6d"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_038423688a80e226",
+          "sentence": {
+            "sentence_id": "sen_038423688a80e226",
+            "spans": [
+              {
+                "type": "text",
+                "text": "So prayer is a chance that returns every day. Major sins need "
+              },
+              {
+                "type": "term",
+                "text": "repentance",
+                "term_id": "term_a820e1a079082b73"
+              },
+              {
+                "type": "text",
+                "text": " — a sincere return to God."
+              }
+            ],
+            "source_ids": [
+              "src_5f5a8ed8f139be6d"
+            ]
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "blk_f6b4bdc7ed964f7a",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_f6b4bdc7ed964f7a",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_efad0f3248c2d144"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "This idea is mistaken. Choose the correction:"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": {
+          "kind": "myth",
+          "statement": [
+            {
+              "type": "text",
+              "text": "“Someone who made mistakes in the past gains nothing from prayer — there’s no point starting now.”"
+            }
+          ]
+        },
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_e21c9380778aa397",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Prayer is a chance that returns every day: God wipes away minor sins through it, and major sins need repentance"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_bc17fcd44aed975d",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Prayer is only for very religious people"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_aaf50d890710c4dc",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Don’t start until you can pray perfectly"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "blk_920bc35418c1342e",
+      "type": "teach",
+      "eyebrow": "The evidence",
+      "title": [
+        {
+          "type": "text",
+          "text": "What is prayer — and why is it an obligation?"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "builtin",
+        "key": "pillars",
+        "version": 1,
+        "params": {
+          "highlight": 1
+        },
+        "image": null,
+        "scene": null,
+        "fallback_image": null,
+        "fallback_params": null,
+        "alt": "pillars",
+        "overlays": []
+      },
+      "evidence": {
+        "evidence_id": "src_987c74f717c468e7",
+        "kind": "hadith",
+        "quran": null,
+        "hadith": {
+          "text_ar": "بُنِيَ الْإِسْلَامُ عَلَى خَمْسٍ: شَهَادَةِ أَنْ لَا إِلَهَ إِلَّا اللهُ، وَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، وَإِقَامِ الصَّلَاةِ",
+          "translation": "“Islam is built upon five: bearing witness that there is no god but Allah and that Muhammad is His servant and messenger, establishing prayer…”",
+          "narrator": "Ibn ‘Umar reported that the Prophet ﷺ said:",
+          "collections": [
+            "Agreed upon (al-Bukhari & Muslim)"
+          ],
+          "grade_label": "Authentic",
+          "grade_category": "authentic",
+          "grade_source": "HadeethEnc prototype attribution; not independently reverified",
+          "excerpt": true
+        }
+      },
+      "points": [
+        {
+          "point_id": "pt_f5ff61d7b533cd73",
+          "sentence": {
+            "sentence_id": "sen_f5ff61d7b533cd73",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The Prophet ﷺ described Islam as a building with five "
+              },
+              {
+                "type": "term",
+                "text": "pillars",
+                "term_id": "term_7ef0bb356e8a70ac"
+              },
+              {
+                "type": "text",
+                "text": ". A pillar is a column the building stands on."
+              }
+            ],
+            "source_ids": [
+              "src_987c74f717c468e7"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_d7a0cee7b61eb0e3",
+          "sentence": {
+            "sentence_id": "sen_d7a0cee7b61eb0e3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The first, its foundation, is the testimony of faith. The second is "
+              },
+              {
+                "type": "term",
+                "text": "establishing prayer",
+                "term_id": "term_0cd44a1001c68092"
+              },
+              {
+                "type": "text",
+                "text": ": performing the five obligatory prayers fully, as God prescribed."
+              }
+            ],
+            "source_ids": [
+              "src_987c74f717c468e7"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_8d8ea3758174b90c",
+          "sentence": {
+            "sentence_id": "sen_8d8ea3758174b90c",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A man once asked the Prophet ﷺ: “Did God command you that we pray five times in a day and night?” He answered: “Yes.” So it is an "
+              },
+              {
+                "type": "term",
+                "text": "obligation",
+                "term_id": "term_2adeb14614687765"
+              },
+              {
+                "type": "text",
+                "text": " on every Muslim."
+              }
+            ],
+            "source_ids": [
+              "src_987c74f717c468e7"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_111c309fc0cfd2b7",
+          "sentence": {
+            "sentence_id": "sen_111c309fc0cfd2b7",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Free "
+              },
+              {
+                "type": "term",
+                "text": "supplication",
+                "term_id": "term_af35bd90273f2d25"
+              },
+              {
+                "type": "text",
+                "text": " is welcome at any time, while prayer has set times and a known way."
+              }
+            ],
+            "source_ids": [
+              "src_987c74f717c468e7"
+            ]
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "blk_7be5b6cf9ee063a9",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_7be5b6cf9ee063a9",
+        "type": "categorize",
+        "concept_ids": [
+          "con_efad0f3248c2d144"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Sort each phrase: does it describe prayer, or free supplication?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_bf7799df6eb22643",
+              "label": "Prayer (salah)",
+              "phase": null,
+              "capacity": null,
+              "art_key": "prayer_rug"
+            },
+            {
+              "category_id": "cat_d24bf172c29e6cc8",
+              "label": "Supplication (du‘a)",
+              "phase": null,
+              "capacity": null,
+              "art_key": "heart"
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_bf7799df6eb22643",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "An obligation from God"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_c7f7d38db27f01fe",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "In your own words"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2c9f8c05f28cfca6",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "“O God, make my day easy”"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_01cbdeb676f5a3d7",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A pillar of Islam"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_7151e0199814368a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Has set times"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_d24bf172c29e6cc8",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "At any time"
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "blk_6ff09053b6f07046",
+      "type": "teach",
+      "eyebrow": "Your day",
+      "title": [
+        {
+          "type": "text",
+          "text": "A map of your day"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "builtin",
+        "key": "day_arc",
+        "version": 1,
+        "params": {
+          "highlight": -1
+        },
+        "image": null,
+        "scene": null,
+        "fallback_image": null,
+        "fallback_params": null,
+        "alt": "day arc",
+        "overlays": []
+      },
+      "evidence": {
+        "evidence_id": "src_2bf61a3bc850596a",
+        "kind": "hadith",
+        "quran": null,
+        "hadith": {
+          "text_ar": "وقت صلاتكم بين ما رأيتم",
+          "translation": "“The time of your prayer is between what you have seen.”",
+          "narrator": "UNVERIFIED: source adapter must fill narrator",
+          "collections": [
+            "Narrated by Muslim"
+          ],
+          "grade_label": "Authentic",
+          "grade_category": "authentic",
+          "grade_source": "HadeethEnc prototype attribution; not independently reverified",
+          "excerpt": true
+        }
+      },
+      "points": [
+        {
+          "point_id": "pt_dfb3008225bed094",
+          "sentence": {
+            "sentence_id": "sen_dfb3008225bed094",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The Prophet ﷺ taught a man the prayer times by example: the man prayed with him for two days, then heard these words. Each prayer has a time that begins and ends."
+              }
+            ],
+            "source_ids": [
+              "src_2bf61a3bc850596a"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_6c08cc63f95f37d4",
+          "sentence": {
+            "sentence_id": "sen_6c08cc63f95f37d4",
+            "spans": [
+              {
+                "type": "term",
+                "text": "Fajr",
+                "term_id": "term_eb164ebe0a82fe57"
+              },
+              {
+                "type": "text",
+                "text": ": with the first light in the sky, before sunrise. Then "
+              },
+              {
+                "type": "term",
+                "text": "Dhuhr",
+                "term_id": "term_33eee0710eef852b"
+              },
+              {
+                "type": "text",
+                "text": ": as the sun passes the middle of the sky."
+              }
+            ],
+            "source_ids": [
+              "src_2bf61a3bc850596a"
+            ]
+          },
+          "visual_params": {
+            "highlight": 1
+          }
+        },
+        {
+          "point_id": "pt_61456c3ba4db5db7",
+          "sentence": {
+            "sentence_id": "sen_61456c3ba4db5db7",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Then "
+              },
+              {
+                "type": "term",
+                "text": "Asr",
+                "term_id": "term_f2f6eba0f1d673c6"
+              },
+              {
+                "type": "text",
+                "text": " while the sun is still high, "
+              },
+              {
+                "type": "term",
+                "text": "Maghrib",
+                "term_id": "term_f7ced9adc6d3ac13"
+              },
+              {
+                "type": "text",
+                "text": " after sunset, and "
+              },
+              {
+                "type": "term",
+                "text": "Isha",
+                "term_id": "term_59e0a7b720c83cd3"
+              },
+              {
+                "type": "text",
+                "text": " at night, once the red glow leaves the horizon."
+              }
+            ],
+            "source_ids": [
+              "src_2bf61a3bc850596a"
+            ]
+          },
+          "visual_params": {
+            "highlight": 4
+          }
+        },
+        {
+          "point_id": "pt_cccce95410339b22",
+          "sentence": {
+            "sentence_id": "sen_cccce95410339b22",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The times follow the sun, so their clock hours change with place and season."
+              }
+            ],
+            "source_ids": [
+              "src_2bf61a3bc850596a"
+            ]
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "blk_e40c029e4c00d299",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_e40c029e4c00d299",
+        "type": "categorize",
+        "concept_ids": [
+          "con_efad0f3248c2d144"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Place each prayer where it belongs in your day"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "day_arc",
+          "categories": [
+            {
+              "category_id": "cat_444485ff09fb70ce",
+              "label": "First light",
+              "phase": "dawn",
+              "capacity": 1,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_5e01603443fb4f55",
+              "label": "Midday",
+              "phase": "midday",
+              "capacity": 1,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_665ca27fc42736b6",
+              "label": "Afternoon",
+              "phase": "afternoon",
+              "capacity": 1,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_592e1f0cf5f0604e",
+              "label": "Sunset",
+              "phase": "sunset",
+              "capacity": 1,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_7e35c599fb7fa05e",
+              "label": "Night",
+              "phase": "night",
+              "capacity": 1,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_7e35c599fb7fa05e",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Isha"
+                }
+              ],
+              "secondary_label": "العشاء"
+            },
+            {
+              "item_id": "itm_665ca27fc42736b6",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Asr"
+                }
+              ],
+              "secondary_label": "العصر"
+            },
+            {
+              "item_id": "itm_444485ff09fb70ce",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Fajr"
+                }
+              ],
+              "secondary_label": "الفجر"
+            },
+            {
+              "item_id": "itm_592e1f0cf5f0604e",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Maghrib"
+                }
+              ],
+              "secondary_label": "المغرب"
+            },
+            {
+              "item_id": "itm_5e01603443fb4f55",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Dhuhr"
+                }
+              ],
+              "secondary_label": "الظهر"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "blk_efa3864b156b076e",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_efa3864b156b076e",
+        "type": "scenario",
+        "concept_ids": [
+          "con_efad0f3248c2d144"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which answer is closest to what you learned?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_b0bacd3a0f0bb64b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The Prophet ﷺ likened the prayers to a river at the door you bathe in daily — the cleanness is renewed, in a few minutes spread across the day"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_500547957dcbeaff",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because it’s just a social habit"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_3b54c463e23d1c1c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because supplication alone is never enough"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_52792812691ee59b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Five is only for the very religious"
+                }
+              ]
+            }
+          ],
+          "situation": [
+            {
+              "type": "text",
+              "text": "Your friend says: “Five times a day is a lot! Why isn’t once enough?”"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "blk_ea67196b77f26975",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_ea67196b77f26975",
+        "type": "recite_verse",
+        "concept_ids": [
+          "con_efad0f3248c2d144"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Listen to the reciter"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "surah": 4,
+          "ayah": 103,
+          "word_start": 14,
+          "word_end": 20,
+          "text_uthmani": "إِنَّ ٱلصَّلَوٰةَ كَانَتْ عَلَى ٱلْمُؤْمِنِينَ كِتَـٰبًا مَّوْقُوتًا",
+          "audio": {
+            "reciter": "UNAVAILABLE: licensed reference recording pending",
+            "url": "unavailable://licensed-reference-recitation",
+            "words": null
+          },
+          "transliteration": null,
+          "meaning": [
+            {
+              "type": "text",
+              "text": "“Indeed, prayer has been decreed upon the believers a decree of specified times.” — Saheeh International"
+            }
+          ],
+          "source_id": "src_cd2c9fc769cbd707",
+          "max_duration_ms": 30000,
+          "skippable": true
+        }
+      }
+    },
+    {
+      "block_id": "blk_173356e72589e56b",
+      "type": "teach",
+      "eyebrow": "What you learned",
+      "title": [
+        {
+          "type": "text",
+          "text": "Three ideas to carry with you"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_566a88af31339405",
+          "sentence": {
+            "sentence_id": "sen_566a88af31339405",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Prayer is a moment of standing before God. It is a pillar of Islam after the testimony of faith, with set times and a known way."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_828aba010ee6ec91",
+          "sentence": {
+            "sentence_id": "sen_828aba010ee6ec91",
+            "spans": [
+              {
+                "type": "text",
+                "text": "God made five prayers obligatory each day and night — like a river at the door, through which He wipes away minor sins."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_c997e26c40baffcf",
+          "sentence": {
+            "sentence_id": "sen_c997e26c40baffcf",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Their order in your day: Fajr, Dhuhr, Asr, Maghrib, Isha. You’ll learn how to pray, step by step, in the coming lessons."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "blk_4aa13a61e8f401fc",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_4aa13a61e8f401fc",
+        "type": "order_steps",
+        "concept_ids": [
+          "con_efad0f3248c2d144"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Put the five prayers in order, from morning to night"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "remember"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "day_sequence",
+          "steps": [
+            {
+              "step_id": "st_ee4362b642ca2281",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Isha"
+                }
+              ],
+              "secondary_label": "العشاء"
+            },
+            {
+              "step_id": "st_53b8c199e6f8c475",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Fajr"
+                }
+              ],
+              "secondary_label": "الفجر"
+            },
+            {
+              "step_id": "st_c484e4ef2d708981",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Maghrib"
+                }
+              ],
+              "secondary_label": "المغرب"
+            },
+            {
+              "step_id": "st_e368f0f62e88bb4d",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Dhuhr"
+                }
+              ],
+              "secondary_label": "الظهر"
+            },
+            {
+              "step_id": "st_9118e8694b33973f",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Asr"
+                }
+              ],
+              "secondary_label": "العصر"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "Find today’s prayer times in your city — from a prayer-times app or a nearby mosque. Pick one prayer and notice the moment its time begins."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "topic_5feceb66ffc86f38",
+        "title": "How many prayers did God make obligatory each day and night?",
+        "concept_ids": [
+          "con_efad0f3248c2d144"
+        ]
+      },
+      {
+        "topic_id": "topic_6b86b273ff34fce1",
+        "title": "Order the five prayers from morning to night",
+        "concept_ids": [
+          "con_efad0f3248c2d144"
+        ]
+      },
+      {
+        "topic_id": "topic_d4735e3a265e16ee",
+        "title": "What did the Prophet ﷺ liken the five prayers to?",
+        "concept_ids": [
+          "con_efad0f3248c2d144"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "Welcome back! Which prayer time did you notice yesterday — and what were you doing when it began?"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "src_5f5a8ed8f139be6d",
+      "kind": "hadith",
+      "provider": "hadeethenc",
+      "title": "Agreed upon (al-Bukhari & Muslim)",
+      "reference": "Agreed upon (al-Bukhari & Muslim)",
+      "excerpt": "فَذَلِكَ مِثْلُ الصَّلَوَاتِ الخَمْسِ، يَمْحُو اللَّهُ بِهِ الخَطَايَا",
+      "url": "https://hadeethenc.com/ar/browse/hadith/4968",
+      "displayed": true,
+      "display_role": "content"
+    },
+    {
+      "source_id": "src_987c74f717c468e7",
+      "kind": "hadith",
+      "provider": "hadeethenc",
+      "title": "Agreed upon (al-Bukhari & Muslim)",
+      "reference": "Agreed upon (al-Bukhari & Muslim)",
+      "excerpt": "بُنِيَ الْإِسْلَامُ عَلَى خَمْسٍ: شَهَادَةِ أَنْ لَا إِلَهَ إِلَّا اللهُ، وَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، وَإِقَامِ الصَّلَاةِ",
+      "url": "https://hadeethenc.com/ar/browse/hadith/65000",
+      "displayed": true,
+      "display_role": "content"
+    },
+    {
+      "source_id": "src_2bf61a3bc850596a",
+      "kind": "hadith",
+      "provider": "hadeethenc",
+      "title": "Narrated by Muslim",
+      "reference": "Narrated by Muslim",
+      "excerpt": "وقت صلاتكم بين ما رأيتم",
+      "url": "https://hadeethenc.com/ar/browse/hadith/65391",
+      "displayed": true,
+      "display_role": "content"
+    },
+    {
+      "source_id": "src_cd2c9fc769cbd707",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Surah An-Nisa, 4:103",
+      "reference": "Surah An-Nisa, 4:103",
+      "excerpt": "إِنَّ ٱلصَّلَوٰةَ كَانَتْ عَلَى ٱلْمُؤْمِنِينَ كِتَـٰبًا مَّوْقُوتًا",
+      "url": "https://quran.com/4/103",
+      "displayed": true,
+      "display_role": "activity"
+    }
+  ],
+  "terms": {
+    "term_f2f6eba0f1d673c6": {
+      "term_id": "term_f2f6eba0f1d673c6",
+      "text": "Asr",
+      "arabic": "العصر",
+      "transliteration": "al-ʿaṣr",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The third prayer, in the afternoon while the sun is still high."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "In the second half of the day."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_33eee0710eef852b": {
+      "term_id": "term_33eee0710eef852b",
+      "text": "Dhuhr",
+      "arabic": "الظهر",
+      "transliteration": "aẓ-ẓuhr",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The second prayer, once the sun passes its highest point."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Often around the lunch break."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_af35bd90273f2d25": {
+      "term_id": "term_af35bd90273f2d25",
+      "text": "Supplication (du‘a)",
+      "arabic": "الدعاء",
+      "transliteration": "ad-duʿāʾ",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Speaking to God and asking Him for what you need — at any time, in your own words."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Saying: “O God, make my day easy.”"
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_eb164ebe0a82fe57": {
+      "term_id": "term_eb164ebe0a82fe57",
+      "text": "Fajr",
+      "arabic": "الفجر",
+      "transliteration": "al-fajr",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The first prayer of the day, at first light before sunrise."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Prayed after waking in the early morning."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_2adeb14614687765": {
+      "term_id": "term_2adeb14614687765",
+      "text": "Obligation (fariḍah)",
+      "arabic": "فريضة",
+      "transliteration": "farīḍah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Something God asks of a Muslim firmly — not optional."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "The five daily prayers are an obligation every day and night."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_e7f6afdf7fd1a8a7": {
+      "term_id": "term_e7f6afdf7fd1a8a7",
+      "text": "Hadith",
+      "arabic": "حديث",
+      "transliteration": "ḥadīth",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "A saying or action of the Prophet ﷺ, passed on to us through a reliable chain of people."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "The river hadith is an authentic hadith."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_0cd44a1001c68092": {
+      "term_id": "term_0cd44a1001c68092",
+      "text": "Establishing prayer",
+      "arabic": "إقامة الصلاة",
+      "transliteration": "iqāmat aṣ-ṣalāh",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Performing the prayer fully, as God prescribed it."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Establishing prayer is the second pillar, after the testimony of faith."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_59e0a7b720c83cd3": {
+      "term_id": "term_59e0a7b720c83cd3",
+      "text": "Isha",
+      "arabic": "العشاء",
+      "transliteration": "al-ʿishāʾ",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The fifth prayer, at night once the red glow leaves the sky."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Usually before going to sleep."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_d548379c7db8b906": {
+      "term_id": "term_d548379c7db8b906",
+      "text": "Sins",
+      "arabic": "الخطايا",
+      "transliteration": "al-khaṭāyā",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The wrongs and mistakes a person falls into."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "God wipes away minor sins through the five prayers."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_f7ced9adc6d3ac13": {
+      "term_id": "term_f7ced9adc6d3ac13",
+      "text": "Maghrib",
+      "arabic": "المغرب",
+      "transliteration": "al-maghrib",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The fourth prayer, just after sunset."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "When the sun sets in the evening."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_7ef0bb356e8a70ac": {
+      "term_id": "term_7ef0bb356e8a70ac",
+      "text": "Pillar (rukn)",
+      "arabic": "ركن",
+      "transliteration": "rukn",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "One of the great columns a building stands on."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Establishing prayer is one of the five pillars of Islam."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_055654e9d79b0bfa": {
+      "term_id": "term_055654e9d79b0bfa",
+      "text": "Prayer (salah)",
+      "arabic": "الصلاة",
+      "transliteration": "aṣ-ṣalāh",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "A short act of worship in which a Muslim stands before God, in the way the Prophet ﷺ taught."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "A Muslim prays Dhuhr in its time, just after midday."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_a820e1a079082b73": {
+      "term_id": "term_a820e1a079082b73",
+      "text": "Repentance (tawbah)",
+      "arabic": "التوبة",
+      "transliteration": "at-tawbah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Leaving a wrong, regretting it, and turning back to God."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Major sins need sincere repentance."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    }
+  },
+  "answers": []
+}

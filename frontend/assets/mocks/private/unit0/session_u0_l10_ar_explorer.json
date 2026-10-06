@@ -1,0 +1,150 @@
+{
+  "session_id": "ses_mock_u0_l10_ar_explorer",
+  "lesson_id": "les_u0_l10",
+  "answers": {
+    "ex_u0_l10_01": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l10_02": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_2"
+        }
+      ]
+    },
+    "ex_u0_l10_03": {
+      "value": false,
+      "reason_option_id": "opt_c"
+    },
+    "ex_u0_l10_04": {
+      "segment_id": "seg_3"
+    }
+  },
+  "feedback": {
+    "ex_u0_l10_01": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "للثقة بخبر، اسأل عن صدق ناقله وعن قدرته على معرفة ما يخبر به."
+        }
+      ],
+      "option_misconceptions": {},
+      "option_feedback": {
+        "opt_a": [
+          {
+            "type": "text",
+            "text": "هذا سؤال عن القصد؛ ابحث هنا عمّا يتيح معرفة الطريق."
+          }
+        ],
+        "opt_b": [
+          {
+            "type": "text",
+            "text": "هذا السؤال يفحص ما لم تثبته الأمانة وحدها."
+          }
+        ],
+        "opt_c": [
+          {
+            "type": "text",
+            "text": "هذا يفحص الدافع؛ اختر السؤال الذي يفحص معرفة الطريق."
+          }
+        ]
+      }
+    },
+    "ex_u0_l10_02": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_2"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "يدل رفض دليلٍ للمبالغة في معرفته على هذا السلوك المحدّد، لا على صحة كل ما سيقوله."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "أخذ أجر معلوم عن عمل لا يساوي الكذب، وعدم أخذ الأجر لا يضمن الدقة."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l10_03": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "نفي الكذب المتعمّد وحده لا يثبت أن التقرير صحيح."
+        }
+      ],
+      "option_misconceptions": {},
+      "targets_misconception_id": "mis_u0_l10_sincere_equals_true"
+    },
+    "ex_u0_l10_04": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الدافع المحتمل يساعد على الفحص، لكنه لا يجعل الخبر صحيحًا أو كاذبًا وحده."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "فحص دعوى الرسالة يحتاج أدلة على الدعوى نفسها، إلى جانب السيرة والصدق."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "نفي الكذب المتعمّد وحده لا يثبت أن التقرير صحيح."
+        }
+      ],
+      "option_misconceptions": {},
+      "targets_misconception_id": "mis_u0_l10_no_gain_proof"
+    }
+  }
+}

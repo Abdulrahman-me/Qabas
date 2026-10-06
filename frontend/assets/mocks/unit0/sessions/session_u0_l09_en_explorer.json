@@ -1,0 +1,1282 @@
+{
+  "session_id": "ses_mock_u0_l9_en_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l9",
+  "lesson_version": 1,
+  "title": "The Qur'an's Claim",
+  "subtitle": "What does the Qur'an say about itself, and what needs checking?",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "Summarize the Qur'an's account of itself with clear attribution."
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "Choose an appropriate check for a particular claim."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l09_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "Imagine stopping at a book stall and opening a Qur'an translation for the first time."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "You want to understand what kind of book this is before judging it."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "Would you start with your impression of the style or with what the book claims about itself?"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l09_bookfair",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l09_bookfair_v1_07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f.json",
+          "mime_type": "application/json",
+          "sha256": "07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l09_bookfair_v1_76f20ad9e8_bd4e660dff8ff3653d7d9c722f89509a1bb95d6e995fb0b70c4d8d920976ffbf.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "A book stall beneath a canopy, with a faceless visitor beside an open book.",
+        "overlays": []
+      },
+      "cta": "Start with the question"
+    },
+    {
+      "block_id": "b_u0_l09_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which question would you start with?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "What source does it claim?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "What message does it carry?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "How could its claim be checked?"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Keep your chosen question in mind; read the claim first, then consider how to examine it."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l09_03_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_03",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Start with the actual claim"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l09_005",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The Qur'an describes itself as sent down by the Lord of all worlds, rather than human authorship."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_01"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l09_006",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A book's account of its source identifies its claim, but does not establish that claim by itself."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l09_007",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Keep two questions separate: what does the text say, and what supports its truth?"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l09_008",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Evidence examining a claim needs to add something beyond repeating the same claim."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l09_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_quran_self_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which statement describes what reading alone has established?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The book has been proved to come from God."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "I have learned that it claims God as its source."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "It has been proved to be human authorship."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l09_05",
+      "type": "story",
+      "label": "Scenario",
+      "title": "The visitor's question changes",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l09_010",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Imagine the visitor reading a beautiful passage and nearly making its beauty the only answer."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l09_011",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Yet the question concerns the source, rather than the feeling produced by reading."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l09_bookfair",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l09_bookfair_v1_07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f.json",
+              "mime_type": "application/json",
+              "sha256": "07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l09_bookfair_v1_cd92849bcd_7e22077aebd77c95a7deb0834c326a53acb4c29b131b2af6c38bf1a539ef9f41.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l09_012",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The visitor returns to the book and writes its claims on a separate sheet."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l09_013",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Beside each claim, the visitor adds a question about what could support it."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l09_bookfair",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l09_bookfair_v1_07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f.json",
+              "mime_type": "application/json",
+              "sha256": "07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l09_bookfair_v1_fcb38353b5_ae75fb8af2d0f66288b2a44447af91db028c3d3798f7eda7eb65b8a662718d7a.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l09_014",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The visitor leaves with a reading plan, without turning the first impression into a final judgement."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l09_015",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Help choose the questions that would guide the examination."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l09_bookfair",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l09_bookfair_v1_07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f.json",
+              "mime_type": "application/json",
+              "sha256": "07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l09_bookfair_v1_19cf76ac47_ae75fb8af2d0f66288b2a44447af91db028c3d3798f7eda7eb65b8a662718d7a.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_06",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Source, purpose and earlier scriptures"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 2
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l09_bookfair",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l09_bookfair_v1_07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f.json",
+          "mime_type": "application/json",
+          "sha256": "07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l09_bookfair_v1_fcb38353b5_ae75fb8af2d0f66288b2a44447af91db028c3d3798f7eda7eb65b8a662718d7a.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 2
+        },
+        "alt": "An open book on the stall table with soft light around it.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l09_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The Qur'an describes itself as guidance, beyond offering a reader a literary experience."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_04"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l09_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "It describes its relationship to earlier scriptures as confirming them and having authority over them."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_05"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l09_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "It presents its preservation as a promise from God within the text."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_06"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l09_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A preservation claim differs from studying how the text was transmitted over time."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_5",
+          "sentence": {
+            "sentence_id": "s_u0_l09_020",
+            "spans": [
+              {
+                "type": "text",
+                "text": "For preservation, look at evidence of transmission; for the message, read what the text asks of its reader."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_07",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l09_02",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_quran_self_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Sort these statements: identifying a claim or examining it?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "Identifying the claim",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "A question for examination",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The Qur'an describes itself as guidance."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "What evidence bears on transmission?"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The Qur'an describes itself as preserved."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "How should its relationship to earlier scriptures be understood?"
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l09_08_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_08",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "A challenge that needs understanding"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l09_022",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The Qur'an challenges those doubting its source to produce a surah like it."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_08"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l09_023",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Understanding the challenge requires knowing what likeness means and how an attempted response would be assessed."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l09_024",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Reading a translation alone does not allow examination of every feature of the original Arabic text."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l09_025",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Ask for the criteria and examples of their application, beyond saying that you liked or disliked the text."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_09",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l09_03",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_quran_self_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Where does this judgement go beyond its evidence?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "I read a translation and understood some of its meanings."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "I liked the style."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Therefore I have fully tested the challenge and proved the source of the book."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l09_10_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_10",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Examine the particular conflict"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l09_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The Qur'an invites reflection and links many inconsistencies with a source other than God."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_11"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l09_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "To establish a contradiction, two statements must conflict in the same meaning and under the same conditions."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l09_030",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Not immediately understanding two statements proves neither a contradiction nor that every objection is unfounded."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l09_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Identify the two statements, read their context, examine the language, then seek an answer to the specific conflict you mean."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l09_04",
+        "type": "scenario",
+        "concept_ids": [
+          "con_u0_quran_self_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "What is this reader's most careful next step?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "situation": [
+            {
+              "type": "text",
+              "text": "Imagine a reader finding two different translations of a passage and suspecting that the book contradicts itself."
+            }
+          ],
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Conclude that the book contradicts itself because the translations differ."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Declare every objection impossible without reading."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Examine the original and context, distinguishing a translation difference from conflicting meanings."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l09_12",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "After this reading, which aspect would you examine further?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Origin and transmission"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "The challenge and its criteria"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Meaning and consistency"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Choose one specific question to follow up; you do not need to finish your judgement now."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l09_13",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "The question is now clearer"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l09_035",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The Qur'an describes itself as sent down by the Lord of all worlds, rather than human authorship."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_01"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l09_036",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A book's account of its source identifies its claim, but does not establish that claim by itself."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l09_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Understanding the challenge requires knowing what likeness means and how an attempted response would be assessed."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l09_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "To establish a contradiction, two statements must conflict in the same meaning and under the same conditions."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "Write down a claim you have read and one question that could help examine it."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l9_topic_1",
+        "title": "The Qur'an's Claim",
+        "concept_ids": [
+          "con_u0_quran_self_claim"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "How do you distinguish knowing what a book says from accepting it?"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "src_c_u0_l09_01",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "As-Sajdah 32:2–3",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l09_04",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "Al-Baqarah 2:2; scope checked https://quran.com/al-baqarah/2; approve attributed paraphrase, not a displayed quote.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l09_05",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "Al-Maidah 5:48; scope checked https://quran.com/al-maidah/48; specialist must approve meaning of muhaymin; no claim that all current texts are identical.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l09_06",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "Al-Hijr 15:9; scope checked https://quran.com/al-hijr/9; attribution only, not independent historical proof.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l09_08",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "Al-Baqarah 2:23",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l09_11",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "An-Nisa 4:82",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    }
+  ],
+  "terms": {
+    "term_quran": {
+      "term_id": "term_quran",
+      "text": "Qur'an",
+      "arabic": "القرآن",
+      "transliteration": "al-Qurʾān",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The book Muslims believe is revelation from God to Muhammad ﷺ."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Here we examine what the Qur'an says about itself without assuming you accept it."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l9",
+      "lesson_title": "The Qur'an's Claim"
+    },
+    "term_surah": {
+      "term_id": "term_surah",
+      "text": "Surah",
+      "arabic": "سورة",
+      "transliteration": "sūrah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "A named chapter of the Qur'an containing verses."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "The challenge in Al-Baqarah 2:23 concerns a surah."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l9",
+      "lesson_title": "The Qur'an's Claim"
+    }
+  },
+  "answers": []
+}

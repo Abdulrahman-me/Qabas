@@ -1,0 +1,34 @@
+{
+ "question_index": 0,
+ "total": 7,
+ "exercise": {
+  "exercise_id": "ex_duel_u2_03",
+  "type": "true_false",
+  "concept_ids": [
+   "con_allah_one"
+  ],
+  "prompt": [
+   {
+    "type": "text",
+    "text": "صح أم خطأ؟"
+   }
+  ],
+  "time_limit_ms": 15000,
+  "scoring": {
+   "accuracy": true,
+   "combo": true,
+   "layer": null
+  },
+  "framing": null,
+  "payload": {
+   "statement": [
+    {
+     "type": "text",
+     "text": "يؤمن المسلمون بأن لله شريكاً في الخلق."
+    }
+   ]
+  }
+ },
+ "issued_at": "2026-10-04T13:06:10Z",
+ "deadline_at": "2026-10-04T13:06:25Z"
+}

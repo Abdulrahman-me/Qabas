@@ -1,0 +1,525 @@
+{
+ "session_id": "ses_unit_test_3_unit_test_en_explorer",
+ "kind": "unit_test",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "end",
+ "unit_id": "unit_test_3",
+ "lesson_id": null,
+ "lesson_version": null,
+ "title": "جلسة اختبارية",
+ "subtitle": null,
+ "lesson_type": null,
+ "reviewed_by": null,
+ "objectives": [],
+ "counts": {
+  "interactions": 9,
+  "exercises": 9,
+  "scored": 9
+ },
+ "source_count": 0,
+ "total_exercises": 9,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_c50ecd42ae02bc9d",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Test assessment 2"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_7fe9d319d1779461",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Test assessment 3"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_8589f089b2050c73",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Test assessment 3"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_bfebb6b728128214",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Test assessment 1"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_4",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_8c1138986b6a622d",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Test assessment 2"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_5",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_c22a1db4388371ce",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Test assessment 2"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_6",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_b0a7953a0dd78a02",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Test assessment 1"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_7",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_8479fd38cbd653c9",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Test assessment 3"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_8",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_79690025f9066f70",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Test assessment 1"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test option 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "completion": null,
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

@@ -1,0 +1,19 @@
+{
+ "items": [
+  {
+   "concept_id": "con_allah_one",
+   "title": "وحدانية الله",
+   "unit_id": "unit_2",
+   "mastery": 0.86,
+   "next_review_at": "2026-10-07T09:00:00Z"
+  },
+  {
+   "concept_id": "con_qibla",
+   "title": "القِبلة",
+   "unit_id": "unit_3",
+   "mastery": 0.32,
+   "next_review_at": "2026-10-05T09:00:00Z"
+  }
+ ],
+ "next_cursor": null
+}

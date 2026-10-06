@@ -1,0 +1,21 @@
+{
+ "winner_user_ids": [
+  "usr_7f3k2a"
+ ],
+ "is_draw": false,
+ "scores": [
+  {
+   "user_id": "usr_7f3k2a",
+   "rank": 1,
+   "points": 845,
+   "correct": 6
+  },
+  {
+   "user_id": "usr_bot_1",
+   "rank": 2,
+   "points": 610,
+   "correct": 5
+  }
+ ],
+ "xp_awarded": 15
+}

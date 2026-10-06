@@ -1,0 +1,1212 @@
+{
+  "session_id": "ses_mock_u0_l4_en_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l4",
+  "lesson_version": 1,
+  "title": "What Would a Creator Be Like?",
+  "subtitle": "Follow the reasoning and mark its limits.",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "Understand why a final explanation for dependent things must not depend on them, and identify the limits of comparing a Creator with created things."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l04_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "Imagine a night market where a vendor wants a row of lanterns lit before visitors arrive."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "He transfers a flame from a lit lantern to another, then continues along the row."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "If each lantern took its flame from another, what question remains about the flame’s source?"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l04_lantern_market",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+          "mime_type": "application/json",
+          "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_76f20ad9e8_574148c8238ddc91986b92a3829ae2c4b8f5b2ee46dd3c4d68e2eab5914bd617.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "Lanterns hanging in a night market with a faceless vendor; some light is dim.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_u0_l04_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which answer would you question further?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "It took it from the previous lantern."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I want to know what lit the row in the first place."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "The comparison is not clear yet."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Follow the flame’s source, separating the question about one lantern from the question about the whole row."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l04_03",
+      "type": "story",
+      "label": "Scenario",
+      "title": "Passing the flame",
+      "origin": null,
+      "provenance": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l04_005",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The vendor wants the last corner lit, so he lights the final lantern from the previous one."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 0
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l04_lantern_market",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+              "mime_type": "application/json",
+              "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_76f20ad9e8_574148c8238ddc91986b92a3829ae2c4b8f5b2ee46dd3c4d68e2eab5914bd617.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 0
+            },
+            "alt": "A row of lanterns hanging above a night market.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l04_006",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A visitor asks where that flame came from. The vendor indicates the preceding lantern."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l04_007",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The visitor follows the question and finds that this lantern also took its flame from another."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l04_lantern_market",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+              "mime_type": "application/json",
+              "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_cd92849bcd_9ed96c613c565cb4d379c1a065108f1cdc145b70cad89ab9d2744dc25c41226f.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "Two lit lanterns among the market lanterns.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l04_008",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The vendor returns to a lantern he initially lit with a lighting tool."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l04_009",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The row now has a practical explanation in the scenario: initial lighting, followed by transfer between lanterns."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l04_lantern_market",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+              "mime_type": "application/json",
+              "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_fcb38353b5_b3f538a4e7418d41c76024bce6bc29cad63a6a8487d3a854aada2a03977264bc.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "Three lanterns in warm light over the market.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_4",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l04_010",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The visitor realizes that “from the previous lantern” explains a transfer, but does not by itself explain the initial lighting."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l04_011",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "He also realizes that the lighting tool is an ordinary object whose source can itself be questioned."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l04_lantern_market",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+              "mime_type": "application/json",
+              "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_19cf76ac47_bcd9bbd798ced567021461a8894628c49e244717071025fb24e02f3da8688f48.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "A lit row of lanterns in a quiet night market.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l04_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "What did “it took it from the previous lantern” explain?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Every attribute of a Creator."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "How a flame reached this lantern."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "That the first lantern needed nothing."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l04_05",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "What do we take from the picture?"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l04_lantern_market",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l04_lantern_market_v1_792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73.json",
+          "mime_type": "application/json",
+          "sha256": "792a80018446de983c81c71ee64451a0962d7e8d7d861c3051286c4e65388c73",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l04_lantern_market_v1_76f20ad9e8_574148c8238ddc91986b92a3829ae2c4b8f5b2ee46dd3c4d68e2eab5914bd617.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "Lanterns glowing gold above the market path.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l04_013",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The idea is dependence: something receives what it needs from another thing."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l04_014",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Transferring the flame explains its arrival at a lantern. The scenario’s lanterns are not independent sources of ignition."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l04_015",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Every lantern, tool, and fuel supply belongs to the scene. None represents a Creator."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 2
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l04_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The comparison illustrates dependence only. It does not make a Creator light, flame, or an object inside the market."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 3
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_06",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l04_02",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which part goes beyond the comparison’s limits?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "These lanterns took their flames from other things."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "We use this to understand dependence."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Therefore a Creator needs fuel as the lanterns do."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l04_07",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "From an example to a wider question"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l04_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Suppose things dependent on others for existence need explaining, and we seek a complete explanation of that dependence."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l04_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Adding another thing dependent in the same way moves the question to it without finishing the explanation."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l04_020",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If the final explanation depends on the very things being explained, the dependence we wanted to explain remains."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l04_021",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Within this reasoning, a foundation that completes the explanation must not need those things in order to exist."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l04_022",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Here we ask what explains dependence, rather than only asking about the first event in a timeline."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_08",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l04_03",
+        "type": "match_pairs",
+        "concept_ids": [
+          "con_u0_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Match each question with what fits it."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "left": [
+            {
+              "item_id": "l_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Explaining one link"
+                }
+              ]
+            },
+            {
+              "item_id": "l_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A final explanation of dependence"
+                }
+              ]
+            },
+            {
+              "item_id": "l_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The comparison’s limit"
+                }
+              ]
+            }
+          ],
+          "right": [
+            {
+              "item_id": "r_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "We do not transfer a lantern’s shape to a Creator."
+                }
+              ]
+            },
+            {
+              "item_id": "r_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "This lantern took the flame from its predecessor."
+                }
+              ]
+            },
+            {
+              "item_id": "r_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "It does not depend on the things whose existence it explains."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l04_09",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which idea would you like to think about more?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Does every dependence need a complete explanation?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Does adding another dependent thing settle the question?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "How do we preserve the comparison’s limits?"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "These concern the reasoning’s grounds. Understanding them does not require declaring your agreement."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l04_10",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "“What created the Creator?”"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l04_025",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The reasoning is not “everything needs a maker” followed by exempting a Creator from that statement."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l04_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The stated starting point is things dependent on others. We ask what explains that dependence."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l04_027",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Calling something dependent a “Creator” does not make it the final explanation we are seeking."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l04_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If the foundation truly is independent, asking what its dependence rests on assumes the dependence that description denies."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l04_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Establishing such a foundation and examining the reasoning’s conditions remain necessary. A name alone is insufficient."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l04_04",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which answer represents the reasoning honestly?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Everything has a maker, except whatever we arbitrarily choose."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Calling the lantern a Creator proves its independence."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "If dependence needs a final explanation, something dependent in the same way cannot complete it."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l04_12",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Attributes within the reasoning’s reach"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l04_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If an independent Creator explains these things, it would not need them to sustain its own existence."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l04_032",
+            "spans": [
+              {
+                "type": "text",
+                "text": "It would need sufficient ability for the existence attributed to it, or it would not perform the explanatory role."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l04_033",
+            "spans": [
+              {
+                "type": "text",
+                "text": "This is a limited step. It alone yields neither a name, appearance, message, nor every attribute of a Creator."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l04_034",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Lengthening the row or calling it endless does not by itself establish or disprove the answer."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l04_035",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The question remains: has the dependence been explained, or only moved to another dependence?"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l04_13",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "What do you take to the next lesson?"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l04_036",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Identify that the reasoning is conditional on seeking a complete explanation of dependent things."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l04_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Distinguish an independent foundation from another link dependent like the others."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l04_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Take the relation of dependence from the example, and leave the lanterns’ shape and material in the market."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "Choose an ordinary thing that needs others. Separate its immediate cause from the question of what explains its dependence."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l4_topic_1",
+        "title": "An independent Creator",
+        "concept_ids": [
+          "con_u0_independent_creator"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "Can you explain the argument’s independence condition without turning lanterns into a description of a Creator?"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_independence": {
+      "term_id": "term_independence",
+      "text": "Independence",
+      "arabic": "عدم الاعتماد",
+      "transliteration": "adam al-itimad",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Not needing something else in order to exist; different from merely being able to work alone."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Asking what grounds borrowed light differs from asking how many lanterns there are."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l4",
+      "lesson_title": "What Would a Creator Be Like?"
+    }
+  },
+  "answers": []
+}

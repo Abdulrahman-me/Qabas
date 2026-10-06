@@ -1,0 +1,24 @@
+{
+ "term_id": "term_tawhid",
+ "text": "التوحيد",
+ "transliteration": "Tawhid",
+ "state": "new",
+ "level": "basic",
+ "definition": [
+  {
+   "type": "text",
+   "text": "الإيمان بأن الله واحد لا شريك له، وأنه وحده من يستحق العبادة."
+  }
+ ],
+ "example": [
+  {
+   "type": "text",
+   "text": "سورة الإخلاص تلخّص معنى التوحيد في أربع آيات قصيرة."
+  }
+ ],
+ "pronunciation_audio_url": "https://cdn.example.com/terms/term_tawhid.mp3",
+ "source_id": "src_q_112_1_4",
+ "lesson_id": "les_u2_l1",
+ "lesson_title": "من هو الله؟",
+ "arabic": null
+}

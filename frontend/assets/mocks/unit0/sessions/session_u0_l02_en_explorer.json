@@ -1,0 +1,1149 @@
+{
+  "session_id": "ses_mock_u0_l2_en_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l2",
+  "lesson_version": 1,
+  "title": "Could Something Come From Nothing?",
+  "subtitle": "Follow the reasoning and mark its limits.",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "Distinguish nothing at all from an empty place, and examine why nothing alone cannot explain something’s existence."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l02_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l02_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "Imagine a museum guard checking a glass display case after closing."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "The case contains no exhibits. In the morning, the guard sees a vase inside."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "Does “it was empty” mean the vase came from nothing?"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l02_display_case",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l02_display_case_v1_761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719.json",
+          "mime_type": "application/json",
+          "sha256": "761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_display_case_v1_76f20ad9e8_614b0ea7ea561ce824d37fbd8b8fcecd73d622f4635800772c90e5c953cc027b.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "An empty glass case on a pedestal in a night museum, with a faceless guard.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_u0_l02_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What would you ask first?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Who could access the case?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Did nothing make the vase?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Was my observation complete?"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Start with what you actually saw, then examine an explanation for what changed."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l02_03",
+      "type": "story",
+      "label": "Scenario",
+      "title": "What did the guard miss?",
+      "origin": null,
+      "provenance": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l02_005",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The guard wants to protect the exhibits, so he reviews his closing notes."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l02_006",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "He recorded that the case was empty, but did not watch it all night."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 0
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l02_display_case",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l02_display_case_v1_761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719.json",
+              "mime_type": "application/json",
+              "sha256": "761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_display_case_v1_76f20ad9e8_614b0ea7ea561ce824d37fbd8b8fcecd73d622f4635800772c90e5c953cc027b.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 0
+            },
+            "alt": "A guard beside a glass case in a quiet museum.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l02_007",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "He neither accuses anyone nor treats his missing explanation as the vase’s cause."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l02_008",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "He asks the curator about the key and the exhibit transfer record."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l02_display_case",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l02_display_case_v1_761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719.json",
+              "mime_type": "application/json",
+              "sha256": "761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_display_case_v1_cd92849bcd_7fc9e47817ea7edf09eaa3e3c102f9c63f42a100072f8aa0292758b8725ea564.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "A vase inside the display case, with a guard nearby.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l02_009",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The curator shows a record of the vase’s transfer after he left, and explains that she opened and closed the case."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l02_display_case",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l02_display_case_v1_761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719.json",
+              "mime_type": "application/json",
+              "sha256": "761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_display_case_v1_fcb38353b5_7fc9e47817ea7edf09eaa3e3c102f9c63f42a100072f8aa0292758b8725ea564.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "A display case and gold vase under museum lighting.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_4",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l02_010",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The guard updates his note: he saw an empty case, but did not see what happened afterward."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l02_011",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "He reached an explanation by investigating something that could account for the change."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l02_display_case",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l02_display_case_v1_761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719.json",
+              "mime_type": "application/json",
+              "sha256": "761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_display_case_v1_19cf76ac47_7fc9e47817ea7edf09eaa3e3c102f9c63f42a100072f8aa0292758b8725ea564.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "A vase resting inside a closed glass case.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l02_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l02_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_something_from_nothing"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "What is wrong with “I did not see who placed the vase, so it came from nothing”?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Everything I do not see is absent."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Not knowing the cause does not establish that every cause is absent."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The guard must be blamed."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l02_05",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "“Empty” and “nothing at all” differ"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l02_013",
+            "spans": [
+              {
+                "type": "text",
+                "text": "In the scenario, the case, glass, key, and guard still existed even when no vase was inside."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l02_014",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Here, “empty” means no exhibit inside, rather than the absence of everything."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l02_015",
+            "spans": [
+              {
+                "type": "text",
+                "text": "In our question, nothing means no thing exists: no place, materials, or working power."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l02_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If you imagine a dark space waiting for something, you have imagined a place, not nothing."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l02_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Black in an illustration is only a background. A picture cannot display the absence of everything."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l02_06",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l02_02",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_something_from_nothing"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which describes the absence of a particular thing, and which means nothing at all?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "Something particular is absent",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "Nothing at all in the question",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A case without exhibits."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A kitchen without ready bread."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "No place, material, or anything exists."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A room with its furniture removed."
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l02_07",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Bread that was not there"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l02_bakery",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l02_bakery_v1_fd41b319478ffd211fd18488dce8f378c160ee967082c1b880ba629b059bd331.json",
+          "mime_type": "application/json",
+          "sha256": "fd41b319478ffd211fd18488dce8f378c160ee967082c1b880ba629b059bd331",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_bakery_v1_76f20ad9e8_956bfeaf1d0857b59ea1626aa16e5eab4abe3e4fdb9bc4851fc4a1b65df02172.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "A bakery kitchen with a flour sack, bowl, oven, and faceless baker.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l02_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Imagine a baker wanting to make a loaf, with no ready bread in the kitchen."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l02_020",
+            "spans": [
+              {
+                "type": "text",
+                "text": "In this example, the baker prepares flour and water, shapes dough, and uses the oven."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l02_021",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The loaf’s absence at the start does not mean the things used to make it are absent."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l02_022",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The loaf did not appear from nothing. Existing things were changed through the baker’s work."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 2
+          }
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l02_023",
+            "spans": [
+              {
+                "type": "text",
+                "text": "This illustrates the distinction. It does not make the universe a loaf or a Creator a baker who needs ingredients."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 2
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l02_08",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l02_03",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_something_from_nothing"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which part assigns nothing a property excluded by its definition?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "By nothing, I mean the absence of everything."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "There is no material or power in it."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "But it can wait and then produce material."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l02_09",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Does “I do not know how it happened” answer “why did it happen”?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "It acknowledges my limited knowledge."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I might see it as a provisional answer."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I need to think more."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "You can stop at “I do not know” while keeping the question open. You need not fill the gap with a misleading label."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l02_10",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "What does this reasoning exclude?"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l02_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If nothing means the absence of everything, it supplies nothing that explains a new existence."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l02_027",
+            "spans": [
+              {
+                "type": "text",
+                "text": "This examines “nothing produced something.” It does not turn a difficult question into an account of the universe’s history."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l02_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "We have not established that the universe began, or how it began. Establishing that requires further evidence."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l02_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Excluding an explanation does not automatically establish every detail of another explanation."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l02_030",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The remaining question is: if existence needs an explanation, what could do that job?"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l02_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l02_04",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_something_from_nothing"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Judge the understanding, then choose the reason."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "“I did not see a cause” means “it is established that no cause exists.”"
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Observation covers everything that could happen."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Missing knowledge is insufficient evidence that a cause is absent."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Every hidden thing must be believed."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l02_12",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Keep the question clear"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l02_032",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Distinguish an empty place from the absence of everything."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l02_033",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Do not give nothing materials or power and still call it nothing."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l02_034",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Say “I do not know the cause” when you do not. Then examine explanations without jumping to a conclusion."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "Notice “nothing” in ordinary conversation. Ask whether it means a particular absence or the absence of everything."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l2_topic_1",
+        "title": "Nothing is not a cause",
+        "concept_ids": [
+          "con_u0_something_from_nothing"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "Can you distinguish a particular absence from nothing, without treating an unknown cause as an absent cause?"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_nothing": {
+      "term_id": "term_nothing",
+      "text": "Nothing at all",
+      "arabic": "العدم",
+      "transliteration": "al-adam",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The absence of anything; not air, empty space, or unseen material."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Emptying a box does not remove the box or its space."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l2",
+      "lesson_title": "Could Something Come From Nothing?"
+    }
+  },
+  "answers": []
+}

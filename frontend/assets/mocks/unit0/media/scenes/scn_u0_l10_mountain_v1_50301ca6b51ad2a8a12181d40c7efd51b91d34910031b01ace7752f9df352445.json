@@ -1,0 +1,336 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l10_mountain",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "emerald": "#0B5A52",
+    "night": "#073C37",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "ink": "#16233A",
+    "slate": "#566476",
+    "clear": "#F6E3B400",
+    "sand": "#D8C1A0",
+    "wood": "#86664C",
+    "wood_dark": "#604B3D",
+    "paper": "#FFF9E9",
+    "stone": "#89978B",
+    "far": "#9CB3B0",
+    "skin": "#C79C78",
+    "sky": "#DCEBE7"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 4,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "sky",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "sky"
+          },
+          {
+            "at": 1,
+            "color": "mint"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sun",
+      "type": "ellipse",
+      "x": 1200,
+      "y": 240,
+      "rx": 75,
+      "ry": 75,
+      "fill": "ember"
+    },
+    {
+      "id": "far_range",
+      "type": "path",
+      "d": "M0 625 L210 328 L395 537 L645 215 L930 568 L1170 340 L1425 608 L1600 472 V1000 H0 Z",
+      "fill": "far"
+    },
+    {
+      "id": "middle_range",
+      "type": "path",
+      "d": "M0 778 L360 448 L702 731 L1040 436 L1410 785 L1600 615 V1000 H0 Z",
+      "fill": "stone"
+    },
+    {
+      "id": "mountain_shade",
+      "type": "path",
+      "d": "M1040 436 L1410 785 L1290 790 L1060 564 Z M360 448 L702 731 L598 759 L398 576 Z",
+      "fill": "slate",
+      "opacity": 0.35
+    },
+    {
+      "id": "near_ground",
+      "type": "path",
+      "d": "M0 802 Q440 704 800 806 Q1190 745 1600 823 V1000 H0 Z",
+      "fill": "night"
+    },
+    {
+      "id": "trail",
+      "type": "path",
+      "d": "M695 1000 Q748 882 895 840 Q1050 796 1050 750 Q1030 701 905 675 L931 662 Q1080 688 1100 743 Q1120 805 968 860 Q840 907 829 1000 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "camp_shadow",
+      "type": "ellipse",
+      "x": 594,
+      "y": 849,
+      "rx": 255,
+      "ry": 38,
+      "fill": "ink",
+      "opacity": 0.18
+    },
+    {
+      "id": "shelter",
+      "type": "path",
+      "d": "M355 799 L591 547 L823 799 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "shelter_lit",
+      "type": "path",
+      "d": "M591 547 L823 799 H640 Z",
+      "fill": "mint",
+      "opacity": 0.2
+    },
+    {
+      "id": "entrance",
+      "type": "path",
+      "d": "M494 799 L591 641 L681 799 Z",
+      "fill": "night"
+    },
+    {
+      "id": "entrance_light",
+      "type": "ellipse",
+      "x": 589,
+      "y": 782,
+      "rx": 108,
+      "ry": 108,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          589,
+          782
+        ],
+        "radius": 108,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 0.65
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "pole",
+      "type": "rect",
+      "x": 934,
+      "y": 550,
+      "w": 13,
+      "h": 274,
+      "fill": "wood"
+    },
+    {
+      "id": "sign_blank",
+      "type": "rect",
+      "x": 882,
+      "y": 557,
+      "w": 124,
+      "h": 67,
+      "fill": "wood",
+      "corner": 8
+    },
+    {
+      "id": "guide_body",
+      "type": "path",
+      "d": "M1135 614 Q1152 585 1190 588 Q1231 584 1249 620 L1282 829 Q1195 858 1110 829 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "guide_head",
+      "type": "ellipse",
+      "x": 1191,
+      "y": 536,
+      "rx": 38,
+      "ry": 47,
+      "fill": "skin"
+    },
+    {
+      "id": "guide_arm",
+      "type": "path",
+      "d": "M1146 625 Q1104 632 1050 612 L1041 635 Q1103 669 1159 658 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "staff",
+      "type": "path",
+      "d": "M1060 618 H1071 V855 H1060 Z",
+      "fill": "wood"
+    },
+    {
+      "id": "guide_hand",
+      "type": "path",
+      "d": "M1041 615 Q1054 611 1063 622 Q1065 632 1051 638 L1040 635 Z",
+      "fill": "skin"
+    },
+    {
+      "id": "route_attention",
+      "type": "ellipse",
+      "x": 936,
+      "y": 795,
+      "rx": 142,
+      "ry": 142,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          936,
+          795
+        ],
+        "radius": 142,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 0.65
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "cloud",
+      "type": "path",
+      "d": "M240 218 Q264 172 316 190 Q342 156 390 192 Q440 177 458 220 Z",
+      "fill": "paper",
+      "opacity": 0.55,
+      "tracks": [
+        {
+          "property": "translate_x",
+          "duration_ms": 16000,
+          "easing": "ease_in_out",
+          "loop": "ping_pong",
+          "keyframes": [
+            {
+              "t": 0,
+              "v": -15
+            },
+            {
+              "t": 1,
+              "v": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foreground_grass",
+      "type": "path",
+      "d": "M120 924 Q130 862 151 920 Q163 880 174 929 Z M1430 940 Q1450 866 1468 925 Q1480 889 1494 946 Z",
+      "fill": "emerald"
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      },
+      {
+        "beat": 4
+      }
+    ]
+  }
+}

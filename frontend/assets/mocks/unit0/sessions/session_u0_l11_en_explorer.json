@@ -1,0 +1,1311 @@
+{
+  "session_id": "ses_mock_u0_l11_en_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l11",
+  "lesson_version": 1,
+  "title": "Muhammad ﷺ and His Claim",
+  "subtitle": "What do the sources report about his claim, and how should those reports be examined?",
+  "lesson_type": "story",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "Describe the Safa report without adding details."
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "Link a report about conduct to an appropriate checking question."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l11_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "Imagine reading an old report about someone making a major claim, rather than someone you have met."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "You want to understand what the report conveys, then consider what can be inferred from it."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "How can you read a report about Muhammad ﷺ while keeping the report separate from your judgement?"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l11_records",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l11_records_v1_a4e29a49b8d90b95b3d63e04c16fd680951d71ec07e96d737a8910bee00e417a.json",
+          "mime_type": "application/json",
+          "sha256": "a4e29a49b8d90b95b3d63e04c16fd680951d71ec07e96d737a8910bee00e417a",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_records_v1_76f20ad9e8_2e17987826978e16dcdc3c8931872a0ee131e61942604e7c74802b2b2cd78977.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "An open book and lamp on a table, with no people or drawn text.",
+        "overlays": []
+      },
+      "cta": "Start with the question"
+    },
+    {
+      "block_id": "b_u0_l11_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which aspect would you look for first?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "What did he claim?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "How did those who knew him describe him?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Who transmitted the report, and where is it recorded?"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "You can begin with any of these questions; keep the others in view as the report unfolds."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l11_03",
+      "type": "story",
+      "label": "Story",
+      "title": "The call at Safa",
+      "provenance": {
+        "source_id": "src_u0_l11_story",
+        "provider": "dorar",
+        "reference": "Sahih al-Bukhari 4770",
+        "grade_label": null
+      },
+      "origin": {
+        "title": "The call at Safa",
+        "source_ids": [
+          "src_u0_l11_story"
+        ],
+        "show_card": false
+      },
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l11_005",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A report in Sahih al-Bukhari describes Muhammad ﷺ ascending Safa and calling groups from Quraysh to gather."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_01"
+              ]
+            },
+            {
+              "sentence_id": "s_u0_l11_006",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Follow it as a report with a stated source, rather than an event you witnessed."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l11_safa",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l11_safa_v1_c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0.json",
+              "mime_type": "application/json",
+              "sha256": "c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_safa_v1_cd92849bcd_d66bffda997e18d15dbbcd90ebe69946347836f8aa8cb49096a9b2e4f6fc7d68.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l11_007",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The report describes him asking whether they would believe his report of cavalry intending to attack them."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_02"
+              ]
+            },
+            {
+              "sentence_id": "s_u0_l11_013",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The cavalry question in the Safa report concerns trust in his report before the warning."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_05"
+              ]
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l11_safa",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l11_safa_v1_c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0.json",
+              "mime_type": "application/json",
+              "sha256": "c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_safa_v1_fcb38353b5_7163a87763dae46091541b7259062a3dd1226de2165f2e0d70c84197a56f4024.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l11_009",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "According to the report, they answered that their experience with him had been truthful."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_03"
+              ]
+            },
+            {
+              "sentence_id": "s_u0_l11_014",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Attribute this response to those addressed in the source."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l11_safa",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l11_safa_v1_c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0.json",
+              "mime_type": "application/json",
+              "sha256": "c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_safa_v1_19cf76ac47_1b394b6a8b20fe7c24a1d1f09c047c3c3fe99c855cdc13c0c37234857a77a522.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_4",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l11_011",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The report then describes him presenting himself as a warner and Abu Lahab objecting to the call."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_04"
+              ]
+            },
+            {
+              "sentence_id": "s_u0_l11_015",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The report records a response in that situation and does not describe everyone's acceptance."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_06"
+              ]
+            },
+            {
+              "sentence_id": "bt_4_b_u0_l11_03_pending",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Review draft only. Exact source text and publication approval are pending."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 4
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l11_safa",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l11_safa_v1_c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0.json",
+              "mime_type": "application/json",
+              "sha256": "c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_safa_v1_04c1b64992_85d4d12c573cebb223d8b3fd2624be2278adf57a82075252e689541cb181c021.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 4
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l11_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_muhammad_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which conclusion fits their reported answer about their experience?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Every person immediately accepted his claim."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The report presents testimony about honesty in their experience."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The reader now knows every detail of his life."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l11_05_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_05",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "What does another report add?"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l11_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "In another Bukhari report, Abu Sufyan's answer denies accusations of lying before Muhammad's claim."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_08"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l11_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The report includes an answer about keeping promises, with Abu Sufyan reserving judgement about a current truce."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_09"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l11_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "According to it, he described a call to worship God alone, pray, speak truthfully, be chaste and maintain family ties."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_10"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l11_020",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Keep an account of conduct, an account of his message, and a judgement about prophethood separate."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_06",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l11_02",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_muhammad_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Is this a careful reading of the report?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "Abu Sufyan's reported answer settles everything Muhammad ﷺ did during the rest of his life."
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Yes, because the source name covers every detail."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "No, because the answer concerns what is reported at that time."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Yes, because a report about honesty proves every later statement."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l11_07_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_07",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Ask carefully about gain"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l11_023",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The Qur'an presents Muhammad's address as asking for no reward for this message."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_11"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l11_024",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A no-reward statement identifies what a claimant says, while examining conduct requires its supporting reports."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l11_025",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A reliable report of declining a benefit weakens that particular motive explanation, but does not alone establish prophethood."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l11_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If you read a story about refusing wealth or power, ask for its source and what its details establish."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_08",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which aspect needs the most follow-up for you?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "How were the reports transmitted?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "How does conduct relate to the messenger claim?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "How can I examine the message itself?"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "You can understand a report while retaining questions about its truth or significance; this response is not graded."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l11_09",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Three layers of reading"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 2
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l11_records",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l11_records_v1_a4e29a49b8d90b95b3d63e04c16fd680951d71ec07e96d737a8910bee00e417a.json",
+          "mime_type": "application/json",
+          "sha256": "a4e29a49b8d90b95b3d63e04c16fd680951d71ec07e96d737a8910bee00e417a",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_records_v1_fcb38353b5_21aadb9c62aeaa9a00805628041a6a327a7d3cb2813ad1b0e94d0f4b73803866.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 2
+        },
+        "alt": "An open book on the reading table with warm light around the pages.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l11_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Reading a report identifies what the source conveys; accepting that the event occurred requires examining the report."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l11_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A report about the listeners' trust concerns credibility in their experience, and does not alone establish the message's source."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l11_030",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Evaluating the messenger claim brings together transmission, conduct and message, respecting the limits of each piece of evidence."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l11_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Write down what the report conveys, what it supports, and what still needs examination."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_10",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l11_03",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_muhammad_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Where does the conclusion stop matching the evidence?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The Safa report conveys an answer about his honesty."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "That bears on a question about earlier conduct."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Therefore that answer alone establishes everything included in the messenger claim."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l11_11",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "You do not need to adopt someone else's judgement to understand what the sources report."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "Direct questions to the report, meaning and evidence while respecting the people concerned."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_12",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l11_04",
+        "type": "scenario",
+        "concept_ids": [
+          "con_u0_muhammad_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "How should this reader continue the examination?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "situation": [
+            {
+              "type": "text",
+              "text": "Imagine a reader understanding the Safa report but not knowing how it reached the collection."
+            }
+          ],
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Ask about transmission, reference and explanation, then compare its significance with the question being examined."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Force acceptance because the story has been understood."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Conclude that not knowing the details proves the event never occurred."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l11_13",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "From a report to the appropriate question"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l11_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "According to the report, they answered that their experience with him had been truthful."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_03"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l11_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "According to it, he described a call to worship God alone, pray, speak truthfully, be chaste and maintain family ties."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_10"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l11_039",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A no-reward statement identifies what a claimant says, while examining conduct requires its supporting reports."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l11_040",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Evaluating the messenger claim brings together transmission, conduct and message, respecting the limits of each piece of evidence."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "When reading a historical report, use two lines to separate the account from your inference."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l11_topic_1",
+        "title": "Muhammad ﷺ and His Claim",
+        "concept_ids": [
+          "con_u0_muhammad_claim"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "What does a report about honesty support, and what remains to examine?"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "src_c_u0_l11_01",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "Source awaiting verification",
+      "reference": "Sahih al-Bukhari 4770",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_02",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "Source awaiting verification",
+      "reference": "Sahih al-Bukhari 4770; same primary text URL. Preserve that cavalry report is hypothetical within the historical report, not an actual attack.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_03",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "Source awaiting verification",
+      "reference": "Sahih al-Bukhari 4770; same primary text URL. Do not expand this reported response into a claim about every Meccan or every past event.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_04",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "Source awaiting verification",
+      "reference": "Sahih al-Bukhari 4770; same primary text URL. Claim is report-level attribution; no invented speech, thoughts or participant depictions.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_05",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "Source awaiting verification",
+      "reference": "Sahih al-Bukhari 4770; explanatory reading of question sequence; approve with hadith commentary.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_06",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "Source awaiting verification",
+      "reference": "Sahih al-Bukhari 4770; distinguish the reported response from Abu Lahab objection; approve with commentary.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_08",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "Source awaiting verification",
+      "reference": "Sahih al-Bukhari 7",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_09",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "Source awaiting verification",
+      "reference": "Sahih al-Bukhari 7; scope checked same URL, promises/truce section. Preserve qualification and do not claim later conduct from that report.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_10",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "Source awaiting verification",
+      "reference": "Sahih al-Bukhari 7; scope checked same URL, question about what he orders. Meaning parity and paraphrase need specialist approval.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_11",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "Sad 38:86",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_u0_l11_story",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "Source awaiting verification",
+      "reference": "Sahih al-Bukhari 4770",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    }
+  ],
+  "terms": {
+    "term_report_source": {
+      "term_id": "term_report_source",
+      "text": "Report source",
+      "arabic": "مصدر الرواية",
+      "transliteration": "maṣdar al-riwāyah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The stated reference used to examine what a report conveys and how it was transmitted."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Keep the Safa report separate from an inference drawn from it."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l11",
+      "lesson_title": "Muhammad ﷺ and His Claim"
+    }
+  },
+  "answers": []
+}

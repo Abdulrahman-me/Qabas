@@ -1,0 +1,60 @@
+{
+ "left": [
+  {
+   "item_id": "l_1",
+   "spans": [
+    {
+     "type": "text",
+     "text": "الزكاة"
+    }
+   ]
+  },
+  {
+   "item_id": "l_2",
+   "spans": [
+    {
+     "type": "text",
+     "text": "الصوم"
+    }
+   ]
+  },
+  {
+   "item_id": "l_3",
+   "spans": [
+    {
+     "type": "text",
+     "text": "الحج"
+    }
+   ]
+  }
+ ],
+ "right": [
+  {
+   "item_id": "r_1",
+   "spans": [
+    {
+     "type": "text",
+     "text": "قصد مكة لأداء المناسك"
+    }
+   ]
+  },
+  {
+   "item_id": "r_2",
+   "spans": [
+    {
+     "type": "text",
+     "text": "مال يُعطى للمستحقين"
+    }
+   ]
+  },
+  {
+   "item_id": "r_3",
+   "spans": [
+    {
+     "type": "text",
+     "text": "الامتناع عن الطعام والشراب من الفجر إلى المغرب"
+    }
+   ]
+  }
+ ]
+}

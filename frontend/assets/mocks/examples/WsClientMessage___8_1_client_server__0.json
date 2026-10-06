@@ -1,0 +1,19 @@
+[
+ {
+  "type": "ready",
+  "data": {}
+ },
+ {
+  "type": "answer",
+  "data": {
+   "question_index": 0,
+   "answer": {
+    "option_id": "opt_a"
+   }
+  }
+ },
+ {
+  "type": "ping",
+  "data": {}
+ }
+]

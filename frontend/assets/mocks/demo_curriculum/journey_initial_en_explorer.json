@@ -1,0 +1,567 @@
+{
+ "track": "explorer",
+ "current": {
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l1"
+ },
+ "units": [
+  {
+   "unit_id": "unit_0",
+   "index": 0,
+   "title": "Start With a Question",
+   "subtitle": "Foundations before the big questions",
+   "art_key": "unit_big_questions",
+   "has_guide": false,
+   "state": "available",
+   "coming_soon": false,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": [
+    {
+     "lesson_id": "les_u0_l1",
+     "index": 0,
+     "title": "Do You Have to See It to Know It?",
+     "lesson_type": "concept",
+     "state": "available",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": null
+    },
+    {
+     "lesson_id": "les_u0_l2",
+     "index": 1,
+     "title": "Could Something Come From Nothing?",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l1",
+        "unit_id": "unit_0",
+        "title": "Do You Have to See It to Know It?"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "Do You Have to See It to Know It?"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l3",
+     "index": 2,
+     "title": "Could Something Create Itself?",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l2",
+        "unit_id": "unit_0",
+        "title": "Could Something Come From Nothing?"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "Do You Have to See It to Know It?"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l4",
+     "index": 3,
+     "title": "What Would a Creator Be Like?",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l2",
+        "unit_id": "unit_0",
+        "title": "Could Something Come From Nothing?"
+       },
+       {
+        "lesson_id": "les_u0_l3",
+        "unit_id": "unit_0",
+        "title": "Could Something Create Itself?"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "Do You Have to See It to Know It?"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l5",
+     "index": 4,
+     "title": "One Creator or Many?",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l4",
+        "unit_id": "unit_0",
+        "title": "What Would a Creator Be Like?"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "Do You Have to See It to Know It?"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l6",
+     "index": 5,
+     "title": "If There Is a Creator, Would We Need Guidance?",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l4",
+        "unit_id": "unit_0",
+        "title": "What Would a Creator Be Like?"
+       },
+       {
+        "lesson_id": "les_u0_l5",
+        "unit_id": "unit_0",
+        "title": "One Creator or Many?"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "Do You Have to See It to Know It?"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l7",
+     "index": 6,
+     "title": "How Could Guidance Reach Us?",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l6",
+        "unit_id": "unit_0",
+        "title": "If There Is a Creator, Would We Need Guidance?"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "Do You Have to See It to Know It?"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l8",
+     "index": 7,
+     "title": "How Would We Test a Claim of Revelation?",
+     "lesson_type": "practice",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l1",
+        "unit_id": "unit_0",
+        "title": "Do You Have to See It to Know It?"
+       },
+       {
+        "lesson_id": "les_u0_l7",
+        "unit_id": "unit_0",
+        "title": "How Could Guidance Reach Us?"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "Do You Have to See It to Know It?"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l9",
+     "index": 8,
+     "title": "The Qur'an's Claim",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l8",
+        "unit_id": "unit_0",
+        "title": "How Would We Test a Claim of Revelation?"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "Do You Have to See It to Know It?"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l10",
+     "index": 9,
+     "title": "How Would We Recognize a Messenger?",
+     "lesson_type": "practice",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l7",
+        "unit_id": "unit_0",
+        "title": "How Could Guidance Reach Us?"
+       },
+       {
+        "lesson_id": "les_u0_l8",
+        "unit_id": "unit_0",
+        "title": "How Would We Test a Claim of Revelation?"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "Do You Have to See It to Know It?"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l11",
+     "index": 10,
+     "title": "Muhammad ﷺ and His Claim",
+     "lesson_type": "story",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l9",
+        "unit_id": "unit_0",
+        "title": "The Qur'an's Claim"
+       },
+       {
+        "lesson_id": "les_u0_l10",
+        "unit_id": "unit_0",
+        "title": "How Would We Recognize a Messenger?"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "Do You Have to See It to Know It?"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l12",
+     "index": 11,
+     "title": "So What Is Islam?",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l5",
+        "unit_id": "unit_0",
+        "title": "One Creator or Many?"
+       },
+       {
+        "lesson_id": "les_u0_l6",
+        "unit_id": "unit_0",
+        "title": "If There Is a Creator, Would We Need Guidance?"
+       },
+       {
+        "lesson_id": "les_u0_l7",
+        "unit_id": "unit_0",
+        "title": "How Could Guidance Reach Us?"
+       },
+       {
+        "lesson_id": "les_u0_l8",
+        "unit_id": "unit_0",
+        "title": "How Would We Test a Claim of Revelation?"
+       },
+       {
+        "lesson_id": "les_u0_l9",
+        "unit_id": "unit_0",
+        "title": "The Qur'an's Claim"
+       },
+       {
+        "lesson_id": "les_u0_l11",
+        "unit_id": "unit_0",
+        "title": "Muhammad ﷺ and His Claim"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "Do You Have to See It to Know It?"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_1",
+   "index": 1,
+   "title": "The First Step",
+   "subtitle": "Understanding the First Step into Islam",
+   "art_key": "unit_first_steps",
+   "has_guide": false,
+   "state": "available",
+   "coming_soon": false,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": [
+    {
+     "lesson_id": "les_u1_l1",
+     "index": 0,
+     "title": "What Does Islam Mean?",
+     "lesson_type": "concept",
+     "state": "available",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": true,
+     "soft_lock": null
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_2",
+   "index": 2,
+   "title": "Knowing Allah",
+   "subtitle": "Coming soon",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_3",
+   "index": 3,
+   "title": "Prayer: Your Daily Connection",
+   "subtitle": "Coming soon",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_4",
+   "index": 4,
+   "title": "Living the Five Pillars",
+   "subtitle": "Coming soon",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_5",
+   "index": 5,
+   "title": "What Muslims Believe",
+   "subtitle": "Coming soon",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_6",
+   "index": 6,
+   "title": "The Qur'an",
+   "subtitle": "Coming soon",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_7",
+   "index": 7,
+   "title": "One Message, Many Prophets",
+   "subtitle": "Coming soon",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_8",
+   "index": 8,
+   "title": "The Life of Muhammad ﷺ",
+   "subtitle": "Coming soon",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_9",
+   "index": 9,
+   "title": "Islam in Everyday Life",
+   "subtitle": "Coming soon",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_10",
+   "index": 10,
+   "title": "Beyond the Basics",
+   "subtitle": "Coming soon",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  }
+ ]
+}

@@ -1,0 +1,1045 @@
+{
+  "session_id": "ses_mock_u0_l6_en_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l6",
+  "lesson_version": 1,
+  "title": "If There Is a Creator, Would We Need Guidance?",
+  "subtitle": "What can things tell us, and what requires communication?",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "Distinguish what a world reveals about its source from what requires a message about purpose and guidance."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l06_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_hook",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "Imagine arriving at a guest house prepared by a host you have never met."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "Water and food are ready, and a closed envelope rests on the table."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "Does preparing the house reveal everything the host wants from you?"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l06_guesthouse",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l06_guesthouse_v1_e74814e4a6d09256f7a0dc24a2c938023e033cbbb33120aa660d2417c51cdd68.json",
+          "mime_type": "application/json",
+          "sha256": "e74814e4a6d09256f7a0dc24a2c938023e033cbbb33120aa660d2417c51cdd68",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l06_guesthouse_v1_76f20ad9e8_5b88c54ade1f77b8705bca4abb00781a003b9bf63368ab5b4c0c926a225d7259.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "A quiet guest room with a bed, water, food and a closed envelope.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_predict",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What could you learn from the preparation alone?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "There is an arrangement for the guest’s comfort."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "How long the host wants the guest to stay."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "All the house rules."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "We will separate an effect we see from a purpose its owner has not yet communicated."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_effects",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "A visible effect, an open question"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "effects_p0",
+          "sentence": {
+            "sentence_id": "effects_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Preparing food and water suggests concern for the guest’s comfort without revealing all the host’s intentions."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "effects_p1",
+          "sentence": {
+            "sentence_id": "effects_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A bed does not specify a departure time, and food does not explain the invitation’s purpose."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "effects_p2",
+          "sentence": {
+            "sentence_id": "effects_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The invitation might be for rest, a nearby visit, or something you have not considered."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "effects_p3",
+          "sentence": {
+            "sentence_id": "effects_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Several possible purposes prevent choosing one from the furniture alone."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex1",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l06_01",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_guidance_gap"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Sort the statements by what they support."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "Supported by the preparation",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "Not specified by the preparation",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The house has a place to sleep."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Departure is in two days."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Water is available to the guest."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The invitation is to attend an event."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_5",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The host prepared the guest’s basic needs."
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_message",
+      "type": "story",
+      "label": "Scenario",
+      "title": "When the envelope was opened",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+        {
+          "beat_id": "message_beat0",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "message_b0s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveler wants to thank the host but does not know how to respond to the invitation."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "message_b0s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveler hesitates between leaving soon and staying for days."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 0
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l06_guesthouse",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l06_guesthouse_v1_e74814e4a6d09256f7a0dc24a2c938023e033cbbb33120aa660d2417c51cdd68.json",
+              "mime_type": "application/json",
+              "sha256": "e74814e4a6d09256f7a0dc24a2c938023e033cbbb33120aa660d2417c51cdd68",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l06_guesthouse_v1_76f20ad9e8_5b88c54ade1f77b8705bca4abb00781a003b9bf63368ab5b4c0c926a225d7259.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 0
+            },
+            "alt": "A quiet guest room with a bed, water, food and a closed envelope.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        },
+        {
+          "beat_id": "message_beat1",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "message_b1s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Opening the envelope, the traveler finds the visit arrangements and a time to contact the host."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "message_b1s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "But another question arises: is this paper actually from the host?"
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l06_guesthouse",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l06_guesthouse_v1_e74814e4a6d09256f7a0dc24a2c938023e033cbbb33120aa660d2417c51cdd68.json",
+              "mime_type": "application/json",
+              "sha256": "e74814e4a6d09256f7a0dc24a2c938023e033cbbb33120aa660d2417c51cdd68",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l06_guesthouse_v1_cd92849bcd_7ca4e73b87ba1af5e2e26ee0994048aaa8e1f2b50701b8118873b57b7f62c12e.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "A quiet guest room with a bed, water, food and a closed envelope.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        },
+        {
+          "beat_id": "message_beat2",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "message_b2s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveler uses the contact method agreed during booking, and the host confirms sending the paper."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "message_b2s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Now there is a basis for understanding the request instead of selecting a purpose from the furniture."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l06_guesthouse",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l06_guesthouse_v1_e74814e4a6d09256f7a0dc24a2c938023e033cbbb33120aa660d2417c51cdd68.json",
+              "mime_type": "application/json",
+              "sha256": "e74814e4a6d09256f7a0dc24a2c938023e033cbbb33120aa660d2417c51cdd68",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l06_guesthouse_v1_fcb38353b5_4172bbeb0199821dc46c413c05e95662b671e5b1cbff42c4ec6f07449341e060.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "A quiet guest room with a bed, water, food and a closed envelope.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex2",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l06_02",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_guidance_gap"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Why did the traveler’s position change after checking?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because the envelope was attractive."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because its origin was checked and its request stated."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because the latest guess is always correct."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_bridge",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "From the house to our question"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "bridge_p0",
+          "sentence": {
+            "sentence_id": "bridge_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Set the house’s appearance aside; keep only the distinction between an effect and an intention."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "bridge_p1",
+          "sentence": {
+            "sentence_id": "bridge_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If the world had a creator, its effects could help us ask about its source."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "bridge_p2",
+          "sentence": {
+            "sentence_id": "bridge_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Reasoning toward a creator does not, by itself, specify everything that creator wants from human beings."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "bridge_p3",
+          "sentence": {
+            "sentence_id": "bridge_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Someone needing to know another’s intention needs access to that intention, rather than more guessing alone."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "bridge_p4",
+          "sentence": {
+            "sentence_id": "bridge_s4",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Here, guidance means direction about purpose and the way forward, not removing a person’s ability to think."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex3",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l06_03",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_guidance_gap"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Evaluate the statement, then choose the reason."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "If we need a message, thinking will have no role."
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because thought identifies every intention without communication."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because every message is true."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because thought is needed to understand the message and examine its source."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_need",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What question follows recognizing a need for guidance?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Has guidance arrived, and how would we examine it?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Why do effects not suffice for me?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I want to revisit the condition of a creator."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "You may keep questioning the condition. The task now is understanding what follows if it holds."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "Needing guidance does not establish that a message arrived or that any offered message is true."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_limits",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "A need, not a ready-made verdict"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "limits_p0",
+          "sentence": {
+            "sentence_id": "limits_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Needing guidance does not establish that a message arrived or that any offered message is true."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "limits_p1",
+          "sentence": {
+            "sentence_id": "limits_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Thinking helps us understand and examine a message; needing one does not make reason useless."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "limits_p2",
+          "sentence": {
+            "sentence_id": "limits_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The host example does not establish that a creator acts like humans or needs paper and sound."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "limits_p3",
+          "sentence": {
+            "sentence_id": "limits_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "We choose no particular message here. The route and then its examination remain open."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex4",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l06_04",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_guidance_gap"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which next step preserves the difference between need and arrival?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Accept any claim because I need guidance."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Conclude no message arrived because I did not see it sent."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Find a specific claim, then examine its transmission and evidence."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_summary",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "What the envelope revealed"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "summary_p0",
+          "sentence": {
+            "sentence_id": "summary_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A bed does not specify a departure time, and food does not explain the invitation’s purpose."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p1",
+          "sentence": {
+            "sentence_id": "summary_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A message confirmed as the host’s can reveal a request the furniture cannot disclose."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p2",
+          "sentence": {
+            "sentence_id": "summary_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Thinking helps us understand and examine a message; needing one does not make reason useless."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p3",
+          "sentence": {
+            "sentence_id": "summary_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Needing guidance does not establish that a message arrived or that any offered message is true."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "Think of an arrangement someone else prepared. Separate what you can see from what requires asking its maker."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l6_topic_1",
+        "title": "Guidance",
+        "concept_ids": [
+          "con_u0_guidance_gap"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "What did the prepared house reveal, and what required a reliable message?"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_guidance": {
+      "term_id": "term_guidance",
+      "text": "Guidance",
+      "arabic": "هداية",
+      "transliteration": "hidāya",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Direction helping explain purpose and the way forward when effects alone do not specify them."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "The house provides comfort; the host’s message explains the visit arrangements."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l6",
+      "lesson_title": "If There Is a Creator, Would We Need Guidance?"
+    }
+  },
+  "answers": []
+}

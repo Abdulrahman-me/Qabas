@@ -1,0 +1,1282 @@
+{
+  "session_id": "ses_mock_u0_l9_ar_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l9",
+  "lesson_version": 1,
+  "title": "ادّعاء القرآن",
+  "subtitle": "ماذا يقول القرآن عن نفسه، وما الذي يحتاج إلى فحص؟",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "لخّص وصف القرآن لنفسه بعبارات منسوبة إليه."
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "اختر فحصًا مناسبًا لادّعاء محدّد."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l09_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "تخيّل أنك تقف أمام ركن كتب، وتفتح ترجمة للقرآن للمرة الأولى."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "تريد أن تفهم نوع الكتاب الذي أمامك قبل أن تحكم عليه."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "هل تبدأ بإعجابك بالأسلوب، أم بما يدّعيه الكتاب عن نفسه؟"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l09_bookfair",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l09_bookfair_v1_07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f.json",
+          "mime_type": "application/json",
+          "sha256": "07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l09_bookfair_v1_76f20ad9e8_bd4e660dff8ff3653d7d9c722f89509a1bb95d6e995fb0b70c4d8d920976ffbf.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "ركن كتب تحت مظلة، وزائر بوجه بلا ملامح قرب كتاب مفتوح.",
+        "overlays": []
+      },
+      "cta": "ابدأ بالسؤال"
+    },
+    {
+      "block_id": "b_u0_l09_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي سؤال تريد أن تبدأ به؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "ما مصدره الذي يعلنه؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "ما الرسالة التي يحملها؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "كيف يمكن فحص ادّعائه؟"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "احتفظ بالسؤال الذي اخترته؛ سنقرأ الادّعاء، ثم نبحث كيف يُفحص."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l09_03_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_03",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ابدأ بالادّعاء كما هو"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l09_005",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يصف القرآن نفسه بأنه تنزيل من رب العالمين، لا تأليفًا ينسبه إلى بشر."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_01"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l09_006",
+            "spans": [
+              {
+                "type": "text",
+                "text": "وصف الكتاب لمصدره يعرّفك بادّعائه، لكنه لا يكفي وحده لإثباته."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l09_007",
+            "spans": [
+              {
+                "type": "text",
+                "text": "سجّل سؤالين منفصلين: ماذا يقول النص؟ وما الذي يؤيّد صدق ما يقول؟"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l09_008",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الأدلة التي تفحص الادّعاء يجب أن تضيف شيئًا غير تكرار الادّعاء نفسه."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l09_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_quran_self_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي عبارة تصف ما عرفته من القراءة وحدها؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ثبت أن الكتاب من الله."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "عرفت أنه يدّعي أن مصدره الله."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ثبت أنه تأليف بشري."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l09_05",
+      "type": "story",
+      "label": "موقف",
+      "title": "سؤال الزائر يتغيّر",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l09_010",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تخيّل أن الزائر يقرأ فقرة جميلة، فيكاد يجعل جمالها جوابه الوحيد."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l09_011",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لكنه يريد جوابًا عن المصدر، لا وصفًا لشعوره بالقراءة."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l09_bookfair",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l09_bookfair_v1_07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f.json",
+              "mime_type": "application/json",
+              "sha256": "07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l09_bookfair_v1_cd92849bcd_7e22077aebd77c95a7deb0834c326a53acb4c29b131b2af6c38bf1a539ef9f41.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l09_012",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يعود إلى الكتاب، ويكتب ما يدّعيه في ورقة منفصلة."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l09_013",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ثم يضع أمام كل ادّعاء سؤالًا عمّا يمكن أن يدعمه."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l09_bookfair",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l09_bookfair_v1_07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f.json",
+              "mime_type": "application/json",
+              "sha256": "07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l09_bookfair_v1_fcb38353b5_ae75fb8af2d0f66288b2a44447af91db028c3d3798f7eda7eb65b8a662718d7a.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l09_014",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يخرج من الركن بخطة قراءة، دون أن يحوّل الانطباع الأول إلى حكم نهائي."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l09_015",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ساعده أنت في اختيار أسئلة الفحص المناسبة."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l09_bookfair",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l09_bookfair_v1_07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f.json",
+              "mime_type": "application/json",
+              "sha256": "07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l09_bookfair_v1_19cf76ac47_ae75fb8af2d0f66288b2a44447af91db028c3d3798f7eda7eb65b8a662718d7a.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_06",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "مصدر ورسالة وعلاقة بالماضي"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 2
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l09_bookfair",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l09_bookfair_v1_07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f.json",
+          "mime_type": "application/json",
+          "sha256": "07fe3365187a38ce80720b948ab98a04655a448fdb9faf2e40843a28dc99e52f",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l09_bookfair_v1_fcb38353b5_ae75fb8af2d0f66288b2a44447af91db028c3d3798f7eda7eb65b8a662718d7a.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 2
+        },
+        "alt": "كتاب مفتوح على طاولة الركن، والضوء حوله هادئ.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l09_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يصف القرآن نفسه بأنه هداية، لا مجرد نص يمنح القارئ تجربة لغوية."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_04"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l09_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ويصف علاقته بالكتب السابقة بأنه مصدّق لها ومهيمن عليها."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_05"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l09_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ويعرض حفظه بوصفه وعدًا من الله في النص."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_06"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l09_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ادّعاء الحفظ يختلف عن دراسة كيف نُقل النص عبر الزمن."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_5",
+          "sentence": {
+            "sentence_id": "s_u0_l09_020",
+            "spans": [
+              {
+                "type": "text",
+                "text": "للحفظ، ابحث عن شواهد النقل؛ وللرسالة، اقرأ ما يطلبه النص من قارئه."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_07",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l09_02",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_quran_self_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "صنّف هذه العبارات: تحديد الادّعاء أم فحصه؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "تحديد الادّعاء",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "سؤال للفحص",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "القرآن يصف نفسه بأنه هداية."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ما الشواهد على نقل النص؟"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "القرآن يصف نفسه بأنه محفوظ."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كيف تُفهم علاقته بالكتب السابقة؟"
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l09_08_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_08",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "تحدٍّ يحتاج فهمًا"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l09_022",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يتحدّى القرآن من يشك في مصدره أن يأتي بسورة من مثله."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_08"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l09_023",
+            "spans": [
+              {
+                "type": "text",
+                "text": "فهم التحدّي يحتاج معرفة المقصود بالمماثلة، ومعايير الحكم على المحاولة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l09_024",
+            "spans": [
+              {
+                "type": "text",
+                "text": "قراءة ترجمة وحدها لا تتيح فحص كل خصائص النص العربي الأصلي."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l09_025",
+            "spans": [
+              {
+                "type": "text",
+                "text": "اطلب شرحًا للمعايير وأمثلة تطبيقها، بدل الاكتفاء بعبارة: أعجبني أو لم يعجبني."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_09",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l09_03",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_quran_self_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أين يقفز هذا الحكم أبعد من دليله؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "قرأت ترجمة، وفهمت بعض معانيها."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أعجبني الأسلوب."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إذن فحصت التحدّي كله، وأثبتّ مصدر الكتاب."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l09_10_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_10",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "اختبر التعارض المحدّد"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l09_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يدعو القرآن إلى تدبّره، ويربط اختلافًا كثيرًا بكونه من مصدر غير الله."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_11"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l09_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لإثبات تناقض، يجب أن تتعارض عبارتان في المعنى نفسه والظروف نفسها."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l09_030",
+            "spans": [
+              {
+                "type": "text",
+                "text": "عدم فهم عبارتين فورًا لا يثبت تناقضهما، ولا يحسم أن كل اعتراض بلا أساس."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l09_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "حدّد العبارتين، واقرأ سياقهما، وراجع اللغة، ثم اطلب جوابًا عن التعارض الذي تقصده."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l09_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l09_04",
+        "type": "scenario",
+        "concept_ids": [
+          "con_u0_quran_self_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "ما الخطوة الأدق لهذا القارئ؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "situation": [
+            {
+              "type": "text",
+              "text": "تخيّل أن قارئًا وجد ترجمتين مختلفتين لعبارة، فظن أن الكتاب يناقض نفسه."
+            }
+          ],
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يحسم أن الكتاب متناقض بسبب اختلاف الترجمتين."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يعلن أن كل اعتراض مستحيل دون قراءة."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يفحص الأصل والسياق، ويميّز اختلاف الترجمة من تعارض المعنى."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l09_12",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "بعد هذه القراءة، أي جانب تريد فحصه أكثر؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "المصدر ونقل النص"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "التحدّي ومعاييره"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "معاني النص واتساقه"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "اختر سؤالًا محدّدًا يمكن متابعته؛ ليس مطلوبًا أن تنهي حكمك الآن."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l09_13",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "صار السؤال أوضح"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l09_035",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يصف القرآن نفسه بأنه تنزيل من رب العالمين، لا تأليفًا ينسبه إلى بشر."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l09_01"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l09_036",
+            "spans": [
+              {
+                "type": "text",
+                "text": "وصف الكتاب لمصدره يعرّفك بادّعائه، لكنه لا يكفي وحده لإثباته."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l09_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "فهم التحدّي يحتاج معرفة المقصود بالمماثلة، ومعايير الحكم على المحاولة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l09_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لإثبات تناقض، يجب أن تتعارض عبارتان في المعنى نفسه والظروف نفسها."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "اكتب ادّعاءً قرأته، ثم سؤالًا يمكن أن يساعدك على فحصه."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l9_topic_1",
+        "title": "ادّعاء القرآن",
+        "concept_ids": [
+          "con_u0_quran_self_claim"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "كيف تميّز معرفة ما يقوله كتاب عن قبول ما يقوله؟"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "src_c_u0_l09_01",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "As-Sajdah 32:2–3",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l09_04",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Al-Baqarah 2:2; scope checked https://quran.com/al-baqarah/2; approve attributed paraphrase, not a displayed quote.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l09_05",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Al-Maidah 5:48; scope checked https://quran.com/al-maidah/48; specialist must approve meaning of muhaymin; no claim that all current texts are identical.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l09_06",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Al-Hijr 15:9; scope checked https://quran.com/al-hijr/9; attribution only, not independent historical proof.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l09_08",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Al-Baqarah 2:23",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l09_11",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "An-Nisa 4:82",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    }
+  ],
+  "terms": {
+    "term_quran": {
+      "term_id": "term_quran",
+      "text": "القرآن",
+      "arabic": "القرآن",
+      "transliteration": "al-Qurʾān",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "الكتاب الذي يؤمن المسلمون بأنه وحي من الله إلى محمد ﷺ."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "نبحث هنا ما يقوله القرآن عن نفسه، دون افتراض قبولك له."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l9",
+      "lesson_title": "ادّعاء القرآن"
+    },
+    "term_surah": {
+      "term_id": "term_surah",
+      "text": "سورة",
+      "arabic": "سورة",
+      "transliteration": "sūrah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "جزء مسمّى من القرآن يضم آيات."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "التحدّي المذكور في البقرة ٢:٢٣ يتعلّق بسورة."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l9",
+      "lesson_title": "ادّعاء القرآن"
+    }
+  },
+  "answers": []
+}

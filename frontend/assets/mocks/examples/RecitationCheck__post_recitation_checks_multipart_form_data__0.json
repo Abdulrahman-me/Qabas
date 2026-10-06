@@ -1,0 +1,63 @@
+{
+ "check_id": "rchk_55e1",
+ "status": "evaluated",
+ "passed": false,
+ "words": [
+  {
+   "index": 0,
+   "expected": "قُلْ",
+   "result": "correct",
+   "heard": "قل",
+   "audio_segment": {
+    "url": "https://cdn.example.com/quran/afasy/112001.mp3",
+    "start_ms": 0,
+    "end_ms": 520
+   }
+  },
+  {
+   "index": 1,
+   "expected": "هُوَ",
+   "result": "correct",
+   "heard": "هو",
+   "audio_segment": {
+    "url": "https://cdn.example.com/quran/afasy/112001.mp3",
+    "start_ms": 520,
+    "end_ms": 900
+   }
+  },
+  {
+   "index": 2,
+   "expected": "اللَّهُ",
+   "result": "substituted",
+   "heard": "الله",
+   "audio_segment": {
+    "url": "https://cdn.example.com/quran/afasy/112001.mp3",
+    "start_ms": 900,
+    "end_ms": 1650
+   }
+  },
+  {
+   "index": 3,
+   "expected": "أَحَدٌ",
+   "result": "missing",
+   "heard": null,
+   "audio_segment": {
+    "url": "https://cdn.example.com/quran/afasy/112001.mp3",
+    "start_ms": 1650,
+    "end_ms": 2900
+   }
+  }
+ ],
+ "summary": {
+  "correct": 2,
+  "missing": 1,
+  "substituted": 1,
+  "extra": 0
+ },
+ "message": [
+  {
+   "type": "text",
+   "text": "أحسنت في البداية! انتبه إلى الكلمتين المظللتين، اضغط على كل كلمة لتسمع نطقها ثم أعد المحاولة."
+  }
+ ]
+}

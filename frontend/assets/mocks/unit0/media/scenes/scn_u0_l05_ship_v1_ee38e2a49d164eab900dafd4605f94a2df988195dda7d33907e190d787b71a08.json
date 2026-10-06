@@ -1,0 +1,430 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l05_ship",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "mint": "#EEF5F2",
+    "emerald": "#0B5A52",
+    "deep": "#073C37",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "ink": "#16233A",
+    "slate": "#566476",
+    "sand": "#D7C3A1",
+    "stone": "#B8C5B8",
+    "paper": "#FAF4E6",
+    "wood": "#956B48",
+    "wooddark": "#6B4A34",
+    "skin": "#C8A681",
+    "white": "#FFFFFF",
+    "leaf": "#64846B",
+    "goldclear": "#E0A52600",
+    "shadow": "#16233A22"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 2,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "sky",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "mint"
+          },
+          {
+            "at": 1,
+            "color": "ember"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "sun",
+      "type": "ellipse",
+      "x": 1100,
+      "y": 185,
+      "rx": 60,
+      "ry": 60,
+      "fill": "ember"
+    },
+    {
+      "id": "distant_shore",
+      "type": "path",
+      "d": "M 0 575 Q 260 460 450 570 Q 720 405 980 550 Q 1320 460 1600 570 L 1600 680 L 0 680 Z",
+      "fill": "stone"
+    },
+    {
+      "id": "sea",
+      "type": "rect",
+      "x": 0,
+      "y": 575,
+      "w": 1600,
+      "h": 425,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "leaf"
+          },
+          {
+            "at": 1,
+            "color": "deep"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "wave_1",
+      "type": "path",
+      "d": "M 50 720 Q 280 675 530 720 Q 760 755 980 710 Q 1210 670 1550 715 L 1550 727 Q 1200 684 980 724 Q 760 769 530 734 Q 280 689 50 733 Z",
+      "fill": "mint",
+      "opacity": 0.18,
+      "tracks": [
+        {
+          "property": "translate_x",
+          "duration_ms": 6400,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": -10
+            },
+            {
+              "t": 0.5,
+              "v": 12
+            },
+            {
+              "t": 1,
+              "v": -10
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "hull",
+      "type": "path",
+      "d": "M 270 690 Q 800 780 1350 690 L 1220 872 Q 790 945 420 856 Z",
+      "fill": "wooddark"
+    },
+    {
+      "id": "hull_band",
+      "type": "path",
+      "d": "M 284 710 Q 800 795 1337 710 L 1310 750 Q 790 825 309 749 Z",
+      "fill": "wood"
+    },
+    {
+      "id": "deck",
+      "type": "path",
+      "d": "M 280 681 Q 800 630 1350 681 L 1350 701 Q 800 750 280 701 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "mast",
+      "type": "rect",
+      "x": 771,
+      "y": 270,
+      "w": 22,
+      "h": 405,
+      "fill": "wood",
+      "corner": 0
+    },
+    {
+      "id": "sail",
+      "type": "path",
+      "d": "M 786 285 Q 1060 395 1110 620 Q 925 562 799 642 Z",
+      "fill": "paper"
+    },
+    {
+      "id": "sail_shadow",
+      "type": "path",
+      "d": "M 786 285 Q 808 480 799 642 L 833 629 Q 859 470 786 285 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "rail_front",
+      "type": "rect",
+      "x": 396,
+      "y": 657,
+      "w": 848,
+      "h": 20,
+      "fill": "wood",
+      "corner": 0
+    },
+    {
+      "id": "captain_a",
+      "type": "group",
+      "transform": {
+        "x": 570,
+        "y": 469,
+        "scale": 0.86
+      },
+      "children": [
+        {
+          "id": "captain_a_shadow",
+          "type": "ellipse",
+          "x": 0,
+          "y": 215,
+          "rx": 75,
+          "ry": 14,
+          "fill": "shadow"
+        },
+        {
+          "id": "captain_a_body",
+          "type": "path",
+          "d": "M -42 22 Q -82 42 -70 156 L -63 210 L 62 210 L 70 156 Q 82 42 42 22 Q 0 38 -42 22 Z",
+          "fill": "emerald"
+        },
+        {
+          "id": "captain_a_head",
+          "type": "ellipse",
+          "x": 0,
+          "y": -14,
+          "rx": 32,
+          "ry": 42,
+          "fill": "skin"
+        },
+        {
+          "id": "captain_a_arm",
+          "type": "path",
+          "d": "M 36 44 Q 89 71 81 112 L 63 109 Q 67 85 28 68 Z",
+          "fill": "emerald"
+        }
+      ]
+    },
+    {
+      "id": "captain_b",
+      "type": "group",
+      "transform": {
+        "x": 1045,
+        "y": 469,
+        "scale": 0.86
+      },
+      "children": [
+        {
+          "id": "captain_b_shadow",
+          "type": "ellipse",
+          "x": 0,
+          "y": 215,
+          "rx": 75,
+          "ry": 14,
+          "fill": "shadow"
+        },
+        {
+          "id": "captain_b_body",
+          "type": "path",
+          "d": "M -42 22 Q -82 42 -70 156 L -63 210 L 62 210 L 70 156 Q 82 42 42 22 Q 0 38 -42 22 Z",
+          "fill": "slate"
+        },
+        {
+          "id": "captain_b_head",
+          "type": "ellipse",
+          "x": 0,
+          "y": -14,
+          "rx": 32,
+          "ry": 42,
+          "fill": "skin"
+        },
+        {
+          "id": "captain_b_arm",
+          "type": "path",
+          "d": "M 36 44 Q 89 71 81 112 L 63 109 Q 67 85 28 68 Z",
+          "fill": "slate"
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "type": "rect",
+      "x": 672,
+      "y": 615,
+      "w": 182,
+      "h": 82,
+      "fill": "paper",
+      "corner": 8,
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "wheel_outer",
+      "type": "ellipse",
+      "x": 890,
+      "y": 653,
+      "rx": 45,
+      "ry": 45,
+      "fill": "wooddark"
+    },
+    {
+      "id": "wheel_inner",
+      "type": "ellipse",
+      "x": 890,
+      "y": 653,
+      "rx": 32,
+      "ry": 32,
+      "fill": "sand"
+    },
+    {
+      "id": "wheel_spoke_1",
+      "type": "rect",
+      "x": 884,
+      "y": 610,
+      "w": 12,
+      "h": 86,
+      "fill": "wood",
+      "corner": 0
+    },
+    {
+      "id": "wheel_spoke_2",
+      "type": "rect",
+      "x": 847,
+      "y": 647,
+      "w": 86,
+      "h": 12,
+      "fill": "wood",
+      "corner": 0
+    },
+    {
+      "id": "plan_glow",
+      "type": "ellipse",
+      "x": 766,
+      "y": 650,
+      "rx": 165,
+      "ry": 100,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          766,
+          650
+        ],
+        "radius": 165,
+        "stops": [
+          {
+            "at": 0,
+            "color": "gold"
+          },
+          {
+            "at": 1,
+            "color": "goldclear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "eq": 2
+            }
+          },
+          "set": {
+            "opacity": 0.2
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "scale",
+          "duration_ms": 4200,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1.06
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "repeat"
+        }
+      ]
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      }
+    ]
+  }
+}

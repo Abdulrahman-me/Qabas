@@ -1,0 +1,33 @@
+{
+ "xp_total": 340,
+ "xp_this_week": 120,
+ "streak": {
+  "current": 3,
+  "longest": 5,
+  "today_completed": true
+ },
+ "daily_goal": {
+  "minutes": 10,
+  "minutes_today": 12,
+  "met": true
+ },
+ "league": {
+  "league_id": "lg_2026w40_07",
+  "rank": 4,
+  "size": 20
+ },
+ "concepts": {
+  "mastered": 9,
+  "learning": 6
+ },
+ "terms": {
+  "mastered": 14,
+  "seen": 22
+ },
+ "misconceptions": {
+  "resolved": 2,
+  "active": 1
+ },
+ "lessons_completed": 7,
+ "units_completed": 1
+}

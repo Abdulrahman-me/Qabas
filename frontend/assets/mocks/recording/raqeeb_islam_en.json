@@ -1,0 +1,38 @@
+{
+  "message_id": "msg_a_202",
+  "role": "assistant",
+  "status": "completed",
+  "stage": "done",
+  "created_at": "2026-10-04T10:01:00Z",
+  "completed_at": "2026-10-04T10:01:09Z",
+  "understood_input": {
+    "transcript": null,
+    "images": [],
+    "document": null
+  },
+  "classification": {
+    "question_class": "general_knowledge",
+    "label": "General knowledge"
+  },
+  "abstained": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Islam means willing submission to God. It describes a relationship with God expressed through belief and action, rather than belonging to a particular people or inheriting a family identity."
+        }
+      ]
+    }
+  ],
+  "citations": [],
+  "terms": {},
+  "suggested_lessons": [
+    {
+      "lesson_id": "les_u1_l1",
+      "title": "What Does Islam Mean?"
+    }
+  ],
+  "feedback": null
+}

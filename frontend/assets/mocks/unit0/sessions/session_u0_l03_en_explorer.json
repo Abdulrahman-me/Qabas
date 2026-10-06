@@ -1,0 +1,1186 @@
+{
+  "session_id": "ses_mock_u0_l3_en_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l3",
+  "lesson_version": 1,
+  "title": "Could Something Create Itself?",
+  "subtitle": "Follow the reasoning and mark its limits.",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "Distinguish an existing thing changing from bringing itself into existence, and identify the problem in “it created itself.”"
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l03_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l03_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "Imagine a carpenter showing a visitor a finished chair, with boards and tools beside it."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "If the chair does not yet exist, can it make itself?"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "focus": -1
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l03_workshop",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+          "mime_type": "application/json",
+          "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1",
+            "fx.sparkles/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_8ec8e2edbf_6eb0654c1988910b7cbc91c90b590c5fd14173d5fc5890a900e27b91ed319a60.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "focus": -1
+        },
+        "alt": "A workshop with a chair, boards, tools, and a faceless carpenter.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_u0_l03_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What might “it made itself” mean?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Something already existing changed."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "It brought itself into existence before existing."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "The phrase is unclear to me."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "We will separate the meanings. The wording may hide two different ideas."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l03_03",
+      "type": "story",
+      "label": "Scenario",
+      "title": "Before anyone sits down",
+      "origin": null,
+      "provenance": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l03_004",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A visitor wants to understand how the chair appeared, rather than how it looks now."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l03_005",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Seeing the carpenter repair a joint, he imagines the chair assembling itself in the same way."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "focus": -1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l03_workshop",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+              "mime_type": "application/json",
+              "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1",
+                "fx.sparkles/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_8ec8e2edbf_6eb0654c1988910b7cbc91c90b590c5fd14173d5fc5890a900e27b91ed319a60.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "focus": -1
+            },
+            "alt": "A finished chair and carpenter near a workbench.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l03_006",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The carpenter asks him to picture the time before the chair existed: boards and tools, but no chair."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "focus": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l03_workshop",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+              "mime_type": "application/json",
+              "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1",
+                "fx.sparkles/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_4deb3219ec_6397385a1c34ecb7f7a86dddbd123b1a17b10d4b369a716d8e9ad43d8886bd4e.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "focus": 2
+            },
+            "alt": "Boards in a workshop, with a faint chair behind them.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l03_007",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The visitor tries to picture the chair picking up a tool, then stops: the supposed chair does not yet exist."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "focus": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l03_workshop",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+              "mime_type": "application/json",
+              "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1",
+                "fx.sparkles/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_412af08dd8_c8dffd28847591d65a7035e4ceefad7b332bf5084dc5ad8811cfa509830186cf.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "focus": 3
+            },
+            "alt": "A faint chair position and nearby carpentry tools.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_4",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l03_008",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "He changes his question: how did the boards become a chair?"
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l03_009",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "He now has a question about existing things and work, rather than asking a nonexistent chair to make itself."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "focus": -1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l03_workshop",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+              "mime_type": "application/json",
+              "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1",
+                "fx.sparkles/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_8ec8e2edbf_6eb0654c1988910b7cbc91c90b590c5fd14173d5fc5890a900e27b91ed319a60.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "focus": -1
+            },
+            "alt": "A quiet workshop with a chair, boards, and workbench.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l03_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l03_01",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_self_creation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which step assumes the thing it is trying to explain?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "This chair did not exist."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The chair picked up a tool to make itself."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Then it existed after its own work."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l03_05",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "The problem in the order"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "focus": -1
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l03_workshop",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+          "mime_type": "application/json",
+          "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1",
+            "fx.sparkles/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_8ec8e2edbf_6eb0654c1988910b7cbc91c90b590c5fd14173d5fc5890a900e27b91ed319a60.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "focus": -1
+        },
+        "alt": "A chair, tools, and boards in a lit workshop.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l03_011",
+            "spans": [
+              {
+                "type": "text",
+                "text": "For something to act, it cannot be entirely absent when that action occurs."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "focus": -1
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l03_012",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If it brought itself into existence, we would need it as an agent before it existed."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "focus": 2
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l03_013",
+            "spans": [
+              {
+                "type": "text",
+                "text": "That makes the same thing “existing to act” and “not yet existing” at the same time."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "focus": 3
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l03_014",
+            "spans": [
+              {
+                "type": "text",
+                "text": "“It made itself very quickly” does not solve this. Speed does not make a nonexistent thing an agent."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "focus": 3
+          }
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l03_015",
+            "spans": [
+              {
+                "type": "text",
+                "text": "We are examining self-creation, not claiming that every change needs a human carpenter."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "focus": -1
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l03_06",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l03_02",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_self_creation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Judge the statement, then choose the reason."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "“It made itself” poses no problem if it happened quickly."
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Speed removes the need for an agent to exist."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Tools always exist."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A fast action still requires something existing to be its agent."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l03_07",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Did it change, or create itself?"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l03_seed",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l03_seed_v1_67bbc3b011f2517044d420a74dd5f204d6e10a2794a3b4d774aebc1be5a84e73.json",
+          "mime_type": "application/json",
+          "sha256": "67bbc3b011f2517044d420a74dd5f204d6e10a2794a3b4d774aebc1be5a84e73",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_seed_v1_76f20ad9e8_059b39872ece0299b8ea39665008a14e078697179f5b74ccf73391e8c2328fde.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "Soil, a seed, a sprout, a faceless gardener, and a watering can.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l03_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Imagine a planted seed watered by a gardener, with a plant later emerging from it."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l03_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "In this situation, we began with an existing seed and surrounding conditions, rather than the absence of everything."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l03_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Describing change does not make the seed an agent before it existed."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l03_020",
+            "spans": [
+              {
+                "type": "text",
+                "text": "“The plant grew” differs from “the plant brought itself into existence while absent.”"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l03_021",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The gardener belongs to the scenario. The example does not establish that every instance of growth needs human intervention."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l03_08",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l03_03",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_self_creation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Classify the intended meaning, rather than merely noticing something new."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "Change to something existing",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "Self-creation before existence",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A carpenter repairs a joint in an existing chair."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A nonexistent chair holds a tool to make itself."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A plant emerges from an existing seed in the scenario."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Something entirely absent starts working to create itself."
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l03_09",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which question remains after this comparison?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "What explains the existence of something dependent on other things?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "How did this particular change happen?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I want to examine the idea again."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "You can leave detailed questions open. Understanding a problem in one explanation does not require accepting every alternative."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l03_10",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "What does this establish, and what does it leave open?"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l03_024",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If self-creation means acting before existence, the explanation assigns the agent’s role to something absent."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l03_025",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A process beginning with existing material or a system is not self-creation in this sense."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l03_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Something having always existed, if true, is a different claim. It is not self-creation before existence."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l03_027",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The example does not make the universe a chair, or alone establish that everything in it depends on a Creator."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l03_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Excluding self-creation does not by itself determine a Creator’s attributes. The next question needs examination."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l03_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l03_04",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_self_creation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which correction is most precise?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A seed growing means it created itself before existing."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Anything new means self-creation."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Its growth in the example starts with an existing seed, not an absent seed acting."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l03_12",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Test the idea before its label"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l03_030",
+            "spans": [
+              {
+                "type": "text",
+                "text": "First identify whether you mean change to something existing or a thing creating itself."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l03_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Ask what acts at the moment of action. Do not give an absent thing an existing thing’s role."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l03_032",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Keep the conclusion’s limits. Excluding an explanation does not replace examining alternatives."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "When you hear “it made itself,” identify whether it means change in something existing or self-creation before existence."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l3_topic_1",
+        "title": "Self-creation or existing change?",
+        "concept_ids": [
+          "con_u0_self_creation"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "Can you explain the difference between changing something existing and asking something absent to create itself?"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_self_creation": {
+      "term_id": "term_self_creation",
+      "text": "Self-creation",
+      "arabic": "خلق النفس",
+      "transliteration": "khalq al-nafs",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Treating a thing as the agent of its own existence, rather than participating in a change to something already existing."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "A chair that does not yet exist cannot assemble its own parts."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l3",
+      "lesson_title": "Could Something Create Itself?"
+    }
+  },
+  "answers": []
+}

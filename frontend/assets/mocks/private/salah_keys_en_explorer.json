@@ -1,0 +1,142 @@
+{
+ "_mock_role": "private grading keys for MockGrader (dev/demo builds only)",
+ "_mock_source": "salah-01.gold-candidate.json variants.en_explorer.private_exercises",
+ "published": false,
+ "session_fixture": "session_salah_en_explorer.json",
+ "exercises": {
+  "ex_e2b811300ee7c884": {
+   "answer_key": {
+    "pin_id": "pin_3be52504bc360151"
+   },
+   "explanation": [
+    {
+     "type": "text",
+     "text": "The river at the door. Whoever bathes in it five times a day keeps no dirt — and with this image the Prophet ﷺ described the five prayers."
+    }
+   ],
+   "misconception_card": null
+  },
+  "ex_f6b4bdc7ed964f7a": {
+   "answer_key": {
+    "option_id": "opt_e21c9380778aa397"
+   },
+   "explanation": [
+    {
+     "type": "text",
+     "text": "The door of prayer is open every day. God wipes away minor sins through it, and major sins need repentance — a sincere return to God."
+    }
+   ],
+   "misconception_card": [
+    {
+     "type": "text",
+     "text": "The door of prayer is open every day. God wipes away minor sins through it, and major sins need repentance — a sincere return to God."
+    }
+   ]
+  },
+  "ex_7be5b6cf9ee063a9": {
+   "answer_key": {
+    "assignments": [
+     {
+      "item_id": "itm_bf7799df6eb22643",
+      "category_id": "cat_bf7799df6eb22643"
+     },
+     {
+      "item_id": "itm_d24bf172c29e6cc8",
+      "category_id": "cat_d24bf172c29e6cc8"
+     },
+     {
+      "item_id": "itm_01cbdeb676f5a3d7",
+      "category_id": "cat_bf7799df6eb22643"
+     },
+     {
+      "item_id": "itm_c7f7d38db27f01fe",
+      "category_id": "cat_d24bf172c29e6cc8"
+     },
+     {
+      "item_id": "itm_7151e0199814368a",
+      "category_id": "cat_bf7799df6eb22643"
+     },
+     {
+      "item_id": "itm_2c9f8c05f28cfca6",
+      "category_id": "cat_d24bf172c29e6cc8"
+     }
+    ]
+   },
+   "explanation": [
+    {
+     "type": "text",
+     "text": "God loves both. Prayer is an obligation with set times and a way the Prophet ﷺ taught; supplication is welcome at any time, in any words."
+    }
+   ],
+   "misconception_card": null
+  },
+  "ex_e40c029e4c00d299": {
+   "answer_key": {
+    "assignments": [
+     {
+      "item_id": "itm_444485ff09fb70ce",
+      "category_id": "cat_444485ff09fb70ce"
+     },
+     {
+      "item_id": "itm_5e01603443fb4f55",
+      "category_id": "cat_5e01603443fb4f55"
+     },
+     {
+      "item_id": "itm_665ca27fc42736b6",
+      "category_id": "cat_665ca27fc42736b6"
+     },
+     {
+      "item_id": "itm_592e1f0cf5f0604e",
+      "category_id": "cat_592e1f0cf5f0604e"
+     },
+     {
+      "item_id": "itm_7e35c599fb7fa05e",
+      "category_id": "cat_7e35c599fb7fa05e"
+     }
+    ]
+   },
+   "explanation": [
+    {
+     "type": "text",
+     "text": "The times follow the sun: Fajr before sunrise, Dhuhr as the sun passes its height, Asr while it’s still high, Maghrib after sunset, and Isha at night."
+    }
+   ],
+   "misconception_card": null
+  },
+  "ex_efa3864b156b076e": {
+   "answer_key": {
+    "option_id": "opt_b0bacd3a0f0bb64b"
+   },
+   "explanation": [
+    {
+     "type": "text",
+     "text": "The repetition is like the river at the door: a cleanness renewed every day, in just a few minutes."
+    }
+   ],
+   "misconception_card": null
+  },
+  "ex_ea67196b77f26975": {
+   "grade_by": "recitation_check",
+   "source_id": "src_cd2c9fc769cbd707",
+   "coach_word": 6
+  },
+  "ex_4aa13a61e8f401fc": {
+   "answer_key": {
+    "order": [
+     "st_53b8c199e6f8c475",
+     "st_e368f0f62e88bb4d",
+     "st_9118e8694b33973f",
+     "st_c484e4ef2d708981",
+     "st_ee4362b642ca2281"
+    ]
+   },
+   "explanation": [
+    {
+     "type": "text",
+     "text": "Fajr, Dhuhr, Asr, Maghrib, Isha. This order will come back to you in a short review in two days."
+    }
+   ],
+   "misconception_card": null
+  }
+ }
+}

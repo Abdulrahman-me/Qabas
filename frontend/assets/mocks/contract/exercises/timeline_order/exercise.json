@@ -1,0 +1,60 @@
+{
+ "exercise_id": "ex_timeline_order",
+ "type": "timeline_order",
+ "concept_ids": [
+  "con_test"
+ ],
+ "prompt": [
+  {
+   "type": "text",
+   "text": "اختر الإجابة المناسبة."
+  }
+ ],
+ "time_limit_ms": 20000,
+ "scoring": {
+  "accuracy": true,
+  "combo": true,
+  "layer": "understand"
+ },
+ "framing": null,
+ "payload": {
+  "events": [
+   {
+    "event_id": "t_2",
+    "spans": [
+     {
+      "type": "text",
+      "text": "الهجرة إلى المدينة"
+     }
+    ]
+   },
+   {
+    "event_id": "t_4",
+    "spans": [
+     {
+      "type": "text",
+      "text": "فتح مكة"
+     }
+    ]
+   },
+   {
+    "event_id": "t_1",
+    "spans": [
+     {
+      "type": "text",
+      "text": "نزول الوحي في غار حراء"
+     }
+    ]
+   },
+   {
+    "event_id": "t_3",
+    "spans": [
+     {
+      "type": "text",
+      "text": "غزوة بدر"
+     }
+    ]
+   }
+  ]
+ }
+}

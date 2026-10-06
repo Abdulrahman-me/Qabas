@@ -1,0 +1,14 @@
+{
+ "kind": "builtin",
+ "key": "river_house",
+ "version": 1,
+ "params": {
+  "beat": 3
+ },
+ "image": null,
+ "scene": null,
+ "fallback_image": null,
+ "fallback_params": null,
+ "alt": "بيت أمامه نهر جارٍ، وفوقه خمسة أضواء",
+ "overlays": []
+}

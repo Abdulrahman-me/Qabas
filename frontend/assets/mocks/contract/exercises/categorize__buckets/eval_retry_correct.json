@@ -1,0 +1,65 @@
+{
+ "exercise_id": "ex_categorize__buckets",
+ "recorded": true,
+ "correct": true,
+ "correct_answer": {
+  "assignments": [
+   {
+    "item_id": "i_1",
+    "category_id": "c_1"
+   },
+   {
+    "item_id": "i_2",
+    "category_id": "c_2"
+   },
+   {
+    "item_id": "i_3",
+    "category_id": "c_1"
+   },
+   {
+    "item_id": "i_4",
+    "category_id": "c_2"
+   }
+  ]
+ },
+ "details": {
+  "item_results": [
+   {
+    "item_id": "i_1",
+    "correct": true
+   },
+   {
+    "item_id": "i_2",
+    "correct": true
+   },
+   {
+    "item_id": "i_3",
+    "correct": true
+   },
+   {
+    "item_id": "i_4",
+    "correct": true
+   }
+  ]
+ },
+ "explanation": [
+  {
+   "type": "text",
+   "text": "شرح مختصر مرتبط بالدليل."
+  }
+ ],
+ "source_ids": [
+  "src_q_112_1"
+ ],
+ "misconception": null,
+ "mastery_changes": [
+  {
+   "concept_id": "con_test",
+   "title": "مفهوم اختباري",
+   "before": 0.4,
+   "after": 0.46
+  }
+ ],
+ "term_changes": [],
+ "xp_awarded": 0
+}

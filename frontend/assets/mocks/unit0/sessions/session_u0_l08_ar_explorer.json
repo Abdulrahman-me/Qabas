@@ -1,0 +1,1111 @@
+{
+  "session_id": "ses_mock_u0_l8_ar_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l8",
+  "lesson_version": 1,
+  "title": "كيف نختبر ادّعاء الوحي؟",
+  "subtitle": "كيف نفحص ادّعاء كبيرًا دون قبول متعجل أو رفض مسبق؟",
+  "lesson_type": "practice",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "ابنِ طريقة فحص تحدّد الادّعاء ومصدره وأدلته وبدائله، ثم تصوغ حكمًا بقدر ما ثبت."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l08_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_hook",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "تخيّل بائع تحف يعرض ورقة، ويقول إنها رسالة كتبها كاتب مشهور."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "الورقة تبدو قديمة، وسعرها مرتفع، والبائع واثق."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "أي جزء من هذا يثبت اسم صاحبها؟"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l08_antiques",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l08_antiques_v1_4c437b97b561832f7e89fb82dd75cc2adfe6845178a3d19d3d32883b551ed957.json",
+          "mime_type": "application/json",
+          "sha256": "4c437b97b561832f7e89fb82dd75cc2adfe6845178a3d19d3d32883b551ed957",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l08_antiques_v1_76f20ad9e8_f9cf20c7369e7ab04efd584d8b2782585dc2548bed4f9ca3e8fecc7b3499e52d.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "طاولة متجر تحف عليها ورقة مطوية وعدسة وصندوق وأوراق أخرى، بلا كتابة.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_reaction",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "ما ردّك الأول قبل الفحص؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أميل إلى الثقة."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أميل إلى الشك."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أحتاج معلومات أكثر."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "ردّك الأول ليس نتيجة اختبار. يمكنك الاحتفاظ به ثم فحص ما يدعمه."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_define",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "حدّد ما تختبره"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "define_p0",
+          "sentence": {
+            "sentence_id": "define_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الورقة القديمة واسم كاتبها ادّعاءان مختلفان؛ إثبات العمر لا يكفي لإثبات الاسم."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "define_p1",
+          "sentence": {
+            "sentence_id": "define_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ثقة البائع توضّح موقفه، ولا تستبدل دليلًا على نسبة الورقة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "define_p2",
+          "sentence": {
+            "sentence_id": "define_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "قد يكون الادّعاء: هذه الورقة قديمة، أو هذا الكاتب ألّفها، أو محتواها صحيح."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "define_p3",
+          "sentence": {
+            "sentence_id": "define_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "سؤال واضح يمنع انتقال الدليل من ادّعاء صغير إلى ادّعاء أكبر دون سبب."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex1",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l08_01",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_revelation_checking"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "اختر الجزء الذي يتجاوز ما تسمح به الأسباب."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الورقة تبدو قديمة."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إذن نحتاج إلى فحص عمرها ومصدرها."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "وقد ثبت اسم الكاتب من المظهر وحده."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_provenance",
+      "type": "story",
+      "label": "موقف",
+      "title": "من أين وصلت الورقة؟",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+        {
+          "beat_id": "provenance_beat0",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "provenance_b0s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يريد المشتري هدية لها قصة موثوقة، فيسأل البائع كيف حصل على الورقة."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "provenance_b0s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يقول البائع إنه أخذها من صندوق قديم، دون سجل يربط الصندوق بالكاتب."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 0
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l08_antiques",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l08_antiques_v1_4c437b97b561832f7e89fb82dd75cc2adfe6845178a3d19d3d32883b551ed957.json",
+              "mime_type": "application/json",
+              "sha256": "4c437b97b561832f7e89fb82dd75cc2adfe6845178a3d19d3d32883b551ed957",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l08_antiques_v1_76f20ad9e8_f9cf20c7369e7ab04efd584d8b2782585dc2548bed4f9ca3e8fecc7b3499e52d.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 0
+            },
+            "alt": "طاولة متجر تحف عليها ورقة مطوية وعدسة وصندوق وأوراق أخرى، بلا كتابة.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        },
+        {
+          "beat_id": "provenance_beat1",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "provenance_b1s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يطلب المشتري سجلًا سابقًا وصورًا موثوقة للمقارنة، بدل الاكتفاء باسم على بطاقة البيع."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "provenance_b1s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يحضر البائع ورقة ثانية، لكنها تنقل الوصف نفسه من متجره."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l08_antiques",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l08_antiques_v1_4c437b97b561832f7e89fb82dd75cc2adfe6845178a3d19d3d32883b551ed957.json",
+              "mime_type": "application/json",
+              "sha256": "4c437b97b561832f7e89fb82dd75cc2adfe6845178a3d19d3d32883b551ed957",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l08_antiques_v1_cd92849bcd_7f4cc0cfad97c81ef1835984765dce208418addf637562523efcf23952307050.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "طاولة متجر تحف عليها ورقة مطوية وعدسة وصندوق وأوراق أخرى، بلا كتابة.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        },
+        {
+          "beat_id": "provenance_beat2",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "provenance_b2s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ينتبه المشتري إلى أن تكرار الوصف ليس مصدرًا مستقلًا."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "provenance_b2s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يؤجّل نسبة الورقة إلى الكاتب، ويطلب فحصًا يستطيع تمييز الأصل من التقليد."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l08_antiques",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l08_antiques_v1_4c437b97b561832f7e89fb82dd75cc2adfe6845178a3d19d3d32883b551ed957.json",
+              "mime_type": "application/json",
+              "sha256": "4c437b97b561832f7e89fb82dd75cc2adfe6845178a3d19d3d32883b551ed957",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l08_antiques_v1_fcb38353b5_555e13848e5c1ec866feaa15a80c3fdce355b1ae33287a740964af0f13a2079e.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "طاولة متجر تحف عليها ورقة مطوية وعدسة وصندوق وأوراق أخرى، بلا كتابة.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex2",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l08_02",
+        "type": "scenario",
+        "concept_ids": [
+          "con_u0_revelation_checking"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي طلب يقدّم الفحص خطوة؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أكّد أنها من صندوق قديم، فهذا يكفي لمعرفة الكاتب."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أرني سجلًا يمكن التحقق منه ويربط الورقة بالكاتب."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أخبرني أنك مقتنع تمامًا بنسبتها إلى الكاتب."
+                }
+              ]
+            }
+          ],
+          "situation": [
+            {
+              "type": "text",
+              "text": "البائع واثق، لكن مصدر الورقة غير موثّق."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_distinguish",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ابحث عما يغيّر الحكم"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "distinguish_p0",
+          "sentence": {
+            "sentence_id": "distinguish_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "دليل يصلح للأصل والتقليد بالقدر نفسه لا يميّز بينهما."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "distinguish_p1",
+          "sentence": {
+            "sentence_id": "distinguish_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "تكرار ادّعاء البائع في بطاقة أخرى لا يضيف شاهدًا مستقلًا."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "distinguish_p2",
+          "sentence": {
+            "sentence_id": "distinguish_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يمكن للسجل أن يقوّي النسبة إذا عُرف مصدره وكان مرتبطًا بالورقة نفسها."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "distinguish_p3",
+          "sentence": {
+            "sentence_id": "distinguish_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "المظهر القديم لا يستبعد التقليد؛ وتقييم الفحص المتخصص يحتاج معرفة ما اختبره وكيف."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "distinguish_p4",
+          "sentence": {
+            "sentence_id": "distinguish_s4",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لا يلزمك إجراء كل اختبار بنفسك، لكن اسأل عما يدعم نتيجة من استعنت به."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_standards",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي موقف يساعدك على البقاء منصفًا؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أبحث عما يدعم الادّعاء وما قد يضعفه."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أفحص حتى ما أميل إلى تصديقه."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أؤجّل الحكم إذا لم تتضح الأدلة."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "هذه مواقف للفحص يمكنك الجمع بينها. لا نقيّم شعورك تجاه الورقة."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_transfer",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "طبّق الأسئلة، دون اختزالها"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "transfer_p0",
+          "sentence": {
+            "sentence_id": "transfer_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ادّعاء الوحي يضيف نسبة الرسالة إلى الخالق؛ قدم النص أو أثره الجميل لا يثبتان هذه النسبة وحدهما."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "transfer_p1",
+          "sentence": {
+            "sentence_id": "transfer_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "اسأل: ما الادّعاء بالضبط؟ كيف وصل؟ ماذا يدعمه؟ وما الذي قد يكشف خطأه؟"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "transfer_p2",
+          "sentence": {
+            "sentence_id": "transfer_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "اتساق الكلام خطوة مفيدة للفحص، لكنه لا يثبت وحده مصدره."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "transfer_p3",
+          "sentence": {
+            "sentence_id": "transfer_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لا تكفي نية المتحدث الحسنة؛ فقد يكون صادق النية ومخطئًا في تفسير تجربته."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "transfer_p4",
+          "sentence": {
+            "sentence_id": "transfer_s4",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الفحص المنصف يقبل احتمال ثبوت الادّعاء، واحتمال ضعفه، واحتمال بقاء السؤال مفتوحًا."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex3",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l08_03",
+        "type": "order_steps",
+        "concept_ids": [
+          "con_u0_revelation_checking"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "رتّب طريقة الفحص قبل الحكم."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "plain",
+          "steps": [
+            {
+              "step_id": "st_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أقارن الأدلة والبدائل وأبحث عما قد يضعف الادّعاء."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "step_id": "st_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أحدّد الادّعاء الذي أختبره."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "step_id": "st_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أصوغ نتيجة بقدر ما ثبت، أو أؤجّل الحكم."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "step_id": "st_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أفحص المصدر وطريق النقل وما يدعم النسبة."
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_conclusion",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ثلاث نتائج ممكنة"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "conclusion_p0",
+          "sentence": {
+            "sentence_id": "conclusion_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "عدم كفاية الدليل لإثبات ادّعاء لا يساوي دائمًا إثبات كذبه."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "conclusion_p1",
+          "sentence": {
+            "sentence_id": "conclusion_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "دليل يناقض جزءًا محدّدًا من الادّعاء قد يضعفه، إذا ثبت الدليل وكانت المقارنة في محلها."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "conclusion_p2",
+          "sentence": {
+            "sentence_id": "conclusion_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "قد نقول: النسبة مدعومة، أو ضعفت، أو لم يتضح الحكم بعد."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "conclusion_p3",
+          "sentence": {
+            "sentence_id": "conclusion_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "أثر الرسالة في حياتك يمكن التفكير فيه، مع إبقائه منفصلًا عن دليل مصدرها."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "conclusion_p4",
+          "sentence": {
+            "sentence_id": "conclusion_s4",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ما النتيجة التي تسمح بها المعلومات المتاحة، لا التي تتمناها؟"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex4",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l08_04",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_revelation_checking"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "لا سجل موثوق بعد، ولا دليل يثبت التقليد. ما النتيجة المنضبطة؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ثبت أن الرسالة أصلية."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ثبت أن البائع كاذب."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "النسبة لم تثبت بعد؛ أستكمل الفحص أو أؤجّل الحكم."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_summary",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "افحص قبل أن تحسم"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "summary_p0",
+          "sentence": {
+            "sentence_id": "summary_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الورقة القديمة واسم كاتبها ادّعاءان مختلفان؛ إثبات العمر لا يكفي لإثبات الاسم."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p1",
+          "sentence": {
+            "sentence_id": "summary_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "نحدّد الادّعاء أولًا، ثم طريقه وأدلته وبدائله، قبل صياغة النتيجة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p2",
+          "sentence": {
+            "sentence_id": "summary_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "دليل يصلح للأصل والتقليد بالقدر نفسه لا يميّز بينهما."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p3",
+          "sentence": {
+            "sentence_id": "summary_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "عدم كفاية الدليل لإثبات ادّعاء لا يساوي دائمًا إثبات كذبه."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "اختر ادّعاءً عاديًا قليل الأثر. اكتبه بدقة، ثم اذكر دليلًا مناسبًا وما لا يثبته."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l8_topic_1",
+        "title": "نسبة الرسالة",
+        "concept_ids": [
+          "con_u0_revelation_checking"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "هل تستطيع تحديد ما يثبته الدليل، ومتى يبقى الحكم مفتوحًا؟"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_source_attribution": {
+      "term_id": "term_source_attribution",
+      "text": "نسبة الرسالة",
+      "arabic": "نسبة الرسالة",
+      "transliteration": "nisbat al-risāla",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "ربط رسالة بمصدر محدّد بدليل يناسب هذا الربط، لا بالمظهر أو الثقة وحدهما."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "فحص سجل الورقة يختلف عن ملاحظة أنها تبدو قديمة."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l8",
+      "lesson_title": "كيف نختبر ادّعاء الوحي؟"
+    }
+  },
+  "answers": []
+}

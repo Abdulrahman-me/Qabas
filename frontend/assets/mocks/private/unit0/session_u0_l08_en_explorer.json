@@ -1,0 +1,110 @@
+{
+  "session_id": "ses_mock_u0_l8_en_explorer",
+  "lesson_id": "les_u0_l8",
+  "answers": {
+    "ex_u0_l08_01": {
+      "segment_id": "seg_3"
+    },
+    "ex_u0_l08_02": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l08_03": {
+      "order": [
+        "st_2",
+        "st_4",
+        "st_1",
+        "st_3"
+      ]
+    },
+    "ex_u0_l08_04": {
+      "option_id": "opt_c"
+    }
+  },
+  "feedback": {
+    "ex_u0_l08_01": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "The paper’s age and its author are different claims; establishing age does not establish authorship."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l08_02": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Repeating the seller’s claim on another card adds no independent witness."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "The paper’s age and its author are different claims; establishing age does not establish authorship."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_c": "mis_u0_l08_sincerity"
+      },
+      "option_feedback": {
+        "opt_a": [
+          {
+            "type": "text",
+            "text": "An old box gives a location, but does not connect the paper to the particular writer."
+          }
+        ],
+        "opt_b": [
+          {
+            "type": "text",
+            "text": "A checkable record may connect this paper to the writer; verify its source and what it concerns."
+          }
+        ],
+        "opt_c": [
+          {
+            "type": "text",
+            "text": "Conviction does not prevent error; ask what supports the attribution."
+          }
+        ]
+      }
+    },
+    "ex_u0_l08_03": {
+      "correct_answer": {
+        "order": [
+          "st_2",
+          "st_4",
+          "st_1",
+          "st_3"
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Specify the claim first, then its route, evidence and alternatives, before stating a conclusion."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l08_04": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Insufficient evidence to establish a claim does not always establish its falsehood."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_b": "mis_u0_l08_absence"
+      }
+    }
+  }
+}

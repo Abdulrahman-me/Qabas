@@ -1,0 +1,1063 @@
+{
+  "session_id": "ses_mock_u0_l5_en_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l5",
+  "lesson_version": 1,
+  "title": "One Creator or Many?",
+  "subtitle": "Could several independent creators explain the world?",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "Distinguish limited teamwork from a creator whose power is not limited by another."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l05_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_hook",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "Imagine a match with two referees, each holding the same final authority."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "One awards a goal; the other disallows it. No rule gives either decision priority."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "Can both decisions take effect together?"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l05_referees",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l05_referees_v1_3928b7a147718fccd218a07e97dad3f8ba03751c157a0a618907f2c83ad4090a.json",
+          "mime_type": "application/json",
+          "sha256": "3928b7a147718fccd218a07e97dad3f8ba03751c157a0a618907f2c83ad4090a",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l05_referees_v1_76f20ad9e8_350acb904f856b6e2c6c352cbd81b0636298d4794e26df2674345f54e0ae3956.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "Two faceless referees on a pitch with a ball between them.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_predict",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which question would you examine first?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Could their responsibilities be divided?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Who decides when they disagree?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Is agreement enough without a deciding rule?"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Keep your choice. We will examine the authority we assigned each referee."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_conflict",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Change one condition"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "conflict_p0",
+          "sentence": {
+            "sentence_id": "conflict_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Awarding and disallowing the same goal in the same match cannot both take effect."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "conflict_p1",
+          "sentence": {
+            "sentence_id": "conflict_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If a higher rule settles the disagreement, neither referee has final authority."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "conflict_p2",
+          "sentence": {
+            "sentence_id": "conflict_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "We could appoint a chief and an assistant, or give each a different task."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "conflict_p3",
+          "sentence": {
+            "sentence_id": "conflict_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Then we have an arrangement for the work, rather than two conflicting final decisions."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex1",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l05_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_one_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "What solved the match problem?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Showing that teamwork is impossible."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Making every decision unconditionally final."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Defining each referee’s authority and the deciding rule."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_ship",
+      "type": "story",
+      "label": "Scenario",
+      "title": "The ship at the passage",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+        {
+          "beat_id": "ship_beat0",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "ship_b0s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Imagine a ship approaching a narrow passage. One captain wants to turn right; the other wants to turn left."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "ship_b0s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The sailors pause because each captain was told his word was final."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 0
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l05_ship",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l05_ship_v1_ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08.json",
+              "mime_type": "application/json",
+              "sha256": "ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l05_ship_v1_76f20ad9e8_42847d7523963942ebfd0f475d8e115362c6b4284e7cf59d2aad210c83f1c6a5.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 0
+            },
+            "alt": "A wooden ship with two faceless captains on its deck.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        },
+        {
+          "beat_id": "ship_beat1",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "ship_b1s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The sailors suggest that one steer now while the other handles navigation."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "ship_b1s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Both captains accept a written arrangement dividing the work."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l05_ship",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l05_ship_v1_ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08.json",
+              "mime_type": "application/json",
+              "sha256": "ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l05_ship_v1_cd92849bcd_f9b31df921c67570fbed5d3009a7b9d056c89c1d93ab2bef369971d54adb595b.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "A wooden ship with two faceless captains on its deck.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        },
+        {
+          "beat_id": "ship_beat2",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "ship_b2s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The ship follows one course. The captains cooperate after defining their responsibilities."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "ship_b2s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Has each captain gained authority limited by nothing?"
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l05_ship",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l05_ship_v1_ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08.json",
+              "mime_type": "application/json",
+              "sha256": "ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l05_ship_v1_fcb38353b5_f9de4a9f5a7626fcea59c4e484736dca7dfc578a0dc6b3721ea798b4ee0b2801.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "A wooden ship with two faceless captains on its deck.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_boundary",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Why is a team example insufficient?"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "boundary_p0",
+          "sentence": {
+            "sentence_id": "boundary_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A limited team’s success does not establish two independent creators; its members work within conditions and limits."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "boundary_p1",
+          "sentence": {
+            "sentence_id": "boundary_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The example clarifies unrestricted authority; it does not make the creator resemble a referee or captain."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "boundary_p2",
+          "sentence": {
+            "sentence_id": "boundary_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Now move from the team to the meaning of independence we examined earlier."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex2",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l05_02",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_one_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Evaluate the statement, then choose the reason."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "Two captains cooperating proves there can be two creators, both wholly independent and unrestricted."
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because ships need sailors."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because this teamwork includes division and shared limits."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because every team always fails."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_independence",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Test “unrestricted”"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "independence_p0",
+          "sentence": {
+            "sentence_id": "independence_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Now suppose two creators, each with power the other cannot restrict."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "independence_p1",
+          "sentence": {
+            "sentence_id": "independence_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If two wanted an outcome and its opposite simultaneously, both wishes could not be fulfilled."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "independence_p2",
+          "sentence": {
+            "sentence_id": "independence_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If another prevents one from carrying out a choice, that one lacks power unrestricted by others."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "independence_p3",
+          "sentence": {
+            "sentence_id": "independence_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Saying they always agree does not, by itself, explain why disagreement would be impossible."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "independence_p4",
+          "sentence": {
+            "sentence_id": "independence_s4",
+            "spans": [
+              {
+                "type": "text",
+                "text": "This checks the idea’s conditions; it does not claim we observed creators disagreeing."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex3",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l05_03",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_one_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Choose the segment that goes beyond its reasons."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "We suppose two powers neither restricted by the other."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "We say they always agree."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Therefore we explained why disagreement is impossible."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_order",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "If you saw a coherent system, what else would you want to know?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "How does its coherence relate to its source?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Are there other explanations?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I need time to think."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Your choices can lead to different questions. Your personal position is not graded."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "A coherent world fits a unified explanation, but coherence alone does not settle the number of creators."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_synthesis",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "What carries the conclusion?"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "synthesis_p0",
+          "sentence": {
+            "sentence_id": "synthesis_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The reasoning here depends on the creator’s independence, not on assuming all teamwork fails."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "synthesis_p1",
+          "sentence": {
+            "sentence_id": "synthesis_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If both need something to unite or decide between them, the question of independence moves to that thing."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "synthesis_p2",
+          "sentence": {
+            "sentence_id": "synthesis_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "This reasoning points toward one independent source; proposing two requires addressing restriction and agreement."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "synthesis_p3",
+          "sentence": {
+            "sentence_id": "synthesis_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A coherent world fits a unified explanation, but coherence alone does not settle the number of creators."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "synthesis_p4",
+          "sentence": {
+            "sentence_id": "synthesis_s4",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Which objection addresses independence, and which addresses only teams?"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex4",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l05_04",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_one_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which objection requires a direct reply from the reasoning?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "What prevents different choices without restricting either?"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Two sailors can cooperate."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Divide the work between them, so both remain unrestricted."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_summary",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "The idea to keep"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "summary_p0",
+          "sentence": {
+            "sentence_id": "summary_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A limited team’s success does not establish two independent creators; its members work within conditions and limits."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p1",
+          "sentence": {
+            "sentence_id": "summary_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If another prevents one from carrying out a choice, that one lacks power unrestricted by others."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p2",
+          "sentence": {
+            "sentence_id": "summary_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A coherent world fits a unified explanation, but coherence alone does not settle the number of creators."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "Notice an arrangement where a group works together. What limits make its cooperation possible?"
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l5_topic_1",
+        "title": "Unrestricted authority",
+        "concept_ids": [
+          "con_u0_one_independent_creator"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "Can you explain the difference between a cooperating team and a source unrestricted by another?"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_unrestricted_authority": {
+      "term_id": "term_unrestricted_authority",
+      "text": "Unrestricted authority",
+      "arabic": "سلطة لا يحدّها غيرها",
+      "transliteration": "sulṭa lā yaḥudduhā ghayruhā",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Authority that does not depend on another’s permission and cannot have its decision defeated by another."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "The referees lacked it once they accepted a higher rule."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l5",
+      "lesson_title": "One Creator or Many?"
+    }
+  },
+  "answers": []
+}

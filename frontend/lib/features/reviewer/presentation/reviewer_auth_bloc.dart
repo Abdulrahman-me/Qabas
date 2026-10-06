@@ -26,6 +26,10 @@ final class ReviewerSignedIn extends ReviewerAuthEvent {
   final String email, password;
 }
 
+final class ReviewerSampleOpened extends ReviewerAuthEvent {
+  const ReviewerSampleOpened();
+}
+
 final class ReviewerSignedOut extends ReviewerAuthEvent {
   const ReviewerSignedOut();
 }
@@ -34,8 +38,10 @@ final class ReviewerAuthBloc extends Bloc<ReviewerAuthEvent, ReviewerAuthState> 
   ReviewerAuthBloc(ReviewerActions actions) : super(const ReviewerAuthState()) {
     on<ReviewerAuthEvent>((e, emit) async {
       emit(const ReviewerAuthState(status: ReviewerAuthStatus.submitting));
-      if (e is ReviewerSignedIn) {
-        final result = await actions.repository.signIn(e.email, e.password);
+      if (e is ReviewerSignedIn || e is ReviewerSampleOpened) {
+        final result = e is ReviewerSignedIn
+            ? await actions.repository.signIn(e.email, e.password)
+            : await actions.repository.signInSample();
         if (emit.isDone) return;
         emit(switch (result) {
           Ok<UserProfile>(:final value) => ReviewerAuthState(status: ReviewerAuthStatus.signedIn, user: value),

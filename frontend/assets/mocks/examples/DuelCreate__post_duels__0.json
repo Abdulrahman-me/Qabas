@@ -1,0 +1,6 @@
+{
+ "preset": "duel",
+ "opponent_type": "bot",
+ "friend_user_ids": [],
+ "bot_fill": false
+}

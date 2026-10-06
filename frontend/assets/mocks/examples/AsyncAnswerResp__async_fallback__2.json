@@ -1,0 +1,16 @@
+{
+ "question_index": 0,
+ "correct": true,
+ "correct_answer": {
+  "value": false
+ },
+ "points": 164,
+ "explanation": [
+  {
+   "type": "text",
+   "text": "الإسلام يقوم على أن الله واحد لا شريك له."
+  }
+ ],
+ "total_points": 164,
+ "finished": false
+}

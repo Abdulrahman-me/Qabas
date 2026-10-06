@@ -1,0 +1,486 @@
+{
+  "session_id": "ses_review_cards",
+  "kind": "review",
+  "mode": "cards",
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": null,
+  "lesson_id": null,
+  "lesson_version": null,
+  "title": "Your words",
+  "subtitle": null,
+  "lesson_type": null,
+  "reviewed_by": null,
+  "objectives": [],
+  "counts": {
+    "interactions": 12,
+    "exercises": 12,
+    "scored": 0
+  },
+  "source_count": 0,
+  "total_exercises": 12,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T09:00:00Z",
+  "items": [
+    {
+      "block_id": "b_recording_card_0",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_0",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Asr” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "The third prayer, in the afternoon while the sun is still high."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_1",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_1",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Dhuhr” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "The second prayer, once the sun passes its highest point."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_2",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_2",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Supplication (du‘a)” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "Speaking to God and asking Him for what you need — at any time, in your own words."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_3",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_3",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Fajr” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "The first prayer of the day, at first light before sunrise."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_4",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_4",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Obligation (fariḍah)” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "Something God asks of a Muslim firmly — not optional."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_5",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_5",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Hadith” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "A saying or action of the Prophet ﷺ, passed on to us through a reliable chain of people."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_6",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_6",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Establishing prayer” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "Performing the prayer fully, as God prescribed it."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_7",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_7",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Isha” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "The fifth prayer, at night once the red glow leaves the sky."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_8",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_8",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Sins” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "The wrongs and mistakes a person falls into."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_9",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_9",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Maghrib” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "The fourth prayer, just after sunset."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_10",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_10",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Pillar (rukn)” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "One of the great columns a building stands on."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_11",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Recall the meaning, then turn the card."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "What does “Prayer (salah)” mean?"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "A short act of worship in which a Muslim stands before God, in the way the Prophet ﷺ taught."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "completion": null,
+  "sources": [],
+  "terms": {},
+  "answers": []
+}

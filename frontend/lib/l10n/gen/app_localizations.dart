@@ -1316,6 +1316,42 @@ abstract class AppLocalizations {
   /// **'Completed'**
   String get journeyDoneLabel;
 
+  /// Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed.
+  ///
+  /// In en, this message translates to:
+  /// **'Download Android APK'**
+  String get journeyDownloadAction;
+
+  /// Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed.
+  ///
+  /// In en, this message translates to:
+  /// **'Built for Android, iOS, Web, Windows, macOS and Linux. Try Qabas on Android today.'**
+  String get journeyDownloadBody;
+
+  /// Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed.
+  ///
+  /// In en, this message translates to:
+  /// **'Dismiss Android download banner'**
+  String get journeyDownloadDismiss;
+
+  /// Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed.
+  ///
+  /// In en, this message translates to:
+  /// **'BEYOND THE BROWSER'**
+  String get journeyDownloadEyebrow;
+
+  /// Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed.
+  ///
+  /// In en, this message translates to:
+  /// **'The download could not open. Please try again.'**
+  String get journeyDownloadFailed;
+
+  /// Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed.
+  ///
+  /// In en, this message translates to:
+  /// **'One journey. Across your devices.'**
+  String get journeyDownloadTitle;
+
   /// Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review.
   ///
   /// In en, this message translates to:
@@ -3289,6 +3325,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Same'**
   String get reviewerSame;
+
+  /// Explain sample reviewer content and preserved learner progress.
+  ///
+  /// In en, this message translates to:
+  /// **'Review lesson plans and drafts, compare lessons in a blind test, and explore sample metrics. This preview uses sample content; your learning progress is saved when you return.'**
+  String get reviewerSampleDescription;
+
+  /// Open the local competition reviewer preview.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore reviewer dashboard'**
+  String get reviewerSampleOpen;
 
   /// Reviewer work tool: reviewerSaveEdits
   ///

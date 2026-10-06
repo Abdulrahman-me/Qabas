@@ -1,0 +1,115 @@
+{
+ "message_id": "msg_a_702",
+ "role": "assistant",
+ "status": "completed",
+ "stage": "done",
+ "created_at": "2026-10-04T12:50:00Z",
+ "completed_at": "2026-10-04T12:50:09Z",
+ "understood_input": {
+  "transcript": null,
+  "images": [],
+  "document": {
+   "attachment_id": "att_doc_2",
+   "filename": "question.pdf",
+   "pages_processed": 2,
+   "truncated": false,
+   "summary": "مقال يسأل: لماذا توجد المعاناة إذا كان الله رحيماً؟"
+  }
+ },
+ "classification": {
+  "question_class": "doubt_or_deep_creed",
+  "label": "سؤال عقدي"
+ },
+ "abstained": false,
+ "blocks": [
+  {
+   "type": "paragraph",
+   "spans": [
+    {
+     "type": "text",
+     "text": "من الحِكم التي يذكرها العلماء أن الحياة الدنيا دار اختبار، يُبتلى فيها الإنسان بالخير والشر ليظهر صبره وعمله."
+    },
+    {
+     "type": "citation",
+     "ref": 1
+    },
+    {
+     "type": "citation",
+     "ref": 2
+    }
+   ]
+  },
+  {
+   "type": "evidence",
+   "evidence": {
+    "evidence_id": "src_q_67_2",
+    "kind": "quran",
+    "quran": {
+     "surah": 67,
+     "surah_name": "الملك",
+     "ayah_start": 2,
+     "ayah_end": 2,
+     "segment": null,
+     "text_uthmani": "الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا ۚ وَهُوَ الْعَزِيزُ الْغَفُورُ",
+     "translation": null,
+     "translation_source": null,
+     "audio": null
+    },
+    "hadith": null
+   }
+  },
+  {
+   "type": "referral",
+   "referral": {
+    "referral_type": "specialist",
+    "reason": [
+     {
+      "type": "text",
+      "text": "هذا سؤال عميق، ويفيدك الحوار المباشر مع مختص لمناقشة تفاصيله."
+     }
+    ],
+    "targets": [
+     {
+      "name": "فريق دعم المهتدين",
+      "description": "مرشدون يجيبون عن أسئلة المسلمين الجدد",
+      "url": null,
+      "contact": "support@qabas.app"
+     }
+    ]
+   }
+  }
+ ],
+ "citations": [
+  {
+   "ref": 1,
+   "source": {
+    "source_id": "src_q_67_2",
+    "kind": "quran",
+    "provider": "quran_com",
+    "title": "سورة الملك",
+    "reference": "الملك: 2",
+    "excerpt": "الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ",
+    "url": "https://quran.com/67/2",
+    "displayed": false,
+    "display_role": null
+   }
+  },
+  {
+   "ref": 2,
+   "source": {
+    "source_id": "src_ih_suffering",
+    "kind": "article",
+    "provider": "islamhouse",
+    "title": "الحكمة من الابتلاء",
+    "reference": "IslamHouse",
+    "excerpt": "…",
+    "url": "https://islamhouse.com/",
+    "displayed": false,
+    "display_role": null
+   }
+  }
+ ],
+ "terms": {},
+ "suggested_lessons": [],
+ "feedback": null
+}

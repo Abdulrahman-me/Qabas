@@ -1,0 +1,9 @@
+{
+ "exercise_id": "ex_true_false_reason",
+ "answer": {
+  "value": false,
+  "reason_option_id": "r_2"
+ },
+ "elapsed_ms": 5000,
+ "is_retry": true
+}

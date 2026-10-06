@@ -1,0 +1,39 @@
+{
+ "duel_id": "duel_8a1",
+ "status": "ready",
+ "mode": "live",
+ "preset": "duel",
+ "opponent_type": "bot",
+ "players": [
+  {
+   "user_id": "usr_7f3k2a",
+   "display_name": "مسافر ٤٧",
+   "avatar_key": "traveler_03",
+   "is_me": true,
+   "is_bot": false,
+   "status": "joined"
+  },
+  {
+   "user_id": "usr_bot_1",
+   "display_name": "المدرّب",
+   "avatar_key": "traveler_bot",
+   "is_me": false,
+   "is_bot": true,
+   "status": "joined"
+  }
+ ],
+ "config": {
+  "question_count": 7,
+  "time_limit_ms": 15000,
+  "scoring": {
+   "base": 100,
+   "speed_bonus": 100,
+   "rounding": "floor"
+  },
+  "reveal_ms": 3000
+ },
+ "ws_url": "wss://api.example.com/v1/ws/duels/duel_8a1",
+ "created_at": "2026-10-04T13:00:00Z",
+ "expires_at": "2026-10-04T13:02:00Z",
+ "result": null
+}

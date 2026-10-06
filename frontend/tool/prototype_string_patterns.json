@@ -1,0 +1,259 @@
+{
+  "minutes": {
+    "en": "{value} min",
+    "ar": "{value} د",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "minutesLong": {
+    "en": "{count, plural, other{{value} min}}",
+    "ar": "{count, plural, =0{{value} دقائق} =1{{value} دقائق} =2{{value} دقائق} few{{value} دقائق} other{{value} دقيقة}}",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "embers": {
+    "en": "{value} embers",
+    "ar": "{value} قبسة",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "plusEmbers": {
+    "en": "+{value} embers",
+    "ar": "+{value} قبسة",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "dayStreak": {
+    "en": "{count, plural, other{{countText} day streak}}",
+    "ar": "{count, plural, =0{{countText} أيام متتالية} =1{{countText} يوم متتالية} =2{{countText} يومان متتالية} few{{countText} أيام متتالية} other{{countText} يومًا متتالية}}",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "days": {
+    "en": "{count, plural, =1{1 day} other{{countText} days}}",
+    "ar": "{count, plural, =0{{countText} أيام} =1{{countText} يوم} =2{{countText} أيام} few{{countText} أيام} other{{countText} يومًا}}",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "percent": {
+    "en": "{value}%",
+    "ar": "{value}٪",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "cardsReady": {
+    "en": "{countText} cards are ready",
+    "ar": "{countText} بطاقات جاهزة",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "wordsMasteredOf": {
+    "en": "{mastered} of {total} mastered",
+    "ar": "أتقنت {mastered} من {total}",
+    "placeholders": {
+      "mastered": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "promoteLine": {
+    "en": "Top {countText} move up to {league}",
+    "ar": "أول {countText} ينتقلون إلى {league}",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      },
+      "league": {
+        "type": "String"
+      }
+    }
+  },
+  "endsIn": {
+    "en": "Ends in {days}d {hours}h",
+    "ar": "ينتهي خلال {days} يوم و{hours} ساعة",
+    "placeholders": {
+      "days": {
+        "type": "String"
+      },
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "streakDays": {
+    "en": "{countText}-day streak",
+    "ar": "{countText} أيام متتالية",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "questionOf": {
+    "en": "Question {current} of {total}",
+    "ar": "السؤال {current} من {total}",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "joined": {
+    "en": "Joined {month}",
+    "ar": "انضممت في {month}",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "unlockedOf": {
+    "en": "{current} of {total} unlocked",
+    "ar": "{current} من {total} مفتوحة",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "unitN": {
+    "en": "Unit {number}",
+    "ar": "الوحدة {number}",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewDue": {
+    "en": "{countText} cards ready for a 60-second review",
+    "ar": "{countText} بطاقات جاهزة لمراجعة في ٦٠ ثانية",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "goalProgress": {
+    "en": "{done} / {goal} min",
+    "ar": "{done} / {goal} د",
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "goal": {
+        "type": "String"
+      }
+    }
+  },
+  "sourcesLine": {
+    "en": "{countText} authenticated sources",
+    "ar": "{countText} مصادر موثّقة",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "exercisesCount": {
+    "en": "{countText} activities",
+    "ar": "{countText} أنشطة",
+    "placeholders": {
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "nextUnlocked": {
+    "en": "Next on your path: {title}",
+    "ar": "التالي في طريقك: {title}",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "streakTitle": {
+    "en": "{count, plural, other{{countText}-day streak!}}",
+    "ar": "{count, plural, =0{{countText} أيام متتالية!} =1{{countText} يوم متتالية!} =2{{countText} يومان متتالية!} few{{countText} أيام متتالية!} other{{countText} يومًا متتالية!}}",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "perDay": {
+    "en": "{count, plural, other{{countText} min a day}}",
+    "ar": "{count, plural, =0{{countText} دقائق يوميًا} =1{{countText} دقائق يوميًا} =2{{countText} دقائق يوميًا} few{{countText} دقائق يوميًا} other{{countText} دقيقة يوميًا}}",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "description": "Numeric plural selector: QNumbers.prototypePluralCount(originalCount); format originalCount separately for display."
+      },
+      "countText": {
+        "type": "String"
+      }
+    }
+  },
+  "stepOf": {
+    "en": "Step {current} of {total}",
+    "ar": "الخطوة {current} من {total}",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  }
+}

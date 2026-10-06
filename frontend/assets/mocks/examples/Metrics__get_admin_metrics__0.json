@@ -1,0 +1,60 @@
+{
+ "learning": {
+  "pre_post": [
+   {
+    "unit_id": "unit_0",
+    "unit_title": "ابدأ بسؤال",
+    "participants": 12,
+    "pre_avg_percent": 48,
+    "post_avg_percent": 81,
+    "delta": 33
+   }
+  ],
+  "misconceptions": {
+   "activated": 19,
+   "resolved": 14,
+   "resolution_rate_percent": 74
+  },
+  "completion": {
+   "units_started": 15,
+   "units_completed": 11
+  }
+ },
+ "raqeeb_benchmark": {
+  "run_at": "2026-10-06T15:00:00Z",
+  "question_count": 80,
+  "systems": [
+   {
+    "name": "raqeeb",
+    "accuracy_percent": 91,
+    "unsupported_claim_rate_percent": 2,
+    "correct_abstention_percent": 95,
+    "correct_referral_percent": 93
+   },
+   {
+    "name": "baseline_llm",
+    "accuracy_percent": 64,
+    "unsupported_claim_rate_percent": 27,
+    "correct_abstention_percent": 21,
+    "correct_referral_percent": 18
+   }
+  ],
+  "by_class": [
+   {
+    "question_class": "verification",
+    "raqeeb_accuracy_percent": 94,
+    "baseline_accuracy_percent": 41
+   }
+  ]
+ },
+ "factory": {
+  "lessons_published": 9,
+  "avg_generation_minutes": 7,
+  "avg_review_minutes": 12,
+  "blind_test": {
+   "responses": 18,
+   "handwritten_identified_percent": 44,
+   "generated_preferred_or_same_percent": 61
+  }
+ }
+}

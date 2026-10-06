@@ -1,0 +1,1063 @@
+{
+  "session_id": "ses_mock_u0_l5_ar_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l5",
+  "lesson_version": 1,
+  "title": "خالق واحد أم أكثر؟",
+  "subtitle": "هل يفسّر تعدد الخالق المستقل وجود العالم؟",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "ميّز التعاون المحدود عن خالق مستقل لا يحدّه غيره."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l05_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_hook",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "تخيّل مباراة لها حكمان، ولكل منهما القرار النهائي نفسه."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "أحدهما يحتسب هدفًا، والآخر يلغيه، ولا توجد قاعدة ترجّح أحدهما."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "هل يمكن تنفيذ القرارين معًا؟"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l05_referees",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l05_referees_v1_3928b7a147718fccd218a07e97dad3f8ba03751c157a0a618907f2c83ad4090a.json",
+          "mime_type": "application/json",
+          "sha256": "3928b7a147718fccd218a07e97dad3f8ba03751c157a0a618907f2c83ad4090a",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l05_referees_v1_76f20ad9e8_350acb904f856b6e2c6c352cbd81b0636298d4794e26df2674345f54e0ae3956.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "حكمان بلا ملامح على ملعب، والكرة بينهما.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_predict",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي سؤال تريد فحصه أولًا؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "هل يمكن توزيع مسؤوليتهما؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "من يحسم القرار عند الاختلاف؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "هل يكفي الاتفاق دون قاعدة للحسم؟"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "احتفظ باختيارك. سنفحص السلطة التي افترضناها لكل حكم."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_conflict",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "غيّر شرطًا واحدًا"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "conflict_p0",
+          "sentence": {
+            "sentence_id": "conflict_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "احتساب الهدف وإلغاؤه للمباراة نفسها لا ينفّذان معًا."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "conflict_p1",
+          "sentence": {
+            "sentence_id": "conflict_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إذا حسمت قاعدة أعلى الخلاف، فسلطة الحكمين ليست نهائية."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "conflict_p2",
+          "sentence": {
+            "sentence_id": "conflict_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "قد نعيّن حكمًا رئيسيًا ومساعدًا، أو نحدّد لكل منهما مهمة مختلفة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "conflict_p3",
+          "sentence": {
+            "sentence_id": "conflict_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "عندها صار لدينا ترتيب للعمل، لا قراران نهائيان متعارضان."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex1",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l05_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_one_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "ما الذي حلّ مشكلة المباراة؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إثبات أن التعاون مستحيل."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "جعل كل قرار نهائيًا بلا شروط."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تحديد سلطة كل حكم وقاعدة الحسم."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_ship",
+      "type": "story",
+      "label": "موقف",
+      "title": "السفينة عند الممر",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+        {
+          "beat_id": "ship_beat0",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "ship_b0s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تخيّل سفينة تقترب من ممر ضيق. قائد يريد التوجه يمينًا، والآخر يسارًا."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "ship_b0s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "توقّف البحارة، لأن كل قائد قيل له إن كلمته الأخيرة."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 0
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l05_ship",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l05_ship_v1_ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08.json",
+              "mime_type": "application/json",
+              "sha256": "ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l05_ship_v1_76f20ad9e8_42847d7523963942ebfd0f475d8e115362c6b4284e7cf59d2aad210c83f1c6a5.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 0
+            },
+            "alt": "سفينة خشبية وقائدان بلا ملامح على سطحها.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        },
+        {
+          "beat_id": "ship_beat1",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "ship_b1s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يقترح البحارة أن يقود أحدهما الآن، ويتولى الآخر الملاحة."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "ship_b1s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يقبل القائدان ترتيبًا مكتوبًا لتوزيع العمل."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l05_ship",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l05_ship_v1_ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08.json",
+              "mime_type": "application/json",
+              "sha256": "ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l05_ship_v1_cd92849bcd_f9b31df921c67570fbed5d3009a7b9d056c89c1d93ab2bef369971d54adb595b.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "سفينة خشبية وقائدان بلا ملامح على سطحها.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        },
+        {
+          "beat_id": "ship_beat2",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "ship_b2s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تتابع السفينة طريقًا واحدًا. تعاون القائدان بعد تحديد مسؤوليتهما."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "ship_b2s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "هل أصبح كل قائد صاحب سلطة لا يحدّها شيء؟"
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l05_ship",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l05_ship_v1_ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08.json",
+              "mime_type": "application/json",
+              "sha256": "ee38e2a49d164eab900dafd4605f94a2df988195dda7d33907e190d787b71a08",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l05_ship_v1_fcb38353b5_f9de4a9f5a7626fcea59c4e484736dca7dfc578a0dc6b3721ea798b4ee0b2801.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "سفينة خشبية وقائدان بلا ملامح على سطحها.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_boundary",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "لماذا لا يكفي مثال الفريق؟"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "boundary_p0",
+          "sentence": {
+            "sentence_id": "boundary_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "نجاح فريق محدود لا يثبت وجود خالقين مستقلين؛ أعضاء الفريق يعملون ضمن شروط وحدود."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "boundary_p1",
+          "sentence": {
+            "sentence_id": "boundary_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "المثال يوضّح مشكلة السلطة المطلقة، ولا يجعل الخالق شبيهًا بحكم أو قائد."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "boundary_p2",
+          "sentence": {
+            "sentence_id": "boundary_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لننتقل من الفريق إلى معنى الاستقلال الذي بحثناه سابقًا."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex2",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l05_02",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_one_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "قيّم العبارة، ثم اختر السبب."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "تعاون قائدين يثبت إمكان وجود خالقين، كلاهما مستقل بلا حدود."
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لأن السفن تحتاج إلى بحّارة."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لأن التعاون هنا يتضمن تقسيمًا وحدودًا مشتركة."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لأن كل فريق يفشل دائمًا."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_independence",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "اختبر معنى «بلا حدود»"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "independence_p0",
+          "sentence": {
+            "sentence_id": "independence_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "افترض الآن خالقين، لكل منهما قدرة لا يقيّدها الآخر."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "independence_p1",
+          "sentence": {
+            "sentence_id": "independence_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لو أراد اثنان نتيجة ونقيضها في الوقت نفسه، فلا تتحقق الإرادتان معًا."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "independence_p2",
+          "sentence": {
+            "sentence_id": "independence_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إن مُنع أحدهما من تنفيذ ما يريد، فهو ليس صاحب قدرة لا يحدّها غيره."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "independence_p3",
+          "sentence": {
+            "sentence_id": "independence_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "القول إنهما يتفقان دائمًا لا يشرح وحده لماذا لا يمكن أن يختلفا."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "independence_p4",
+          "sentence": {
+            "sentence_id": "independence_s4",
+            "spans": [
+              {
+                "type": "text",
+                "text": "هذا فحص لشروط الفكرة، وليس ادّعاءً أننا شاهدنا خلافًا بين خالقين."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex3",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l05_03",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_one_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "اختر الجزء الذي يتجاوز ما تسمح به الأسباب."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "نفترض قدرتين لا يحدّ إحداهما الآخر."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "نقول إنهما يتفقان دائمًا."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إذن شرحنا لماذا يستحيل اختلافهما."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_order",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "لو رأيت نظامًا منسجمًا، ماذا تريد أن تعرف أيضًا؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "كيف يرتبط الانسجام بمصدره؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "هل توجد تفسيرات أخرى؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أحتاج وقتًا للتفكير."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "يمكن أن تقود اختياراتك إلى أسئلة مختلفة. لا نقيّم موقفك الشخصي."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "انتظام أجزاء العالم ينسجم مع تفسير واحد، لكنه لا يحسم عدد الخالقين وحده."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_synthesis",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ما الذي يحمل الاستنتاج؟"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "synthesis_p0",
+          "sentence": {
+            "sentence_id": "synthesis_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الحجة هنا تعتمد على استقلال الخالق، لا على افتراض أن كل تعاون يفشل."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "synthesis_p1",
+          "sentence": {
+            "sentence_id": "synthesis_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إذا احتاج الطرفان إلى ما يجمعهما أو يحسم بينهما، انتقل سؤال الاستقلال إلى ذلك الشيء."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "synthesis_p2",
+          "sentence": {
+            "sentence_id": "synthesis_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لذلك يتجه هذا الاستدلال إلى مصدر مستقل واحد؛ وافتراض اثنين يحتاج إلى حل مشكلة التقييد والتوافق."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "synthesis_p3",
+          "sentence": {
+            "sentence_id": "synthesis_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "انتظام أجزاء العالم ينسجم مع تفسير واحد، لكنه لا يحسم عدد الخالقين وحده."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "synthesis_p4",
+          "sentence": {
+            "sentence_id": "synthesis_s4",
+            "spans": [
+              {
+                "type": "text",
+                "text": "أي اعتراض يتناول الاستقلال، وأي اعتراض يتناول فرق العمل فقط؟"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex4",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l05_04",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_one_independent_creator"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي اعتراض يحتاج إلى جواب مباشر من الحجة؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ما الذي يمنع اختلاف الإرادتين دون تقييد أي منهما؟"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يمكن لبحّارين التعاون."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "نقسّم العمل بين الطرفين، إذن كلاهما مستقل بلا حدود."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_summary",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "الفكرة التي تستحق أن تبقى"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "summary_p0",
+          "sentence": {
+            "sentence_id": "summary_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "نجاح فريق محدود لا يثبت وجود خالقين مستقلين؛ أعضاء الفريق يعملون ضمن شروط وحدود."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p1",
+          "sentence": {
+            "sentence_id": "summary_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إن مُنع أحدهما من تنفيذ ما يريد، فهو ليس صاحب قدرة لا يحدّها غيره."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p2",
+          "sentence": {
+            "sentence_id": "summary_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "انتظام أجزاء العالم ينسجم مع تفسير واحد، لكنه لا يحسم عدد الخالقين وحده."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "لاحظ ترتيبًا تعمل فيه مجموعة. ما الحدود التي تجعل تعاونها ممكنًا؟"
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l5_topic_1",
+        "title": "سلطة لا يحدّها غيرها",
+        "concept_ids": [
+          "con_u0_one_independent_creator"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "هل تستطيع شرح الفرق بين فريق متعاون ومصدر لا يحدّه غيره؟"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_unrestricted_authority": {
+      "term_id": "term_unrestricted_authority",
+      "text": "سلطة لا يحدّها غيرها",
+      "arabic": "سلطة لا يحدّها غيرها",
+      "transliteration": "sulṭa lā yaḥudduhā ghayruhā",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "سلطة لا تتوقف على إذن غيرها، ولا يستطيع غيرها إبطال قرارها."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "حكما المثال لم يملكاها حين قبلا قاعدة أعلى."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l5",
+      "lesson_title": "خالق واحد أم أكثر؟"
+    }
+  },
+  "answers": []
+}

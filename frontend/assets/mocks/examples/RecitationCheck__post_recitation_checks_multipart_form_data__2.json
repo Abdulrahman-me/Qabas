@@ -1,0 +1,18 @@
+{
+ "check_id": "rchk_55e3",
+ "status": "unclear",
+ "passed": false,
+ "words": [],
+ "summary": {
+  "correct": 0,
+  "missing": 0,
+  "substituted": 0,
+  "extra": 0
+ },
+ "message": [
+  {
+   "type": "text",
+   "text": "لم نسمعك بوضوح. اقترب من الميكروفون وأعد المحاولة في مكان هادئ."
+  }
+ ]
+}

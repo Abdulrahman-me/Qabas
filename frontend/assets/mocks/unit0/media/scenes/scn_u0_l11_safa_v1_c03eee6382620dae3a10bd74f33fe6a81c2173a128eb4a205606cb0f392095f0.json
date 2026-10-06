@@ -1,0 +1,605 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l11_safa",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "night_emerald": "#073C37",
+    "emerald": "#0B5A52",
+    "flame": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "ink": "#16233A",
+    "slate": "#566476",
+    "clear_ember": "#F6E3B400",
+    "clear_flame": "#E0A52600",
+    "night_top": "#101B30",
+    "night_low": "#2B3A57",
+    "dawn_top": "#3E4E6E",
+    "dawn_mid": "#C98F7A",
+    "dawn_low": "#F2C99A",
+    "sun_top": "#7FA3B5",
+    "sun_mid": "#E9C08F",
+    "sun_low": "#F8E2B8",
+    "far_mtn": "#7D6F7E",
+    "far_mtn_lit": "#9A8492",
+    "mid_mtn": "#5E4A44",
+    "mid_mtn_shade": "#4B3B37",
+    "safa": "#8A6548",
+    "safa_lit": "#B4895F",
+    "rock": "#6E513C",
+    "rock_lit": "#C79D6E",
+    "sand": "#C7A06E",
+    "sand_dark": "#A9825A",
+    "fg": "#5C4636",
+    "wall": "#D2AE80",
+    "wall_shade": "#A88358",
+    "door": "#5A4334",
+    "cloud": "#6F7C8E",
+    "sun": "#FBE7BC",
+    "star": "#FFFFFF",
+    "bird": "#3A3036",
+    "veil": "#0E1A2E"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 4,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "sky_night",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          700
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "sun_top"
+          },
+          {
+            "at": 0.65,
+            "color": "sun_mid"
+          },
+          {
+            "at": 1,
+            "color": "sun_low"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sun_glow",
+      "type": "ellipse",
+      "x": 1180,
+      "y": 500,
+      "rx": 420,
+      "ry": 300,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          1180,
+          500
+        ],
+        "radius": 300,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 0.45,
+            "color": "dawn_low"
+          },
+          {
+            "at": 1,
+            "color": "clear_ember"
+          }
+        ]
+      },
+      "opacity": 0.55
+    },
+    {
+      "id": "sun",
+      "type": "ellipse",
+      "x": 1180,
+      "y": 420,
+      "rx": 62,
+      "ry": 62,
+      "fill": "sun"
+    },
+    {
+      "id": "far_range",
+      "type": "path",
+      "d": "M0 560 L70 522 L120 540 L190 476 L250 500 L320 446 L380 482 L450 436 L520 470 L600 456 L660 492 L740 446 L800 474 L880 424 L940 462 L1010 432 L1080 480 L1140 498 L1220 472 L1300 436 L1360 474 L1440 444 L1520 492 L1600 470 L1600 760 L0 760 Z",
+      "fill": "far_mtn"
+    },
+    {
+      "id": "far_range_lit",
+      "type": "path",
+      "d": "M880 424 L940 462 L1010 432 L1080 480 L1140 498 L1220 472 L1300 436 L1360 474 L1440 444 L1520 492 L1600 470 L1600 520 L1480 520 L1400 488 L1330 500 L1250 512 L1170 530 L1090 520 L1020 470 L960 490 Z",
+      "fill": "far_mtn_lit",
+      "opacity": 0.8
+    },
+    {
+      "id": "valley_glow",
+      "type": "ellipse",
+      "x": 1376,
+      "y": 640,
+      "rx": 210,
+      "ry": 120,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          1376,
+          640
+        ],
+        "radius": 120,
+        "stops": [
+          {
+            "at": 0,
+            "color": "flame"
+          },
+          {
+            "at": 0.45,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear_ember"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "eq": 2
+            }
+          },
+          "set": {
+            "opacity": 0.85
+          },
+          "transition_ms": 900,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "opacity",
+          "duration_ms": 2600,
+          "easing": "ease_in_out",
+          "loop": "ping_pong",
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0.75
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ],
+          "active_when": {
+            "beat": {
+              "eq": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "mid_range",
+      "type": "path",
+      "d": "M0 660 L60 610 L120 622 L200 552 L260 572 L330 512 L400 566 L470 588 L540 626 L620 640 L700 652 L780 630 L860 646 L940 618 L1000 604 L1080 562 L1160 594 L1230 546 L1290 604 L1330 664 Q1376 676 1420 664 L1460 604 L1530 566 L1600 586 L1600 790 L0 790 Z",
+      "fill": "mid_mtn"
+    },
+    {
+      "id": "mid_shade",
+      "type": "path",
+      "d": "M330 512 L400 566 L470 588 L540 626 L620 640 L520 650 L440 610 L380 590 Z M1230 546 L1290 604 L1330 664 L1280 664 L1250 610 Z M1080 562 L1160 594 L1130 610 L1090 590 Z",
+      "fill": "mid_mtn_shade"
+    },
+    {
+      "id": "valley_floor",
+      "type": "path",
+      "d": "M0 770 C 300 738 620 748 900 754 C 1200 760 1420 740 1600 750 L1600 1000 L0 1000 Z",
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          740
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "sand"
+          },
+          {
+            "at": 1,
+            "color": "sand_dark"
+          }
+        ]
+      }
+    },
+    {
+      "id": "safa_hill",
+      "type": "path",
+      "d": "M260 790 C 330 720 400 664 470 626 C 520 600 560 556 600 532 L640 522 C 684 520 716 546 756 584 C 822 646 900 716 990 790 Z",
+      "fill": "safa"
+    },
+    {
+      "id": "safa_lit",
+      "type": "path",
+      "d": "M640 522 C 684 520 716 546 756 584 C 822 646 900 716 990 790 L860 790 C 800 720 744 650 690 600 C 668 580 650 552 640 522 Z",
+      "fill": "safa_lit",
+      "opacity": 0.8
+    },
+    {
+      "id": "safa_shade",
+      "type": "path",
+      "d": "M260 790 C 330 720 400 664 470 626 C 520 600 560 556 600 532 C 570 580 540 640 500 690 C 460 740 420 770 400 790 Z",
+      "fill": "rock",
+      "opacity": 0.55
+    },
+    {
+      "id": "pebbles",
+      "type": "path",
+      "d": "M700 880 Q716 868 732 880 Z M980 930 Q1000 916 1020 930 Z M420 920 Q438 908 456 920 Z M1240 830 Q1254 820 1268 830 Z M820 960 Q846 944 872 960 Z",
+      "fill": "sand_dark"
+    },
+    {
+      "id": "safa_rocks",
+      "type": "path",
+      "d": "M520 600 Q548 584 572 600 Q560 616 528 614 Z M430 668 Q470 646 504 666 Q488 686 440 684 Z M606 560 Q628 548 648 560 Q640 574 612 572 Z M352 728 Q388 708 418 728 Q404 744 360 742 Z M560 700 Q600 684 630 702 Q612 718 566 716 Z",
+      "fill": "rock"
+    },
+    {
+      "id": "safa_rocks_lit",
+      "type": "path",
+      "d": "M700 590 Q728 578 750 596 Q736 610 708 606 Z M780 660 Q812 646 836 666 Q820 680 786 676 Z M870 730 Q904 716 930 736 Q910 750 876 746 Z",
+      "fill": "rock_lit"
+    },
+    {
+      "id": "summit_glow",
+      "type": "ellipse",
+      "x": 632,
+      "y": 520,
+      "rx": 150,
+      "ry": 112,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          632,
+          520
+        ],
+        "radius": 112,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 0.45,
+            "color": "flame"
+          },
+          {
+            "at": 1,
+            "color": "clear_flame"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 0.8
+          },
+          "transition_ms": 1200,
+          "easing": "ease_in_out"
+        },
+        {
+          "when": {
+            "beat": {
+              "eq": 3
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 900,
+          "easing": "ease_in_out"
+        },
+        {
+          "when": {
+            "beat": {
+              "eq": 4
+            }
+          },
+          "set": {
+            "opacity": 0.7
+          },
+          "transition_ms": 1200,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "scale",
+          "duration_ms": 3200,
+          "easing": "ease_in_out",
+          "loop": "ping_pong",
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0.94
+            },
+            {
+              "t": 1,
+              "v": 1.06
+            }
+          ],
+          "active_when": {
+            "beat": {
+              "gte": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "trail_glow",
+      "type": "path",
+      "d": "M600 790 C 680 786 760 784 820 776 C 860 772 890 770 920 772 L918 780 C 880 780 850 782 820 786 C 760 792 690 796 600 798 Z M560 796 C 470 800 380 812 290 830 C 230 842 170 852 110 856 L112 864 C 176 862 236 852 296 840 C 386 822 470 810 562 804 Z M640 794 C 760 806 880 820 1000 846 C 1060 860 1110 880 1150 900 L1144 908 C 1100 890 1050 872 994 858 C 878 832 760 816 638 802 Z",
+      "fill": "ember",
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "eq": 1
+            }
+          },
+          "set": {
+            "opacity": 0.9
+          },
+          "transition_ms": 1600,
+          "easing": "ease_in_out"
+        },
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 0.45
+          },
+          "transition_ms": 1200,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "gather_glow",
+      "type": "ellipse",
+      "x": 600,
+      "y": 795,
+      "rx": 150,
+      "ry": 46,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          600,
+          795
+        ],
+        "radius": 46,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear_ember"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "eq": 1
+            }
+          },
+          "set": {
+            "opacity": 0.9
+          },
+          "transition_ms": 1600,
+          "easing": "ease_in_out"
+        },
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 0.5
+          },
+          "transition_ms": 1200,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "house_walls",
+      "type": "path",
+      "d": "M880 690 H1000 V770 H880 Z M980 668 H1070 V772 H980 Z M1060 700 H1200 V770 H1060 Z M1185 680 H1285 V772 H1185 Z M1270 705 H1390 V771 H1270 Z M930 735 H1040 V795 H930 Z M1120 738 H1240 V794 H1120 Z M1360 690 H1440 V772 H1360 Z M820 728 H900 V786 H820 Z",
+      "fill": "wall"
+    },
+    {
+      "id": "house_shades",
+      "type": "path",
+      "d": "M1000 690 L1018 698 L1018 770 L1000 770 Z M876 684 H1004 V692 H876 Z M1070 668 L1088 676 L1088 772 L1070 772 Z M976 662 H1074 V670 H976 Z M1200 700 L1218 708 L1218 770 L1200 770 Z M1056 694 H1204 V702 H1056 Z M1285 680 L1303 688 L1303 772 L1285 772 Z M1181 674 H1289 V682 H1181 Z M1390 705 L1408 713 L1408 771 L1390 771 Z M1266 699 H1394 V707 H1266 Z M1040 735 L1058 743 L1058 795 L1040 795 Z M926 729 H1044 V737 H926 Z M1240 738 L1258 746 L1258 794 L1240 794 Z M1116 732 H1244 V740 H1116 Z M1440 690 L1458 698 L1458 772 L1440 772 Z M1356 684 H1444 V692 H1356 Z M900 728 L918 736 L918 786 L900 786 Z M816 722 H904 V730 H816 Z",
+      "fill": "wall_shade"
+    },
+    {
+      "id": "house_doors",
+      "type": "path",
+      "d": "M902 770 V740 Q913 730 924 740 V770 Z M996 772 V742 Q1007 732 1018 742 V772 Z M1085 770 V740 Q1096 730 1107 740 V770 Z M1203 772 V742 Q1214 732 1225 742 V772 Z M1292 771 V741 Q1303 731 1314 741 V771 Z M950 795 V765 Q961 755 972 765 V795 Z M1142 794 V764 Q1153 754 1164 764 V794 Z M1374 772 V742 Q1385 732 1396 742 V772 Z M834 786 V756 Q845 746 856 756 V786 Z M952 708 H966 V724 H952 Z M1034 686 H1048 V702 H1034 Z M1144 718 H1158 V734 H1144 Z M1245 698 H1259 V714 H1245 Z M1342 723 H1356 V739 H1342 Z M996 753 H1010 V769 H996 Z M1192 756 H1206 V772 H1192 Z M1408 708 H1422 V724 H1408 Z M868 746 H882 V762 H868 Z",
+      "fill": "door"
+    },
+    {
+      "id": "clouds",
+      "type": "path",
+      "d": "M200 220 C 230 180 300 176 330 204 C 360 170 440 176 460 214 C 500 214 520 240 500 256 L210 256 C 180 252 176 228 200 220 Z M1040 170 C 1070 136 1130 136 1150 162 C 1180 140 1240 146 1250 178 C 1290 180 1300 204 1280 216 L1050 216 C 1020 212 1018 184 1040 170 Z",
+      "fill": "cloud",
+      "opacity": 0.2,
+      "tracks": [
+        {
+          "property": "translate_x",
+          "duration_ms": 14000,
+          "easing": "ease_in_out",
+          "loop": "ping_pong",
+          "keyframes": [
+            {
+              "t": 0,
+              "v": -30
+            },
+            {
+              "t": 1,
+              "v": 40
+            }
+          ],
+          "active_when": {
+            "beat": {
+              "eq": 4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "birds",
+      "type": "path",
+      "d": "M760 300 Q772 290 784 300 Q772 296 760 300 Z M790 284 Q800 276 810 284 Q800 281 790 284 Z M812 306 Q822 298 832 306 Q822 303 812 306 Z",
+      "fill": "bird",
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 0.8
+          },
+          "transition_ms": 900,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "translate_x",
+          "duration_ms": 9000,
+          "easing": "ease_in_out",
+          "loop": "ping_pong",
+          "keyframes": [
+            {
+              "t": 0,
+              "v": -60
+            },
+            {
+              "t": 1,
+              "v": 80
+            }
+          ],
+          "active_when": {
+            "beat": {
+              "gte": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "foreground",
+      "type": "path",
+      "d": "M0 1000 L0 870 C 90 850 170 866 240 892 C 300 914 340 940 380 1000 Z M1600 1000 L1600 860 C 1500 846 1420 866 1350 900 C 1300 924 1270 960 1250 1000 Z",
+      "fill": "fg"
+    },
+    {
+      "id": "shrubs",
+      "type": "path",
+      "d": "M110 872 Q130 836 150 870 Q170 846 182 878 Z M1440 870 Q1458 838 1474 866 Q1494 844 1504 874 Z M1180 800 Q1194 780 1208 798 Q1222 784 1230 804 Z",
+      "fill": "night_emerald"
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      },
+      {
+        "beat": 4
+      }
+    ]
+  }
+}

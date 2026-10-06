@@ -8,7 +8,8 @@ import 'package:qabas/features/reviewer/presentation/reviewer_auth_bloc.dart';
 import 'package:qabas/shared/domain/entities/user_profile.dart';
 
 class ReviewerLoginPage extends StatefulWidget {
-  const ReviewerLoginPage({super.key, required this.onSignedIn});
+  const ReviewerLoginPage({super.key, required this.onSignedIn, this.sampleEnabled = false});
+  final bool sampleEnabled;
   final ValueChanged<UserProfile> onSignedIn;
   @override
   State<ReviewerLoginPage> createState() => _ReviewerLoginPageState();
@@ -50,6 +51,19 @@ class _ReviewerLoginPageState extends State<ReviewerLoginPage> {
                     ),
                   ),
                   const SizedBox(height: QSpace.xl),
+                  if (widget.sampleEnabled) ...[
+                    Text(c.l10n.reviewerSampleDescription, style: c.text.bodyMedium),
+                    const SizedBox(height: QSpace.md),
+                    QButton(
+                      key: const ValueKey('reviewer-sample-open'),
+                      silent: true,
+                      label: c.l10n.reviewerSampleOpen,
+                      onPressed: s.status == ReviewerAuthStatus.submitting
+                          ? null
+                          : () => c.read<ReviewerAuthBloc>().add(const ReviewerSampleOpened()),
+                    ),
+                    const SizedBox(height: QSpace.xl),
+                  ],
                   TextFormField(
                     key: const ValueKey('reviewer-email'),
                     controller: email,

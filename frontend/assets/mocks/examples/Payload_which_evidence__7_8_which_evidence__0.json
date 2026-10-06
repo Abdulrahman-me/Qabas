@@ -1,0 +1,50 @@
+{
+ "claim": [
+  {
+   "type": "text",
+   "text": "الله واحد لا شريك له."
+  }
+ ],
+ "options": [
+  {
+   "option_id": "ev_1",
+   "evidence": {
+    "evidence_id": "src_q_112_1",
+    "kind": "quran",
+    "quran": {
+     "surah": 112,
+     "surah_name": "الإخلاص",
+     "ayah_start": 1,
+     "ayah_end": 1,
+     "segment": null,
+     "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+     "translation": null,
+     "translation_source": null,
+     "audio": null
+    },
+    "hadith": null
+   }
+  },
+  {
+   "option_id": "ev_2",
+   "evidence": {
+    "evidence_id": "src_h_niyyat",
+    "kind": "hadith",
+    "quran": null,
+    "hadith": {
+     "text_ar": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+     "translation": null,
+     "narrator": "عمر بن الخطاب رضي الله عنه",
+     "collections": [
+      "صحيح البخاري (1)",
+      "صحيح مسلم (1907)"
+     ],
+     "grade_label": "صحيح",
+     "grade_category": "authentic",
+     "grade_source": "متفق عليه",
+     "excerpt": false
+    }
+   }
+  }
+ ]
+}

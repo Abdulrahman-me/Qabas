@@ -1,0 +1,621 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l08_antiques",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "mint": "#EEF5F2",
+    "emerald": "#0B5A52",
+    "deep": "#073C37",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "ink": "#16233A",
+    "slate": "#566476",
+    "sand": "#D7C3A1",
+    "stone": "#B8C5B8",
+    "paper": "#FAF4E6",
+    "wood": "#956B48",
+    "wooddark": "#6B4A34",
+    "skin": "#C8A681",
+    "white": "#FFFFFF",
+    "leaf": "#64846B",
+    "goldclear": "#E0A52600",
+    "shadow": "#16233A22"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 2,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "wall",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "mint"
+          },
+          {
+            "at": 1,
+            "color": "sand"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "display_niche",
+      "type": "rect",
+      "x": 160,
+      "y": 120,
+      "w": 1280,
+      "h": 500,
+      "fill": "deep",
+      "corner": 32
+    },
+    {
+      "id": "shelf_1",
+      "type": "rect",
+      "x": 185,
+      "y": 355,
+      "w": 1230,
+      "h": 25,
+      "fill": "wood",
+      "corner": 0
+    },
+    {
+      "id": "shelf_2",
+      "type": "rect",
+      "x": 185,
+      "y": 573,
+      "w": 1230,
+      "h": 25,
+      "fill": "wood",
+      "corner": 0
+    },
+    {
+      "id": "vase_left",
+      "type": "path",
+      "d": "M 310 178 L 352 178 Q 334 227 366 255 Q 408 306 354 350 L 310 350 Q 256 306 299 255 Q 330 227 310 178 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "bowl",
+      "type": "ellipse",
+      "x": 531,
+      "y": 328,
+      "rx": 97,
+      "ry": 30,
+      "fill": "emerald"
+    },
+    {
+      "id": "bowl_body",
+      "type": "path",
+      "d": "M 435 326 Q 530 410 627 326 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "book_a",
+      "type": "rect",
+      "x": 732,
+      "y": 219,
+      "w": 37,
+      "h": 137,
+      "fill": "wood",
+      "corner": 5
+    },
+    {
+      "id": "book_b",
+      "type": "rect",
+      "x": 773,
+      "y": 239,
+      "w": 50,
+      "h": 117,
+      "fill": "sand",
+      "corner": 5
+    },
+    {
+      "id": "book_c",
+      "type": "rect",
+      "x": 827,
+      "y": 203,
+      "w": 39,
+      "h": 153,
+      "fill": "slate",
+      "corner": 5
+    },
+    {
+      "id": "vase_right",
+      "type": "path",
+      "d": "M 1170 177 L 1229 177 Q 1202 230 1238 267 Q 1274 315 1242 350 L 1158 350 Q 1124 315 1164 267 Q 1200 230 1170 177 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "small_bowl",
+      "type": "ellipse",
+      "x": 372,
+      "y": 541,
+      "rx": 88,
+      "ry": 29,
+      "fill": "sand"
+    },
+    {
+      "id": "small_bowl_body",
+      "type": "path",
+      "d": "M 285 540 Q 371 603 459 540 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "storage_back",
+      "type": "rect",
+      "x": 1015,
+      "y": 438,
+      "w": 195,
+      "h": 126,
+      "fill": "wood",
+      "corner": 12
+    },
+    {
+      "id": "storage_lid",
+      "type": "rect",
+      "x": 1003,
+      "y": 431,
+      "w": 218,
+      "h": 29,
+      "fill": "sand",
+      "corner": 8
+    },
+    {
+      "id": "blank_frame",
+      "type": "rect",
+      "x": 677,
+      "y": 421,
+      "w": 149,
+      "h": 143,
+      "fill": "wood",
+      "corner": 8
+    },
+    {
+      "id": "blank_inner",
+      "type": "rect",
+      "x": 694,
+      "y": 438,
+      "w": 115,
+      "h": 109,
+      "fill": "paper",
+      "corner": 5
+    },
+    {
+      "id": "floor",
+      "type": "path",
+      "d": "M 0 687 L 1600 687 L 1600 1000 L 0 1000 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "table_shadow",
+      "type": "ellipse",
+      "x": 800,
+      "y": 880,
+      "rx": 594,
+      "ry": 85,
+      "fill": "shadow"
+    },
+    {
+      "id": "counter",
+      "type": "path",
+      "d": "M 176 714 Q 800 661 1424 714 L 1330 990 L 270 990 Z",
+      "fill": "wooddark"
+    },
+    {
+      "id": "counter_top",
+      "type": "path",
+      "d": "M 155 695 Q 800 617 1445 695 L 1450 754 Q 800 826 150 754 Z",
+      "fill": "wood"
+    },
+    {
+      "id": "desk_mat",
+      "type": "ellipse",
+      "x": 790,
+      "y": 729,
+      "rx": 407,
+      "ry": 110,
+      "fill": "deep"
+    },
+    {
+      "id": "seller",
+      "type": "group",
+      "transform": {
+        "x": 1180,
+        "y": 407,
+        "scale": 0.94
+      },
+      "children": [
+        {
+          "id": "seller_shadow",
+          "type": "ellipse",
+          "x": 0,
+          "y": 215,
+          "rx": 75,
+          "ry": 14,
+          "fill": "shadow"
+        },
+        {
+          "id": "seller_body",
+          "type": "path",
+          "d": "M -42 22 Q -82 42 -70 156 L -63 210 L 62 210 L 70 156 Q 82 42 42 22 Q 0 38 -42 22 Z",
+          "fill": "slate"
+        },
+        {
+          "id": "seller_head",
+          "type": "ellipse",
+          "x": 0,
+          "y": -14,
+          "rx": 32,
+          "ry": 42,
+          "fill": "skin"
+        },
+        {
+          "id": "seller_arm",
+          "type": "path",
+          "d": "M 36 44 Q 89 71 81 112 L 63 109 Q 67 85 28 68 Z",
+          "fill": "slate"
+        }
+      ]
+    },
+    {
+      "id": "buyer",
+      "type": "group",
+      "transform": {
+        "x": 344,
+        "y": 475,
+        "scale": 0.9
+      },
+      "children": [
+        {
+          "id": "buyer_shadow",
+          "type": "ellipse",
+          "x": 0,
+          "y": 215,
+          "rx": 75,
+          "ry": 14,
+          "fill": "shadow"
+        },
+        {
+          "id": "buyer_body",
+          "type": "path",
+          "d": "M -42 22 Q -82 42 -70 156 L -63 210 L 62 210 L 70 156 Q 82 42 42 22 Q 0 38 -42 22 Z",
+          "fill": "emerald"
+        },
+        {
+          "id": "buyer_head",
+          "type": "ellipse",
+          "x": 0,
+          "y": -14,
+          "rx": 32,
+          "ry": 42,
+          "fill": "skin"
+        },
+        {
+          "id": "buyer_arm",
+          "type": "path",
+          "d": "M 36 44 Q 89 71 81 112 L 63 109 Q 67 85 28 68 Z",
+          "fill": "emerald"
+        }
+      ]
+    },
+    {
+      "id": "letter",
+      "type": "path",
+      "d": "M 621 645 L 906 665 L 890 793 L 609 770 Z",
+      "fill": "paper"
+    },
+    {
+      "id": "letter_fold",
+      "type": "path",
+      "d": "M 745 654 L 756 655 L 742 780 L 731 779 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "source_box",
+      "type": "rect",
+      "x": 975,
+      "y": 674,
+      "w": 192,
+      "h": 98,
+      "fill": "sand",
+      "corner": 10,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "x": -120,
+            "y": 15
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "box_lid",
+      "type": "rect",
+      "x": 963,
+      "y": 657,
+      "w": 215,
+      "h": 23,
+      "fill": "wood",
+      "corner": 4,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "x": -120,
+            "y": 15
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "comparison_a",
+      "type": "rect",
+      "x": 973,
+      "y": 767,
+      "w": 169,
+      "h": 73,
+      "fill": "paper",
+      "corner": 6,
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "comparison_b",
+      "type": "rect",
+      "x": 987,
+      "y": 744,
+      "w": 166,
+      "h": 69,
+      "fill": "mint",
+      "corner": 6,
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "lens_outer",
+      "type": "ellipse",
+      "x": 562,
+      "y": 722,
+      "rx": 69,
+      "ry": 69,
+      "fill": "gold"
+    },
+    {
+      "id": "lens_glass",
+      "type": "ellipse",
+      "x": 562,
+      "y": 722,
+      "rx": 53,
+      "ry": 53,
+      "fill": "mint",
+      "opacity": 0.75
+    },
+    {
+      "id": "lens_handle",
+      "type": "path",
+      "d": "M 509 765 L 490 746 L 410 836 Q 403 851 421 858 Z",
+      "fill": "wood"
+    },
+    {
+      "id": "source_attention",
+      "type": "ellipse",
+      "x": 970,
+      "y": 732,
+      "rx": 178,
+      "ry": 114,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          970,
+          732
+        ],
+        "radius": 178,
+        "stops": [
+          {
+            "at": 0,
+            "color": "gold"
+          },
+          {
+            "at": 1,
+            "color": "goldclear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "eq": 1
+            }
+          },
+          "set": {
+            "opacity": 0.2
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "scale",
+          "duration_ms": 4200,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1.06
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "comparison_attention",
+      "type": "ellipse",
+      "x": 1060,
+      "y": 777,
+      "rx": 152,
+      "ry": 92,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          1060,
+          777
+        ],
+        "radius": 152,
+        "stops": [
+          {
+            "at": 0,
+            "color": "gold"
+          },
+          {
+            "at": 1,
+            "color": "goldclear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "eq": 2
+            }
+          },
+          "set": {
+            "opacity": 0.2
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "scale",
+          "duration_ms": 4200,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1.06
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "repeat"
+        }
+      ]
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      }
+    ]
+  }
+}

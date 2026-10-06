@@ -1,0 +1,1270 @@
+{
+  "session_id": "ses_mock_u0_l7_en_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l7",
+  "lesson_version": 1,
+  "title": "How Could Guidance Reach Us?",
+  "subtitle": "Must every recipient meet a message’s sender?",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "Distinguish sender, message and carrier, and understand revelation and messenger as Muslims describe them without assuming a particular claim true."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l07_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_hook",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "Imagine an island waiting for travel arrangements from a distant port official."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "A boat arrives. A carrier steps ashore claiming to bring the official’s message."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "What must we understand before relying on the message?"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0,
+          "focus": -1
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l07_island",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l07_island_v1_c25b276dde26c858905a3fe012a9dd6c317232143a14bbf19b2fcb8651ef72fc.json",
+          "mime_type": "application/json",
+          "sha256": "c25b276dde26c858905a3fe012a9dd6c317232143a14bbf19b2fcb8651ef72fc",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l07_island_v1_a5e3515b1a_604d6b87d25d446e2283ceead2947b14c6efb37065017aaa20c4bf6c2a1168d2.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0,
+          "focus": -1
+        },
+        "alt": "An island with a jetty, houses, a boat and a traveler carrying a closed envelope.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_routes",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which route could you imagine for the arrangements?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Meet the official directly."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Receive a message through a reliable carrier."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Use signals understood through prior agreement."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "These are different hypothetical routes. The question is what each would require, not which one occurred."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_three_parts",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Three things, not one"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "three_parts_p0",
+          "sentence": {
+            "sentence_id": "three_parts_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The sender originates the message; the carrier delivers it. They can be different people."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "three_parts_p1",
+          "sentence": {
+            "sentence_id": "three_parts_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "In this scenario, the official is the sender, the travel arrangements the message, and the traveler the carrier."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "three_parts_p2",
+          "sentence": {
+            "sentence_id": "three_parts_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Not meeting the sender does not make receiving the message impossible; a reliable route could carry it."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "three_parts_p3",
+          "sentence": {
+            "sentence_id": "three_parts_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Having a carrier establishes neither honesty nor faithful transmission; both require examination."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex1",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l07_01",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_guidance_message"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Sort the statements by what they support."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "Sender",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "Message",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_3",
+              "label": "Carrier",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The official who prepared the arrangements."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The travel time to be communicated."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveler who carried the envelope."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The plan for using the jetty."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_5",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The source of the directions at the port."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_6",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The person bringing the paper to the island."
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_letter",
+      "type": "story",
+      "label": "Scenario",
+      "title": "An envelope at the jetty",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+        {
+          "beat_id": "letter_beat0",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "letter_b0s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The island residents want to prepare the trip, but someone proposes a time of their own."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "letter_b0s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveler says he carries the arrangements sent by the official."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 0,
+              "focus": -1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l07_island",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l07_island_v1_c25b276dde26c858905a3fe012a9dd6c317232143a14bbf19b2fcb8651ef72fc.json",
+              "mime_type": "application/json",
+              "sha256": "c25b276dde26c858905a3fe012a9dd6c317232143a14bbf19b2fcb8651ef72fc",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l07_island_v1_a5e3515b1a_604d6b87d25d446e2283ceead2947b14c6efb37065017aaa20c4bf6c2a1168d2.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 0,
+              "focus": -1
+            },
+            "alt": "An island with a jetty, houses, a boat and a traveler carrying a closed envelope.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        },
+        {
+          "beat_id": "letter_beat1",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "letter_b1s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "A resident asks whether the traveler is carrying a received message or offering an opinion."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "letter_b1s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveler brings out the envelope rather than merely giving an opinion."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1,
+              "focus": -1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l07_island",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l07_island_v1_c25b276dde26c858905a3fe012a9dd6c317232143a14bbf19b2fcb8651ef72fc.json",
+              "mime_type": "application/json",
+              "sha256": "c25b276dde26c858905a3fe012a9dd6c317232143a14bbf19b2fcb8651ef72fc",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l07_island_v1_0b02dbeda0_56e3ff5a87b1f575e621119d6e57a2abbdcf294d73d2bb8479e151128e99f415.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1,
+              "focus": -1
+            },
+            "alt": "An island with a jetty, houses, a boat and a traveler carrying a closed envelope.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        },
+        {
+          "beat_id": "letter_beat2",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "letter_b2s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The residents review the checking method previously agreed with the port and request independent confirmation."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "letter_b2s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "They do not confuse the boat’s arrival with the envelope’s contents being true."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2,
+              "focus": -1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l07_island",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l07_island_v1_c25b276dde26c858905a3fe012a9dd6c317232143a14bbf19b2fcb8651ef72fc.json",
+              "mime_type": "application/json",
+              "sha256": "c25b276dde26c858905a3fe012a9dd6c317232143a14bbf19b2fcb8651ef72fc",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l07_island_v1_bed4eae2d8_8591b623cc5536b4ef1ffbd9cfec9f19b8bb29e2b99d105a89e8a9bda475dc0a.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2,
+              "focus": -1
+            },
+            "alt": "An island with a jetty, houses, a boat and a traveler carrying a closed envelope.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        },
+        {
+          "beat_id": "letter_beat3",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "letter_b3s0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Suppose confirmation arrives and the contents match the original arrangements."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "letter_b3s1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The residents can now act on the message without meeting the port official themselves."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3,
+              "focus": -1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l07_island",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l07_island_v1_c25b276dde26c858905a3fe012a9dd6c317232143a14bbf19b2fcb8651ef72fc.json",
+              "mime_type": "application/json",
+              "sha256": "c25b276dde26c858905a3fe012a9dd6c317232143a14bbf19b2fcb8651ef72fc",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l07_island_v1_4c6ee2c46f_1b263e51b1163156fdb15db7db07f71776d9fc89359fea2b5df6232adaf8cd34.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3,
+              "focus": -1
+            },
+            "alt": "An island with a jetty, houses, a boat and a traveler carrying a closed envelope.",
+            "overlays": []
+          },
+          "narration_audio_url": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex2",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l07_02",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_guidance_message"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which question distinguishes carrying a message from giving an opinion?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Do people trust what you say?"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Would the proposal help us?"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Did you receive this from the sender or propose it yourself?"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_checks",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "The route needs examination"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "checks_p0",
+          "sentence": {
+            "sentence_id": "checks_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A transmitted message raises two different questions: did it come from its claimed source, and was its meaning preserved?"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "checks_p1",
+          "sentence": {
+            "sentence_id": "checks_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A carrier’s personal suggestion does not become another’s message merely because the carrier came from far away."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "checks_p2",
+          "sentence": {
+            "sentence_id": "checks_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Many copies do not suffice if all repeat the same error from one source."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "checks_p3",
+          "sentence": {
+            "sentence_id": "checks_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Knowing the route clarifies what to examine. We have not judged any religious claim."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_possible",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Do you distinguish a message’s possible arrival from proof of its arrival?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I can see the difference."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I need another example."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "I still have a question."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Keep your response as it is. The example opens a possible route; evidence is needed when its occurrence is claimed."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_names",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "What do Muslims mean?"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "names_p0",
+          "sentence": {
+            "sentence_id": "names_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Now name the idea as Muslims present it, without asking you to accept its claim."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "names_p1",
+          "sentence": {
+            "sentence_id": "names_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Muslims use “revelation” for what God communicates to someone He chooses, rather than merely an idea a person has."
+              }
+            ],
+            "source_ids": [
+              "src_c07"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "names_p2",
+          "sentence": {
+            "sentence_id": "names_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "In Islamic belief, a messenger is a person chosen by God to convey His message to people."
+              }
+            ],
+            "source_ids": [
+              "src_c08"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "names_p3",
+          "sentence": {
+            "sentence_id": "names_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Understanding a revelation claim differs from establishing that its claimant received revelation."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "names_p4",
+          "sentence": {
+            "sentence_id": "names_s4",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The scenario depicts neither revelation’s mechanism nor the creator’s nature. It clarifies only source versus carrier."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex3",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l07_03",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_guidance_message"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Evaluate the statement, then choose the reason."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "In the Islamic account, a messenger invents the message from personal opinion and attributes it to God."
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because messenger means any traveler."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because the account describes conveying a received message, not inventing one."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because every religious claim is true."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_return",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Return to the envelope"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "return_p0",
+          "sentence": {
+            "sentence_id": "return_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Not meeting the sender does not make receiving the message impossible; a reliable route could carry it."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "return_p1",
+          "sentence": {
+            "sentence_id": "return_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A transmitted message raises two different questions: did it come from its claimed source, and was its meaning preserved?"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "return_p2",
+          "sentence": {
+            "sentence_id": "return_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The possibility of transmission does not establish this carrier as a messenger or this text as revelation."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "return_p3",
+          "sentence": {
+            "sentence_id": "return_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Knowing the carrier may help examine the route, but a compelling presence does not replace evidence of the source."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "return_p4",
+          "sentence": {
+            "sentence_id": "return_s4",
+            "spans": [
+              {
+                "type": "text",
+                "text": "What would you ask if someone claimed to carry a message from the creator?"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_ex4",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l07_04",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_guidance_message"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which follow-up fits what we learned?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Specify the claim and examine the message’s source and route."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Accept it because transmission is possible."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Reject it because I have not met the sender."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_summary",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "A possible route, remaining questions"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "summary_p0",
+          "sentence": {
+            "sentence_id": "summary_s0",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The sender originates the message; the carrier delivers it. They can be different people."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p1",
+          "sentence": {
+            "sentence_id": "summary_s1",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Not meeting the sender does not make receiving the message impossible; a reliable route could carry it."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p2",
+          "sentence": {
+            "sentence_id": "summary_s2",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A transmitted message raises two different questions: did it come from its claimed source, and was its meaning preserved?"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "summary_p3",
+          "sentence": {
+            "sentence_id": "summary_s3",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The possibility of transmission does not establish this carrier as a messenger or this text as revelation."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "When reading an ordinary message, name its sender and carrier, and ask whether you know its route."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l7_topic_1",
+        "title": "Revelation",
+        "concept_ids": [
+          "con_u0_guidance_message"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "Can you separate a message’s source from its carrier, and possibility from established arrival?"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "src_c07",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "Ash-Shura 42:51",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c08",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "An-Nahl 16:36",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    }
+  ],
+  "terms": {
+    "term_revelation": {
+      "term_id": "term_revelation",
+      "text": "Revelation",
+      "arabic": "وحي",
+      "transliteration": "waḥy",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "In the Islamic account: communication from God to someone He chooses, rather than a personal opinion attributed to God."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "A messenger in this account receives and conveys the message rather than composing it from personal opinion."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l7",
+      "lesson_title": "How Could Guidance Reach Us?"
+    },
+    "term_messenger": {
+      "term_id": "term_messenger",
+      "text": "Messenger",
+      "arabic": "رسول",
+      "transliteration": "rasūl",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "In Islamic belief: a person chosen by God to convey His message to people."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "In this account, distinguish the message’s source from the person conveying it."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l7",
+      "lesson_title": "How Could Guidance Reach Us?"
+    }
+  },
+  "answers": []
+}

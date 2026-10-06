@@ -1,0 +1,26 @@
+{
+ "items": [
+  {
+   "achievement_key": "first_lesson",
+   "title": "الخطوة الأولى",
+   "description": "أكمل أول درس",
+   "unlocked": true,
+   "unlocked_at": "2026-10-04T09:30:00Z",
+   "progress": {
+    "current": 1,
+    "target": 1
+   }
+  },
+  {
+   "achievement_key": "seeker",
+   "title": "الباحث",
+   "description": "اسأل رقيب 5 أسئلة",
+   "unlocked": false,
+   "unlocked_at": null,
+   "progress": {
+    "current": 3,
+    "target": 5
+   }
+  }
+ ]
+}

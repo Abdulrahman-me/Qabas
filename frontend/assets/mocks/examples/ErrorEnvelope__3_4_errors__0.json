@@ -1,0 +1,9 @@
+{
+ "error": {
+  "code": "validation_error",
+  "message": "daily_goal_minutes must be one of 5, 10, 15, 20",
+  "details": {
+   "field": "daily_goal_minutes"
+  }
+ }
+}

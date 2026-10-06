@@ -1,0 +1,360 @@
+{
+  "message_id": "msg_f9b8f5290f35ebb7",
+  "role": "assistant",
+  "status": "completed",
+  "stage": "done",
+  "created_at": "2026-10-02T00:00:00Z",
+  "completed_at": "2026-10-02T00:00:00Z",
+  "understood_input": {
+    "transcript": null,
+    "images": [],
+    "document": null
+  },
+  "classification": {
+    "question_class": "general_knowledge",
+    "label": "Glossary projection fixture"
+  },
+  "abstained": true,
+  "blocks": [],
+  "citations": [],
+  "terms": {
+    "term_f2f6eba0f1d673c6": {
+      "term_id": "term_f2f6eba0f1d673c6",
+      "text": "العصر",
+      "arabic": "العصر",
+      "transliteration": "al-ʿaṣr",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "الصلاة الثالثة، بعد الظهر والشمس ما زالت مرتفعة."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "تأتي في النصف الثاني من النهار."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_a574c7792796086e": {
+      "term_id": "term_a574c7792796086e",
+      "text": "الدرن",
+      "arabic": "الدَّرَن",
+      "transliteration": "ad-daran",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "الوسخ الذي يعلق بالجسد."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "من اغتسل خمس مرات في اليوم لم يبقَ عليه درن."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_33eee0710eef852b": {
+      "term_id": "term_33eee0710eef852b",
+      "text": "الظهر",
+      "arabic": "الظهر",
+      "transliteration": "aẓ-ẓuhr",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "الصلاة الثانية، حين تميل الشمس عن وسط السماء."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "تأتي قرب استراحة الغداء تقريبًا."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_af35bd90273f2d25": {
+      "term_id": "term_af35bd90273f2d25",
+      "text": "الدعاء",
+      "arabic": "الدعاء",
+      "transliteration": "ad-duʿāʾ",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "أن تكلّم الله وتطلب منه ما تحتاج، في أي وقت."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "أن تقول: يا رب يسّر لي يومي."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_eb164ebe0a82fe57": {
+      "term_id": "term_eb164ebe0a82fe57",
+      "text": "الفجر",
+      "arabic": "الفجر",
+      "transliteration": "al-fajr",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "أول صلاة في اليوم، مع أول ضوء قبل شروق الشمس."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "يصليها المسلم بعد استيقاظه صباحًا."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_2adeb14614687765": {
+      "term_id": "term_2adeb14614687765",
+      "text": "فريضة",
+      "arabic": "فريضة",
+      "transliteration": "farīḍah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "عمل طلبه الله من المسلم طلبًا لازمًا، وليس اختياريًا."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "الصلوات الخمس فريضة كل يوم وليلة."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_e7f6afdf7fd1a8a7": {
+      "term_id": "term_e7f6afdf7fd1a8a7",
+      "text": "حديث",
+      "arabic": "حديث",
+      "transliteration": "ḥadīth",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "كلام أو فعل ثابت عن النبي ﷺ، نُقل إلينا بطريق موثوق."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "حديث النهر حديث ثابت عن النبي ﷺ."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_0cd44a1001c68092": {
+      "term_id": "term_0cd44a1001c68092",
+      "text": "إقامة الصلاة",
+      "arabic": "إقامة الصلاة",
+      "transliteration": "iqāmat aṣ-ṣalāh",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "أداء الصلاة كاملة كما شرعها الله."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "إقامة الصلاة هي الركن الثاني بعد الشهادتين."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_59e0a7b720c83cd3": {
+      "term_id": "term_59e0a7b720c83cd3",
+      "text": "العشاء",
+      "arabic": "العشاء",
+      "transliteration": "al-ʿishāʾ",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "الصلاة الخامسة، في الليل بعد غياب الحمرة من الأفق."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "تأتي في الليل قبل النوم عادة."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_d548379c7db8b906": {
+      "term_id": "term_d548379c7db8b906",
+      "text": "الخطايا",
+      "arabic": "الخطايا",
+      "transliteration": "al-khaṭāyā",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "الذنوب والأخطاء التي يقع فيها الإنسان."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "يمحو الله الخطايا الصغيرة بالصلوات الخمس."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_f7ced9adc6d3ac13": {
+      "term_id": "term_f7ced9adc6d3ac13",
+      "text": "المغرب",
+      "arabic": "المغرب",
+      "transliteration": "al-maghrib",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "الصلاة الرابعة، بعد غروب الشمس."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "حين تغيب الشمس في المساء."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_7ef0bb356e8a70ac": {
+      "term_id": "term_7ef0bb356e8a70ac",
+      "text": "ركن",
+      "arabic": "ركن",
+      "transliteration": "rukn",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "عمود من الأعمدة الكبيرة التي يقوم عليها البناء."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "إقامة الصلاة ركن من أركان الإسلام الخمسة."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_055654e9d79b0bfa": {
+      "term_id": "term_055654e9d79b0bfa",
+      "text": "الصلاة",
+      "arabic": "الصلاة",
+      "transliteration": "aṣ-ṣalāh",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "وقفة قصيرة يقف فيها المسلم بين يدي الله، بطريقة علّمها النبي ﷺ."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "يصلي المسلم الظهر في وقتها بعد منتصف النهار."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    },
+    "term_a820e1a079082b73": {
+      "term_id": "term_a820e1a079082b73",
+      "text": "التوبة",
+      "arabic": "التوبة",
+      "transliteration": "at-tawbah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "أن تترك الذنب، وتندم عليه، وترجع إلى الله."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "الذنوب الكبيرة تحتاج إلى توبة."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "الصلاة: نهرٌ على باب يومك"
+    }
+  },
+  "suggested_lessons": [],
+  "feedback": null
+}

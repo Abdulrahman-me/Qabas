@@ -1,0 +1,290 @@
+{
+  "run_id": "run_recording_plan",
+  "unit_id": "unit_1",
+  "lesson_type": "concept",
+  "brief": "الدرس 1.1 (تأسيسي): ما الإسلام في الحقيقة؟ الاستسلام لله طوعاً بوصفه توجّه الحياة كلها إليه، مع تصحيح التصورات الشائعة، دون تدريس الشهادة أو الصلاة أو الأركان.",
+  "status": "awaiting_gate1",
+  "stage": "plan",
+  "stages": [
+    {
+      "stage": "plan",
+      "status": "done",
+      "started_at": "2026-10-03T09:00:00Z",
+      "finished_at": "2026-10-03T09:01:00Z"
+    },
+    {
+      "stage": "decompose",
+      "status": "done",
+      "started_at": "2026-10-03T09:00:00Z",
+      "finished_at": "2026-10-03T09:01:00Z"
+    },
+    {
+      "stage": "retrieve",
+      "status": "skipped",
+      "started_at": null,
+      "finished_at": null
+    },
+    {
+      "stage": "verify_evidence",
+      "status": "skipped",
+      "started_at": null,
+      "finished_at": null
+    },
+    {
+      "stage": "write",
+      "status": "done",
+      "started_at": "2026-10-03T09:00:00Z",
+      "finished_at": "2026-10-03T09:01:00Z"
+    },
+    {
+      "stage": "exercises",
+      "status": "done",
+      "started_at": "2026-10-03T09:00:00Z",
+      "finished_at": "2026-10-03T09:01:00Z"
+    },
+    {
+      "stage": "glossary",
+      "status": "done",
+      "started_at": "2026-10-03T09:00:00Z",
+      "finished_at": "2026-10-03T09:01:00Z"
+    },
+    {
+      "stage": "localize",
+      "status": "done",
+      "started_at": "2026-10-03T09:00:00Z",
+      "finished_at": "2026-10-03T09:01:00Z"
+    },
+    {
+      "stage": "visuals",
+      "status": "skipped",
+      "started_at": null,
+      "finished_at": null
+    },
+    {
+      "stage": "scene_author",
+      "status": "skipped",
+      "started_at": null,
+      "finished_at": null
+    },
+    {
+      "stage": "scene_render",
+      "status": "skipped",
+      "started_at": null,
+      "finished_at": null
+    },
+    {
+      "stage": "narration",
+      "status": "skipped",
+      "started_at": null,
+      "finished_at": null
+    },
+    {
+      "stage": "qa",
+      "status": "done",
+      "started_at": "2026-10-03T09:00:00Z",
+      "finished_at": "2026-10-03T09:01:00Z"
+    }
+  ],
+  "plan": {
+    "title": {
+      "en": "What Does Islam Mean? · Recording sample",
+      "ar": "ما معنى الإسلام؟ · نموذج التصوير"
+    },
+    "central_question": {
+      "ar": "ما الإسلام في الحقيقة؟",
+      "en": "What does Islam actually mean?"
+    },
+    "primary_learning_outcome": {
+      "ar": "أن يشرح المتعلم، بمستوى المبتدئ، أن الإسلام استسلام لله طوعاً، وأنه علاقة تشكّل العبادة والطاعة والثقة واتجاه الحياة كلها.",
+      "en": "The learner can explain, at beginner level, that Islam is willing submission to Allah, a relationship that shapes worship, obedience, trust and the direction of a whole life."
+    },
+    "supporting_understandings": [
+      {
+        "ar": "أصل الكلمة (أسلم: استسلم وانقاد) بداية الجواب لا الجواب كله.",
+        "en": "The root of the word (aslama: to submit and yield) is where the answer starts, not the whole answer."
+      },
+      {
+        "ar": "الاستسلام هنا طوعي لا إكراه فيه.",
+        "en": "This submission is willing, without compulsion."
+      },
+      {
+        "ar": "الإسلام ليس هوية قومية أو موروثة، ولا مجرد اسم أو كلمة، ولا قائمة ممنوعات فقط؛ والعبادة فيه جزء من هذا التوجّه لا شيء منفصل عنه.",
+        "en": "Islam is not an ethnic or inherited identity, not merely a name or a phrase and not just a list of prohibitions; worship belongs within this orientation, not apart from it."
+      },
+      {
+        "ar": "هو توجّه الإنسان كله إلى الله: عبادة وطاعة وثقة واتباع لهداه.",
+        "en": "It is the whole person turning toward God: worship, obedience, trust and following His guidance."
+      },
+      {
+        "ar": "المسلم من أسلم لله.",
+        "en": "A Muslim is one who submits to God."
+      },
+      {
+        "ar": "يقدّم القرآن هذا الاستسلام على أنه طريق الأنبياء، كجواب إبراهيم.",
+        "en": "The Qur’an presents this submission as the way of the prophets, as in Ibrahim’s answer."
+      }
+    ],
+    "depth_profile": "foundational",
+    "objectives": [
+      {
+        "ar": "أن تشرح ما يقصده المسلمون بالإسلام، وما الذي يجعله أكثر من كلمة أو انتماء.",
+        "en": "Explain what Muslims mean by Islam, and what makes it more than a word or a belonging."
+      }
+    ],
+    "prerequisite_concept_ids": [],
+    "introduced_concept_ids": [
+      "con_islam_meaning"
+    ],
+    "new_terms": [
+      {
+        "ar": "الإسلام",
+        "en": "Islam"
+      },
+      {
+        "ar": "المسلم",
+        "en": "Muslim"
+      }
+    ],
+    "target_misconceptions": [
+      {
+        "misconception_id": null,
+        "title": {
+          "ar": "الإسلام اسمٌ لدين قومٍ معيّنين",
+          "en": "Islam is just the name of one people's religion"
+        },
+        "description": {
+          "ar": "فكرة شائعة لكنها غير دقيقة: كلمة «الإسلام» تصف علاقةً بالله — الاستسلام له — لا قوماً ولا بلداً.",
+          "en": "A common but inaccurate idea: the word “Islam” describes a relationship with God — submitting to Him — not a people or a country."
+        }
+      }
+    ],
+    "lesson_type": "concept",
+    "estimated_minutes": 9,
+    "lesson_arc": {
+      "pattern": "misconception",
+      "rationale": {
+        "ar": "يبدأ المتعلم من تصورين شائعين، ثم يكتشف أن أصل الكلمة بداية فقط، ويعرف ما ليس هو الإسلام، ويرى معناه في جواب إبراهيم، ثم يفهمه توجّهاً للحياة كلها، ويميّزه من الفهم الناقص، ويلخّصه وينقله إلى موقف جديد.",
+        "en": "The learner starts from two common assumptions, discovers the root is only the start, learns what Islam is not, sees its meaning in Ibrahim’s answer, understands it as the orientation of a whole life, distinguishes it from incomplete ideas, then sums it up and transfers it."
+      },
+      "steps": [
+        {
+          "step_id": "misconception",
+          "technique": "scenario",
+          "experience": {
+            "ar": "زائران في متحف يختصران الإسلام في قوم أو في هوية موروثة.",
+            "en": "Two museum visitors reduce Islam to a people, or to an inherited identity."
+          },
+          "interactive": false
+        },
+        {
+          "step_id": "predict",
+          "technique": "prediction",
+          "experience": {
+            "ar": "يختار المتعلم الإجابة الأقرب في نظره.",
+            "en": "The learner picks the answer that seems closest."
+          },
+          "interactive": true
+        },
+        {
+          "step_id": "word",
+          "technique": "explanation",
+          "experience": {
+            "ar": "أصل الكلمة بداية الجواب لا نهايته.",
+            "en": "The word’s root is the start of the answer, not the end."
+          },
+          "interactive": false
+        },
+        {
+          "step_id": "boundaries",
+          "technique": "explanation",
+          "experience": {
+            "ar": "ليس انتماءً لقوم، وليس إكراهاً.",
+            "en": "Not belonging to a people, and not compulsion."
+          },
+          "interactive": false
+        },
+        {
+          "step_id": "correct_myth",
+          "technique": "practice",
+          "experience": {
+            "ar": "تصحيح فكرة أن الإسلام دين قوم.",
+            "en": "Correcting the idea that Islam is one people’s religion."
+          },
+          "interactive": true
+        },
+        {
+          "step_id": "ibrahim",
+          "technique": "story",
+          "experience": {
+            "ar": "جواب إبراهيم: أسلمتُ، ثم الوصية لأبنائه.",
+            "en": "Ibrahim’s answer: I have submitted, then his counsel to his sons."
+          },
+          "interactive": false
+        },
+        {
+          "step_id": "deeper",
+          "technique": "explanation",
+          "experience": {
+            "ar": "الإسلام توجّه الحياة كلها: عبادة وعمل صالح وتوكل واتباع للهدى.",
+            "en": "Islam as the orientation of a whole life: worship, good deeds, trust and following guidance."
+          },
+          "interactive": false
+        },
+        {
+          "step_id": "distinguish",
+          "technique": "comparison",
+          "experience": {
+            "ar": "تمييز المعنى الكامل من التصورات الناقصة.",
+            "en": "Telling the full meaning apart from incomplete ideas."
+          },
+          "interactive": true
+        },
+        {
+          "step_id": "reflect",
+          "technique": "reflection",
+          "experience": {
+            "ar": "أي جانب كان أبعد عن تصوّرك؟ تصويت غير مقيَّم.",
+            "en": "Which aspect was furthest from what you pictured? An ungraded poll."
+          },
+          "interactive": true
+        },
+        {
+          "step_id": "muslim",
+          "technique": "explanation",
+          "experience": {
+            "ar": "من هو المسلم، وصلة ذلك بطريق الأنبياء.",
+            "en": "Who a Muslim is, and the link to the way of the prophets."
+          },
+          "interactive": false
+        },
+        {
+          "step_id": "transfer",
+          "technique": "practice",
+          "experience": {
+            "ar": "تلخيص المعنى، ثم تصحيح عبارة منشورة عن المسلم.",
+            "en": "Summing up the meaning, then correcting a posted statement about who a Muslim is."
+          },
+          "interactive": true
+        },
+        {
+          "step_id": "takeaway",
+          "technique": "takeaway",
+          "experience": {
+            "ar": "خلاصة قصيرة.",
+            "en": "A short takeaway."
+          },
+          "interactive": false
+        }
+      ]
+    },
+    "reasoning_tools": [],
+    "standalone_eligible": true,
+    "content_budget": 7,
+    "exercise_budget": 4
+  },
+  "draft": null,
+  "qa_report": null,
+  "error": null,
+  "review_digest": "1aecd3a1a87ed2c1084c77a7ca81a3a9a267f8e3566e13f228292104849ead0f",
+  "published": null
+}

@@ -39,11 +39,8 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-/docs/
 /Qabas-Recording/
 
-AGENTS.md
-CLAUDE.md
 GEMINI.md
 .cursor/
 .claude/
@@ -73,21 +70,14 @@ GEMINI.md
 **/GoogleService-Info.plist
 /config/*.local.json
 
-/assets/mocks/
-/config/mock.json
-/config/hybrid.json
-/config/recording.json
+# Development docs, agent rules, mock fixtures/configs, tests and source tools
+# belong in the source repository so fresh clones can build and run checks.
+# Mock answer keys are development content; production bundles exclude them.
 
-/test/
-/integration_test/
-/test_driver/
-/packages/*/test/
-/tool/*
-!/tool/merge_arb.dart
-!/tool/check_rules.sh
-!/tool/check_release_bundle.sh
-!/tool/check_release_bundle.py
-!/tool/prepare_ios_plugins.py
+# Generated presentation/export artifacts
+/output/
+/outputs/
+/*.pptx
 
 __pycache__/
 *.py[cod]

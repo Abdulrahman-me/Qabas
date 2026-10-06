@@ -1,0 +1,337 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l11_records",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "emerald": "#0B5A52",
+    "night": "#073C37",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "ink": "#16233A",
+    "slate": "#566476",
+    "clear": "#F6E3B400",
+    "sand": "#D8C1A0",
+    "wood": "#86664C",
+    "wood_dark": "#604B3D",
+    "paper": "#FFF9E9",
+    "stone": "#89978B",
+    "far": "#9CB3B0",
+    "skin": "#C79C78",
+    "sky": "#DCEBE7"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 4,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "wall",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "mint"
+          },
+          {
+            "at": 1,
+            "color": "sand"
+          }
+        ]
+      }
+    },
+    {
+      "id": "window",
+      "type": "rect",
+      "x": 1060,
+      "y": 180,
+      "w": 270,
+      "h": 320,
+      "fill": "far",
+      "corner": 30
+    },
+    {
+      "id": "window_light",
+      "type": "rect",
+      "x": 1077,
+      "y": 197,
+      "w": 235,
+      "h": 281,
+      "fill": "sky",
+      "corner": 20
+    },
+    {
+      "id": "window_bar",
+      "type": "path",
+      "d": "M1189 197 H1200 V480 H1189 Z M1077 336 H1312 V347 H1077 Z",
+      "fill": "mint"
+    },
+    {
+      "id": "shelf",
+      "type": "rect",
+      "x": 230,
+      "y": 256,
+      "w": 400,
+      "h": 30,
+      "fill": "wood",
+      "corner": 8
+    },
+    {
+      "id": "shelf_book_a",
+      "type": "rect",
+      "x": 290,
+      "y": 182,
+      "w": 40,
+      "h": 74,
+      "fill": "emerald",
+      "corner": 4
+    },
+    {
+      "id": "shelf_book_b",
+      "type": "rect",
+      "x": 340,
+      "y": 168,
+      "w": 51,
+      "h": 88,
+      "fill": "paper",
+      "corner": 4
+    },
+    {
+      "id": "shelf_book_c",
+      "type": "rect",
+      "x": 405,
+      "y": 192,
+      "w": 36,
+      "h": 64,
+      "fill": "wood_dark",
+      "corner": 4
+    },
+    {
+      "id": "table",
+      "type": "path",
+      "d": "M270 668 L1190 625 L1370 757 L399 834 Z",
+      "fill": "wood"
+    },
+    {
+      "id": "table_side",
+      "type": "path",
+      "d": "M399 834 L1370 757 V815 L399 892 Z",
+      "fill": "wood_dark"
+    },
+    {
+      "id": "record_glow",
+      "type": "ellipse",
+      "x": 825,
+      "y": 697,
+      "rx": 220,
+      "ry": 220,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          825,
+          697
+        ],
+        "radius": 220,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 0.65
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "open_book_cover",
+      "type": "path",
+      "d": "M544 658 Q672 615 808 657 Q941 599 1100 629 L1070 754 Q951 732 816 785 Q672 742 563 781 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "pages_left",
+      "type": "path",
+      "d": "M560 644 Q683 609 808 650 L816 769 Q685 727 574 766 Z",
+      "fill": "paper"
+    },
+    {
+      "id": "pages_right",
+      "type": "path",
+      "d": "M815 650 Q950 596 1083 623 L1061 739 Q950 718 822 769 Z",
+      "fill": "paper"
+    },
+    {
+      "id": "spine",
+      "type": "path",
+      "d": "M807 650 H815 L823 769 H815 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "closed_book",
+      "type": "rect",
+      "x": 326,
+      "y": 687,
+      "w": 180,
+      "h": 55,
+      "fill": "night",
+      "corner": 10
+    },
+    {
+      "id": "closed_pages",
+      "type": "path",
+      "d": "M332 693 H495 V720 H332 Z",
+      "fill": "paper"
+    },
+    {
+      "id": "lamp_shadow",
+      "type": "ellipse",
+      "x": 1240,
+      "y": 704,
+      "rx": 91,
+      "ry": 20,
+      "fill": "wood_dark",
+      "opacity": 0.22
+    },
+    {
+      "id": "lamp_base",
+      "type": "path",
+      "d": "M1185 690 Q1240 670 1295 690 L1307 718 H1173 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "lamp_stem",
+      "type": "rect",
+      "x": 1234,
+      "y": 390,
+      "w": 13,
+      "h": 302,
+      "fill": "emerald"
+    },
+    {
+      "id": "lamp_shade",
+      "type": "path",
+      "d": "M1172 363 H1310 L1330 425 H1152 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "lamp_glow",
+      "type": "ellipse",
+      "x": 1238,
+      "y": 429,
+      "rx": 175,
+      "ry": 175,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          1238,
+          429
+        ],
+        "radius": 175,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0.45,
+      "tracks": [
+        {
+          "property": "opacity",
+          "duration_ms": 3500,
+          "easing": "ease_in_out",
+          "loop": "ping_pong",
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0.42
+            },
+            {
+              "t": 1,
+              "v": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      },
+      {
+        "beat": 4
+      }
+    ]
+  }
+}

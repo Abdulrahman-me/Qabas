@@ -1,0 +1,1155 @@
+{
+  "session_id": "ses_mock_u0_l10_ar_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l10",
+  "lesson_version": 1,
+  "title": "كيف نعرف الرسول؟",
+  "subtitle": "ما الذي يجعل دعوى الرسالة جديرة بالثقة والفحص؟",
+  "lesson_type": "practice",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "فرّق بين الكذب المتعمّد والخطأ الصادق القصد."
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "اختر سؤالًا يكشف ما ينقص فحص دعوى الرسالة."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l10_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "تخيّل أنك وصلت إلى بداية طريق جبلي، وتحتاج إلى دليل يعرف المسار."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "يقف أمامك دليل واثق، لكن الثقة في صوته لا تجيب كل أسئلتك."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "ما الذي تريد معرفته قبل أن تتبعه؟"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l10_mountain",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l10_mountain_v1_50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445.json",
+          "mime_type": "application/json",
+          "sha256": "50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l10_mountain_v1_76f20ad9e8_ddd9a3ec3cba7b1a846f4666bc9cd3a0a8107f365d9d3d6a23defdcba1ebb0b8.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "مسار جبلي قرب خيمة ودليل معاصر بوجه بلا ملامح.",
+        "overlays": []
+      },
+      "cta": "ابدأ بالسؤال"
+    },
+    {
+      "block_id": "b_u0_l10_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي معلومة تبدأ بها؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "هل يعرف الطريق من تجربة؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "هل كان صادقًا مع من سبقني؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "لماذا يريدني أن أتبع هذا الطريق؟"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "ضع سؤالك بجانب بقية الأسئلة؛ سنرى ما الذي يضيفه كل واحد منها."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l10_03",
+      "type": "story",
+      "label": "موقف",
+      "title": "ليس كل جواب واثقًا جوابًا دقيقًا",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l10_005",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تخيّل أن مسافرًا يسأل الدليل عن الممر الذي سيصل إلى المخيّم."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l10_006",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يذكر الدليل طريقًا يعرفه من زيارة قديمة، دون أن يدّعي معرفة حاله اليوم."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l10_mountain",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l10_mountain_v1_50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445.json",
+              "mime_type": "application/json",
+              "sha256": "50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l10_mountain_v1_cd92849bcd_ab1383ec67634f3214ef41f2c5331a6dd128433035a689b8351d9e5c4de8a315.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l10_007",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يسأل المسافر حارس المسار، فيشرح أن الطريق القديم مغلق في هذا الموقف المتخيّل."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l10_008",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يتحقق الدليل من التنبيه، ثم يغيّر اقتراحه ويشرح سبب التغيير."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l10_mountain",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l10_mountain_v1_50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445.json",
+              "mime_type": "application/json",
+              "sha256": "50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l10_mountain_v1_fcb38353b5_21f84f2deebb961902a1ec868d8708eb8cb13bcb7bcb0c73f7c338719c73f5ac.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l10_009",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "صار لدى المسافر وصف للمعرفة وحدودها، بدل الثقة بالصوت وحده."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l10_010",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ولم يحتج إلى اتّهام الدليل بالكذب ليلاحظ أن المعلومة الأولى لم تكن كافية."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l10_mountain",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l10_mountain_v1_50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445.json",
+              "mime_type": "application/json",
+              "sha256": "50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l10_mountain_v1_19cf76ac47_21f84f2deebb961902a1ec868d8708eb8cb13bcb7bcb0c73f7c338719c73f5ac.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_04",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "سؤالان لا يقوم أحدهما مقام الآخر"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l10_011",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الصدق في نقل ما تعتقده لا يمنع أن تكون المعلومة نفسها خاطئة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l10_012",
+            "spans": [
+              {
+                "type": "text",
+                "text": "للثقة بخبر، اسأل عن صدق ناقله وعن قدرته على معرفة ما يخبر به."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l10_013",
+            "spans": [
+              {
+                "type": "text",
+                "text": "اسأل: هل ينقل ما يعتقده بأمانة؟ ثم اسأل: كيف عرف ذلك؟"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_05",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l10_01",
+        "type": "scenario",
+        "concept_ids": [
+          "con_u0_messenger_evaluation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي سؤال يفحص نقص معرفته بالطريق؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "situation": [
+            {
+              "type": "text",
+              "text": "تخيّل أن دليلًا صادقًا في تعامله، لكنه لم يزر المسار الذي تسأل عنه."
+            }
+          ],
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "هل يقصد نقل ما يعتقده بصدق؟"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كيف يستطيع معرفة الطريق المحدّد؟"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "هل توجد منفعة محتملة وراء كلامه؟"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l10_06",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "انظر إلى سلوك قابل للفحص"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 2
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l10_mountain",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l10_mountain_v1_50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445.json",
+          "mime_type": "application/json",
+          "sha256": "50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l10_mountain_v1_fcb38353b5_21f84f2deebb961902a1ec868d8708eb8cb13bcb7bcb0c73f7c338719c73f5ac.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 2
+        },
+        "alt": "الخيمة والمسار والدليل في المكان نفسه، مع ضوء لطيف قرب المسار.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l10_015",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يدل رفض دليلٍ للمبالغة في معرفته على هذا السلوك المحدّد، لا على صحة كل ما سيقوله."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l10_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الدافع المحتمل يساعد على الفحص، لكنه لا يجعل الخبر صحيحًا أو كاذبًا وحده."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l10_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "أخذ أجر معلوم عن عمل لا يساوي الكذب، وعدم أخذ الأجر لا يضمن الدقة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l10_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "قارن كلامه بما فعله، واطلب وصفًا واضحًا لما يطلبه منك ولماذا."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_07",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l10_02",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_messenger_evaluation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي العبارات تصف معلومة محدّدة، وأيها تقفز إلى حكم أوسع؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "معلومة محدّدة",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "حكم يتجاوزها",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "في الموقف المتخيّل، اعترف الدليل بحدود معرفته."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إذن لن يخطئ أبدًا."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الدليل يشرح الأجر قبل الاتفاق."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إذن هو كاذب لأن له أجرًا."
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l10_08",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "من الدليل إلى دعوى الرسالة"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l10_021",
+            "spans": [
+              {
+                "type": "text",
+                "text": "تقدّم النصوص الإسلامية الرسل بوصفهم بشرًا يتلقّون الوحي ويبلّغون رسالة."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l10_06"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l10_022",
+            "spans": [
+              {
+                "type": "text",
+                "text": "فحص دعوى الرسالة يحتاج أدلة على الدعوى نفسها، إلى جانب السيرة والصدق."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l10_023",
+            "spans": [
+              {
+                "type": "text",
+                "text": "اسأل عمّا ادّعاه، وكيف نُقل كلامه، وما يبلّغه، وما الأدلة التي يقدّمها."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l10_024",
+            "spans": [
+              {
+                "type": "text",
+                "text": "افحص أيضًا ثبات السلوك والدوافع المحتملة، دون جعل هذه الأسئلة بديلًا عن فحص الرسالة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_09",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي اختصار تجد نفسك أقرب إلى استعماله؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أصدّق صاحب الصوت الواثق."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أرفض كل صاحب دعوى كبيرة."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أؤجّل الحكم حتى أفهم الأدلة."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "استخدم هذا التأمل لتلاحظ عادتك؛ هذه مفاضلة شخصية بلا جواب صحيح أو خاطئ."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l10_10",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "قارن تفسيرات، ولا تلصق أحكامًا"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l10_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يمكن أن يكون تقريرٌ كاذبًا عمدًا، أو خطأً صادق القصد، أو تقريرًا صحيحًا."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l10_027",
+            "spans": [
+              {
+                "type": "text",
+                "text": "هذه أمثلة لتفسيرات نفحصها، وليست قائمة كاملة بكل الاحتمالات."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l10_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "نفي الكذب المتعمّد وحده لا يثبت أن التقرير صحيح."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l10_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لا تشخّص حالة شخص من خبر قصير؛ افحص ما تقوله الأدلة عن ادّعاء محدّد."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l10_03",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_messenger_evaluation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "احكم على العبارة واختر السبب."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "إذا لم يتعمّد صاحب الدعوى الكذب، فقد ثبتت دعواه."
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لأن الصوت الواثق يكفي."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لأن كل خطأ هو كذب متعمّد."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لأن الخطأ الصادق القصد ما زال ممكنًا."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l10_12",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "ارجع إلى الأسئلة لا إلى الأوصاف: ما الدليل، وما البدائل، وما مقدار ما يثبته؟"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "عندما لا تكفي المعلومات، اكتب ما تحتاجه بدل ملء الفراغ بحكم."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_13",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l10_04",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_messenger_evaluation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي خطوة تجعل النتيجة أوسع من الأدلة؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "فحصت خبرًا عن صدقه، ووجدت له مصدرًا محدّدًا."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لا تظهر في هذا الخبر منفعة مالية."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إذن لم يعد هناك أي احتمال يحتاج فحصًا، وثبتت الرسالة."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l10_14",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "الثقة تبدأ بسؤال أدق"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l10_036",
+            "spans": [
+              {
+                "type": "text",
+                "text": "للثقة بخبر، اسأل عن صدق ناقله وعن قدرته على معرفة ما يخبر به."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l10_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الدافع المحتمل يساعد على الفحص، لكنه لا يجعل الخبر صحيحًا أو كاذبًا وحده."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l10_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "فحص دعوى الرسالة يحتاج أدلة على الدعوى نفسها، إلى جانب السيرة والصدق."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l10_039",
+            "spans": [
+              {
+                "type": "text",
+                "text": "نفي الكذب المتعمّد وحده لا يثبت أن التقرير صحيح."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "خذ خبرًا عاديًا اليوم، واسأل كيف عرف ناقله ما قاله."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l10_topic_1",
+        "title": "كيف نعرف الرسول؟",
+        "concept_ids": [
+          "con_u0_messenger_evaluation"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "ما الذي لا تثبته أمانة صاحب الدعوى وحدها؟"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "src_c_u0_l10_06",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "An-Nahl 16:43–44; scope checked https://quran.com/an-nahl/43; exact text and attributed explanation require adapter/specialist approval.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    }
+  ],
+  "terms": {
+    "term_messenger_claim": {
+      "term_id": "term_messenger_claim",
+      "text": "دعوى الرسالة",
+      "arabic": "دعوى الرسالة",
+      "transliteration": "daʿwā al-risālah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "قول شخص إنه يبلّغ رسالة من الله؛ وهو قول نبحث عن أدلّته."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "السؤال عن صدق صاحب الدعوى جزء من فحصها."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l10",
+      "lesson_title": "كيف نعرف الرسول؟"
+    }
+  },
+  "answers": []
+}

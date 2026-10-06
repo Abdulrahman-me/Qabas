@@ -1,0 +1,221 @@
+{
+ "track": "new_muslim",
+ "current": {
+  "unit_id": "unit_1",
+  "lesson_id": "les_u1_l1"
+ },
+ "units": [
+  {
+   "unit_id": "unit_1",
+   "index": 1,
+   "title": "الخطوة الأولى",
+   "subtitle": "خطواتك الأولى مع الله",
+   "art_key": "unit_first_steps",
+   "has_guide": false,
+   "state": "available",
+   "coming_soon": false,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": [
+    {
+     "lesson_id": "les_u1_l1",
+     "index": 0,
+     "title": "ما معنى الإسلام؟",
+     "lesson_type": "concept",
+     "state": "available",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": true,
+     "soft_lock": null
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_2",
+   "index": 2,
+   "title": "معرفة الله",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_3",
+   "index": 3,
+   "title": "Prayer: Your Daily Connection",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_4",
+   "index": 4,
+   "title": "Living the Five Pillars",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_5",
+   "index": 5,
+   "title": "What Muslims Believe",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_6",
+   "index": 6,
+   "title": "The Qur'an",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_7",
+   "index": 7,
+   "title": "رسالة واحدة وأنبياء كثيرون",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_8",
+   "index": 8,
+   "title": "The Life of Muhammad ﷺ",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_9",
+   "index": 9,
+   "title": "Islam in Everyday Life",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_10",
+   "index": 10,
+   "title": "ما بعد الأساسيات",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  }
+ ]
+}

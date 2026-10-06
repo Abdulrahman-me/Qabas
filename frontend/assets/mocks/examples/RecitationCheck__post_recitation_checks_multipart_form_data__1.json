@@ -1,0 +1,47 @@
+{
+ "check_id": "rchk_55e2",
+ "status": "evaluated",
+ "passed": true,
+ "words": [
+  {
+   "index": 0,
+   "expected": "قُلْ",
+   "result": "correct",
+   "heard": "قل",
+   "audio_segment": null
+  },
+  {
+   "index": 1,
+   "expected": "هُوَ",
+   "result": "correct",
+   "heard": "هو",
+   "audio_segment": null
+  },
+  {
+   "index": 2,
+   "expected": "اللَّهُ",
+   "result": "correct",
+   "heard": "الله",
+   "audio_segment": null
+  },
+  {
+   "index": 3,
+   "expected": "أَحَدٌ",
+   "result": "correct",
+   "heard": "احد",
+   "audio_segment": null
+  }
+ ],
+ "summary": {
+  "correct": 4,
+  "missing": 0,
+  "substituted": 0,
+  "extra": 0
+ },
+ "message": [
+  {
+   "type": "text",
+   "text": "ما شاء الله، قراءة صحيحة!"
+  }
+ ]
+}

@@ -1,0 +1,317 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l02_bakery",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "night": "#16233A",
+    "dark": "#073C37",
+    "green": "#0B5A52",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "slate": "#566476",
+    "sand": "#D8C6A5",
+    "wood": "#996A45",
+    "wood_dark": "#624630",
+    "skin": "#C9A285",
+    "clear": "#E0A52600",
+    "glow": "#E0A52655",
+    "glass": "#BBD8D766",
+    "white": "#FFFFFF"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 3,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "mint"
+          },
+          {
+            "at": 1,
+            "color": "sand"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "floor",
+      "type": "rect",
+      "x": 0,
+      "y": 770,
+      "w": 1600,
+      "h": 230,
+      "fill": "sand",
+      "corner": 0
+    },
+    {
+      "id": "ground_shadow",
+      "type": "ellipse",
+      "x": 800,
+      "y": 850,
+      "rx": 430,
+      "ry": 55,
+      "fill": "dark",
+      "opacity": 0.15
+    },
+    {
+      "id": "wall",
+      "type": "rect",
+      "x": 150,
+      "y": 100,
+      "w": 1300,
+      "h": 690,
+      "fill": "mint",
+      "corner": 30
+    },
+    {
+      "id": "arch_oven",
+      "type": "path",
+      "d": "M1080 730 L1080 400 Q1080 265 1230 265 Q1380 265 1380 400 L1380 730 Z",
+      "fill": "wood"
+    },
+    {
+      "id": "oven_dark",
+      "type": "path",
+      "d": "M1125 665 L1125 421 Q1125 312 1230 312 Q1335 312 1335 421 L1335 665 Z",
+      "fill": "dark"
+    },
+    {
+      "id": "oven_light",
+      "type": "ellipse",
+      "x": 1230,
+      "y": 545,
+      "rx": 120,
+      "ry": 120,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          1230,
+          545
+        ],
+        "radius": 120,
+        "stops": [
+          {
+            "at": 0,
+            "color": "glow"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "tracks": [
+        {
+          "property": "opacity",
+          "duration_ms": 4800,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0.55
+            },
+            {
+              "t": 1,
+              "v": 0.72
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "ping_pong"
+        }
+      ]
+    },
+    {
+      "id": "counter",
+      "type": "rect",
+      "x": 245,
+      "y": 675,
+      "w": 785,
+      "h": 100,
+      "fill": "wood",
+      "corner": 15
+    },
+    {
+      "id": "cabinet",
+      "type": "rect",
+      "x": 280,
+      "y": 775,
+      "w": 715,
+      "h": 145,
+      "fill": "green",
+      "corner": 10
+    },
+    {
+      "id": "flour_sack",
+      "type": "path",
+      "d": "M324 654 L341 439 Q402 454 458 439 L476 654 Q400 682 324 654 Z",
+      "fill": "ember"
+    },
+    {
+      "id": "bowl",
+      "type": "path",
+      "d": "M507 593 L687 593 Q680 678 597 677 Q514 678 507 593 Z",
+      "fill": "slate"
+    },
+    {
+      "id": "bowl_top",
+      "type": "ellipse",
+      "x": 597,
+      "y": 593,
+      "rx": 90,
+      "ry": 23,
+      "fill": "mint"
+    },
+    {
+      "id": "dough",
+      "type": "ellipse",
+      "x": 597,
+      "y": 604,
+      "rx": 64,
+      "ry": 24,
+      "fill": "sand",
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "bread",
+      "type": "path",
+      "d": "M730 643 Q732 521 851 524 Q969 521 972 643 Q850 678 730 643 Z",
+      "fill": "gold",
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "bread_scores",
+      "type": "path",
+      "d": "M782 570 Q788 550 801 548 L808 555 Q795 564 791 579 Z M830 562 Q837 542 850 544 L856 553 Q842 560 839 574 Z M878 567 Q886 550 897 553 L903 562 Q889 568 887 580 Z",
+      "fill": "ember",
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "baker_shadow",
+      "type": "ellipse",
+      "x": 785,
+      "y": 658,
+      "rx": 85,
+      "ry": 17,
+      "fill": "wood_dark",
+      "opacity": 0.25
+    },
+    {
+      "id": "baker_body",
+      "type": "path",
+      "d": "M720 628 Q709 456 749 434 L821 434 Q861 456 850 628 Z",
+      "fill": "green"
+    },
+    {
+      "id": "baker_head",
+      "type": "ellipse",
+      "x": 785,
+      "y": 385,
+      "rx": 37,
+      "ry": 46,
+      "fill": "skin"
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      }
+    ]
+  }
+}

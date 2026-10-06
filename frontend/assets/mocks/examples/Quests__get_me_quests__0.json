@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-04",
+ "resets_in_seconds": 41200,
+ "items": [
+  {
+   "quest_id": "q_20261004_1",
+   "kind": "earn_xp",
+   "title": "اجمع 30 جمرة",
+   "progress": 25,
+   "goal": 30,
+   "reward_xp": 10,
+   "completed": false
+  },
+  {
+   "quest_id": "q_20261004_2",
+   "kind": "complete_lessons",
+   "title": "أكمل درسين",
+   "progress": 2,
+   "goal": 2,
+   "reward_xp": 10,
+   "completed": true
+  },
+  {
+   "quest_id": "q_20261004_3",
+   "kind": "perfect_lesson",
+   "title": "أنهِ درساً دون أخطاء",
+   "progress": 0,
+   "goal": 1,
+   "reward_xp": 15,
+   "completed": false
+  }
+ ]
+}

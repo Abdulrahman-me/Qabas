@@ -1,0 +1,28 @@
+{
+ "exercise_id": "ex_true_false",
+ "type": "true_false",
+ "concept_ids": [
+  "con_test"
+ ],
+ "prompt": [
+  {
+   "type": "text",
+   "text": "اختر الإجابة المناسبة."
+  }
+ ],
+ "time_limit_ms": 15000,
+ "scoring": {
+  "accuracy": true,
+  "combo": true,
+  "layer": "understand"
+ },
+ "framing": null,
+ "payload": {
+  "statement": [
+   {
+    "type": "text",
+    "text": "يؤمن المسلمون بأن لله شريكاً في الخلق."
+   }
+  ]
+ }
+}

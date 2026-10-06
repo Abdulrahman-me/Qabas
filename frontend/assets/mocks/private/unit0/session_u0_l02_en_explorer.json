@@ -1,0 +1,111 @@
+{
+  "session_id": "ses_mock_u0_l2_en_explorer",
+  "lesson_id": "les_u0_l2",
+  "answers": {
+    "ex_u0_l02_01": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l02_02": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_1"
+        }
+      ]
+    },
+    "ex_u0_l02_03": {
+      "segment_id": "seg_3"
+    },
+    "ex_u0_l02_04": {
+      "value": false,
+      "reason_option_id": "opt_b"
+    }
+  },
+  "feedback": {
+    "ex_u0_l02_01": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "The observation’s limits concern what the guard knows. Missing information does not become a missing cause."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l02_unknown_is_absent"
+      }
+    },
+    "ex_u0_l02_02": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_1"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "The case, kitchen, and room still exist even when their intended contents are absent."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l02_03": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Waiting and producing were assigned to something that acts. This conflicts with the statement’s own definition of nothing."
+        }
+      ],
+      "option_misconceptions": {
+        "seg_3": "mis_u0_l02_nothing_power"
+      }
+    },
+    "ex_u0_l02_04": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Information may be missing. That establishes neither the absence of a cause nor the truth of any unchecked explanation."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l02_unknown_is_absent",
+        "opt_c": "mis_u0_l02_automatic_proof"
+      }
+    }
+  }
+}

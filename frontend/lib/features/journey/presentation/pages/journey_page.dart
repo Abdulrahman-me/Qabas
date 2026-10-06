@@ -1,15 +1,18 @@
 import 'dart:math' as math;
 
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show ScrollCacheExtent;
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:qabas/app/config/download_links.dart';
 import 'package:qabas/app/router/routes.dart';
 import 'package:qabas/core/audio/sensory_service.dart';
 import 'package:qabas/core/characters/character_controller.dart';
 import 'package:qabas/core/characters/character_view.dart';
 import 'package:qabas/core/characters/character_vocabulary.dart';
+import 'package:qabas/core/design_system/components/download_banner.dart';
 import 'package:qabas/core/design_system/components/journey_banner.dart';
 import 'package:qabas/core/design_system/components/journey_header.dart';
 import 'package:qabas/core/design_system/components/journey_horizon.dart';
@@ -29,6 +32,7 @@ import 'package:qabas/shared/domain/entities/user_profile.dart';
 import 'package:qabas/shared/presentation/brand/brand.dart';
 import 'package:qabas/shared/presentation/brand/unit_art.dart';
 import 'package:qabas/shared/presentation/learning_path/soft_lock_sheet.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class JourneyPage extends StatefulWidget {
   const JourneyPage({super.key});
@@ -79,6 +83,7 @@ class _JourneyPageState extends State<JourneyPage> {
       if (state.pretestUnitToOpen case final String id) context.push(Routes.unitPretest(id), extra: state.nextStep?.title);
       if (state.unitToOpen case final String id) context.push(Routes.unitTest(id));
       if (state.openReview) context.push(Routes.review);
+      if (state.openAndroidDownload) _downloadAndroid();
     },
     listenWhen: (a, b) => a.actionSerial != b.actionSerial || a.journey?.current.lessonId != b.journey?.current.lessonId,
     builder: (context, state) {
@@ -132,169 +137,192 @@ class _JourneyPageState extends State<JourneyPage> {
         value: SystemUiOverlayStyle.light,
         child: Scaffold(
           backgroundColor: QColors.night950,
-          body: LayoutBuilder(
-            builder: (context, box) {
-              final size = box.biggest;
-              if (_viewport != size && (state.selectedLessonId != null || state.selectedUnitId != null)) {
-                WidgetsBinding.instance.addPostFrameCallback((_) {
-                  if (!mounted) return;
-                  final target = (state.selectedLessonId == journey.current.lessonId ? _currentKey : _selectedKey).currentContext;
-                  if (target != null) Scrollable.ensureVisible(target, alignment: QJourney.currentAlignment, duration: Duration.zero);
-                  // Scrolling settles the anchor transform on the next layout frame.
-                  setState(() {});
+          body: QDownloadBannerFrame(
+            visible: kIsWeb && !state.downloadBannerDismissed,
+            eyebrow: l.journeyDownloadEyebrow,
+            title: l.journeyDownloadTitle,
+            body: l.journeyDownloadBody,
+            action: l.journeyDownloadAction,
+            dismissLabel: l.journeyDownloadDismiss,
+            onDownload: () => bloc.add(const AndroidDownloadOpened()),
+            onDismiss: () => bloc.add(const DownloadBannerDismissed()),
+            child: LayoutBuilder(
+              builder: (context, box) {
+                final size = box.biggest;
+                if (_viewport != size && (state.selectedLessonId != null || state.selectedUnitId != null)) {
                   WidgetsBinding.instance.addPostFrameCallback((_) {
-                    if (mounted) setState(() {});
+                    if (!mounted) return;
+                    final target = (state.selectedLessonId == journey.current.lessonId ? _currentKey : _selectedKey).currentContext;
+                    if (target != null) Scrollable.ensureVisible(target, alignment: QJourney.currentAlignment, duration: Duration.zero);
+                    // Scrolling settles the anchor transform on the next layout frame.
+                    setState(() {});
+                    WidgetsBinding.instance.addPostFrameCallback((_) {
+                      if (mounted) setState(() {});
+                    });
                   });
-                });
-              }
-              _viewport = size;
-              final pathWidth = math.min(box.maxWidth, QJourney.pathWidth);
-              Widget reading(Widget child) => Center(
-                child: SizedBox(width: pathWidth, child: child),
-              );
-              final greeting = switch (bloc.greeting) {
-                JourneyGreeting.morning => l.journeyGreetingMorning,
-                JourneyGreeting.afternoon => l.journeyGreetingAfternoon,
-                JourneyGreeting.evening => l.journeyGreetingEvening,
-              };
-              return Stack(
-                children: [
-                  Positioned.fill(
-                    child: NightSky(density: QJourney.waveScale, gradient: QJourney.sky(total == 0 ? 0 : completed / total)),
-                  ),
-                  GestureDetector(
-                    behavior: HitTestBehavior.translucent,
-                    onTap: () => bloc.add(const PopoverDismissed()),
-                    child: RefreshIndicator(
-                      onRefresh: () async {
-                        bloc.add(const JourneyRefreshed());
-                        await bloc.stream.firstWhere((s) => !s.refreshing, orElse: () => bloc.state);
-                      },
-                      child: CustomScrollView(
-                        key: const PageStorageKey('journey-scroll'),
-                        controller: _scroll,
-                        scrollCacheExtent: const ScrollCacheExtent.pixels(QJourney.cacheExtent),
-                        slivers: [
-                          QJourneyHeader(
-                            pathLabel: journey.track == UserTrack.newMuslim ? l.commonPathNewMuslim : l.commonPathExplorer,
-                            pathSemantics: journey.track == UserTrack.newMuslim ? l.commonPathNewMuslimLong : l.commonPathExplorerLong,
-                            art: journey.track == UserTrack.newMuslim ? UnitArt.footprints : UnitArt.starrySky,
-                            streak: QNumbers.format(stats?.streak.current ?? 0, locale),
-                            embers: QNumbers.format(stats?.xpTotal ?? 0, locale),
-                            streakSemantics: l.commonDayStreak(
-                              QNumbers.prototypePluralCount(stats?.streak.current ?? 0),
-                              QNumbers.format(stats?.streak.current ?? 0, locale),
+                }
+                _viewport = size;
+                final pathWidth = math.min(box.maxWidth, QJourney.pathWidth);
+                Widget reading(Widget child) => Center(
+                  child: SizedBox(width: pathWidth, child: child),
+                );
+                final greeting = switch (bloc.greeting) {
+                  JourneyGreeting.morning => l.journeyGreetingMorning,
+                  JourneyGreeting.afternoon => l.journeyGreetingAfternoon,
+                  JourneyGreeting.evening => l.journeyGreetingEvening,
+                };
+                return Stack(
+                  children: [
+                    Positioned.fill(
+                      child: NightSky(density: QJourney.waveScale, gradient: QJourney.sky(total == 0 ? 0 : completed / total)),
+                    ),
+                    GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () => bloc.add(const PopoverDismissed()),
+                      child: RefreshIndicator(
+                        onRefresh: () async {
+                          bloc.add(const JourneyRefreshed());
+                          await bloc.stream.firstWhere((s) => !s.refreshing, orElse: () => bloc.state);
+                        },
+                        child: CustomScrollView(
+                          key: const PageStorageKey('journey-scroll'),
+                          controller: _scroll,
+                          scrollCacheExtent: const ScrollCacheExtent.pixels(QJourney.cacheExtent),
+                          slivers: [
+                            QJourneyHeader(
+                              pathLabel: journey.track == UserTrack.newMuslim ? l.commonPathNewMuslim : l.commonPathExplorer,
+                              pathSemantics: journey.track == UserTrack.newMuslim ? l.commonPathNewMuslimLong : l.commonPathExplorerLong,
+                              art: journey.track == UserTrack.newMuslim ? UnitArt.footprints : UnitArt.starrySky,
+                              streak: QNumbers.format(stats?.streak.current ?? 0, locale),
+                              embers: QNumbers.format(stats?.xpTotal ?? 0, locale),
+                              streakSemantics: l.commonDayStreak(
+                                QNumbers.prototypePluralCount(stats?.streak.current ?? 0),
+                                QNumbers.format(stats?.streak.current ?? 0, locale),
+                              ),
+                              embersSemantics: l.commonEmbers(QNumbers.format(stats?.xpTotal ?? 0, locale)),
+                              learnedToday: stats?.streak.todayCompleted ?? false,
+                              onPath: () => _switchPath(context, journey.track),
+                              onStreak: () => context.push(Routes.streak),
+                              onEmbers: () => context.go(Routes.community),
                             ),
-                            embersSemantics: l.commonEmbers(QNumbers.format(stats?.xpTotal ?? 0, locale)),
-                            learnedToday: stats?.streak.todayCompleted ?? false,
-                            onPath: () => _switchPath(context, journey.track),
-                            onStreak: () => context.push(Routes.streak),
-                            onEmbers: () => context.go(Routes.community),
-                          ),
-                          if (state.refreshing)
-                            SliverToBoxAdapter(
-                              child: reading(const Padding(padding: EdgeInsets.all(QSpace.xs), child: QInlineLoading())),
-                            ),
-                          if (state.failure != null)
-                            SliverToBoxAdapter(
-                              child: reading(
-                                Padding(
-                                  padding: const EdgeInsets.all(QSpace.md),
-                                  child: QCard(
-                                    color: QColors.night800,
-                                    child: QInlineError(
-                                      message: failureBody(state.failure!, l),
-                                      onRetry: () => bloc.add(const JourneyRefreshed()),
+                            if (state.refreshing)
+                              SliverToBoxAdapter(
+                                child: reading(const Padding(padding: EdgeInsets.all(QSpace.xs), child: QInlineLoading())),
+                              ),
+                            if (state.failure != null)
+                              SliverToBoxAdapter(
+                                child: reading(
+                                  Padding(
+                                    padding: const EdgeInsets.all(QSpace.md),
+                                    child: QCard(
+                                      color: QColors.night800,
+                                      child: QInlineError(
+                                        message: failureBody(state.failure!, l),
+                                        onRetry: () => bloc.add(const JourneyRefreshed()),
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                          SliverToBoxAdapter(
-                            child: reading(
-                              QJourneyToday(
-                                greeting: greeting,
-                                minutes: stats?.dailyGoal.minutesToday ?? 0,
-                                goal: stats?.dailyGoal.minutes ?? 10,
-                                learnedToday: stats?.streak.todayCompleted ?? false,
-                                nextTitle: [NextStepType.journeyComplete, NextStepType.unknown].contains(state.nextStep?.type)
-                                    ? null
-                                    : state.nextStep?.title ?? (state.nextStep?.type == NextStepType.review ? l.journeyStartReview : null),
-                                onContinue: () => bloc.add(const NextStepOpened()),
-                              ),
-                            ),
-                          ),
-                          if ((state.nextStep?.dueReviewsCount ?? 0) > 0)
                             SliverToBoxAdapter(
                               child: reading(
-                                Padding(
-                                  padding: const EdgeInsets.all(QSpace.md),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                                    children: [
-                                      QReviewDeckCard(
-                                        key: const ValueKey('journey-review'),
-                                        count: QNumbers.format(state.nextStep!.dueReviewsCount, locale),
-                                        onReview: () => bloc.add(const ReviewOpened()),
-                                      ),
-                                      TextButton(
-                                        key: const ValueKey('journey-quick-review'),
-                                        onPressed: () => context.push('${Routes.review}?mode=quick'),
-                                        child: Text(context.l10n.sessionQuickReview),
-                                      ),
-                                    ],
-                                  ),
+                                QJourneyToday(
+                                  greeting: greeting,
+                                  minutes: stats?.dailyGoal.minutesToday ?? 0,
+                                  goal: stats?.dailyGoal.minutes ?? 10,
+                                  learnedToday: stats?.streak.todayCompleted ?? false,
+                                  nextTitle: [NextStepType.journeyComplete, NextStepType.unknown].contains(state.nextStep?.type)
+                                      ? null
+                                      : state.nextStep?.title ??
+                                            (state.nextStep?.type == NextStepType.review ? l.journeyStartReview : null),
+                                  onContinue: () => bloc.add(const NextStepOpened()),
                                 ),
                               ),
                             ),
-                          for (final indexed in journey.units.asMap().entries) ...[
-                            SliverToBoxAdapter(
-                              child: reading(
-                                QUnitBanner(
-                                  key: ValueKey('unit-${indexed.value.unitId}'),
-                                  unit: QUnitBannerData(
-                                    title: indexed.value.title,
-                                    subtitle: indexed.value.subtitle,
-                                    number: indexed.value.index,
-                                    artKey: indexed.value.artKey,
-                                    progress: _progress(indexed.value),
-                                  ),
-                                  status: _unitStatus(indexed.value, journey.current.unitId),
-                                  onGuide: indexed.value.hasGuide
-                                      ? () => context.push(Routes.unitGuide(indexed.value.unitId), extra: indexed.value.title)
-                                      : null,
-                                ),
-                              ),
-                            ),
-                            if (indexed.value.lessons.isNotEmpty ||
-                                indexed.value.unitTest.canSkip ||
-                                indexed.value.unitTest.state == UnitTestState.passed)
+                            if ((state.nextStep?.dueReviewsCount ?? 0) > 0)
                               SliverToBoxAdapter(
                                 child: reading(
-                                  _UnitPath(
-                                    unit: indexed.value,
-                                    unitIndex: indexed.key,
-                                    state: state,
-                                    currentKey: _currentKey,
-                                    selectedKey: _selectedKey,
-                                    companion: _companion,
+                                  Padding(
+                                    padding: const EdgeInsets.all(QSpace.md),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                                      children: [
+                                        QReviewDeckCard(
+                                          key: const ValueKey('journey-review'),
+                                          count: QNumbers.format(state.nextStep!.dueReviewsCount, locale),
+                                          onReview: () => bloc.add(const ReviewOpened()),
+                                        ),
+                                        TextButton(
+                                          key: const ValueKey('journey-quick-review'),
+                                          onPressed: () => context.push('${Routes.review}?mode=quick'),
+                                          child: Text(context.l10n.sessionQuickReview),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
+                            for (final indexed in journey.units.asMap().entries) ...[
+                              SliverToBoxAdapter(
+                                child: reading(
+                                  QUnitBanner(
+                                    key: ValueKey('unit-${indexed.value.unitId}'),
+                                    unit: QUnitBannerData(
+                                      title: indexed.value.title,
+                                      subtitle: indexed.value.subtitle,
+                                      number: indexed.value.index,
+                                      artKey: indexed.value.artKey,
+                                      progress: _progress(indexed.value),
+                                    ),
+                                    status: _unitStatus(indexed.value, journey.current.unitId),
+                                    onGuide: indexed.value.hasGuide
+                                        ? () => context.push(Routes.unitGuide(indexed.value.unitId), extra: indexed.value.title)
+                                        : null,
+                                  ),
+                                ),
+                              ),
+                              if (indexed.value.lessons.isNotEmpty ||
+                                  indexed.value.unitTest.canSkip ||
+                                  indexed.value.unitTest.state == UnitTestState.passed)
+                                SliverToBoxAdapter(
+                                  child: reading(
+                                    _UnitPath(
+                                      unit: indexed.value,
+                                      unitIndex: indexed.key,
+                                      state: state,
+                                      currentKey: _currentKey,
+                                      selectedKey: _selectedKey,
+                                      companion: _companion,
+                                    ),
+                                  ),
+                                ),
+                            ],
+                            const SliverToBoxAdapter(child: QJourneyHorizon()),
                           ],
-                          const SliverToBoxAdapter(child: QJourneyHorizon()),
-                        ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              );
-            },
+                  ],
+                );
+              },
+            ),
           ),
         ),
       );
     },
   );
+  Future<void> _downloadAndroid() async {
+    bool opened;
+    try {
+      opened = await launchUrl(DownloadLinks.android, webOnlyWindowName: '_self');
+    } catch (_) {
+      opened = false;
+    }
+    if (!opened && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.l10n.journeyDownloadFailed)));
+    }
+  }
+
   double _progress(JourneyUnit unit) => [UnitState.completed, UnitState.skipped].contains(unit.state)
       ? 1
       : unit.lessons.isEmpty

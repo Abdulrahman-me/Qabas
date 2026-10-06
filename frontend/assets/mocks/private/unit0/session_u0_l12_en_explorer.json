@@ -1,0 +1,137 @@
+{
+  "session_id": "ses_mock_u0_l12_en_explorer",
+  "lesson_id": "les_u0_l12",
+  "answers": {
+    "ex_u0_l12_01": {
+      "order": [
+        "st_3",
+        "st_4",
+        "st_1",
+        "st_5",
+        "st_2"
+      ]
+    },
+    "ex_u0_l12_02": {
+      "pairs": [
+        {
+          "left_id": "l_1",
+          "right_id": "r_3"
+        },
+        {
+          "left_id": "l_2",
+          "right_id": "r_1"
+        },
+        {
+          "left_id": "l_3",
+          "right_id": "r_2"
+        }
+      ]
+    },
+    "ex_u0_l12_03": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l12_04": {
+      "segment_id": "seg_3"
+    }
+  },
+  "feedback": {
+    "ex_u0_l12_01": {
+      "correct_answer": {
+        "order": [
+          "st_3",
+          "st_4",
+          "st_1",
+          "st_5",
+          "st_2"
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Begin with the questions that help explain the later ones; this is a study sequence, not a record of belief."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l12_02": {
+      "correct_answer": {
+        "pairs": [
+          {
+            "left_id": "l_1",
+            "right_id": "r_3"
+          },
+          {
+            "left_id": "l_2",
+            "right_id": "r_1"
+          },
+          {
+            "left_id": "l_3",
+            "right_id": "r_2"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Choose a check that addresses the same question, without transferring a conclusion from one area to another."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l12_03": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Understanding an idea lets you ask a more precise question; keep learning separate from personal classification."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l12_completion_belief"
+      },
+      "option_feedback": {
+        "opt_a": [
+          {
+            "type": "text",
+            "text": "Do not infer belief from completing an educational activity."
+          }
+        ],
+        "opt_b": [
+          {
+            "type": "text",
+            "text": "This identifies useful follow-up and preserves the distinction between understanding and choice."
+          }
+        ],
+        "opt_c": [
+          {
+            "type": "text",
+            "text": "Place the question alongside what you understood rather than erasing that understanding."
+          }
+        ]
+      }
+    },
+    "ex_u0_l12_04": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Understanding a view or claim differs from agreeing with it."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "Exercise answers measure understanding of the map and evidence, rather than revealing your personal belief."
+        }
+      ],
+      "option_misconceptions": {},
+      "targets_misconception_id": "mis_u0_l12_completion_belief"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "session_id": "ses_mock_u0_l3_en_explorer",
+  "lesson_id": "les_u0_l3",
+  "answers": {
+    "ex_u0_l03_01": {
+      "segment_id": "seg_2"
+    },
+    "ex_u0_l03_02": {
+      "value": false,
+      "reason_option_id": "opt_c"
+    },
+    "ex_u0_l03_03": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_2"
+        }
+      ]
+    },
+    "ex_u0_l03_04": {
+      "option_id": "opt_c"
+    }
+  },
+  "feedback": {
+    "ex_u0_l03_01": {
+      "correct_answer": {
+        "segment_id": "seg_2"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "The second step makes the chair exist and act before the step meant to explain its existence."
+        }
+      ],
+      "option_misconceptions": {
+        "seg_2": "mis_u0_l03_absent_agent"
+      }
+    },
+    "ex_u0_l03_02": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "The problem is not how long it takes. It is assigning an action to something before it exists."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l03_speed"
+      }
+    },
+    "ex_u0_l03_03": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_2"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Change starts with something existing. Self-creation here asks a thing to act before it exists."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l03_04": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Something new may result from change. That differs from making a thing the cause of its own existence before it exists."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l03_growth",
+        "opt_b": "mis_u0_l03_growth"
+      }
+    }
+  }
+}

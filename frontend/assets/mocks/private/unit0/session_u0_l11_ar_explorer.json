@@ -1,0 +1,111 @@
+{
+  "session_id": "ses_mock_u0_l11_ar_explorer",
+  "lesson_id": "les_u0_l11",
+  "answers": {
+    "ex_u0_l11_01": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l11_02": {
+      "value": false,
+      "reason_option_id": "opt_b"
+    },
+    "ex_u0_l11_03": {
+      "segment_id": "seg_3"
+    },
+    "ex_u0_l11_04": {
+      "option_id": "opt_a"
+    }
+  },
+  "feedback": {
+    "ex_u0_l11_01": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الخبر عن ثقة المخاطَبين يتعلّق بصدق الخبر عندهم، ولا يثبت وحده مصدر الرسالة."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l11_reputation_complete"
+      }
+    },
+    "ex_u0_l11_02": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "اقرأ التحفّظ الذي تذكره الرواية، ولا تجعل خبرًا محدودًا سجلًا كاملًا."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "وتنقل الرواية جوابًا عن وفائه بالعهود، مع تحفّظ أبي سفيان بشأن هدنة كانت قائمة."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l11_03": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الخبر عن ثقة المخاطَبين يتعلّق بصدق الخبر عندهم، ولا يثبت وحده مصدر الرسالة."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "الحكم على دعوى الرسالة يجمع فحص النقل والسيرة والرسالة، مع مراعاة حدود كل دليل."
+        }
+      ],
+      "option_misconceptions": {},
+      "targets_misconception_id": "mis_u0_l11_reputation_complete"
+    },
+    "ex_u0_l11_04": {
+      "correct_answer": {
+        "option_id": "opt_a"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "قراءة الرواية تحدّد ما ينقله المصدر؛ وقبول وقوع الحدث يتطلّب فحص الخبر."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_b": "mis_u0_l11_source_assumption"
+      },
+      "option_feedback": {
+        "opt_a": [
+          {
+            "type": "text",
+            "text": "هذا السؤال يعالج المعلومة الناقصة دون افتراض النتيجة."
+          }
+        ],
+        "opt_b": [
+          {
+            "type": "text",
+            "text": "فهم الخبر وقبوله خطوتان مختلفتان."
+          }
+        ],
+        "opt_c": [
+          {
+            "type": "text",
+            "text": "غياب المعلومة عندك يستدعي البحث، ولا يكفي وحده للنفي."
+          }
+        ]
+      }
+    }
+  }
+}

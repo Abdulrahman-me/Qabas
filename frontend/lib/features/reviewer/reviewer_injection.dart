@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:qabas/app/config/app_config.dart';
 import 'package:qabas/core/events/app_event_bus.dart';
 import 'package:qabas/core/network/api_client.dart';
 import 'package:qabas/core/storage/token_store.dart';
@@ -11,7 +12,9 @@ import 'package:qabas/features/reviewer/presentation/reviewer_detail_bloc.dart';
 import 'package:qabas/features/reviewer/presentation/reviewer_runs_bloc.dart';
 
 void registerReviewerFeature(GetIt sl) {
-  sl.registerSingleton<ReviewerRepository>(ReviewerRepositoryImpl(sl<ApiClient>(), sl<TokenStore>()));
+  sl.registerSingleton<ReviewerRepository>(
+    ReviewerRepositoryImpl(sl<ApiClient>(), sl<TokenStore>(), sampleEnabled: sl<AppConfig>().judgesDemo),
+  );
   sl.registerSingleton<ReviewerActions>(ReviewerActions(sl<ReviewerRepository>()));
   sl.registerFactory<ReviewerAuthBloc>(() => ReviewerAuthBloc(sl<ReviewerActions>()));
   sl.registerFactory<ReviewerRunsBloc>(() => ReviewerRunsBloc(sl<ReviewerActions>(), events: sl<AppEventBus>()));

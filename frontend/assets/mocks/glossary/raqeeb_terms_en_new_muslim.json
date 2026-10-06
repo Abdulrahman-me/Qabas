@@ -1,0 +1,336 @@
+{
+  "message_id": "msg_e8592eea64dc3c47",
+  "role": "assistant",
+  "status": "completed",
+  "stage": "done",
+  "created_at": "2026-10-02T00:00:00Z",
+  "completed_at": "2026-10-02T00:00:00Z",
+  "understood_input": {
+    "transcript": null,
+    "images": [],
+    "document": null
+  },
+  "classification": {
+    "question_class": "general_knowledge",
+    "label": "Glossary projection fixture"
+  },
+  "abstained": true,
+  "blocks": [],
+  "citations": [],
+  "terms": {
+    "term_f2f6eba0f1d673c6": {
+      "term_id": "term_f2f6eba0f1d673c6",
+      "text": "Asr",
+      "arabic": "العصر",
+      "transliteration": "al-ʿaṣr",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The third prayer, in the afternoon while the sun is still high."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "In the second half of the day."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_33eee0710eef852b": {
+      "term_id": "term_33eee0710eef852b",
+      "text": "Dhuhr",
+      "arabic": "الظهر",
+      "transliteration": "aẓ-ẓuhr",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The second prayer, once the sun passes its highest point."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Often around the lunch break."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_af35bd90273f2d25": {
+      "term_id": "term_af35bd90273f2d25",
+      "text": "Supplication (du‘a)",
+      "arabic": "الدعاء",
+      "transliteration": "ad-duʿāʾ",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Speaking to God and asking Him for what you need — at any time, in your own words."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Saying: “O God, make my day easy.”"
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_eb164ebe0a82fe57": {
+      "term_id": "term_eb164ebe0a82fe57",
+      "text": "Fajr",
+      "arabic": "الفجر",
+      "transliteration": "al-fajr",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The first prayer of the day, at first light before sunrise."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Prayed after waking in the early morning."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_2adeb14614687765": {
+      "term_id": "term_2adeb14614687765",
+      "text": "Obligation (fariḍah)",
+      "arabic": "فريضة",
+      "transliteration": "farīḍah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Something God asks of a Muslim firmly — not optional."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "The five daily prayers are an obligation every day and night."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_e7f6afdf7fd1a8a7": {
+      "term_id": "term_e7f6afdf7fd1a8a7",
+      "text": "Hadith",
+      "arabic": "حديث",
+      "transliteration": "ḥadīth",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "A saying or action of the Prophet ﷺ, passed on to us through a reliable chain of people."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "The river hadith is an authentic hadith."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_0cd44a1001c68092": {
+      "term_id": "term_0cd44a1001c68092",
+      "text": "Establishing prayer",
+      "arabic": "إقامة الصلاة",
+      "transliteration": "iqāmat aṣ-ṣalāh",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Performing the prayer fully, as God prescribed it."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Establishing prayer is the second pillar, after the testimony of faith."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_59e0a7b720c83cd3": {
+      "term_id": "term_59e0a7b720c83cd3",
+      "text": "Isha",
+      "arabic": "العشاء",
+      "transliteration": "al-ʿishāʾ",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The fifth prayer, at night once the red glow leaves the sky."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Usually before going to sleep."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_d548379c7db8b906": {
+      "term_id": "term_d548379c7db8b906",
+      "text": "Sins",
+      "arabic": "الخطايا",
+      "transliteration": "al-khaṭāyā",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The wrongs and mistakes a person falls into."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "God wipes away minor sins through the five prayers."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_f7ced9adc6d3ac13": {
+      "term_id": "term_f7ced9adc6d3ac13",
+      "text": "Maghrib",
+      "arabic": "المغرب",
+      "transliteration": "al-maghrib",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "The fourth prayer, just after sunset."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "When the sun sets in the evening."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_7ef0bb356e8a70ac": {
+      "term_id": "term_7ef0bb356e8a70ac",
+      "text": "Pillar (rukn)",
+      "arabic": "ركن",
+      "transliteration": "rukn",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "One of the great columns a building stands on."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Establishing prayer is one of the five pillars of Islam."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_055654e9d79b0bfa": {
+      "term_id": "term_055654e9d79b0bfa",
+      "text": "Prayer (salah)",
+      "arabic": "الصلاة",
+      "transliteration": "aṣ-ṣalāh",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "A short act of worship in which a Muslim stands before God, in the way the Prophet ﷺ taught."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "A Muslim prays Dhuhr in its time, just after midday."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    },
+    "term_a820e1a079082b73": {
+      "term_id": "term_a820e1a079082b73",
+      "text": "Repentance (tawbah)",
+      "arabic": "التوبة",
+      "transliteration": "at-tawbah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Leaving a wrong, regretting it, and turning back to God."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Major sins need sincere repentance."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u1_l3",
+      "lesson_title": "Prayer: a river at your door"
+    }
+  },
+  "suggested_lessons": [],
+  "feedback": null
+}

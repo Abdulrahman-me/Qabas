@@ -1,0 +1,44 @@
+{
+  "message_id": "msg_a_302",
+  "role": "assistant",
+  "status": "completed",
+  "stage": "done",
+  "created_at": "2026-10-04T11:00:00Z",
+  "completed_at": "2026-10-04T11:00:04Z",
+  "understood_input": {
+    "transcript": null,
+    "images": [],
+    "document": null
+  },
+  "classification": {
+    "question_class": "personal_fatwa",
+    "label": "فتوى شخصية"
+  },
+  "abstained": true,
+  "blocks": [
+    {
+      "type": "referral",
+      "referral": {
+        "referral_type": "fatwa_authority",
+        "reason": [
+          {
+            "type": "text",
+            "text": "يحتاج سؤالك عن الصلاة أثناء تعلم العربية إلى توجيه يناسب ظروفك من معلّم مؤهل أو جهة إفتاء معتمدة."
+          }
+        ],
+        "targets": [
+          {
+            "name": "الرئاسة العامة للبحوث العلمية والإفتاء",
+            "description": "بوابة الفتوى الرسمية في المملكة العربية السعودية",
+            "url": "https://www.alifta.gov.sa",
+            "contact": null
+          }
+        ]
+      }
+    }
+  ],
+  "citations": [],
+  "terms": {},
+  "suggested_lessons": [],
+  "feedback": null
+}

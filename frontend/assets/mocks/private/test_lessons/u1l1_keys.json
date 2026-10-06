@@ -1,0 +1,63 @@
+{
+ "_mock_role": "private grading keys for MockGrader (dev/demo builds only)",
+ "_mock_source": "TEST_LESSONS/runs/u1l1.factory_run.json draft.exercises[].answer_key",
+ "_mock_note": "The run has no per-exercise explanations: evaluations for 1.1 carry an empty explanation.",
+ "lesson_id": "les_u1_l1",
+ "exercises": {
+  "ex_u1l1_01": {
+   "answer_key": {
+    "value": false,
+    "reason_option_id": "rsn_a"
+   },
+   "option_misconceptions": {}
+  },
+  "ex_u1l1_02": {
+   "answer_key": {
+    "assignments": [
+     {
+      "item_id": "itm_1",
+      "category_id": "cat_meaning"
+     },
+     {
+      "item_id": "itm_2",
+      "category_id": "cat_partial"
+     },
+     {
+      "item_id": "itm_3",
+      "category_id": "cat_meaning"
+     },
+     {
+      "item_id": "itm_4",
+      "category_id": "cat_meaning"
+     },
+     {
+      "item_id": "itm_5",
+      "category_id": "cat_partial"
+     },
+     {
+      "item_id": "itm_6",
+      "category_id": "cat_partial"
+     }
+    ]
+   },
+   "option_misconceptions": {}
+  },
+  "ex_u1l1_03": {
+   "answer_key": {
+    "option_id": "opt_b"
+   },
+   "option_misconceptions": {
+    "opt_a": "mis_islam_ethnic"
+   }
+  },
+  "ex_u1l1_04": {
+   "answer_key": {
+    "option_id": "opt_b"
+   },
+   "option_misconceptions": {
+    "opt_a": "mis_islam_ethnic",
+    "opt_c": "mis_islam_ethnic"
+   }
+  }
+ }
+}

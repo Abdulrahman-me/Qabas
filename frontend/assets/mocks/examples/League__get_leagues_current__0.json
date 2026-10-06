@@ -1,0 +1,62 @@
+{
+ "league_id": "lg_2026w40_07",
+ "week_start": "2026-10-03T21:00:00Z",
+ "week_end": "2026-10-10T20:59:59Z",
+ "ends_in_seconds": 412300,
+ "my_rank": 4,
+ "tier": {
+  "tier_key": "tier_beacon",
+  "index": 1,
+  "name": "منارة",
+  "is_top_tier": false
+ },
+ "promotion_zone_size": 5,
+ "demotion": false,
+ "members": [
+  {
+   "rank": 1,
+   "user_id": "usr_a1",
+   "display_name": "نور ١٢",
+   "xp_week": 310,
+   "is_me": false,
+   "avatar_key": "traveler_01",
+   "in_promotion_zone": true
+  },
+  {
+   "rank": 2,
+   "user_id": "usr_a2",
+   "display_name": "Traveler 88",
+   "xp_week": 240,
+   "is_me": false,
+   "avatar_key": "traveler_02",
+   "in_promotion_zone": true
+  },
+  {
+   "rank": 3,
+   "user_id": "usr_a3",
+   "display_name": "سالك ٥",
+   "xp_week": 180,
+   "is_me": false,
+   "avatar_key": "traveler_03",
+   "in_promotion_zone": true
+  },
+  {
+   "rank": 4,
+   "user_id": "usr_7f3k2a",
+   "display_name": "مسافر ٤٧",
+   "xp_week": 120,
+   "is_me": true,
+   "avatar_key": "traveler_04",
+   "in_promotion_zone": true
+  },
+  {
+   "rank": 5,
+   "user_id": "usr_a5",
+   "display_name": "Seeker 21",
+   "xp_week": 95,
+   "is_me": false,
+   "avatar_key": "traveler_05",
+   "in_promotion_zone": true
+  }
+ ]
+}

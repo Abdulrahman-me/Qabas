@@ -1,0 +1,1530 @@
+[
+ {
+  "file": "challenges/group_challenge.json",
+  "model": "Duel"
+ },
+ {
+  "file": "challenges/group_ws_script.json",
+  "model": "WsEvent"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_1_pretest_ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_1_pretest_en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_1_unit_test_ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_1_unit_test_en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_2_pretest_ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_2_pretest_ar_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_2_pretest_en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_2_pretest_en_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_2_unit_test_ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_2_unit_test_ar_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_2_unit_test_en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_2_unit_test_en_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_3_pretest_ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_3_pretest_ar_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_3_pretest_en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_3_pretest_en_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_3_unit_test_ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_3_unit_test_ar_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_3_unit_test_en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/assessments/ses_unit_test_3_unit_test_en_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/bank/ex_00cb64dc834ba76c__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_00cb64dc834ba76c__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_066d2dddd93a4d45__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_066d2dddd93a4d45__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_06feb82739c065e0__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_06feb82739c065e0__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_0906e086be0b9325__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_0906e086be0b9325__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_095d0010a59b177f__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_095d0010a59b177f__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_1005606142a9747a__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_1005606142a9747a__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_15a928e77ce89431__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_15a928e77ce89431__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_1623fa566a120423__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_1623fa566a120423__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_1fa7c5a66a46a29f__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_1fa7c5a66a46a29f__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_24f5f00e231a54ad__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_24f5f00e231a54ad__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_318e13bbb9907b93__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_318e13bbb9907b93__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_4a5d707a0375c73a__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_4a5d707a0375c73a__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_4ab35b8f751332e1__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_4ab35b8f751332e1__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_4c5621003c2dec4a__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_4c5621003c2dec4a__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_517cfaaabbf0675c__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_517cfaaabbf0675c__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_5e3d196b0b9d5908__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_5e3d196b0b9d5908__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_602fc52780fe4cc4__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_602fc52780fe4cc4__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_72a6168f1d103763__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_72a6168f1d103763__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_79690025f9066f70__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_79690025f9066f70__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_7fe9d319d1779461__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_7fe9d319d1779461__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_817295fa34142434__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_817295fa34142434__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_8479fd38cbd653c9__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_8479fd38cbd653c9__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_8589f089b2050c73__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_8589f089b2050c73__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_8b6d72854f823c84__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_8b6d72854f823c84__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_8c1138986b6a622d__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_8c1138986b6a622d__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_950f1eda326d9656__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_950f1eda326d9656__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_95de7cf3e86b9940__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_95de7cf3e86b9940__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_a2cfaed04f96ffd6__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_a2cfaed04f96ffd6__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_a621a716d3220e47__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_a621a716d3220e47__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_a63b2f9217fa4b41__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_a63b2f9217fa4b41__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_a7a1d7f16c4ebb0c__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_a7a1d7f16c4ebb0c__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_b0a7953a0dd78a02__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_b0a7953a0dd78a02__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_bcb02c444bd90c67__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_bcb02c444bd90c67__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_bed1e12bc5e38a98__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_bed1e12bc5e38a98__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_bfebb6b728128214__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_bfebb6b728128214__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_c22a1db4388371ce__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_c22a1db4388371ce__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_c25732c5c8d8b064__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_c25732c5c8d8b064__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_c50ecd42ae02bc9d__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_c50ecd42ae02bc9d__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_cc2b9cb94ff4ddc9__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_cc2b9cb94ff4ddc9__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_cf97be6deb2889d3__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_cf97be6deb2889d3__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_d31ad6e45d6bfcca__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_d31ad6e45d6bfcca__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_dd79ca89563aaaca__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_dd79ca89563aaaca__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_ecf6f2291255618a__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_ecf6f2291255618a__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_ed5857778b4fc63f__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_ed5857778b4fc63f__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_f003d649930847ff__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_f003d649930847ff__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_f01600c67fe425ba__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_f01600c67fe425ba__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_f632e20e3e183691__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_f632e20e3e183691__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_fbbcc0530a0ce337__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_fbbcc0530a0ce337__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_fbd1bd3dd4f38d78__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_fbd1bd3dd4f38d78__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_fbff2eb7ecd5900c__ar.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/bank/ex_fbff2eb7ecd5900c__en.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "curriculum_test/journey_ar_explorer.json",
+  "model": "Journey"
+ },
+ {
+  "file": "curriculum_test/journey_ar_new_muslim.json",
+  "model": "Journey"
+ },
+ {
+  "file": "curriculum_test/journey_en_explorer.json",
+  "model": "Journey"
+ },
+ {
+  "file": "curriculum_test/journey_en_new_muslim.json",
+  "model": "Journey"
+ },
+ {
+  "file": "curriculum_test/journey_explorer.json",
+  "model": "Journey"
+ },
+ {
+  "file": "curriculum_test/journey_new_muslim.json",
+  "model": "Journey"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t1_0__ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t1_0__en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t1_1__ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t1_1__en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t1_2__ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t1_2__en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_0__ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_0__ar_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_0__en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_0__en_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_1__ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_1__ar_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_1__en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_1__en_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_2__ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_2__ar_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_2__en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_2__en_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_3__ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_3__ar_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_3__en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t2_3__en_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_0__ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_0__ar_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_0__en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_0__en_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_1__ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_1__ar_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_1__en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_1__en_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_2__ar_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_2__ar_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_2__en_explorer.json",
+  "model": "Session"
+ },
+ {
+  "file": "curriculum_test/lessons/les_t3_2__en_new_muslim.json",
+  "model": "Session"
+ },
+ {
+  "file": "exercises/categorize__buckets/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__buckets/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__buckets/answer_invalid.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__buckets/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__buckets/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__buckets/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__buckets/error_invalid.json",
+  "model": "ErrorEnvelope"
+ },
+ {
+  "file": "exercises/categorize__buckets/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/categorize__buckets/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/categorize__buckets/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/categorize__buckets/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/categorize__buckets/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/categorize__buckets/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/categorize__buckets/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/categorize__day_arc/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__day_arc/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__day_arc/answer_invalid.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__day_arc/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__day_arc/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__day_arc/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/categorize__day_arc/error_invalid.json",
+  "model": "ErrorEnvelope"
+ },
+ {
+  "file": "exercises/categorize__day_arc/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/categorize__day_arc/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/categorize__day_arc/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/categorize__day_arc/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/categorize__day_arc/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/categorize__day_arc/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/categorize__day_arc/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/fill_blank/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/fill_blank/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/fill_blank/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/fill_blank/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/fill_blank/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/fill_blank/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/fill_blank/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/fill_blank/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/fill_blank/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/fill_blank/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/fill_blank/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/fill_blank/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/flashcard/answer_again.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/flashcard/answer_easy.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/flashcard/answer_good.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/flashcard/answer_hard.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/flashcard/eval_again.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/flashcard/eval_easy.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/flashcard/eval_good.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/flashcard/eval_hard.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/flashcard/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/map_place__hotspots/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__hotspots/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__hotspots/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__hotspots/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__hotspots/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__hotspots/answer_unavailable.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__hotspots/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__hotspots/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__hotspots/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/map_place__hotspots/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__hotspots/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__hotspots/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__hotspots/eval_unavailable.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__hotspots/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/map_place__map_pins/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__map_pins/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__map_pins/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__map_pins/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__map_pins/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__map_pins/answer_unavailable.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/map_place__map_pins/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__map_pins/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__map_pins/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/map_place__map_pins/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__map_pins/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__map_pins/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__map_pins/eval_unavailable.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/map_place__map_pins/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/match_pairs/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/match_pairs/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/match_pairs/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/match_pairs/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/match_pairs/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/match_pairs/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/match_pairs/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/match_pairs/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/match_pairs/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/match_pairs/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/match_pairs/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/match_pairs/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/multiple_choice/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/multiple_choice/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/multiple_choice/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/multiple_choice/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/multiple_choice/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/multiple_choice/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/multiple_choice/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/multiple_choice/eval_incorrect_misconception.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/multiple_choice/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/multiple_choice/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/multiple_choice/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/multiple_choice/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/multiple_choice/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/order_steps/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/order_steps/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/order_steps/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/order_steps/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/order_steps/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/order_steps/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/order_steps/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/order_steps/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/order_steps/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/order_steps/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/order_steps/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/order_steps/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/recite_verse/answer_check.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/recite_verse/answer_skipped.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/recite_verse/eval_failed.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/recite_verse/eval_passed.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/recite_verse/eval_skipped.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/recite_verse/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/scenario/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/scenario/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/scenario/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/scenario/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/scenario/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/scenario/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/scenario/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/scenario/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/scenario/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/scenario/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/scenario/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/scenario/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/spot_error/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/spot_error/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/spot_error/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/spot_error/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/spot_error/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/spot_error/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/spot_error/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/spot_error/eval_incorrect_misconception.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/spot_error/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/spot_error/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/spot_error/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/spot_error/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/spot_error/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/timeline_order/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/timeline_order/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/timeline_order/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/timeline_order/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/timeline_order/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/timeline_order/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/timeline_order/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/timeline_order/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/timeline_order/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/timeline_order/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/timeline_order/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/timeline_order/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/true_false/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/true_false/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/true_false/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/true_false/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/true_false/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/true_false/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/true_false/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/true_false/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/true_false_reason/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/true_false_reason/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/true_false_reason/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/true_false_reason/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/true_false_reason/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/true_false_reason/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/true_false_reason/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/true_false_reason/eval_incorrect_misconception.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/true_false_reason/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/true_false_reason/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/true_false_reason/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/true_false_reason/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/true_false_reason/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/verse_meaning/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/verse_meaning/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/verse_meaning/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/verse_meaning/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/verse_meaning/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/verse_meaning/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/verse_meaning/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/verse_meaning/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/verse_meaning/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/verse_meaning/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/verse_meaning/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/verse_meaning/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "exercises/which_evidence/answer_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/which_evidence/answer_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/which_evidence/answer_retry.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/which_evidence/answer_retry_incorrect.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/which_evidence/answer_timeout.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "exercises/which_evidence/eval_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/which_evidence/eval_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/which_evidence/eval_recorded_only.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "exercises/which_evidence/eval_retry_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/which_evidence/eval_retry_incorrect.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/which_evidence/eval_timeout.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "exercises/which_evidence/exercise.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "presentation/generic_categorize.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "presentation/generic_order.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "recitation/check_errors.json",
+  "model": "RecitationCheck"
+ },
+ {
+  "file": "recitation/check_passed.json",
+  "model": "RecitationCheck"
+ },
+ {
+  "file": "recitation/check_unclear.json",
+  "model": "RecitationCheck"
+ },
+ {
+  "file": "recitation/exercise_segment.json",
+  "model": "Exercise"
+ },
+ {
+  "file": "scenes/answer_hotspot_correct.json",
+  "model": "AnswerSubmit"
+ },
+ {
+  "file": "scenes/eval_hotspot_correct.json",
+  "model": "AnswerEvaluation"
+ },
+ {
+  "file": "scenes/session_test_scene_lesson.json",
+  "model": "Session"
+ },
+ {
+  "file": "sessions/duplicate_answer_hidden_response.json",
+  "model": "AnswerRecorded"
+ },
+ {
+  "file": "sessions/history_end_active.json",
+  "model": "Session"
+ },
+ {
+  "file": "sessions/history_end_finished.json",
+  "model": "Session"
+ },
+ {
+  "file": "sessions/history_immediate_active.json",
+  "model": "Session"
+ },
+ {
+  "file": "sessions/history_none_finished.json",
+  "model": "Session"
+ },
+ {
+  "file": "sessions/recovery_after_early_retry.json",
+  "model": "Session"
+ },
+ {
+  "file": "sessions/review_cards.json",
+  "model": "Session"
+ },
+ {
+  "file": "sessions/review_quick.json",
+  "model": "Session"
+ },
+ {
+  "file": "sessions/session_practice_all_types.json",
+  "model": "Session"
+ }
+]

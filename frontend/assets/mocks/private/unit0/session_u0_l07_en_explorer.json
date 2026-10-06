@@ -1,0 +1,133 @@
+{
+  "session_id": "ses_mock_u0_l7_en_explorer",
+  "lesson_id": "les_u0_l7",
+  "answers": {
+    "ex_u0_l07_01": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_3"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_5",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_6",
+          "category_id": "cat_3"
+        }
+      ]
+    },
+    "ex_u0_l07_02": {
+      "option_id": "opt_c"
+    },
+    "ex_u0_l07_03": {
+      "value": false,
+      "reason_option_id": "opt_b"
+    },
+    "ex_u0_l07_04": {
+      "option_id": "opt_a"
+    }
+  },
+  "feedback": {
+    "ex_u0_l07_01": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_3"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_5",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_6",
+            "category_id": "cat_3"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "The sender originates the message; the carrier delivers it. They can be different people."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l07_02": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A carrier’s personal suggestion does not become another’s message merely because the carrier came from far away."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l07_03": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "In Islamic belief, a messenger is a person chosen by God to convey His message to people."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l07_carrier",
+        "opt_c": "mis_u0_l07_possibility"
+      }
+    },
+    "ex_u0_l07_04": {
+      "correct_answer": {
+        "option_id": "opt_a"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "The possibility of transmission does not establish this carrier as a messenger or this text as revelation."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "A transmitted message raises two different questions: did it come from its claimed source, and was its meaning preserved?"
+        }
+      ],
+      "option_misconceptions": {
+        "opt_b": "mis_u0_l07_possibility"
+      }
+    }
+  }
+}

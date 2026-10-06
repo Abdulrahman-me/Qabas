@@ -1,0 +1,20 @@
+{
+ "decision": "approve",
+ "sentence_edits": [
+  {
+   "sentence_id": "sen_u7_l4_04",
+   "language": "ar",
+   "variant": "explorer",
+   "new_text": "…"
+  },
+  {
+   "sentence_id": "sen_u7_l4_04",
+   "language": "en",
+   "variant": "explorer",
+   "new_text": "…"
+  }
+ ],
+ "exercise_removals": [],
+ "reason": null,
+ "review_digest": "7f69f6a59dfe9daebe0bc2b59965221eddd1fe595f6ac8d0d3e54201ceaab577"
+}

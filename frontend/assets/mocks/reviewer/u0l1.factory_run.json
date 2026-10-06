@@ -1,0 +1,3187 @@
+{
+ "run_id": "run_test_u0l1",
+ "unit_id": "unit_0",
+ "lesson_type": "concept",
+ "brief": "الدرس 0.1 (تأسيسي): هل يجب أن ترى الشيء لتعرفه؟ طرق المعرفة الثلاث وحدود كل طريق، بأمثلة يومية متنوعة ودون مصطلحات فلسفية.",
+ "status": "awaiting_gate2",
+ "stage": "qa",
+ "stages": [
+  {
+   "stage": "plan",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "decompose",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "retrieve",
+   "status": "skipped",
+   "started_at": null,
+   "finished_at": null
+  },
+  {
+   "stage": "verify_evidence",
+   "status": "skipped",
+   "started_at": null,
+   "finished_at": null
+  },
+  {
+   "stage": "write",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "exercises",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "glossary",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "localize",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "visuals",
+   "status": "skipped",
+   "started_at": null,
+   "finished_at": null
+  },
+  {
+   "stage": "scene_author",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "scene_render",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "narration",
+   "status": "skipped",
+   "started_at": null,
+   "finished_at": null
+  },
+  {
+   "stage": "qa",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  }
+ ],
+ "plan": {
+  "title": {
+   "ar": "هل يجب أن ترى الشيء لتعرفه؟",
+   "en": "Do You Have to See It to Know It?"
+  },
+  "central_question": {
+   "ar": "هل يجب أن أرى الشيء بنفسي لأعرفه؟",
+   "en": "Do I have to see something myself to know it?"
+  },
+  "primary_learning_outcome": {
+   "ar": "أن يدرك المتعلم أن الرؤية المباشرة ليست الطريق الوحيد المعقول إلى المعرفة، وأن يميّز كيف نعرف الشيء وإلى أي حد يوصلنا كل طريق.",
+   "en": "The learner understands that seeing directly is not the only reasonable basis for knowledge, and can tell how something is known and how far each route can take us."
+  },
+  "supporting_understandings": [
+   {
+    "ar": "نصل إلى المعرفة بطرق عدة: الملاحظة المباشرة بأي حاسة، والاستنتاج من الأثر، والخبر.",
+    "en": "Knowledge reaches us by several routes: direct observation with any sense, inference from traces, and reports."
+   },
+   {
+    "ar": "ما نلاحظه يختلف عما نستنتجه منه.",
+    "en": "What we observe is different from what we conclude from it."
+   },
+   {
+    "ar": "الاستنتاج لا يتجاوز ما يدل عليه الدليل، والاستنتاجات تتفاوت في قوتها.",
+    "en": "An inference claims no more than its evidence shows, and inferences vary in strength."
+   },
+   {
+    "ar": "الخبر قد يعطي معرفة، لكن الأخبار تتفاوت بحسب صدق المخبر وموقعه من المعرفة.",
+    "en": "Reports can give knowledge, but they vary with the source’s truthfulness and access to the facts."
+   },
+   {
+    "ar": "مقدار التحقق يتناسب مع غرابة الخبر وأهميته ومعرفتنا بمصدره.",
+    "en": "How much we check depends on how surprising and important a report is and how well we know its source."
+   }
+  ],
+  "depth_profile": "foundational",
+  "objectives": [
+   {
+    "ar": "أن تفرّق بين ما تعرفه بالملاحظة وما تعرفه بالاستنتاج أو بالخبر، وأن تحكم إلى أي حد يوصلك كل طريق.",
+    "en": "Tell what you know by observation from what you know by inference or report, and judge how far each route can take you."
+   }
+  ],
+  "prerequisite_concept_ids": [],
+  "introduced_concept_ids": [
+   "con_ways_of_knowing"
+  ],
+  "new_terms": [],
+  "target_misconceptions": [
+   {
+    "misconception_id": null,
+    "title": {
+     "ar": "لا نعرف إلا ما نراه بأعيننا",
+     "en": "We only know what we see with our own eyes"
+    },
+    "description": {
+     "ar": "فكرة شائعة لكنها لا تصمد: نعرف أشياء كثيرة بحواسنا الأخرى، وبما تدل عليه الآثار، وبالأخبار الموثوقة، مع أننا لم نرها.",
+     "en": "A common idea that does not hold up: we know many things through our other senses, from what traces point to, and from reliable reports, without ever seeing them."
+    }
+   }
+  ],
+  "lesson_type": "concept",
+  "estimated_minutes": 9,
+  "lesson_arc": {
+   "pattern": "discovery",
+   "rationale": {
+    "ar": "يعيش المتعلم موقفين قبل أي تسمية: خبر من الجدة، وصندوق عند الباب يفصل بين ما لوحظ وما استُنتج وبين قوة الاستنتاج وحدوده. ثم يسمّي الطرق الثلاث ويطبّقها، ويتعلم وزن الأخبار في موقف قصير له بداية وتردد وحل، ثم متى نتحقق أكثر، وينقل ذلك إلى خبر صحي مفاجئ.",
+    "en": "The learner meets two situations before anything is named: a report from a grandmother, and a box at the door that separates what was observed from what was concluded, and a strong conclusion from a weaker one and from what cannot be concluded. The learner then names and applies the three routes, learns to weigh reports through a short scenario with a setup, a doubt and a resolution, then when to check more, and transfers it to a surprising health claim."
+   },
+   "steps": [
+    {
+     "step_id": "hook",
+     "technique": "scenario",
+     "experience": {
+      "ar": "جدة في قريتها تخبرك عن شجرة لا تراها.",
+      "en": "A grandmother in her village tells you about a tree you cannot see."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "predict",
+     "technique": "prediction",
+     "experience": {
+      "ar": "هل نعرف ما لم نره؟ توقّع غير مقيَّم.",
+      "en": "Can we know what we have not seen? An ungraded prediction."
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "trace_example",
+     "technique": "example",
+     "experience": {
+      "ar": "صندوق عند الباب: ما لاحظته، وما استنتجته، وقوة الاستنتاج، وما لا يخبرك به.",
+      "en": "A box at the door: what you observed, what you concluded, how strong the conclusion is, and what it cannot tell you."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "fit_evidence",
+     "technique": "practice",
+     "experience": {
+      "ar": "طاولة في مكتبة: اختيار الاستنتاج الذي لا يتجاوز الآثار.",
+      "en": "A library table: choosing the conclusion that goes no further than the traces."
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "discover",
+     "technique": "explanation",
+     "experience": {
+      "ar": "تسمية الطرق الثلاث بعد أن عاشها المتعلم، مع تفاوت الأخبار.",
+      "en": "Naming the three routes after the learner has met them, and that reports vary."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "quick_apply",
+     "technique": "practice",
+     "experience": {
+      "ar": "تصنيف أربعة أمثلة، منها ملاحظة بالذوق وأخرى بالشم.",
+      "en": "Sorting four examples, including observation by taste and by smell."
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "reliability_scenario",
+     "technique": "scenario",
+     "experience": {
+      "ar": "آخر رحلة: راكب ينقل ما سمعه، وموظف يرى شاشة الرحلات.",
+      "en": "The last bus: a passenger passes on what he heard; a clerk can see the departures screen."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "who_knows",
+     "technique": "practice",
+     "experience": {
+      "ar": "لماذا كان جواب الموظف أولى بالاعتماد؟",
+      "en": "Why was the clerk’s answer the one to rely on?"
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "which_to_check",
+     "technique": "reflection",
+     "experience": {
+      "ar": "أي الخبرين يستحق التحقق قبل التصرف؟ تصويت غير مقيَّم.",
+      "en": "Which of two reports deserves checking before acting? An ungraded poll."
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "proportion",
+     "technique": "explanation",
+     "experience": {
+      "ar": "ليس كل خبر يحتاج التحقق نفسه.",
+      "en": "Not every report needs the same checking."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "transfer",
+     "technique": "practice",
+     "experience": {
+      "ar": "مقطع عن شراب أعشاب يغني عن الدواء، ثم الحكم على عبارة عن خبر الواحد.",
+      "en": "A clip claiming a herbal drink replaces medication, then judging a claim about single reports."
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "takeaway",
+     "technique": "takeaway",
+     "experience": {
+      "ar": "خلاصة: الطرق وحدودها.",
+      "en": "Takeaway: the routes and their limits."
+     },
+     "interactive": false
+    }
+   ]
+  },
+  "reasoning_tools": [
+   {
+    "tool": "observation",
+    "justification": {
+     "ar": "الدرس يميّز الملاحظة المباشرة بالحواس كلها عما نستنتجه منها.",
+     "en": "The lesson distinguishes direct observation, with any sense, from what we conclude from it."
+    }
+   },
+   {
+    "tool": "inference",
+    "justification": {
+     "ar": "الدرس يعلّم أن الاستنتاج من الأثر ممكن، وأنه يتفاوت في قوته ولا يتجاوز ما يدل عليه.",
+     "en": "The lesson teaches that inference from traces is possible, varies in strength and must not go beyond what the trace shows."
+    }
+   },
+   {
+    "tool": "testimony",
+    "justification": {
+     "ar": "الدرس يعلّم أن الخبر طريق للمعرفة، وكيف نزنه ومتى نتحقق منه.",
+     "en": "The lesson teaches that reports are a route to knowledge, how to weigh them and when to check them."
+    }
+   }
+  ],
+  "standalone_eligible": true,
+  "content_budget": 6,
+  "exercise_budget": 5
+ },
+ "draft": {
+  "languages": [
+   "ar",
+   "en"
+  ],
+  "variants": [
+   "explorer"
+  ],
+  "previews": [
+   {
+    "language": "ar",
+    "variant": "explorer",
+    "objectives": [
+     [
+      {
+       "type": "text",
+       "text": "أن تفرّق بين ما تعرفه بالملاحظة وما تعرفه بالاستنتاج أو بالخبر، وأن تحكم إلى أي حد يوصلك كل طريق."
+      }
+     ]
+    ],
+    "items": [
+     {
+      "block_id": "blk_u0l1_hook",
+      "type": "hook",
+      "situation": [
+       {
+        "type": "text",
+        "text": "تتصل بك جدتك من قريتها وتقول: «شجرة المشمش التي زرعتَها قبل سنوات أثمرت أخيراً هذا الصيف». أنت في مدينة بعيدة، ولم ترَ الشجرة منذ شهور."
+       }
+      ],
+      "question": [
+       {
+        "type": "text",
+        "text": "هل تعرف الآن أن الشجرة أثمرت؟"
+       }
+      ],
+      "visual": {
+       "kind": "image",
+       "key": null,
+       "version": null,
+       "params": null,
+       "image": {
+        "url": "https://cdn.example.com/test/u0l1/village_apricot_tree.webp",
+        "mime_type": "image/webp",
+        "width": 1600,
+        "height": 1000
+       },
+       "scene": null,
+       "fallback_image": null,
+       "fallback_params": null,
+       "alt": "شجرة مشمش مثمرة في فناء بيت ريفي، بلا أشخاص",
+       "overlays": []
+      },
+      "cta": null
+     },
+     {
+      "block_id": "blk_u0l1_predict",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "هل يمكن أن تعرف شيئاً لم تره بعينيك؟"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "نعم، أحياناً"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "لا، لا أعرف إلا ما أراه"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "لست متأكداً"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "احتفظ بجوابك، وانظر أولاً إلى ما ينتظرك عند باب البيت."
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u0l1_trace",
+      "type": "teach",
+      "eyebrow": "مثال",
+      "title": [
+       {
+        "type": "text",
+        "text": "صندوق عند الباب"
+       }
+      ],
+      "style": "standard",
+      "visual": {
+       "kind": "scene",
+       "key": null,
+       "version": null,
+       "params": {
+        "focus": -1
+       },
+       "image": null,
+       "scene": {
+        "scene_id": "scn_u0l1_doorstep",
+        "version": 1,
+        "schema_version": "qabas.scene/1",
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/scene.json",
+        "mime_type": "application/json",
+        "sha256": "030f3cc99fc1ac3bd5e17b390cf695ed7f5d900fed2747037fd47397e9f38f7a",
+        "view_box": {
+         "width": 1600,
+         "height": 1000
+        },
+        "required_capabilities": [
+         "scene/1",
+         "shape.rect/1",
+         "shape.ellipse/1",
+         "shape.path/1",
+         "paint.gradient/1",
+         "track/1",
+         "fx.sparkles/1"
+        ]
+       },
+       "fallback_image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/fallback_f-1.webp",
+        "mime_type": "image/webp",
+        "width": 1600,
+        "height": 1000
+       },
+       "fallback_params": {
+        "focus": -1
+       },
+       "alt": "صندوق من الكرتون عليه ملصق، موضوع على عتبة باب أخضر مساءً، والممر إلى البوابة خالٍ",
+       "overlays": []
+      },
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u0l1_1",
+        "sentence": {
+         "sentence_id": "sen_u0l1_01",
+         "spans": [
+          {
+           "type": "text",
+           "text": "تعود إلى البيت مساءً فتجد عند الباب صندوقاً من الكرتون عليه ملصق باسمك. لم ترَ أحداً يضعه هناك."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": {
+         "focus": -1
+        }
+       },
+       {
+        "point_id": "pt_u0l1_2",
+        "sentence": {
+         "sentence_id": "sen_u0l1_02",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ما لاحظته فعلاً: صندوق وملصق عليه اسمك. أما أن أحداً أحضره إلى الباب فهذا ما استنتجته مما رأيت."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": {
+         "focus": 0
+        }
+       },
+       {
+        "point_id": "pt_u0l1_3",
+        "sentence": {
+         "sentence_id": "sen_u0l1_03",
+         "spans": [
+          {
+           "type": "text",
+           "text": "وهو استنتاج قوي، فالصناديق لا تصل إلى الأبواب وحدها: أنت تعرف أن أحداً أحضره مع أنك لم تره."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": {
+         "focus": 1
+        }
+       },
+       {
+        "point_id": "pt_u0l1_4",
+        "sentence": {
+         "sentence_id": "sen_u0l1_04",
+         "spans": [
+          {
+           "type": "text",
+           "text": "لكن الاستنتاجات لا تتساوى في قوتها: أن يكون هذا هو الطلب الذي تنتظره احتمال قريب، ولن تتأكد منه حتى تفتحه."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": {
+         "focus": 2
+        }
+       },
+       {
+        "point_id": "pt_u0l1_5",
+        "sentence": {
+         "sentence_id": "sen_u0l1_05",
+         "spans": [
+          {
+           "type": "text",
+           "text": "وهناك ما لا يخبرك به الصندوق أصلاً: من الذي وضعه، وفي أي ساعة."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": {
+         "focus": 3
+        }
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u0l1_x1",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u0l1_01",
+       "type": "multiple_choice",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "في مكتبة عامة تجد على إحدى الطاولات كتاباً مفتوحاً بين صفحاته قلم، وبجانبه كوب شاي ما زال دافئاً. أيّ استنتاج لا يتجاوز ما تدل عليه هذه الآثار؟"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": null,
+       "payload": {
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "طالب يستعد لاختبار كان يجلس هنا"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "كان أحدٌ هنا قبل وقت قصير"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "صاحب الكتاب غادر المكتبة ولن يعود"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u0l1_ways",
+      "type": "teach",
+      "eyebrow": "ما اكتشفته",
+      "title": [
+       {
+        "type": "text",
+        "text": "ثلاث طرق للمعرفة"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u0l1_6",
+        "sentence": {
+         "sentence_id": "sen_u0l1_06",
+         "spans": [
+          {
+           "type": "text",
+           "text": "الملاحظة المباشرة: أن تدرك الشيء بإحدى حواسك، كأن ترى الصندوق، أو تسمع جرس الباب، أو تلمس الكوب فتجده دافئاً."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_7",
+        "sentence": {
+         "sentence_id": "sen_u0l1_07",
+         "spans": [
+          {
+           "type": "text",
+           "text": "الاستنتاج من الأثر: أن تنتقل من شيء لاحظته إلى شيء لم تلاحظه، كأن تعرف من الصندوق أن أحداً أحضره."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_8",
+        "sentence": {
+         "sentence_id": "sen_u0l1_08",
+         "spans": [
+          {
+           "type": "text",
+           "text": "الخبر: أن يخبرك به غيرك، كجدتك وهي تحدثك عن الشجرة."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_9",
+        "sentence": {
+         "sentence_id": "sen_u0l1_09",
+         "spans": [
+          {
+           "type": "text",
+           "text": "لكن الأخبار ليست سواء: يهمّنا هل المخبر صادق، وهل هو في موضع يعرف منه ما يقول، أم يخمّن أو ينقل كلاماً سمعه."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u0l1_x2",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u0l1_02",
+       "type": "categorize",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "كيف عرفت كل واحد مما يلي؟"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "presentation": "buckets",
+        "categories": [
+         {
+          "category_id": "cat_observe",
+          "label": "ملاحظة مباشرة",
+          "art_key": null,
+          "phase": null,
+          "capacity": null
+         },
+         {
+          "category_id": "cat_trace",
+          "label": "استنتاج من أثر",
+          "art_key": "footprints",
+          "phase": null,
+          "capacity": null
+         },
+         {
+          "category_id": "cat_report",
+          "label": "خبر",
+          "art_key": null,
+          "phase": null,
+          "capacity": null
+         }
+        ],
+        "items": [
+         {
+          "item_id": "itm_1",
+          "spans": [
+           {
+            "type": "text",
+            "text": "تتذوّق الحساء فتجده مالحاً"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_2",
+          "spans": [
+           {
+            "type": "text",
+            "text": "تجد قشر برتقال طازجاً على الطاولة، فتستنتج أن أحداً أكل برتقالة قبل قليل"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_3",
+          "spans": [
+           {
+            "type": "text",
+            "text": "تصلك رسالة من الصيدلية بأن دواءك صار جاهزاً للاستلام"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_4",
+          "spans": [
+           {
+            "type": "text",
+            "text": "تشمّ رائحة الخبز وأنت داخل المخبز"
+           }
+          ],
+          "secondary_label": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u0l1_scenario",
+      "type": "story",
+      "label": "موقف",
+      "title": "آخر رحلة",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+       {
+        "beat_id": "beat_u0l1_0",
+        "beat_index": 0,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u0l1/bus_station_night.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "محطة حافلات ليلاً فيها شباك تذاكر وشاشة رحلات بلا كتابة، وحافلة تنتظر عند الرصيف",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u0l1_10",
+          "spans": [
+           {
+            "type": "text",
+            "text": "مسافرة تنتظر في محطة الحافلات آخر رحلة إلى مدينتها الليلة. يلتفت إليها راكب ويقول بثقة: «ألغوا رحلة المدينة، سمعتُ أحدهم يقول ذلك قبل قليل»."
+           }
+          ],
+          "source_ids": []
+         }
+        ]
+       },
+       {
+        "beat_id": "beat_u0l1_1",
+        "beat_index": 1,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u0l1/bus_station_night.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "محطة حافلات ليلاً فيها شباك تذاكر وشاشة رحلات بلا كتابة، وحافلة تنتظر عند الرصيف",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u0l1_11",
+          "spans": [
+           {
+            "type": "text",
+            "text": "تفكّر في حجز غرفة في فندق قريب. ثم تنتبه: الراكب لم يرَ إعلاناً ولم يسأل أحداً من المحطة، بل ينقل كلاماً سمعه من شخص لا يعرفه. فتقوم إلى شباك التذاكر."
+           }
+          ],
+          "source_ids": []
+         }
+        ]
+       },
+       {
+        "beat_id": "beat_u0l1_2",
+        "beat_index": 2,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u0l1/bus_station_night.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "محطة حافلات ليلاً فيها شباك تذاكر وشاشة رحلات بلا كتابة، وحافلة تنتظر عند الرصيف",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u0l1_12",
+          "spans": [
+           {
+            "type": "text",
+            "text": "ينظر الموظف في شاشة الرحلات أمامه ويقول: «الرحلة متأخرة أربعين دقيقة، ولم تُلغَ». وبعد ساعة كانت المسافرة في مقعدها والحافلة تتحرك."
+           }
+          ],
+          "source_ids": []
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u0l1_x3",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u0l1_03",
+       "type": "multiple_choice",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "لماذا كان جواب الموظف أولى بأن تعتمد عليه المسافرة؟"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأن الخبر الأحدث صحيح دائماً"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأنه في موضع يعرف منه: يرى حالة الرحلات أمامه"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأن الراكب كان يكذب عمداً"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u0l1_reflect",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "أيّ الخبرين ستتحقق منه قبل أن تتصرّف بناءً عليه؟"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "جارك يقول: الفرن في شارعنا يفتح في السابعة"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "شخص لا تعرفه يقول في الطريق: ماء الصنبور في حيّكم غير صالح للشرب اليوم"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "كلاهما بالقدر نفسه"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "قارن بينهما: ماذا تخسر لو كان كل خبر خطأً؟ ومن قاله، وهل هو في موضع يعرف منه؟"
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u0l1_proportion",
+      "type": "teach",
+      "eyebrow": "فكرة مهمة",
+      "title": [
+       {
+        "type": "text",
+        "text": "ليس كل خبر يحتاج التحقق نفسه"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u0l1_10",
+        "sentence": {
+         "sentence_id": "sen_u0l1_13",
+         "spans": [
+          {
+           "type": "text",
+           "text": "الخبر العادي من شخص صادق يعرف ما يقول، كجارك حين يخبرك بموعد فتح الفرن، نقبله في العادة دون بحث."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_11",
+        "sentence": {
+         "sentence_id": "sen_u0l1_14",
+         "spans": [
+          {
+           "type": "text",
+           "text": "أما الخبر المفاجئ أو المهم، أو الذي لا نعرف مصدره، كتحذير من ماء الشرب يأتيك من غريب، فيستحق أن نسأل: من قاله؟ وهل يعرف؟ وهل يؤكده مصدر آخر؟"
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u0l1_x4",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u0l1_04",
+       "type": "scenario",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "ما التصرف الأقرب لما تعلمته؟"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "situation": [
+         {
+          "type": "text",
+          "text": "يرسل إليك قريب مقطعاً يقول فيه رجل لا يُذكر اسمه إن شراباً من الأعشاب يغني عن دواء السكري."
+         }
+        ],
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "أنصح قريبي بإيقاف الدواء وتجربة الشراب"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "أرفض كل خبر لم أره بعيني"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "أسأل طبيباً أو أرجع إلى مصدر طبي موثوق قبل الاعتماد على الكلام"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u0l1_x5",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u0l1_05",
+       "type": "true_false_reason",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "هل هذه العبارة صحيحة؟ اختر الجواب والسبب."
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": null,
+       "payload": {
+        "statement": [
+         {
+          "type": "text",
+          "text": "إذا أخبرك شخص واحد بشيء، فلا يمكن أن تعرفه حتى يؤكده آخرون."
+         }
+        ],
+        "reasons": [
+         {
+          "option_id": "rsn_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأن خبر شخص صادق يعرف ما يقول قد يكفي، ويزداد التحقق أهمية حين يكون الخبر مفاجئاً أو مصدره مجهولاً"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأن كل ما يقوله الناس صحيح"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأن الأخبار لا تعطي معرفة أصلاً"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u0l1_takeaway",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+       {
+        "type": "text",
+        "text": "خلاصة"
+       }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u0l1_12",
+        "sentence": {
+         "sentence_id": "sen_u0l1_15",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ليس كل ما نعرفه رأيناه بأنفسنا: قد نعرف بالملاحظة المباشرة، أو بالاستنتاج من أثر، أو من خبر."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_13",
+        "sentence": {
+         "sentence_id": "sen_u0l1_16",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ولكل طريق حدوده: الاستنتاجات تتفاوت في قوتها، ولا يتجاوز أيّها ما يدل عليه الأثر."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_14",
+        "sentence": {
+         "sentence_id": "sen_u0l1_17",
+         "spans": [
+          {
+           "type": "text",
+           "text": "والخبر يوزن بصدق صاحبه وقدرته على المعرفة، ونتحقق أكثر حين يكون مفاجئاً أو مهماً أو مجهول المصدر."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     }
+    ],
+    "completion": {
+     "challenge": [
+      {
+       "type": "text",
+       "text": "لاحظ اليوم معلومة وصلتك بخبر، واسأل: هل كان مصدرها في موضع يعرف منه؟ وهل تحتاج إلى تحقق أكثر؟"
+      }
+     ],
+     "review_topics": [
+      {
+       "topic_id": "rt_u0l1_1",
+       "title": "طرق المعرفة وحدودها",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ]
+      }
+     ],
+     "check_in": [
+      {
+       "type": "text",
+       "text": "غداً سنسألك: ما الذي لا يستطيع الصندوق عند الباب أن يخبرك به؟"
+      }
+     ]
+    }
+   },
+   {
+    "language": "en",
+    "variant": "explorer",
+    "objectives": [
+     [
+      {
+       "type": "text",
+       "text": "Tell what you know by observation from what you know by inference or report, and judge how far each route can take you."
+      }
+     ]
+    ],
+    "items": [
+     {
+      "block_id": "blk_u0l1_hook",
+      "type": "hook",
+      "situation": [
+       {
+        "type": "text",
+        "text": "Your grandmother calls from her village: “The apricot tree you planted years ago finally has fruit this summer.” You are in a city far away and haven’t seen the tree in months."
+       }
+      ],
+      "question": [
+       {
+        "type": "text",
+        "text": "Do you now know the tree has fruit?"
+       }
+      ],
+      "visual": {
+       "kind": "image",
+       "key": null,
+       "version": null,
+       "params": null,
+       "image": {
+        "url": "https://cdn.example.com/test/u0l1/village_apricot_tree.webp",
+        "mime_type": "image/webp",
+        "width": 1600,
+        "height": 1000
+       },
+       "scene": null,
+       "fallback_image": null,
+       "fallback_params": null,
+       "alt": "An apricot tree heavy with fruit in the yard of a village house, with no people",
+       "overlays": []
+      },
+      "cta": null
+     },
+     {
+      "block_id": "blk_u0l1_predict",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "Can you know something you haven't seen with your own eyes?"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "Yes, sometimes"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "No, I only know what I see"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "I'm not sure"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "Hold on to your answer, and first look at what is waiting at your front door."
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u0l1_trace",
+      "type": "teach",
+      "eyebrow": "Example",
+      "title": [
+       {
+        "type": "text",
+        "text": "A box at the door"
+       }
+      ],
+      "style": "standard",
+      "visual": {
+       "kind": "scene",
+       "key": null,
+       "version": null,
+       "params": {
+        "focus": -1
+       },
+       "image": null,
+       "scene": {
+        "scene_id": "scn_u0l1_doorstep",
+        "version": 1,
+        "schema_version": "qabas.scene/1",
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/scene.json",
+        "mime_type": "application/json",
+        "sha256": "030f3cc99fc1ac3bd5e17b390cf695ed7f5d900fed2747037fd47397e9f38f7a",
+        "view_box": {
+         "width": 1600,
+         "height": 1000
+        },
+        "required_capabilities": [
+         "scene/1",
+         "shape.rect/1",
+         "shape.ellipse/1",
+         "shape.path/1",
+         "paint.gradient/1",
+         "track/1",
+         "fx.sparkles/1"
+        ]
+       },
+       "fallback_image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/fallback_f-1.webp",
+        "mime_type": "image/webp",
+        "width": 1600,
+        "height": 1000
+       },
+       "fallback_params": {
+        "focus": -1
+       },
+       "alt": "A cardboard box with a label on the step of a green front door in the evening; the path to the gate is empty",
+       "overlays": []
+      },
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u0l1_1",
+        "sentence": {
+         "sentence_id": "sen_u0l1_01",
+         "spans": [
+          {
+           "type": "text",
+           "text": "You get home in the evening and find a cardboard box at the door with a label bearing your name. You didn’t see anyone leave it there."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": {
+         "focus": -1
+        }
+       },
+       {
+        "point_id": "pt_u0l1_2",
+        "sentence": {
+         "sentence_id": "sen_u0l1_02",
+         "spans": [
+          {
+           "type": "text",
+           "text": "What you actually observed: a box and a label with your name. That someone brought it to the door is what you concluded from what you saw."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": {
+         "focus": 0
+        }
+       },
+       {
+        "point_id": "pt_u0l1_3",
+        "sentence": {
+         "sentence_id": "sen_u0l1_03",
+         "spans": [
+          {
+           "type": "text",
+           "text": "And it is a strong conclusion, because boxes don’t reach doors by themselves: you know someone brought it, even though you never saw them."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": {
+         "focus": 1
+        }
+       },
+       {
+        "point_id": "pt_u0l1_4",
+        "sentence": {
+         "sentence_id": "sen_u0l1_04",
+         "spans": [
+          {
+           "type": "text",
+           "text": "But conclusions are not all equally strong: that this is the order you have been waiting for is likely, and you won’t be sure until you open it."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": {
+         "focus": 2
+        }
+       },
+       {
+        "point_id": "pt_u0l1_5",
+        "sentence": {
+         "sentence_id": "sen_u0l1_05",
+         "spans": [
+          {
+           "type": "text",
+           "text": "And there are things the box cannot tell you at all: who left it, and at what time."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": {
+         "focus": 3
+        }
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u0l1_x1",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u0l1_01",
+       "type": "multiple_choice",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "In a public library you find a table with an open book, a pencil between its pages, and a cup of tea beside it that is still warm. Which conclusion goes no further than these traces show?"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": null,
+       "payload": {
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "A student preparing for an exam was sitting here"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Someone was here a short while ago"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "The book's owner has left the library and won't be back"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u0l1_ways",
+      "type": "teach",
+      "eyebrow": "What you discovered",
+      "title": [
+       {
+        "type": "text",
+        "text": "Three ways of knowing"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u0l1_6",
+        "sentence": {
+         "sentence_id": "sen_u0l1_06",
+         "spans": [
+          {
+           "type": "text",
+           "text": "Direct observation: perceiving something with one of your senses — seeing the box, hearing the doorbell, or touching the cup and feeling that it is warm."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_7",
+        "sentence": {
+         "sentence_id": "sen_u0l1_07",
+         "spans": [
+          {
+           "type": "text",
+           "text": "Inference from a trace: moving from something you observed to something you didn’t, as when the box tells you someone brought it."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_8",
+        "sentence": {
+         "sentence_id": "sen_u0l1_08",
+         "spans": [
+          {
+           "type": "text",
+           "text": "A report: someone else tells you, like your grandmother telling you about the tree."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_9",
+        "sentence": {
+         "sentence_id": "sen_u0l1_09",
+         "spans": [
+          {
+           "type": "text",
+           "text": "But reports are not all alike: it matters whether the person is truthful, and whether they are in a position to know what they say, or are guessing or passing on something they heard."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u0l1_x2",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u0l1_02",
+       "type": "categorize",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "How do you know each of these?"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "presentation": "buckets",
+        "categories": [
+         {
+          "category_id": "cat_observe",
+          "label": "Direct observation",
+          "art_key": null,
+          "phase": null,
+          "capacity": null
+         },
+         {
+          "category_id": "cat_trace",
+          "label": "Inference from a trace",
+          "art_key": "footprints",
+          "phase": null,
+          "capacity": null
+         },
+         {
+          "category_id": "cat_report",
+          "label": "A report",
+          "art_key": null,
+          "phase": null,
+          "capacity": null
+         }
+        ],
+        "items": [
+         {
+          "item_id": "itm_1",
+          "spans": [
+           {
+            "type": "text",
+            "text": "You taste the soup and find it salty"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_2",
+          "spans": [
+           {
+            "type": "text",
+            "text": "You find fresh orange peel on the table and conclude that someone ate an orange not long ago"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_3",
+          "spans": [
+           {
+            "type": "text",
+            "text": "The pharmacy sends you a message that your medicine is ready to collect"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_4",
+          "spans": [
+           {
+            "type": "text",
+            "text": "You smell the bread while standing in the bakery"
+           }
+          ],
+          "secondary_label": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u0l1_scenario",
+      "type": "story",
+      "label": "Scenario",
+      "title": "The last bus",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+       {
+        "beat_id": "beat_u0l1_0",
+        "beat_index": 0,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u0l1/bus_station_night.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "A bus station at night with a ticket window, a departures screen without lettering, and a bus waiting at the stand",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u0l1_10",
+          "spans": [
+           {
+            "type": "text",
+            "text": "A traveller is waiting at the bus station for tonight’s last bus to her city. A passenger turns to her and says confidently: “They’ve cancelled the city bus. I heard someone say so a minute ago.”"
+           }
+          ],
+          "source_ids": []
+         }
+        ]
+       },
+       {
+        "beat_id": "beat_u0l1_1",
+        "beat_index": 1,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u0l1/bus_station_night.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "A bus station at night with a ticket window, a departures screen without lettering, and a bus waiting at the stand",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u0l1_11",
+          "spans": [
+           {
+            "type": "text",
+            "text": "She thinks about booking a room at a nearby hotel. Then she notices: the passenger hasn’t seen an announcement or asked anyone at the station; he is passing on something he heard from a stranger. So she walks over to the ticket window."
+           }
+          ],
+          "source_ids": []
+         }
+        ]
+       },
+       {
+        "beat_id": "beat_u0l1_2",
+        "beat_index": 2,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u0l1/bus_station_night.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "A bus station at night with a ticket window, a departures screen without lettering, and a bus waiting at the stand",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u0l1_12",
+          "spans": [
+           {
+            "type": "text",
+            "text": "The clerk looks at the departures screen in front of him and says: “It’s forty minutes late, not cancelled.” An hour later the traveller was in her seat as the bus pulled out."
+           }
+          ],
+          "source_ids": []
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u0l1_x3",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u0l1_03",
+       "type": "multiple_choice",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "Why was the clerk’s answer the better one for the traveller to rely on?"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because the most recent report is always right"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because he was in a position to know: he could see the status of the buses in front of him"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because the passenger was lying on purpose"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u0l1_reflect",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "Which of these two reports would you check before acting on it?"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "Your neighbour says the bakery on your street opens at seven"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "A stranger in the street says the tap water in your area is unsafe to drink today"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "Both equally"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "Compare them: what would it cost you if each report were wrong? And who said it — would they know?"
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u0l1_proportion",
+      "type": "teach",
+      "eyebrow": "An important idea",
+      "title": [
+       {
+        "type": "text",
+        "text": "Not every report needs the same checking"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u0l1_10",
+        "sentence": {
+         "sentence_id": "sen_u0l1_13",
+         "spans": [
+          {
+           "type": "text",
+           "text": "An ordinary report from a truthful person who would know, like your neighbour telling you when the bakery opens, is something we normally accept without looking further."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_11",
+        "sentence": {
+         "sentence_id": "sen_u0l1_14",
+         "spans": [
+          {
+           "type": "text",
+           "text": "But a surprising or important report, or one whose source we don’t know, like a warning about drinking water from a stranger, deserves questions: who said it, would they know, and does another source confirm it?"
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u0l1_x4",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u0l1_04",
+       "type": "scenario",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "Which response fits what you have learned?"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "situation": [
+         {
+          "type": "text",
+          "text": "A relative sends you a clip in which an unnamed man says a herbal drink can replace diabetes medication."
+         }
+        ],
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Advise my relative to stop the medication and try the drink"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Reject every report I haven't seen with my own eyes"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Ask a doctor or check a reliable medical source before relying on it"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u0l1_x5",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u0l1_05",
+       "type": "true_false_reason",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "Is this statement true? Choose the answer and the reason."
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": null,
+       "payload": {
+        "statement": [
+         {
+          "type": "text",
+          "text": "If one person tells you something, you cannot know it until others confirm it."
+         }
+        ],
+        "reasons": [
+         {
+          "option_id": "rsn_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because a report from a truthful person who would know can be enough; checking matters more when the news is surprising or the source unknown"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because everything people say is true"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because reports never give knowledge at all"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u0l1_takeaway",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+       {
+        "type": "text",
+        "text": "In short"
+       }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u0l1_12",
+        "sentence": {
+         "sentence_id": "sen_u0l1_15",
+         "spans": [
+          {
+           "type": "text",
+           "text": "Not everything we know is something we saw ourselves: we can know by direct observation, by inference from a trace, or from a report."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_13",
+        "sentence": {
+         "sentence_id": "sen_u0l1_16",
+         "spans": [
+          {
+           "type": "text",
+           "text": "Each route has its limits: conclusions vary in strength, and none should go beyond what the trace shows."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u0l1_14",
+        "sentence": {
+         "sentence_id": "sen_u0l1_17",
+         "spans": [
+          {
+           "type": "text",
+           "text": "A report is weighed by its source’s truthfulness and access to the facts, and we check more when it is surprising, important or unsourced."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     }
+    ],
+    "completion": {
+     "challenge": [
+      {
+       "type": "text",
+       "text": "Today, notice something you learned from a report and ask: was the source in a position to know, and does it need more checking?"
+      }
+     ],
+     "review_topics": [
+      {
+       "topic_id": "rt_u0l1_1",
+       "title": "Ways of knowing and their limits",
+       "concept_ids": [
+        "con_ways_of_knowing"
+       ]
+      }
+     ],
+     "check_in": [
+      {
+       "type": "text",
+       "text": "Tomorrow we will ask: what can the box at the door not tell you?"
+      }
+     ]
+    }
+   }
+  ],
+  "claims": [
+   {
+    "claim_id": "clm_observation",
+    "text": "نعرف بعض الأشياء بالملاحظة المباشرة بأي من حواسنا.",
+    "status": "supported",
+    "basis": "reasoning",
+    "reasoning": {
+     "tool": "observation",
+     "premises": [
+      "ما ندركه بحواسنا السليمة (البصر والسمع والشم والذوق واللمس) في ظروف واضحة نعرفه في العادة دون وسيط."
+     ],
+     "inference": "إذن الملاحظة المباشرة، لا الرؤية وحدها، طريق من طرق المعرفة."
+    },
+    "evidence": []
+   },
+   {
+    "claim_id": "clm_inference",
+    "text": "الأثر قد يدل على شيء لم نره.",
+    "status": "supported",
+    "basis": "reasoning",
+    "reasoning": {
+     "tool": "inference",
+     "premises": [
+      "الصناديق لا تنتقل إلى الأبواب من تلقاء نفسها.",
+      "وجود الصندوق عند الباب أثرٌ لفعلٍ لم نشهده."
+     ],
+     "inference": "إذن نعرف من الصندوق أن أحداً أحضره، مع أننا لم نره."
+    },
+    "evidence": []
+   },
+   {
+    "claim_id": "clm_observe_vs_infer",
+    "text": "ما نلاحظه مباشرة يختلف عما نستنتجه منه.",
+    "status": "supported",
+    "basis": "reasoning",
+    "reasoning": {
+     "tool": "inference",
+     "premises": [
+      "ما تراه عند الباب صندوق وملصق.",
+      "أنّ أحداً أحضره فكرة تصل إليها مما رأيت، وليست شيئاً رأيته."
+     ],
+     "inference": "إذن الملاحظة شيء، والاستنتاج منها شيء آخر."
+    },
+    "evidence": []
+   },
+   {
+    "claim_id": "clm_strength",
+    "text": "الاستنتاجات تتفاوت في قوتها بحسب ما يبقى من احتمالات أخرى.",
+    "status": "supported",
+    "basis": "reasoning",
+    "reasoning": {
+     "tool": "inference",
+     "premises": [
+      "بعض الآثار لا تترك تفسيراً آخر معقولاً، كأن يصل صندوق إلى الباب دون أن يحضره أحد.",
+      "وبعضها يترك احتمالات أخرى، فقد يكون في الصندوق شيء غير ما تنتظره."
+     ],
+     "inference": "إذن نصوغ الاستنتاج بقدر قوته: نجزم بما لا يحتمل غيره، ونقول «على الأرجح» فيما يحتمل."
+    },
+    "evidence": []
+   },
+   {
+    "claim_id": "clm_trace_limit",
+    "text": "الأثر يدل بقدر ما يحمله فقط.",
+    "status": "supported",
+    "basis": "reasoning",
+    "reasoning": {
+     "tool": "inference",
+     "premises": [
+      "الصندوق والملصق يدلان على أن الطرد لك وأن أحداً أوصله.",
+      "لا شيء فيهما يدل على من أوصله ولا على ساعة وصوله."
+     ],
+     "inference": "إذن لا نستنتج من الأثر ما لا يحمله."
+    },
+    "evidence": []
+   },
+   {
+    "claim_id": "clm_testimony",
+    "text": "الخبر قد يكون طريقاً للمعرفة.",
+    "status": "supported",
+    "basis": "reasoning",
+    "reasoning": {
+     "tool": "testimony",
+     "premises": [
+      "نعرف مدناً لم نزرها وأحداثاً لم نحضرها عن طريق أخبار الناس.",
+      "نعتمد على ذلك في حياتنا اليومية ولا نعدّه جهلاً."
+     ],
+     "inference": "إذن الخبر قد يعطينا معرفة بما لم نشهده."
+    },
+    "evidence": []
+   },
+   {
+    "claim_id": "clm_testimony_check",
+    "text": "الأخبار تتفاوت في موثوقيتها بحسب صدق المخبر وقدرته على المعرفة وما يدعمه من أدلة.",
+    "status": "supported",
+    "basis": "reasoning",
+    "reasoning": {
+     "tool": "testimony",
+     "premises": [
+      "الناس قد يخطئون وقد يكذبون.",
+      "المخبر الصادق الذي في موضع يعرف منه أقل عرضة للخطأ ممن يخمّن أو ينقل كلاماً سمعه.",
+      "الدليل الإضافي يقوّي الخبر."
+     ],
+     "inference": "إذن لا نقبل كل خبر ولا نرفض كل خبر، بل نزنه بحسب مصدره وما يدعمه."
+    },
+    "evidence": []
+   },
+   {
+    "claim_id": "clm_proportion",
+    "text": "مقدار التحقق من الخبر يتناسب مع غرابته وأهميته ومعرفتنا بمصدره.",
+    "status": "supported",
+    "basis": "reasoning",
+    "reasoning": {
+     "tool": "testimony",
+     "premises": [
+      "الخبر العادي من مصدر صادق يعرف قلّما يكون خطأً مكلفاً.",
+      "الخبر المفاجئ أو المهم أو المجهول المصدر أكثر عرضة للخطأ، أو أكبر أثراً إن كان خطأً."
+     ],
+     "inference": "إذن نتحقق أكثر حين يكون الخبر مفاجئاً أو مهماً أو مصدره مجهولاً."
+    },
+    "evidence": []
+   }
+  ],
+  "sentence_map": [
+   {
+    "sentence_id": "sen_u0l1_01",
+    "role": "hypothetical",
+    "claim_ids": []
+   },
+   {
+    "sentence_id": "sen_u0l1_02",
+    "role": "claim",
+    "claim_ids": [
+     "clm_observe_vs_infer"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_03",
+    "role": "claim",
+    "claim_ids": [
+     "clm_inference"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_04",
+    "role": "claim",
+    "claim_ids": [
+     "clm_strength"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_05",
+    "role": "claim",
+    "claim_ids": [
+     "clm_trace_limit"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_06",
+    "role": "claim",
+    "claim_ids": [
+     "clm_observation"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_07",
+    "role": "claim",
+    "claim_ids": [
+     "clm_inference"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_08",
+    "role": "claim",
+    "claim_ids": [
+     "clm_testimony"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_09",
+    "role": "claim",
+    "claim_ids": [
+     "clm_testimony_check"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_10",
+    "role": "hypothetical",
+    "claim_ids": []
+   },
+   {
+    "sentence_id": "sen_u0l1_11",
+    "role": "hypothetical",
+    "claim_ids": []
+   },
+   {
+    "sentence_id": "sen_u0l1_12",
+    "role": "hypothetical",
+    "claim_ids": []
+   },
+   {
+    "sentence_id": "sen_u0l1_13",
+    "role": "claim",
+    "claim_ids": [
+     "clm_proportion"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_14",
+    "role": "claim",
+    "claim_ids": [
+     "clm_proportion"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_15",
+    "role": "claim",
+    "claim_ids": [
+     "clm_observation",
+     "clm_inference",
+     "clm_testimony"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_16",
+    "role": "claim",
+    "claim_ids": [
+     "clm_strength",
+     "clm_trace_limit"
+    ]
+   },
+   {
+    "sentence_id": "sen_u0l1_17",
+    "role": "claim",
+    "claim_ids": [
+     "clm_testimony_check",
+     "clm_proportion"
+    ]
+   }
+  ],
+  "arc_map": [
+   {
+    "step_id": "hook",
+    "block_ids": [
+     "blk_u0l1_hook"
+    ]
+   },
+   {
+    "step_id": "predict",
+    "block_ids": [
+     "blk_u0l1_predict"
+    ]
+   },
+   {
+    "step_id": "trace_example",
+    "block_ids": [
+     "blk_u0l1_trace"
+    ]
+   },
+   {
+    "step_id": "fit_evidence",
+    "block_ids": [
+     "blk_u0l1_x1"
+    ]
+   },
+   {
+    "step_id": "discover",
+    "block_ids": [
+     "blk_u0l1_ways"
+    ]
+   },
+   {
+    "step_id": "quick_apply",
+    "block_ids": [
+     "blk_u0l1_x2"
+    ]
+   },
+   {
+    "step_id": "reliability_scenario",
+    "block_ids": [
+     "blk_u0l1_scenario"
+    ]
+   },
+   {
+    "step_id": "who_knows",
+    "block_ids": [
+     "blk_u0l1_x3"
+    ]
+   },
+   {
+    "step_id": "which_to_check",
+    "block_ids": [
+     "blk_u0l1_reflect"
+    ]
+   },
+   {
+    "step_id": "proportion",
+    "block_ids": [
+     "blk_u0l1_proportion"
+    ]
+   },
+   {
+    "step_id": "transfer",
+    "block_ids": [
+     "blk_u0l1_x4",
+     "blk_u0l1_x5"
+    ]
+   },
+   {
+    "step_id": "takeaway",
+    "block_ids": [
+     "blk_u0l1_takeaway"
+    ]
+   }
+  ],
+  "exercises": [
+   {
+    "exercise_id": "ex_u0l1_01",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_ways_of_knowing"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "في مكتبة عامة تجد على إحدى الطاولات كتاباً مفتوحاً بين صفحاته قلم، وبجانبه كوب شاي ما زال دافئاً. أيّ استنتاج لا يتجاوز ما تدل عليه هذه الآثار؟"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "طالب يستعد لاختبار كان يجلس هنا"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "كان أحدٌ هنا قبل وقت قصير"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "صاحب الكتاب غادر المكتبة ولن يعود"
+        }
+       ]
+      }
+     ]
+    },
+    "answer_key": {
+     "option_id": "opt_b"
+    },
+    "option_misconceptions": {},
+    "duel_eligible": false
+   },
+   {
+    "exercise_id": "ex_u0l1_02",
+    "type": "categorize",
+    "concept_ids": [
+     "con_ways_of_knowing"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "كيف عرفت كل واحد مما يلي؟"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "buckets",
+     "categories": [
+      {
+       "category_id": "cat_observe",
+       "label": "ملاحظة مباشرة",
+       "art_key": null,
+       "phase": null,
+       "capacity": null
+      },
+      {
+       "category_id": "cat_trace",
+       "label": "استنتاج من أثر",
+       "art_key": "footprints",
+       "phase": null,
+       "capacity": null
+      },
+      {
+       "category_id": "cat_report",
+       "label": "خبر",
+       "art_key": null,
+       "phase": null,
+       "capacity": null
+      }
+     ],
+     "items": [
+      {
+       "item_id": "itm_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "تتذوّق الحساء فتجده مالحاً"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "تجد قشر برتقال طازجاً على الطاولة، فتستنتج أن أحداً أكل برتقالة قبل قليل"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "تصلك رسالة من الصيدلية بأن دواءك صار جاهزاً للاستلام"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "تشمّ رائحة الخبز وأنت داخل المخبز"
+        }
+       ],
+       "secondary_label": null
+      }
+     ]
+    },
+    "answer_key": {
+     "assignments": [
+      {
+       "item_id": "itm_1",
+       "category_id": "cat_observe"
+      },
+      {
+       "item_id": "itm_2",
+       "category_id": "cat_trace"
+      },
+      {
+       "item_id": "itm_3",
+       "category_id": "cat_report"
+      },
+      {
+       "item_id": "itm_4",
+       "category_id": "cat_observe"
+      }
+     ]
+    },
+    "option_misconceptions": {},
+    "duel_eligible": false
+   },
+   {
+    "exercise_id": "ex_u0l1_03",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_ways_of_knowing"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "لماذا كان جواب الموظف أولى بأن تعتمد عليه المسافرة؟"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأن الخبر الأحدث صحيح دائماً"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأنه في موضع يعرف منه: يرى حالة الرحلات أمامه"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأن الراكب كان يكذب عمداً"
+        }
+       ]
+      }
+     ]
+    },
+    "answer_key": {
+     "option_id": "opt_b"
+    },
+    "option_misconceptions": {},
+    "duel_eligible": false
+   },
+   {
+    "exercise_id": "ex_u0l1_04",
+    "type": "scenario",
+    "concept_ids": [
+     "con_ways_of_knowing"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "ما التصرف الأقرب لما تعلمته؟"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "situation": [
+      {
+       "type": "text",
+       "text": "يرسل إليك قريب مقطعاً يقول فيه رجل لا يُذكر اسمه إن شراباً من الأعشاب يغني عن دواء السكري."
+      }
+     ],
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أنصح قريبي بإيقاف الدواء وتجربة الشراب"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أرفض كل خبر لم أره بعيني"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أسأل طبيباً أو أرجع إلى مصدر طبي موثوق قبل الاعتماد على الكلام"
+        }
+       ]
+      }
+     ]
+    },
+    "answer_key": {
+     "option_id": "opt_c"
+    },
+    "option_misconceptions": {},
+    "duel_eligible": false
+   },
+   {
+    "exercise_id": "ex_u0l1_05",
+    "type": "true_false_reason",
+    "concept_ids": [
+     "con_ways_of_knowing"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "هل هذه العبارة صحيحة؟ اختر الجواب والسبب."
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "statement": [
+      {
+       "type": "text",
+       "text": "إذا أخبرك شخص واحد بشيء، فلا يمكن أن تعرفه حتى يؤكده آخرون."
+      }
+     ],
+     "reasons": [
+      {
+       "option_id": "rsn_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأن خبر شخص صادق يعرف ما يقول قد يكفي، ويزداد التحقق أهمية حين يكون الخبر مفاجئاً أو مصدره مجهولاً"
+        }
+       ]
+      },
+      {
+       "option_id": "rsn_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأن كل ما يقوله الناس صحيح"
+        }
+       ]
+      },
+      {
+       "option_id": "rsn_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأن الأخبار لا تعطي معرفة أصلاً"
+        }
+       ]
+      }
+     ]
+    },
+    "answer_key": {
+     "value": false,
+     "reason_option_id": "rsn_a"
+    },
+    "option_misconceptions": {},
+    "duel_eligible": false
+   },
+   {
+    "exercise_id": "ex_u0l1_fc1",
+    "type": "flashcard",
+    "concept_ids": [
+     "con_ways_of_knowing"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "ما الطرق الثلاث التي نعرف بها الأشياء؟ وما حدّ كل منها؟"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "front": [
+      {
+       "type": "text",
+       "text": "ما الطرق الثلاث التي نعرف بها الأشياء؟ وما حدّ كل منها؟"
+      }
+     ],
+     "back": [
+      {
+       "type": "text",
+       "text": "الملاحظة المباشرة؛ والاستنتاج من الأثر (يتفاوت في قوته ولا يتجاوز ما يدل عليه)؛ والخبر (يوزن بصدق صاحبه وقدرته على المعرفة)."
+      }
+     ]
+    },
+    "answer_key": null,
+    "option_misconceptions": {},
+    "duel_eligible": false
+   }
+  ],
+  "glossary": [],
+  "misconceptions": [
+   {
+    "misconception_id": "mis_only_seeing",
+    "title": "لا نعرف إلا ما نراه بأعيننا",
+    "card": [
+     {
+      "type": "text",
+      "text": "فكرة شائعة لكنها لا تصمد: نعرف أشياء كثيرة بحواسنا الأخرى، وبما تدل عليه الآثار، وبالأخبار الموثوقة، مع أننا لم نرها."
+     }
+    ],
+    "source_ids": []
+   }
+  ],
+  "visuals": [
+   {
+    "scene_id": "scn_u0l1_1",
+    "origin": "generated",
+    "visual": {
+     "kind": "image",
+     "key": null,
+     "version": null,
+     "params": null,
+     "image": {
+      "url": "https://cdn.example.com/test/u0l1/village_apricot_tree.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1000
+     },
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "شجرة مشمش مثمرة في فناء بيت ريفي، بلا أشخاص",
+     "overlays": []
+    },
+    "audit": {
+     "passed": false,
+     "issues": [
+      "TEST placeholder: visuals stage not run; image neither generated nor audited"
+     ]
+    },
+    "attempts": 0,
+    "previews": null
+   },
+   {
+    "scene_id": "scn_u0l1_2",
+    "origin": "generated_scene",
+    "visual": {
+     "kind": "scene",
+     "key": null,
+     "version": null,
+     "params": {
+      "focus": -1
+     },
+     "image": null,
+     "scene": {
+      "scene_id": "scn_u0l1_doorstep",
+      "version": 1,
+      "schema_version": "qabas.scene/1",
+      "url": "assets/scenes/scn_u0l1_doorstep/v1/scene.json",
+      "mime_type": "application/json",
+      "sha256": "030f3cc99fc1ac3bd5e17b390cf695ed7f5d900fed2747037fd47397e9f38f7a",
+      "view_box": {
+       "width": 1600,
+       "height": 1000
+      },
+      "required_capabilities": [
+       "scene/1",
+       "shape.rect/1",
+       "shape.ellipse/1",
+       "shape.path/1",
+       "paint.gradient/1",
+       "track/1",
+       "fx.sparkles/1"
+      ]
+     },
+     "fallback_image": {
+      "url": "assets/scenes/scn_u0l1_doorstep/v1/fallback_f-1.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1000
+     },
+     "fallback_params": {
+      "focus": -1
+     },
+     "alt": "صندوق من الكرتون عليه ملصق، موضوع على عتبة باب أخضر مساءً، والممر إلى البوابة خالٍ",
+     "overlays": []
+    },
+    "audit": {
+     "passed": true,
+     "issues": [
+      "TEST: offline vision review of the rendered preview frames standing in for the Visual Auditor stage (factory §13.4 checklist and visual QA criteria); not a production audit record.",
+      "Note: the label shows bars, not a name (no text in generated images); the teaching sentence carries 'your name'."
+     ]
+    },
+    "attempts": 2,
+    "previews": {
+     "frames": [
+      {
+       "state": {
+        "focus": -1
+       },
+       "time_ms": 0,
+       "reduced_motion": false,
+       "image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/frames/f-1_t0.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      },
+      {
+       "state": {
+        "focus": -1
+       },
+       "time_ms": 1200,
+       "reduced_motion": false,
+       "image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/frames/f-1_t1200.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      },
+      {
+       "state": {
+        "focus": 0
+       },
+       "time_ms": 0,
+       "reduced_motion": false,
+       "image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/frames/f0_t0.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      },
+      {
+       "state": {
+        "focus": 0
+       },
+       "time_ms": 1200,
+       "reduced_motion": false,
+       "image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/frames/f0_t1200.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      },
+      {
+       "state": {
+        "focus": 1
+       },
+       "time_ms": 0,
+       "reduced_motion": false,
+       "image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/frames/f1_t0.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      },
+      {
+       "state": {
+        "focus": 1
+       },
+       "time_ms": 1200,
+       "reduced_motion": false,
+       "image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/frames/f1_t1200.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      },
+      {
+       "state": {
+        "focus": 2
+       },
+       "time_ms": 0,
+       "reduced_motion": false,
+       "image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/frames/f2_t0.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      },
+      {
+       "state": {
+        "focus": 2
+       },
+       "time_ms": 1200,
+       "reduced_motion": false,
+       "image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/frames/f2_t1200.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      },
+      {
+       "state": {
+        "focus": 3
+       },
+       "time_ms": 0,
+       "reduced_motion": false,
+       "image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/frames/f3_t0.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      },
+      {
+       "state": {
+        "focus": 3
+       },
+       "time_ms": 1200,
+       "reduced_motion": false,
+       "image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/frames/f3_t1200.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      }
+     ],
+     "animation": {
+      "url": "assets/scenes/scn_u0l1_doorstep/v1/anim.webm",
+      "mime_type": "video/webm",
+      "width": 800,
+      "height": 500,
+      "duration_ms": 10000
+     },
+     "reduced_motion_still": {
+      "url": "assets/scenes/scn_u0l1_doorstep/v1/still.png",
+      "mime_type": "image/png",
+      "width": 1600,
+      "height": 1000
+     },
+     "fallbacks": [
+      {
+       "state": {
+        "focus": -1
+       },
+       "time_ms": 0,
+       "reduced_motion": true,
+       "image": {
+        "url": "assets/scenes/scn_u0l1_doorstep/v1/fallback_f-1.webp",
+        "mime_type": "image/webp",
+        "width": 1600,
+        "height": 1000
+       }
+      }
+     ],
+     "timing": {
+      "build_raster_p95_ms": 329.3,
+      "first_frame_ms": 3616.7,
+      "device": "desktop Windows, chrome-headless-shell sprite render of the non-normative SVG preview; NOT a reference device"
+     },
+     "renderer_version": "scene_check.render_svg (non-normative SVG preview) + chromium_headless_shell-1243"
+    }
+   },
+   {
+    "scene_id": "scn_u0l1_3",
+    "origin": "generated",
+    "visual": {
+     "kind": "image",
+     "key": null,
+     "version": null,
+     "params": null,
+     "image": {
+      "url": "https://cdn.example.com/test/u0l1/bus_station_night.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1000
+     },
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "محطة حافلات ليلاً فيها شباك تذاكر وشاشة رحلات بلا كتابة، وحافلة تنتظر عند الرصيف",
+     "overlays": []
+    },
+    "audit": {
+     "passed": false,
+     "issues": [
+      "TEST placeholder: visuals stage not run; image neither generated nor audited"
+     ]
+    },
+    "attempts": 0,
+    "previews": null
+   }
+  ]
+ },
+ "qa_report": {
+  "issues": [
+   {
+    "severity": "blocker",
+    "kind": "image_policy",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": "scn_u0l1_1"
+    },
+    "message": "placeholder image (readiness `placeholder`): the visuals stage did not run offline; no asset exists."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": "scn_u0l1_2"
+    },
+    "message": "generated scene readiness `capability_blocked` against the production registry (no capability released) and `preview_only` with the simulation registry: real manifest and fallback bytes, frames from the non-normative SVG preview; not publishable until `qabas_scene` and released capabilities exist."
+   },
+   {
+    "severity": "blocker",
+    "kind": "image_policy",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": "scn_u0l1_3"
+    },
+    "message": "placeholder image (readiness `placeholder`): the visuals stage did not run offline; no asset exists."
+   },
+   {
+    "severity": "info",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "assessment items (2 pretest, 3 unit test) and 3 duel items were not generated in this test run."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "publication gate (contextual.placeholder_media_errors): 12 media URLs across the sessions are placeholders or not published https, e.g. $.items[0].visual.image.url: placeholder media URL https://cdn.example.com/test/u0l1/village_apricot_tree.webp"
+   }
+  ]
+ },
+ "error": null,
+ "review_digest": "ad4ac4dd19917c3f398e89670f86576febdfec9a3b472a8a9712684a4a244032",
+ "published": null
+}

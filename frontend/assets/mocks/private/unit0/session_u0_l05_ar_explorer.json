@@ -1,0 +1,84 @@
+{
+  "session_id": "ses_mock_u0_l5_ar_explorer",
+  "lesson_id": "les_u0_l5",
+  "answers": {
+    "ex_u0_l05_01": {
+      "option_id": "opt_c"
+    },
+    "ex_u0_l05_02": {
+      "value": false,
+      "reason_option_id": "opt_b"
+    },
+    "ex_u0_l05_03": {
+      "segment_id": "seg_3"
+    },
+    "ex_u0_l05_04": {
+      "option_id": "opt_a"
+    }
+  },
+  "feedback": {
+    "ex_u0_l05_01": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "إذا حسمت قاعدة أعلى الخلاف، فسلطة الحكمين ليست نهائية."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l05_02": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "نجاح فريق محدود لا يثبت وجود خالقين مستقلين؛ أعضاء الفريق يعملون ضمن شروط وحدود."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l05_team",
+        "opt_c": "mis_u0_l05_team"
+      }
+    },
+    "ex_u0_l05_03": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "القول إنهما يتفقان دائمًا لا يشرح وحده لماذا لا يمكن أن يختلفا."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l05_04": {
+      "correct_answer": {
+        "option_id": "opt_a"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "القول إنهما يتفقان دائمًا لا يشرح وحده لماذا لا يمكن أن يختلفا."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "نجاح فريق محدود لا يثبت وجود خالقين مستقلين؛ أعضاء الفريق يعملون ضمن شروط وحدود."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_b": "mis_u0_l05_team",
+        "opt_c": "mis_u0_l05_team"
+      }
+    }
+  }
+}

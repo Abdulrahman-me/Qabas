@@ -1,0 +1,679 @@
+{
+ "schema_version": "qabas.scene/1",
+ "scene_id": "scn_u0_l11_neighbour",
+ "version": 1,
+ "view_box": {
+  "width": 1600,
+  "height": 1000
+ },
+ "required_capabilities": [
+  "scene/1",
+  "shape.rect/1",
+  "shape.ellipse/1",
+  "shape.path/1",
+  "paint.gradient/1",
+  "track/1"
+ ],
+ "palette": {
+  "night_emerald": "#073C37",
+  "emerald": "#0B5A52",
+  "flame": "#E0A526",
+  "ember": "#F6E3B4",
+  "mint": "#EEF5F2",
+  "ink": "#16233A",
+  "slate": "#566476",
+  "clear_ember": "#F6E3B400",
+  "clear_flame": "#E0A52600",
+  "sky_top": "#A9C7CC",
+  "sky_low": "#F3E2C2",
+  "hill_far": "#A9BFB4",
+  "hill_mid": "#7FA092",
+  "hill_near": "#5F8676",
+  "river": "#8FB3B8",
+  "bridge": "#8C8478",
+  "bridge_dark": "#6E675D",
+  "mist": "#F4EEE2",
+  "field": "#9DB487",
+  "field_dark": "#7E9A6C",
+  "road": "#8E8A84",
+  "road_edge": "#C9C0B0",
+  "wall": "#EADBC2",
+  "wall_shade": "#CDB796",
+  "cap": "#D8C4A2",
+  "frame": "#B79A74",
+  "win": "#F5D58C",
+  "door": "#0B5A52",
+  "gate": "#4A5566",
+  "trunk": "#6B5140",
+  "leaf": "#3F7A5E",
+  "leaf_lit": "#5E9773",
+  "skin": "#C89F7E",
+  "hair": "#3A2C25",
+  "coat": "#0B5A52",
+  "coat_shade": "#084840",
+  "trousers": "#2A3447",
+  "shoe": "#1C2433",
+  "post": "#4C5666",
+  "lamp": "#FBE7BC"
+ },
+ "assets": [],
+ "states": {
+  "focus": {
+   "type": "int",
+   "min": -1,
+   "max": 1,
+   "default": -1
+  }
+ },
+ "layers": [
+  {
+   "id": "sky",
+   "type": "rect",
+   "x": 0,
+   "y": 0,
+   "w": 1600,
+   "h": 1000,
+   "fill": {
+    "gradient": "linear",
+    "from": [
+     0,
+     0
+    ],
+    "to": [
+     0,
+     640
+    ],
+    "stops": [
+     {
+      "at": 0,
+      "color": "sky_top"
+     },
+     {
+      "at": 1,
+      "color": "sky_low"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sun_glow",
+   "type": "ellipse",
+   "x": 1240,
+   "y": 470,
+   "rx": 360,
+   "ry": 360,
+   "fill": {
+    "gradient": "radial",
+    "center": [
+     1240,
+     470
+    ],
+    "radius": 360,
+    "stops": [
+     {
+      "at": 0,
+      "color": "ember"
+     },
+     {
+      "at": 1,
+      "color": "clear_ember"
+     }
+    ]
+   },
+   "opacity": 0.9
+  },
+  {
+   "id": "sun",
+   "type": "ellipse",
+   "x": 1240,
+   "y": 470,
+   "rx": 46,
+   "ry": 46,
+   "fill": "lamp"
+  },
+  {
+   "id": "hill_far",
+   "type": "path",
+   "d": "M0 560 C 200 500 380 520 560 540 C 760 560 900 480 1100 470 C 1300 460 1460 520 1600 500 L1600 700 L0 700 Z",
+   "fill": "hill_far"
+  },
+  {
+   "id": "hill_mid",
+   "type": "path",
+   "d": "M0 620 C 220 580 420 600 640 610 C 860 620 980 560 1180 566 C 1380 572 1500 600 1600 590 L1600 720 L0 720 Z",
+   "fill": "hill_mid"
+  },
+  {
+   "id": "river",
+   "type": "path",
+   "d": "M880 640 C 1000 628 1200 628 1600 640 L1600 668 C 1200 660 1000 660 880 668 Z",
+   "fill": "river"
+  },
+  {
+   "id": "bridge_arches",
+   "type": "path",
+   "d": "M1000 600 L1520 590 L1520 612 C 1490 614 1468 632 1462 664 L1436 664 C 1430 636 1410 620 1384 620 C 1358 620 1338 636 1332 664 L1306 664 C 1300 638 1280 622 1254 622 C 1228 622 1208 638 1202 664 L1176 664 C 1170 640 1150 624 1124 624 C 1098 624 1078 640 1072 664 L1046 664 C 1040 642 1024 626 1000 624 Z",
+   "fill": "bridge"
+  },
+  {
+   "id": "bridge_rail",
+   "type": "path",
+   "d": "M994 588 L1526 578 L1526 596 L994 606 Z M1000 560 L1008 560 L1008 600 L1000 600 Z M1512 552 L1520 552 L1520 590 L1512 590 Z",
+   "fill": "bridge_dark"
+  },
+  {
+   "id": "hill_near",
+   "type": "path",
+   "d": "M0 700 C 240 660 480 680 760 690 C 980 698 1100 668 1300 676 C 1440 682 1540 700 1600 696 L1600 1000 L0 1000 Z",
+   "fill": {
+    "gradient": "linear",
+    "from": [
+     0,
+     660
+    ],
+    "to": [
+     0,
+     1000
+    ],
+    "stops": [
+     {
+      "at": 0,
+      "color": "field"
+     },
+     {
+      "at": 1,
+      "color": "field_dark"
+     }
+    ]
+   }
+  },
+  {
+   "id": "road",
+   "type": "path",
+   "d": "M1000 1000 C 1040 900 1080 800 1110 740 C 1130 700 1160 672 1200 660 L1222 660 C 1196 676 1176 706 1166 744 C 1150 810 1160 900 1210 1000 Z",
+   "fill": "road"
+  },
+  {
+   "id": "road_line",
+   "type": "path",
+   "d": "M1104 1000 C 1110 920 1126 830 1146 760 C 1156 726 1172 700 1192 680 L1196 684 C 1180 704 1166 730 1158 762 C 1140 834 1128 922 1124 1000 Z",
+   "fill": "road_edge"
+  },
+  {
+   "id": "mist_a",
+   "type": "ellipse",
+   "x": 1250,
+   "y": 626,
+   "rx": 120,
+   "ry": 40,
+   "fill": "mist",
+   "opacity": 0.85,
+   "tracks": [
+    {
+     "property": "translate_x",
+     "duration_ms": 9000,
+     "easing": "ease_in_out",
+     "loop": "ping_pong",
+     "keyframes": [
+      {
+       "t": 0,
+       "v": -40
+      },
+      {
+       "t": 1,
+       "v": 40
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mist_b",
+   "type": "ellipse",
+   "x": 1300,
+   "y": 600,
+   "rx": 90,
+   "ry": 26,
+   "fill": "mist",
+   "opacity": 0.7,
+   "tracks": [
+    {
+     "property": "translate_x",
+     "duration_ms": 12000,
+     "easing": "ease_in_out",
+     "loop": "ping_pong",
+     "keyframes": [
+      {
+       "t": 0,
+       "v": 30
+      },
+      {
+       "t": 1,
+       "v": -40
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mist_c",
+   "type": "ellipse",
+   "x": 1200,
+   "y": 650,
+   "rx": 110,
+   "ry": 22,
+   "fill": "mist",
+   "opacity": 0.75
+  },
+  {
+   "id": "bridge_glow",
+   "type": "ellipse",
+   "x": 1260,
+   "y": 620,
+   "rx": 300,
+   "ry": 120,
+   "fill": {
+    "gradient": "radial",
+    "center": [
+     1260,
+     620
+    ],
+    "radius": 120,
+    "stops": [
+     {
+      "at": 0,
+      "color": "flame"
+     },
+     {
+      "at": 1,
+      "color": "clear_flame"
+     }
+    ]
+   },
+   "opacity": 0,
+   "state_rules": [
+    {
+     "when": {
+      "focus": {
+       "eq": 1
+      }
+     },
+     "set": {
+      "opacity": 0.5
+     },
+     "transition_ms": 500,
+     "easing": "ease_in_out"
+    }
+   ]
+  },
+  {
+   "id": "tree_trunk",
+   "type": "rect",
+   "x": 176,
+   "y": 520,
+   "w": 30,
+   "h": 280,
+   "fill": "trunk",
+   "corner": 8
+  },
+  {
+   "id": "tree_crown",
+   "type": "path",
+   "d": "M190 300 C 120 300 80 360 96 420 C 50 450 52 530 110 552 C 120 600 200 620 240 590 C 300 610 350 560 330 510 C 380 470 360 400 310 390 C 300 330 250 296 190 300 Z",
+   "fill": "leaf",
+   "transform": {
+    "origin_x": 190,
+    "origin_y": 580
+   },
+   "tracks": [
+    {
+     "property": "rotation",
+     "duration_ms": 5200,
+     "easing": "ease_in_out",
+     "loop": "ping_pong",
+     "keyframes": [
+      {
+       "t": 0,
+       "v": -1.2
+      },
+      {
+       "t": 1,
+       "v": 1.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tree_lit",
+   "type": "path",
+   "d": "M250 330 C 290 340 310 380 300 410 C 340 430 350 480 320 510 C 300 470 280 440 250 420 Z",
+   "fill": "leaf_lit",
+   "transform": {
+    "origin_x": 190,
+    "origin_y": 580
+   },
+   "tracks": [
+    {
+     "property": "rotation",
+     "duration_ms": 5200,
+     "easing": "ease_in_out",
+     "loop": "ping_pong",
+     "keyframes": [
+      {
+       "t": 0,
+       "v": -1.2
+      },
+      {
+       "t": 1,
+       "v": 1.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "house",
+   "type": "rect",
+   "x": 300,
+   "y": 400,
+   "w": 470,
+   "h": 400,
+   "fill": "wall"
+  },
+  {
+   "id": "house_side",
+   "type": "rect",
+   "x": 770,
+   "y": 420,
+   "w": 40,
+   "h": 380,
+   "fill": "wall_shade"
+  },
+  {
+   "id": "house_parapet",
+   "type": "rect",
+   "x": 290,
+   "y": 384,
+   "w": 530,
+   "h": 26,
+   "fill": "cap",
+   "corner": 4
+  },
+  {
+   "id": "win_frame",
+   "type": "rect",
+   "x": 370,
+   "y": 470,
+   "w": 120,
+   "h": 130,
+   "fill": "frame",
+   "corner": 6
+  },
+  {
+   "id": "win",
+   "type": "rect",
+   "x": 380,
+   "y": 480,
+   "w": 100,
+   "h": 110,
+   "fill": "win",
+   "corner": 4
+  },
+  {
+   "id": "door",
+   "type": "rect",
+   "x": 560,
+   "y": 560,
+   "w": 110,
+   "h": 240,
+   "fill": "door",
+   "corner": 6
+  },
+  {
+   "id": "garden_wall",
+   "type": "path",
+   "d": "M80 760 H660 V880 H80 Z M800 760 H930 V880 H800 Z",
+   "fill": "cap"
+  },
+  {
+   "id": "garden_wall_face",
+   "type": "path",
+   "d": "M80 778 H660 V880 H80 Z M800 778 H930 V880 H800 Z",
+   "fill": "wall"
+  },
+  {
+   "id": "pillar_l",
+   "type": "rect",
+   "x": 640,
+   "y": 730,
+   "w": 30,
+   "h": 152,
+   "fill": "frame",
+   "corner": 4
+  },
+  {
+   "id": "pillar_r",
+   "type": "rect",
+   "x": 784,
+   "y": 730,
+   "w": 30,
+   "h": 152,
+   "fill": "frame",
+   "corner": 4
+  },
+  {
+   "id": "gate_leaf",
+   "type": "path",
+   "d": "M814 760 L884 742 L884 752 L814 770 Z M814 850 L884 846 L884 856 L814 860 Z M826 766 H832 V858 H826 Z M846 760 H852 V854 H846 Z M866 754 H872 V850 H866 Z M880 744 H886 V856 H880 Z",
+   "fill": "gate"
+  },
+  {
+   "id": "lamp_post",
+   "type": "rect",
+   "x": 990,
+   "y": 420,
+   "w": 12,
+   "h": 460,
+   "fill": "post",
+   "corner": 4
+  },
+  {
+   "id": "lamp_head",
+   "type": "path",
+   "d": "M972 404 H1020 L1012 432 H980 Z",
+   "fill": "post"
+  },
+  {
+   "id": "lamp_glow",
+   "type": "ellipse",
+   "x": 996,
+   "y": 440,
+   "rx": 70,
+   "ry": 70,
+   "fill": {
+    "gradient": "radial",
+    "center": [
+     996,
+     440
+    ],
+    "radius": 70,
+    "stops": [
+     {
+      "at": 0,
+      "color": "ember"
+     },
+     {
+      "at": 1,
+      "color": "clear_ember"
+     }
+    ]
+   },
+   "opacity": 0.6,
+   "tracks": [
+    {
+     "property": "opacity",
+     "duration_ms": 1400,
+     "easing": "ease_in_out",
+     "loop": "ping_pong",
+     "keyframes": [
+      {
+       "t": 0,
+       "v": 0.8
+      },
+      {
+       "t": 1,
+       "v": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "neighbour_glow",
+   "type": "ellipse",
+   "x": 724,
+   "y": 720,
+   "rx": 210,
+   "ry": 210,
+   "fill": {
+    "gradient": "radial",
+    "center": [
+     724,
+     720
+    ],
+    "radius": 210,
+    "stops": [
+     {
+      "at": 0,
+      "color": "ember"
+     },
+     {
+      "at": 1,
+      "color": "clear_ember"
+     }
+    ]
+   },
+   "opacity": 0,
+   "state_rules": [
+    {
+     "when": {
+      "focus": {
+       "eq": 0
+      }
+     },
+     "set": {
+      "opacity": 0.9
+     },
+     "transition_ms": 500,
+     "easing": "ease_in_out"
+    }
+   ]
+  },
+  {
+   "id": "neighbour",
+   "type": "group",
+   "children": [
+    {
+     "id": "nb_leg_l",
+     "type": "rect",
+     "x": 698,
+     "y": 790,
+     "w": 20,
+     "h": 86,
+     "fill": "trousers",
+     "corner": 6
+    },
+    {
+     "id": "nb_leg_r",
+     "type": "rect",
+     "x": 728,
+     "y": 790,
+     "w": 20,
+     "h": 86,
+     "fill": "trousers",
+     "corner": 6
+    },
+    {
+     "id": "nb_shoes",
+     "type": "path",
+     "d": "M690 872 H722 Q726 884 716 886 H690 Z M724 872 H756 Q760 884 750 886 H724 Z",
+     "fill": "shoe"
+    },
+    {
+     "id": "nb_body",
+     "type": "path",
+     "d": "M686 646 C 694 628 710 622 724 622 C 738 622 754 628 762 646 L770 800 C 740 808 708 808 678 800 Z",
+     "fill": "coat"
+    },
+    {
+     "id": "nb_arm_l",
+     "type": "path",
+     "d": "M688 652 C 676 690 672 740 676 778 L690 778 C 690 742 694 700 700 664 Z",
+     "fill": "coat_shade"
+    },
+    {
+     "id": "nb_arm_r",
+     "type": "path",
+     "d": "M756 650 C 790 664 822 680 850 690 L846 704 C 814 698 782 690 752 680 Z",
+     "fill": "coat_shade"
+    },
+    {
+     "id": "nb_hand",
+     "type": "ellipse",
+     "x": 852,
+     "y": 696,
+     "rx": 10,
+     "ry": 9,
+     "fill": "skin"
+    },
+    {
+     "id": "nb_neck",
+     "type": "rect",
+     "x": 716,
+     "y": 604,
+     "w": 16,
+     "h": 22,
+     "fill": "skin",
+     "corner": 4
+    },
+    {
+     "id": "nb_head",
+     "type": "ellipse",
+     "x": 724,
+     "y": 580,
+     "rx": 30,
+     "ry": 36,
+     "fill": "skin"
+    },
+    {
+     "id": "nb_hair",
+     "type": "path",
+     "d": "M694 574 C 694 548 708 540 724 540 C 742 540 756 550 756 574 C 748 562 738 558 724 558 C 710 558 700 564 694 574 Z",
+     "fill": "hair"
+    }
+   ]
+  }
+ ],
+ "anchors": [],
+ "reduced_motion": {
+  "still_time_ms": 0
+ },
+ "preview": {
+  "frames_ms": [
+   0,
+   1500
+  ],
+  "states": [
+   {
+    "focus": -1
+   },
+   {
+    "focus": 0
+   },
+   {
+    "focus": 1
+   }
+  ]
+ }
+}

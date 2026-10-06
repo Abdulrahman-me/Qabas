@@ -1,0 +1,137 @@
+{
+  "session_id": "ses_mock_u0_l12_ar_explorer",
+  "lesson_id": "les_u0_l12",
+  "answers": {
+    "ex_u0_l12_01": {
+      "order": [
+        "st_3",
+        "st_4",
+        "st_1",
+        "st_5",
+        "st_2"
+      ]
+    },
+    "ex_u0_l12_02": {
+      "pairs": [
+        {
+          "left_id": "l_1",
+          "right_id": "r_3"
+        },
+        {
+          "left_id": "l_2",
+          "right_id": "r_1"
+        },
+        {
+          "left_id": "l_3",
+          "right_id": "r_2"
+        }
+      ]
+    },
+    "ex_u0_l12_03": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l12_04": {
+      "segment_id": "seg_3"
+    }
+  },
+  "feedback": {
+    "ex_u0_l12_01": {
+      "correct_answer": {
+        "order": [
+          "st_3",
+          "st_4",
+          "st_1",
+          "st_5",
+          "st_2"
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "ابدأ بالأسئلة التي تساعدك على فهم ما بعدها؛ هذا ترتيب للتعلّم، لا تسجيل لاعتقاد."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l12_02": {
+      "correct_answer": {
+        "pairs": [
+          {
+            "left_id": "l_1",
+            "right_id": "r_3"
+          },
+          {
+            "left_id": "l_2",
+            "right_id": "r_1"
+          },
+          {
+            "left_id": "l_3",
+            "right_id": "r_2"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "اختر الفحص الذي يجيب السؤال نفسه، دون نقل نتيجة من موضوع إلى موضوع آخر."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l12_03": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "فهم الفكرة يسمح لك بتحديد سؤال أدق؛ لا تحوّل التعلّم إلى تصنيف شخصي."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l12_completion_belief"
+      },
+      "option_feedback": {
+        "opt_a": [
+          {
+            "type": "text",
+            "text": "لا تستنتج اعتقادًا من إنجاز تعليمي."
+          }
+        ],
+        "opt_b": [
+          {
+            "type": "text",
+            "text": "هذا يحدّد متابعة مفيدة، ويحفظ الفرق بين الفهم والاختيار."
+          }
+        ],
+        "opt_c": [
+          {
+            "type": "text",
+            "text": "ضع السؤال بجانب ما فهمته بدل محو الفهم كله."
+          }
+        ]
+      }
+    },
+    "ex_u0_l12_04": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "فهم رأي أو دعوى يختلف عن الموافقة عليهما."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "إجابات التمارين تقيس فهم الخريطة والأدلة، ولا تكشف اعتقادك الشخصي."
+        }
+      ],
+      "option_misconceptions": {},
+      "targets_misconception_id": "mis_u0_l12_completion_belief"
+    }
+  }
+}

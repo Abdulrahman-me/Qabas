@@ -1,0 +1,122 @@
+{
+ "lesson_id": "les_u2_l1",
+ "unit_id": "unit_2",
+ "title": "من هو الله؟",
+ "subtitle": "معرفة الله",
+ "lesson_type": "concept",
+ "reviewed_by": "لجنة المراجعة الشرعية",
+ "version": 3,
+ "source_count": 1,
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "أن تشرح معنى أن الله واحد لا شريك له."
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "text": "أن تتعرف على سورة الإخلاص ومعناها العام."
+   }
+  ]
+ ],
+ "blocks": [
+  {
+   "block_id": "blk_u2_l1_p1",
+   "type": "paragraph",
+   "sentences": [
+    {
+     "sentence_id": "sen_u2_l1_01",
+     "spans": [
+      {
+       "type": "text",
+       "text": "في الإسلام، الله هو "
+      },
+      {
+       "type": "term",
+       "text": "الخالق",
+       "term_id": "term_khaliq"
+      },
+      {
+       "type": "text",
+       "text": " لكل شيء، وهو واحد لا شريك له."
+      }
+     ],
+     "source_ids": [
+      "src_q_112_1_4"
+     ]
+    }
+   ]
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "اقرأ سورة الإخلاص مع معناها، وتأمل كل صفة من صفات الله فيها."
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_u2_l1_1",
+    "title": "وحدانية الله",
+    "concept_ids": [
+     "con_allah_one"
+    ]
+   },
+   {
+    "topic_id": "rt_u2_l1_2",
+    "title": "سورة الإخلاص",
+    "concept_ids": [
+     "con_allah_one"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "غداً سنسألك: ماذا تعني كلمة «أحد»؟"
+   }
+  ]
+ },
+ "sources": [
+  {
+   "source_id": "src_q_112_1_4",
+   "kind": "quran",
+   "provider": "quran_com",
+   "title": "سورة الإخلاص",
+   "reference": "الإخلاص: 1–4",
+   "excerpt": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+   "url": "https://quran.com/112",
+   "displayed": true,
+   "display_role": "content"
+  }
+ ],
+ "terms": {
+  "term_khaliq": {
+   "term_id": "term_khaliq",
+   "text": "الخالق",
+   "transliteration": "Al-Khaliq",
+   "state": "learning",
+   "level": "basic",
+   "definition": [
+    {
+     "type": "text",
+     "text": "الذي أوجد كل شيء من العدم."
+    }
+   ],
+   "example": [
+    {
+     "type": "text",
+     "text": "السماء والأرض من خلق الله."
+    }
+   ],
+   "pronunciation_audio_url": "https://cdn.example.com/terms/term_khaliq.mp3",
+   "source_id": null,
+   "lesson_id": "les_u2_l1",
+   "lesson_title": "من هو الله؟",
+   "arabic": null
+  }
+ }
+}

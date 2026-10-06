@@ -693,6 +693,24 @@ class AppLocalizationsAr extends AppLocalizations {
   String get journeyDoneLabel => 'مكتمل';
 
   @override
+  String get journeyDownloadAction => 'تحميل تطبيق أندرويد';
+
+  @override
+  String get journeyDownloadBody => 'مصمم لأندرويد وiOS والويب وويندوز وmacOS ولينكس. جرّب قبس على أندرويد اليوم.';
+
+  @override
+  String get journeyDownloadDismiss => 'إغلاق إعلان تحميل تطبيق أندرويد';
+
+  @override
+  String get journeyDownloadEyebrow => 'أبعد من المتصفح';
+
+  @override
+  String get journeyDownloadFailed => 'تعذّر فتح رابط التحميل. حاول مرة أخرى.';
+
+  @override
+  String get journeyDownloadTitle => 'رحلة واحدة، عبر أجهزتك.';
+
+  @override
   String get journeyEmptyBody => 'ستظهر خطواتك التالية هنا. حاول مجدداً بعد قليل.';
 
   @override
@@ -1730,6 +1748,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get reviewerSame => 'متساويان';
+
+  @override
+  String get reviewerSampleDescription =>
+      'راجع خطط الدروس ومسوداتها، وقارن الدروس في اختبار مجهول المصدر، واستكشف مؤشرات توضيحية. تستخدم هذه المعاينة محتوى تجريبياً، ويُحفظ تقدمك في التعلم عند العودة.';
+
+  @override
+  String get reviewerSampleOpen => 'استكشف لوحة المراجع';
 
   @override
   String get reviewerSaveEdits => 'حفظ التعديلات المزدوجة';

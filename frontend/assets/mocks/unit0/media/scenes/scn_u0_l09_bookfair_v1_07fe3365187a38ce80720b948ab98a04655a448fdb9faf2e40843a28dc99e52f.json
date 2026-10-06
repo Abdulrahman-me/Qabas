@@ -1,0 +1,443 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l09_bookfair",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "emerald": "#0B5A52",
+    "night": "#073C37",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "ink": "#16233A",
+    "slate": "#566476",
+    "clear": "#F6E3B400",
+    "sand": "#D8C1A0",
+    "wood": "#86664C",
+    "wood_dark": "#604B3D",
+    "paper": "#FFF9E9",
+    "stone": "#89978B",
+    "far": "#9CB3B0",
+    "skin": "#C79C78",
+    "sky": "#DCEBE7"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 4,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "sky",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "sky"
+          },
+          {
+            "at": 1,
+            "color": "sand"
+          }
+        ]
+      }
+    },
+    {
+      "id": "distant_stalls",
+      "type": "path",
+      "d": "M0 560 L100 510 H340 L440 560 V690 H0 Z M1140 560 L1240 510 H1480 L1600 560 V690 H1140 Z",
+      "fill": "far"
+    },
+    {
+      "id": "ground",
+      "type": "rect",
+      "x": 0,
+      "y": 690,
+      "w": 1600,
+      "h": 310,
+      "fill": "sand"
+    },
+    {
+      "id": "shadow",
+      "type": "ellipse",
+      "x": 800,
+      "y": 866,
+      "rx": 520,
+      "ry": 70,
+      "fill": "wood_dark",
+      "opacity": 0.13
+    },
+    {
+      "id": "post_left",
+      "type": "rect",
+      "x": 350,
+      "y": 270,
+      "w": 26,
+      "h": 490,
+      "fill": "wood"
+    },
+    {
+      "id": "post_right",
+      "type": "rect",
+      "x": 1224,
+      "y": 270,
+      "w": 26,
+      "h": 490,
+      "fill": "wood"
+    },
+    {
+      "id": "canopy",
+      "type": "path",
+      "d": "M290 285 Q800 166 1310 285 L1280 384 Q1160 416 1060 376 Q930 422 800 378 Q670 422 540 376 Q430 418 320 384 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "canopy_light",
+      "type": "path",
+      "d": "M290 285 Q800 166 1310 285 L1300 310 Q800 220 300 310 Z",
+      "fill": "mint",
+      "opacity": 0.22
+    },
+    {
+      "id": "table",
+      "type": "rect",
+      "x": 370,
+      "y": 656,
+      "w": 860,
+      "h": 80,
+      "fill": "wood",
+      "corner": 12
+    },
+    {
+      "id": "table_front",
+      "type": "rect",
+      "x": 386,
+      "y": 730,
+      "w": 828,
+      "h": 116,
+      "fill": "wood_dark",
+      "corner": 9
+    },
+    {
+      "id": "leg_left",
+      "type": "rect",
+      "x": 430,
+      "y": 824,
+      "w": 32,
+      "h": 95,
+      "fill": "wood"
+    },
+    {
+      "id": "leg_right",
+      "type": "rect",
+      "x": 1140,
+      "y": 824,
+      "w": 32,
+      "h": 95,
+      "fill": "wood"
+    },
+    {
+      "id": "book_stack_0",
+      "type": "rect",
+      "x": 430,
+      "y": 598,
+      "w": 188,
+      "h": 24,
+      "fill": "emerald",
+      "corner": 4
+    },
+    {
+      "id": "book_stack_1",
+      "type": "rect",
+      "x": 450,
+      "y": 574,
+      "w": 188,
+      "h": 24,
+      "fill": "paper",
+      "corner": 4
+    },
+    {
+      "id": "book_stack_2",
+      "type": "rect",
+      "x": 475,
+      "y": 548,
+      "w": 188,
+      "h": 24,
+      "fill": "wood",
+      "corner": 4
+    },
+    {
+      "id": "book_stack_3",
+      "type": "rect",
+      "x": 980,
+      "y": 601,
+      "w": 188,
+      "h": 24,
+      "fill": "paper",
+      "corner": 4
+    },
+    {
+      "id": "book_stack_4",
+      "type": "rect",
+      "x": 998,
+      "y": 575,
+      "w": 188,
+      "h": 24,
+      "fill": "emerald",
+      "corner": 4
+    },
+    {
+      "id": "book_attention",
+      "type": "ellipse",
+      "x": 800,
+      "y": 573,
+      "rx": 190,
+      "ry": 190,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          800,
+          573
+        ],
+        "radius": 190,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 0.65
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "open_cover",
+      "type": "path",
+      "d": "M628 592 Q706 552 802 586 Q900 551 978 592 L966 646 Q890 618 802 650 Q712 619 640 646 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "pages_left",
+      "type": "path",
+      "d": "M640 576 Q716 543 800 580 V633 Q716 602 648 632 Z",
+      "fill": "paper"
+    },
+    {
+      "id": "pages_right",
+      "type": "path",
+      "d": "M806 580 Q890 543 964 576 L957 632 Q888 602 806 633 Z",
+      "fill": "paper"
+    },
+    {
+      "id": "spine",
+      "type": "path",
+      "d": "M800 580 H806 V641 H800 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "visitor_body",
+      "type": "path",
+      "d": "M1035 516 Q1050 481 1090 485 Q1134 480 1152 520 L1186 793 Q1105 825 1019 793 Z",
+      "fill": "night"
+    },
+    {
+      "id": "visitor_head",
+      "type": "ellipse",
+      "x": 1095,
+      "y": 431,
+      "rx": 42,
+      "ry": 51,
+      "fill": "skin"
+    },
+    {
+      "id": "visitor_arm",
+      "type": "path",
+      "d": "M1039 535 Q1000 541 944 577 L955 598 Q1023 588 1060 565 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "visitor_hand",
+      "type": "path",
+      "d": "M943 577 Q930 579 925 590 Q935 607 955 598 Z",
+      "fill": "skin"
+    },
+    {
+      "id": "reading_attention",
+      "type": "ellipse",
+      "x": 803,
+      "y": 601,
+      "rx": 128,
+      "ry": 128,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          803,
+          601
+        ],
+        "radius": 128,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 0.65
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "lantern_top",
+      "type": "rect",
+      "x": 786,
+      "y": 319,
+      "w": 28,
+      "h": 16,
+      "fill": "wood_dark"
+    },
+    {
+      "id": "lantern",
+      "type": "rect",
+      "x": 768,
+      "y": 335,
+      "w": 64,
+      "h": 77,
+      "fill": "ember",
+      "corner": 15
+    },
+    {
+      "id": "lantern_light",
+      "type": "ellipse",
+      "x": 800,
+      "y": 374,
+      "rx": 110,
+      "ry": 110,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          800,
+          374
+        ],
+        "radius": 110,
+        "stops": [
+          {
+            "at": 0,
+            "color": "ember"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0.65,
+      "tracks": [
+        {
+          "property": "opacity",
+          "duration_ms": 3000,
+          "easing": "ease_in_out",
+          "loop": "ping_pong",
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0.5
+            },
+            {
+              "t": 1,
+              "v": 0.7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      },
+      {
+        "beat": 4
+      }
+    ]
+  }
+}

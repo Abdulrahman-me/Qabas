@@ -1,0 +1,91 @@
+{
+ "session_id": "ses_91ab",
+ "kind": "lesson",
+ "score": {
+  "correct": 1,
+  "total": 2,
+  "percent": 50
+ },
+ "passed": null,
+ "xp": {
+  "total": 15,
+  "breakdown": [
+   {
+    "reason": "lesson_complete",
+    "xp": 10
+   },
+   {
+    "reason": "recitation_passed",
+    "xp": 3
+   },
+   {
+    "reason": "daily_goal_met",
+    "xp": 2
+   }
+  ]
+ },
+ "duration_ms": 312000,
+ "layers": {
+  "understanding": {
+   "correct": 1,
+   "total": 2,
+   "percent": 50
+  },
+  "applying": null,
+  "remembering": null
+ },
+ "streak": {
+  "current": 3,
+  "extended_today": true
+ },
+ "daily_goal": {
+  "minutes": 10,
+  "minutes_today": 12,
+  "met": true
+ },
+ "mastery_summary": [
+  {
+   "concept_id": "con_allah_one",
+   "title": "وحدانية الله",
+   "before": 0.2,
+   "after": 0.56
+  },
+  {
+   "concept_id": "con_qibla",
+   "title": "القِبلة",
+   "before": 0.4,
+   "after": 0.37
+  }
+ ],
+ "terms_mastered": [
+  {
+   "term_id": "term_khaliq",
+   "text": "الخالق"
+  }
+ ],
+ "misconceptions": {
+  "activated": [
+   {
+    "misconception_id": "mis_kaaba_worship",
+    "title": "المسلمون يعبدون الكعبة"
+   }
+  ],
+  "resolved": []
+ },
+ "unlocked": [
+  {
+   "type": "lesson",
+   "id": "les_u2_l2",
+   "title": "واحدٌ لا مثيل له"
+  }
+ ],
+ "review_items": null,
+ "next_step": {
+  "type": "lesson",
+  "reason": "next_lesson",
+  "unit_id": "unit_2",
+  "lesson_id": "les_u2_l2",
+  "title": "واحدٌ لا مثيل له",
+  "due_reviews_count": 1
+ }
+}

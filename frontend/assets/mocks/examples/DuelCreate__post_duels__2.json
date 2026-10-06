@@ -1,0 +1,10 @@
+{
+ "preset": "group",
+ "opponent_type": "friends",
+ "friend_user_ids": [
+  "usr_f1",
+  "usr_f2",
+  "usr_f3"
+ ],
+ "bot_fill": true
+}

@@ -1,0 +1,228 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l01_library",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "night": "#16233A",
+    "dark": "#073C37",
+    "green": "#0B5A52",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "slate": "#566476",
+    "sand": "#D8C6A5",
+    "wood": "#996A45",
+    "wood_dark": "#624630",
+    "skin": "#C9A285",
+    "clear": "#E0A52600",
+    "glow": "#E0A52655",
+    "glass": "#BBD8D766",
+    "white": "#FFFFFF"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 3,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "mint"
+          },
+          {
+            "at": 1,
+            "color": "sand"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "floor",
+      "type": "rect",
+      "x": 0,
+      "y": 770,
+      "w": 1600,
+      "h": 230,
+      "fill": "sand",
+      "corner": 0
+    },
+    {
+      "id": "ground_shadow",
+      "type": "ellipse",
+      "x": 800,
+      "y": 850,
+      "rx": 430,
+      "ry": 55,
+      "fill": "dark",
+      "opacity": 0.15
+    },
+    {
+      "id": "back_wall",
+      "type": "rect",
+      "x": 180,
+      "y": 120,
+      "w": 1240,
+      "h": 585,
+      "fill": "mint",
+      "corner": 20
+    },
+    {
+      "id": "shelves",
+      "type": "rect",
+      "x": 235,
+      "y": 185,
+      "w": 280,
+      "h": 420,
+      "fill": "wood",
+      "corner": 15
+    },
+    {
+      "id": "shelf_lines",
+      "type": "path",
+      "d": "M235 325 L515 325 L515 345 L235 345 Z M235 475 L515 475 L515 495 L235 495 Z",
+      "fill": "wood_dark"
+    },
+    {
+      "id": "books",
+      "type": "path",
+      "d": "M266 230 L296 230 L296 322 L266 322 Z M308 207 L345 207 L345 322 L308 322 Z M357 245 L380 245 L400 320 L377 322 Z M415 227 L455 227 L455 322 L415 322 Z M268 389 L303 389 L303 472 L268 472 Z M324 365 L355 365 L355 472 L324 472 Z M375 390 L420 390 L420 472 L375 472 Z",
+      "fill": "green"
+    },
+    {
+      "id": "window",
+      "type": "rect",
+      "x": 1000,
+      "y": 160,
+      "w": 260,
+      "h": 380,
+      "fill": "ember",
+      "corner": 80
+    },
+    {
+      "id": "table",
+      "type": "path",
+      "d": "M360 660 L1210 660 L1330 760 L280 760 Z M345 760 L379 760 L379 940 L345 940 Z M1190 760 L1224 760 L1224 940 L1190 940 Z",
+      "fill": "wood"
+    },
+    {
+      "id": "book_open",
+      "type": "path",
+      "d": "M560 650 Q670 612 775 650 Q877 612 990 650 L975 727 Q870 687 775 730 Q671 687 570 727 Z",
+      "fill": "mint"
+    },
+    {
+      "id": "book_spine",
+      "type": "path",
+      "d": "M770 650 L779 650 L779 730 L770 730 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "saucer",
+      "type": "ellipse",
+      "x": 1057,
+      "y": 702,
+      "rx": 88,
+      "ry": 23,
+      "fill": "mint"
+    },
+    {
+      "id": "cup",
+      "type": "path",
+      "d": "M1003 622 L1105 622 L1092 692 Q1053 710 1016 692 Z M1101 633 Q1156 623 1150 668 Q1138 691 1100 677 L1101 662 Q1129 671 1131 651 Q1128 642 1101 647 Z",
+      "fill": "green"
+    },
+    {
+      "id": "tea",
+      "type": "ellipse",
+      "x": 1054,
+      "y": 622,
+      "rx": 51,
+      "ry": 12,
+      "fill": "wood_dark"
+    },
+    {
+      "id": "steam",
+      "type": "path",
+      "d": "M1048 604 Q1028 580 1050 560 Q1071 540 1051 521 L1061 519 Q1082 543 1060 564 Q1040 584 1058 603 Z",
+      "fill": "ember",
+      "opacity": 0.55,
+      "tracks": [
+        {
+          "property": "translate_y",
+          "duration_ms": 4200,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": -14
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "ping_pong"
+        }
+      ]
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      }
+    ]
+  }
+}

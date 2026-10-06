@@ -1,0 +1,90 @@
+{
+ "message_id": "msg_a_102",
+ "role": "assistant",
+ "status": "completed",
+ "stage": "done",
+ "created_at": "2026-10-04T10:05:00Z",
+ "completed_at": "2026-10-04T10:05:14Z",
+ "understood_input": {
+  "transcript": null,
+  "images": [
+   {
+    "attachment_id": "att_img_1",
+    "extracted_text": "قال رسول الله ﷺ: اطلبوا العلم ولو بالصين",
+    "description": "لقطة شاشة لمنشور على منصة تواصل اجتماعي"
+   }
+  ],
+  "document": null
+ },
+ "classification": {
+  "question_class": "verification",
+  "label": "تحقق"
+ },
+ "abstained": false,
+ "blocks": [
+  {
+   "type": "verification",
+   "items": [
+    {
+     "item_id": "vi_1",
+     "quote_text": "اطلبوا العلم ولو بالصين",
+     "detected_kind": "hadith",
+     "status": "hadith_graded",
+     "hadith_grade": {
+      "grade_label": "باطل",
+      "grade_category": "fabricated",
+      "grader": "الألباني",
+      "source_book": "السلسلة الضعيفة",
+      "reference": null
+     },
+     "correct_text": null,
+     "alternative": {
+      "evidence_id": "src_h_talab_ilm",
+      "kind": "hadith",
+      "quran": null,
+      "hadith": {
+       "text_ar": "طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ",
+       "translation": null,
+       "narrator": "أنس بن مالك رضي الله عنه",
+       "collections": [
+        "سنن ابن ماجه"
+       ],
+       "grade_label": "صحيح",
+       "grade_category": "authentic",
+       "grade_source": "الألباني",
+       "excerpt": false
+      }
+     },
+     "note": [
+      {
+       "type": "text",
+       "text": "هذا اللفظ لا يصح نسبته إلى النبي ﷺ. ويغني عنه في الحث على طلب العلم حديث صحيح بمعنى قريب."
+      }
+     ],
+     "source_ids": [
+      "src_dorar_talab_sin"
+     ]
+    }
+   ]
+  }
+ ],
+ "citations": [
+  {
+   "ref": 1,
+   "source": {
+    "source_id": "src_dorar_talab_sin",
+    "kind": "hadith",
+    "provider": "dorar",
+    "title": "الموسوعة الحديثية — الدرر السنية",
+    "reference": "اطلبوا العلم ولو بالصين",
+    "excerpt": "…",
+    "url": "https://dorar.net/",
+    "displayed": false,
+    "display_role": null
+   }
+  }
+ ],
+ "terms": {},
+ "suggested_lessons": [],
+ "feedback": null
+}

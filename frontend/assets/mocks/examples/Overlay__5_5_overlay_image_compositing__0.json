@@ -1,0 +1,7 @@
+{
+ "type": "medallion",
+ "asset_url": "https://cdn.example.com/medallions/ibrahim.svg",
+ "label": "إبراهيم عليه السلام",
+ "anchor": "top_start",
+ "size_pct": 22
+}

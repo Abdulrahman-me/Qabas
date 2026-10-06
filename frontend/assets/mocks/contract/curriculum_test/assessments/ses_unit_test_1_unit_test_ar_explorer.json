@@ -1,0 +1,525 @@
+{
+ "session_id": "ses_unit_test_1_unit_test_ar_explorer",
+ "kind": "unit_test",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "end",
+ "unit_id": "unit_test_1",
+ "lesson_id": null,
+ "lesson_version": null,
+ "title": "جلسة اختبارية",
+ "subtitle": null,
+ "lesson_type": null,
+ "reviewed_by": null,
+ "objectives": [],
+ "counts": {
+  "interactions": 9,
+  "exercises": 9,
+  "scored": 9
+ },
+ "source_count": 0,
+ "total_exercises": 9,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_a7a1d7f16c4ebb0c",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال اختباري 2"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_bcb02c444bd90c67",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال اختباري 2"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_72a6168f1d103763",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال اختباري 1"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_95de7cf3e86b9940",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال اختباري 1"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_4",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_f003d649930847ff",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال اختباري 3"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_5",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_a63b2f9217fa4b41",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال اختباري 3"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_6",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_cc2b9cb94ff4ddc9",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال اختباري 1"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_7",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_1fa7c5a66a46a29f",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال اختباري 2"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_8",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_517cfaaabbf0675c",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "سؤال اختباري 3"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 1"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 2"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "خيار اختباري 3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "completion": null,
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

@@ -1,0 +1,363 @@
+{
+ "session_id": "ses_t30_ar_new_muslim",
+ "kind": "lesson",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": "unit_test_3",
+ "lesson_id": "les_t3_0",
+ "lesson_version": 1,
+ "title": "[new_muslim] نص اختباري: درس 3.1",
+ "subtitle": null,
+ "lesson_type": "practice",
+ "reviewed_by": "لجنة المراجعة الشرعية",
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "هدف اختباري."
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 4,
+  "exercises": 4,
+  "scored": 4
+ },
+ "source_count": 0,
+ "total_exercises": 4,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_p",
+   "type": "paragraph",
+   "sentences": [
+    {
+     "sentence_id": "s1",
+     "spans": [
+      {
+       "type": "text",
+       "text": "[new_muslim] نص اختباري: الدرس 3.1"
+      }
+     ],
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "block_id": "b_v",
+   "type": "visual",
+   "visual": {
+    "kind": "image",
+    "key": null,
+    "version": null,
+    "params": null,
+    "image": {
+     "url": "mock-asset://test/u3l0.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "scene": null,
+    "fallback_image": null,
+    "fallback_params": null,
+    "alt": "[new_muslim] نص اختباري: صورة",
+    "overlays": []
+   },
+   "caption": null
+  },
+  {
+   "block_id": "b_x0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t30_0",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله واحد لا شريك له"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله أول الآلهة"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله خاص بالعرب"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t30_1",
+    "type": "true_false_reason",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "statement": [
+      {
+       "type": "text",
+       "text": "يجب على كل من أسلم أن يغيّر اسمه."
+      }
+     ],
+     "reasons": [
+      {
+       "option_id": "r_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "يُغيَّر الاسم فقط إذا كان معناه مخالفاً للإسلام."
+        }
+       ]
+      },
+      {
+       "option_id": "r_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأن الأسماء غير العربية لا تجوز."
+        }
+       ]
+      },
+      {
+       "option_id": "r_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأن تغيير الاسم من أركان الإسلام."
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t30_2",
+    "type": "match_pairs",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "left": [
+      {
+       "item_id": "l_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الزكاة"
+        }
+       ]
+      },
+      {
+       "item_id": "l_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الصوم"
+        }
+       ]
+      },
+      {
+       "item_id": "l_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الحج"
+        }
+       ]
+      }
+     ],
+     "right": [
+      {
+       "item_id": "r_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "قصد مكة لأداء المناسك"
+        }
+       ]
+      },
+      {
+       "item_id": "r_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "مال يُعطى للمستحقين"
+        }
+       ]
+      },
+      {
+       "item_id": "r_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الامتناع عن الطعام والشراب من الفجر إلى المغرب"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t30_3",
+    "type": "fill_blank",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "اختر الإجابة المناسبة."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "segments": [
+      {
+       "type": "text",
+       "text": "أركان الإسلام "
+      },
+      {
+       "type": "blank",
+       "blank_id": "b_1"
+      },
+      {
+       "type": "text",
+       "text": " أركان، أولها "
+      },
+      {
+       "type": "blank",
+       "blank_id": "b_2"
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ],
+     "word_bank": [
+      {
+       "word_id": "w_1",
+       "text": "خمسة"
+      },
+      {
+       "word_id": "w_2",
+       "text": "ستة"
+      },
+      {
+       "word_id": "w_3",
+       "text": "الشهادتان"
+      },
+      {
+       "word_id": "w_4",
+       "text": "الصوم"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "تحدٍّ اختباري."
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_1",
+    "title": "موضوع اختباري",
+    "concept_ids": [
+     "con_test"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "سؤال الغد الاختباري."
+   }
+  ]
+ },
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

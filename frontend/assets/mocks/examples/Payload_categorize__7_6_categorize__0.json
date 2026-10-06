@@ -1,0 +1,61 @@
+{
+ "presentation": "buckets",
+ "categories": [
+  {
+   "category_id": "c_1",
+   "label": "أركان الإسلام",
+   "phase": null,
+   "capacity": null,
+   "art_key": null
+  },
+  {
+   "category_id": "c_2",
+   "label": "أركان الإيمان",
+   "phase": null,
+   "capacity": null,
+   "art_key": null
+  }
+ ],
+ "items": [
+  {
+   "item_id": "i_1",
+   "spans": [
+    {
+     "type": "text",
+     "text": "الصلاة"
+    }
+   ],
+   "secondary_label": null
+  },
+  {
+   "item_id": "i_2",
+   "spans": [
+    {
+     "type": "text",
+     "text": "الإيمان بالملائكة"
+    }
+   ],
+   "secondary_label": null
+  },
+  {
+   "item_id": "i_3",
+   "spans": [
+    {
+     "type": "text",
+     "text": "الزكاة"
+    }
+   ],
+   "secondary_label": null
+  },
+  {
+   "item_id": "i_4",
+   "spans": [
+    {
+     "type": "text",
+     "text": "الإيمان باليوم الآخر"
+    }
+   ],
+   "secondary_label": null
+  }
+ ]
+}

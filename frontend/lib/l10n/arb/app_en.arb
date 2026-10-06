@@ -756,6 +756,24 @@
   "@journeyDoneLabel": {
     "description": "Prototype interface copy: journey / doneLabel. Preserve the original warm wording."
   },
+  "@journeyDownloadAction": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadBody": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadDismiss": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadEyebrow": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadFailed": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadTitle": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
   "@journeyEmptyBody": {
     "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
   },
@@ -1929,6 +1947,12 @@
   "@reviewerSame": {
     "description": "Reviewer work tool: reviewerSame"
   },
+  "@reviewerSampleDescription": {
+    "description": "Explain sample reviewer content and preserved learner progress."
+  },
+  "@reviewerSampleOpen": {
+    "description": "Open the local competition reviewer preview."
+  },
   "@reviewerSaveEdits": {
     "description": "Reviewer work tool: reviewerSaveEdits"
   },
@@ -3040,6 +3064,12 @@
   "journeyComingSoonTitle": "Coming soon",
   "journeyDailyGoal": "Daily goal",
   "journeyDoneLabel": "Completed",
+  "journeyDownloadAction": "Download Android APK",
+  "journeyDownloadBody": "Built for Android, iOS, Web, Windows, macOS and Linux. Try Qabas on Android today.",
+  "journeyDownloadDismiss": "Dismiss Android download banner",
+  "journeyDownloadEyebrow": "BEYOND THE BROWSER",
+  "journeyDownloadFailed": "The download could not open. Please try again.",
+  "journeyDownloadTitle": "One journey. Across your devices.",
   "journeyEmptyBody": "Your next steps will appear here. Try again in a moment.",
   "journeyEmptyTitle": "Your path is being prepared",
   "journeyExplorerPathHint": "For the curious: big questions first",
@@ -3369,6 +3399,8 @@
   "reviewerRole": "Sentence role",
   "reviewerRuns": "Runs",
   "reviewerSame": "Same",
+  "reviewerSampleDescription": "Review lesson plans and drafts, compare lessons in a blind test, and explore sample metrics. This preview uses sample content; your learning progress is saved when you return.",
+  "reviewerSampleOpen": "Explore reviewer dashboard",
   "reviewerSaveEdits": "Save paired edits",
   "reviewerSavePlan": "Save plan",
   "reviewerSelectRun": "Select a run to review its plan or draft.",

@@ -1,0 +1,567 @@
+{
+ "track": "explorer",
+ "current": {
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l1"
+ },
+ "units": [
+  {
+   "unit_id": "unit_0",
+   "index": 0,
+   "title": "ابدأ بسؤال",
+   "subtitle": "أسس قبل الأسئلة الكبرى",
+   "art_key": "unit_big_questions",
+   "has_guide": false,
+   "state": "available",
+   "coming_soon": false,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": [
+    {
+     "lesson_id": "les_u0_l1",
+     "index": 0,
+     "title": "هل يجب أن تراه لتعرفه؟",
+     "lesson_type": "concept",
+     "state": "available",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": null
+    },
+    {
+     "lesson_id": "les_u0_l2",
+     "index": 1,
+     "title": "هل يمكن أن يأتي شيء من لا شيء؟",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l1",
+        "unit_id": "unit_0",
+        "title": "هل يجب أن تراه لتعرفه؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "هل يجب أن تراه لتعرفه؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l3",
+     "index": 2,
+     "title": "هل يمكن أن يخلق شيء نفسه؟",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l2",
+        "unit_id": "unit_0",
+        "title": "هل يمكن أن يأتي شيء من لا شيء؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "هل يجب أن تراه لتعرفه؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l4",
+     "index": 3,
+     "title": "كيف يكون الخالق؟",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l2",
+        "unit_id": "unit_0",
+        "title": "هل يمكن أن يأتي شيء من لا شيء؟"
+       },
+       {
+        "lesson_id": "les_u0_l3",
+        "unit_id": "unit_0",
+        "title": "هل يمكن أن يخلق شيء نفسه؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "هل يجب أن تراه لتعرفه؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l5",
+     "index": 4,
+     "title": "خالق واحد أم أكثر؟",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l4",
+        "unit_id": "unit_0",
+        "title": "كيف يكون الخالق؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "هل يجب أن تراه لتعرفه؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l6",
+     "index": 5,
+     "title": "لو كان هناك خالق، فهل نحتاج إلى هداية؟",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l4",
+        "unit_id": "unit_0",
+        "title": "كيف يكون الخالق؟"
+       },
+       {
+        "lesson_id": "les_u0_l5",
+        "unit_id": "unit_0",
+        "title": "خالق واحد أم أكثر؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "هل يجب أن تراه لتعرفه؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l7",
+     "index": 6,
+     "title": "كيف يمكن أن تصل الهداية إلينا؟",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l6",
+        "unit_id": "unit_0",
+        "title": "لو كان هناك خالق، فهل نحتاج إلى هداية؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "هل يجب أن تراه لتعرفه؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l8",
+     "index": 7,
+     "title": "كيف نختبر ادّعاء الوحي؟",
+     "lesson_type": "practice",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l1",
+        "unit_id": "unit_0",
+        "title": "هل يجب أن تراه لتعرفه؟"
+       },
+       {
+        "lesson_id": "les_u0_l7",
+        "unit_id": "unit_0",
+        "title": "كيف يمكن أن تصل الهداية إلينا؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "هل يجب أن تراه لتعرفه؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l9",
+     "index": 8,
+     "title": "ادّعاء القرآن",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l8",
+        "unit_id": "unit_0",
+        "title": "كيف نختبر ادّعاء الوحي؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "هل يجب أن تراه لتعرفه؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l10",
+     "index": 9,
+     "title": "كيف نعرف الرسول؟",
+     "lesson_type": "practice",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l7",
+        "unit_id": "unit_0",
+        "title": "كيف يمكن أن تصل الهداية إلينا؟"
+       },
+       {
+        "lesson_id": "les_u0_l8",
+        "unit_id": "unit_0",
+        "title": "كيف نختبر ادّعاء الوحي؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "هل يجب أن تراه لتعرفه؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l11",
+     "index": 10,
+     "title": "محمد ﷺ وادّعاؤه",
+     "lesson_type": "story",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l9",
+        "unit_id": "unit_0",
+        "title": "ادّعاء القرآن"
+       },
+       {
+        "lesson_id": "les_u0_l10",
+        "unit_id": "unit_0",
+        "title": "كيف نعرف الرسول؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "هل يجب أن تراه لتعرفه؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l12",
+     "index": 11,
+     "title": "فما الإسلام إذن؟",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l5",
+        "unit_id": "unit_0",
+        "title": "خالق واحد أم أكثر؟"
+       },
+       {
+        "lesson_id": "les_u0_l6",
+        "unit_id": "unit_0",
+        "title": "لو كان هناك خالق، فهل نحتاج إلى هداية؟"
+       },
+       {
+        "lesson_id": "les_u0_l7",
+        "unit_id": "unit_0",
+        "title": "كيف يمكن أن تصل الهداية إلينا؟"
+       },
+       {
+        "lesson_id": "les_u0_l8",
+        "unit_id": "unit_0",
+        "title": "كيف نختبر ادّعاء الوحي؟"
+       },
+       {
+        "lesson_id": "les_u0_l9",
+        "unit_id": "unit_0",
+        "title": "ادّعاء القرآن"
+       },
+       {
+        "lesson_id": "les_u0_l11",
+        "unit_id": "unit_0",
+        "title": "محمد ﷺ وادّعاؤه"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l1",
+       "unit_id": "unit_0",
+       "title": "هل يجب أن تراه لتعرفه؟"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_1",
+   "index": 1,
+   "title": "الخطوة الأولى",
+   "subtitle": "فهم الخطوة الأولى في الإسلام",
+   "art_key": "unit_first_steps",
+   "has_guide": false,
+   "state": "available",
+   "coming_soon": false,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": [
+    {
+     "lesson_id": "les_u1_l1",
+     "index": 0,
+     "title": "ما معنى الإسلام؟",
+     "lesson_type": "concept",
+     "state": "available",
+     "estimated_minutes": 9,
+     "xp": 15,
+     "standalone_eligible": true,
+     "soft_lock": null
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_2",
+   "index": 2,
+   "title": "معرفة الله",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_3",
+   "index": 3,
+   "title": "Prayer: Your Daily Connection",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_4",
+   "index": 4,
+   "title": "Living the Five Pillars",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_5",
+   "index": 5,
+   "title": "What Muslims Believe",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_6",
+   "index": 6,
+   "title": "The Qur'an",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_7",
+   "index": 7,
+   "title": "رسالة واحدة وأنبياء كثيرون",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_8",
+   "index": 8,
+   "title": "The Life of Muhammad ﷺ",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_9",
+   "index": 9,
+   "title": "Islam in Everyday Life",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  },
+  {
+   "unit_id": "unit_10",
+   "index": 10,
+   "title": "ما بعد الأساسيات",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  }
+ ]
+}

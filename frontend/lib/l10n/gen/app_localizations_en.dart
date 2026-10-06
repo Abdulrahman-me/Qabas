@@ -669,6 +669,24 @@ class AppLocalizationsEn extends AppLocalizations {
   String get journeyDoneLabel => 'Completed';
 
   @override
+  String get journeyDownloadAction => 'Download Android APK';
+
+  @override
+  String get journeyDownloadBody => 'Built for Android, iOS, Web, Windows, macOS and Linux. Try Qabas on Android today.';
+
+  @override
+  String get journeyDownloadDismiss => 'Dismiss Android download banner';
+
+  @override
+  String get journeyDownloadEyebrow => 'BEYOND THE BROWSER';
+
+  @override
+  String get journeyDownloadFailed => 'The download could not open. Please try again.';
+
+  @override
+  String get journeyDownloadTitle => 'One journey. Across your devices.';
+
+  @override
   String get journeyEmptyBody => 'Your next steps will appear here. Try again in a moment.';
 
   @override
@@ -1699,6 +1717,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reviewerSame => 'Same';
+
+  @override
+  String get reviewerSampleDescription =>
+      'Review lesson plans and drafts, compare lessons in a blind test, and explore sample metrics. This preview uses sample content; your learning progress is saved when you return.';
+
+  @override
+  String get reviewerSampleOpen => 'Explore reviewer dashboard';
 
   @override
   String get reviewerSaveEdits => 'Save paired edits';

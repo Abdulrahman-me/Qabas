@@ -1,0 +1,844 @@
+[
+  {
+    "type": "question",
+    "data": {
+      "question_index": 0,
+      "total": 7,
+      "exercise": {
+        "exercise_id": "ex_recording_0",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "كم صلاة فُرضت في اليوم والليلة؟"
+          }
+        ],
+        "time_limit_ms": 10000,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ثلاث"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "خمس"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "سبع"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "issued_at": "2026-10-04T13:00:30Z",
+      "deadline_at": "2026-10-04T13:00:40Z"
+    }
+  },
+  {
+    "type": "question_result",
+    "data": {
+      "question_index": 0,
+      "correct_answer": {
+        "option_id": "opt_1"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "يصلي المسلم خمس صلوات مفروضة في اليوم والليلة."
+        }
+      ],
+      "players": [
+        {
+          "user_id": "usr_7f3k2a",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "correct": false,
+          "elapsed_ms": 10000,
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "correct": false,
+          "elapsed_ms": 7100,
+          "points": 0
+        }
+      ],
+      "totals": [
+        {
+          "user_id": "usr_7f3k2a",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "points": 0
+        }
+      ]
+    }
+  },
+  {
+    "type": "question",
+    "data": {
+      "question_index": 1,
+      "total": 7,
+      "exercise": {
+        "exercise_id": "ex_recording_1",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي صلاة تأتي بعد غروب الشمس؟"
+          }
+        ],
+        "time_limit_ms": 10000,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الفجر"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "العصر"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "المغرب"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "العشاء"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "issued_at": "2026-10-04T13:00:30Z",
+      "deadline_at": "2026-10-04T13:00:40Z"
+    }
+  },
+  {
+    "type": "question_result",
+    "data": {
+      "question_index": 1,
+      "correct_answer": {
+        "option_id": "opt_2"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "يبدأ وقت المغرب بعد غروب الشمس."
+        }
+      ],
+      "players": [
+        {
+          "user_id": "usr_7f3k2a",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "correct": false,
+          "elapsed_ms": 10000,
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "correct": false,
+          "elapsed_ms": 7100,
+          "points": 0
+        }
+      ],
+      "totals": [
+        {
+          "user_id": "usr_7f3k2a",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "points": 0
+        }
+      ]
+    }
+  },
+  {
+    "type": "question",
+    "data": {
+      "question_index": 2,
+      "total": 7,
+      "exercise": {
+        "exercise_id": "ex_recording_2",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "بماذا شبّه النبي ﷺ الصلوات الخمس؟"
+          }
+        ],
+        "time_limit_ms": 10000,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "مصباح في الليل"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "نهر على باب البيت"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "شجرة جذورها عميقة"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "issued_at": "2026-10-04T13:00:30Z",
+      "deadline_at": "2026-10-04T13:00:40Z"
+    }
+  },
+  {
+    "type": "question_result",
+    "data": {
+      "question_index": 2,
+      "correct_answer": {
+        "option_id": "opt_1"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "يوضح تشبيه النهر كيف تمحو الصلاة المنتظمة الخطايا."
+        }
+      ],
+      "players": [
+        {
+          "user_id": "usr_7f3k2a",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "correct": false,
+          "elapsed_ms": 10000,
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "correct": false,
+          "elapsed_ms": 7100,
+          "points": 0
+        }
+      ],
+      "totals": [
+        {
+          "user_id": "usr_7f3k2a",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "points": 0
+        }
+      ]
+    }
+  },
+  {
+    "type": "question",
+    "data": {
+      "question_index": 3,
+      "total": 7,
+      "exercise": {
+        "exercise_id": "ex_recording_3",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي صلاة تؤدّى قبل شروق الشمس؟"
+          }
+        ],
+        "time_limit_ms": 10000,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الفجر"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الظهر"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "العشاء"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "issued_at": "2026-10-04T13:00:30Z",
+      "deadline_at": "2026-10-04T13:00:40Z"
+    }
+  },
+  {
+    "type": "question_result",
+    "data": {
+      "question_index": 3,
+      "correct_answer": {
+        "option_id": "opt_0"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الفجر صلاة الصباح قبل شروق الشمس."
+        }
+      ],
+      "players": [
+        {
+          "user_id": "usr_7f3k2a",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "correct": false,
+          "elapsed_ms": 10000,
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "correct": false,
+          "elapsed_ms": 7100,
+          "points": 0
+        }
+      ],
+      "totals": [
+        {
+          "user_id": "usr_7f3k2a",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "points": 0
+        }
+      ]
+    }
+  },
+  {
+    "type": "question",
+    "data": {
+      "question_index": 4,
+      "total": 7,
+      "exercise": {
+        "exercise_id": "ex_recording_4",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي صلاة تأتي بعد الظهر؟"
+          }
+        ],
+        "time_limit_ms": 10000,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "المغرب"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الفجر"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "العصر"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "issued_at": "2026-10-04T13:00:30Z",
+      "deadline_at": "2026-10-04T13:00:40Z"
+    }
+  },
+  {
+    "type": "question_result",
+    "data": {
+      "question_index": 4,
+      "correct_answer": {
+        "option_id": "opt_2"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "ترتيب الصلوات اليومية: الفجر والظهر والعصر والمغرب والعشاء."
+        }
+      ],
+      "players": [
+        {
+          "user_id": "usr_7f3k2a",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "correct": false,
+          "elapsed_ms": 10000,
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "correct": false,
+          "elapsed_ms": 7100,
+          "points": 0
+        }
+      ],
+      "totals": [
+        {
+          "user_id": "usr_7f3k2a",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "points": 0
+        }
+      ]
+    }
+  },
+  {
+    "type": "question",
+    "data": {
+      "question_index": 5,
+      "total": 7,
+      "exercise": {
+        "exercise_id": "ex_recording_5",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "ما الصلاة؟"
+          }
+        ],
+        "time_limit_ms": 10000,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "عبادة منتظمة"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لقاء اجتماعي فقط"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "احتفال سنوي"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "issued_at": "2026-10-04T13:00:30Z",
+      "deadline_at": "2026-10-04T13:00:40Z"
+    }
+  },
+  {
+    "type": "question_result",
+    "data": {
+      "question_index": 5,
+      "correct_answer": {
+        "option_id": "opt_0"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الصلاة عبادة تجدد صلة المسلم بالله طوال اليوم."
+        }
+      ],
+      "players": [
+        {
+          "user_id": "usr_7f3k2a",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "correct": false,
+          "elapsed_ms": 10000,
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "correct": false,
+          "elapsed_ms": 7100,
+          "points": 0
+        }
+      ],
+      "totals": [
+        {
+          "user_id": "usr_7f3k2a",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "points": 0
+        }
+      ]
+    }
+  },
+  {
+    "type": "question",
+    "data": {
+      "question_index": 6,
+      "total": 7,
+      "exercise": {
+        "exercise_id": "ex_recording_6",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "ما الذي يساعدك جدول مواقيت الصلاة على معرفته؟"
+          }
+        ],
+        "time_limit_ms": 10000,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "مواقيت الصلاة في مكانك"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "جنسية الشخص"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "عدد الأصدقاء المتصلين"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "issued_at": "2026-10-04T13:00:30Z",
+      "deadline_at": "2026-10-04T13:00:40Z"
+    }
+  },
+  {
+    "type": "question_result",
+    "data": {
+      "question_index": 6,
+      "correct_answer": {
+        "option_id": "opt_0"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "ترتبط مواقيت الصلاة بوقت اليوم ومكانك."
+        }
+      ],
+      "players": [
+        {
+          "user_id": "usr_7f3k2a",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "correct": true,
+          "elapsed_ms": 5000,
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "correct": false,
+          "elapsed_ms": 10000,
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "correct": false,
+          "elapsed_ms": 7100,
+          "points": 0
+        }
+      ],
+      "totals": [
+        {
+          "user_id": "usr_7f3k2a",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f1",
+          "points": 125
+        },
+        {
+          "user_id": "usr_f2",
+          "points": 0
+        },
+        {
+          "user_id": "usr_f3",
+          "points": 0
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,13 @@
+{
+ "exercise_id": "ex_timeline_order",
+ "answer": {
+  "order": [
+   "t_2",
+   "t_1",
+   "t_3",
+   "t_4"
+  ]
+ },
+ "elapsed_ms": 5000,
+ "is_retry": true
+}

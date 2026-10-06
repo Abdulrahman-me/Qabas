@@ -1,0 +1,31 @@
+{
+ "options": [
+  {
+   "option_id": "opt_a",
+   "spans": [
+    {
+     "type": "text",
+     "text": "أن الله واحد لا شريك له"
+    }
+   ]
+  },
+  {
+   "option_id": "opt_b",
+   "spans": [
+    {
+     "type": "text",
+     "text": "أن الله أول الآلهة"
+    }
+   ]
+  },
+  {
+   "option_id": "opt_c",
+   "spans": [
+    {
+     "type": "text",
+     "text": "أن الله خاص بالعرب"
+    }
+   ]
+  }
+ ]
+}

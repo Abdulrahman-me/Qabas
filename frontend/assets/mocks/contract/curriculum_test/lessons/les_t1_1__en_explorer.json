@@ -1,0 +1,427 @@
+{
+ "session_id": "ses_t11_en_explorer",
+ "kind": "lesson",
+ "mode": null,
+ "status": "active",
+ "feedback_mode": "immediate",
+ "unit_id": "unit_test_1",
+ "lesson_id": "les_t1_1",
+ "lesson_version": 1,
+ "title": "Test title 1",
+ "subtitle": null,
+ "lesson_type": "story",
+ "reviewed_by": "Test reviewed_by 2",
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "Test text 3"
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 4,
+  "exercises": 4,
+  "scored": 4
+ },
+ "source_count": 0,
+ "total_exercises": 4,
+ "answered_exercises": 0,
+ "started_at": "2026-10-04T09:00:00Z",
+ "items": [
+  {
+   "block_id": "b_p",
+   "type": "paragraph",
+   "sentences": [
+    {
+     "sentence_id": "s1",
+     "spans": [
+      {
+       "type": "text",
+       "text": "Test text 4"
+      }
+     ],
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "block_id": "b_v",
+   "type": "visual",
+   "visual": {
+    "kind": "image",
+    "key": null,
+    "version": null,
+    "params": null,
+    "image": {
+     "url": "mock-asset://test/u1l1.webp",
+     "mime_type": "image/webp",
+     "width": 1600,
+     "height": 1000
+    },
+    "scene": null,
+    "fallback_image": null,
+    "fallback_params": null,
+    "alt": "Test alt 5",
+    "overlays": []
+   },
+   "caption": null
+  },
+  {
+   "block_id": "b_x0",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t11_0",
+    "type": "categorize",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "buckets",
+     "categories": [
+      {
+       "category_id": "c_1",
+       "label": "Test label 7",
+       "phase": null,
+       "capacity": null,
+       "art_key": null
+      },
+      {
+       "category_id": "c_2",
+       "label": "Test label 8",
+       "phase": null,
+       "capacity": null,
+       "art_key": null
+      }
+     ],
+     "items": [
+      {
+       "item_id": "i_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 9"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "i_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 10"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "i_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 11"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "i_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 12"
+        }
+       ],
+       "secondary_label": null
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t11_1",
+    "type": "categorize",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "day_arc",
+     "categories": [
+      {
+       "category_id": "cat_5t",
+       "label": "Test label 14",
+       "phase": "dawn",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_j8",
+       "label": "Test label 15",
+       "phase": "midday",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_2w",
+       "label": "Test label 16",
+       "phase": "afternoon",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_q1",
+       "label": "Test label 17",
+       "phase": "sunset",
+       "capacity": 1,
+       "art_key": null
+      },
+      {
+       "category_id": "cat_x6",
+       "label": "Test label 18",
+       "phase": "night",
+       "capacity": 1,
+       "art_key": null
+      }
+     ],
+     "items": [
+      {
+       "item_id": "itm_c4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 19"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_9a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 20"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_e2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 21"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_k7",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 22"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_b5",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 23"
+        }
+       ],
+       "secondary_label": null
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t11_2",
+    "type": "spot_error",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "segments": [
+      {
+       "segment_id": "seg_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 25"
+        }
+       ]
+      },
+      {
+       "segment_id": "seg_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 26"
+        }
+       ]
+      },
+      {
+       "segment_id": "seg_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "Test text 27"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "b_x3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_t11_3",
+    "type": "which_evidence",
+    "concept_ids": [
+     "con_test"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "Complete this test activity."
+     }
+    ],
+    "time_limit_ms": 20000,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "claim": [
+      {
+       "type": "text",
+       "text": "Test text 29"
+      }
+     ],
+     "options": [
+      {
+       "option_id": "ev_1",
+       "evidence": {
+        "evidence_id": "src_q_112_1",
+        "kind": "quran",
+        "quran": {
+         "surah": 112,
+         "surah_name": "الإخلاص",
+         "ayah_start": 1,
+         "ayah_end": 1,
+         "segment": null,
+         "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+         "translation": null,
+         "translation_source": null,
+         "audio": null
+        },
+        "hadith": null
+       }
+      },
+      {
+       "option_id": "ev_2",
+       "evidence": {
+        "evidence_id": "src_h_niyyat",
+        "kind": "hadith",
+        "quran": null,
+        "hadith": {
+         "text_ar": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+         "translation": null,
+         "narrator": "Test narrator 30",
+         "collections": [
+          "Test collections 31",
+          "Test collections 32"
+         ],
+         "grade_label": "Test grade_label 33",
+         "grade_category": "authentic",
+         "grade_source": "Test grade_source 34",
+         "excerpt": false
+        }
+       }
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "Test text 35"
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_1",
+    "title": "Test title 36",
+    "concept_ids": [
+     "con_test"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "Test text 37"
+   }
+  ]
+ },
+ "sources": [],
+ "terms": {},
+ "answers": []
+}

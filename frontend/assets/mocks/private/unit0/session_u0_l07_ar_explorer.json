@@ -1,0 +1,133 @@
+{
+  "session_id": "ses_mock_u0_l7_ar_explorer",
+  "lesson_id": "les_u0_l7",
+  "answers": {
+    "ex_u0_l07_01": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_3"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_5",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_6",
+          "category_id": "cat_3"
+        }
+      ]
+    },
+    "ex_u0_l07_02": {
+      "option_id": "opt_c"
+    },
+    "ex_u0_l07_03": {
+      "value": false,
+      "reason_option_id": "opt_b"
+    },
+    "ex_u0_l07_04": {
+      "option_id": "opt_a"
+    }
+  },
+  "feedback": {
+    "ex_u0_l07_01": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_3"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_5",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_6",
+            "category_id": "cat_3"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "المرسل هو صاحب الرسالة، والناقل هو من يوصلها؛ وقد يكونان شخصين مختلفين."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l07_02": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "اقتراح الناقل الشخصي لا يصبح رسالة من غيره لمجرد أنه جاء من بعيد."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l07_03": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "في الاعتقاد الإسلامي، الرسول شخص يختاره الله لتبليغ رسالته إلى الناس."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l07_carrier",
+        "opt_c": "mis_u0_l07_possibility"
+      }
+    },
+    "ex_u0_l07_04": {
+      "correct_answer": {
+        "option_id": "opt_a"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "إمكان النقل لا يثبت أن هذا الناقل رسول أو أن هذا النص وحي."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "للرسالة المنقولة سؤالان مختلفان: هل صدرت من صاحبها، وهل وصل معناها كما أرسله؟"
+        }
+      ],
+      "option_misconceptions": {
+        "opt_b": "mis_u0_l07_possibility"
+      }
+    }
+  }
+}

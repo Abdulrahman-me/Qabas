@@ -255,5 +255,29 @@
   "learningEntryBody": "نعدّ هذا الجزء من طريقك. تقدمك محفوظ.",
   "@learningEntryBody": {
     "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "journeyDownloadEyebrow": "أبعد من المتصفح",
+  "journeyDownloadTitle": "رحلة واحدة، عبر أجهزتك.",
+  "journeyDownloadBody": "مصمم لأندرويد وiOS والويب وويندوز وmacOS ولينكس. جرّب قبس على أندرويد اليوم.",
+  "journeyDownloadAction": "تحميل تطبيق أندرويد",
+  "journeyDownloadDismiss": "إغلاق إعلان تحميل تطبيق أندرويد",
+  "journeyDownloadFailed": "تعذّر فتح رابط التحميل. حاول مرة أخرى.",
+  "@journeyDownloadEyebrow": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadTitle": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadBody": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadAction": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadDismiss": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadFailed": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
   }
 }

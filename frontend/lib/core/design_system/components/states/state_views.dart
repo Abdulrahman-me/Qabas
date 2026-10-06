@@ -57,29 +57,87 @@ class QLoadingView extends StatelessWidget {
         primary: false,
         child: Padding(
           padding: const EdgeInsets.all(QSpace.xl),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              if (tone == QTone.night) const FlameMark(size: 56, glow: 1.2) else const _Skeleton(),
-              const SizedBox(height: QSpace.md),
-              DelayedLoading(
-                delay: QMotion.loadingLabelDelay,
-                child: Semantics(
-                  liveRegion: true,
-                  child: Text(
-                    label ?? context.l10n.commonLoading,
-                    textAlign: TextAlign.center,
-                    style: context.text.bodyMedium?.copyWith(color: tone == QTone.night ? QColors.softEmber : QColors.slate),
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: QBreakpoints.readingWidth),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (tone == QTone.night)
+                  const FlameMark(size: QSpace.huge, glow: 1.2)
+                else ...[
+                  const FlameMark(size: QSpace.xxxl, glow: 0.3),
+                  const SizedBox(height: QSpace.xl),
+                  const _Skeleton(),
+                ],
+                const SizedBox(height: QSpace.md),
+                _LoadingLabel(
+                  child: Semantics(
+                    liveRegion: true,
+                    child: Text(
+                      label ?? context.l10n.commonLoading,
+                      textAlign: TextAlign.center,
+                      style: context.text.bodyMedium?.copyWith(color: tone == QTone.night ? QColors.softEmber : QColors.slate),
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
     );
     return tone == QTone.night ? NightSky(child: content) : ColoredBox(color: QColors.morningMint, child: content);
   }
+}
+
+// Reserve the label's space from the first frame, avoiding a layout jump.
+class _LoadingLabel extends StatefulWidget {
+  const _LoadingLabel({required this.child});
+  final Widget child;
+
+  @override
+  State<_LoadingLabel> createState() => _LoadingLabelState();
+}
+
+class _LoadingLabelState extends State<_LoadingLabel> {
+  Timer? _timer;
+  bool _visible = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer(QMotion.loadingLabelDelay, () {
+      if (mounted) setState(() => _visible = true);
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => AnimatedOpacity(
+    opacity: _visible ? 1 : 0,
+    duration: context.reduceMotion ? Duration.zero : QMotion.normal,
+    child: ExcludeSemantics(excluding: !_visible, child: widget.child),
+  );
+}
+
+class _SkeletonLine extends StatelessWidget {
+  const _SkeletonLine({required this.fraction});
+  final double fraction;
+
+  @override
+  Widget build(BuildContext context) => FractionallySizedBox(
+    alignment: AlignmentDirectional.centerStart,
+    widthFactor: fraction,
+    child: Container(
+      height: QSpace.sm,
+      decoration: const BoxDecoration(color: QColors.line, borderRadius: QRadius.chip),
+    ),
+  );
 }
 
 class _Skeleton extends StatefulWidget {
@@ -113,13 +171,36 @@ class _SkeletonState extends State<_Skeleton> with SingleTickerProviderStateMixi
     child: Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        for (final width in [double.infinity, double.infinity, 160.0])
+        for (var index = 0; index < 3; index++)
           Padding(
-            padding: const EdgeInsets.only(bottom: QSpace.sm),
+            padding: EdgeInsets.only(bottom: index == 2 ? 0 : QSpace.sm),
             child: Container(
-              width: width,
-              height: 48,
-              decoration: BoxDecoration(color: QColors.surfaceSunk, borderRadius: BorderRadius.circular(QRadius.md)),
+              padding: const EdgeInsets.all(QSpace.md),
+              decoration: BoxDecoration(
+                color: QColors.surface,
+                border: Border.all(color: QColors.line),
+                borderRadius: BorderRadius.circular(QRadius.lg),
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: QSpace.xxxl,
+                    height: QSpace.xxxl,
+                    decoration: BoxDecoration(color: QColors.emerald50, borderRadius: BorderRadius.circular(QRadius.sm)),
+                  ),
+                  const SizedBox(width: QSpace.md),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        _SkeletonLine(fraction: index == 1 ? 0.6 : 0.8),
+                        const SizedBox(height: QSpace.xs),
+                        const _SkeletonLine(fraction: 0.45),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
       ],

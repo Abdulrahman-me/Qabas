@@ -1,0 +1,355 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l05_referees",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "mint": "#EEF5F2",
+    "emerald": "#0B5A52",
+    "deep": "#073C37",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "ink": "#16233A",
+    "slate": "#566476",
+    "sand": "#D7C3A1",
+    "stone": "#B8C5B8",
+    "paper": "#FAF4E6",
+    "wood": "#956B48",
+    "wooddark": "#6B4A34",
+    "skin": "#C8A681",
+    "white": "#FFFFFF",
+    "leaf": "#64846B",
+    "goldclear": "#E0A52600",
+    "shadow": "#16233A22"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "sky",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "mint"
+          },
+          {
+            "at": 1,
+            "color": "ember"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "cloud",
+      "type": "ellipse",
+      "x": 1120,
+      "y": 190,
+      "rx": 190,
+      "ry": 44,
+      "fill": "white",
+      "opacity": 0.5,
+      "tracks": [
+        {
+          "property": "translate_x",
+          "duration_ms": 9000,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 18
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "stadium_back",
+      "type": "path",
+      "d": "M 0 450 Q 800 200 1600 450 L 1600 700 L 0 700 Z",
+      "fill": "stone"
+    },
+    {
+      "id": "stand_top",
+      "type": "path",
+      "d": "M 0 450 Q 800 260 1600 450 L 1600 490 Q 800 300 0 490 Z",
+      "fill": "slate"
+    },
+    {
+      "id": "stand_tier",
+      "type": "path",
+      "d": "M 0 510 Q 800 370 1600 510 L 1600 550 Q 800 410 0 550 Z",
+      "fill": "mint"
+    },
+    {
+      "id": "pitch",
+      "type": "path",
+      "d": "M 0 650 Q 800 480 1600 650 L 1600 1000 L 0 1000 Z",
+      "fill": "leaf"
+    },
+    {
+      "id": "pitch_band",
+      "type": "ellipse",
+      "x": 800,
+      "y": 720,
+      "rx": 620,
+      "ry": 175,
+      "fill": "emerald",
+      "opacity": 0.45
+    },
+    {
+      "id": "center_circle",
+      "type": "ellipse",
+      "x": 800,
+      "y": 730,
+      "rx": 215,
+      "ry": 95,
+      "fill": "mint"
+    },
+    {
+      "id": "center_inside",
+      "type": "ellipse",
+      "x": 800,
+      "y": 730,
+      "rx": 201,
+      "ry": 84,
+      "fill": "leaf"
+    },
+    {
+      "id": "pitch_line",
+      "type": "rect",
+      "x": 794,
+      "y": 605,
+      "w": 12,
+      "h": 300,
+      "fill": "mint",
+      "corner": 0
+    },
+    {
+      "id": "ball_shadow",
+      "type": "ellipse",
+      "x": 800,
+      "y": 795,
+      "rx": 51,
+      "ry": 15,
+      "fill": "shadow"
+    },
+    {
+      "id": "ball",
+      "type": "ellipse",
+      "x": 800,
+      "y": 754,
+      "rx": 36,
+      "ry": 36,
+      "fill": "paper"
+    },
+    {
+      "id": "ball_patch",
+      "type": "path",
+      "d": "M 793 731 L 813 743 L 807 765 L 785 765 L 779 743 Z",
+      "fill": "ink"
+    },
+    {
+      "id": "referee_a",
+      "type": "group",
+      "transform": {
+        "x": 520,
+        "y": 478,
+        "scale": 1.25
+      },
+      "children": [
+        {
+          "id": "referee_a_shadow",
+          "type": "ellipse",
+          "x": 0,
+          "y": 215,
+          "rx": 75,
+          "ry": 14,
+          "fill": "shadow"
+        },
+        {
+          "id": "referee_a_body",
+          "type": "path",
+          "d": "M -42 22 Q -82 42 -70 156 L -63 210 L 62 210 L 70 156 Q 82 42 42 22 Q 0 38 -42 22 Z",
+          "fill": "emerald"
+        },
+        {
+          "id": "referee_a_head",
+          "type": "ellipse",
+          "x": 0,
+          "y": -14,
+          "rx": 32,
+          "ry": 42,
+          "fill": "skin"
+        },
+        {
+          "id": "referee_a_arm",
+          "type": "path",
+          "d": "M 36 44 Q 89 71 81 112 L 63 109 Q 67 85 28 68 Z",
+          "fill": "emerald"
+        }
+      ]
+    },
+    {
+      "id": "referee_b",
+      "type": "group",
+      "transform": {
+        "x": 1080,
+        "y": 478,
+        "scale": 1.25
+      },
+      "children": [
+        {
+          "id": "referee_b_shadow",
+          "type": "ellipse",
+          "x": 0,
+          "y": 215,
+          "rx": 75,
+          "ry": 14,
+          "fill": "shadow"
+        },
+        {
+          "id": "referee_b_body",
+          "type": "path",
+          "d": "M -42 22 Q -82 42 -70 156 L -63 210 L 62 210 L 70 156 Q 82 42 42 22 Q 0 38 -42 22 Z",
+          "fill": "slate"
+        },
+        {
+          "id": "referee_b_head",
+          "type": "ellipse",
+          "x": 0,
+          "y": -14,
+          "rx": 32,
+          "ry": 42,
+          "fill": "skin"
+        },
+        {
+          "id": "referee_b_arm",
+          "type": "path",
+          "d": "M 36 44 Q 89 71 81 112 L 63 109 Q 67 85 28 68 Z",
+          "fill": "slate"
+        }
+      ]
+    },
+    {
+      "id": "decision_area",
+      "type": "ellipse",
+      "x": 800,
+      "y": 750,
+      "rx": 140,
+      "ry": 100,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          800,
+          750
+        ],
+        "radius": 140,
+        "stops": [
+          {
+            "at": 0,
+            "color": "gold"
+          },
+          {
+            "at": 1,
+            "color": "goldclear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "eq": 0
+            }
+          },
+          "set": {
+            "opacity": 0.2
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "scale",
+          "duration_ms": 4200,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1.06
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "repeat"
+        }
+      ]
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      }
+    ]
+  }
+}

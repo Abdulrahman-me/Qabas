@@ -1,0 +1,1339 @@
+{
+  "session_id": "ses_mock_u0_l12_en_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l12",
+  "lesson_version": 1,
+  "title": "So What Is Islam?",
+  "subtitle": "How do this unit’s questions connect with what Muslims call Islam?",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "Connect the questions about Creator, guidance, message and Islam."
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "Distinguish understanding this picture from personally accepting it."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l12_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "Imagine a night path ahead and a map divided into stages."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "You can see a nearby stage and want to understand how it connects with those already passed."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "Can you connect the unit’s questions in a single map?"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l12_nightpath",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+          "mime_type": "application/json",
+          "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_76f20ad9e8_e3164cb28ab9057d2c4b853a8e897f2e4106009d17a5cbe9d9ed71992372b1f3.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "A winding night path with small lanterns, with only the nearby light visible.",
+        "overlays": []
+      },
+      "cta": "Start with the question"
+    },
+    {
+      "block_id": "b_u0_l12_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which connection in the map would you like to clarify?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Creator to guidance"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Guidance to revelation and messenger"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Message to Islam"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Keep that connection in mind while assembling the map; this personal choice has no right or wrong answer."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l12_03",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "What have we learned about our questions?"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 1
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l12_nightpath",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+          "mime_type": "application/json",
+          "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_cd92849bcd_5d09d23b55e58f2904029cfb67ab45eed2cac73f99192555de518092b7a34f68.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 1
+        },
+        "alt": "Two nearby lanterns illuminate part of the night path.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_005",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The unit's opening questions concern how we know and what the evidence can establish."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_006",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The question of a Creator differs from what that Creator would intend, if there is one."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_007",
+            "spans": [
+              {
+                "type": "text",
+                "text": "That is why guidance followed the one-Creator question, without treating the idea as an established message."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l12_008",
+            "spans": [
+              {
+                "type": "text",
+                "text": "If an earlier question remains, place it on the map; reaching the unit's end is no reason to erase it."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l12_01",
+        "type": "order_steps",
+        "concept_ids": [
+          "con_u0_islam_map"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Order the study path followed by the unit, rather than your personal level of agreement."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "plain",
+          "steps": [
+            {
+              "step_id": "st_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Revelation and messenger"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "step_id": "st_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "What is Islam?"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "step_id": "st_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "How we know, and the one-Creator question"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "step_id": "st_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The need for guidance"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "step_id": "st_5",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Checking the claim, the Qur’an and Muhammad’s claim"
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l12_05",
+      "type": "story",
+      "label": "Scenario",
+      "title": "The map keeps the question",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l12_010",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Imagine the traveller following the light and noticing one mark on the map that remains unclear."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l12_011",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveller wants to understand how it connects to the next stage."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l12_nightpath",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+              "mime_type": "application/json",
+              "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_cd92849bcd_5d09d23b55e58f2904029cfb67ab45eed2cac73f99192555de518092b7a34f68.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l12_012",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveller rearranges the stages and places the question beside the unclear connection."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l12_013",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveller neither tears up the map nor pretends the question is settled."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l12_nightpath",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+              "mime_type": "application/json",
+              "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_fcb38353b5_cbefa93dbab24e13f4cf3ba8034b65c55228ff7b3bfb50f8bc29792bf8875c2a.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l12_014",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveller now knows where further inquiry is needed and which question to read about next."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l12_015",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Use the map in the same way: understand the connection, then follow up what remains."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l12_nightpath",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+              "mime_type": "application/json",
+              "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_19cf76ac47_05bac0af37113febd2f07e7a9b151e590e4e63dd0d7cbe0ed24be6fb73c2c553.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_06",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Here the questions become specific"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 3
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l12_nightpath",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+          "mime_type": "application/json",
+          "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_19cf76ac47_05bac0af37113febd2f07e7a9b151e590e4e63dd0d7cbe0ed24be6fb73c2c553.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 3
+        },
+        "alt": "Four successive lanterns light the path, with no symbols or words within the illustration.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A need for a message does not by itself identify its messenger or its text."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "That is why we separated possible ways guidance might arrive from examining a revelation or messenger claim."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "We presented the Qur'an's claim and reports about Muhammad ﷺ as subjects for examination without assuming your acceptance."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l12_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "For each connection ask: how did it arrive, what does it claim, and what supports it?"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_07",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l12_02",
+        "type": "match_pairs",
+        "concept_ids": [
+          "con_u0_islam_map"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Match each question with its appropriate kind of examination."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "left": [
+            {
+              "item_id": "l_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "How did the report reach us?"
+                }
+              ]
+            },
+            {
+              "item_id": "l_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "What does the text say about itself?"
+                }
+              ]
+            },
+            {
+              "item_id": "l_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "What does the claimant’s conduct add?"
+                }
+              ]
+            }
+          ],
+          "right": [
+            {
+              "item_id": "r_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Distinguishing its self-description from judging its truth"
+                }
+              ]
+            },
+            {
+              "item_id": "r_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Reading evidence of conduct and its limits"
+                }
+              ]
+            },
+            {
+              "item_id": "r_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Examining the report’s source and transmission"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l12_08_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_08",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "The name that brings the picture together"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 4
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l12_nightpath",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+          "mime_type": "application/json",
+          "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_04c1b64992_19e1410e6740fdda75b20ba36762b5f937b1cf35e720f2838b98805d635a45d5.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 4
+        },
+        "alt": "The lit lanterns follow the curve of the night path.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_021",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The Qur'an presents worship and life as devoted to God alone, without a partner, within its account of Islam."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l12_07"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_022",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Muslims understand Islam as worshipping God alone and following the guidance conveyed by His messenger."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l12_09"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_023",
+            "spans": [
+              {
+                "type": "text",
+                "text": "This broad picture connects Creator, guidance and message; the next unit develops the meaning in detail."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_09_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_09",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Understanding the name does not decide for you"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_024",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The Qur'an names Islam as the religion with God."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l12_08"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_025",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Understand the text's position, then continue examining whatever you need to understand or verify."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "You do not need to declare a personal position to answer questions about the map."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_10",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l12_03",
+        "type": "scenario",
+        "concept_ids": [
+          "con_u0_islam_map"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which response respects the reader’s understanding and choice?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "situation": [
+            {
+              "type": "text",
+              "text": "Imagine a reader saying: I understand why the unit leads to Islam, but one question remains unresolved."
+            }
+          ],
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Completing the unit means you agreed with everything."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Identify the question and its place on the map, then follow it up without assuming your belief."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Having a question cancels everything you understood."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l12_11",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Give each question its proper scope"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Understanding a view or claim differs from agreeing with it."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Exercise answers measure understanding of the map and evidence, rather than revealing your personal belief."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_030",
+            "spans": [
+              {
+                "type": "text",
+                "text": "One individual's conduct does not by itself define an entire message."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l12_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Read the message, examine conduct on its own terms, and retain the freedom to make your decision."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_12",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l12_04",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_islam_map"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which statement confuses understanding with acceptance?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "I can describe what Muslims mean by revelation and messenger."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "I can explain how these questions connect."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Therefore the app can infer my belief from my result."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l12_13",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Choose a follow-up that fits your current question."
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Return to an earlier question."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Read further about the Qur'an or Muhammad ﷺ."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Continue to the meaning of Islam in the next unit."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "You can identify a next step without declaring your belief; this choice does not automatically change your track."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l12_14",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "A map you can return to"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_035",
+            "spans": [
+              {
+                "type": "text",
+                "text": "The question of a Creator differs from what that Creator would intend, if there is one."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_036",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A need for a message does not by itself identify its messenger or its text."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Muslims understand Islam as worshipping God alone and following the guidance conveyed by His messenger."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l12_09"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l12_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Understanding a view or claim differs from agreeing with it."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "Draw the map in six keywords and place your remaining question beside the relevant connection."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l12_topic_1",
+        "title": "So What Is Islam?",
+        "concept_ids": [
+          "con_u0_islam_map"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "How does a need for guidance connect to examining a particular message?"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "src_c_u0_l12_07",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "Al-Anam 6:162–163",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l12_08",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "Ali Imran 3:19",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l12_09",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "Introductory Islamic understanding: Al-Anam 6:162–163 and An-Nisa 4:136 https://quran.com/an-nisa/136; approve concise synthesis; no detailed Unit 1.1 definition or rulings.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    }
+  ],
+  "terms": {
+    "term_islam_map": {
+      "term_id": "term_islam_map",
+      "text": "Islam",
+      "arabic": "الإسلام",
+      "transliteration": "Islām",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "Muslims understand Islam as worshipping God alone and following the guidance conveyed by His messenger."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "This is a broad picture; the next unit develops its meaning and how it appears in life."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l12",
+      "lesson_title": "So What Is Islam?"
+    }
+  },
+  "answers": []
+}

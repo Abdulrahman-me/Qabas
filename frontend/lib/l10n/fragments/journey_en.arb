@@ -255,5 +255,29 @@
   "learningEntryBody": "This part of your path is being prepared. Your progress is saved.",
   "@learningEntryBody": {
     "description": "Phase 4 Journey/Discover interface copy; Arabic awaits owner wording review."
+  },
+  "journeyDownloadEyebrow": "BEYOND THE BROWSER",
+  "journeyDownloadTitle": "One journey. Across your devices.",
+  "journeyDownloadBody": "Built for Android, iOS, Web, Windows, macOS and Linux. Try Qabas on Android today.",
+  "journeyDownloadAction": "Download Android APK",
+  "journeyDownloadDismiss": "Dismiss Android download banner",
+  "journeyDownloadFailed": "The download could not open. Please try again.",
+  "@journeyDownloadEyebrow": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadTitle": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadBody": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadAction": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadDismiss": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
+  },
+  "@journeyDownloadFailed": {
+    "description": "Owner-requested web Android download banner; platform names describe design targets, only Android and web are currently distributed."
   }
 }

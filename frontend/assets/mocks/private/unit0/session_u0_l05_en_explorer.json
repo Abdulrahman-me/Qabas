@@ -1,0 +1,84 @@
+{
+  "session_id": "ses_mock_u0_l5_en_explorer",
+  "lesson_id": "les_u0_l5",
+  "answers": {
+    "ex_u0_l05_01": {
+      "option_id": "opt_c"
+    },
+    "ex_u0_l05_02": {
+      "value": false,
+      "reason_option_id": "opt_b"
+    },
+    "ex_u0_l05_03": {
+      "segment_id": "seg_3"
+    },
+    "ex_u0_l05_04": {
+      "option_id": "opt_a"
+    }
+  },
+  "feedback": {
+    "ex_u0_l05_01": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "If a higher rule settles the disagreement, neither referee has final authority."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l05_02": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A limited team’s success does not establish two independent creators; its members work within conditions and limits."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l05_team",
+        "opt_c": "mis_u0_l05_team"
+      }
+    },
+    "ex_u0_l05_03": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Saying they always agree does not, by itself, explain why disagreement would be impossible."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l05_04": {
+      "correct_answer": {
+        "option_id": "opt_a"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Saying they always agree does not, by itself, explain why disagreement would be impossible."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "A limited team’s success does not establish two independent creators; its members work within conditions and limits."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_b": "mis_u0_l05_team",
+        "opt_c": "mis_u0_l05_team"
+      }
+    }
+  }
+}

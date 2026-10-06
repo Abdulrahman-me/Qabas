@@ -1,0 +1,1311 @@
+{
+  "session_id": "ses_mock_u0_l11_ar_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l11",
+  "lesson_version": 1,
+  "title": "محمد ﷺ وادّعاؤه",
+  "subtitle": "ماذا تنقل المصادر عن دعوته، وكيف نفحص ما تنقله؟",
+  "lesson_type": "story",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "صف ما تنقله رواية الصفا دون إضافة تفاصيل."
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "اربط خبرًا عن سيرته بسؤال فحص مناسب."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l11_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "تخيّل أنك تقرأ خبرًا قديمًا عن صاحب دعوى كبيرة، لا عن شخص قابلته بنفسك."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "تريد أن تسمع ما تنقله الرواية، ثم تعرف ما تستطيع استنتاجه منها."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "كيف تقرأ خبرًا عن محمد ﷺ دون أن تخلط الرواية بحكمك عليها؟"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l11_records",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l11_records_v1_a4e29a49b8d90b95b3d63e04c16fd680951d71ec07e96d737a8910bee00e417a.json",
+          "mime_type": "application/json",
+          "sha256": "a4e29a49b8d90b95b3d63e04c16fd680951d71ec07e96d737a8910bee00e417a",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_records_v1_76f20ad9e8_2e17987826978e16dcdc3c8931872a0ee131e61942604e7c74802b2b2cd78977.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "كتاب مفتوح ومصباح على طاولة، دون أي أشخاص أو نص مرسوم.",
+        "overlays": []
+      },
+      "cta": "ابدأ بالسؤال"
+    },
+    {
+      "block_id": "b_u0_l11_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي جانب ستبحث عنه في الرواية أولًا؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "ماذا ادّعى؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "كيف وصفه من عرفوه؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "من نقل الخبر، وأين أجده؟"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "يمكن أن تبدأ بأي سؤال؛ احتفظ بالبقية أثناء متابعة الرواية."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l11_03",
+      "type": "story",
+      "label": "قصة",
+      "title": "النداء عند الصفا",
+      "provenance": {
+        "source_id": "src_u0_l11_story",
+        "provider": "dorar",
+        "reference": "Sahih al-Bukhari 4770",
+        "grade_label": null
+      },
+      "origin": {
+        "title": "النداء عند الصفا",
+        "source_ids": [
+          "src_u0_l11_story"
+        ],
+        "show_card": false
+      },
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l11_005",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تنقل رواية في صحيح البخاري أن محمدًا ﷺ صعد الصفا ودعا جماعات من قريش للاجتماع."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_01"
+              ]
+            },
+            {
+              "sentence_id": "s_u0_l11_006",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تابع الرواية بوصفها خبرًا له مصدر، لا مشهدًا شاهدته بنفسك."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l11_safa",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l11_safa_v1_c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0.json",
+              "mime_type": "application/json",
+              "sha256": "c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_safa_v1_cd92849bcd_d66bffda997e18d15dbbcd90ebe69946347836f8aa8cb49096a9b2e4f6fc7d68.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l11_007",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "وتنقل أنه سألهم إن كانوا سيصدّقون خبرًا منه عن خيل تريد مهاجمتهم."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_02"
+              ]
+            },
+            {
+              "sentence_id": "s_u0_l11_013",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "سؤال الخيل في رواية الصفا يختبر ثقتهم بخبره قبل أن يعرض الإنذار."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_05"
+              ]
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l11_safa",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l11_safa_v1_c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0.json",
+              "mime_type": "application/json",
+              "sha256": "c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_safa_v1_fcb38353b5_7163a87763dae46091541b7259062a3dd1226de2165f2e0d70c84197a56f4024.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l11_009",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "بحسب الرواية، أجابوا بأن خبرتهم معه كانت الصدق."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_03"
+              ]
+            },
+            {
+              "sentence_id": "s_u0_l11_014",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "انسب هذه الإجابة إلى المخاطَبين الذين يذكرهم المصدر."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l11_safa",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l11_safa_v1_c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0.json",
+              "mime_type": "application/json",
+              "sha256": "c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_safa_v1_19cf76ac47_1b394b6a8b20fe7c24a1d1f09c047c3c3fe99c855cdc13c0c37234857a77a522.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_4",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l11_011",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ثم تنقل الرواية أنه قدّم نفسه نذيرًا لهم، وأن أبا لهب اعترض على هذا النداء."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_04"
+              ]
+            },
+            {
+              "sentence_id": "s_u0_l11_015",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الرواية تنقل إجابة المخاطَبين في ذلك الموقف، ولا تصف قبول الجميع."
+                }
+              ],
+              "source_ids": [
+                "src_c_u0_l11_06"
+              ]
+            },
+            {
+              "sentence_id": "bt_4_b_u0_l11_03_pending",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 4
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l11_safa",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l11_safa_v1_c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0.json",
+              "mime_type": "application/json",
+              "sha256": "c03eee6382620dae3a10bd74f33fe6a81c2173a128eb4a205606cb0f392095f0",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_safa_v1_04c1b64992_85d4d12c573cebb223d8b3fd2624be2278adf57a82075252e689541cb181c021.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 4
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l11_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_muhammad_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي نتيجة يناسبها جوابهم عن خبرته معهم؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "صدّق كل شخص دعوته فورًا."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الرواية تقدّم شاهدًا عن صدقه في خبرتهم."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "عرف القارئ كل تفاصيل حياته."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l11_05_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_05",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ما الذي يضيفه خبر آخر؟"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l11_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "في رواية أخرى بالبخاري، نقل أبو سفيان جوابًا ينفي اتّهام محمد ﷺ بالكذب قبل دعواه."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_08"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l11_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "وتنقل الرواية جوابًا عن وفائه بالعهود، مع تحفّظ أبي سفيان بشأن هدنة كانت قائمة."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_09"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l11_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "وبحسبها، وصف دعوته إلى عبادة الله وحده والصلاة والصدق والعفاف وصلة الرحم."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_10"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l11_020",
+            "spans": [
+              {
+                "type": "text",
+                "text": "افصل بين وصف سيرته، ووصف ما كان يدعو إليه، والحكم على دعوى النبوة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_06",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l11_02",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_muhammad_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "هل هذه قراءة دقيقة للرواية؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "خبر أبي سفيان في الرواية يحسم كل ما فعله محمد ﷺ في بقية حياته."
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "نعم، لأن اسم المصدر يكفي لكل التفاصيل."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لا، لأن الجواب يتعلّق بما ينقله في ذلك الوقت."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "نعم، لأن الخبر عن الصدق يثبت كل قول لاحق."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l11_07_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_07",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "اسأل عن المنفعة بدقة"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l11_023",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يقدّم القرآن خطاب محمد ﷺ على أنه لا يطلب أجرًا على هذه الرسالة."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_11"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l11_024",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إعلان عدم طلب أجر يحدّد قول صاحب الدعوى، بينما فحص السلوك يحتاج شواهده."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l11_025",
+            "spans": [
+              {
+                "type": "text",
+                "text": "خبر موثوق عن رفض منفعة يضعف تفسير تلك المنفعة، لكنه لا يثبت النبوة وحده."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l11_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إذا قرأت قصة عن رفض مال أو سلطة، اطلب مصدرها وتفاصيل ما تثبته."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_08",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي جانب بقي أكثر حاجة إلى متابعة بالنسبة لك؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "كيف نُقلت الروايات؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "كيف تتصل السيرة بدعوى الرسالة؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "كيف أفحص الرسالة نفسها؟"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "يمكنك فهم الرواية مع بقاء أسئلة عن صدقها أو دلالتها؛ هذه الإجابة لا تُقيّم."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l11_09",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ثلاث طبقات للقراءة"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 2
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l11_records",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l11_records_v1_a4e29a49b8d90b95b3d63e04c16fd680951d71ec07e96d737a8910bee00e417a.json",
+          "mime_type": "application/json",
+          "sha256": "a4e29a49b8d90b95b3d63e04c16fd680951d71ec07e96d737a8910bee00e417a",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l11_records_v1_fcb38353b5_21aadb9c62aeaa9a00805628041a6a327a7d3cb2813ad1b0e94d0f4b73803866.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 2
+        },
+        "alt": "الكتاب المفتوح على طاولة القراءة، مع ضوء دافئ حول الصفحات.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l11_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "قراءة الرواية تحدّد ما ينقله المصدر؛ وقبول وقوع الحدث يتطلّب فحص الخبر."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l11_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الخبر عن ثقة المخاطَبين يتعلّق بصدق الخبر عندهم، ولا يثبت وحده مصدر الرسالة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l11_030",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الحكم على دعوى الرسالة يجمع فحص النقل والسيرة والرسالة، مع مراعاة حدود كل دليل."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l11_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "اكتب: هذا ما تنقله الرواية؛ وهذا ما تدعمه؛ وهذا ما بقي يحتاج إلى فحص."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_10",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l11_03",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_muhammad_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أين ينقطع اتصال النتيجة بالدليل؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "رواية الصفا تنقل جوابًا عن صدقه."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "هذا يتعلّق بسؤال عن سلوكه السابق."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إذن يكفي الجواب وحده لإثبات كل ما تتضمّنه دعوى الرسالة."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l11_11",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "لست مطالبًا بتبنّي حكم شخص آخر كي تفهم ما تنقله المصادر."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "وجّه السؤال إلى الرواية والمعنى والدليل، مع احترام الأشخاص الذين تتعلّق بهم."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l11_12",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l11_04",
+        "type": "scenario",
+        "concept_ids": [
+          "con_u0_muhammad_claim"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "كيف يواصل هذا القارئ فحصه؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "situation": [
+            {
+              "type": "text",
+              "text": "تخيّل أن قارئًا فهم رواية الصفا، لكنه لا يعرف كيف وصل هذا الخبر إلى الكتاب."
+            }
+          ],
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يسأل عن نقل الرواية ومصدرها وشرحها، ثم يقارن دلالتها بالسؤال الذي يفحصه."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يُجبر نفسه على القبول لأنه فهم القصة."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يحكم أن عدم معرفته بالتفاصيل يثبت أن الحدث لم يقع."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l11_13",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "من الخبر إلى السؤال المناسب"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l11_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "بحسب الرواية، أجابوا بأن خبرتهم معه كانت الصدق."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_03"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l11_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "وبحسبها، وصف دعوته إلى عبادة الله وحده والصلاة والصدق والعفاف وصلة الرحم."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l11_10"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l11_039",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إعلان عدم طلب أجر يحدّد قول صاحب الدعوى، بينما فحص السلوك يحتاج شواهده."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l11_040",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الحكم على دعوى الرسالة يجمع فحص النقل والسيرة والرسالة، مع مراعاة حدود كل دليل."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "حين تقرأ خبرًا تاريخيًا، افصل في سطرين بين الرواية واستنتاجك منها."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l11_topic_1",
+        "title": "محمد ﷺ وادّعاؤه",
+        "concept_ids": [
+          "con_u0_muhammad_claim"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "ما الذي يدعمه خبر عن الصدق، وما الذي بقي للفحص؟"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "src_c_u0_l11_01",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Sahih al-Bukhari 4770",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_02",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Sahih al-Bukhari 4770; same primary text URL. Preserve that cavalry report is hypothetical within the historical report, not an actual attack.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_03",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Sahih al-Bukhari 4770; same primary text URL. Do not expand this reported response into a claim about every Meccan or every past event.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_04",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Sahih al-Bukhari 4770; same primary text URL. Claim is report-level attribution; no invented speech, thoughts or participant depictions.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_05",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Sahih al-Bukhari 4770; explanatory reading of question sequence; approve with hadith commentary.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_06",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Sahih al-Bukhari 4770; distinguish the reported response from Abu Lahab objection; approve with commentary.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_08",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Sahih al-Bukhari 7",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_09",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Sahih al-Bukhari 7; scope checked same URL, promises/truce section. Preserve qualification and do not claim later conduct from that report.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_10",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Sahih al-Bukhari 7; scope checked same URL, question about what he orders. Meaning parity and paraphrase need specialist approval.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l11_11",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Sad 38:86",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_u0_l11_story",
+      "kind": "hadith",
+      "provider": "dorar",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Sahih al-Bukhari 4770",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    }
+  ],
+  "terms": {
+    "term_report_source": {
+      "term_id": "term_report_source",
+      "text": "مصدر الرواية",
+      "arabic": "مصدر الرواية",
+      "transliteration": "maṣdar al-riwāyah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "الموضع المحدّد الذي نرجع إليه لمعرفة ما تنقله رواية وكيف نُقلت."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "نميّز رواية الصفا عن الاستنتاج الذي نبنيه عليها."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l11",
+      "lesson_title": "محمد ﷺ وادّعاؤه"
+    }
+  },
+  "answers": []
+}

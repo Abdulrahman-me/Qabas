@@ -1,0 +1,86 @@
+{
+  "message_id": "msg_a_202",
+  "role": "assistant",
+  "status": "completed",
+  "stage": "done",
+  "created_at": "2026-10-04T10:01:00Z",
+  "completed_at": "2026-10-04T10:01:09Z",
+  "understood_input": {
+    "transcript": null,
+    "images": [],
+    "document": null
+  },
+  "classification": {
+    "question_class": "verification",
+    "label": "التحقق من الحديث"
+  },
+  "abstained": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "type": "text",
+          "text": "تشبيه الصلوات الخمس بنهر على باب أحدكم مروي في البخاري ومسلم، ويبين أثر الصلاة في محو الخطايا."
+        },
+        {
+          "type": "citation",
+          "ref": 1
+        }
+      ]
+    },
+    {
+      "type": "verification",
+      "items": [
+        {
+          "item_id": "vi_1",
+          "quote_text": "الصلوات الخمس كنهر على باب أحدكم",
+          "detected_kind": "hadith",
+          "status": "hadith_graded",
+          "hadith_grade": {
+            "grade_label": "صحيح",
+            "grade_category": "authentic",
+            "grader": "البخاري ومسلم",
+            "source_book": "متفق عليه",
+            "reference": null
+          },
+          "correct_text": null,
+          "alternative": null,
+          "note": [
+            {
+              "type": "text",
+              "text": "تشبيه الصلوات الخمس بنهر على باب أحدكم مروي في البخاري ومسلم، ويبين أثر الصلاة في محو الخطايا."
+            }
+          ],
+          "source_ids": [
+            "src_5f5a8ed8f139be6d"
+          ]
+        }
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "ref": 1,
+      "source": {
+        "source_id": "src_5f5a8ed8f139be6d",
+        "kind": "hadith",
+        "provider": "hadeethenc",
+        "title": "متفق عليه",
+        "reference": "متفق عليه",
+        "excerpt": "فَذَلِكَ مِثْلُ الصَّلَوَاتِ الخَمْسِ، يَمْحُو اللَّهُ بِهِ الخَطَايَا",
+        "url": "https://hadeethenc.com/ar/browse/hadith/4968",
+        "displayed": true,
+        "display_role": "content"
+      }
+    }
+  ],
+  "terms": {},
+  "suggested_lessons": [
+    {
+      "lesson_id": "les_u1_l3",
+      "title": "الصلاة"
+    }
+  ],
+  "feedback": null
+}

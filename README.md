@@ -1,9 +1,12 @@
-# Qabas — backend
+# Qabas
 
 Qabas (قبس) helps people learn Islam step by step, from their first question to real understanding.
 
-This repository holds the **backend** implementation: FastAPI services, PostgreSQL schema, Celery workers, the Lesson Factory and reviewer workflow, Raqeeb, community and challenges. The Flutter app is developed separately.
+This repository is a monorepo containing both the backend services and the Flutter client application:
 
-- **Plan and progress:** [IMPLEMENTATION_PHASES.md](IMPLEMENTATION_PHASES.md) (phases, checkpoints, decision and progress logs).
-- **Development environment:** [backend/README.md](backend/README.md).
-- **Specification:** the frozen engineering handoff (contract revision 10) is kept next to this repository in `FINAL_ENGINEERING_HANDOFF/`, read-only and not committed.
+- **Backend (`backend/`):** FastAPI services, PostgreSQL schema, Celery workers, Lesson Factory and reviewer workflow, Raqeeb AI assistant, community, and live challenges. See [backend/README.md](backend/README.md) and [IMPLEMENTATION_PHASES.md](IMPLEMENTATION_PHASES.md).
+- **Frontend (`frontend/`):** Production Flutter app (iOS, Android, Web, macOS, Linux, Windows). See [frontend/README.md](frontend/README.md), [frontend/AGENTS.md](frontend/AGENTS.md), and [frontend/docs/PROGRESS.md](frontend/docs/PROGRESS.md).
+
+## Development & AI Agents
+
+Instructions for Claude Code, coding agents, and automation are in [CLAUDE.md](CLAUDE.md).

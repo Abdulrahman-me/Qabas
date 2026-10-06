@@ -1,0 +1,358 @@
+{
+  "status": "unpublished_mock_review_draft",
+  "contract_revision": 10,
+  "schema_sha256": "9d67bda00d2edd04d47645b6b93a7747ab9d5646cddeb12a7b34a6910c97481c",
+  "media_base_url": "http://localhost:8765",
+  "track": "explorer_only; Unit 0 has no New Muslim variant",
+  "sessions": [
+    {
+      "path": "sessions/session_u0_l01_ar_explorer.json",
+      "lesson_id": "les_u0_l1",
+      "authoring_lesson_id": "les_u0_l01",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "scenario"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l01_en_explorer.json",
+      "lesson_id": "les_u0_l1",
+      "authoring_lesson_id": "les_u0_l01",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "scenario"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l02_ar_explorer.json",
+      "lesson_id": "les_u0_l2",
+      "authoring_lesson_id": "les_u0_l02",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "spot_error",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l02_en_explorer.json",
+      "lesson_id": "les_u0_l2",
+      "authoring_lesson_id": "les_u0_l02",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "spot_error",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l03_ar_explorer.json",
+      "lesson_id": "les_u0_l3",
+      "authoring_lesson_id": "les_u0_l03",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "spot_error",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l03_en_explorer.json",
+      "lesson_id": "les_u0_l3",
+      "authoring_lesson_id": "les_u0_l03",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "spot_error",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l04_ar_explorer.json",
+      "lesson_id": "les_u0_l4",
+      "authoring_lesson_id": "les_u0_l04",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "match_pairs",
+        "multiple_choice",
+        "spot_error"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l04_en_explorer.json",
+      "lesson_id": "les_u0_l4",
+      "authoring_lesson_id": "les_u0_l04",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "match_pairs",
+        "multiple_choice",
+        "spot_error"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l05_ar_explorer.json",
+      "lesson_id": "les_u0_l5",
+      "authoring_lesson_id": "les_u0_l05",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "multiple_choice",
+        "spot_error",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l05_en_explorer.json",
+      "lesson_id": "les_u0_l5",
+      "authoring_lesson_id": "les_u0_l05",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "multiple_choice",
+        "spot_error",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l06_ar_explorer.json",
+      "lesson_id": "les_u0_l6",
+      "authoring_lesson_id": "les_u0_l06",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l06_en_explorer.json",
+      "lesson_id": "les_u0_l6",
+      "authoring_lesson_id": "les_u0_l06",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l07_ar_explorer.json",
+      "lesson_id": "les_u0_l7",
+      "authoring_lesson_id": "les_u0_l07",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l07_en_explorer.json",
+      "lesson_id": "les_u0_l7",
+      "authoring_lesson_id": "les_u0_l07",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l08_ar_explorer.json",
+      "lesson_id": "les_u0_l8",
+      "authoring_lesson_id": "les_u0_l08",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "multiple_choice",
+        "order_steps",
+        "scenario",
+        "spot_error"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l08_en_explorer.json",
+      "lesson_id": "les_u0_l8",
+      "authoring_lesson_id": "les_u0_l08",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "multiple_choice",
+        "order_steps",
+        "scenario",
+        "spot_error"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l09_ar_explorer.json",
+      "lesson_id": "les_u0_l9",
+      "authoring_lesson_id": "les_u0_l09",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "scenario",
+        "spot_error"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l09_en_explorer.json",
+      "lesson_id": "les_u0_l9",
+      "authoring_lesson_id": "les_u0_l09",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "categorize",
+        "multiple_choice",
+        "scenario",
+        "spot_error"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l10_ar_explorer.json",
+      "lesson_id": "les_u0_l10",
+      "authoring_lesson_id": "les_u0_l10",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "categorize",
+        "scenario",
+        "spot_error",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l10_en_explorer.json",
+      "lesson_id": "les_u0_l10",
+      "authoring_lesson_id": "les_u0_l10",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "categorize",
+        "scenario",
+        "spot_error",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l11_ar_explorer.json",
+      "lesson_id": "les_u0_l11",
+      "authoring_lesson_id": "les_u0_l11",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "multiple_choice",
+        "scenario",
+        "spot_error",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l11_en_explorer.json",
+      "lesson_id": "les_u0_l11",
+      "authoring_lesson_id": "les_u0_l11",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "multiple_choice",
+        "scenario",
+        "spot_error",
+        "true_false_reason"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l12_ar_explorer.json",
+      "lesson_id": "les_u0_l12",
+      "authoring_lesson_id": "les_u0_l12",
+      "variant": "ar_explorer",
+      "exercise_types": [
+        "match_pairs",
+        "order_steps",
+        "scenario",
+        "spot_error"
+      ]
+    },
+    {
+      "path": "sessions/session_u0_l12_en_explorer.json",
+      "lesson_id": "les_u0_l12",
+      "authoring_lesson_id": "les_u0_l12",
+      "variant": "en_explorer",
+      "exercise_types": [
+        "match_pairs",
+        "order_steps",
+        "scenario",
+        "spot_error"
+      ]
+    }
+  ],
+  "unit0_exercise_types": [
+    "categorize",
+    "match_pairs",
+    "multiple_choice",
+    "order_steps",
+    "scenario",
+    "spot_error",
+    "true_false_reason"
+  ],
+  "reference_salah": [
+    {
+      "path": "reference_salah/session_salah_ar_explorer.json",
+      "revision10_valid": true,
+      "error": null,
+      "lesson_id": "les_u1_l3",
+      "unit_id": "unit_1",
+      "exercise_types": [
+        "categorize",
+        "map_place",
+        "multiple_choice",
+        "order_steps",
+        "recite_verse",
+        "scenario"
+      ]
+    },
+    {
+      "path": "reference_salah/session_salah_ar_new_muslim.json",
+      "revision10_valid": true,
+      "error": null,
+      "lesson_id": "les_u1_l3",
+      "unit_id": "unit_1",
+      "exercise_types": [
+        "categorize",
+        "map_place",
+        "multiple_choice",
+        "order_steps",
+        "recite_verse",
+        "scenario"
+      ]
+    },
+    {
+      "path": "reference_salah/session_salah_en_explorer.json",
+      "revision10_valid": true,
+      "error": null,
+      "lesson_id": "les_u1_l3",
+      "unit_id": "unit_1",
+      "exercise_types": [
+        "categorize",
+        "map_place",
+        "multiple_choice",
+        "order_steps",
+        "recite_verse",
+        "scenario"
+      ]
+    },
+    {
+      "path": "reference_salah/session_salah_en_new_muslim.json",
+      "revision10_valid": true,
+      "error": null,
+      "lesson_id": "les_u1_l3",
+      "unit_id": "unit_1",
+      "exercise_types": [
+        "categorize",
+        "map_place",
+        "multiple_choice",
+        "order_steps",
+        "recite_verse",
+        "scenario"
+      ]
+    }
+  ]
+}

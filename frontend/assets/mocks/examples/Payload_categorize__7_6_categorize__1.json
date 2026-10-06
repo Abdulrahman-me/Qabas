@@ -1,0 +1,92 @@
+{
+ "presentation": "day_arc",
+ "categories": [
+  {
+   "category_id": "cat_5t",
+   "label": "أول الضوء",
+   "phase": "dawn",
+   "capacity": 1,
+   "art_key": null
+  },
+  {
+   "category_id": "cat_j8",
+   "label": "منتصف النهار",
+   "phase": "midday",
+   "capacity": 1,
+   "art_key": null
+  },
+  {
+   "category_id": "cat_2w",
+   "label": "بعد الظهيرة",
+   "phase": "afternoon",
+   "capacity": 1,
+   "art_key": null
+  },
+  {
+   "category_id": "cat_q1",
+   "label": "الغروب",
+   "phase": "sunset",
+   "capacity": 1,
+   "art_key": null
+  },
+  {
+   "category_id": "cat_x6",
+   "label": "الليل",
+   "phase": "night",
+   "capacity": 1,
+   "art_key": null
+  }
+ ],
+ "items": [
+  {
+   "item_id": "itm_c4",
+   "spans": [
+    {
+     "type": "text",
+     "text": "العصر"
+    }
+   ],
+   "secondary_label": null
+  },
+  {
+   "item_id": "itm_9a",
+   "spans": [
+    {
+     "type": "text",
+     "text": "الفجر"
+    }
+   ],
+   "secondary_label": null
+  },
+  {
+   "item_id": "itm_e2",
+   "spans": [
+    {
+     "type": "text",
+     "text": "العشاء"
+    }
+   ],
+   "secondary_label": null
+  },
+  {
+   "item_id": "itm_k7",
+   "spans": [
+    {
+     "type": "text",
+     "text": "الظهر"
+    }
+   ],
+   "secondary_label": null
+  },
+  {
+   "item_id": "itm_b5",
+   "spans": [
+    {
+     "type": "text",
+     "text": "المغرب"
+    }
+   ],
+   "secondary_label": null
+  }
+ ]
+}

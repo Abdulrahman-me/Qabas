@@ -1,0 +1,486 @@
+{
+  "session_id": "ses_review_cards",
+  "kind": "review",
+  "mode": "cards",
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": null,
+  "lesson_id": null,
+  "lesson_version": null,
+  "title": "كلماتك",
+  "subtitle": null,
+  "lesson_type": null,
+  "reviewed_by": null,
+  "objectives": [],
+  "counts": {
+    "interactions": 12,
+    "exercises": 12,
+    "scored": 0
+  },
+  "source_count": 0,
+  "total_exercises": 12,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T09:00:00Z",
+  "items": [
+    {
+      "block_id": "b_recording_card_0",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_0",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «العصر»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "الصلاة الثالثة، بعد الظهر والشمس ما زالت مرتفعة."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_1",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_1",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «الدرن»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "الوسخ الذي يعلق بالجسد."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_2",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_2",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «الظهر»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "الصلاة الثانية، حين تميل الشمس عن وسط السماء."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_3",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_3",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «الدعاء»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "أن تكلّم الله وتطلب منه ما تحتاج، في أي وقت."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_4",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_4",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «الفجر»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "أول صلاة في اليوم، مع أول ضوء قبل شروق الشمس."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_5",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_5",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «فريضة»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "عمل طلبه الله من المسلم طلبًا لازمًا، وليس اختياريًا."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_6",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_6",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «حديث»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "كلام أو فعل ثابت عن النبي ﷺ، نُقل إلينا بطريق موثوق."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_7",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_7",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «إقامة الصلاة»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "أداء الصلاة كاملة كما شرعها الله."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_8",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_8",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «العشاء»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "الصلاة الخامسة، في الليل بعد غياب الحمرة من الأفق."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_9",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_9",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «الخطايا»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "الذنوب والأخطاء التي يقع فيها الإنسان."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_10",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_10",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «المغرب»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "الصلاة الرابعة، بعد غروب الشمس."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_card_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_card_11",
+        "type": "flashcard",
+        "concept_ids": [
+          "con_salah"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "تذكّر المعنى، ثم اقلب البطاقة."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": false,
+          "combo": false,
+          "layer": null
+        },
+        "framing": null,
+        "payload": {
+          "front": [
+            {
+              "type": "text",
+              "text": "ما معنى «ركن»؟"
+            }
+          ],
+          "back": [
+            {
+              "type": "text",
+              "text": "عمود من الأعمدة الكبيرة التي يقوم عليها البناء."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "completion": null,
+  "sources": [],
+  "terms": {},
+  "answers": []
+}

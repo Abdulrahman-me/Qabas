@@ -1,0 +1,5265 @@
+{
+ "run_id": "run_test_u1l1",
+ "unit_id": "unit_1",
+ "lesson_type": "concept",
+ "brief": "الدرس 1.1 (تأسيسي): ما الإسلام في الحقيقة؟ الاستسلام لله طوعاً بوصفه توجّه الحياة كلها إليه، مع تصحيح التصورات الشائعة، دون تدريس الشهادة أو الصلاة أو الأركان.",
+ "status": "awaiting_gate2",
+ "stage": "qa",
+ "stages": [
+  {
+   "stage": "plan",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "decompose",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "retrieve",
+   "status": "skipped",
+   "started_at": null,
+   "finished_at": null
+  },
+  {
+   "stage": "verify_evidence",
+   "status": "skipped",
+   "started_at": null,
+   "finished_at": null
+  },
+  {
+   "stage": "write",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "exercises",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "glossary",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "localize",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  },
+  {
+   "stage": "visuals",
+   "status": "skipped",
+   "started_at": null,
+   "finished_at": null
+  },
+  {
+   "stage": "scene_author",
+   "status": "skipped",
+   "started_at": null,
+   "finished_at": null
+  },
+  {
+   "stage": "scene_render",
+   "status": "skipped",
+   "started_at": null,
+   "finished_at": null
+  },
+  {
+   "stage": "narration",
+   "status": "skipped",
+   "started_at": null,
+   "finished_at": null
+  },
+  {
+   "stage": "qa",
+   "status": "done",
+   "started_at": "2026-10-03T09:00:00Z",
+   "finished_at": "2026-10-03T09:01:00Z"
+  }
+ ],
+ "plan": {
+  "title": {
+   "ar": "ما معنى الإسلام؟",
+   "en": "What Does Islam Mean?"
+  },
+  "central_question": {
+   "ar": "ما الإسلام في الحقيقة؟",
+   "en": "What does Islam actually mean?"
+  },
+  "primary_learning_outcome": {
+   "ar": "أن يشرح المتعلم، بمستوى المبتدئ، أن الإسلام استسلام لله طوعاً، وأنه علاقة تشكّل العبادة والطاعة والثقة واتجاه الحياة كلها.",
+   "en": "The learner can explain, at beginner level, that Islam is willing submission to Allah, a relationship that shapes worship, obedience, trust and the direction of a whole life."
+  },
+  "supporting_understandings": [
+   {
+    "ar": "أصل الكلمة (أسلم: استسلم وانقاد) بداية الجواب لا الجواب كله.",
+    "en": "The root of the word (aslama: to submit and yield) is where the answer starts, not the whole answer."
+   },
+   {
+    "ar": "الاستسلام هنا طوعي لا إكراه فيه.",
+    "en": "This submission is willing, without compulsion."
+   },
+   {
+    "ar": "الإسلام ليس هوية قومية أو موروثة، ولا مجرد اسم أو كلمة، ولا قائمة ممنوعات فقط؛ والعبادة فيه جزء من هذا التوجّه لا شيء منفصل عنه.",
+    "en": "Islam is not an ethnic or inherited identity, not merely a name or a phrase and not just a list of prohibitions; worship belongs within this orientation, not apart from it."
+   },
+   {
+    "ar": "هو توجّه الإنسان كله إلى الله: عبادة وطاعة وثقة واتباع لهداه.",
+    "en": "It is the whole person turning toward God: worship, obedience, trust and following His guidance."
+   },
+   {
+    "ar": "المسلم من أسلم لله.",
+    "en": "A Muslim is one who submits to God."
+   },
+   {
+    "ar": "يقدّم القرآن هذا الاستسلام على أنه طريق الأنبياء، كجواب إبراهيم.",
+    "en": "The Qur’an presents this submission as the way of the prophets, as in Ibrahim’s answer."
+   }
+  ],
+  "depth_profile": "foundational",
+  "objectives": [
+   {
+    "ar": "أن تشرح ما يقصده المسلمون بالإسلام، وما الذي يجعله أكثر من كلمة أو انتماء.",
+    "en": "Explain what Muslims mean by Islam, and what makes it more than a word or a belonging."
+   }
+  ],
+  "prerequisite_concept_ids": [],
+  "introduced_concept_ids": [
+   "con_islam_meaning"
+  ],
+  "new_terms": [
+   {
+    "ar": "الإسلام",
+    "en": "Islam"
+   },
+   {
+    "ar": "المسلم",
+    "en": "Muslim"
+   }
+  ],
+  "target_misconceptions": [
+   {
+    "misconception_id": null,
+    "title": {
+     "ar": "الإسلام اسمٌ لدين قومٍ معيّنين",
+     "en": "Islam is just the name of one people's religion"
+    },
+    "description": {
+     "ar": "فكرة شائعة لكنها غير دقيقة: كلمة «الإسلام» تصف علاقةً بالله — الاستسلام له — لا قوماً ولا بلداً.",
+     "en": "A common but inaccurate idea: the word “Islam” describes a relationship with God — submitting to Him — not a people or a country."
+    }
+   }
+  ],
+  "lesson_type": "concept",
+  "estimated_minutes": 9,
+  "lesson_arc": {
+   "pattern": "misconception",
+   "rationale": {
+    "ar": "يبدأ المتعلم من تصورين شائعين، ثم يكتشف أن أصل الكلمة بداية فقط، ويعرف ما ليس هو الإسلام، ويرى معناه في جواب إبراهيم، ثم يفهمه توجّهاً للحياة كلها، ويميّزه من الفهم الناقص، ويلخّصه وينقله إلى موقف جديد.",
+    "en": "The learner starts from two common assumptions, discovers the root is only the start, learns what Islam is not, sees its meaning in Ibrahim’s answer, understands it as the orientation of a whole life, distinguishes it from incomplete ideas, then sums it up and transfers it."
+   },
+   "steps": [
+    {
+     "step_id": "misconception",
+     "technique": "scenario",
+     "experience": {
+      "ar": "زائران في متحف يختصران الإسلام في قوم أو في هوية موروثة.",
+      "en": "Two museum visitors reduce Islam to a people, or to an inherited identity."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "predict",
+     "technique": "prediction",
+     "experience": {
+      "ar": "يختار المتعلم الإجابة الأقرب في نظره.",
+      "en": "The learner picks the answer that seems closest."
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "word",
+     "technique": "explanation",
+     "experience": {
+      "ar": "أصل الكلمة بداية الجواب لا نهايته.",
+      "en": "The word’s root is the start of the answer, not the end."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "boundaries",
+     "technique": "explanation",
+     "experience": {
+      "ar": "ليس انتماءً لقوم، وليس إكراهاً.",
+      "en": "Not belonging to a people, and not compulsion."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "correct_myth",
+     "technique": "practice",
+     "experience": {
+      "ar": "تصحيح فكرة أن الإسلام دين قوم.",
+      "en": "Correcting the idea that Islam is one people’s religion."
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "ibrahim",
+     "technique": "story",
+     "experience": {
+      "ar": "جواب إبراهيم: أسلمتُ، ثم الوصية لأبنائه.",
+      "en": "Ibrahim’s answer: I have submitted, then his counsel to his sons."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "deeper",
+     "technique": "explanation",
+     "experience": {
+      "ar": "الإسلام توجّه الحياة كلها: عبادة وعمل صالح وتوكل واتباع للهدى.",
+      "en": "Islam as the orientation of a whole life: worship, good deeds, trust and following guidance."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "distinguish",
+     "technique": "comparison",
+     "experience": {
+      "ar": "تمييز المعنى الكامل من التصورات الناقصة.",
+      "en": "Telling the full meaning apart from incomplete ideas."
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "reflect",
+     "technique": "reflection",
+     "experience": {
+      "ar": "أي جانب كان أبعد عن تصوّرك؟ تصويت غير مقيَّم.",
+      "en": "Which aspect was furthest from what you pictured? An ungraded poll."
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "muslim",
+     "technique": "explanation",
+     "experience": {
+      "ar": "من هو المسلم، وصلة ذلك بطريق الأنبياء.",
+      "en": "Who a Muslim is, and the link to the way of the prophets."
+     },
+     "interactive": false
+    },
+    {
+     "step_id": "transfer",
+     "technique": "practice",
+     "experience": {
+      "ar": "تلخيص المعنى، ثم تصحيح عبارة منشورة عن المسلم.",
+      "en": "Summing up the meaning, then correcting a posted statement about who a Muslim is."
+     },
+     "interactive": true
+    },
+    {
+     "step_id": "takeaway",
+     "technique": "takeaway",
+     "experience": {
+      "ar": "خلاصة قصيرة.",
+      "en": "A short takeaway."
+     },
+     "interactive": false
+    }
+   ]
+  },
+  "reasoning_tools": [],
+  "standalone_eligible": true,
+  "content_budget": 7,
+  "exercise_budget": 4
+ },
+ "draft": {
+  "languages": [
+   "ar",
+   "en"
+  ],
+  "variants": [
+   "explorer",
+   "new_muslim"
+  ],
+  "previews": [
+   {
+    "language": "ar",
+    "variant": "explorer",
+    "objectives": [
+     [
+      {
+       "type": "text",
+       "text": "أن تشرح ما يقصده المسلمون بالإسلام، وما الذي يجعله أكثر من كلمة أو انتماء."
+      }
+     ]
+    ],
+    "items": [
+     {
+      "block_id": "blk_u1l1_hook",
+      "type": "hook",
+      "situation": [
+       {
+        "type": "text",
+        "text": "في قاعة الفنون الإسلامية بأحد المتاحف، تقول زائرة لمرافقها: «الإسلام دين العرب، أليس كذلك؟». فيجيبها: «لا، هو هوية يولد بها الإنسان، مثل اسم العائلة»."
+       }
+      ],
+      "question": [
+       {
+        "type": "text",
+        "text": "فما الإسلام في الحقيقة؟"
+       }
+      ],
+      "visual": {
+       "kind": "image",
+       "key": null,
+       "version": null,
+       "params": null,
+       "image": {
+        "url": "https://cdn.example.com/test/u1l1/museum_gallery.webp",
+        "mime_type": "image/webp",
+        "width": 1600,
+        "height": 1000
+       },
+       "scene": null,
+       "fallback_image": null,
+       "fallback_params": null,
+       "alt": "قاعة متحف فيها بلاط بزخارف هندسية وقناديل، بلا كتابة ولا أشخاص",
+       "overlays": []
+      },
+      "cta": null
+     },
+     {
+      "block_id": "blk_u1l1_predict",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "أيّ هذه الإجابات أقرب برأيك؟"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "دين قوم معيّنين"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "هوية يرثها الإنسان من أسرته"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "علاقة بين الإنسان والله"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "سنعود إلى هذه الإجابات بعد أن نبدأ من الكلمة نفسها."
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u1l1_word",
+      "type": "teach",
+      "eyebrow": "أصل الكلمة",
+      "title": [
+       {
+        "type": "text",
+        "text": "كلمة لها معنى"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_1",
+        "sentence": {
+         "sentence_id": "sen_u1l1_01",
+         "spans": [
+          {
+           "type": "term",
+           "text": "«الإسلام»",
+           "term_id": "term_islam"
+          },
+          {
+           "type": "text",
+           "text": " كلمة عربية من الفعل «أسلم»، ومعناه: استسلم وانقاد."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_2",
+        "sentence": {
+         "sentence_id": "sen_u1l1_02",
+         "spans": [
+          {
+           "type": "text",
+           "text": "لكن أصل الكلمة بداية الجواب، لا الجواب كله."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_boundaries",
+      "type": "teach",
+      "eyebrow": "ما ليس هو",
+      "title": [
+       {
+        "type": "text",
+        "text": "ليس انتماءً، وليس إكراهاً"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_3",
+        "sentence": {
+         "sentence_id": "sen_u1l1_03",
+         "spans": [
+          {
+           "type": "text",
+           "text": "فالاسم يصف علاقةً بالله، لا قوماً ولا بلداً."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_4",
+        "sentence": {
+         "sentence_id": "sen_u1l1_04",
+         "spans": [
+          {
+           "type": "text",
+           "text": "وهذا الاستسلام يكون طوعاً: يذكر القرآن أنه لا إكراه في الدين."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_256"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x1",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_01",
+       "type": "true_false_reason",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "هل العبارة صحيحة بحسب معنى الكلمة؟ اختر الجواب والسبب."
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": {
+        "kind": "myth",
+        "statement": [
+         {
+          "type": "text",
+          "text": "الإسلام دين قومٍ بعينهم."
+         }
+        ]
+       },
+       "payload": {
+        "statement": [
+         {
+          "type": "text",
+          "text": "«الإسلام» اسمٌ لدين قومٍ معيّنين."
+         }
+        ],
+        "reasons": [
+         {
+          "option_id": "rsn_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأن الكلمة تصف علاقةً بالله لا انتماءً إلى قوم"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأن الكلمة ليست عربية"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأن الإسلام اسم كتاب"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_story",
+      "type": "story",
+      "label": "قصة من القرآن",
+      "title": "جواب إبراهيم",
+      "provenance": {
+       "source_id": "src_q_2_130_132",
+       "provider": "quran_com",
+       "reference": "البقرة: 130–132",
+       "grade_label": null
+      },
+      "beats": [
+       {
+        "beat_id": "beat_u1l1_0",
+        "beat_index": 0,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u1l1/desert_dawn.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "صحراء عند الفجر وخيمة وحيدة، بلا أشخاص",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u1l1_05",
+          "spans": [
+           {
+            "type": "text",
+            "text": "يروي القرآن أن الله دعا إبراهيم عليه السلام إلى أن يُسلم، فأجاب بأنه أسلم لربّ العالمين."
+           }
+          ],
+          "source_ids": [
+           "src_q_2_130_132"
+          ]
+         }
+        ]
+       },
+       {
+        "beat_id": "beat_u1l1_1",
+        "beat_index": 1,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u1l1/desert_dawn.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "صحراء عند الفجر وخيمة وحيدة، بلا أشخاص",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u1l1_06",
+          "spans": [
+           {
+            "type": "text",
+            "text": "ثم أوصى إبراهيم أبناءه بهذا الطريق، وكذلك فعل يعقوب، أن يبقوا عليه حتى آخر حياتهم."
+           }
+          ],
+          "source_ids": [
+           "src_q_2_130_132"
+          ]
+         }
+        ]
+       }
+      ],
+      "origin": {
+       "title": "من أين جاءت هذه القصة؟",
+       "source_ids": [
+        "src_q_2_130_132"
+       ],
+       "show_card": false
+      }
+     },
+     {
+      "block_id": "blk_u1l1_deeper",
+      "type": "teach",
+      "eyebrow": "أعمق من الكلمات",
+      "title": [
+       {
+        "type": "text",
+        "text": "توجّه الحياة كلها إلى الله"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_5",
+        "sentence": {
+         "sentence_id": "sen_u1l1_07",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ويصف القرآن هذا الاستسلام بأن تكون صلاة الإنسان وعبادته، بل حياته ومماته، لله ربّ العالمين."
+          }
+         ],
+         "source_ids": [
+          "src_q_6_162_163"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_6",
+        "sentence": {
+         "sentence_id": "sen_u1l1_08",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ويقرن القرآن تسليمَ الإنسان وجهه لله بالإحسان في عمله؛ فالإسلام ليس كلمة تُقال فحسب."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_112"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_7",
+        "sentence": {
+         "sentence_id": "sen_u1l1_09",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ويربط القرآن الإسلام بالتوكل على الله، أي أن يعتمد الإنسان عليه بقلبه."
+          }
+         ],
+         "source_ids": [
+          "src_q_10_84"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_8",
+        "sentence": {
+         "sentence_id": "sen_u1l1_10",
+         "spans": [
+          {
+           "type": "text",
+           "text": "فالإسلام عند المسلمين علاقة يتوجّه فيها الإنسان كله إلى الله: يعبده وحده، ويطيعه، ويثق به، ويتّبع هداه."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_10_84"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x2",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_02",
+       "type": "categorize",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "أيّ هذه الأوصاف يعبّر عن معنى الإسلام كما رأيناه، وأيّها فهمٌ ناقص؟"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "presentation": "buckets",
+        "categories": [
+         {
+          "category_id": "cat_meaning",
+          "label": "يعبّر عن المعنى",
+          "art_key": "compass",
+          "phase": null,
+          "capacity": null
+         },
+         {
+          "category_id": "cat_partial",
+          "label": "فهم ناقص",
+          "art_key": null,
+          "phase": null,
+          "capacity": null
+         }
+        ],
+        "items": [
+         {
+          "item_id": "itm_1",
+          "spans": [
+           {
+            "type": "text",
+            "text": "توجّه الإنسان بحياته كلها إلى الله"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_2",
+          "spans": [
+           {
+            "type": "text",
+            "text": "ترديد عبارة لا أثر لها في الحياة"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_3",
+          "spans": [
+           {
+            "type": "text",
+            "text": "الصلاة والعبادة جزءاً من حياة متوجّهة إلى الله"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_4",
+          "spans": [
+           {
+            "type": "text",
+            "text": "عبادة الله وطاعته والثقة به واتباع هداه"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_5",
+          "spans": [
+           {
+            "type": "text",
+            "text": "الانتساب إلى قوم أو بلد"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_6",
+          "spans": [
+           {
+            "type": "text",
+            "text": "قائمة ممنوعات فقط"
+           }
+          ],
+          "secondary_label": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_reflect",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "أيّ هذه الجوانب كان أبعد عن تصوّرك قبل الدرس؟"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "أنه ليس هوية قومية ولا موروثة"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "أن العبادة فيه جزء من توجّه الحياة كلها إلى الله"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "أنه استسلام عن اختيار"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "هذه الجوانب معاً ترسم الصورة العامة التي ستملؤها الدروس القادمة."
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u1l1_muslim",
+      "type": "teach",
+      "eyebrow": "المسلم",
+      "title": [
+       {
+        "type": "text",
+        "text": "من هو المسلم؟"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_9",
+        "sentence": {
+         "sentence_id": "sen_u1l1_11",
+         "spans": [
+          {
+           "type": "text",
+           "text": "و"
+          },
+          {
+           "type": "term",
+           "text": "«المسلم»",
+           "term_id": "term_muslim"
+          },
+          {
+           "type": "text",
+           "text": " هو من أسلم لله."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_10",
+        "sentence": {
+         "sentence_id": "sen_u1l1_12",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ويقدّم القرآن هذا الاستسلام على أنه طريق الأنبياء قبل محمد ﷺ، كما رأينا في جواب إبراهيم."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_130_132"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_11",
+        "sentence": {
+         "sentence_id": "sen_u1l1_13",
+         "spans": [
+          {
+           "type": "text",
+           "text": "هذه صورة عامة، وستملؤها الدروس القادمة بالتفاصيل."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x3",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_03",
+       "type": "multiple_choice",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "أيّ عبارة تلخّص بدقة ما يقصده المسلمون بالإسلام؟"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": null,
+       "payload": {
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "اسم لدين قوم معيّنين"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "الاستسلام لله طوعاً، بحيث تتوجّه إليه العبادة والطاعة والحياة كلها"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "معرفة الأصل العربي للكلمة"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_d",
+          "spans": [
+           {
+            "type": "text",
+            "text": "ترك المحرّمات فقط"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_x4",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_04",
+       "type": "scenario",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "ما التصحيح الأقرب لمعنى الكلمة كما شرحه الدرس؟"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "situation": [
+         {
+          "type": "text",
+          "text": "كتب أحدهم: «المسلم هو من وُلد لأبوين مسلمين فقط»."
+         }
+        ],
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "صحيح، المسلم يُعرَف بأسرته"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "المسلم هو من أسلم لله، أياً كانت أسرته"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "المسلم هو من يعيش في بلد مسلم"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_takeaway",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+       {
+        "type": "text",
+        "text": "خلاصة"
+       }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_12",
+        "sentence": {
+         "sentence_id": "sen_u1l1_14",
+         "spans": [
+          {
+           "type": "term",
+           "text": "«الإسلام»",
+           "term_id": "term_islam"
+          },
+          {
+           "type": "text",
+           "text": " من «أسلم»: أن يستسلم الإنسان لله طوعاً."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_13",
+        "sentence": {
+         "sentence_id": "sen_u1l1_15",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ليس هوية قوم ولا كلمة بلا أثر، بل استسلام لله تتوجّه به العبادة والحياة كلها إليه."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_6_162_163"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_14",
+        "sentence": {
+         "sentence_id": "sen_u1l1_16",
+         "spans": [
+          {
+           "type": "text",
+           "text": "و"
+          },
+          {
+           "type": "term",
+           "text": "«المسلم»",
+           "term_id": "term_muslim"
+          },
+          {
+           "type": "text",
+           "text": " من أسلم لله، على طريق الأنبياء قبله."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_2_130_132"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     }
+    ],
+    "completion": {
+     "challenge": [
+      {
+       "type": "text",
+       "text": "إذا سمعت اليوم من يختصر الإسلام في قوم أو في هوية موروثة، فكّر: ما الذي تغفله هذه الصورة؟"
+      }
+     ],
+     "review_topics": [
+      {
+       "topic_id": "rt_u1l1_1",
+       "title": "معنى الإسلام",
+       "concept_ids": [
+        "con_islam_meaning"
+       ]
+      }
+     ],
+     "check_in": [
+      {
+       "type": "text",
+       "text": "غداً سنسألك: لماذا لا يكفي أصل الكلمة لفهم معنى الإسلام؟"
+      }
+     ]
+    }
+   },
+   {
+    "language": "ar",
+    "variant": "new_muslim",
+    "objectives": [
+     [
+      {
+       "type": "text",
+       "text": "أن تشرح ما يقصده المسلمون بالإسلام، وما الذي يجعله أكثر من كلمة أو انتماء."
+      }
+     ]
+    ],
+    "items": [
+     {
+      "block_id": "blk_u1l1_hook",
+      "type": "hook",
+      "situation": [
+       {
+        "type": "text",
+        "text": "في قاعة الفنون الإسلامية بأحد المتاحف، تقول زائرة لمرافقها: «الإسلام دين العرب، أليس كذلك؟». فيجيبها: «لا، هو هوية يولد بها الإنسان، مثل اسم العائلة»."
+       }
+      ],
+      "question": [
+       {
+        "type": "text",
+        "text": "فما الإسلام في الحقيقة؟"
+       }
+      ],
+      "visual": {
+       "kind": "image",
+       "key": null,
+       "version": null,
+       "params": null,
+       "image": {
+        "url": "https://cdn.example.com/test/u1l1/museum_gallery.webp",
+        "mime_type": "image/webp",
+        "width": 1600,
+        "height": 1000
+       },
+       "scene": null,
+       "fallback_image": null,
+       "fallback_params": null,
+       "alt": "قاعة متحف فيها بلاط بزخارف هندسية وقناديل، بلا كتابة ولا أشخاص",
+       "overlays": []
+      },
+      "cta": null
+     },
+     {
+      "block_id": "blk_u1l1_predict",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "أيّ هذه الإجابات أقرب برأيك؟"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "دين قوم معيّنين"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "هوية يرثها الإنسان من أسرته"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "علاقة بين الإنسان والله"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "سنعود إلى هذه الإجابات بعد أن نبدأ من الكلمة نفسها."
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u1l1_word",
+      "type": "teach",
+      "eyebrow": "أصل الكلمة",
+      "title": [
+       {
+        "type": "text",
+        "text": "كلمة لها معنى"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_1",
+        "sentence": {
+         "sentence_id": "sen_u1l1_01",
+         "spans": [
+          {
+           "type": "term",
+           "text": "«الإسلام»",
+           "term_id": "term_islam"
+          },
+          {
+           "type": "text",
+           "text": " كلمة عربية من الفعل «أسلم»، ومعناه: استسلم وانقاد."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_2",
+        "sentence": {
+         "sentence_id": "sen_u1l1_02",
+         "spans": [
+          {
+           "type": "text",
+           "text": "لكن أصل الكلمة بداية الجواب، لا الجواب كله."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_boundaries",
+      "type": "teach",
+      "eyebrow": "ما ليس هو",
+      "title": [
+       {
+        "type": "text",
+        "text": "ليس انتماءً، وليس إكراهاً"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_3",
+        "sentence": {
+         "sentence_id": "sen_u1l1_03",
+         "spans": [
+          {
+           "type": "text",
+           "text": "فاسم ديننا يصف علاقتنا بالله، لا قوماً ولا بلداً."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_4",
+        "sentence": {
+         "sentence_id": "sen_u1l1_04",
+         "spans": [
+          {
+           "type": "text",
+           "text": "وهو استسلام عن اختيار: يعلّمنا الله في القرآن أنه لا إكراه في الدين."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_256"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x1",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_01",
+       "type": "true_false_reason",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "هل العبارة صحيحة بحسب معنى الكلمة؟ اختر الجواب والسبب."
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": {
+        "kind": "myth",
+        "statement": [
+         {
+          "type": "text",
+          "text": "الإسلام دين قومٍ بعينهم."
+         }
+        ]
+       },
+       "payload": {
+        "statement": [
+         {
+          "type": "text",
+          "text": "«الإسلام» اسمٌ لدين قومٍ معيّنين."
+         }
+        ],
+        "reasons": [
+         {
+          "option_id": "rsn_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأن الكلمة تصف علاقةً بالله لا انتماءً إلى قوم"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأن الكلمة ليست عربية"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "لأن الإسلام اسم كتاب"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_story",
+      "type": "story",
+      "label": "قصة من القرآن",
+      "title": "جواب إبراهيم",
+      "provenance": {
+       "source_id": "src_q_2_130_132",
+       "provider": "quran_com",
+       "reference": "البقرة: 130–132",
+       "grade_label": null
+      },
+      "beats": [
+       {
+        "beat_id": "beat_u1l1_0",
+        "beat_index": 0,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u1l1/desert_dawn.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "صحراء عند الفجر وخيمة وحيدة، بلا أشخاص",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u1l1_05",
+          "spans": [
+           {
+            "type": "text",
+            "text": "يخبرنا الله في القرآن أنه دعا إبراهيم عليه السلام إلى أن يُسلم، فأجاب بأنه أسلم لربّ العالمين."
+           }
+          ],
+          "source_ids": [
+           "src_q_2_130_132"
+          ]
+         }
+        ]
+       },
+       {
+        "beat_id": "beat_u1l1_1",
+        "beat_index": 1,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u1l1/desert_dawn.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "صحراء عند الفجر وخيمة وحيدة، بلا أشخاص",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u1l1_06",
+          "spans": [
+           {
+            "type": "text",
+            "text": "ثم أوصى إبراهيم أبناءه بهذا الطريق، وكذلك فعل يعقوب، أن يبقوا عليه حتى آخر حياتهم."
+           }
+          ],
+          "source_ids": [
+           "src_q_2_130_132"
+          ]
+         }
+        ]
+       }
+      ],
+      "origin": {
+       "title": "من أين جاءت هذه القصة؟",
+       "source_ids": [
+        "src_q_2_130_132"
+       ],
+       "show_card": false
+      }
+     },
+     {
+      "block_id": "blk_u1l1_deeper",
+      "type": "teach",
+      "eyebrow": "أعمق من الكلمات",
+      "title": [
+       {
+        "type": "text",
+        "text": "توجّه الحياة كلها إلى الله"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_5",
+        "sentence": {
+         "sentence_id": "sen_u1l1_07",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ويعلّمنا القرآن أن تكون صلاتك وعبادتك، بل حياتك ومماتك، لله ربّ العالمين."
+          }
+         ],
+         "source_ids": [
+          "src_q_6_162_163"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_6",
+        "sentence": {
+         "sentence_id": "sen_u1l1_08",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ويقرن القرآن تسليمَ وجهك لله بالإحسان في عملك؛ فالإسلام ليس كلمة تُقال فحسب."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_112"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_7",
+        "sentence": {
+         "sentence_id": "sen_u1l1_09",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ويربط القرآن الإسلام بالتوكل على الله، أي أن تعتمد عليه بقلبك."
+          }
+         ],
+         "source_ids": [
+          "src_q_10_84"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_8",
+        "sentence": {
+         "sentence_id": "sen_u1l1_10",
+         "spans": [
+          {
+           "type": "text",
+           "text": "فالإسلام علاقة تتوجّه فيها بكلّك إلى الله: تعبده وحده، وتطيعه، وتثق به، وتتّبع هداه."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_10_84"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x2",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_02",
+       "type": "categorize",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "أيّ هذه الأوصاف يعبّر عن معنى الإسلام كما رأيناه، وأيّها فهمٌ ناقص؟"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "presentation": "buckets",
+        "categories": [
+         {
+          "category_id": "cat_meaning",
+          "label": "يعبّر عن المعنى",
+          "art_key": "compass",
+          "phase": null,
+          "capacity": null
+         },
+         {
+          "category_id": "cat_partial",
+          "label": "فهم ناقص",
+          "art_key": null,
+          "phase": null,
+          "capacity": null
+         }
+        ],
+        "items": [
+         {
+          "item_id": "itm_1",
+          "spans": [
+           {
+            "type": "text",
+            "text": "توجّه الإنسان بحياته كلها إلى الله"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_2",
+          "spans": [
+           {
+            "type": "text",
+            "text": "ترديد عبارة لا أثر لها في الحياة"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_3",
+          "spans": [
+           {
+            "type": "text",
+            "text": "الصلاة والعبادة جزءاً من حياة متوجّهة إلى الله"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_4",
+          "spans": [
+           {
+            "type": "text",
+            "text": "عبادة الله وطاعته والثقة به واتباع هداه"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_5",
+          "spans": [
+           {
+            "type": "text",
+            "text": "الانتساب إلى قوم أو بلد"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_6",
+          "spans": [
+           {
+            "type": "text",
+            "text": "قائمة ممنوعات فقط"
+           }
+          ],
+          "secondary_label": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_reflect",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "أيّ هذه الجوانب كان أبعد عن تصوّرك قبل الدرس؟"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "أنه ليس هوية قومية ولا موروثة"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "أن العبادة فيه جزء من توجّه الحياة كلها إلى الله"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "أنه استسلام عن اختيار"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "هذه الجوانب معاً ترسم الصورة العامة التي ستملؤها الدروس القادمة."
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u1l1_muslim",
+      "type": "teach",
+      "eyebrow": "المسلم",
+      "title": [
+       {
+        "type": "text",
+        "text": "من هو المسلم؟"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_9",
+        "sentence": {
+         "sentence_id": "sen_u1l1_11",
+         "spans": [
+          {
+           "type": "text",
+           "text": "و"
+          },
+          {
+           "type": "term",
+           "text": "«المسلم»",
+           "term_id": "term_muslim"
+          },
+          {
+           "type": "text",
+           "text": " هو من أسلم لله، وهذا ما بدأتَه أنت."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_10",
+        "sentence": {
+         "sentence_id": "sen_u1l1_12",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ويقدّم القرآن هذا الاستسلام على أنه طريق الأنبياء قبل محمد ﷺ، كما رأينا في جواب إبراهيم."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_130_132"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_11",
+        "sentence": {
+         "sentence_id": "sen_u1l1_13",
+         "spans": [
+          {
+           "type": "text",
+           "text": "وأنت في بداية طريق تتعلّم فيه هذا المعنى وتعيشه خطوة خطوة."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x3",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_03",
+       "type": "multiple_choice",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "أيّ عبارة تلخّص بدقة ما يقصده المسلمون بالإسلام؟"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": null,
+       "payload": {
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "اسم لدين قوم معيّنين"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "الاستسلام لله طوعاً، بحيث تتوجّه إليه العبادة والطاعة والحياة كلها"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "معرفة الأصل العربي للكلمة"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_d",
+          "spans": [
+           {
+            "type": "text",
+            "text": "ترك المحرّمات فقط"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_x4",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_04",
+       "type": "scenario",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "ما التصحيح الأقرب لمعنى الكلمة كما شرحه الدرس؟"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "situation": [
+         {
+          "type": "text",
+          "text": "كتب أحدهم: «المسلم هو من وُلد لأبوين مسلمين فقط»."
+         }
+        ],
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "صحيح، المسلم يُعرَف بأسرته"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "المسلم هو من أسلم لله، أياً كانت أسرته"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "المسلم هو من يعيش في بلد مسلم"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_takeaway",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+       {
+        "type": "text",
+        "text": "خلاصة"
+       }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_12",
+        "sentence": {
+         "sentence_id": "sen_u1l1_14",
+         "spans": [
+          {
+           "type": "term",
+           "text": "«الإسلام»",
+           "term_id": "term_islam"
+          },
+          {
+           "type": "text",
+           "text": " من «أسلم»: أن يستسلم الإنسان لله طوعاً."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_13",
+        "sentence": {
+         "sentence_id": "sen_u1l1_15",
+         "spans": [
+          {
+           "type": "text",
+           "text": "ليس هوية قوم ولا كلمة بلا أثر، بل استسلام لله تتوجّه به العبادة والحياة كلها إليه."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_6_162_163"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_14",
+        "sentence": {
+         "sentence_id": "sen_u1l1_16",
+         "spans": [
+          {
+           "type": "text",
+           "text": "و"
+          },
+          {
+           "type": "term",
+           "text": "«المسلم»",
+           "term_id": "term_muslim"
+          },
+          {
+           "type": "text",
+           "text": " من أسلم لله، على طريق الأنبياء قبله."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_2_130_132"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     }
+    ],
+    "completion": {
+     "challenge": [
+      {
+       "type": "text",
+       "text": "اختر اليوم عملاً عادياً تقوم به، وتذكّر أن الإسلام يعني أن تكون حياتك كلها لله."
+      }
+     ],
+     "review_topics": [
+      {
+       "topic_id": "rt_u1l1_1",
+       "title": "معنى الإسلام",
+       "concept_ids": [
+        "con_islam_meaning"
+       ]
+      }
+     ],
+     "check_in": [
+      {
+       "type": "text",
+       "text": "غداً سنسألك: لماذا لا يكفي أصل الكلمة لفهم معنى الإسلام؟"
+      }
+     ]
+    }
+   },
+   {
+    "language": "en",
+    "variant": "explorer",
+    "objectives": [
+     [
+      {
+       "type": "text",
+       "text": "Explain what Muslims mean by Islam, and what makes it more than a word or a belonging."
+      }
+     ]
+    ],
+    "items": [
+     {
+      "block_id": "blk_u1l1_hook",
+      "type": "hook",
+      "situation": [
+       {
+        "type": "text",
+        "text": "In the Islamic art gallery of a museum, a visitor says to her companion: “Islam is the religion of the Arabs, isn’t it?” He answers: “No, it’s an identity you’re born into, like a family name.”"
+       }
+      ],
+      "question": [
+       {
+        "type": "text",
+        "text": "So what is Islam, really?"
+       }
+      ],
+      "visual": {
+       "kind": "image",
+       "key": null,
+       "version": null,
+       "params": null,
+       "image": {
+        "url": "https://cdn.example.com/test/u1l1/museum_gallery.webp",
+        "mime_type": "image/webp",
+        "width": 1600,
+        "height": 1000
+       },
+       "scene": null,
+       "fallback_image": null,
+       "fallback_params": null,
+       "alt": "A museum gallery with geometric tilework and lamps, without lettering or people",
+       "overlays": []
+      },
+      "cta": null
+     },
+     {
+      "block_id": "blk_u1l1_predict",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "Which of these answers seems closest to you?"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "One people's religion"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "An identity inherited from your family"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "A relationship between a person and God"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "We will come back to these answers after starting from the word itself."
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u1l1_word",
+      "type": "teach",
+      "eyebrow": "Where the word comes from",
+      "title": [
+       {
+        "type": "text",
+        "text": "A word with a meaning"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_1",
+        "sentence": {
+         "sentence_id": "sen_u1l1_01",
+         "spans": [
+          {
+           "type": "term",
+           "text": "“Islam”",
+           "term_id": "term_islam"
+          },
+          {
+           "type": "text",
+           "text": " is an Arabic word from the verb aslama, which means to submit and yield."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_2",
+        "sentence": {
+         "sentence_id": "sen_u1l1_02",
+         "spans": [
+          {
+           "type": "text",
+           "text": "But the root of the word is where the answer begins, not the whole answer."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_boundaries",
+      "type": "teach",
+      "eyebrow": "What it is not",
+      "title": [
+       {
+        "type": "text",
+        "text": "Not a belonging, and not a compulsion"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_3",
+        "sentence": {
+         "sentence_id": "sen_u1l1_03",
+         "spans": [
+          {
+           "type": "text",
+           "text": "The name describes a relationship with God, not a people or a country."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_4",
+        "sentence": {
+         "sentence_id": "sen_u1l1_04",
+         "spans": [
+          {
+           "type": "text",
+           "text": "And this submission is willing: the Qur’an states that there is no compulsion in religion."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_256"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x1",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_01",
+       "type": "true_false_reason",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "Is the statement true, given the meaning of the word? Choose the answer and the reason."
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": {
+        "kind": "myth",
+        "statement": [
+         {
+          "type": "text",
+          "text": "Islam is the religion of one particular people."
+         }
+        ]
+       },
+       "payload": {
+        "statement": [
+         {
+          "type": "text",
+          "text": "“Islam” is the name of one particular people's religion."
+         }
+        ],
+        "reasons": [
+         {
+          "option_id": "rsn_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because the word describes a relationship with God, not belonging to a people"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because the word isn't Arabic"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because Islam is the name of a book"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_story",
+      "type": "story",
+      "label": "A story from the Qur’an",
+      "title": "Ibrahim's answer",
+      "provenance": {
+       "source_id": "src_q_2_130_132",
+       "provider": "quran_com",
+       "reference": "Al-Baqarah 2:130–132",
+       "grade_label": null
+      },
+      "beats": [
+       {
+        "beat_id": "beat_u1l1_0",
+        "beat_index": 0,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u1l1/desert_dawn.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "A desert at dawn with a single tent, and no people",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u1l1_05",
+          "spans": [
+           {
+            "type": "text",
+            "text": "The Qur’an tells that God called Ibrahim (peace be upon him) to submit, and he answered that he had submitted to the Lord of all the worlds."
+           }
+          ],
+          "source_ids": [
+           "src_q_2_130_132"
+          ]
+         }
+        ]
+       },
+       {
+        "beat_id": "beat_u1l1_1",
+        "beat_index": 1,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u1l1/desert_dawn.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "A desert at dawn with a single tent, and no people",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u1l1_06",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Then Ibrahim urged his sons to keep to this way — and so did Yaqub — until the end of their lives."
+           }
+          ],
+          "source_ids": [
+           "src_q_2_130_132"
+          ]
+         }
+        ]
+       }
+      ],
+      "origin": {
+       "title": "Where does this story come from?",
+       "source_ids": [
+        "src_q_2_130_132"
+       ],
+       "show_card": false
+      }
+     },
+     {
+      "block_id": "blk_u1l1_deeper",
+      "type": "teach",
+      "eyebrow": "Deeper than words",
+      "title": [
+       {
+        "type": "text",
+        "text": "Turning the whole of life toward God"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_5",
+        "sentence": {
+         "sentence_id": "sen_u1l1_07",
+         "spans": [
+          {
+           "type": "text",
+           "text": "The Qur’an describes this submission as a person’s prayer and worship — indeed their life and death — being for God, the Lord of all the worlds."
+          }
+         ],
+         "source_ids": [
+          "src_q_6_162_163"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_6",
+        "sentence": {
+         "sentence_id": "sen_u1l1_08",
+         "spans": [
+          {
+           "type": "text",
+           "text": "The Qur’an pairs submitting oneself to God with doing good; so Islam is not just a word that is said."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_112"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_7",
+        "sentence": {
+         "sentence_id": "sen_u1l1_09",
+         "spans": [
+          {
+           "type": "text",
+           "text": "The Qur’an links Islam with trusting God, relying on Him in one’s heart."
+          }
+         ],
+         "source_ids": [
+          "src_q_10_84"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_8",
+        "sentence": {
+         "sentence_id": "sen_u1l1_10",
+         "spans": [
+          {
+           "type": "text",
+           "text": "So for Muslims, Islam is a relationship in which the whole person turns to God: worshipping Him alone, obeying Him, trusting Him and following His guidance."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_10_84"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x2",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_02",
+       "type": "categorize",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "Which of these descriptions express the meaning of Islam as we have seen it, and which are an incomplete idea?"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "presentation": "buckets",
+        "categories": [
+         {
+          "category_id": "cat_meaning",
+          "label": "Expresses the meaning",
+          "art_key": "compass",
+          "phase": null,
+          "capacity": null
+         },
+         {
+          "category_id": "cat_partial",
+          "label": "An incomplete idea",
+          "art_key": null,
+          "phase": null,
+          "capacity": null
+         }
+        ],
+        "items": [
+         {
+          "item_id": "itm_1",
+          "spans": [
+           {
+            "type": "text",
+            "text": "A person turning their whole life toward God"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_2",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Repeating a phrase that changes nothing in life"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_3",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Prayer and worship as part of a life turned toward God"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_4",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Worshipping God, obeying Him, trusting Him and following His guidance"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_5",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Belonging to a people or a country"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_6",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Only a list of prohibitions"
+           }
+          ],
+          "secondary_label": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_reflect",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "Which of these was furthest from what you pictured before this lesson?"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "That it is not an ethnic or inherited identity"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "That worship in it is part of turning the whole of life toward God"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "That it is a submission by choice"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "Together these draw the overall picture that the coming lessons will fill in."
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u1l1_muslim",
+      "type": "teach",
+      "eyebrow": "The Muslim",
+      "title": [
+       {
+        "type": "text",
+        "text": "Who is a Muslim?"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_9",
+        "sentence": {
+         "sentence_id": "sen_u1l1_11",
+         "spans": [
+          {
+           "type": "text",
+           "text": "A "
+          },
+          {
+           "type": "term",
+           "text": "“Muslim”",
+           "term_id": "term_muslim"
+          },
+          {
+           "type": "text",
+           "text": " is one who has submitted to God."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_10",
+        "sentence": {
+         "sentence_id": "sen_u1l1_12",
+         "spans": [
+          {
+           "type": "text",
+           "text": "The Qur’an presents this submission as the way of the prophets before Muhammad ﷺ, as we saw in Ibrahim’s answer."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_130_132"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_11",
+        "sentence": {
+         "sentence_id": "sen_u1l1_13",
+         "spans": [
+          {
+           "type": "text",
+           "text": "This is the overall picture; the coming lessons will fill in the details."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x3",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_03",
+       "type": "multiple_choice",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "Which statement accurately sums up what Muslims mean by Islam?"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": null,
+       "payload": {
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "The name of one people's religion"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Willing submission to God, so that worship, obedience and the whole of life are directed to Him"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Knowing the Arabic root of the word"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_d",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Only avoiding what is forbidden"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_x4",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_04",
+       "type": "scenario",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "Which correction is closest to the meaning of the word as the lesson explained it?"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "situation": [
+         {
+          "type": "text",
+          "text": "Someone writes: “A Muslim is only someone born to Muslim parents.”"
+         }
+        ],
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Right — a Muslim is defined by their family"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "A Muslim is one who has submitted to God, whatever their family"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "A Muslim is someone who lives in a Muslim country"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_takeaway",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+       {
+        "type": "text",
+        "text": "In short"
+       }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_12",
+        "sentence": {
+         "sentence_id": "sen_u1l1_14",
+         "spans": [
+          {
+           "type": "term",
+           "text": "“Islam”",
+           "term_id": "term_islam"
+          },
+          {
+           "type": "text",
+           "text": " comes from aslama: willingly submitting to God."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_13",
+        "sentence": {
+         "sentence_id": "sen_u1l1_15",
+         "spans": [
+          {
+           "type": "text",
+           "text": "It is not a people’s identity or a word with no effect, but submission to God through which worship and the whole of life are turned toward Him."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_6_162_163"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_14",
+        "sentence": {
+         "sentence_id": "sen_u1l1_16",
+         "spans": [
+          {
+           "type": "text",
+           "text": "And a "
+          },
+          {
+           "type": "term",
+           "text": "“Muslim”",
+           "term_id": "term_muslim"
+          },
+          {
+           "type": "text",
+           "text": " is one who submits to God, on the way of the prophets before."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_2_130_132"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     }
+    ],
+    "completion": {
+     "challenge": [
+      {
+       "type": "text",
+       "text": "If you hear someone today reduce Islam to a people or to an inherited identity, think: what does that picture leave out?"
+      }
+     ],
+     "review_topics": [
+      {
+       "topic_id": "rt_u1l1_1",
+       "title": "The meaning of Islam",
+       "concept_ids": [
+        "con_islam_meaning"
+       ]
+      }
+     ],
+     "check_in": [
+      {
+       "type": "text",
+       "text": "Tomorrow we will ask: why is the root of the word not enough to understand what Islam means?"
+      }
+     ]
+    }
+   },
+   {
+    "language": "en",
+    "variant": "new_muslim",
+    "objectives": [
+     [
+      {
+       "type": "text",
+       "text": "Explain what Muslims mean by Islam, and what makes it more than a word or a belonging."
+      }
+     ]
+    ],
+    "items": [
+     {
+      "block_id": "blk_u1l1_hook",
+      "type": "hook",
+      "situation": [
+       {
+        "type": "text",
+        "text": "In the Islamic art gallery of a museum, a visitor says to her companion: “Islam is the religion of the Arabs, isn’t it?” He answers: “No, it’s an identity you’re born into, like a family name.”"
+       }
+      ],
+      "question": [
+       {
+        "type": "text",
+        "text": "So what is Islam, really?"
+       }
+      ],
+      "visual": {
+       "kind": "image",
+       "key": null,
+       "version": null,
+       "params": null,
+       "image": {
+        "url": "https://cdn.example.com/test/u1l1/museum_gallery.webp",
+        "mime_type": "image/webp",
+        "width": 1600,
+        "height": 1000
+       },
+       "scene": null,
+       "fallback_image": null,
+       "fallback_params": null,
+       "alt": "A museum gallery with geometric tilework and lamps, without lettering or people",
+       "overlays": []
+      },
+      "cta": null
+     },
+     {
+      "block_id": "blk_u1l1_predict",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "Which of these answers seems closest to you?"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "One people's religion"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "An identity inherited from your family"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "A relationship between a person and God"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "We will come back to these answers after starting from the word itself."
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u1l1_word",
+      "type": "teach",
+      "eyebrow": "Where the word comes from",
+      "title": [
+       {
+        "type": "text",
+        "text": "A word with a meaning"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_1",
+        "sentence": {
+         "sentence_id": "sen_u1l1_01",
+         "spans": [
+          {
+           "type": "term",
+           "text": "“Islam”",
+           "term_id": "term_islam"
+          },
+          {
+           "type": "text",
+           "text": " is an Arabic word from the verb aslama, which means to submit and yield."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_2",
+        "sentence": {
+         "sentence_id": "sen_u1l1_02",
+         "spans": [
+          {
+           "type": "text",
+           "text": "But the root of the word is where the answer begins, not the whole answer."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_boundaries",
+      "type": "teach",
+      "eyebrow": "What it is not",
+      "title": [
+       {
+        "type": "text",
+        "text": "Not a belonging, and not a compulsion"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_3",
+        "sentence": {
+         "sentence_id": "sen_u1l1_03",
+         "spans": [
+          {
+           "type": "text",
+           "text": "The name of our religion describes our relationship with Allah, not a people or a country."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_4",
+        "sentence": {
+         "sentence_id": "sen_u1l1_04",
+         "spans": [
+          {
+           "type": "text",
+           "text": "It is a submission by choice: Allah teaches us in the Qur’an that there is no compulsion in religion."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_256"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x1",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_01",
+       "type": "true_false_reason",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "Is the statement true, given the meaning of the word? Choose the answer and the reason."
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": {
+        "kind": "myth",
+        "statement": [
+         {
+          "type": "text",
+          "text": "Islam is the religion of one particular people."
+         }
+        ]
+       },
+       "payload": {
+        "statement": [
+         {
+          "type": "text",
+          "text": "“Islam” is the name of one particular people's religion."
+         }
+        ],
+        "reasons": [
+         {
+          "option_id": "rsn_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because the word describes a relationship with God, not belonging to a people"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because the word isn't Arabic"
+           }
+          ]
+         },
+         {
+          "option_id": "rsn_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Because Islam is the name of a book"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_story",
+      "type": "story",
+      "label": "A story from the Qur’an",
+      "title": "Ibrahim's answer",
+      "provenance": {
+       "source_id": "src_q_2_130_132",
+       "provider": "quran_com",
+       "reference": "Al-Baqarah 2:130–132",
+       "grade_label": null
+      },
+      "beats": [
+       {
+        "beat_id": "beat_u1l1_0",
+        "beat_index": 0,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u1l1/desert_dawn.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "A desert at dawn with a single tent, and no people",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u1l1_05",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Allah tells us in the Qur’an that He called Ibrahim (peace be upon him) to submit, and he answered that he had submitted to the Lord of all the worlds."
+           }
+          ],
+          "source_ids": [
+           "src_q_2_130_132"
+          ]
+         }
+        ]
+       },
+       {
+        "beat_id": "beat_u1l1_1",
+        "beat_index": 1,
+        "narration_audio_url": null,
+        "quote": null,
+        "quote_meaning": null,
+        "visual": {
+         "kind": "image",
+         "key": null,
+         "version": null,
+         "params": null,
+         "image": {
+          "url": "https://cdn.example.com/test/u1l1/desert_dawn.webp",
+          "mime_type": "image/webp",
+          "width": 1600,
+          "height": 1000
+         },
+         "scene": null,
+         "fallback_image": null,
+         "fallback_params": null,
+         "alt": "A desert at dawn with a single tent, and no people",
+         "overlays": []
+        },
+        "narration": [
+         {
+          "sentence_id": "sen_u1l1_06",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Then Ibrahim urged his sons to keep to this way — and so did Yaqub — until the end of their lives."
+           }
+          ],
+          "source_ids": [
+           "src_q_2_130_132"
+          ]
+         }
+        ]
+       }
+      ],
+      "origin": {
+       "title": "Where does this story come from?",
+       "source_ids": [
+        "src_q_2_130_132"
+       ],
+       "show_card": false
+      }
+     },
+     {
+      "block_id": "blk_u1l1_deeper",
+      "type": "teach",
+      "eyebrow": "Deeper than words",
+      "title": [
+       {
+        "type": "text",
+        "text": "Turning the whole of life toward God"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_5",
+        "sentence": {
+         "sentence_id": "sen_u1l1_07",
+         "spans": [
+          {
+           "type": "text",
+           "text": "The Qur’an teaches us that your prayer and worship — indeed your life and death — are for Allah, the Lord of all the worlds."
+          }
+         ],
+         "source_ids": [
+          "src_q_6_162_163"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_6",
+        "sentence": {
+         "sentence_id": "sen_u1l1_08",
+         "spans": [
+          {
+           "type": "text",
+           "text": "The Qur’an pairs submitting yourself to Allah with doing good; so Islam is not just a word that is said."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_112"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_7",
+        "sentence": {
+         "sentence_id": "sen_u1l1_09",
+         "spans": [
+          {
+           "type": "text",
+           "text": "The Qur’an links Islam with trusting Allah, relying on Him in your heart."
+          }
+         ],
+         "source_ids": [
+          "src_q_10_84"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_8",
+        "sentence": {
+         "sentence_id": "sen_u1l1_10",
+         "spans": [
+          {
+           "type": "text",
+           "text": "So Islam is a relationship in which you turn to Allah with all of yourself: worshipping Him alone, obeying Him, trusting Him and following His guidance."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_10_84"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x2",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_02",
+       "type": "categorize",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "Which of these descriptions express the meaning of Islam as we have seen it, and which are an incomplete idea?"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "presentation": "buckets",
+        "categories": [
+         {
+          "category_id": "cat_meaning",
+          "label": "Expresses the meaning",
+          "art_key": "compass",
+          "phase": null,
+          "capacity": null
+         },
+         {
+          "category_id": "cat_partial",
+          "label": "An incomplete idea",
+          "art_key": null,
+          "phase": null,
+          "capacity": null
+         }
+        ],
+        "items": [
+         {
+          "item_id": "itm_1",
+          "spans": [
+           {
+            "type": "text",
+            "text": "A person turning their whole life toward God"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_2",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Repeating a phrase that changes nothing in life"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_3",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Prayer and worship as part of a life turned toward God"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_4",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Worshipping God, obeying Him, trusting Him and following His guidance"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_5",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Belonging to a people or a country"
+           }
+          ],
+          "secondary_label": null
+         },
+         {
+          "item_id": "itm_6",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Only a list of prohibitions"
+           }
+          ],
+          "secondary_label": null
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_reflect",
+      "type": "predict",
+      "prompt": [
+       {
+        "type": "text",
+        "text": "Which of these was furthest from what you pictured before this lesson?"
+       }
+      ],
+      "options": [
+       {
+        "option_id": "prd_a",
+        "spans": [
+         {
+          "type": "text",
+          "text": "That it is not an ethnic or inherited identity"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_b",
+        "spans": [
+         {
+          "type": "text",
+          "text": "That worship in it is part of turning the whole of life toward God"
+         }
+        ]
+       },
+       {
+        "option_id": "prd_c",
+        "spans": [
+         {
+          "type": "text",
+          "text": "That it is a submission by choice"
+         }
+        ]
+       }
+      ],
+      "reveal": [
+       {
+        "type": "text",
+        "text": "Together these draw the overall picture that the coming lessons will fill in."
+       }
+      ],
+      "visual": null
+     },
+     {
+      "block_id": "blk_u1l1_muslim",
+      "type": "teach",
+      "eyebrow": "The Muslim",
+      "title": [
+       {
+        "type": "text",
+        "text": "Who is a Muslim?"
+       }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_9",
+        "sentence": {
+         "sentence_id": "sen_u1l1_11",
+         "spans": [
+          {
+           "type": "text",
+           "text": "A "
+          },
+          {
+           "type": "term",
+           "text": "“Muslim”",
+           "term_id": "term_muslim"
+          },
+          {
+           "type": "text",
+           "text": " is one who has submitted to Allah — which is what you have begun."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_10",
+        "sentence": {
+         "sentence_id": "sen_u1l1_12",
+         "spans": [
+          {
+           "type": "text",
+           "text": "The Qur’an presents this submission as the way of the prophets before Muhammad ﷺ, as we saw in Ibrahim’s answer."
+          }
+         ],
+         "source_ids": [
+          "src_q_2_130_132"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_11",
+        "sentence": {
+         "sentence_id": "sen_u1l1_13",
+         "spans": [
+          {
+           "type": "text",
+           "text": "You are at the start of a path where you learn this meaning and live it step by step."
+          }
+         ],
+         "source_ids": []
+        },
+        "visual_params": null
+       }
+      ]
+     },
+     {
+      "block_id": "blk_u1l1_x3",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_03",
+       "type": "multiple_choice",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "Which statement accurately sums up what Muslims mean by Islam?"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "understand"
+       },
+       "framing": null,
+       "payload": {
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "The name of one people's religion"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Willing submission to God, so that worship, obedience and the whole of life are directed to Him"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Knowing the Arabic root of the word"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_d",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Only avoiding what is forbidden"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_x4",
+      "type": "exercise",
+      "exercise": {
+       "exercise_id": "ex_u1l1_04",
+       "type": "scenario",
+       "concept_ids": [
+        "con_islam_meaning"
+       ],
+       "prompt": [
+        {
+         "type": "text",
+         "text": "Which correction is closest to the meaning of the word as the lesson explained it?"
+        }
+       ],
+       "time_limit_ms": null,
+       "scoring": {
+        "accuracy": true,
+        "combo": true,
+        "layer": "apply"
+       },
+       "framing": null,
+       "payload": {
+        "situation": [
+         {
+          "type": "text",
+          "text": "Someone writes: “A Muslim is only someone born to Muslim parents.”"
+         }
+        ],
+        "options": [
+         {
+          "option_id": "opt_a",
+          "spans": [
+           {
+            "type": "text",
+            "text": "Right — a Muslim is defined by their family"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_b",
+          "spans": [
+           {
+            "type": "text",
+            "text": "A Muslim is one who has submitted to God, whatever their family"
+           }
+          ]
+         },
+         {
+          "option_id": "opt_c",
+          "spans": [
+           {
+            "type": "text",
+            "text": "A Muslim is someone who lives in a Muslim country"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     },
+     {
+      "block_id": "blk_u1l1_takeaway",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+       {
+        "type": "text",
+        "text": "In short"
+       }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+       {
+        "point_id": "pt_u1l1_12",
+        "sentence": {
+         "sentence_id": "sen_u1l1_14",
+         "spans": [
+          {
+           "type": "term",
+           "text": "“Islam”",
+           "term_id": "term_islam"
+          },
+          {
+           "type": "text",
+           "text": " comes from aslama: willingly submitting to God."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_13",
+        "sentence": {
+         "sentence_id": "sen_u1l1_15",
+         "spans": [
+          {
+           "type": "text",
+           "text": "It is not a people’s identity or a word with no effect, but submission to God through which worship and the whole of life are turned toward Him."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_6_162_163"
+         ]
+        },
+        "visual_params": null
+       },
+       {
+        "point_id": "pt_u1l1_14",
+        "sentence": {
+         "sentence_id": "sen_u1l1_16",
+         "spans": [
+          {
+           "type": "text",
+           "text": "And a "
+          },
+          {
+           "type": "term",
+           "text": "“Muslim”",
+           "term_id": "term_muslim"
+          },
+          {
+           "type": "text",
+           "text": " is one who submits to God, on the way of the prophets before."
+          }
+         ],
+         "source_ids": [
+          "src_tafsir_islam_meaning",
+          "src_q_2_130_132"
+         ]
+        },
+        "visual_params": null
+       }
+      ]
+     }
+    ],
+    "completion": {
+     "challenge": [
+      {
+       "type": "text",
+       "text": "Pick one ordinary thing you do today and remember that Islam means your whole life is for Allah."
+      }
+     ],
+     "review_topics": [
+      {
+       "topic_id": "rt_u1l1_1",
+       "title": "The meaning of Islam",
+       "concept_ids": [
+        "con_islam_meaning"
+       ]
+      }
+     ],
+     "check_in": [
+      {
+       "type": "text",
+       "text": "Tomorrow we will ask: why is the root of the word not enough to understand what Islam means?"
+      }
+     ]
+    }
+   }
+  ],
+  "claims": [
+   {
+    "claim_id": "clm_root",
+    "text": "كلمة «الإسلام» مصدر الفعل «أسلم» بمعنى استسلم وانقاد.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_tafsir_islam_meaning",
+       "kind": "tafsir",
+       "provider": "tafsir_center",
+       "title": "المختصر في التفسير",
+       "reference": "آل عمران: 19 (موضع التحقق يحدده الاسترجاع)",
+       "excerpt": "⟨TEST: نص التفسير يُدرَج بالكود من مركز تفسير بعد التحقق⟩",
+       "url": null,
+       "displayed": false,
+       "display_role": null
+      },
+      "supports": true,
+      "verifier_note": "TEST — لم يُشغَّل الاسترجاع والتحقق؛ يجب التحقق من الدعم قبل البوابة الثانية.",
+      "semantic_review": {
+       "fit": "partial",
+       "concerns": [
+        "translation_sensitive"
+       ],
+       "note": "TEST (offline semantic pass): Lexical claim. Confirm the retrieved passage derives «الإسلام» from «أسلم»; a lexicon may be the better source. \"Submit\" and \"yield\" are glosses; keep both."
+      }
+     }
+    ]
+   },
+   {
+    "claim_id": "clm_not_ethnic",
+    "text": "اسم الإسلام يصف علاقة الإنسان بالله، لا انتماءً إلى قوم أو بلد.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_tafsir_islam_meaning",
+       "kind": "tafsir",
+       "provider": "tafsir_center",
+       "title": "المختصر في التفسير",
+       "reference": "آل عمران: 19 (موضع التحقق يحدده الاسترجاع)",
+       "excerpt": "⟨TEST: نص التفسير يُدرَج بالكود من مركز تفسير بعد التحقق⟩",
+       "url": null,
+       "displayed": false,
+       "display_role": null
+      },
+      "supports": true,
+      "verifier_note": "TEST — لم يُشغَّل الاسترجاع والتحقق؛ يجب التحقق من الدعم قبل البوابة الثانية.",
+      "semantic_review": {
+       "fit": "partial",
+       "concerns": [
+        "beyond_source"
+       ],
+       "note": "TEST (offline semantic pass): The passage defines Islam as submission to God; the negative clause (\"not a people or a country\") is an inference from that definition, not a statement of the source. Cite a source that states it, recast it as an explanation of clm_meaning, or narrow the wording."
+      }
+     }
+    ]
+   },
+   {
+    "claim_id": "clm_willing",
+    "text": "يقرر القرآن أنه لا إكراه في الدين.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_q_2_256",
+       "kind": "quran",
+       "provider": "quran_com",
+       "title": "سورة البقرة",
+       "reference": "البقرة: 256",
+       "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+       "url": null,
+       "displayed": false,
+       "display_role": null
+      },
+      "supports": true,
+      "verifier_note": "TEST — لم يُشغَّل الاسترجاع والتحقق؛ يجب التحقق من الدعم قبل البوابة الثانية.",
+      "semantic_review": {
+       "fit": "exact",
+       "concerns": [
+        "context_dependent",
+        "scholarly_disagreement"
+       ],
+       "note": "TEST (offline semantic pass): Al-Baqarah 2:256 states the claim as worded. Exegetes discuss its occasion and scope (general, specific, or abrogated on some views); present it as the Qur'an's statement, not as a full doctrine of choice."
+      }
+     }
+    ]
+   },
+   {
+    "claim_id": "clm_e2",
+    "text": "دعا الله إبراهيم إلى أن يُسلم، فأجاب بأنه أسلم لرب العالمين.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_q_2_130_132",
+       "kind": "quran",
+       "provider": "quran_com",
+       "title": "سورة البقرة",
+       "reference": "البقرة: 130–132",
+       "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+       "url": null,
+       "displayed": false,
+       "display_role": null
+      },
+      "supports": true,
+      "verifier_note": "TEST — لم يُشغَّل الاسترجاع والتحقق؛ يجب التحقق من الدعم قبل البوابة الثانية.",
+      "semantic_review": {
+       "fit": "exact",
+       "concerns": [],
+       "note": "TEST (offline semantic pass): Al-Baqarah 2:131 reports the command and Ibrahim's answer as the claim words it."
+      }
+     }
+    ]
+   },
+   {
+    "claim_id": "clm_e3",
+    "text": "وصّى إبراهيم بنيه ويعقوب بالإسلام حتى الموت.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_q_2_130_132",
+       "kind": "quran",
+       "provider": "quran_com",
+       "title": "سورة البقرة",
+       "reference": "البقرة: 130–132",
+       "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+       "url": null,
+       "displayed": false,
+       "display_role": null
+      },
+      "supports": true,
+      "verifier_note": "TEST — لم يُشغَّل الاسترجاع والتحقق؛ يجب التحقق من الدعم قبل البوابة الثانية.",
+      "semantic_review": {
+       "fit": "partial",
+       "concerns": [
+        "needs_tafsir",
+        "translation_sensitive"
+       ],
+       "note": "TEST (offline semantic pass): Al-Baqarah 2:132: what the counsel refers to, and \"until death\" (the verse forbids dying except as Muslims), are interpretive renderings; keep the narration an indirect paraphrase checked against tafsir."
+      }
+     }
+    ]
+   },
+   {
+    "claim_id": "clm_whole_life",
+    "text": "يصف القرآن أن تكون صلاة المسلم ونسكه ومحياه ومماته لله رب العالمين.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_q_6_162_163",
+       "kind": "quran",
+       "provider": "quran_com",
+       "title": "سورة الأنعام",
+       "reference": "الأنعام: 162–163",
+       "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+       "url": null,
+       "displayed": false,
+       "display_role": null
+      },
+      "supports": true,
+      "verifier_note": "TEST — لم يُشغَّل الاسترجاع والتحقق؛ يجب التحقق من الدعم قبل البوابة الثانية.",
+      "semantic_review": {
+       "fit": "partial",
+       "concerns": [
+        "addressee_specific",
+        "generalised_from_specific",
+        "translation_sensitive"
+       ],
+       "note": "TEST (offline semantic pass): Al-An'am 6:162–163 instructs the Prophet ﷺ to declare this of himself; applying it to every Muslim is a common reading, but the sentence should say so. «نسك» is rendered variously (sacrifice, rites of worship)."
+      }
+     }
+    ]
+   },
+   {
+    "claim_id": "clm_with_deeds",
+    "text": "يقرن القرآن إسلام الوجه لله بالإحسان في العمل.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_q_2_112",
+       "kind": "quran",
+       "provider": "quran_com",
+       "title": "سورة البقرة",
+       "reference": "البقرة: 112",
+       "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+       "url": null,
+       "displayed": false,
+       "display_role": null
+      },
+      "supports": true,
+      "verifier_note": "TEST — لم يُشغَّل الاسترجاع والتحقق؛ يجب التحقق من الدعم قبل البوابة الثانية.",
+      "semantic_review": {
+       "fit": "partial",
+       "concerns": [
+        "needs_tafsir",
+        "oversimplified"
+       ],
+       "note": "TEST (offline semantic pass): Al-Baqarah 2:112 pairs submitting one's face to God with being «محسن»; \"doing good\" simplifies iḥsān, which tafsir explains (sincerity and right action). The verse answers claims of exclusive salvation."
+      }
+     }
+    ]
+   },
+   {
+    "claim_id": "clm_trust",
+    "text": "يربط القرآن بين الإسلام والتوكل على الله.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_q_10_84",
+       "kind": "quran",
+       "provider": "quran_com",
+       "title": "سورة يونس",
+       "reference": "يونس: 84",
+       "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+       "url": null,
+       "displayed": false,
+       "display_role": null
+      },
+      "supports": true,
+      "verifier_note": "TEST — لم يُشغَّل الاسترجاع والتحقق؛ يجب التحقق من الدعم قبل البوابة الثانية.",
+      "semantic_review": {
+       "fit": "partial",
+       "concerns": [
+        "context_dependent",
+        "addressee_specific"
+       ],
+       "note": "TEST (offline semantic pass): Yunus 10:84 is Musa's address to his people, making trust conditional on faith and Islam. \"Links Islam with trust\" fits; keep that context available."
+      }
+     }
+    ]
+   },
+   {
+    "claim_id": "clm_meaning",
+    "text": "الإسلام هو الاستسلام لله والانقياد له طوعاً: بعبادته وحده وطاعته واتباع هداه.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_tafsir_islam_meaning",
+       "kind": "tafsir",
+       "provider": "tafsir_center",
+       "title": "المختصر في التفسير",
+       "reference": "آل عمران: 19 (موضع التحقق يحدده الاسترجاع)",
+       "excerpt": "⟨TEST: نص التفسير يُدرَج بالكود من مركز تفسير بعد التحقق⟩",
+       "url": null,
+       "displayed": false,
+       "display_role": null
+      },
+      "supports": true,
+      "verifier_note": "TEST — لم يُشغَّل الاسترجاع والتحقق؛ يجب التحقق من الدعم قبل البوابة الثانية.",
+      "semantic_review": {
+       "fit": "partial",
+       "concerns": [
+        "needs_tafsir"
+       ],
+       "note": "TEST (offline semantic pass): Confirm that the retrieved definition contains each element (worship of God alone, obedience, following guidance, \"willingly\"); drop any element it does not state."
+      }
+     }
+    ]
+   },
+   {
+    "claim_id": "clm_muslim",
+    "text": "المسلم هو من أسلم لله.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_tafsir_islam_meaning",
+       "kind": "tafsir",
+       "provider": "tafsir_center",
+       "title": "المختصر في التفسير",
+       "reference": "آل عمران: 19 (موضع التحقق يحدده الاسترجاع)",
+       "excerpt": "⟨TEST: نص التفسير يُدرَج بالكود من مركز تفسير بعد التحقق⟩",
+       "url": null,
+       "displayed": false,
+       "display_role": null
+      },
+      "supports": true,
+      "verifier_note": "TEST — لم يُشغَّل الاسترجاع والتحقق؛ يجب التحقق من الدعم قبل البوابة الثانية.",
+      "semantic_review": {
+       "fit": "exact",
+       "concerns": [],
+       "note": "TEST (offline semantic pass): Follows directly from the definition, to confirm against the retrieved passage."
+      }
+     }
+    ]
+   },
+   {
+    "claim_id": "clm_prophets",
+    "text": "يقدّم القرآن الاستسلام لله على أنه طريق الأنبياء قبل محمد ﷺ، كإبراهيم وأبنائه.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_q_2_130_132",
+       "kind": "quran",
+       "provider": "quran_com",
+       "title": "سورة البقرة",
+       "reference": "البقرة: 130–132",
+       "excerpt": "⟨TEST: النص العثماني يُدرَج بالكود من المصحف⟩",
+       "url": null,
+       "displayed": false,
+       "display_role": null
+      },
+      "supports": true,
+      "verifier_note": "TEST — لم يُشغَّل الاسترجاع والتحقق؛ يجب التحقق من الدعم قبل البوابة الثانية.",
+      "semantic_review": {
+       "fit": "partial",
+       "concerns": [
+        "generalised_from_specific",
+        "beyond_source"
+       ],
+       "note": "TEST (offline semantic pass): Al-Baqarah 2:130–132 concern Ibrahim and Yaqub. \"The way of the prophets\" generalises beyond the cited verses: retrieve sources that state it for other prophets, or narrow the sentence to Ibrahim and his descendants."
+      }
+     }
+    ]
+   }
+  ],
+  "sentence_map": [
+   {
+    "sentence_id": "sen_u1l1_01",
+    "role": "claim",
+    "claim_ids": [
+     "clm_root"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_02",
+    "role": "framing",
+    "claim_ids": []
+   },
+   {
+    "sentence_id": "sen_u1l1_03",
+    "role": "claim",
+    "claim_ids": [
+     "clm_not_ethnic"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_04",
+    "role": "claim",
+    "claim_ids": [
+     "clm_willing"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_05",
+    "role": "claim",
+    "claim_ids": [
+     "clm_e2"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_06",
+    "role": "claim",
+    "claim_ids": [
+     "clm_e3"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_07",
+    "role": "claim",
+    "claim_ids": [
+     "clm_whole_life"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_08",
+    "role": "claim",
+    "claim_ids": [
+     "clm_with_deeds"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_09",
+    "role": "claim",
+    "claim_ids": [
+     "clm_trust"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_10",
+    "role": "claim",
+    "claim_ids": [
+     "clm_meaning",
+     "clm_trust"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_11",
+    "role": "claim",
+    "claim_ids": [
+     "clm_muslim"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_12",
+    "role": "claim",
+    "claim_ids": [
+     "clm_prophets"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_13",
+    "role": "framing",
+    "claim_ids": []
+   },
+   {
+    "sentence_id": "sen_u1l1_14",
+    "role": "claim",
+    "claim_ids": [
+     "clm_root",
+     "clm_meaning"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_15",
+    "role": "claim",
+    "claim_ids": [
+     "clm_not_ethnic",
+     "clm_whole_life"
+    ]
+   },
+   {
+    "sentence_id": "sen_u1l1_16",
+    "role": "claim",
+    "claim_ids": [
+     "clm_muslim",
+     "clm_prophets"
+    ]
+   }
+  ],
+  "arc_map": [
+   {
+    "step_id": "misconception",
+    "block_ids": [
+     "blk_u1l1_hook"
+    ]
+   },
+   {
+    "step_id": "predict",
+    "block_ids": [
+     "blk_u1l1_predict"
+    ]
+   },
+   {
+    "step_id": "word",
+    "block_ids": [
+     "blk_u1l1_word"
+    ]
+   },
+   {
+    "step_id": "boundaries",
+    "block_ids": [
+     "blk_u1l1_boundaries"
+    ]
+   },
+   {
+    "step_id": "correct_myth",
+    "block_ids": [
+     "blk_u1l1_x1"
+    ]
+   },
+   {
+    "step_id": "ibrahim",
+    "block_ids": [
+     "blk_u1l1_story"
+    ]
+   },
+   {
+    "step_id": "deeper",
+    "block_ids": [
+     "blk_u1l1_deeper"
+    ]
+   },
+   {
+    "step_id": "distinguish",
+    "block_ids": [
+     "blk_u1l1_x2"
+    ]
+   },
+   {
+    "step_id": "reflect",
+    "block_ids": [
+     "blk_u1l1_reflect"
+    ]
+   },
+   {
+    "step_id": "muslim",
+    "block_ids": [
+     "blk_u1l1_muslim"
+    ]
+   },
+   {
+    "step_id": "transfer",
+    "block_ids": [
+     "blk_u1l1_x3",
+     "blk_u1l1_x4"
+    ]
+   },
+   {
+    "step_id": "takeaway",
+    "block_ids": [
+     "blk_u1l1_takeaway"
+    ]
+   }
+  ],
+  "exercises": [
+   {
+    "exercise_id": "ex_u1l1_01",
+    "type": "true_false_reason",
+    "concept_ids": [
+     "con_islam_meaning"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "هل العبارة صحيحة بحسب معنى الكلمة؟ اختر الجواب والسبب."
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": {
+     "kind": "myth",
+     "statement": [
+      {
+       "type": "text",
+       "text": "الإسلام دين قومٍ بعينهم."
+      }
+     ]
+    },
+    "payload": {
+     "statement": [
+      {
+       "type": "text",
+       "text": "«الإسلام» اسمٌ لدين قومٍ معيّنين."
+      }
+     ],
+     "reasons": [
+      {
+       "option_id": "rsn_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأن الكلمة تصف علاقةً بالله لا انتماءً إلى قوم"
+        }
+       ]
+      },
+      {
+       "option_id": "rsn_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأن الكلمة ليست عربية"
+        }
+       ]
+      },
+      {
+       "option_id": "rsn_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأن الإسلام اسم كتاب"
+        }
+       ]
+      }
+     ]
+    },
+    "answer_key": {
+     "value": false,
+     "reason_option_id": "rsn_a"
+    },
+    "option_misconceptions": {},
+    "duel_eligible": false
+   },
+   {
+    "exercise_id": "ex_u1l1_02",
+    "type": "categorize",
+    "concept_ids": [
+     "con_islam_meaning"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "أيّ هذه الأوصاف يعبّر عن معنى الإسلام كما رأيناه، وأيّها فهمٌ ناقص؟"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "presentation": "buckets",
+     "categories": [
+      {
+       "category_id": "cat_meaning",
+       "label": "يعبّر عن المعنى",
+       "art_key": "compass",
+       "phase": null,
+       "capacity": null
+      },
+      {
+       "category_id": "cat_partial",
+       "label": "فهم ناقص",
+       "art_key": null,
+       "phase": null,
+       "capacity": null
+      }
+     ],
+     "items": [
+      {
+       "item_id": "itm_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "توجّه الإنسان بحياته كلها إلى الله"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "ترديد عبارة لا أثر لها في الحياة"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الصلاة والعبادة جزءاً من حياة متوجّهة إلى الله"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_4",
+       "spans": [
+        {
+         "type": "text",
+         "text": "عبادة الله وطاعته والثقة به واتباع هداه"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_5",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الانتساب إلى قوم أو بلد"
+        }
+       ],
+       "secondary_label": null
+      },
+      {
+       "item_id": "itm_6",
+       "spans": [
+        {
+         "type": "text",
+         "text": "قائمة ممنوعات فقط"
+        }
+       ],
+       "secondary_label": null
+      }
+     ]
+    },
+    "answer_key": {
+     "assignments": [
+      {
+       "item_id": "itm_1",
+       "category_id": "cat_meaning"
+      },
+      {
+       "item_id": "itm_2",
+       "category_id": "cat_partial"
+      },
+      {
+       "item_id": "itm_3",
+       "category_id": "cat_meaning"
+      },
+      {
+       "item_id": "itm_4",
+       "category_id": "cat_meaning"
+      },
+      {
+       "item_id": "itm_5",
+       "category_id": "cat_partial"
+      },
+      {
+       "item_id": "itm_6",
+       "category_id": "cat_partial"
+      }
+     ]
+    },
+    "option_misconceptions": {},
+    "duel_eligible": false
+   },
+   {
+    "exercise_id": "ex_u1l1_03",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_islam_meaning"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "أيّ عبارة تلخّص بدقة ما يقصده المسلمون بالإسلام؟"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "اسم لدين قوم معيّنين"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "الاستسلام لله طوعاً، بحيث تتوجّه إليه العبادة والطاعة والحياة كلها"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "معرفة الأصل العربي للكلمة"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_d",
+       "spans": [
+        {
+         "type": "text",
+         "text": "ترك المحرّمات فقط"
+        }
+       ]
+      }
+     ]
+    },
+    "answer_key": {
+     "option_id": "opt_b"
+    },
+    "option_misconceptions": {
+     "opt_a": "mis_islam_ethnic"
+    },
+    "duel_eligible": false
+   },
+   {
+    "exercise_id": "ex_u1l1_04",
+    "type": "scenario",
+    "concept_ids": [
+     "con_islam_meaning"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "ما التصحيح الأقرب لمعنى الكلمة كما شرحه الدرس؟"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "apply"
+    },
+    "framing": null,
+    "payload": {
+     "situation": [
+      {
+       "type": "text",
+       "text": "كتب أحدهم: «المسلم هو من وُلد لأبوين مسلمين فقط»."
+      }
+     ],
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "صحيح، المسلم يُعرَف بأسرته"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "المسلم هو من أسلم لله، أياً كانت أسرته"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "المسلم هو من يعيش في بلد مسلم"
+        }
+       ]
+      }
+     ]
+    },
+    "answer_key": {
+     "option_id": "opt_b"
+    },
+    "option_misconceptions": {
+     "opt_a": "mis_islam_ethnic",
+     "opt_c": "mis_islam_ethnic"
+    },
+    "duel_eligible": false
+   },
+   {
+    "exercise_id": "ex_u1l1_fc1",
+    "type": "flashcard",
+    "concept_ids": [
+     "con_islam_meaning"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "ما معنى الإسلام؟"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "front": [
+      {
+       "type": "text",
+       "text": "ما معنى الإسلام؟"
+      }
+     ],
+     "back": [
+      {
+       "type": "text",
+       "text": "الاستسلام لله طوعاً: توجّه الحياة كلها إليه عبادةً وطاعةً وثقةً واتباعاً لهداه."
+      }
+     ]
+    },
+    "answer_key": null,
+    "option_misconceptions": {},
+    "duel_eligible": false
+   }
+  ],
+  "glossary": [
+   {
+    "term_id": "term_islam",
+    "text": {
+     "ar": "الإسلام",
+     "en": "Islam"
+    },
+    "arabic": "الإِسْلَام",
+    "transliteration": "Islām",
+    "definition": {
+     "basic": {
+      "ar": [
+       {
+        "type": "text",
+        "text": "الاستسلام لله والانقياد له طوعاً."
+       }
+      ],
+      "en": [
+       {
+        "type": "text",
+        "text": "Willingly submitting and yielding to God."
+       }
+      ]
+     },
+     "intermediate": null
+    },
+    "example": {
+     "ar": [
+      {
+       "type": "text",
+       "text": "اسم «الإسلام» مأخوذ من الفعل «أسلم»."
+      }
+     ],
+     "en": [
+      {
+       "type": "text",
+       "text": "The name “Islam” comes from the verb aslama."
+      }
+     ]
+    },
+    "concept_id": "con_islam_meaning",
+    "lesson_id": null,
+    "source_id": "src_tafsir_islam_meaning",
+    "pronunciation_audio_url": null
+   },
+   {
+    "term_id": "term_muslim",
+    "text": {
+     "ar": "المسلم",
+     "en": "Muslim"
+    },
+    "arabic": "المُسْلِم",
+    "transliteration": "Muslim",
+    "definition": {
+     "basic": {
+      "ar": [
+       {
+        "type": "text",
+        "text": "من أسلم لله."
+       }
+      ],
+      "en": [
+       {
+        "type": "text",
+        "text": "One who has submitted to God."
+       }
+      ]
+     },
+     "intermediate": null
+    },
+    "example": {
+     "ar": [
+      {
+       "type": "text",
+       "text": "يُسمّى «مسلماً» لأنه أسلم أمره لله."
+      }
+     ],
+     "en": [
+      {
+       "type": "text",
+       "text": "A person is called a “Muslim” because they have handed themselves over to God."
+      }
+     ]
+    },
+    "concept_id": "con_islam_meaning",
+    "lesson_id": null,
+    "source_id": "src_tafsir_islam_meaning",
+    "pronunciation_audio_url": null
+   }
+  ],
+  "misconceptions": [
+   {
+    "misconception_id": "mis_islam_ethnic",
+    "title": "الإسلام اسمٌ لدين قومٍ معيّنين",
+    "card": [
+     {
+      "type": "text",
+      "text": "فكرة شائعة لكنها غير دقيقة: كلمة «الإسلام» تصف علاقةً بالله — الاستسلام له — لا قوماً ولا بلداً."
+     }
+    ],
+    "source_ids": []
+   }
+  ],
+  "visuals": [
+   {
+    "scene_id": "scn_u1l1_1",
+    "origin": "generated",
+    "visual": {
+     "kind": "image",
+     "key": null,
+     "version": null,
+     "params": null,
+     "image": {
+      "url": "https://cdn.example.com/test/u1l1/museum_gallery.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1000
+     },
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "قاعة متحف فيها بلاط بزخارف هندسية وقناديل، بلا كتابة ولا أشخاص",
+     "overlays": []
+    },
+    "audit": {
+     "passed": false,
+     "issues": [
+      "TEST placeholder: visuals stage not run; image neither generated nor audited"
+     ]
+    },
+    "attempts": 0,
+    "previews": null
+   },
+   {
+    "scene_id": "scn_u1l1_2",
+    "origin": "generated",
+    "visual": {
+     "kind": "image",
+     "key": null,
+     "version": null,
+     "params": null,
+     "image": {
+      "url": "https://cdn.example.com/test/u1l1/desert_dawn.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1000
+     },
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "صحراء عند الفجر وخيمة وحيدة، بلا أشخاص",
+     "overlays": []
+    },
+    "audit": {
+     "passed": false,
+     "issues": [
+      "TEST placeholder: visuals stage not run; image neither generated nor audited"
+     ]
+    },
+    "attempts": 0,
+    "previews": null
+   }
+  ]
+ },
+ "qa_report": {
+  "issues": [
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "claim clm_root: Retrieve + Verify not run offline; exact source text is a placeholder and support is unverified."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "claim clm_not_ethnic: Retrieve + Verify not run offline; exact source text is a placeholder and support is unverified."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "claim clm_willing: Retrieve + Verify not run offline; exact source text is a placeholder and support is unverified."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "claim clm_e2: Retrieve + Verify not run offline; exact source text is a placeholder and support is unverified."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "claim clm_e3: Retrieve + Verify not run offline; exact source text is a placeholder and support is unverified."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "claim clm_whole_life: Retrieve + Verify not run offline; exact source text is a placeholder and support is unverified."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "claim clm_with_deeds: Retrieve + Verify not run offline; exact source text is a placeholder and support is unverified."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "claim clm_trust: Retrieve + Verify not run offline; exact source text is a placeholder and support is unverified."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "claim clm_meaning: Retrieve + Verify not run offline; exact source text is a placeholder and support is unverified."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "claim clm_muslim: Retrieve + Verify not run offline; exact source text is a placeholder and support is unverified."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "claim clm_prophets: Retrieve + Verify not run offline; exact source text is a placeholder and support is unverified."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "source src_tafsir_islam_meaning: excerpt placeholder must be replaced by code-inserted verified text."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "source src_q_2_130_132: excerpt placeholder must be replaced by code-inserted verified text."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "source src_q_2_256: excerpt placeholder must be replaced by code-inserted verified text."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "source src_q_6_162_163: excerpt placeholder must be replaced by code-inserted verified text."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "source src_q_2_112: excerpt placeholder must be replaced by code-inserted verified text."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "source src_q_10_84: excerpt placeholder must be replaced by code-inserted verified text."
+   },
+   {
+    "severity": "blocker",
+    "kind": "image_policy",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": "scn_u1l1_1"
+    },
+    "message": "placeholder image (readiness `placeholder`): the visuals stage did not run offline; no asset exists."
+   },
+   {
+    "severity": "blocker",
+    "kind": "image_policy",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": "scn_u1l1_2"
+    },
+    "message": "placeholder image (readiness `placeholder`): the visuals stage did not run offline; no asset exists."
+   },
+   {
+    "severity": "warning",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "clm_root / src_tafsir_islam_meaning (partial; translation_sensitive): TEST (offline semantic pass): Lexical claim. Confirm the retrieved passage derives «الإسلام» from «أسلم»; a lexicon may be the better source. \"Submit\" and \"yield\" are glosses; keep both."
+   },
+   {
+    "severity": "blocker",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "clm_not_ethnic / src_tafsir_islam_meaning (partial; beyond_source): TEST (offline semantic pass): The passage defines Islam as submission to God; the negative clause (\"not a people or a country\") is an inference from that definition, not a statement of the source. Cite a source that states it, recast it as an explanation of clm_meaning, or narrow the wording."
+   },
+   {
+    "severity": "warning",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "clm_willing / src_q_2_256 (exact; context_dependent, scholarly_disagreement): TEST (offline semantic pass): Al-Baqarah 2:256 states the claim as worded. Exegetes discuss its occasion and scope (general, specific, or abrogated on some views); present it as the Qur'an's statement, not as a full doctrine of choice."
+   },
+   {
+    "severity": "warning",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "clm_e3 / src_q_2_130_132 (partial; needs_tafsir, translation_sensitive): TEST (offline semantic pass): Al-Baqarah 2:132: what the counsel refers to, and \"until death\" (the verse forbids dying except as Muslims), are interpretive renderings; keep the narration an indirect paraphrase checked against tafsir."
+   },
+   {
+    "severity": "warning",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "clm_whole_life / src_q_6_162_163 (partial; addressee_specific, generalised_from_specific, translation_sensitive): TEST (offline semantic pass): Al-An'am 6:162–163 instructs the Prophet ﷺ to declare this of himself; applying it to every Muslim is a common reading, but the sentence should say so. «نسك» is rendered variously (sacrifice, rites of worship)."
+   },
+   {
+    "severity": "warning",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "clm_with_deeds / src_q_2_112 (partial; needs_tafsir, oversimplified): TEST (offline semantic pass): Al-Baqarah 2:112 pairs submitting one's face to God with being «محسن»; \"doing good\" simplifies iḥsān, which tafsir explains (sincerity and right action). The verse answers claims of exclusive salvation."
+   },
+   {
+    "severity": "warning",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "clm_trust / src_q_10_84 (partial; context_dependent, addressee_specific): TEST (offline semantic pass): Yunus 10:84 is Musa's address to his people, making trust conditional on faith and Islam. \"Links Islam with trust\" fits; keep that context available."
+   },
+   {
+    "severity": "warning",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "clm_meaning / src_tafsir_islam_meaning (partial; needs_tafsir): TEST (offline semantic pass): Confirm that the retrieved definition contains each element (worship of God alone, obedience, following guidance, \"willingly\"); drop any element it does not state."
+   },
+   {
+    "severity": "blocker",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "clm_prophets / src_q_2_130_132 (partial; generalised_from_specific, beyond_source): TEST (offline semantic pass): Al-Baqarah 2:130–132 concern Ibrahim and Yaqub. \"The way of the prophets\" generalises beyond the cited verses: retrieve sources that state it for other prophets, or narrow the sentence to Ibrahim and his descendants."
+   },
+   {
+    "severity": "warning",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": "sen_u1l1_04",
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "TEST (offline semantic pass): The sentence bridges from 2:256 (\"no compulsion in religion\") to \"this submission is willing\". The verse concerns compulsion into the religion; the specialist confirms the bridge or narrows it."
+   },
+   {
+    "severity": "warning",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": "sen_u1l1_07",
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "TEST (offline semantic pass): 6:162 is addressed to the Prophet ﷺ; the Explorer wording \"a person's prayer…\" generalises it. Prefer \"the Qur'an teaches the Prophet ﷺ to say…, and Muslims take it as their model\" (specialist decision)."
+   },
+   {
+    "severity": "blocker",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": "sen_u1l1_08",
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "TEST (offline semantic pass): Beyond the source: \"so Islam is not just a word that is said\" is a conclusion the writer added to 2:112; remove it or support it with its own claim."
+   },
+   {
+    "severity": "info",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "assessment items (2 pretest, 3 unit test) and 3 duel items were not generated in this test run."
+   },
+   {
+    "severity": "blocker",
+    "kind": "validation",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "publication gate (contextual.placeholder_media_errors): 12 media URLs across the sessions are placeholders or not published https, e.g. $.items[0].visual.image.url: placeholder media URL https://cdn.example.com/test/u1l1/museum_gallery.webp"
+   }
+  ]
+ },
+ "error": null,
+ "review_digest": "1aecd3a1a87ed2c1084c77a7ca81a3a9a267f8e3566e13f228292104849ead0f",
+ "published": null
+}

@@ -1,0 +1,616 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l06_guesthouse",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "mint": "#EEF5F2",
+    "emerald": "#0B5A52",
+    "deep": "#073C37",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "ink": "#16233A",
+    "slate": "#566476",
+    "sand": "#D7C3A1",
+    "stone": "#B8C5B8",
+    "paper": "#FAF4E6",
+    "wood": "#956B48",
+    "wooddark": "#6B4A34",
+    "skin": "#C8A681",
+    "white": "#FFFFFF",
+    "leaf": "#64846B",
+    "goldclear": "#E0A52600",
+    "shadow": "#16233A22"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 2,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "wall",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "mint"
+          },
+          {
+            "at": 1,
+            "color": "sand"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "wall_panel",
+      "type": "rect",
+      "x": 110,
+      "y": 90,
+      "w": 1380,
+      "h": 555,
+      "fill": "paper",
+      "corner": 28
+    },
+    {
+      "id": "floor",
+      "type": "path",
+      "d": "M 0 680 L 1600 680 L 1600 1000 L 0 1000 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "floor_band",
+      "type": "path",
+      "d": "M 0 895 L 1600 895 L 1600 935 L 0 935 Z",
+      "fill": "wood",
+      "opacity": 0.12
+    },
+    {
+      "id": "window_frame",
+      "type": "rect",
+      "x": 206,
+      "y": 165,
+      "w": 380,
+      "h": 370,
+      "fill": "wood",
+      "corner": 95
+    },
+    {
+      "id": "window_glass",
+      "type": "rect",
+      "x": 228,
+      "y": 188,
+      "w": 336,
+      "h": 325,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "mint"
+          },
+          {
+            "at": 1,
+            "color": "ember"
+          }
+        ]
+      },
+      "corner": 85
+    },
+    {
+      "id": "garden",
+      "type": "path",
+      "d": "M 228 420 Q 330 360 430 425 Q 500 385 564 425 L 564 513 L 228 513 Z",
+      "fill": "leaf"
+    },
+    {
+      "id": "window_bar_v",
+      "type": "rect",
+      "x": 387,
+      "y": 190,
+      "w": 17,
+      "h": 320,
+      "fill": "wood",
+      "corner": 0
+    },
+    {
+      "id": "window_bar_h",
+      "type": "rect",
+      "x": 230,
+      "y": 345,
+      "w": 334,
+      "h": 17,
+      "fill": "wood",
+      "corner": 0
+    },
+    {
+      "id": "curtain_left",
+      "type": "path",
+      "d": "M 175 133 L 263 133 Q 237 355 178 550 L 131 538 Q 185 371 175 133 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "curtain_right",
+      "type": "path",
+      "d": "M 541 133 L 629 133 Q 614 360 671 538 L 622 550 Q 556 350 541 133 Z",
+      "fill": "emerald",
+      "tracks": [
+        {
+          "property": "translate_x",
+          "duration_ms": 5800,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 4
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "bed_base",
+      "type": "rect",
+      "x": 1130,
+      "y": 525,
+      "w": 280,
+      "h": 228,
+      "fill": "wood",
+      "corner": 20
+    },
+    {
+      "id": "bed_mattress",
+      "type": "rect",
+      "x": 1108,
+      "y": 506,
+      "w": 310,
+      "h": 99,
+      "fill": "paper",
+      "corner": 30
+    },
+    {
+      "id": "bed_cover",
+      "type": "path",
+      "d": "M 1120 541 Q 1270 522 1403 554 L 1403 712 Q 1260 679 1120 711 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "pillow",
+      "type": "rect",
+      "x": 1184,
+      "y": 480,
+      "w": 171,
+      "h": 73,
+      "fill": "mint",
+      "corner": 28
+    },
+    {
+      "id": "rug",
+      "type": "ellipse",
+      "x": 745,
+      "y": 866,
+      "rx": 535,
+      "ry": 100,
+      "fill": "deep",
+      "opacity": 0.22
+    },
+    {
+      "id": "table_shadow",
+      "type": "ellipse",
+      "x": 777,
+      "y": 850,
+      "rx": 331,
+      "ry": 48,
+      "fill": "shadow"
+    },
+    {
+      "id": "table_leg_a",
+      "type": "path",
+      "d": "M 514 663 L 545 663 L 522 855 L 492 855 Z",
+      "fill": "wooddark"
+    },
+    {
+      "id": "table_leg_b",
+      "type": "path",
+      "d": "M 1021 663 L 1052 663 L 1081 855 L 1051 855 Z",
+      "fill": "wooddark"
+    },
+    {
+      "id": "table_top",
+      "type": "ellipse",
+      "x": 780,
+      "y": 666,
+      "rx": 350,
+      "ry": 115,
+      "fill": "wood"
+    },
+    {
+      "id": "table_surface",
+      "type": "ellipse",
+      "x": 780,
+      "y": 650,
+      "rx": 350,
+      "ry": 104,
+      "fill": "sand"
+    },
+    {
+      "id": "plate",
+      "type": "ellipse",
+      "x": 688,
+      "y": 651,
+      "rx": 111,
+      "ry": 39,
+      "fill": "paper"
+    },
+    {
+      "id": "bread",
+      "type": "ellipse",
+      "x": 686,
+      "y": 638,
+      "rx": 87,
+      "ry": 26,
+      "fill": "ember"
+    },
+    {
+      "id": "bread_notch",
+      "type": "path",
+      "d": "M 672 618 Q 681 630 681 650 L 691 651 Q 691 628 682 618 Z",
+      "fill": "gold"
+    },
+    {
+      "id": "jug",
+      "type": "path",
+      "d": "M 455 495 Q 432 468 447 451 L 490 451 Q 510 486 505 523 Q 540 537 530 615 L 455 615 Q 429 555 455 495 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "jug_handle",
+      "type": "path",
+      "d": "M 512 510 Q 571 514 560 565 Q 558 590 530 590 L 532 573 Q 546 569 543 548 Q 540 530 516 529 Z",
+      "fill": "emerald"
+    },
+    {
+      "id": "cup",
+      "type": "rect",
+      "x": 552,
+      "y": 583,
+      "w": 47,
+      "h": 63,
+      "fill": "paper",
+      "corner": 9
+    },
+    {
+      "id": "envelope",
+      "type": "rect",
+      "x": 830,
+      "y": 616,
+      "w": 176,
+      "h": 94,
+      "fill": "paper",
+      "corner": 7
+    },
+    {
+      "id": "envelope_fold",
+      "type": "path",
+      "d": "M 830 616 L 918 671 L 1006 616 L 1006 625 L 918 683 L 830 625 Z",
+      "fill": "sand"
+    },
+    {
+      "id": "message_sheet",
+      "type": "rect",
+      "x": 839,
+      "y": 559,
+      "w": 158,
+      "h": 96,
+      "fill": "paper",
+      "corner": 5,
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "traveler",
+      "type": "group",
+      "transform": {
+        "x": 370,
+        "y": 577,
+        "scale": 0.9
+      },
+      "children": [
+        {
+          "id": "traveler_shadow",
+          "type": "ellipse",
+          "x": 0,
+          "y": 215,
+          "rx": 75,
+          "ry": 14,
+          "fill": "shadow"
+        },
+        {
+          "id": "traveler_body",
+          "type": "path",
+          "d": "M -42 22 Q -82 42 -70 156 L -63 210 L 62 210 L 70 156 Q 82 42 42 22 Q 0 38 -42 22 Z",
+          "fill": "slate"
+        },
+        {
+          "id": "traveler_head",
+          "type": "ellipse",
+          "x": 0,
+          "y": -14,
+          "rx": 32,
+          "ry": 42,
+          "fill": "skin"
+        },
+        {
+          "id": "traveler_arm",
+          "type": "path",
+          "d": "M 36 44 Q 89 71 81 112 L 63 109 Q 67 85 28 68 Z",
+          "fill": "slate"
+        }
+      ]
+    },
+    {
+      "id": "bag",
+      "type": "path",
+      "d": "M 308 716 Q 333 695 350 716 L 369 813 L 303 813 Z",
+      "fill": "wood"
+    },
+    {
+      "id": "phone",
+      "type": "rect",
+      "x": 991,
+      "y": 566,
+      "w": 41,
+      "h": 75,
+      "fill": "deep",
+      "corner": 8,
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "eq": 2
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "phone_screen",
+      "type": "rect",
+      "x": 998,
+      "y": 576,
+      "w": 27,
+      "h": 51,
+      "fill": "mint",
+      "corner": 3,
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "eq": 2
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "message_glow",
+      "type": "ellipse",
+      "x": 917,
+      "y": 650,
+      "rx": 180,
+      "ry": 105,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          917,
+          650
+        ],
+        "radius": 180,
+        "stops": [
+          {
+            "at": 0,
+            "color": "gold"
+          },
+          {
+            "at": 1,
+            "color": "goldclear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "eq": 1
+            }
+          },
+          "set": {
+            "opacity": 0.2
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "scale",
+          "duration_ms": 4200,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1.06
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "check_glow",
+      "type": "ellipse",
+      "x": 1010,
+      "y": 610,
+      "rx": 91,
+      "ry": 100,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          1010,
+          610
+        ],
+        "radius": 100,
+        "stops": [
+          {
+            "at": 0,
+            "color": "gold"
+          },
+          {
+            "at": 1,
+            "color": "goldclear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "eq": 2
+            }
+          },
+          "set": {
+            "opacity": 0.2
+          },
+          "transition_ms": 700,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "scale",
+          "duration_ms": 4200,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1.06
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "repeat"
+        }
+      ]
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      }
+    ]
+  }
+}

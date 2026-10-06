@@ -1,0 +1,419 @@
+{
+ "session_id": "ses_91ab",
+ "kind": "lesson",
+ "status": "active",
+ "feedback_mode": "immediate",
+ "mode": null,
+ "unit_id": "unit_2",
+ "lesson_id": "les_u2_l1",
+ "lesson_version": 3,
+ "title": "من هو الله؟",
+ "subtitle": "معرفة الله",
+ "lesson_type": "concept",
+ "reviewed_by": "لجنة المراجعة الشرعية",
+ "objectives": [
+  [
+   {
+    "type": "text",
+    "text": "أن تشرح معنى أن الله واحد لا شريك له."
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "text": "أن تتعرف على سورة الإخلاص ومعناها العام."
+   }
+  ]
+ ],
+ "counts": {
+  "interactions": 3,
+  "exercises": 3,
+  "scored": 2
+ },
+ "source_count": 1,
+ "total_exercises": 3,
+ "answered_exercises": 0,
+ "answers": [],
+ "started_at": "2026-10-04T09:20:00Z",
+ "items": [
+  {
+   "block_id": "blk_u2_l1_p1",
+   "type": "paragraph",
+   "sentences": [
+    {
+     "sentence_id": "sen_u2_l1_01",
+     "spans": [
+      {
+       "type": "text",
+       "text": "في الإسلام، الله هو "
+      },
+      {
+       "type": "term",
+       "text": "الخالق",
+       "term_id": "term_khaliq"
+      },
+      {
+       "type": "text",
+       "text": " لكل شيء، وهو واحد لا شريك له."
+      }
+     ],
+     "source_ids": [
+      "src_q_112_1_4"
+     ]
+    },
+    {
+     "sentence_id": "sen_u2_l1_02",
+     "spans": [
+      {
+       "type": "text",
+       "text": "هذا الإيمان بوحدانية الله يسمّى "
+      },
+      {
+       "type": "term",
+       "text": "التوحيد",
+       "term_id": "term_tawhid"
+      },
+      {
+       "type": "text",
+       "text": "، وهو أساس الإسلام كله."
+      }
+     ],
+     "source_ids": [
+      "src_q_112_1_4",
+      "src_tafsir_112_mukhtasar"
+     ]
+    }
+   ]
+  },
+  {
+   "block_id": "blk_u2_l1_e1",
+   "type": "evidence",
+   "caption": [
+    {
+     "type": "text",
+     "text": "سورة قصيرة تصف الله في أربع آيات:"
+    }
+   ],
+   "evidence": {
+    "evidence_id": "src_q_112_1_4",
+    "kind": "quran",
+    "quran": {
+     "surah": 112,
+     "surah_name": "الإخلاص",
+     "ayah_start": 1,
+     "ayah_end": 4,
+     "segment": null,
+     "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+     "translation": null,
+     "translation_source": null,
+     "audio": {
+      "reciter": "مشاري راشد العفاسي",
+      "url": "https://cdn.example.com/quran/afasy/112001-112004.mp3",
+      "words": null
+     }
+    },
+    "hadith": null
+   }
+  },
+  {
+   "block_id": "blk_u2_l1_x1",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_u2_l1_01",
+    "type": "multiple_choice",
+    "concept_ids": [
+     "con_allah_one"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "ماذا تعني كلمة «أحد» في سورة الإخلاص؟"
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "options": [
+      {
+       "option_id": "opt_a",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله واحد لا شريك له"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_b",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله أول الآلهة"
+        }
+       ]
+      },
+      {
+       "option_id": "opt_c",
+       "spans": [
+        {
+         "type": "text",
+         "text": "أن الله خاص بالعرب"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "blk_u2_l1_x2",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_u2_l1_07",
+    "type": "spot_error",
+    "concept_ids": [
+     "con_qibla"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "في العبارة التالية جزء خاطئ. اضغط عليه."
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": true,
+     "combo": true,
+     "layer": "understand"
+    },
+    "framing": null,
+    "payload": {
+     "segments": [
+      {
+       "segment_id": "seg_1",
+       "spans": [
+        {
+         "type": "text",
+         "text": "يتّجه المسلمون في صلاتهم إلى الكعبة"
+        }
+       ]
+      },
+      {
+       "segment_id": "seg_2",
+       "spans": [
+        {
+         "type": "text",
+         "text": "لأنهم يعبدونها"
+        }
+       ]
+      },
+      {
+       "segment_id": "seg_3",
+       "spans": [
+        {
+         "type": "text",
+         "text": "وهي قِبلة واحدة لكل المسلمين."
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "block_id": "blk_u2_l1_x3",
+   "type": "exercise",
+   "exercise": {
+    "exercise_id": "ex_u2_l1_09",
+    "type": "recite_verse",
+    "concept_ids": [
+     "con_allah_one"
+    ],
+    "prompt": [
+     {
+      "type": "text",
+      "text": "استمع إلى الآية ثم اقرأها بصوتك."
+     }
+    ],
+    "time_limit_ms": null,
+    "scoring": {
+     "accuracy": false,
+     "combo": false,
+     "layer": null
+    },
+    "framing": null,
+    "payload": {
+     "surah": 112,
+     "ayah": 1,
+     "word_start": null,
+     "word_end": null,
+     "text_uthmani": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+     "audio": {
+      "reciter": "مشاري راشد العفاسي",
+      "url": "https://cdn.example.com/quran/afasy/112001.mp3",
+      "words": [
+       {
+        "ayah": 1,
+        "position": 1,
+        "text": "قُلْ",
+        "start_ms": 0,
+        "end_ms": 520
+       },
+       {
+        "ayah": 1,
+        "position": 2,
+        "text": "هُوَ",
+        "start_ms": 520,
+        "end_ms": 900
+       },
+       {
+        "ayah": 1,
+        "position": 3,
+        "text": "اللَّهُ",
+        "start_ms": 900,
+        "end_ms": 1650
+       },
+       {
+        "ayah": 1,
+        "position": 4,
+        "text": "أَحَدٌ",
+        "start_ms": 1650,
+        "end_ms": 2900
+       }
+      ]
+     },
+     "transliteration": "Qul huwa Allahu ahad",
+     "meaning": [
+      {
+       "type": "text",
+       "text": "قل: هو الله الواحد لا شريك له."
+      }
+     ],
+     "source_id": "src_q_112_1_4",
+     "max_duration_ms": 30000,
+     "skippable": true
+    }
+   }
+  }
+ ],
+ "completion": {
+  "challenge": [
+   {
+    "type": "text",
+    "text": "اقرأ سورة الإخلاص مع معناها، وتأمل كل صفة من صفات الله فيها."
+   }
+  ],
+  "review_topics": [
+   {
+    "topic_id": "rt_u2_l1_1",
+    "title": "وحدانية الله",
+    "concept_ids": [
+     "con_allah_one"
+    ]
+   },
+   {
+    "topic_id": "rt_u2_l1_2",
+    "title": "سورة الإخلاص",
+    "concept_ids": [
+     "con_allah_one"
+    ]
+   }
+  ],
+  "check_in": [
+   {
+    "type": "text",
+    "text": "غداً سنسألك: ماذا تعني كلمة «أحد»؟"
+   }
+  ]
+ },
+ "sources": [
+  {
+   "source_id": "src_q_112_1_4",
+   "kind": "quran",
+   "provider": "quran_com",
+   "title": "سورة الإخلاص",
+   "reference": "الإخلاص: 1–4",
+   "excerpt": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+   "url": "https://quran.com/112",
+   "displayed": true,
+   "display_role": "content"
+  },
+  {
+   "source_id": "src_tafsir_112_mukhtasar",
+   "kind": "tafsir",
+   "provider": "tafsir_center",
+   "title": "المختصر في التفسير",
+   "reference": "تفسير سورة الإخلاص",
+   "excerpt": "قل -أيها الرسول-: هو الله المتفرد بالألوهية...",
+   "url": null,
+   "displayed": false,
+   "display_role": null
+  },
+  {
+   "source_id": "src_q_2_144",
+   "kind": "quran",
+   "provider": "quran_com",
+   "title": "سورة البقرة",
+   "reference": "البقرة: 144",
+   "excerpt": "فَوَلِّ وَجْهَكَ شَطْرَ الْمَسْجِدِ الْحَرَامِ",
+   "url": "https://quran.com/2/144",
+   "displayed": false,
+   "display_role": null
+  }
+ ],
+ "terms": {
+  "term_khaliq": {
+   "term_id": "term_khaliq",
+   "text": "الخالق",
+   "transliteration": "Al-Khaliq",
+   "state": "learning",
+   "level": "basic",
+   "definition": [
+    {
+     "type": "text",
+     "text": "الذي أوجد كل شيء من العدم."
+    }
+   ],
+   "example": [
+    {
+     "type": "text",
+     "text": "السماء والأرض من خلق الله."
+    }
+   ],
+   "pronunciation_audio_url": "https://cdn.example.com/terms/term_khaliq.mp3",
+   "source_id": null,
+   "lesson_id": "les_u2_l1",
+   "lesson_title": "من هو الله؟",
+   "arabic": null
+  },
+  "term_tawhid": {
+   "term_id": "term_tawhid",
+   "text": "التوحيد",
+   "transliteration": "Tawhid",
+   "state": "new",
+   "level": "basic",
+   "definition": [
+    {
+     "type": "text",
+     "text": "الإيمان بأن الله واحد لا شريك له، وأنه وحده من يستحق العبادة."
+    }
+   ],
+   "example": [
+    {
+     "type": "text",
+     "text": "سورة الإخلاص تلخّص معنى التوحيد في أربع آيات قصيرة."
+    }
+   ],
+   "pronunciation_audio_url": "https://cdn.example.com/terms/term_tawhid.mp3",
+   "source_id": "src_q_112_1_4",
+   "lesson_id": "les_u2_l1",
+   "lesson_title": "من هو الله؟",
+   "arabic": null
+  }
+ }
+}

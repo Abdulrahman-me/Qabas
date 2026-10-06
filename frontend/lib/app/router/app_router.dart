@@ -142,6 +142,7 @@ GoRouter createRouter(AppDependencies dependencies, RouterRefresh refresh, Galle
                 : BlocProvider(
                     create: (_) => dependencies.reviewerAuthBloc(),
                     child: ReviewerLoginPage(
+                      sampleEnabled: dependencies.config.judgesDemo,
                       onSignedIn: (user) {
                         dependencies.session.add(UserProfileReceived(user));
                         c.go('/reviewer/runs');
@@ -336,7 +337,7 @@ GoRouter createRouter(AppDependencies dependencies, RouterRefresh refresh, Galle
                       child: BlocListener<LocaleCubit, LocaleState>(
                         listenWhen: (a, b) => a.language != b.language,
                         listener: (context, _) => context.read<ProfileBloc>().add(const ProfileOpened()),
-                        child: ProfilePage(developerEnabled: developer),
+                        child: ProfilePage(developerEnabled: developer, reviewerSampleEnabled: dependencies.config.judgesDemo),
                       ),
                     ),
                     _ => PlaceholderPage(index: entry.key, developerEnabled: developer),

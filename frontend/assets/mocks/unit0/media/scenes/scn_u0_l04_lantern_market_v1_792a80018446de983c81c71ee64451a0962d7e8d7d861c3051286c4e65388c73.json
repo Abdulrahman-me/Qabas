@@ -1,0 +1,499 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l04_lantern_market",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "night": "#16233A",
+    "dark": "#073C37",
+    "green": "#0B5A52",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "slate": "#566476",
+    "sand": "#D8C6A5",
+    "wood": "#996A45",
+    "wood_dark": "#624630",
+    "skin": "#C9A285",
+    "clear": "#E0A52600",
+    "glow": "#E0A52655",
+    "glass": "#BBD8D766",
+    "white": "#FFFFFF"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 3,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "night"
+          },
+          {
+            "at": 1,
+            "color": "dark"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "floor",
+      "type": "rect",
+      "x": 0,
+      "y": 770,
+      "w": 1600,
+      "h": 230,
+      "fill": "wood_dark",
+      "corner": 0
+    },
+    {
+      "id": "ground_shadow",
+      "type": "ellipse",
+      "x": 800,
+      "y": 850,
+      "rx": 430,
+      "ry": 55,
+      "fill": "dark",
+      "opacity": 0.15
+    },
+    {
+      "id": "stalls",
+      "type": "path",
+      "d": "M120 460 L520 460 L520 780 L120 780 Z M1080 460 L1480 460 L1480 780 L1080 780 Z",
+      "fill": "dark"
+    },
+    {
+      "id": "awning",
+      "type": "path",
+      "d": "M90 430 L300 280 L550 430 Z M1050 430 L1300 280 L1510 430 Z",
+      "fill": "green"
+    },
+    {
+      "id": "street",
+      "type": "path",
+      "d": "M690 540 L910 540 L1320 1000 L280 1000 Z",
+      "fill": "slate",
+      "opacity": 0.32
+    },
+    {
+      "id": "cord",
+      "type": "path",
+      "d": "M200 155 Q800 275 1400 155 L1400 161 Q800 281 200 161 Z",
+      "fill": "wood_dark"
+    },
+    {
+      "id": "cord_0",
+      "type": "rect",
+      "x": 477,
+      "y": 213,
+      "w": 6,
+      "h": 67,
+      "fill": "wood_dark",
+      "corner": 0
+    },
+    {
+      "id": "halo_0",
+      "type": "ellipse",
+      "x": 480,
+      "y": 377,
+      "rx": 142,
+      "ry": 142,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          480,
+          377
+        ],
+        "radius": 142,
+        "stops": [
+          {
+            "at": 0,
+            "color": "glow"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 0
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "opacity",
+          "duration_ms": 3700,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0.25
+            },
+            {
+              "t": 1,
+              "v": 0.38
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "ping_pong"
+        }
+      ]
+    },
+    {
+      "id": "lantern_0",
+      "type": "path",
+      "d": "M429 305 Q480 275 531 305 L544 417 Q480 449 416 417 Z",
+      "fill": "ember",
+      "opacity": 0.35,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 0
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "frame_0",
+      "type": "path",
+      "d": "M426 299 L534 299 L542 314 L418 314 Z M419 418 L541 418 L526 438 L434 438 Z M476 314 L484 314 L484 418 L476 418 Z",
+      "fill": "green"
+    },
+    {
+      "id": "cord_1",
+      "type": "rect",
+      "x": 692,
+      "y": 223,
+      "w": 6,
+      "h": 82,
+      "fill": "wood_dark",
+      "corner": 0
+    },
+    {
+      "id": "halo_1",
+      "type": "ellipse",
+      "x": 695,
+      "y": 402,
+      "rx": 142,
+      "ry": 142,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          695,
+          402
+        ],
+        "radius": 142,
+        "stops": [
+          {
+            "at": 0,
+            "color": "glow"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "lantern_1",
+      "type": "path",
+      "d": "M644 330 Q695 300 746 330 L759 442 Q695 474 631 442 Z",
+      "fill": "ember",
+      "opacity": 0.35,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "frame_1",
+      "type": "path",
+      "d": "M641 324 L749 324 L757 339 L633 339 Z M634 443 L756 443 L741 463 L649 463 Z M691 339 L699 339 L699 443 L691 443 Z",
+      "fill": "green"
+    },
+    {
+      "id": "cord_2",
+      "type": "rect",
+      "x": 907,
+      "y": 233,
+      "w": 6,
+      "h": 97,
+      "fill": "wood_dark",
+      "corner": 0
+    },
+    {
+      "id": "halo_2",
+      "type": "ellipse",
+      "x": 910,
+      "y": 427,
+      "rx": 142,
+      "ry": 142,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          910,
+          427
+        ],
+        "radius": 142,
+        "stops": [
+          {
+            "at": 0,
+            "color": "glow"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "lantern_2",
+      "type": "path",
+      "d": "M859 355 Q910 325 961 355 L974 467 Q910 499 846 467 Z",
+      "fill": "ember",
+      "opacity": 0.35,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "frame_2",
+      "type": "path",
+      "d": "M856 349 L964 349 L972 364 L848 364 Z M849 468 L971 468 L956 488 L864 488 Z M906 364 L914 364 L914 468 L906 468 Z",
+      "fill": "green"
+    },
+    {
+      "id": "cord_3",
+      "type": "rect",
+      "x": 1122,
+      "y": 243,
+      "w": 6,
+      "h": 112,
+      "fill": "wood_dark",
+      "corner": 0
+    },
+    {
+      "id": "halo_3",
+      "type": "ellipse",
+      "x": 1125,
+      "y": 452,
+      "rx": 142,
+      "ry": 142,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          1125,
+          452
+        ],
+        "radius": 142,
+        "stops": [
+          {
+            "at": 0,
+            "color": "glow"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 3
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "lantern_3",
+      "type": "path",
+      "d": "M1074 380 Q1125 350 1176 380 L1189 492 Q1125 524 1061 492 Z",
+      "fill": "ember",
+      "opacity": 0.35,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 3
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "frame_3",
+      "type": "path",
+      "d": "M1071 374 L1179 374 L1187 389 L1063 389 Z M1064 493 L1186 493 L1171 513 L1079 513 Z M1121 389 L1129 389 L1129 493 L1121 493 Z",
+      "fill": "green"
+    },
+    {
+      "id": "vendor_shadow",
+      "type": "ellipse",
+      "x": 325,
+      "y": 791,
+      "rx": 85,
+      "ry": 17,
+      "fill": "wood_dark",
+      "opacity": 0.25
+    },
+    {
+      "id": "vendor_body",
+      "type": "path",
+      "d": "M260 761 Q249 589 289 567 L361 567 Q401 589 390 761 Z",
+      "fill": "slate"
+    },
+    {
+      "id": "vendor_head",
+      "type": "ellipse",
+      "x": 325,
+      "y": 518,
+      "rx": 37,
+      "ry": 46,
+      "fill": "skin"
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      }
+    ]
+  }
+}

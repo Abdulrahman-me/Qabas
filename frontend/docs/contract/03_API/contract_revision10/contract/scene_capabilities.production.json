@@ -1,0 +1,123 @@
+{
+  "schema_version": "qabas.scene/1",
+  "registry_version": 0,
+  "notes": "No renderer release delivered. All capabilities remain proposed until real build/release evidence is attached.",
+  "capabilities": [
+    {
+      "id": "scene/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "Base renderer: view box, layers, group, transforms, opacity, palette tokens, named states, state conditions, transitions, reduced-motion still, preview frames.",
+      "release_evidence": null
+    },
+    {
+      "id": "shape.rect/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "Rectangle with optional corner radius.",
+      "release_evidence": null
+    },
+    {
+      "id": "shape.ellipse/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "Ellipse / circle.",
+      "release_evidence": null
+    },
+    {
+      "id": "shape.path/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "SVG path subset: M L H V C Q Z (absolute and relative), max 400 commands per layer.",
+      "release_evidence": null
+    },
+    {
+      "id": "paint.gradient/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "Linear and radial gradient fills, max 4 stops.",
+      "release_evidence": null
+    },
+    {
+      "id": "clip/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "Clip a group by a rect, ellipse, or path layer.",
+      "release_evidence": null
+    },
+    {
+      "id": "asset.raster/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "Placed WebP/PNG/JPEG asset.",
+      "release_evidence": null
+    },
+    {
+      "id": "asset.svg/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "Placed static SVG asset (no scripts, no text, no external references).",
+      "release_evidence": null
+    },
+    {
+      "id": "track/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "Keyframe tracks on translate_x, translate_y, rotation, scale, opacity; easing linear/ease_in/ease_out/ease_in_out; loop none/repeat/ping_pong.",
+      "release_evidence": null
+    },
+    {
+      "id": "anchors/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "Named anchor points for hotspots and overlays.",
+      "release_evidence": null
+    },
+    {
+      "id": "fx.sparkles/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "Bounded procedural twinkle field inside a rect (count <= 40, deterministic seed).",
+      "release_evidence": null
+    },
+    {
+      "id": "fx.water/1",
+      "status": "proposed",
+      "min_app_version": null,
+      "description": "Flowing water ripple band. Not yet implemented; content using it cannot be published.",
+      "release_evidence": null
+    }
+  ],
+  "limits": {
+    "manifest_bytes": 262144,
+    "layers": 60,
+    "tracks": 120,
+    "keyframes_per_track": 12,
+    "path_commands_total": 6000,
+    "assets": 8,
+    "asset_bytes_each": 1048576,
+    "asset_bytes_total": 2097152,
+    "states": 6,
+    "state_rules_per_layer": 8,
+    "track_duration_ms": {
+      "min": 200,
+      "max": 60000
+    },
+    "view_box_max": 4096,
+    "anchor_motion": {
+      "translate_max_pct_of_view_box": 2,
+      "rotation_max_deg": 10,
+      "scale_min": 0.9,
+      "scale_max": 1.1,
+      "applies_to": "descendants of an anchored layer; the anchored layer and its ancestors must have no position-changing tracks or state rules"
+    }
+  },
+  "performance_target": {
+    "device_class": "mid-range Android (2021, e.g. 4 GB RAM, Snapdragon 7-series) and iPhone 11",
+    "frame_budget_ms": 8,
+    "fps": 60,
+    "decode_and_first_frame_ms": 150,
+    "measured_by": "tools/scene_preview --benchmark on the reference devices in CI device farm"
+  },
+  "environment": "production"
+}

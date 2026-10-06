@@ -1,0 +1,36 @@
+{
+ "exercise_id": "ex_order_steps",
+ "recorded": true,
+ "correct": true,
+ "correct_answer": {
+  "order": [
+   "st_1",
+   "st_2",
+   "st_3",
+   "st_4"
+  ]
+ },
+ "details": {
+  "first_wrong_index": null
+ },
+ "explanation": [
+  {
+   "type": "text",
+   "text": "شرح مختصر مرتبط بالدليل."
+  }
+ ],
+ "source_ids": [
+  "src_q_112_1"
+ ],
+ "misconception": null,
+ "mastery_changes": [
+  {
+   "concept_id": "con_test",
+   "title": "مفهوم اختباري",
+   "before": 0.4,
+   "after": 0.46
+  }
+ ],
+ "term_changes": [],
+ "xp_awarded": 0
+}

@@ -1,0 +1,110 @@
+{
+  "session_id": "ses_mock_u0_l8_ar_explorer",
+  "lesson_id": "les_u0_l8",
+  "answers": {
+    "ex_u0_l08_01": {
+      "segment_id": "seg_3"
+    },
+    "ex_u0_l08_02": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l08_03": {
+      "order": [
+        "st_2",
+        "st_4",
+        "st_1",
+        "st_3"
+      ]
+    },
+    "ex_u0_l08_04": {
+      "option_id": "opt_c"
+    }
+  },
+  "feedback": {
+    "ex_u0_l08_01": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الورقة القديمة واسم كاتبها ادّعاءان مختلفان؛ إثبات العمر لا يكفي لإثبات الاسم."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l08_02": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "تكرار ادّعاء البائع في بطاقة أخرى لا يضيف شاهدًا مستقلًا."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "الورقة القديمة واسم كاتبها ادّعاءان مختلفان؛ إثبات العمر لا يكفي لإثبات الاسم."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_c": "mis_u0_l08_sincerity"
+      },
+      "option_feedback": {
+        "opt_a": [
+          {
+            "type": "text",
+            "text": "مصدرها صندوق قديم، لكن هذا لا يربطها بالكاتب المحدّد."
+          }
+        ],
+        "opt_b": [
+          {
+            "type": "text",
+            "text": "السجل القابل للفحص قد يربط الورقة بالكاتب؛ نتحقق من مصدره وما يخصّه."
+          }
+        ],
+        "opt_c": [
+          {
+            "type": "text",
+            "text": "القناعة لا تمنع الخطأ؛ اسأل عما تستند إليه النسبة."
+          }
+        ]
+      }
+    },
+    "ex_u0_l08_03": {
+      "correct_answer": {
+        "order": [
+          "st_2",
+          "st_4",
+          "st_1",
+          "st_3"
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "نحدّد الادّعاء أولًا، ثم طريقه وأدلته وبدائله، قبل صياغة النتيجة."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l08_04": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "عدم كفاية الدليل لإثبات ادّعاء لا يساوي دائمًا إثبات كذبه."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_b": "mis_u0_l08_absence"
+      }
+    }
+  }
+}

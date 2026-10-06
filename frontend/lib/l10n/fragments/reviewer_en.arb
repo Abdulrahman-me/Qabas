@@ -913,5 +913,13 @@
         "type": "String"
       }
     }
+  },
+  "reviewerSampleOpen": "Explore reviewer dashboard",
+  "reviewerSampleDescription": "Review lesson plans and drafts, compare lessons in a blind test, and explore sample metrics. This preview uses sample content; your learning progress is saved when you return.",
+  "@reviewerSampleOpen": {
+    "description": "Open the local competition reviewer preview."
+  },
+  "@reviewerSampleDescription": {
+    "description": "Explain sample reviewer content and preserved learner progress."
   }
 }

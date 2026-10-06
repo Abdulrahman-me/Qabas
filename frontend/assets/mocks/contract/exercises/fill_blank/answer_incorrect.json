@@ -1,0 +1,17 @@
+{
+ "exercise_id": "ex_fill_blank",
+ "answer": {
+  "fills": [
+   {
+    "blank_id": "b_1",
+    "word_id": "w_2"
+   },
+   {
+    "blank_id": "b_2",
+    "word_id": "w_3"
+   }
+  ]
+ },
+ "elapsed_ms": 7000,
+ "is_retry": false
+}

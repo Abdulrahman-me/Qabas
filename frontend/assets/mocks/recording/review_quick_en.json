@@ -1,0 +1,195 @@
+{
+  "session_id": "ses_review_quick",
+  "kind": "review",
+  "mode": "quick",
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": null,
+  "lesson_id": null,
+  "lesson_version": null,
+  "title": "Quick review",
+  "subtitle": null,
+  "lesson_type": null,
+  "reviewed_by": null,
+  "objectives": [],
+  "counts": {
+    "interactions": 3,
+    "exercises": 3,
+    "scored": 3
+  },
+  "source_count": 0,
+  "total_exercises": 3,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T09:00:00Z",
+  "items": [
+    {
+      "block_id": "b_recording_quick_0",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_quick_0",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_test"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which definition fits “Asr”?"
+          }
+        ],
+        "time_limit_ms": 20000,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The third prayer, in the afternoon while the sun is still high."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The second prayer, once the sun passes its highest point."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Speaking to God and asking Him for what you need — at any time, in your own words."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_quick_1",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_quick_1",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_test"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which definition fits “Dhuhr”?"
+          }
+        ],
+        "time_limit_ms": 20000,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The second prayer, once the sun passes its highest point."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Speaking to God and asking Him for what you need — at any time, in your own words."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The first prayer of the day, at first light before sunrise."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_recording_quick_2",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_recording_quick_2",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_test"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which definition fits “Supplication (du‘a)”?"
+          }
+        ],
+        "time_limit_ms": 20000,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_0",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Speaking to God and asking Him for what you need — at any time, in your own words."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The first prayer of the day, at first light before sunrise."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Something God asks of a Muslim firmly — not optional."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "completion": null,
+  "sources": [],
+  "terms": {},
+  "answers": []
+}

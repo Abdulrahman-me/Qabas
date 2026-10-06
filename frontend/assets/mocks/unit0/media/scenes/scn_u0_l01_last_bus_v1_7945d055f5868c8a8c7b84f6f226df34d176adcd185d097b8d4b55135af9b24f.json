@@ -1,0 +1,351 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l01_last_bus",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "night": "#16233A",
+    "dark": "#073C37",
+    "green": "#0B5A52",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "slate": "#566476",
+    "sand": "#D8C6A5",
+    "wood": "#996A45",
+    "wood_dark": "#624630",
+    "skin": "#C9A285",
+    "clear": "#E0A52600",
+    "glow": "#E0A52655",
+    "glass": "#BBD8D766",
+    "white": "#FFFFFF"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 3,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "night"
+          },
+          {
+            "at": 1,
+            "color": "dark"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "floor",
+      "type": "rect",
+      "x": 0,
+      "y": 770,
+      "w": 1600,
+      "h": 230,
+      "fill": "wood_dark",
+      "corner": 0
+    },
+    {
+      "id": "ground_shadow",
+      "type": "ellipse",
+      "x": 800,
+      "y": 850,
+      "rx": 430,
+      "ry": 55,
+      "fill": "dark",
+      "opacity": 0.15
+    },
+    {
+      "id": "station",
+      "type": "rect",
+      "x": 180,
+      "y": 250,
+      "w": 1240,
+      "h": 450,
+      "fill": "dark",
+      "corner": 25
+    },
+    {
+      "id": "canopy",
+      "type": "path",
+      "d": "M125 230 L1475 230 L1400 320 L200 320 Z",
+      "fill": "green"
+    },
+    {
+      "id": "ticket_window",
+      "type": "rect",
+      "x": 965,
+      "y": 365,
+      "w": 260,
+      "h": 250,
+      "fill": "mint",
+      "corner": 15
+    },
+    {
+      "id": "screen",
+      "type": "rect",
+      "x": 1080,
+      "y": 393,
+      "w": 95,
+      "h": 65,
+      "fill": "night",
+      "corner": 8,
+      "tracks": [
+        {
+          "property": "opacity",
+          "duration_ms": 4500,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0.9
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "ping_pong"
+        }
+      ]
+    },
+    {
+      "id": "counter",
+      "type": "rect",
+      "x": 940,
+      "y": 595,
+      "w": 315,
+      "h": 30,
+      "fill": "wood",
+      "corner": 8
+    },
+    {
+      "id": "bus_body",
+      "type": "rect",
+      "x": 300,
+      "y": 480,
+      "w": 585,
+      "h": 270,
+      "fill": "green",
+      "corner": 35
+    },
+    {
+      "id": "bus_windows",
+      "type": "path",
+      "d": "M333 510 L469 510 L469 620 L333 620 Z M491 510 L625 510 L625 620 L491 620 Z M647 510 L822 510 L837 620 L647 620 Z",
+      "fill": "glass"
+    },
+    {
+      "id": "wheel_a",
+      "type": "ellipse",
+      "x": 420,
+      "y": 747,
+      "rx": 51,
+      "ry": 51,
+      "fill": "night"
+    },
+    {
+      "id": "wheel_b",
+      "type": "ellipse",
+      "x": 766,
+      "y": 747,
+      "rx": 51,
+      "ry": 51,
+      "fill": "night"
+    },
+    {
+      "id": "hub_a",
+      "type": "ellipse",
+      "x": 420,
+      "y": 747,
+      "rx": 22,
+      "ry": 22,
+      "fill": "slate"
+    },
+    {
+      "id": "hub_b",
+      "type": "ellipse",
+      "x": 766,
+      "y": 747,
+      "rx": 22,
+      "ry": 22,
+      "fill": "slate"
+    },
+    {
+      "id": "traveller_shadow",
+      "type": "ellipse",
+      "x": 785,
+      "y": 840,
+      "rx": 85,
+      "ry": 17,
+      "fill": "wood_dark",
+      "opacity": 0.25
+    },
+    {
+      "id": "traveller_body",
+      "type": "path",
+      "d": "M720 810 Q709 638 749 616 L821 616 Q861 638 850 810 Z",
+      "fill": "green"
+    },
+    {
+      "id": "traveller_head",
+      "type": "ellipse",
+      "x": 785,
+      "y": 567,
+      "rx": 37,
+      "ry": 46,
+      "fill": "skin"
+    },
+    {
+      "id": "passenger_shadow",
+      "type": "ellipse",
+      "x": 603,
+      "y": 855,
+      "rx": 85,
+      "ry": 17,
+      "fill": "wood_dark",
+      "opacity": 0.25
+    },
+    {
+      "id": "passenger_body",
+      "type": "path",
+      "d": "M538 825 Q527 653 567 631 L639 631 Q679 653 668 825 Z",
+      "fill": "slate"
+    },
+    {
+      "id": "passenger_head",
+      "type": "ellipse",
+      "x": 603,
+      "y": 582,
+      "rx": 37,
+      "ry": 46,
+      "fill": "skin"
+    },
+    {
+      "id": "clerk_shadow",
+      "type": "ellipse",
+      "x": 1022,
+      "y": 630,
+      "rx": 85,
+      "ry": 17,
+      "fill": "wood_dark",
+      "opacity": 0.25
+    },
+    {
+      "id": "clerk_body",
+      "type": "path",
+      "d": "M957 600 Q946 428 986 406 L1058 406 Q1098 428 1087 600 Z",
+      "fill": "wood"
+    },
+    {
+      "id": "clerk_head",
+      "type": "ellipse",
+      "x": 1022,
+      "y": 357,
+      "rx": 37,
+      "ry": 46,
+      "fill": "skin"
+    },
+    {
+      "id": "window_attention",
+      "type": "ellipse",
+      "x": 1090,
+      "y": 475,
+      "rx": 160,
+      "ry": 160,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          1090,
+          475
+        ],
+        "radius": 160,
+        "stops": [
+          {
+            "at": 0,
+            "color": "glow"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 2
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      }
+    ]
+  }
+}

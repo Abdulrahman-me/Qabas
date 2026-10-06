@@ -1,0 +1,266 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l01_parcel",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "night": "#16233A",
+    "dark": "#073C37",
+    "green": "#0B5A52",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "slate": "#566476",
+    "sand": "#D8C6A5",
+    "wood": "#996A45",
+    "wood_dark": "#624630",
+    "skin": "#C9A285",
+    "clear": "#E0A52600",
+    "glow": "#E0A52655",
+    "glass": "#BBD8D766",
+    "white": "#FFFFFF"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 3,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "mint"
+          },
+          {
+            "at": 1,
+            "color": "sand"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "floor",
+      "type": "rect",
+      "x": 0,
+      "y": 770,
+      "w": 1600,
+      "h": 230,
+      "fill": "sand",
+      "corner": 0
+    },
+    {
+      "id": "ground_shadow",
+      "type": "ellipse",
+      "x": 800,
+      "y": 850,
+      "rx": 430,
+      "ry": 55,
+      "fill": "dark",
+      "opacity": 0.15
+    },
+    {
+      "id": "wall",
+      "type": "rect",
+      "x": 180,
+      "y": 160,
+      "w": 1240,
+      "h": 625,
+      "fill": "mint",
+      "corner": 24
+    },
+    {
+      "id": "door_frame",
+      "type": "rect",
+      "x": 505,
+      "y": 180,
+      "w": 590,
+      "h": 625,
+      "fill": "wood",
+      "corner": 28
+    },
+    {
+      "id": "door",
+      "type": "rect",
+      "x": 530,
+      "y": 205,
+      "w": 540,
+      "h": 600,
+      "fill": "dark",
+      "corner": 22
+    },
+    {
+      "id": "door_panel",
+      "type": "rect",
+      "x": 578,
+      "y": 250,
+      "w": 442,
+      "h": 310,
+      "fill": "green",
+      "corner": 15
+    },
+    {
+      "id": "handle",
+      "type": "ellipse",
+      "x": 1000,
+      "y": 600,
+      "rx": 13,
+      "ry": 13,
+      "fill": "gold"
+    },
+    {
+      "id": "steps",
+      "type": "path",
+      "d": "M350 790 L1250 790 L1320 850 L280 850 Z",
+      "fill": "slate"
+    },
+    {
+      "id": "parcel_glow",
+      "type": "ellipse",
+      "x": 805,
+      "y": 730,
+      "rx": 210,
+      "ry": 210,
+      "fill": {
+        "gradient": "radial",
+        "center": [
+          805,
+          730
+        ],
+        "radius": 210,
+        "stops": [
+          {
+            "at": 0,
+            "color": "glow"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ],
+      "tracks": [
+        {
+          "property": "opacity",
+          "duration_ms": 4500,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0.55
+            },
+            {
+              "t": 1,
+              "v": 0.75
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "ping_pong",
+          "active_when": {
+            "beat": {
+              "gte": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "parcel_side",
+      "type": "path",
+      "d": "M635 680 L795 605 L978 660 L827 742 Z M827 742 L978 660 L978 825 L827 900 Z",
+      "fill": "wood_dark"
+    },
+    {
+      "id": "parcel_front",
+      "type": "path",
+      "d": "M635 680 L827 742 L827 900 L635 835 Z",
+      "fill": "wood"
+    },
+    {
+      "id": "tape",
+      "type": "path",
+      "d": "M701 650 L729 637 L911 690 L887 704 Z M716 706 L745 715 L745 870 L716 859 Z",
+      "fill": "ember"
+    },
+    {
+      "id": "blank_label",
+      "type": "rect",
+      "x": 655,
+      "y": 735,
+      "w": 100,
+      "h": 55,
+      "fill": "mint",
+      "corner": 6
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      }
+    ]
+  }
+}

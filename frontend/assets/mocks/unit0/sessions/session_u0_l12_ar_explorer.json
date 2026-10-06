@@ -1,0 +1,1339 @@
+{
+  "session_id": "ses_mock_u0_l12_ar_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l12",
+  "lesson_version": 1,
+  "title": "فما الإسلام إذن؟",
+  "subtitle": "كيف ترتبط أسئلة هذه الوحدة بما يسمّيه المسلمون الإسلام؟",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "اربط أسئلة الخالق والهداية والرسالة والإسلام."
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "فرّق بين فهم هذه الصورة وقبولها شخصيًا."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l12_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "تخيّل أن أمامك طريقًا ليليًا، وبيدك خريطة مقسّمة إلى محطات."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "تستطيع رؤية محطة قريبة، وتريد فهم صلتها بالمحطات التي مررت بها."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "هل تستطيع جمع أسئلة الوحدة في خريطة واحدة؟"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l12_nightpath",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+          "mime_type": "application/json",
+          "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_76f20ad9e8_e3164cb28ab9057d2c4b853a8e897f2e4106009d17a5cbe9d9ed71992372b1f3.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "مسار ليلي متعرّج، مع مصابيح صغيرة لا يظهر منها سوى الضوء القريب.",
+        "overlays": []
+      },
+      "cta": "ابدأ بالسؤال"
+    },
+    {
+      "block_id": "b_u0_l12_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي وصلة في الخريطة تريد أن تتضح أكثر؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "من الخالق إلى الهداية"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "من الهداية إلى الوحي والرسول"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "من الرسالة إلى الإسلام"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "احتفظ بهذه الوصلة أثناء جمع الخريطة؛ هذا اختيار شخصي بلا جواب صحيح أو خاطئ."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l12_03",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ما الذي عرفناه عن أسئلتنا؟"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 1
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l12_nightpath",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+          "mime_type": "application/json",
+          "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_cd92849bcd_5d09d23b55e58f2904029cfb67ab45eed2cac73f99192555de518092b7a34f68.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 1
+        },
+        "alt": "مصباحان قريبان يضيئان جزءًا من المسار الليلي.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_005",
+            "spans": [
+              {
+                "type": "text",
+                "text": "أسئلة البداية في هذه الوحدة تتعلّق بكيف نعرف، وما الذي تتيحه الأدلة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_006",
+            "spans": [
+              {
+                "type": "text",
+                "text": "سؤال الخالق يختلف عن السؤال عمّا يريده الخالق، إذا كان موجودًا."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_007",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لهذا تناولنا الحاجة إلى الهداية بعد سؤال الخالق الواحد، دون جعل الفكرة رسالةً مثبتة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l12_008",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إن بقي عندك سؤال سابق، ضعه في موضعه؛ لا تحذفه لمجرد الوصول إلى نهاية الوحدة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l12_01",
+        "type": "order_steps",
+        "concept_ids": [
+          "con_u0_islam_map"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "رتّب مسار الفهم الذي اتبعته الوحدة، لا درجة اقتناعك الشخصي."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "plain",
+          "steps": [
+            {
+              "step_id": "st_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الوحي والرسول"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "step_id": "st_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ما الإسلام؟"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "step_id": "st_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كيف نعرف، وسؤال الخالق الواحد"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "step_id": "st_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الحاجة إلى الهداية"
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "step_id": "st_5",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "فحص الدعوى والقرآن ودعوى محمد ﷺ"
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l12_05",
+      "type": "story",
+      "label": "موقف",
+      "title": "الخريطة تحمل السؤال أيضًا",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l12_010",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تخيّل أن المسافر يتابع الضوء، ثم يلاحظ أن علامة في خريطته لم يفهمها."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l12_011",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يريد أن يعرف كيف تتصل بالمحطة التالية."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l12_nightpath",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+              "mime_type": "application/json",
+              "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_cd92849bcd_5d09d23b55e58f2904029cfb67ab45eed2cac73f99192555de518092b7a34f68.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l12_012",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يعيد ترتيب المحطات، ويضع سؤاله عند الوصلة التي لم تتضح له."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l12_013",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لا يمزّق الخريطة، ولا يكتب أن السؤال قد انتهى."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l12_nightpath",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+              "mime_type": "application/json",
+              "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_fcb38353b5_cbefa93dbab24e13f4cf3ba8034b65c55228ff7b3bfb50f8bc29792bf8875c2a.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l12_014",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "صار يعرف أين يحتاج إلى متابعة، وأي سؤال سيقرأ عنه بعد ذلك."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l12_015",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "استخدم الخريطة بالطريقة نفسها: فهم الصلة ثم متابعة ما بقي."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l12_nightpath",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+              "mime_type": "application/json",
+              "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_19cf76ac47_05bac0af37113febd2f07e7a9b151e590e4e63dd0d7cbe0ed24be6fb73c2c553.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "المشهد نفسه مع تغير لطيف في موضع الضوء.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_06",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "هنا تبدأ أسئلة الرسالة المحدّدة"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 3
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l12_nightpath",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+          "mime_type": "application/json",
+          "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_19cf76ac47_05bac0af37113febd2f07e7a9b151e590e4e63dd0d7cbe0ed24be6fb73c2c553.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 3
+        },
+        "alt": "تضيء أربعة مصابيح متتابعة المسار، دون رموز أو كلمات داخل الرسم.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الحاجة إلى رسالة لا تحدّد وحدها من يحملها أو أي نص يمثّلها."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لهذا فصلنا بين إمكان وصول الهداية وبين فحص دعوى الوحي والرسالة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "قدّمنا ادّعاء القرآن والأخبار عن محمد ﷺ بوصفهما موضوعين للفحص، دون افتراض قبولك لهما."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l12_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لكل وصلة سؤالها: كيف وصلت؟ ما ادّعاؤها؟ وما الذي يؤيّدها؟"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_07",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l12_02",
+        "type": "match_pairs",
+        "concept_ids": [
+          "con_u0_islam_map"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "صِل كل سؤال بنوع الفحص الذي يناسبه."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "left": [
+            {
+              "item_id": "l_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كيف وصلنا الخبر؟"
+                }
+              ]
+            },
+            {
+              "item_id": "l_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ماذا يقول النص عن نفسه؟"
+                }
+              ]
+            },
+            {
+              "item_id": "l_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "ما الذي تضيفه سيرة صاحب الدعوى؟"
+                }
+              ]
+            }
+          ],
+          "right": [
+            {
+              "item_id": "r_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تمييز وصف النص من الحكم على صدقه"
+                }
+              ]
+            },
+            {
+              "item_id": "r_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "قراءة شواهد السلوك وحدودها"
+                }
+              ]
+            },
+            {
+              "item_id": "r_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "فحص مصدر الخبر ونقله"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l12_08_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_08",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "الاسم الذي يجمع هذه الصورة"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 4
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l12_nightpath",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l12_nightpath_v1_51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827.json",
+          "mime_type": "application/json",
+          "sha256": "51eb66fff52555d9def54e0b8f6a3e770ab9bdcde6351f594d79429fba17a827",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l12_nightpath_v1_04c1b64992_19e1410e6740fdda75b20ba36762b5f937b1cf35e720f2838b98805d635a45d5.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 4
+        },
+        "alt": "تتابع المصابيح المضيئة انحناء الطريق الليلي.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_021",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يقدّم القرآن العبادة والحياة لله وحده، دون شريك، ضمن الصورة التي يعرضها عن الإسلام."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l12_07"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_022",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يفهم المسلمون الإسلام بوصفه عبادة الله وحده واتباع الهداية التي يبلّغها رسوله."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l12_09"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_023",
+            "spans": [
+              {
+                "type": "text",
+                "text": "هذه صورة عامة تربط الخالق والهداية والرسالة؛ ستتضح تفاصيل المعنى في الوحدة التالية."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_09_pending_source",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_09",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "فهم الاسم لا يقرّر عنك"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_024",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ويسمّي القرآن الدين عند الله الإسلام."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l12_08"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_025",
+            "spans": [
+              {
+                "type": "text",
+                "text": "افهم ما يعلنه النص، ثم واصل فحص ما تحتاج إلى فهمه أو التحقق منه."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لا تحتاج إلى إعلان موقف شخصي حتى تجيب عن معنى الخريطة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_10",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l12_03",
+        "type": "scenario",
+        "concept_ids": [
+          "con_u0_islam_map"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي جواب يحترم فهم القارئ وخياره؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "situation": [
+            {
+              "type": "text",
+              "text": "تخيّل أن قارئًا يقول: فهمت لماذا وصلت الوحدة إلى الإسلام، لكن لدي سؤال لم يُحسم."
+            }
+          ],
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إكمال الوحدة يعني أنك وافقت على كل شيء."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "حدّد السؤال ومكانه في الخريطة، ثم تابعه دون افتراض اعتقادك."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "وجود سؤال يلغي كل ما فهمته."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l12_11",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "اترك لكل سؤال حجمه"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "فهم رأي أو دعوى يختلف عن الموافقة عليهما."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إجابات التمارين تقيس فهم الخريطة والأدلة، ولا تكشف اعتقادك الشخصي."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_030",
+            "spans": [
+              {
+                "type": "text",
+                "text": "سلوك فرد واحد لا يحدّد وحده معنى رسالة كاملة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l12_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "اقرأ مضمون الرسالة، وافحص السلوك بميزانه، واحتفظ بحرية اتخاذ موقفك."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l12_12",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l12_04",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_islam_map"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي عبارة تخلط الفهم بالقبول؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أستطيع وصف ما يقصده المسلمون بالوحي والرسول."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أستطيع بيان كيف ترتبط هذه الأسئلة."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إذن يمكن للتطبيق أن يستنتج اعتقادي من نتيجتي."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l12_13",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "اختر متابعة تناسب سؤالك الحالي."
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أعود إلى سؤال سابق."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أقرأ أكثر عن القرآن أو محمد ﷺ."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أتابع إلى معنى الإسلام في الوحدة التالية."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "يمكن أن تعرف خطوتك التالية دون إعلان اعتقادك؛ لا يغيّر هذا الاختيار مسارك تلقائيًا."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l12_14",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "خريطة تستطيع الرجوع إليها"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l12_035",
+            "spans": [
+              {
+                "type": "text",
+                "text": "سؤال الخالق يختلف عن السؤال عمّا يريده الخالق، إذا كان موجودًا."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l12_036",
+            "spans": [
+              {
+                "type": "text",
+                "text": "الحاجة إلى رسالة لا تحدّد وحدها من يحملها أو أي نص يمثّلها."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l12_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "يفهم المسلمون الإسلام بوصفه عبادة الله وحده واتباع الهداية التي يبلّغها رسوله."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l12_09"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l12_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "فهم رأي أو دعوى يختلف عن الموافقة عليهما."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "ارسم الخريطة بست كلمات، وضع سؤالك الباقي عند الوصلة التي تخصّه."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l12_topic_1",
+        "title": "فما الإسلام إذن؟",
+        "concept_ids": [
+          "con_u0_islam_map"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "كيف تتصل الحاجة إلى الهداية بفحص رسالة محدّدة؟"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "src_c_u0_l12_07",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Al-Anam 6:162–163",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l12_08",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Ali Imran 3:19",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    },
+    {
+      "source_id": "src_c_u0_l12_09",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "مصدر بانتظار التحقق",
+      "reference": "Introductory Islamic understanding: Al-Anam 6:162–163 and An-Nisa 4:136 https://quran.com/an-nisa/136; approve concise synthesis; no detailed Unit 1.1 definition or rulings.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    }
+  ],
+  "terms": {
+    "term_islam_map": {
+      "term_id": "term_islam_map",
+      "text": "الإسلام",
+      "arabic": "الإسلام",
+      "transliteration": "Islām",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "يفهم المسلمون الإسلام بوصفه عبادة الله وحده واتباع الهداية التي يبلّغها رسوله."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "هذه صورة عامة؛ ستفصّل الوحدة التالية المعنى وكيف يظهر في الحياة."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l12",
+      "lesson_title": "فما الإسلام إذن؟"
+    }
+  },
+  "answers": []
+}

@@ -1,0 +1,1155 @@
+{
+  "session_id": "ses_mock_u0_l10_en_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l10",
+  "lesson_version": 1,
+  "title": "How Would We Recognize a Messenger?",
+  "subtitle": "What makes a claim to be a messenger worthy of trust and examination?",
+  "lesson_type": "practice",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "Distinguish deliberate deception from a sincere mistake."
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "Choose a question that reveals a gap in examining a messenger claim."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l10_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Review draft only. Exact source text and publication approval are pending."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "Imagine reaching the start of a mountain trail and needing a guide who knows the route."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "A confident guide stands before you, but a confident voice leaves some questions unanswered."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "What would you want to know before following?"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l10_mountain",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l10_mountain_v1_50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445.json",
+          "mime_type": "application/json",
+          "sha256": "50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l10_mountain_v1_76f20ad9e8_ddd9a3ec3cba7b1a846f4666bc9cd3a0a8107f365d9d3d6a23defdcba1ebb0b8.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "A mountain trail beside a shelter and a faceless modern guide.",
+        "overlays": []
+      },
+      "cta": "Start with the question"
+    },
+    {
+      "block_id": "b_u0_l10_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which information would you seek first?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Does the guide know the route from experience?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Has the guide been honest with earlier travellers?"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Why does the guide want me to take this route?"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Keep your question alongside the others; consider what each contributes."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l10_03",
+      "type": "story",
+      "label": "Scenario",
+      "title": "Confidence and accuracy",
+      "provenance": null,
+      "origin": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l10_005",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Imagine a traveller asking which passage reaches the camp."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l10_006",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The guide describes a route from an earlier visit, without claiming to know its condition today."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l10_mountain",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l10_mountain_v1_50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445.json",
+              "mime_type": "application/json",
+              "sha256": "50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l10_mountain_v1_cd92849bcd_ab1383ec67634f3214ef41f2c5331a6dd128433035a689b8351d9e5c4de8a315.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l10_007",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveller asks the trail keeper, who explains that the old route is closed in this imagined situation."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l10_008",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The guide checks the notice, revises the suggestion and explains why."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l10_mountain",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l10_mountain_v1_50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445.json",
+              "mime_type": "application/json",
+              "sha256": "50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l10_mountain_v1_fcb38353b5_21f84f2deebb961902a1ec868d8708eb8cb13bcb7bcb0c73f7c338719c73f5ac.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l10_009",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveller now has an account of the guide's knowledge and its limits, beyond trusting a voice."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l10_010",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The traveller did not need to accuse the guide of lying to notice that the first information was insufficient."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l10_mountain",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l10_mountain_v1_50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445.json",
+              "mime_type": "application/json",
+              "sha256": "50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l10_mountain_v1_19cf76ac47_21f84f2deebb961902a1ec868d8708eb8cb13bcb7bcb0c73f7c338719c73f5ac.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "The same setting with a subtle change in the area of light.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_04",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Two questions that serve different purposes"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l10_011",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Honestly reporting what you believe does not prevent the information itself from being mistaken."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l10_012",
+            "spans": [
+              {
+                "type": "text",
+                "text": "When trusting a report, ask about the reporter's honesty and their ability to know what they report."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l10_013",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Ask whether the person honestly reports what they believe, then ask how they came to know it."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_05",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l10_01",
+        "type": "scenario",
+        "concept_ids": [
+          "con_u0_messenger_evaluation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which question examines the gap in the guide’s knowledge of the route?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "situation": [
+            {
+              "type": "text",
+              "text": "Imagine a guide who deals honestly with others but has never visited the route you are asking about."
+            }
+          ],
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Does the guide intend to report what he sincerely believes?"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "How can the guide know this particular route?"
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Is there a possible benefit behind the guide’s statement?"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l10_06",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Look at conduct you can examine"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 2
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l10_mountain",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l10_mountain_v1_50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445.json",
+          "mime_type": "application/json",
+          "sha256": "50301ca6b51ad2a8a12181d40c7efd51b91d34910031b01ace7752f9df352445",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l10_mountain_v1_fcb38353b5_21f84f2deebb961902a1ec868d8708eb8cb13bcb7bcb0c73f7c338719c73f5ac.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 2
+        },
+        "alt": "The shelter, trail and guide in the same setting, with soft light near the trail.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l10_015",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A guide's refusal to overstate knowledge bears on that particular conduct, rather than on every future statement."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l10_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A possible motive helps an examination, but does not make a report true or false by itself."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l10_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "An agreed payment for work does not equal dishonesty, and receiving no payment does not guarantee accuracy."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l10_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Compare words with conduct, and ask for a clear account of what is being asked of you and why."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_07",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l10_02",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_messenger_evaluation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which statements describe specific information, and which jump to a wider judgement?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "Specific information",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "A judgement beyond it",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "In the imagined situation, the guide admitted a limit to his knowledge."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Therefore he will never be mistaken."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The guide explains payment before agreement."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Therefore he is lying because he is paid."
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l10_08",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "From a guide to a messenger claim"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l10_021",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Islamic texts present messengers as humans who receive revelation and convey a message."
+              }
+            ],
+            "source_ids": [
+              "src_c_u0_l10_06"
+            ]
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l10_022",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Examining a messenger claim requires evidence bearing on the claim itself, alongside character and honesty."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l10_023",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Ask what was claimed, how the report reached us, what message is conveyed, and what evidence is offered."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l10_024",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Examine consistent conduct and possible motives too, while keeping the message itself under examination."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_09",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which shortcut are you more tempted to use?"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Trust a confident voice."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Reject anyone making a large claim."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "Hold judgement while understanding the evidence."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "Use this reflection to notice your habit; this personal choice has no right or wrong answer."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l10_10",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Compare explanations without attaching labels"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l10_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A report could be deliberately false, sincerely mistaken, or accurate."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l10_027",
+            "spans": [
+              {
+                "type": "text",
+                "text": "These are examples of explanations to examine, rather than a complete list of every possibility."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l10_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Ruling out deliberate deception alone does not establish that a report is accurate."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l10_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Do not diagnose a person from a short report; examine what the evidence supports about the particular claim."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l10_03",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_messenger_evaluation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Judge the statement and choose the reason."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "If a claimant did not deliberately lie, the claim has been established."
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because a confident voice is enough."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because every mistake is deliberate deception."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Because a sincere mistake remains possible."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l10_12",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Return to the questions rather than the labels: what evidence, what alternatives, and how much does it establish?"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "When information is insufficient, write down what you need instead of filling the gap with a judgement."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l10_13",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l10_04",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_messenger_evaluation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "Which step makes the conclusion wider than the evidence?"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "I examined a report about honesty and found its stated source."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "The report shows no financial benefit."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "Therefore no possibility needs further examination, and the messenger claim is proved."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l10_14",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "Trust begins with a more careful question"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "pt_1",
+          "sentence": {
+            "sentence_id": "s_u0_l10_036",
+            "spans": [
+              {
+                "type": "text",
+                "text": "When trusting a report, ask about the reporter's honesty and their ability to know what they report."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_2",
+          "sentence": {
+            "sentence_id": "s_u0_l10_037",
+            "spans": [
+              {
+                "type": "text",
+                "text": "A possible motive helps an examination, but does not make a report true or false by itself."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_3",
+          "sentence": {
+            "sentence_id": "s_u0_l10_038",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Examining a messenger claim requires evidence bearing on the claim itself, alongside character and honesty."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "pt_4",
+          "sentence": {
+            "sentence_id": "s_u0_l10_039",
+            "spans": [
+              {
+                "type": "text",
+                "text": "Ruling out deliberate deception alone does not establish that a report is accurate."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "Take an ordinary report today and ask how its source learned what was reported."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l10_topic_1",
+        "title": "How Would We Recognize a Messenger?",
+        "concept_ids": [
+          "con_u0_messenger_evaluation"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "What does a claimant's honesty alone fail to establish?"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "src_c_u0_l10_06",
+      "kind": "quran",
+      "provider": "quran_com",
+      "title": "Source awaiting verification",
+      "reference": "An-Nahl 16:43–44; scope checked https://quran.com/an-nahl/43; exact text and attributed explanation require adapter/specialist approval.",
+      "excerpt": "",
+      "url": null,
+      "displayed": false,
+      "display_role": null
+    }
+  ],
+  "terms": {
+    "term_messenger_claim": {
+      "term_id": "term_messenger_claim",
+      "text": "Messenger claim",
+      "arabic": "دعوى الرسالة",
+      "transliteration": "daʿwā al-risālah",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "A person's statement that they convey a message from God; a statement whose evidence is examined."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "Examining the claimant's honesty is part of checking the claim."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l10",
+      "lesson_title": "How Would We Recognize a Messenger?"
+    }
+  },
+  "answers": []
+}

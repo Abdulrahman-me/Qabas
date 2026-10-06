@@ -913,5 +913,13 @@
         "type": "String"
       }
     }
+  },
+  "reviewerSampleOpen": "استكشف لوحة المراجع",
+  "reviewerSampleDescription": "راجع خطط الدروس ومسوداتها، وقارن الدروس في اختبار مجهول المصدر، واستكشف مؤشرات توضيحية. تستخدم هذه المعاينة محتوى تجريبياً، ويُحفظ تقدمك في التعلم عند العودة.",
+  "@reviewerSampleOpen": {
+    "description": "Open the local competition reviewer preview."
+  },
+  "@reviewerSampleDescription": {
+    "description": "Explain sample reviewer content and preserved learner progress."
   }
 }

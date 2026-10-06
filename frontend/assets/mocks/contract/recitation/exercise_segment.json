@@ -1,0 +1,57 @@
+{
+ "exercise_id": "ex_test_segment",
+ "type": "recite_verse",
+ "concept_ids": [
+  "con_test"
+ ],
+ "prompt": [
+  {
+   "type": "text",
+   "text": "اختر الإجابة المناسبة."
+  }
+ ],
+ "time_limit_ms": null,
+ "scoring": {
+  "accuracy": false,
+  "combo": false,
+  "layer": null
+ },
+ "framing": null,
+ "payload": {
+  "surah": 112,
+  "ayah": 1,
+  "word_start": 2,
+  "word_end": 3,
+  "text_uthmani": "هُوَ اللَّهُ",
+  "audio": {
+   "reciter": "مشاري راشد العفاسي",
+   "url": "mock-asset://audio/test_tone_112001.mp3",
+   "words": [
+    {
+     "ayah": 1,
+     "position": 2,
+     "text": "هُوَ",
+     "start_ms": 0,
+     "end_ms": 380
+    },
+    {
+     "ayah": 1,
+     "position": 3,
+     "text": "اللَّهُ",
+     "start_ms": 380,
+     "end_ms": 1130
+    }
+   ]
+  },
+  "transliteration": "Qul huwa Allahu ahad",
+  "meaning": [
+   {
+    "type": "text",
+    "text": "قل: هو الله الواحد لا شريك له."
+   }
+  ],
+  "source_id": "src_q_112_1",
+  "max_duration_ms": 30000,
+  "skippable": true
+ }
+}

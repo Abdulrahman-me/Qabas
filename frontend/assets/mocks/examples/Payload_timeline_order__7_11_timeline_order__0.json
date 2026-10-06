@@ -1,0 +1,40 @@
+{
+ "events": [
+  {
+   "event_id": "t_2",
+   "spans": [
+    {
+     "type": "text",
+     "text": "الهجرة إلى المدينة"
+    }
+   ]
+  },
+  {
+   "event_id": "t_4",
+   "spans": [
+    {
+     "type": "text",
+     "text": "فتح مكة"
+    }
+   ]
+  },
+  {
+   "event_id": "t_1",
+   "spans": [
+    {
+     "type": "text",
+     "text": "نزول الوحي في غار حراء"
+    }
+   ]
+  },
+  {
+   "event_id": "t_3",
+   "spans": [
+    {
+     "type": "text",
+     "text": "غزوة بدر"
+    }
+   ]
+  }
+ ]
+}

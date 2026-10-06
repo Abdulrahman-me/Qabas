@@ -1,0 +1,11 @@
+{
+ "message_id": "msg_a_102",
+ "role": "assistant",
+ "status": "failed",
+ "stage": "retrieving",
+ "created_at": "2026-10-04T10:05:00Z",
+ "error": {
+  "code": "upstream_unavailable",
+  "message": "Sources are temporarily unavailable."
+ }
+}

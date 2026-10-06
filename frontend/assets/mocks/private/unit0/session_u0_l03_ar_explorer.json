@@ -1,0 +1,111 @@
+{
+  "session_id": "ses_mock_u0_l3_ar_explorer",
+  "lesson_id": "les_u0_l3",
+  "answers": {
+    "ex_u0_l03_01": {
+      "segment_id": "seg_2"
+    },
+    "ex_u0_l03_02": {
+      "value": false,
+      "reason_option_id": "opt_c"
+    },
+    "ex_u0_l03_03": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_2"
+        }
+      ]
+    },
+    "ex_u0_l03_04": {
+      "option_id": "opt_c"
+    }
+  },
+  "feedback": {
+    "ex_u0_l03_01": {
+      "correct_answer": {
+        "segment_id": "seg_2"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الخطوة الثانية جعلت الكرسي موجوداً وقادراً على الفعل قبل الخطوة التي تفسّر وجوده."
+        }
+      ],
+      "option_misconceptions": {
+        "seg_2": "mis_u0_l03_absent_agent"
+      }
+    },
+    "ex_u0_l03_02": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "المشكلة ليست طول الوقت؛ إنها إسناد عمل إلى الشيء قبل وجوده."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l03_speed"
+      }
+    },
+    "ex_u0_l03_03": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_2"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "التغيّر يبدأ بشيء موجود؛ الإيجاد الذاتي هنا يكلّف الشيء بالعمل قبل وجوده."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l03_04": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الجديد قد يكون نتيجة تغيّر؛ هذا لا يساوي جعل الشيء سبباً لوجود نفسه قبل وجوده."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l03_growth",
+        "opt_b": "mis_u0_l03_growth"
+      }
+    }
+  }
+}

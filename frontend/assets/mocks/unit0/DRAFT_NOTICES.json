@@ -1,0 +1,52 @@
+{
+ "_mock_role": "demo flavor drops these callout blocks before serving (owner decision 2026-10-04: hide draft notices in the demo build)",
+ "notice_text": {
+  "en": "Review draft only. Exact source text and publication approval are pending.",
+  "ar": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+ },
+ "block_ids_by_lesson": {
+  "les_u0_l1": [
+   "b_u0_l01_preview_notice"
+  ],
+  "les_u0_l10": [
+   "b_u0_l10_preview_notice"
+  ],
+  "les_u0_l11": [
+   "b_u0_l11_05_pending_source",
+   "b_u0_l11_07_pending_source",
+   "b_u0_l11_preview_notice"
+  ],
+  "les_u0_l12": [
+   "b_u0_l12_08_pending_source",
+   "b_u0_l12_09_pending_source",
+   "b_u0_l12_preview_notice"
+  ],
+  "les_u0_l2": [
+   "b_u0_l02_preview_notice"
+  ],
+  "les_u0_l3": [
+   "b_u0_l03_preview_notice"
+  ],
+  "les_u0_l4": [
+   "b_u0_l04_preview_notice"
+  ],
+  "les_u0_l5": [
+   "b_u0_l05_preview_notice"
+  ],
+  "les_u0_l6": [
+   "b_u0_l06_preview_notice"
+  ],
+  "les_u0_l7": [
+   "b_u0_l07_preview_notice"
+  ],
+  "les_u0_l8": [
+   "b_u0_l08_preview_notice"
+  ],
+  "les_u0_l9": [
+   "b_u0_l09_03_pending_source",
+   "b_u0_l09_08_pending_source",
+   "b_u0_l09_10_pending_source",
+   "b_u0_l09_preview_notice"
+  ]
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "exercise_id": "ex_fbbcc0530a0ce337",
+ "type": "multiple_choice",
+ "concept_ids": [
+  "con_test"
+ ],
+ "prompt": [
+  {
+   "type": "text",
+   "text": "Test assessment 1"
+  }
+ ],
+ "time_limit_ms": null,
+ "scoring": {
+  "accuracy": true,
+  "combo": true,
+  "layer": "understand"
+ },
+ "framing": null,
+ "payload": {
+  "options": [
+   {
+    "option_id": "opt_a",
+    "spans": [
+     {
+      "type": "text",
+      "text": "Test option 1"
+     }
+    ]
+   },
+   {
+    "option_id": "opt_b",
+    "spans": [
+     {
+      "type": "text",
+      "text": "Test option 2"
+     }
+    ]
+   },
+   {
+    "option_id": "opt_c",
+    "spans": [
+     {
+      "type": "text",
+      "text": "Test option 3"
+     }
+    ]
+   }
+  ]
+ }
+}

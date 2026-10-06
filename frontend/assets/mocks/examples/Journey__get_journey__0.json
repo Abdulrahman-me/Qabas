@@ -1,0 +1,312 @@
+{
+ "track": "explorer",
+ "current": {
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l2"
+ },
+ "units": [
+  {
+   "unit_id": "unit_0",
+   "index": 0,
+   "title": "ابدأ بسؤال",
+   "subtitle": "أسس قبل الأسئلة الكبرى",
+   "art_key": "unit_big_questions",
+   "has_guide": true,
+   "state": "in_progress",
+   "coming_soon": false,
+   "pretest": {
+    "state": "taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": true
+   },
+   "lessons": [
+    {
+     "lesson_id": "les_u0_l1",
+     "index": 0,
+     "title": "هل يجب أن ترى الشيء لتعرفه؟",
+     "lesson_type": "concept",
+     "state": "completed",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": true,
+     "soft_lock": null
+    },
+    {
+     "lesson_id": "les_u0_l2",
+     "index": 1,
+     "title": "هل يمكن أن يأتي شيء من لا شيء؟",
+     "lesson_type": "concept",
+     "state": "available",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": null
+    },
+    {
+     "lesson_id": "les_u0_l3",
+     "index": 2,
+     "title": "هل يمكن لشيء أن يخلق نفسه؟",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l2",
+        "unit_id": "unit_0",
+        "title": "هل يمكن أن يأتي شيء من لا شيء؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l2",
+       "unit_id": "unit_0",
+       "title": "هل يمكن أن يأتي شيء من لا شيء؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u0_l4",
+     "index": 3,
+     "title": "كيف سيكون الخالق؟",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 6,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u0_l3",
+        "unit_id": "unit_0",
+        "title": "هل يمكن لشيء أن يخلق نفسه؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u0_l2",
+       "unit_id": "unit_0",
+       "title": "هل يمكن أن يأتي شيء من لا شيء؟"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_1",
+   "index": 1,
+   "title": "الخطوة الأولى",
+   "subtitle": "فهم الخطوة الأولى في الإسلام",
+   "art_key": "unit_first_steps",
+   "has_guide": true,
+   "state": "available",
+   "coming_soon": false,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": true
+   },
+   "lessons": [
+    {
+     "lesson_id": "les_u1_l1",
+     "index": 0,
+     "title": "ما معنى الإسلام؟",
+     "lesson_type": "concept",
+     "state": "available",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": true,
+     "soft_lock": null
+    },
+    {
+     "lesson_id": "les_u1_l2",
+     "index": 1,
+     "title": "ما معنى العبادة حقاً؟",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u1_l1",
+        "unit_id": "unit_1",
+        "title": "ما معنى الإسلام؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u1_l1",
+       "unit_id": "unit_1",
+       "title": "ما معنى الإسلام؟"
+      }
+     }
+    },
+    {
+     "lesson_id": "les_u1_l3",
+     "index": 2,
+     "title": "لا إله إلا الله",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 6,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u1_l2",
+        "unit_id": "unit_1",
+        "title": "ما معنى العبادة حقاً؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u1_l1",
+       "unit_id": "unit_1",
+       "title": "ما معنى الإسلام؟"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_2",
+   "index": 2,
+   "title": "معرفة الله",
+   "subtitle": "من هو الله في الإسلام؟",
+   "art_key": null,
+   "has_guide": true,
+   "state": "available",
+   "coming_soon": false,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": true
+   },
+   "lessons": [
+    {
+     "lesson_id": "les_u2_l1",
+     "index": 0,
+     "title": "من هو الله؟",
+     "lesson_type": "concept",
+     "state": "available",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": true,
+     "soft_lock": null
+    },
+    {
+     "lesson_id": "les_u2_l2",
+     "index": 1,
+     "title": "واحدٌ لا مثيل له",
+     "lesson_type": "concept",
+     "state": "locked",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u2_l1",
+        "unit_id": "unit_2",
+        "title": "من هو الله؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u2_l1",
+       "unit_id": "unit_2",
+       "title": "من هو الله؟"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_7",
+   "index": 7,
+   "title": "رسالة واحدة وأنبياء كثيرون",
+   "subtitle": "قصص الأنبياء",
+   "art_key": null,
+   "has_guide": true,
+   "state": "available",
+   "coming_soon": false,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": true
+   },
+   "lessons": [
+    {
+     "lesson_id": "les_u7_l1",
+     "index": 0,
+     "title": "لماذا الأنبياء؟",
+     "lesson_type": "concept",
+     "state": "available",
+     "estimated_minutes": 5,
+     "xp": 15,
+     "standalone_eligible": true,
+     "soft_lock": null
+    },
+    {
+     "lesson_id": "les_u7_l4",
+     "index": 3,
+     "title": "إبراهيم يبحث عن ربه",
+     "lesson_type": "story",
+     "state": "locked",
+     "estimated_minutes": 6,
+     "xp": 15,
+     "standalone_eligible": false,
+     "soft_lock": {
+      "prerequisites": [
+       {
+        "lesson_id": "les_u2_l1",
+        "unit_id": "unit_2",
+        "title": "من هو الله؟"
+       }
+      ],
+      "start_with": {
+       "lesson_id": "les_u2_l1",
+       "unit_id": "unit_2",
+       "title": "من هو الله؟"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_10",
+   "index": 10,
+   "title": "ما بعد الأساسيات",
+   "subtitle": "قريباً",
+   "art_key": null,
+   "has_guide": false,
+   "state": "locked",
+   "coming_soon": true,
+   "pretest": {
+    "state": "not_taken"
+   },
+   "unit_test": {
+    "state": "not_passed",
+    "best_percent": null,
+    "pass_percent": 80,
+    "can_skip": false
+   },
+   "lessons": []
+  }
+ ]
+}

@@ -1,0 +1,552 @@
+{
+ "role": "synthetic composition seed; not approved religious content",
+ "units": [
+  {
+   "unit_id": "unit_test_1",
+   "lessons": [
+    {
+     "lesson_id": "les_t1_0",
+     "pretest": [
+      "ex_fbd1bd3dd4f38d78",
+      "ex_950f1eda326d9656"
+     ],
+     "unit_test": [
+      "ex_72a6168f1d103763",
+      "ex_1fa7c5a66a46a29f",
+      "ex_517cfaaabbf0675c"
+     ]
+    },
+    {
+     "lesson_id": "les_t1_1",
+     "pretest": [
+      "ex_095d0010a59b177f",
+      "ex_06feb82739c065e0"
+     ],
+     "unit_test": [
+      "ex_95de7cf3e86b9940",
+      "ex_bcb02c444bd90c67",
+      "ex_a63b2f9217fa4b41"
+     ]
+    },
+    {
+     "lesson_id": "les_t1_2",
+     "pretest": [
+      "ex_4a5d707a0375c73a",
+      "ex_066d2dddd93a4d45"
+     ],
+     "unit_test": [
+      "ex_cc2b9cb94ff4ddc9",
+      "ex_a7a1d7f16c4ebb0c",
+      "ex_f003d649930847ff"
+     ]
+    }
+   ],
+   "pretest": [
+    {
+     "exercise_id": "ex_fbd1bd3dd4f38d78",
+     "source_lesson_id": "les_t1_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_fbd1bd3dd4f38d78__ar.json",
+      "en": "curriculum_test/bank/ex_fbd1bd3dd4f38d78__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_950f1eda326d9656",
+     "source_lesson_id": "les_t1_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_950f1eda326d9656__ar.json",
+      "en": "curriculum_test/bank/ex_950f1eda326d9656__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_095d0010a59b177f",
+     "source_lesson_id": "les_t1_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_095d0010a59b177f__ar.json",
+      "en": "curriculum_test/bank/ex_095d0010a59b177f__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_06feb82739c065e0",
+     "source_lesson_id": "les_t1_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_06feb82739c065e0__ar.json",
+      "en": "curriculum_test/bank/ex_06feb82739c065e0__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_4a5d707a0375c73a",
+     "source_lesson_id": "les_t1_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_4a5d707a0375c73a__ar.json",
+      "en": "curriculum_test/bank/ex_4a5d707a0375c73a__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_066d2dddd93a4d45",
+     "source_lesson_id": "les_t1_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_066d2dddd93a4d45__ar.json",
+      "en": "curriculum_test/bank/ex_066d2dddd93a4d45__en.json"
+     }
+    }
+   ],
+   "unit_test": [
+    {
+     "exercise_id": "ex_72a6168f1d103763",
+     "source_lesson_id": "les_t1_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_72a6168f1d103763__ar.json",
+      "en": "curriculum_test/bank/ex_72a6168f1d103763__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_1fa7c5a66a46a29f",
+     "source_lesson_id": "les_t1_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_1fa7c5a66a46a29f__ar.json",
+      "en": "curriculum_test/bank/ex_1fa7c5a66a46a29f__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_517cfaaabbf0675c",
+     "source_lesson_id": "les_t1_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_517cfaaabbf0675c__ar.json",
+      "en": "curriculum_test/bank/ex_517cfaaabbf0675c__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_95de7cf3e86b9940",
+     "source_lesson_id": "les_t1_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_95de7cf3e86b9940__ar.json",
+      "en": "curriculum_test/bank/ex_95de7cf3e86b9940__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_bcb02c444bd90c67",
+     "source_lesson_id": "les_t1_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_bcb02c444bd90c67__ar.json",
+      "en": "curriculum_test/bank/ex_bcb02c444bd90c67__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_a63b2f9217fa4b41",
+     "source_lesson_id": "les_t1_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_a63b2f9217fa4b41__ar.json",
+      "en": "curriculum_test/bank/ex_a63b2f9217fa4b41__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_cc2b9cb94ff4ddc9",
+     "source_lesson_id": "les_t1_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_cc2b9cb94ff4ddc9__ar.json",
+      "en": "curriculum_test/bank/ex_cc2b9cb94ff4ddc9__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_a7a1d7f16c4ebb0c",
+     "source_lesson_id": "les_t1_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_a7a1d7f16c4ebb0c__ar.json",
+      "en": "curriculum_test/bank/ex_a7a1d7f16c4ebb0c__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_f003d649930847ff",
+     "source_lesson_id": "les_t1_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_f003d649930847ff__ar.json",
+      "en": "curriculum_test/bank/ex_f003d649930847ff__en.json"
+     }
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_test_2",
+   "lessons": [
+    {
+     "lesson_id": "les_t2_0",
+     "pretest": [
+      "ex_0906e086be0b9325",
+      "ex_00cb64dc834ba76c"
+     ],
+     "unit_test": [
+      "ex_f632e20e3e183691",
+      "ex_4ab35b8f751332e1",
+      "ex_5e3d196b0b9d5908"
+     ]
+    },
+    {
+     "lesson_id": "les_t2_1",
+     "pretest": [
+      "ex_bed1e12bc5e38a98",
+      "ex_a621a716d3220e47"
+     ],
+     "unit_test": [
+      "ex_a2cfaed04f96ffd6",
+      "ex_dd79ca89563aaaca",
+      "ex_ecf6f2291255618a"
+     ]
+    },
+    {
+     "lesson_id": "les_t2_2",
+     "pretest": [
+      "ex_4c5621003c2dec4a",
+      "ex_24f5f00e231a54ad"
+     ],
+     "unit_test": [
+      "ex_602fc52780fe4cc4",
+      "ex_1623fa566a120423",
+      "ex_318e13bbb9907b93"
+     ]
+    },
+    {
+     "lesson_id": "les_t2_3",
+     "pretest": [
+      "ex_fbff2eb7ecd5900c",
+      "ex_cf97be6deb2889d3"
+     ],
+     "unit_test": [
+      "ex_c25732c5c8d8b064",
+      "ex_f01600c67fe425ba",
+      "ex_1005606142a9747a"
+     ]
+    }
+   ],
+   "pretest": [
+    {
+     "exercise_id": "ex_0906e086be0b9325",
+     "source_lesson_id": "les_t2_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_0906e086be0b9325__ar.json",
+      "en": "curriculum_test/bank/ex_0906e086be0b9325__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_00cb64dc834ba76c",
+     "source_lesson_id": "les_t2_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_00cb64dc834ba76c__ar.json",
+      "en": "curriculum_test/bank/ex_00cb64dc834ba76c__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_bed1e12bc5e38a98",
+     "source_lesson_id": "les_t2_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_bed1e12bc5e38a98__ar.json",
+      "en": "curriculum_test/bank/ex_bed1e12bc5e38a98__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_a621a716d3220e47",
+     "source_lesson_id": "les_t2_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_a621a716d3220e47__ar.json",
+      "en": "curriculum_test/bank/ex_a621a716d3220e47__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_4c5621003c2dec4a",
+     "source_lesson_id": "les_t2_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_4c5621003c2dec4a__ar.json",
+      "en": "curriculum_test/bank/ex_4c5621003c2dec4a__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_24f5f00e231a54ad",
+     "source_lesson_id": "les_t2_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_24f5f00e231a54ad__ar.json",
+      "en": "curriculum_test/bank/ex_24f5f00e231a54ad__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_fbff2eb7ecd5900c",
+     "source_lesson_id": "les_t2_3",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_fbff2eb7ecd5900c__ar.json",
+      "en": "curriculum_test/bank/ex_fbff2eb7ecd5900c__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_cf97be6deb2889d3",
+     "source_lesson_id": "les_t2_3",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_cf97be6deb2889d3__ar.json",
+      "en": "curriculum_test/bank/ex_cf97be6deb2889d3__en.json"
+     }
+    }
+   ],
+   "unit_test": [
+    {
+     "exercise_id": "ex_f632e20e3e183691",
+     "source_lesson_id": "les_t2_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_f632e20e3e183691__ar.json",
+      "en": "curriculum_test/bank/ex_f632e20e3e183691__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_4ab35b8f751332e1",
+     "source_lesson_id": "les_t2_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_4ab35b8f751332e1__ar.json",
+      "en": "curriculum_test/bank/ex_4ab35b8f751332e1__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_5e3d196b0b9d5908",
+     "source_lesson_id": "les_t2_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_5e3d196b0b9d5908__ar.json",
+      "en": "curriculum_test/bank/ex_5e3d196b0b9d5908__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_a2cfaed04f96ffd6",
+     "source_lesson_id": "les_t2_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_a2cfaed04f96ffd6__ar.json",
+      "en": "curriculum_test/bank/ex_a2cfaed04f96ffd6__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_dd79ca89563aaaca",
+     "source_lesson_id": "les_t2_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_dd79ca89563aaaca__ar.json",
+      "en": "curriculum_test/bank/ex_dd79ca89563aaaca__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_ecf6f2291255618a",
+     "source_lesson_id": "les_t2_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_ecf6f2291255618a__ar.json",
+      "en": "curriculum_test/bank/ex_ecf6f2291255618a__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_602fc52780fe4cc4",
+     "source_lesson_id": "les_t2_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_602fc52780fe4cc4__ar.json",
+      "en": "curriculum_test/bank/ex_602fc52780fe4cc4__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_1623fa566a120423",
+     "source_lesson_id": "les_t2_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_1623fa566a120423__ar.json",
+      "en": "curriculum_test/bank/ex_1623fa566a120423__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_318e13bbb9907b93",
+     "source_lesson_id": "les_t2_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_318e13bbb9907b93__ar.json",
+      "en": "curriculum_test/bank/ex_318e13bbb9907b93__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_c25732c5c8d8b064",
+     "source_lesson_id": "les_t2_3",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_c25732c5c8d8b064__ar.json",
+      "en": "curriculum_test/bank/ex_c25732c5c8d8b064__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_f01600c67fe425ba",
+     "source_lesson_id": "les_t2_3",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_f01600c67fe425ba__ar.json",
+      "en": "curriculum_test/bank/ex_f01600c67fe425ba__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_1005606142a9747a",
+     "source_lesson_id": "les_t2_3",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_1005606142a9747a__ar.json",
+      "en": "curriculum_test/bank/ex_1005606142a9747a__en.json"
+     }
+    }
+   ]
+  },
+  {
+   "unit_id": "unit_test_3",
+   "lessons": [
+    {
+     "lesson_id": "les_t3_0",
+     "pretest": [
+      "ex_fbbcc0530a0ce337",
+      "ex_d31ad6e45d6bfcca"
+     ],
+     "unit_test": [
+      "ex_79690025f9066f70",
+      "ex_c50ecd42ae02bc9d",
+      "ex_8479fd38cbd653c9"
+     ]
+    },
+    {
+     "lesson_id": "les_t3_1",
+     "pretest": [
+      "ex_ed5857778b4fc63f",
+      "ex_817295fa34142434"
+     ],
+     "unit_test": [
+      "ex_b0a7953a0dd78a02",
+      "ex_c22a1db4388371ce",
+      "ex_8589f089b2050c73"
+     ]
+    },
+    {
+     "lesson_id": "les_t3_2",
+     "pretest": [
+      "ex_15a928e77ce89431",
+      "ex_8b6d72854f823c84"
+     ],
+     "unit_test": [
+      "ex_bfebb6b728128214",
+      "ex_8c1138986b6a622d",
+      "ex_7fe9d319d1779461"
+     ]
+    }
+   ],
+   "pretest": [
+    {
+     "exercise_id": "ex_fbbcc0530a0ce337",
+     "source_lesson_id": "les_t3_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_fbbcc0530a0ce337__ar.json",
+      "en": "curriculum_test/bank/ex_fbbcc0530a0ce337__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_d31ad6e45d6bfcca",
+     "source_lesson_id": "les_t3_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_d31ad6e45d6bfcca__ar.json",
+      "en": "curriculum_test/bank/ex_d31ad6e45d6bfcca__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_ed5857778b4fc63f",
+     "source_lesson_id": "les_t3_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_ed5857778b4fc63f__ar.json",
+      "en": "curriculum_test/bank/ex_ed5857778b4fc63f__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_817295fa34142434",
+     "source_lesson_id": "les_t3_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_817295fa34142434__ar.json",
+      "en": "curriculum_test/bank/ex_817295fa34142434__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_15a928e77ce89431",
+     "source_lesson_id": "les_t3_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_15a928e77ce89431__ar.json",
+      "en": "curriculum_test/bank/ex_15a928e77ce89431__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_8b6d72854f823c84",
+     "source_lesson_id": "les_t3_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_8b6d72854f823c84__ar.json",
+      "en": "curriculum_test/bank/ex_8b6d72854f823c84__en.json"
+     }
+    }
+   ],
+   "unit_test": [
+    {
+     "exercise_id": "ex_79690025f9066f70",
+     "source_lesson_id": "les_t3_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_79690025f9066f70__ar.json",
+      "en": "curriculum_test/bank/ex_79690025f9066f70__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_c50ecd42ae02bc9d",
+     "source_lesson_id": "les_t3_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_c50ecd42ae02bc9d__ar.json",
+      "en": "curriculum_test/bank/ex_c50ecd42ae02bc9d__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_8479fd38cbd653c9",
+     "source_lesson_id": "les_t3_0",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_8479fd38cbd653c9__ar.json",
+      "en": "curriculum_test/bank/ex_8479fd38cbd653c9__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_b0a7953a0dd78a02",
+     "source_lesson_id": "les_t3_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_b0a7953a0dd78a02__ar.json",
+      "en": "curriculum_test/bank/ex_b0a7953a0dd78a02__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_c22a1db4388371ce",
+     "source_lesson_id": "les_t3_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_c22a1db4388371ce__ar.json",
+      "en": "curriculum_test/bank/ex_c22a1db4388371ce__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_8589f089b2050c73",
+     "source_lesson_id": "les_t3_1",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_8589f089b2050c73__ar.json",
+      "en": "curriculum_test/bank/ex_8589f089b2050c73__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_bfebb6b728128214",
+     "source_lesson_id": "les_t3_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_bfebb6b728128214__ar.json",
+      "en": "curriculum_test/bank/ex_bfebb6b728128214__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_8c1138986b6a622d",
+     "source_lesson_id": "les_t3_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_8c1138986b6a622d__ar.json",
+      "en": "curriculum_test/bank/ex_8c1138986b6a622d__en.json"
+     }
+    },
+    {
+     "exercise_id": "ex_7fe9d319d1779461",
+     "source_lesson_id": "les_t3_2",
+     "variants": {
+      "ar": "curriculum_test/bank/ex_7fe9d319d1779461__ar.json",
+      "en": "curriculum_test/bank/ex_7fe9d319d1779461__en.json"
+     }
+    }
+   ]
+  }
+ ]
+}

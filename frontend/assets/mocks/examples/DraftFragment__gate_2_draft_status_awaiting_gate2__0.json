@@ -1,0 +1,338 @@
+{
+ "draft": {
+  "languages": [
+   "ar",
+   "en"
+  ],
+  "variants": [
+   "explorer",
+   "new_muslim"
+  ],
+  "previews": [
+   {
+    "language": "ar",
+    "variant": "explorer",
+    "objectives": [],
+    "items": [],
+    "completion": null
+   },
+   {
+    "language": "en",
+    "variant": "explorer",
+    "objectives": [],
+    "items": [],
+    "completion": null
+   }
+  ],
+  "claims": [
+   {
+    "claim_id": "clm_1",
+    "text": "رأى إبراهيم كوكباً فلما غاب بيّن أنه لا يستحق العبادة.",
+    "status": "supported",
+    "basis": "source",
+    "reasoning": null,
+    "evidence": [
+     {
+      "source": {
+       "source_id": "src_q_6_76",
+       "kind": "quran",
+       "provider": "quran_com",
+       "title": "سورة الأنعام",
+       "reference": "الأنعام: 76",
+       "excerpt": "فَلَمَّا جَنَّ عَلَيْهِ اللَّيْلُ رَأَىٰ كَوْكَبًا…",
+       "url": "https://quran.com/6/76",
+       "displayed": true,
+       "display_role": "content"
+      },
+      "supports": true,
+      "verifier_note": "النص المعروض مطابق للمصحف.",
+      "semantic_review": {
+       "fit": "partial",
+       "concerns": [
+        "needs_tafsir",
+        "scholarly_disagreement"
+       ],
+       "note": "الآية تنص على «لا أحب الآفلين»؛ فهمها نفياً لاستحقاق العبادة يحتاج إلى التفسير، والمفسرون مختلفون هل كان المقام نظراً أم مناظرة لقومه، فلا تُعرض الجملة كأنها القول الوحيد."
+      }
+     }
+    ]
+   },
+   {
+    "claim_id": "clm_7",
+    "text": "كان عمر إبراهيم آنذاك ست عشرة سنة.",
+    "status": "dropped",
+    "basis": "source",
+    "evidence": [],
+    "reasoning": null
+   }
+  ],
+  "sentence_map": [
+   {
+    "sentence_id": "sen_u7_l4_00",
+    "role": "question",
+    "claim_ids": []
+   },
+   {
+    "sentence_id": "sen_u7_l4_01",
+    "role": "claim",
+    "claim_ids": [
+     "clm_1"
+    ]
+   }
+  ],
+  "arc_map": [
+   {
+    "step_id": "setting",
+    "block_ids": [
+     "blk_u7_l4_hook"
+    ]
+   },
+   {
+    "step_id": "predict",
+    "block_ids": [
+     "blk_u7_l4_predict"
+    ]
+   },
+   {
+    "step_id": "turning_point",
+    "block_ids": [
+     "blk_u7_l4_story"
+    ]
+   },
+   {
+    "step_id": "consequence",
+    "block_ids": [
+     "blk_u7_l4_teach"
+    ]
+   },
+   {
+    "step_id": "apply",
+    "block_ids": [
+     "blk_u7_l4_x1",
+     "blk_u7_l4_x2"
+    ]
+   }
+  ],
+  "exercises": [],
+  "glossary": [],
+  "misconceptions": [
+   {
+    "misconception_id": "mis_worship_creation",
+    "title": "كل ما هو عظيم في الكون يستحق التقديس",
+    "card": [
+     {
+      "type": "text",
+      "text": "عِظَم المخلوقات يدل على عظمة خالقها، والعبادة لله وحده."
+     }
+    ],
+    "source_ids": [
+     "src_q_6_76"
+    ]
+   }
+  ],
+  "visuals": [
+   {
+    "scene_id": "scn_3",
+    "origin": "generated_scene",
+    "visual": {
+     "kind": "scene",
+     "key": null,
+     "version": null,
+     "params": {
+      "beat": 0,
+      "focus": -1
+     },
+     "image": null,
+     "scene": {
+      "scene_id": "scn_test_desert_well",
+      "version": 2,
+      "schema_version": "qabas.scene/1",
+      "url": "https://cdn.example.com/scenes/scn_test_desert_well/v2/scene.json",
+      "mime_type": "application/json",
+      "sha256": "145f9fd45a554b9e5c77e2b796ba4814fd85d46d72a9b1a91543b3a155e0d7e7",
+      "view_box": {
+       "width": 1600,
+       "height": 1000
+      },
+      "required_capabilities": [
+       "scene/1",
+       "shape.rect/1",
+       "shape.ellipse/1",
+       "shape.path/1",
+       "paint.gradient/1",
+       "track/1",
+       "anchors/1",
+       "fx.sparkles/1"
+      ]
+     },
+     "fallback_image": {
+      "url": "https://cdn.example.com/scenes/scn_test_desert_well/v2/fallback_b0_f-1.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1000
+     },
+     "fallback_params": {
+      "beat": 0,
+      "focus": -1
+     },
+     "alt": "صحراء ليلاً فيها بئر ونخلة وخيمة",
+     "overlays": []
+    },
+    "audit": {
+     "passed": true,
+     "issues": []
+    },
+    "attempts": 1,
+    "previews": {
+     "frames": [
+      {
+       "state": {
+        "beat": 0,
+        "focus": -1
+       },
+       "time_ms": 0,
+       "reduced_motion": false,
+       "image": {
+        "url": "https://cdn.example.com/previews/scn_test_desert_well/v2/b0_f-1_t0.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      },
+      {
+       "state": {
+        "beat": 1,
+        "focus": 0
+       },
+       "time_ms": 1500,
+       "reduced_motion": false,
+       "image": {
+        "url": "https://cdn.example.com/previews/scn_test_desert_well/v2/b1_f0_t1500.png",
+        "mime_type": "image/png",
+        "width": 1600,
+        "height": 1000
+       }
+      }
+     ],
+     "animation": {
+      "url": "https://cdn.example.com/previews/scn_test_desert_well/v2/anim.webm",
+      "mime_type": "video/webm",
+      "width": 1600,
+      "height": 1000,
+      "duration_ms": 8000
+     },
+     "reduced_motion_still": {
+      "url": "https://cdn.example.com/previews/scn_test_desert_well/v2/still.png",
+      "mime_type": "image/png",
+      "width": 1600,
+      "height": 1000
+     },
+     "fallbacks": [
+      {
+       "state": {
+        "beat": 0,
+        "focus": -1
+       },
+       "time_ms": 0,
+       "reduced_motion": true,
+       "image": {
+        "url": "https://cdn.example.com/scenes/scn_test_desert_well/v2/fallback_b0_f-1.webp",
+        "mime_type": "image/webp",
+        "width": 1600,
+        "height": 1000
+       }
+      }
+     ],
+     "timing": {
+      "build_raster_p95_ms": 4.1,
+      "first_frame_ms": 92.0,
+      "device": "reference mid-range Android"
+     },
+     "renderer_version": "qabas_scene 1.0.0"
+    }
+   },
+   {
+    "scene_id": "scn_1",
+    "origin": "generated",
+    "visual": {
+     "kind": "image",
+     "key": null,
+     "version": null,
+     "params": null,
+     "image": {
+      "url": "https://cdn.example.com/scenes/u7_l4_s1_night_sky.webp",
+      "mime_type": "image/webp",
+      "width": 1600,
+      "height": 1000
+     },
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "سماء ليل صافية فيها كوكب لامع فوق صحراء",
+     "overlays": []
+    },
+    "audit": {
+     "passed": true,
+     "issues": []
+    },
+    "attempts": 1,
+    "previews": null
+   },
+   {
+    "scene_id": "scn_2",
+    "origin": "builtin",
+    "visual": {
+     "kind": "builtin",
+     "key": "day_arc",
+     "version": 1,
+     "params": {
+      "highlight": -1
+     },
+     "image": null,
+     "scene": null,
+     "fallback_image": null,
+     "fallback_params": null,
+     "alt": "قوس يمثل مسار الشمس من الفجر إلى الليل",
+     "overlays": []
+    },
+    "audit": null,
+    "attempts": 0,
+    "previews": null
+   }
+  ]
+ },
+ "qa_report": {
+  "issues": [
+   {
+    "severity": "warning",
+    "kind": "reading_level",
+    "location": {
+     "sentence_id": "sen_u7_l4_04",
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "الجملة طويلة لمستوى المبتدئ (38 كلمة)."
+   },
+   {
+    "severity": "warning",
+    "kind": "scholarly_review",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "clm_1 / src_q_6_76 (partial; needs_tafsir, scholarly_disagreement): الآية تنص على «لا أحب الآفلين»؛ فهمها نفياً لاستحقاق العبادة يحتاج إلى التفسير، والمفسرون مختلفون هل كان المقام نظراً أم مناظرة لقومه، فلا تُعرض الجملة كأنها القول الوحيد."
+   },
+   {
+    "severity": "warning",
+    "kind": "pedagogy",
+    "location": {
+     "sentence_id": null,
+     "exercise_id": null,
+     "scene_id": null
+    },
+    "message": "الخلاصة تعيد جملة الشرح الثانية بالنص نفسه؛ يُفضَّل أن تجمع الفكرة بدلاً من تكرارها."
+   }
+  ]
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "presentation": "hotspots",
+ "visual": {
+  "kind": "builtin",
+  "key": "river_house",
+  "version": 1,
+  "params": {
+   "beat": 1
+  },
+  "image": null,
+  "scene": null,
+  "fallback_image": null,
+  "fallback_params": null,
+  "alt": "بيت ونخيل ونهر جارٍ أمام الباب",
+  "overlays": []
+ },
+ "question": [
+  {
+   "type": "text",
+   "text": "أين النهر؟"
+  }
+ ],
+ "pins": [
+  {
+   "pin_id": "pin_h3",
+   "x_pct": 16.0,
+   "y_pct": 36.0,
+   "label": "النخلة",
+   "radius_pct": null,
+   "anchor_id": null
+  },
+  {
+   "pin_id": "pin_q8",
+   "x_pct": 55.0,
+   "y_pct": 52.0,
+   "label": "الباب",
+   "radius_pct": null,
+   "anchor_id": null
+  },
+  {
+   "pin_id": "pin_z1",
+   "x_pct": 80.0,
+   "y_pct": 34.0,
+   "label": "النافذة",
+   "radius_pct": null,
+   "anchor_id": null
+  },
+  {
+   "pin_id": "pin_m4",
+   "x_pct": 42.0,
+   "y_pct": 86.0,
+   "label": "النهر",
+   "radius_pct": null,
+   "anchor_id": null
+  }
+ ],
+ "interaction": null
+}

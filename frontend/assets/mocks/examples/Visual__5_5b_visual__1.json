@@ -1,0 +1,25 @@
+{
+ "kind": "image",
+ "key": null,
+ "version": null,
+ "params": null,
+ "image": {
+  "url": "https://cdn.example.com/scenes/u7_l4_s1_night_sky.webp",
+  "mime_type": "image/webp",
+  "width": 1600,
+  "height": 1000
+ },
+ "scene": null,
+ "fallback_image": null,
+ "fallback_params": null,
+ "alt": "سماء ليل صافية فيها كوكب لامع فوق صحراء",
+ "overlays": [
+  {
+   "type": "medallion",
+   "asset_url": "https://cdn.example.com/medallions/ibrahim.svg",
+   "label": "إبراهيم عليه السلام",
+   "anchor": "top_start",
+   "size_pct": 22
+  }
+ ]
+}

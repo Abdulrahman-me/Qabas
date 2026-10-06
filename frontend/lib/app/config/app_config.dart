@@ -44,6 +44,7 @@ final class AppConfig {
     this.curiosityOnboarding = true,
     this.demoDeveloper = false,
     this.recordingDemo = false,
+    this.judgesDemo = false,
     this.appVersion = '1.0.0',
     this.iosStoreUrl = '',
     this.androidStoreUrl = '',
@@ -51,6 +52,9 @@ final class AppConfig {
   }) : liveGroups = Set.unmodifiable(liveGroups) {
     if (recordingDemo && (flavor != AppFlavor.demo || mode != ApiMode.mock || !demoDeveloper)) {
       throw ArgumentError('Recording requires the mock demo flavor and hidden developer tools');
+    }
+    if (judgesDemo && !recordingDemo) {
+      throw ArgumentError('Judges preview requires the populated mock recording demo');
     }
     final uri = Uri.tryParse(baseUrl);
     if (uri == null ||
@@ -81,6 +85,7 @@ final class AppConfig {
     curiosityOnboarding: const bool.fromEnvironment('CURIOSITY_ONBOARDING', defaultValue: true),
     demoDeveloper: const bool.fromEnvironment('DEMO_DEVELOPER'),
     recordingDemo: const bool.fromEnvironment('RECORDING_DEMO'),
+    judgesDemo: const bool.fromEnvironment('JUDGES_DEMO'),
     appVersion: appVersion,
     iosStoreUrl: const String.fromEnvironment('IOS_STORE_URL'),
     androidStoreUrl: const String.fromEnvironment('ANDROID_STORE_URL'),
@@ -91,7 +96,7 @@ final class AppConfig {
   final AppFlavor flavor;
   final String baseUrl, appVersion, iosStoreUrl, androidStoreUrl, webUpdateUrl;
   final Set<LiveGroup> liveGroups;
-  final bool hideDraftNotices, curiosityOnboarding, demoDeveloper, recordingDemo;
+  final bool hideDraftNotices, curiosityOnboarding, demoDeveloper, recordingDemo, judgesDemo;
   bool get allowsMocks => flavor != AppFlavor.prod && mode != ApiMode.live;
   bool developerMenuEnabled(bool debug) => flavor != AppFlavor.prod && (debug || demoDeveloper);
   bool isLive(LiveGroup group) => mode == ApiMode.live || (mode == ApiMode.hybrid && liveGroups.contains(group));

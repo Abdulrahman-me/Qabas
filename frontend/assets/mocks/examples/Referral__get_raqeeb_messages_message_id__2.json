@@ -1,0 +1,17 @@
+{
+ "referral_type": "fatwa_authority",
+ "reason": [
+  {
+   "type": "text",
+   "text": "…"
+  }
+ ],
+ "targets": [
+  {
+   "name": "…",
+   "description": "…",
+   "url": "https://…",
+   "contact": null
+  }
+ ]
+}

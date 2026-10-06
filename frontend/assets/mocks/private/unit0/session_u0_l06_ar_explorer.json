@@ -1,0 +1,132 @@
+{
+  "session_id": "ses_mock_u0_l6_ar_explorer",
+  "lesson_id": "les_u0_l6",
+  "answers": {
+    "ex_u0_l06_01": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_5",
+          "category_id": "cat_1"
+        }
+      ]
+    },
+    "ex_u0_l06_02": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l06_03": {
+      "value": false,
+      "reason_option_id": "opt_c"
+    },
+    "ex_u0_l06_04": {
+      "option_id": "opt_c"
+    }
+  },
+  "feedback": {
+    "ex_u0_l06_01": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_5",
+            "category_id": "cat_1"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "السرير لا يحدّد موعد المغادرة، والطعام لا يبيّن سبب الدعوة."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "إعداد الطعام والماء يرجّح الاهتمام براحة الضيف، دون كشف كل نيات المضيف."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l06_02": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "رسالة مؤكدة النسبة إلى المضيف قد تكشف طلبه الذي لا يكشفه الأثاث."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l06_03": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "التفكير يساعد في فهم الرسالة وفحصها؛ الحاجة إلى رسالة لا تعني أن العقل عديم الفائدة."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l06_mind"
+      }
+    },
+    "ex_u0_l06_04": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الحاجة إلى توجيه لا تثبت أن رسالة وصلت، ولا أن أي رسالة معروضة صحيحة."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "التفكير يساعد في فهم الرسالة وفحصها؛ الحاجة إلى رسالة لا تعني أن العقل عديم الفائدة."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l06_arrival"
+      }
+    }
+  }
+}

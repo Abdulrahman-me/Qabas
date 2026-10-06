@@ -1,0 +1,265 @@
+{
+  "schema_version": "qabas.scene/1",
+  "scene_id": "scn_u0_l02_display_case",
+  "version": 1,
+  "view_box": {
+    "width": 1600,
+    "height": 1000
+  },
+  "required_capabilities": [
+    "scene/1",
+    "shape.rect/1",
+    "shape.ellipse/1",
+    "shape.path/1",
+    "paint.gradient/1",
+    "track/1"
+  ],
+  "palette": {
+    "night": "#16233A",
+    "dark": "#073C37",
+    "green": "#0B5A52",
+    "gold": "#E0A526",
+    "ember": "#F6E3B4",
+    "mint": "#EEF5F2",
+    "slate": "#566476",
+    "sand": "#D8C6A5",
+    "wood": "#996A45",
+    "wood_dark": "#624630",
+    "skin": "#C9A285",
+    "clear": "#E0A52600",
+    "glow": "#E0A52655",
+    "glass": "#BBD8D766",
+    "white": "#FFFFFF"
+  },
+  "assets": [],
+  "states": {
+    "beat": {
+      "type": "int",
+      "min": 0,
+      "max": 3,
+      "default": 0
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1600,
+      "h": 1000,
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          0,
+          1000
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "night"
+          },
+          {
+            "at": 1,
+            "color": "dark"
+          }
+        ]
+      },
+      "corner": 0
+    },
+    {
+      "id": "floor",
+      "type": "rect",
+      "x": 0,
+      "y": 770,
+      "w": 1600,
+      "h": 230,
+      "fill": "wood_dark",
+      "corner": 0
+    },
+    {
+      "id": "ground_shadow",
+      "type": "ellipse",
+      "x": 800,
+      "y": 850,
+      "rx": 430,
+      "ry": 55,
+      "fill": "dark",
+      "opacity": 0.15
+    },
+    {
+      "id": "arches",
+      "type": "path",
+      "d": "M170 780 L170 270 Q170 100 360 100 Q550 100 550 270 L550 780 L515 780 L515 290 Q515 145 360 145 Q205 145 205 290 L205 780 Z M1050 780 L1050 270 Q1050 100 1240 100 Q1430 100 1430 270 L1430 780 L1395 780 L1395 290 Q1395 145 1240 145 Q1085 145 1085 290 L1085 780 Z",
+      "fill": "green"
+    },
+    {
+      "id": "plinth",
+      "type": "rect",
+      "x": 540,
+      "y": 665,
+      "w": 520,
+      "h": 170,
+      "fill": "slate",
+      "corner": 10
+    },
+    {
+      "id": "case",
+      "type": "rect",
+      "x": 560,
+      "y": 310,
+      "w": 480,
+      "h": 350,
+      "fill": "glass",
+      "corner": 18
+    },
+    {
+      "id": "case_edges",
+      "type": "path",
+      "d": "M557 306 L1043 306 L1043 319 L557 319 Z M557 650 L1043 650 L1043 668 L557 668 Z M557 310 L570 310 L570 663 L557 663 Z M1030 310 L1043 310 L1043 663 L1030 663 Z",
+      "fill": "mint"
+    },
+    {
+      "id": "light_cone",
+      "type": "path",
+      "d": "M630 160 L975 160 L1090 650 L490 650 Z",
+      "fill": {
+        "gradient": "linear",
+        "from": [
+          800,
+          160
+        ],
+        "to": [
+          800,
+          650
+        ],
+        "stops": [
+          {
+            "at": 0,
+            "color": "glow"
+          },
+          {
+            "at": 1,
+            "color": "clear"
+          }
+        ]
+      },
+      "tracks": [
+        {
+          "property": "opacity",
+          "duration_ms": 6000,
+          "keyframes": [
+            {
+              "t": 0,
+              "v": 0.75
+            },
+            {
+              "t": 1,
+              "v": 0.9
+            }
+          ],
+          "easing": "ease_in_out",
+          "loop": "ping_pong"
+        }
+      ]
+    },
+    {
+      "id": "vase",
+      "type": "path",
+      "d": "M760 430 L840 430 Q835 483 867 529 Q895 617 800 632 Q705 617 733 529 Q765 483 760 430 Z",
+      "fill": "gold",
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "vase_lip",
+      "type": "ellipse",
+      "x": 800,
+      "y": 430,
+      "rx": 43,
+      "ry": 10,
+      "fill": "ember",
+      "opacity": 0,
+      "state_rules": [
+        {
+          "when": {
+            "beat": {
+              "gte": 1
+            }
+          },
+          "set": {
+            "opacity": 1
+          },
+          "transition_ms": 600,
+          "easing": "ease_in_out"
+        }
+      ]
+    },
+    {
+      "id": "guard_shadow",
+      "type": "ellipse",
+      "x": 1195,
+      "y": 787,
+      "rx": 85,
+      "ry": 17,
+      "fill": "wood_dark",
+      "opacity": 0.25
+    },
+    {
+      "id": "guard_body",
+      "type": "path",
+      "d": "M1130 757 Q1119 585 1159 563 L1231 563 Q1271 585 1260 757 Z",
+      "fill": "slate"
+    },
+    {
+      "id": "guard_head",
+      "type": "ellipse",
+      "x": 1195,
+      "y": 514,
+      "rx": 37,
+      "ry": 46,
+      "fill": "skin"
+    }
+  ],
+  "anchors": [],
+  "reduced_motion": {
+    "still_time_ms": 0
+  },
+  "preview": {
+    "frames_ms": [
+      0,
+      1500
+    ],
+    "states": [
+      {
+        "beat": 0
+      },
+      {
+        "beat": 1
+      },
+      {
+        "beat": 2
+      },
+      {
+        "beat": 3
+      }
+    ]
+  }
+}

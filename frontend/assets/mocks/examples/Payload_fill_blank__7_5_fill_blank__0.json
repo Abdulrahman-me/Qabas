@@ -1,0 +1,42 @@
+{
+ "segments": [
+  {
+   "type": "text",
+   "text": "أركان الإسلام "
+  },
+  {
+   "type": "blank",
+   "blank_id": "b_1"
+  },
+  {
+   "type": "text",
+   "text": " أركان، أولها "
+  },
+  {
+   "type": "blank",
+   "blank_id": "b_2"
+  },
+  {
+   "type": "text",
+   "text": "."
+  }
+ ],
+ "word_bank": [
+  {
+   "word_id": "w_1",
+   "text": "خمسة"
+  },
+  {
+   "word_id": "w_2",
+   "text": "ستة"
+  },
+  {
+   "word_id": "w_3",
+   "text": "الشهادتان"
+  },
+  {
+   "word_id": "w_4",
+   "text": "الصوم"
+  }
+ ]
+}

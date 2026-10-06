@@ -1,0 +1,18 @@
+{
+ "evidence_id": "src_h_niyyat",
+ "kind": "hadith",
+ "quran": null,
+ "hadith": {
+  "text_ar": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+  "translation": "Actions are only by intentions, and every person will have only what they intended.",
+  "narrator": "عمر بن الخطاب رضي الله عنه",
+  "collections": [
+   "صحيح البخاري (1)",
+   "صحيح مسلم (1907)"
+  ],
+  "grade_label": "صحيح",
+  "grade_category": "authentic",
+  "grade_source": "متفق عليه",
+  "excerpt": false
+ }
+}

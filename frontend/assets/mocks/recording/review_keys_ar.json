@@ -1,0 +1,182 @@
+{
+  "ex_recording_card_0": {
+    "answer_key": null
+  },
+  "ex_recording_quick_0": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "الصلاة الثالثة، بعد الظهر والشمس ما زالت مرتفعة."
+      }
+    ],
+    "source_ids": []
+  },
+  "ex_recording_card_1": {
+    "answer_key": null
+  },
+  "ex_recording_quick_1": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "الوسخ الذي يعلق بالجسد."
+      }
+    ],
+    "source_ids": []
+  },
+  "ex_recording_card_2": {
+    "answer_key": null
+  },
+  "ex_recording_quick_2": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "الصلاة الثانية، حين تميل الشمس عن وسط السماء."
+      }
+    ],
+    "source_ids": []
+  },
+  "ex_recording_card_3": {
+    "answer_key": null
+  },
+  "ex_recording_quick_3": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "أن تكلّم الله وتطلب منه ما تحتاج، في أي وقت."
+      }
+    ],
+    "source_ids": []
+  },
+  "ex_recording_card_4": {
+    "answer_key": null
+  },
+  "ex_recording_quick_4": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "أول صلاة في اليوم، مع أول ضوء قبل شروق الشمس."
+      }
+    ],
+    "source_ids": []
+  },
+  "ex_recording_card_5": {
+    "answer_key": null
+  },
+  "ex_recording_quick_5": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "عمل طلبه الله من المسلم طلبًا لازمًا، وليس اختياريًا."
+      }
+    ],
+    "source_ids": []
+  },
+  "ex_recording_card_6": {
+    "answer_key": null
+  },
+  "ex_recording_quick_6": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "كلام أو فعل ثابت عن النبي ﷺ، نُقل إلينا بطريق موثوق."
+      }
+    ],
+    "source_ids": []
+  },
+  "ex_recording_card_7": {
+    "answer_key": null
+  },
+  "ex_recording_quick_7": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "أداء الصلاة كاملة كما شرعها الله."
+      }
+    ],
+    "source_ids": []
+  },
+  "ex_recording_card_8": {
+    "answer_key": null
+  },
+  "ex_recording_quick_8": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "الصلاة الخامسة، في الليل بعد غياب الحمرة من الأفق."
+      }
+    ],
+    "source_ids": []
+  },
+  "ex_recording_card_9": {
+    "answer_key": null
+  },
+  "ex_recording_quick_9": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "الذنوب والأخطاء التي يقع فيها الإنسان."
+      }
+    ],
+    "source_ids": []
+  },
+  "ex_recording_card_10": {
+    "answer_key": null
+  },
+  "ex_recording_quick_10": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "الصلاة الرابعة، بعد غروب الشمس."
+      }
+    ],
+    "source_ids": []
+  },
+  "ex_recording_card_11": {
+    "answer_key": null
+  },
+  "ex_recording_quick_11": {
+    "answer_key": {
+      "option_id": "opt_0"
+    },
+    "explanation": [
+      {
+        "type": "text",
+        "text": "عمود من الأعمدة الكبيرة التي يقوم عليها البناء."
+      }
+    ],
+    "source_ids": []
+  }
+}

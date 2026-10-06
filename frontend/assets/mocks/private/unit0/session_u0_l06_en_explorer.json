@@ -1,0 +1,132 @@
+{
+  "session_id": "ses_mock_u0_l6_en_explorer",
+  "lesson_id": "les_u0_l6",
+  "answers": {
+    "ex_u0_l06_01": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_5",
+          "category_id": "cat_1"
+        }
+      ]
+    },
+    "ex_u0_l06_02": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l06_03": {
+      "value": false,
+      "reason_option_id": "opt_c"
+    },
+    "ex_u0_l06_04": {
+      "option_id": "opt_c"
+    }
+  },
+  "feedback": {
+    "ex_u0_l06_01": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_5",
+            "category_id": "cat_1"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A bed does not specify a departure time, and food does not explain the invitation’s purpose."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "Preparing food and water suggests concern for the guest’s comfort without revealing all the host’s intentions."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l06_02": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A message confirmed as the host’s can reveal a request the furniture cannot disclose."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l06_03": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Thinking helps us understand and examine a message; needing one does not make reason useless."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l06_mind"
+      }
+    },
+    "ex_u0_l06_04": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Needing guidance does not establish that a message arrived or that any offered message is true."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "Thinking helps us understand and examine a message; needing one does not make reason useless."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l06_arrival"
+      }
+    }
+  }
+}

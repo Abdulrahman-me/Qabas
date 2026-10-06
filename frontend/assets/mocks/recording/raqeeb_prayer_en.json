@@ -1,0 +1,71 @@
+{
+  "message_id": "msg_a_202",
+  "role": "assistant",
+  "status": "completed",
+  "stage": "done",
+  "created_at": "2026-10-04T10:01:00Z",
+  "completed_at": "2026-10-04T10:01:09Z",
+  "understood_input": {
+    "transcript": null,
+    "images": [],
+    "document": null
+  },
+  "classification": {
+    "question_class": "general_knowledge",
+    "label": "General knowledge"
+  },
+  "abstained": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Muslims pray five obligatory prayers each day and night: Fajr, Dhuhr, Asr, Maghrib and Isha. Prayer renews their connection with God throughout the day."
+        },
+        {
+          "type": "citation",
+          "ref": 1
+        }
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "ref": 1,
+      "source": {
+        "source_id": "src_h_buni_islam",
+        "kind": "hadith",
+        "provider": "dorar",
+        "title": "Hadith: Islam is built on five pillars",
+        "reference": "Sahih al-Bukhari (8), Sahih Muslim (16)",
+        "excerpt": "بُنِيَ الإسْلَامُ علَى خَمْسٍ…",
+        "url": null,
+        "displayed": false,
+        "display_role": null
+      }
+    },
+    {
+      "ref": 2,
+      "source": {
+        "source_id": "src_ih_prayer_times",
+        "kind": "article",
+        "provider": "islamhouse",
+        "title": "The five daily prayers",
+        "reference": "IslamHouse",
+        "excerpt": "…",
+        "url": "https://islamhouse.com/",
+        "displayed": false,
+        "display_role": null
+      }
+    }
+  ],
+  "terms": {},
+  "suggested_lessons": [
+    {
+      "lesson_id": "les_u1_l3",
+      "title": "Prayer"
+    }
+  ],
+  "feedback": null
+}

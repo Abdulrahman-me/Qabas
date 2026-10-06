@@ -1,0 +1,23 @@
+{
+ "items": [
+  {
+   "run_id": "run_41",
+   "unit_id": "unit_1",
+   "lesson_type": "concept",
+   "title": "ما معنى الإسلام؟",
+   "status": "awaiting_gate2",
+   "stage": "qa",
+   "updated_at": "2026-10-04T14:10:00Z"
+  },
+  {
+   "run_id": "run_42",
+   "unit_id": "unit_7",
+   "lesson_type": "story",
+   "title": "إبراهيم يبحث عن ربه",
+   "status": "awaiting_gate1",
+   "stage": "plan",
+   "updated_at": "2026-10-04T14:20:00Z"
+  }
+ ],
+ "next_cursor": null
+}

@@ -1,0 +1,33 @@
+{
+  "message_id": "msg_a_302",
+  "role": "assistant",
+  "status": "completed",
+  "stage": "done",
+  "created_at": "2026-10-04T11:00:00Z",
+  "completed_at": "2026-10-04T11:00:04Z",
+  "understood_input": {
+    "transcript": null,
+    "images": [],
+    "document": null
+  },
+  "classification": {
+    "question_class": "out_of_scope",
+    "label": "Outside the sample questions"
+  },
+  "abstained": true,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "type": "text",
+          "text": "Choose one of the suggested questions to explore an answer with sources."
+        }
+      ]
+    }
+  ],
+  "citations": [],
+  "terms": {},
+  "suggested_lessons": [],
+  "feedback": null
+}

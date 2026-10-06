@@ -1,0 +1,21 @@
+{
+ "items": [
+  {
+   "user_id": "usr_f1",
+   "display_name": "Seeker 21",
+   "xp_week": 95,
+   "streak_current": 2,
+   "online": true,
+   "avatar_key": "traveler_02"
+  },
+  {
+   "user_id": "usr_f2",
+   "display_name": "سالك ٥",
+   "xp_week": 180,
+   "streak_current": 6,
+   "online": false,
+   "avatar_key": "traveler_02"
+  }
+ ],
+ "next_cursor": null
+}

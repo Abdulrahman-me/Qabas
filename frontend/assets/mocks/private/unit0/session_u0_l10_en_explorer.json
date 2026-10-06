@@ -1,0 +1,150 @@
+{
+  "session_id": "ses_mock_u0_l10_en_explorer",
+  "lesson_id": "les_u0_l10",
+  "answers": {
+    "ex_u0_l10_01": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l10_02": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_2"
+        }
+      ]
+    },
+    "ex_u0_l10_03": {
+      "value": false,
+      "reason_option_id": "opt_c"
+    },
+    "ex_u0_l10_04": {
+      "segment_id": "seg_3"
+    }
+  },
+  "feedback": {
+    "ex_u0_l10_01": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "When trusting a report, ask about the reporter's honesty and their ability to know what they report."
+        }
+      ],
+      "option_misconceptions": {},
+      "option_feedback": {
+        "opt_a": [
+          {
+            "type": "text",
+            "text": "That asks about intention; here, examine access to knowledge of the route."
+          }
+        ],
+        "opt_b": [
+          {
+            "type": "text",
+            "text": "This examines what honesty alone has not established."
+          }
+        ],
+        "opt_c": [
+          {
+            "type": "text",
+            "text": "That examines motive; choose the question about knowing the route."
+          }
+        ]
+      }
+    },
+    "ex_u0_l10_02": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_2"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A guide's refusal to overstate knowledge bears on that particular conduct, rather than on every future statement."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "An agreed payment for work does not equal dishonesty, and receiving no payment does not guarantee accuracy."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l10_03": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Ruling out deliberate deception alone does not establish that a report is accurate."
+        }
+      ],
+      "option_misconceptions": {},
+      "targets_misconception_id": "mis_u0_l10_sincere_equals_true"
+    },
+    "ex_u0_l10_04": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A possible motive helps an examination, but does not make a report true or false by itself."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "Examining a messenger claim requires evidence bearing on the claim itself, alongside character and honesty."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "Ruling out deliberate deception alone does not establish that a report is accurate."
+        }
+      ],
+      "option_misconceptions": {},
+      "targets_misconception_id": "mis_u0_l10_no_gain_proof"
+    }
+  }
+}

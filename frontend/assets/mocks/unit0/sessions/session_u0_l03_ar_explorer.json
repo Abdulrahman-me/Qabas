@@ -1,0 +1,1186 @@
+{
+  "session_id": "ses_mock_u0_l3_ar_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l3",
+  "lesson_version": 1,
+  "title": "هل يمكن أن يخلق شيء نفسه؟",
+  "subtitle": "فكّر في السبب، وحدّد حدود النتيجة.",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "فرّق بين تغيير شيء موجود وإيجاد نفسه قبل وجوده، وحدّد المشكلة في تفسير «خلق نفسه»."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l03_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l03_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "تخيّل نجّاراً يُري زائراً كرسياً انتهى من صنعه، وبجواره ألواح وأدوات."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "إذا لم يوجد الكرسي بعد، فهل يستطيع أن يصنع نفسه؟"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "focus": -1
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l03_workshop",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+          "mime_type": "application/json",
+          "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1",
+            "fx.sparkles/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_8ec8e2edbf_6eb0654c1988910b7cbc91c90b590c5fd14173d5fc5890a900e27b91ed319a60.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "focus": -1
+        },
+        "alt": "ورشة نجارة فيها كرسي وألواح وأدوات ونجّار بلا ملامح.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_u0_l03_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي معنى تقصده عبارة «صنع نفسه»؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "تغيّر شيء كان موجوداً."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أوجد نفسه قبل أن يوجد."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "العبارة غير واضحة لي."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "سنفصل المعنيين؛ اختلاف الكلمة قد يخفي اختلاف الفكرة."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l03_03",
+      "type": "story",
+      "label": "موقف",
+      "title": "قبل أن يجلس أحد",
+      "origin": null,
+      "provenance": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l03_004",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يريد زائر أن يفهم كيف ظهر الكرسي، لا كيف تبدو هيئته الآن."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l03_005",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يرى النجار يصلح وصلة، فيتخيّل الكرسي يجمع نفسه بالطريقة نفسها."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "focus": -1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l03_workshop",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+              "mime_type": "application/json",
+              "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1",
+                "fx.sparkles/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_8ec8e2edbf_6eb0654c1988910b7cbc91c90b590c5fd14173d5fc5890a900e27b91ed319a60.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "focus": -1
+            },
+            "alt": "كرسي مكتمل ونجار قرب منضدة أدوات.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l03_006",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يطلب منه النجار أن يتخيّل الوقت السابق لوجود الكرسي: ألواح وأدوات، لكن لا كرسي."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "focus": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l03_workshop",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+              "mime_type": "application/json",
+              "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1",
+                "fx.sparkles/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_4deb3219ec_6397385a1c34ecb7f7a86dddbd123b1a17b10d4b369a716d8e9ad43d8886bd4e.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "focus": 2
+            },
+            "alt": "ألواح في ورشة وكرسي باهت في الخلف.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l03_007",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يحاول الزائر أن يجعل الكرسي يتناول الأداة، ثم يتوقف: الكرسي المفترض لم يوجد بعد."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "focus": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l03_workshop",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+              "mime_type": "application/json",
+              "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1",
+                "fx.sparkles/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_412af08dd8_c8dffd28847591d65a7035e4ceefad7b332bf5084dc5ad8811cfa509830186cf.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "focus": 3
+            },
+            "alt": "موضع كرسي باهت وأدوات نجارة قريبة.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_4",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l03_008",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يغيّر سؤاله: كيف صارت الألواح كرسياً؟"
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l03_009",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "صار لديه سؤال عن أشياء موجودة وعمل، بدلاً من تكليف كرسي غير موجود بصنع نفسه."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "focus": -1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l03_workshop",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+              "mime_type": "application/json",
+              "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1",
+                "fx.sparkles/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_8ec8e2edbf_6eb0654c1988910b7cbc91c90b590c5fd14173d5fc5890a900e27b91ed319a60.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "focus": -1
+            },
+            "alt": "ورشة هادئة فيها كرسي وألواح ومنضدة.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l03_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l03_01",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_self_creation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي خطوة تفترض ما تريد تفسيره؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لم يكن هذا الكرسي موجوداً."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تناول الكرسي أداة ليصنع نفسه."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "إذن صار موجوداً بعد عمله."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l03_05",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "المشكلة في الترتيب"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "focus": -1
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l03_workshop",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l03_workshop_v1_661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2.json",
+          "mime_type": "application/json",
+          "sha256": "661938d7a5319e6312db8b14574d2e5c7c6ecb3a8db6f8640fca60f78b3188e2",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1",
+            "fx.sparkles/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_workshop_v1_8ec8e2edbf_6eb0654c1988910b7cbc91c90b590c5fd14173d5fc5890a900e27b91ed319a60.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "focus": -1
+        },
+        "alt": "كرسي وأدوات وألواح في ورشة نجارة مضاءة.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l03_011",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لكي يفعل الشيء عملاً، يجب ألا يكون غائباً تماماً وقت هذا العمل."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "focus": -1
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l03_012",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لو كان هو من أوجد نفسه، لاحتجنا إليه فاعلاً قبل وجوده."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "focus": 2
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l03_013",
+            "spans": [
+              {
+                "type": "text",
+                "text": "هذا يجمع بين «موجود ليعمل» و«غير موجود بعد» للشيء نفسه في الوقت نفسه."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "focus": 3
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l03_014",
+            "spans": [
+              {
+                "type": "text",
+                "text": "قول «صنع نفسه بسرعة كبيرة» لا يحل المشكلة؛ السرعة لا تجعل غير الموجود فاعلاً."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "focus": 3
+          }
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l03_015",
+            "spans": [
+              {
+                "type": "text",
+                "text": "نحن نفحص معنى الإيجاد الذاتي، ولا نزعم أن كل تغيّر يحتاج نجّاراً بشرياً."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "focus": -1
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l03_06",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l03_02",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_self_creation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "احكم على العبارة، ثم اختر سببك."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "«صنع نفسه» لا يواجه مشكلة إذا حدث بسرعة."
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "السرعة تغني عن وجود الفاعل."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الأدوات دائماً موجودة."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "الفعل السريع أيضاً يحتاج شيئاً موجوداً ليكون فاعله."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l03_07",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "هل تغيّر الشيء أم أوجد نفسه؟"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l03_seed",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l03_seed_v1_67bbc3b011f2517044d420a74dd5f204d6e10a2794a3b4d774aebc1be5a84e73.json",
+          "mime_type": "application/json",
+          "sha256": "67bbc3b011f2517044d420a74dd5f204d6e10a2794a3b4d774aebc1be5a84e73",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l03_seed_v1_76f20ad9e8_059b39872ece0299b8ea39665008a14e078697179f5b74ccf73391e8c2328fde.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "تربة وبذرة ونبتة وبستاني بلا ملامح وإبريق سقي.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l03_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "تخيّل بذرة مزروعة، يسقيها بستاني، ثم يظهر منها نبات."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l03_018",
+            "spans": [
+              {
+                "type": "text",
+                "text": "في هذا الموقف، بدأنا ببذرة موجودة وظروف محيطة؛ لم نبدأ بغياب كل شيء."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l03_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "وصف التغيّر لا يجعل البذرة فاعلاً قبل وجودها."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l03_020",
+            "spans": [
+              {
+                "type": "text",
+                "text": "قول «نما النبات» يختلف عن «أوجد النبات نفسه وهو غير موجود»."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l03_021",
+            "spans": [
+              {
+                "type": "text",
+                "text": "البستاني جزء من الموقف، وليس هذا المثال إثباتاً أن كل نمو يحتاج تدخلاً بشرياً."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l03_08",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l03_03",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_self_creation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "صنّف المعنى المقصود، لا مجرد ظهور شيء جديد."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "تغيير موجود",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "إيجاد النفس قبل وجودها",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كرسي موجود يُصلح نجّار وصلته."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كرسي غير موجود يمسك أداة ليصنع نفسه."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "بذرة موجودة تظهر منها نبتة في الموقف."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "شيء غائب تماماً يبدأ العمل ليُوجد نفسه."
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l03_09",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "أي سؤال بقي بعد هذه المقارنة؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "ما الذي يفسّر وجود ما يعتمد على غيره؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "كيف حدث هذا التغيّر بالتحديد؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أريد إعادة فحص الفكرة."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "يمكنك إبقاء أسئلة التفاصيل مفتوحة؛ فهم مشكلة تفسير لا يلزمك بقبول كل تفسير آخر."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l03_10",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ماذا يثبت، وماذا لا يثبت؟"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l03_024",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إذا كان المقصود إيجاد الشيء نفسه قبل وجوده، فالتفسير يحمّل غير الموجود دور الفاعل."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l03_025",
+            "spans": [
+              {
+                "type": "text",
+                "text": "أما عملية تبدأ بمادة أو نظام موجود، فليست هذا المعنى من خلق النفس."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l03_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "بقاء الشيء دائماً، إن صحّ، ادّعاء مختلف؛ ليس إيجاداً للنفس قبل وجودها."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l03_027",
+            "spans": [
+              {
+                "type": "text",
+                "text": "المثال لا يثبت أن الكون كرسي، ولا يثبت وحده أن كل ما فيه يعتمد على خالق."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l03_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "استبعاد خلق النفس لا يحدّد وحده صفات الخالق؛ نحتاج إلى فحص السؤال التالي."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l03_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l03_04",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_self_creation"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "ما التصحيح الأدق لهذه العبارة؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "نمو البذرة يعني أنها أوجدت نفسها قبل وجودها."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كل شيء جديد يعني خلق النفس."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "نموها في المثال تغيّر يبدأ ببذرة موجودة، لا فعل بذرة غائبة."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l03_12",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "اختبر الفكرة قبل اسمها"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l03_030",
+            "spans": [
+              {
+                "type": "text",
+                "text": "حدّد أولاً: هل تتحدث عن تغيّر موجود أم عن إيجاد الشيء نفسه؟"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l03_031",
+            "spans": [
+              {
+                "type": "text",
+                "text": "اسأل عن الفاعل في لحظة العمل؛ لا تمنح غير الموجود وظيفة الموجود."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l03_032",
+            "spans": [
+              {
+                "type": "text",
+                "text": "احتفظ بحدود النتيجة؛ استبعاد تفسير لا يغني عن فحص البدائل."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "حين تسمع «صنع نفسه»، حدّد هل المقصود تغيّر شيء موجود أم إيجاد نفسه قبل وجوده."
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l3_topic_1",
+        "title": "خلق النفس أم تغيّر موجود؟",
+        "concept_ids": [
+          "con_u0_self_creation"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "هل تستطيع أن تشرح الفرق بين تغيير الموجود وتكليف غير الموجود بإيجاد نفسه؟"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_self_creation": {
+      "term_id": "term_self_creation",
+      "text": "خلق النفس",
+      "arabic": "خلق النفس",
+      "transliteration": "khalq al-nafs",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "أن يُفترض الشيء فاعلاً لإيجاد نفسه نفسه، لا مجرد مشارك في تغيير شيء موجود."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "الكرسي الذي لم يوجد بعد لا يمكنه جمع أجزائه بنفسه."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l3",
+      "lesson_title": "هل يمكن أن يخلق شيء نفسه؟"
+    }
+  },
+  "answers": []
+}

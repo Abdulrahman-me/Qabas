@@ -1,0 +1,1149 @@
+{
+  "session_id": "ses_mock_u0_l2_ar_explorer",
+  "kind": "lesson",
+  "mode": null,
+  "status": "active",
+  "feedback_mode": "immediate",
+  "unit_id": "unit_0",
+  "lesson_id": "les_u0_l2",
+  "lesson_version": 1,
+  "title": "هل يمكن أن يأتي شيء من لا شيء؟",
+  "subtitle": "فكّر في السبب، وحدّد حدود النتيجة.",
+  "lesson_type": "concept",
+  "reviewed_by": null,
+  "objectives": [
+    [
+      {
+        "type": "text",
+        "text": "ميّز العدم عن مكان خالٍ، وافحص لماذا لا يقدّم العدم وحده تفسيراً لوجود شيء."
+      }
+    ]
+  ],
+  "counts": {
+    "interactions": 6,
+    "exercises": 4,
+    "scored": 4
+  },
+  "source_count": 0,
+  "total_exercises": 4,
+  "answered_exercises": 0,
+  "started_at": "2026-10-04T00:00:00Z",
+  "items": [
+    {
+      "block_id": "b_u0_l02_preview_notice",
+      "type": "callout",
+      "variant": "note",
+      "spans": [
+        {
+          "type": "text",
+          "text": "مسودة للمراجعة فقط؛ النصوص المصدرية الدقيقة والموافقة على النشر لم تكتمل."
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l02_01",
+      "type": "hook",
+      "situation": [
+        {
+          "type": "text",
+          "text": "تخيّل حارس متحف يفحص صندوق عرض زجاجياً بعد الإغلاق."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "الصندوق خالٍ من المعروضات؛ وفي الصباح يرى الحارس إناءً داخله."
+        }
+      ],
+      "question": [
+        {
+          "type": "text",
+          "text": "هل تعني «كان خالياً» أن الإناء جاء من لا شيء؟"
+        }
+      ],
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l02_display_case",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l02_display_case_v1_761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719.json",
+          "mime_type": "application/json",
+          "sha256": "761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_display_case_v1_76f20ad9e8_614b0ea7ea561ce824d37fbd8b8fcecd73d622f4635800772c90e5c953cc027b.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "صندوق عرض زجاجي خالٍ على قاعدة في متحف ليلي وحارس بلا ملامح.",
+        "overlays": []
+      },
+      "cta": null
+    },
+    {
+      "block_id": "b_u0_l02_02",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "ما أول سؤال ستطرحه؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "من استطاع الوصول إلى الصندوق؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "هل صنع العدم الإناء؟"
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "هل كانت ملاحظتي كاملة؟"
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "ابدأ بما رأيت فعلاً، ثم افحص تفسير ما تغيّر."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l02_03",
+      "type": "story",
+      "label": "موقف",
+      "title": "ما الذي فات الحارس؟",
+      "origin": null,
+      "provenance": null,
+      "beats": [
+        {
+          "beat_id": "bt_1",
+          "beat_index": 0,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l02_005",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يريد الحارس حماية المعروضات، فيراجع ما دوّنه عند الإغلاق."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l02_006",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "دوّن أن الصندوق خالٍ، لكنه لم يراقبه طوال الليل."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 0
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l02_display_case",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l02_display_case_v1_761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719.json",
+              "mime_type": "application/json",
+              "sha256": "761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_display_case_v1_76f20ad9e8_614b0ea7ea561ce824d37fbd8b8fcecd73d622f4635800772c90e5c953cc027b.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 0
+            },
+            "alt": "حارس بجوار صندوق زجاجي داخل متحف هادئ.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_2",
+          "beat_index": 1,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l02_007",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لا يتهم أحداً، ولا يسمّي غياب تفسيره سبباً للإناء."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l02_008",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يسأل أمينة المتحف عن المفتاح وسجل نقل المعروضات."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 1
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l02_display_case",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l02_display_case_v1_761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719.json",
+              "mime_type": "application/json",
+              "sha256": "761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_display_case_v1_cd92849bcd_7fc9e47817ea7edf09eaa3e3c102f9c63f42a100072f8aa0292758b8725ea564.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 1
+            },
+            "alt": "إناء ظاهر داخل صندوق العرض وحارس يقف قربه.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_3",
+          "beat_index": 2,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l02_009",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "تُريه الأمينة سجلاً لنقل الإناء بعد مغادرته، وتوضح أنها فتحت الصندوق وأغلقته."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 2
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l02_display_case",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l02_display_case_v1_761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719.json",
+              "mime_type": "application/json",
+              "sha256": "761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_display_case_v1_fcb38353b5_7fc9e47817ea7edf09eaa3e3c102f9c63f42a100072f8aa0292758b8725ea564.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 2
+            },
+            "alt": "صندوق عرض وإناء ذهبي في ضوء المتحف.",
+            "overlays": []
+          }
+        },
+        {
+          "beat_id": "bt_4",
+          "beat_index": 3,
+          "narration": [
+            {
+              "sentence_id": "s_u0_l02_010",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يحدّث الحارس ملاحظته: شاهد صندوقاً خالياً، ولم يشاهد ما جرى بعد ذلك."
+                }
+              ],
+              "source_ids": []
+            },
+            {
+              "sentence_id": "s_u0_l02_011",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "وصل إلى تفسير حين بحث عن شيء يمكن أن يفسّر التغيّر."
+                }
+              ],
+              "source_ids": []
+            }
+          ],
+          "quote": null,
+          "quote_meaning": null,
+          "narration_audio_url": null,
+          "visual": {
+            "kind": "scene",
+            "key": null,
+            "version": null,
+            "params": {
+              "beat": 3
+            },
+            "image": null,
+            "scene": {
+              "scene_id": "scn_u0_l02_display_case",
+              "version": 1,
+              "schema_version": "qabas.scene/1",
+              "url": "http://localhost:8765/media/scenes/scn_u0_l02_display_case_v1_761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719.json",
+              "mime_type": "application/json",
+              "sha256": "761fafdbd8a8710e123f8ac39b17282355d38eba93a84a1bd05624c3b717a719",
+              "view_box": {
+                "width": 1600,
+                "height": 1000
+              },
+              "required_capabilities": [
+                "scene/1",
+                "shape.rect/1",
+                "shape.ellipse/1",
+                "shape.path/1",
+                "paint.gradient/1",
+                "track/1"
+              ]
+            },
+            "fallback_image": {
+              "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_display_case_v1_19cf76ac47_7fc9e47817ea7edf09eaa3e3c102f9c63f42a100072f8aa0292758b8725ea564.webp",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 500
+            },
+            "fallback_params": {
+              "beat": 3
+            },
+            "alt": "إناء مستقر داخل صندوق زجاجي مغلق.",
+            "overlays": []
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l02_04",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l02_01",
+        "type": "multiple_choice",
+        "concept_ids": [
+          "con_u0_something_from_nothing"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "ما الخطأ في قول «لم أر من وضع الإناء، إذن جاء من العدم»؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "options": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كل ما لا أراه غير موجود."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "عدم معرفتي بالسبب لا يثبت غياب كل سبب."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "يجب اتهام الحارس."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l02_05",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "«خالي» و«لا شيء» ليسا المعنى نفسه"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l02_013",
+            "spans": [
+              {
+                "type": "text",
+                "text": "في الموقف، ظل الصندوق والزجاج والمفتاح والحارس موجودين، حتى حين لم يوجد إناء."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l02_014",
+            "spans": [
+              {
+                "type": "text",
+                "text": "كلمة «خالي» تعني هنا غياب المعروض؛ لا غياب كل شيء."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l02_015",
+            "spans": [
+              {
+                "type": "text",
+                "text": "العدم في سؤالنا يعني ألا يوجد أي شيء، لا مكان ولا مواد ولا قدرة تعمل."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l02_016",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إذا تخيّلت مساحة سوداء تنتظر شيئاً، فقد تخيّلت مكاناً، لا العدم."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l02_017",
+            "spans": [
+              {
+                "type": "text",
+                "text": "اللون الأسود في الرسم مجرد خلفية؛ لا يمكن لصورة أن تعرض غياب كل شيء."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l02_06",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l02_02",
+        "type": "categorize",
+        "concept_ids": [
+          "con_u0_something_from_nothing"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي وصف يعني غياب شيء معيّن، وأي وصف يقصد العدم؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "presentation": "buckets",
+          "categories": [
+            {
+              "category_id": "cat_1",
+              "label": "خلوّ جزئي",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            },
+            {
+              "category_id": "cat_2",
+              "label": "عدم كامل في السؤال",
+              "phase": null,
+              "capacity": null,
+              "art_key": null
+            }
+          ],
+          "items": [
+            {
+              "item_id": "itm_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "صندوق بلا معروضات."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "مطبخ بلا خبز جاهز."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لا مكان ولا مادة ولا أي شيء موجود."
+                }
+              ],
+              "secondary_label": null
+            },
+            {
+              "item_id": "itm_4",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "غرفة أُخرج أثاثها."
+                }
+              ],
+              "secondary_label": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l02_07",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "خبز لم يكن موجوداً"
+        }
+      ],
+      "style": "standard",
+      "visual": {
+        "kind": "scene",
+        "key": null,
+        "version": null,
+        "params": {
+          "beat": 0
+        },
+        "image": null,
+        "scene": {
+          "scene_id": "scn_u0_l02_bakery",
+          "version": 1,
+          "schema_version": "qabas.scene/1",
+          "url": "http://localhost:8765/media/scenes/scn_u0_l02_bakery_v1_fd41b319478ffd211fd18488dce8f378c160ee967082c1b880ba629b059bd331.json",
+          "mime_type": "application/json",
+          "sha256": "fd41b319478ffd211fd18488dce8f378c160ee967082c1b880ba629b059bd331",
+          "view_box": {
+            "width": 1600,
+            "height": 1000
+          },
+          "required_capabilities": [
+            "scene/1",
+            "shape.rect/1",
+            "shape.ellipse/1",
+            "shape.path/1",
+            "paint.gradient/1",
+            "track/1"
+          ]
+        },
+        "fallback_image": {
+          "url": "http://localhost:8765/media/fallbacks/scn_u0_l02_bakery_v1_76f20ad9e8_956bfeaf1d0857b59ea1626aa16e5eab4abe3e4fdb9bc4851fc4a1b65df02172.webp",
+          "mime_type": "image/webp",
+          "width": 800,
+          "height": 500
+        },
+        "fallback_params": {
+          "beat": 0
+        },
+        "alt": "مطبخ مخبز فيه كيس دقيق ووعاء وفرن وخبّاز بلا ملامح.",
+        "overlays": []
+      },
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l02_019",
+            "spans": [
+              {
+                "type": "text",
+                "text": "تخيّل خبّازاً يريد إعداد رغيف، وليس في المطبخ خبز جاهز."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 0
+          }
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l02_020",
+            "spans": [
+              {
+                "type": "text",
+                "text": "في هذا المثال، يجهّز الدقيق والماء، ويشكّل العجين، ثم يستخدم الفرن."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l02_021",
+            "spans": [
+              {
+                "type": "text",
+                "text": "غياب الرغيف في البداية لا يعني غياب الأشياء التي تصنعه."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 1
+          }
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l02_022",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لم يظهر الرغيف من العدم؛ تغيّرت أشياء موجودة بعمل الخبّاز."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 2
+          }
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l02_023",
+            "spans": [
+              {
+                "type": "text",
+                "text": "هذا يوضّح الفرق، لكنه لا يجعل الكون رغيفاً أو الخالق خبّازاً يحتاج إلى مواد."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": {
+            "beat": 2
+          }
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l02_08",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l02_03",
+        "type": "spot_error",
+        "concept_ids": [
+          "con_u0_something_from_nothing"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "أي جزء أعطى العدم صفة لا يملكها بحسب تعريفه؟"
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "apply"
+        },
+        "framing": null,
+        "payload": {
+          "segments": [
+            {
+              "segment_id": "seg_1",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "أقصد بالعدم غياب كل شيء."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_2",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لا توجد فيه مادة أو قدرة."
+                }
+              ]
+            },
+            {
+              "segment_id": "seg_3",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "لكنه يستطيع الانتظار ثم إنتاج مادة."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l02_09",
+      "type": "predict",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "هل قول «لم أعرف كيف حدث» جواب عن سؤال «لماذا حدث»؟"
+        }
+      ],
+      "options": [
+        {
+          "option_id": "opt_a",
+          "spans": [
+            {
+              "type": "text",
+              "text": "هو اعتراف بحدود معرفتي."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_b",
+          "spans": [
+            {
+              "type": "text",
+              "text": "قد أراه جواباً مؤقتاً."
+            }
+          ]
+        },
+        {
+          "option_id": "opt_c",
+          "spans": [
+            {
+              "type": "text",
+              "text": "أحتاج إلى تفكير أكثر."
+            }
+          ]
+        }
+      ],
+      "reveal": [
+        {
+          "type": "text",
+          "text": "يمكنك التوقف عند «لا أعرف» مع إبقاء السؤال مفتوحاً؛ لا تحتاج إلى ملء الفراغ باسم مضلّل."
+        }
+      ],
+      "visual": null
+    },
+    {
+      "block_id": "b_u0_l02_10",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "ماذا تستبعد هذه الفكرة؟"
+        }
+      ],
+      "style": "standard",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l02_026",
+            "spans": [
+              {
+                "type": "text",
+                "text": "إذا عرّفنا العدم بغياب كل شيء، فلن يقدّم شيئاً يفسّر وجوداً جديداً."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l02_027",
+            "spans": [
+              {
+                "type": "text",
+                "text": "هذا يفحص عبارة «أنتج العدم شيئاً»؛ لا يحوّل سؤالاً صعباً إلى تقرير عن تاريخ الكون."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l02_028",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لم نثبت هنا أن الكون بدأ، ولا كيف بدأ؛ إثبات ذلك يحتاج أدلة أخرى."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_4",
+          "sentence": {
+            "sentence_id": "s_u0_l02_029",
+            "spans": [
+              {
+                "type": "text",
+                "text": "وإذا استبعدت تفسيراً، فلا تكون قد أثبتّ تلقائياً كل تفاصيل تفسير آخر."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_5",
+          "sentence": {
+            "sentence_id": "s_u0_l02_030",
+            "spans": [
+              {
+                "type": "text",
+                "text": "السؤال الباقي: إن احتاج الوجود إلى تفسير، فما التفسير الذي يستطيع أداء هذا الدور؟"
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    },
+    {
+      "block_id": "b_u0_l02_11",
+      "type": "exercise",
+      "exercise": {
+        "exercise_id": "ex_u0_l02_04",
+        "type": "true_false_reason",
+        "concept_ids": [
+          "con_u0_something_from_nothing"
+        ],
+        "prompt": [
+          {
+            "type": "text",
+            "text": "احكم على الفهم، ثم اختر السبب."
+          }
+        ],
+        "time_limit_ms": null,
+        "scoring": {
+          "accuracy": true,
+          "combo": true,
+          "layer": "understand"
+        },
+        "framing": null,
+        "payload": {
+          "statement": [
+            {
+              "type": "text",
+              "text": "«لم أر سبباً» تعني «ثبت أنه لا يوجد سبب»."
+            }
+          ],
+          "reasons": [
+            {
+              "option_id": "opt_a",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "المشاهدة تغطي كل ما يمكن أن يحدث."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_b",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "غياب المعرفة ليس دليلاً كافياً على غياب السبب."
+                }
+              ]
+            },
+            {
+              "option_id": "opt_c",
+              "spans": [
+                {
+                  "type": "text",
+                  "text": "كل شيء خفي يجب تصديقه."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "block_id": "b_u0_l02_12",
+      "type": "teach",
+      "eyebrow": null,
+      "title": [
+        {
+          "type": "text",
+          "text": "احتفظ بالسؤال واضحاً"
+        }
+      ],
+      "style": "summary",
+      "visual": null,
+      "evidence": null,
+      "points": [
+        {
+          "point_id": "p_1",
+          "sentence": {
+            "sentence_id": "s_u0_l02_032",
+            "spans": [
+              {
+                "type": "text",
+                "text": "ميّز المكان الخالي عن غياب كل شيء."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_2",
+          "sentence": {
+            "sentence_id": "s_u0_l02_033",
+            "spans": [
+              {
+                "type": "text",
+                "text": "لا تمنح العدم مواد أو قدرة ثم تسمّيه عدماً."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        },
+        {
+          "point_id": "p_3",
+          "sentence": {
+            "sentence_id": "s_u0_l02_034",
+            "spans": [
+              {
+                "type": "text",
+                "text": "قل «لا أعرف السبب» حين لا تعرفه؛ ثم افحص التفسيرات دون قفز إلى نتيجة."
+              }
+            ],
+            "source_ids": []
+          },
+          "visual_params": null
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "challenge": [
+      {
+        "type": "text",
+        "text": "لاحظ عبارة «لا شيء» في حديث عادي، واسأل: هل المقصود غياب شيء محدّد أم غياب كل شيء؟"
+      }
+    ],
+    "review_topics": [
+      {
+        "topic_id": "les_u0_l2_topic_1",
+        "title": "العدم ليس سبباً",
+        "concept_ids": [
+          "con_u0_something_from_nothing"
+        ]
+      }
+    ],
+    "check_in": [
+      {
+        "type": "text",
+        "text": "هل تستطيع أن تميّز غياب شيء محدّد عن العدم، دون أن تجعل جهلك بالسبب دليلاً على غيابه؟"
+      }
+    ]
+  },
+  "sources": [],
+  "terms": {
+    "term_nothing": {
+      "term_id": "term_nothing",
+      "text": "العدم",
+      "arabic": "العدم",
+      "transliteration": "al-adam",
+      "state": "new",
+      "level": "basic",
+      "definition": [
+        {
+          "type": "text",
+          "text": "غياب أي شيء؛ ليس هواءً أو فراغاً أو مادة لا نراها."
+        }
+      ],
+      "example": [
+        {
+          "type": "text",
+          "text": "إفراغ صندوق من محتواه لا يزيل الصندوق أو مكانه."
+        }
+      ],
+      "pronunciation_audio_url": null,
+      "source_id": null,
+      "lesson_id": "les_u0_l2",
+      "lesson_title": "هل يمكن أن يأتي شيء من لا شيء؟"
+    }
+  },
+  "answers": []
+}

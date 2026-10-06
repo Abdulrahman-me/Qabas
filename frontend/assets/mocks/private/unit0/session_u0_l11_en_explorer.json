@@ -1,0 +1,111 @@
+{
+  "session_id": "ses_mock_u0_l11_en_explorer",
+  "lesson_id": "les_u0_l11",
+  "answers": {
+    "ex_u0_l11_01": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l11_02": {
+      "value": false,
+      "reason_option_id": "opt_b"
+    },
+    "ex_u0_l11_03": {
+      "segment_id": "seg_3"
+    },
+    "ex_u0_l11_04": {
+      "option_id": "opt_a"
+    }
+  },
+  "feedback": {
+    "ex_u0_l11_01": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A report about the listeners' trust concerns credibility in their experience, and does not alone establish the message's source."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l11_reputation_complete"
+      }
+    },
+    "ex_u0_l11_02": {
+      "correct_answer": {
+        "value": false,
+        "reason_option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Keep the reported qualification in view; do not turn a limited answer into a complete record."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "The report includes an answer about keeping promises, with Abu Sufyan reserving judgement about a current truce."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l11_03": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A report about the listeners' trust concerns credibility in their experience, and does not alone establish the message's source."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "Evaluating the messenger claim brings together transmission, conduct and message, respecting the limits of each piece of evidence."
+        }
+      ],
+      "option_misconceptions": {},
+      "targets_misconception_id": "mis_u0_l11_reputation_complete"
+    },
+    "ex_u0_l11_04": {
+      "correct_answer": {
+        "option_id": "opt_a"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Reading a report identifies what the source conveys; accepting that the event occurred requires examining the report."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_b": "mis_u0_l11_source_assumption"
+      },
+      "option_feedback": {
+        "opt_a": [
+          {
+            "type": "text",
+            "text": "This question addresses the missing information without assuming the conclusion."
+          }
+        ],
+        "opt_b": [
+          {
+            "type": "text",
+            "text": "Understanding a report and accepting it are different steps."
+          }
+        ],
+        "opt_c": [
+          {
+            "type": "text",
+            "text": "A gap in your information calls for inquiry; it does not by itself establish denial."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+ "exercise_id": "ex_verse_meaning",
+ "type": "verse_meaning",
+ "concept_ids": [
+  "con_test"
+ ],
+ "prompt": [
+  {
+   "type": "text",
+   "text": "اختر الإجابة المناسبة."
+  }
+ ],
+ "time_limit_ms": 20000,
+ "scoring": {
+  "accuracy": true,
+  "combo": true,
+  "layer": "understand"
+ },
+ "framing": null,
+ "payload": {
+  "verse": {
+   "evidence_id": "src_q_112_2",
+   "kind": "quran",
+   "quran": {
+    "surah": 112,
+    "surah_name": "الإخلاص",
+    "ayah_start": 2,
+    "ayah_end": 2,
+    "segment": null,
+    "text_uthmani": "اللَّهُ الصَّمَدُ",
+    "translation": null,
+    "translation_source": null,
+    "audio": null
+   },
+   "hadith": null
+  },
+  "options": [
+   {
+    "option_id": "m_1",
+    "spans": [
+     {
+      "type": "text",
+      "text": "الذي يحتاج إليه كل الخلق، وهو لا يحتاج إلى أحد"
+     }
+    ]
+   },
+   {
+    "option_id": "m_2",
+    "spans": [
+     {
+      "type": "text",
+      "text": "الذي خلق السماوات في ستة أيام"
+     }
+    ]
+   }
+  ]
+ }
+}

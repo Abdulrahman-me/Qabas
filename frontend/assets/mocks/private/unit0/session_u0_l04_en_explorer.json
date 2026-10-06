@@ -1,0 +1,102 @@
+{
+  "session_id": "ses_mock_u0_l4_en_explorer",
+  "lesson_id": "les_u0_l4",
+  "answers": {
+    "ex_u0_l04_01": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l04_02": {
+      "segment_id": "seg_3"
+    },
+    "ex_u0_l04_03": {
+      "pairs": [
+        {
+          "left_id": "l_1",
+          "right_id": "r_2"
+        },
+        {
+          "left_id": "l_2",
+          "right_id": "r_3"
+        },
+        {
+          "left_id": "l_3",
+          "right_id": "r_1"
+        }
+      ]
+    },
+    "ex_u0_l04_04": {
+      "option_id": "opt_c"
+    }
+  },
+  "feedback": {
+    "ex_u0_l04_01": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "The answer explains one link in the scenario. It does not by itself settle the source of the lighting."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l04_all_attributes",
+        "opt_c": "mis_u0_l04_one_more_lantern"
+      }
+    },
+    "ex_u0_l04_02": {
+      "correct_answer": {
+        "segment_id": "seg_3"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Transferring the relation of dependence does not transfer shape or material. The picture does not describe a Creator’s appearance."
+        }
+      ],
+      "option_misconceptions": {
+        "seg_3": "mis_u0_l04_all_attributes"
+      }
+    },
+    "ex_u0_l04_03": {
+      "correct_answer": {
+        "pairs": [
+          {
+            "left_id": "l_1",
+            "right_id": "r_2"
+          },
+          {
+            "left_id": "l_2",
+            "right_id": "r_3"
+          },
+          {
+            "left_id": "l_3",
+            "right_id": "r_1"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "We distinguish explaining one transfer from explaining the dependence as a whole, while keeping the picture’s limits."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l04_04": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "The condition is explicit and the description identifies what we seek. It relies on neither an arbitrary exception nor a label."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l04_everything_has_maker",
+        "opt_b": "mis_u0_l04_one_more_lantern"
+      }
+    }
+  }
+}

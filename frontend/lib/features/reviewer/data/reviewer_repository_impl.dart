@@ -13,7 +13,8 @@ import 'package:qabas/shared/data/mappers/core_mappers.dart';
 import 'package:qabas/shared/domain/entities/user_profile.dart';
 
 final class ReviewerRepositoryImpl implements ReviewerRepository {
-  ReviewerRepositoryImpl(this.api, this.tokens);
+  ReviewerRepositoryImpl(this.api, this.tokens, {this.sampleEnabled = false});
+  final bool sampleEnabled;
   final ApiClient api;
   final TokenStore tokens;
   @override
@@ -26,6 +27,11 @@ final class ReviewerRepositoryImpl implements ReviewerRepository {
     await tokens.write(r.accessToken);
     return user;
   });
+  @override
+  Future<Result<UserProfile>> signInSample() => sampleEnabled
+      // TODO(contract): A-57 — local competition account uses the existing mock auth route.
+      ? signIn('reviewer@qabas.app', 'qabas-review')
+      : Future.value(const Err<UserProfile>(ForbiddenFailure()));
   @override
   Future<Result<void>> signOut() => guard(tokens.clear);
   @override

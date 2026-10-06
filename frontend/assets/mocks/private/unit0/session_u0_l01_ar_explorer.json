@@ -1,0 +1,165 @@
+{
+  "session_id": "ses_mock_u0_l1_ar_explorer",
+  "lesson_id": "les_u0_l1",
+  "answers": {
+    "ex_u0_l01_01": {
+      "option_id": "opt_b"
+    },
+    "ex_u0_l01_02": {
+      "option_id": "opt_c"
+    },
+    "ex_u0_l01_03": {
+      "assignments": [
+        {
+          "item_id": "itm_1",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_2",
+          "category_id": "cat_1"
+        },
+        {
+          "item_id": "itm_3",
+          "category_id": "cat_2"
+        },
+        {
+          "item_id": "itm_4",
+          "category_id": "cat_3"
+        },
+        {
+          "item_id": "itm_5",
+          "category_id": "cat_2"
+        }
+      ]
+    },
+    "ex_u0_l01_04": {
+      "option_id": "opt_a"
+    },
+    "ex_u0_l01_05": {
+      "option_id": "opt_b"
+    }
+  },
+  "feedback": {
+    "ex_u0_l01_01": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "وجود الصندوق أثر يمكن التفكير فيه، لكنه ليس مشاهدة الشخص الذي أحضره."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l01_observed_inferred",
+        "opt_c": "mis_u0_l01_overreach"
+      }
+    },
+    "ex_u0_l01_02": {
+      "correct_answer": {
+        "option_id": "opt_c"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "نقول «يرجّح» لأن الآثار تدعم احتمالاً، ولا تسجّل هوية الشخص أو وقت مغادرته."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l01_overreach",
+        "opt_b": "mis_u0_l01_seeing_only"
+      }
+    },
+    "ex_u0_l01_03": {
+      "correct_answer": {
+        "assignments": [
+          {
+            "item_id": "itm_1",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_2",
+            "category_id": "cat_1"
+          },
+          {
+            "item_id": "itm_3",
+            "category_id": "cat_2"
+          },
+          {
+            "item_id": "itm_4",
+            "category_id": "cat_3"
+          },
+          {
+            "item_id": "itm_5",
+            "category_id": "cat_2"
+          }
+        ]
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الطعم والرائحة إدراك بحاسة؛ أما السبب وراء أثر، أو خبر شخص آخر، فطريق مختلف."
+        }
+      ],
+      "option_misconceptions": {}
+    },
+    "ex_u0_l01_04": {
+      "correct_answer": {
+        "option_id": "opt_a"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الموظف تحقّق من مصدر مرتبط بالرحلة؛ ثقة الراكب وحدها لا تعوّض وصوله إلى المعلومة."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "قد ينقل شخص خبراً خاطئاً بحسن نية؛ الخطأ لا يثبت الكذب."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_b": "mis_u0_l01_latest_report",
+        "opt_c": "mis_u0_l01_mistake_is_lie"
+      }
+    },
+    "ex_u0_l01_05": {
+      "correct_answer": {
+        "option_id": "opt_b"
+      },
+      "explanation": [
+        {
+          "type": "text",
+          "text": "الادّعاء المهم يحتاج تحققاً يتناسب معه؛ لا تكفي الثقة، ولا يلزم رفض كل خبر فردي."
+        }
+      ],
+      "option_misconceptions": {
+        "opt_a": "mis_u0_l01_confident_source",
+        "opt_c": "mis_u0_l01_one_report"
+      },
+      "option_feedback": {
+        "opt_a": [
+          {
+            "type": "text",
+            "text": "الثقة طريقة كلام؛ لا تحدد خبرة المتحدث أو جودة دليله."
+          }
+        ],
+        "opt_b": [
+          {
+            "type": "text",
+            "text": "هذا يفحص المصدر والدليل قبل قرار له عواقب مهمة."
+          }
+        ],
+        "opt_c": [
+          {
+            "type": "text",
+            "text": "عدد المخبرين وحده ليس المعيار؛ الوصول إلى المعلومة والصدق مهمان أيضاً."
+          }
+        ]
+      }
+    }
+  }
+}

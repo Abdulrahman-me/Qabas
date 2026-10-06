@@ -1,0 +1,527 @@
+[
+ {
+  "file": "ErrorEnvelope__3_4_errors__0.json",
+  "model": "ErrorEnvelope",
+  "heading": "3.4 Errors"
+ },
+ {
+  "file": "Spans__3_6_rich_text_span__0.json",
+  "model": "Spans",
+  "heading": "3.6 Rich text (`Span[]`)"
+ },
+ {
+  "file": "User__5_1_user__0.json",
+  "model": "User",
+  "heading": "5.1 `User`"
+ },
+ {
+  "file": "Source__5_2_source__0.json",
+  "model": "Source",
+  "heading": "5.2 `Source`"
+ },
+ {
+  "file": "Evidence__5_3_evidence__0.json",
+  "model": "Evidence",
+  "heading": "5.3 `Evidence`"
+ },
+ {
+  "file": "Evidence__5_3_evidence__1.json",
+  "model": "Evidence",
+  "heading": "5.3 `Evidence`"
+ },
+ {
+  "file": "TermCard__5_4_termcard__0.json",
+  "model": "TermCard",
+  "heading": "5.4 `TermCard`"
+ },
+ {
+  "file": "Overlay__5_5_overlay_image_compositing__0.json",
+  "model": "Overlay",
+  "heading": "5.5 `Overlay` (image compositing)"
+ },
+ {
+  "file": "Image__5_5a_image__0.json",
+  "model": "Image",
+  "heading": "5.5a `Image`"
+ },
+ {
+  "file": "Visual__5_5b_visual__0.json",
+  "model": "Visual",
+  "heading": "5.5b `Visual`"
+ },
+ {
+  "file": "Visual__5_5b_visual__1.json",
+  "model": "Visual",
+  "heading": "5.5b `Visual`"
+ },
+ {
+  "file": "Visual__5_5e_generated_animated_scenes_kind_scene__0.json",
+  "model": "Visual",
+  "heading": "5.5e Generated animated scenes (`kind: scene`)"
+ },
+ {
+  "file": "Exercise__5_7_exercise__0.json",
+  "model": "Exercise",
+  "heading": "5.7 `Exercise`"
+ },
+ {
+  "file": "AnswerEvaluation__5_8_answerevaluation_feedback_mode_immediate__0.json",
+  "model": "AnswerEvaluation",
+  "heading": "5.8 `AnswerEvaluation` (feedback mode `immediate`)"
+ },
+ {
+  "file": "AnswerRecorded__5_8_answerevaluation_feedback_mode_immediate__1.json",
+  "model": "AnswerRecorded",
+  "heading": "5.8 `AnswerEvaluation` (feedback mode `immediate`)"
+ },
+ {
+  "file": "NextStep__5_9_nextstep__0.json",
+  "model": "NextStep",
+  "heading": "5.9 `NextStep`"
+ },
+ {
+  "file": "GuestReq__post_auth_guest__0.json",
+  "model": "GuestReq",
+  "heading": "`POST /auth/guest`"
+ },
+ {
+  "file": "AuthResp__post_auth_guest__1.json",
+  "model": "AuthResp",
+  "heading": "`POST /auth/guest`"
+ },
+ {
+  "file": "ReviewerReq__post_auth_reviewer__0.json",
+  "model": "ReviewerReq",
+  "heading": "`POST /auth/reviewer`"
+ },
+ {
+  "file": "AuthResp__post_auth_reviewer__1.json",
+  "model": "AuthResp",
+  "heading": "`POST /auth/reviewer`"
+ },
+ {
+  "file": "OnboardingReq__post_onboarding__0.json",
+  "model": "OnboardingReq",
+  "heading": "`POST /onboarding`"
+ },
+ {
+  "file": "OnboardingResp__post_onboarding__1.json",
+  "model": "OnboardingResp",
+  "heading": "`POST /onboarding`"
+ },
+ {
+  "file": "MePatch__patch_me__0.json",
+  "model": "MePatch",
+  "heading": "`PATCH /me`"
+ },
+ {
+  "file": "Stats__get_me_stats__0.json",
+  "model": "Stats",
+  "heading": "`GET /me/stats`"
+ },
+ {
+  "file": "Activity__get_me_activity_from_2026_09_27_to_2026_10_10__0.json",
+  "model": "Activity",
+  "heading": "`GET /me/activity?from=2026-09-27&to=2026-10-10`"
+ },
+ {
+  "file": "Quests__get_me_quests__0.json",
+  "model": "Quests",
+  "heading": "`GET /me/quests`"
+ },
+ {
+  "file": "Achievements__get_me_achievements__0.json",
+  "model": "Achievements",
+  "heading": "`GET /me/achievements`"
+ },
+ {
+  "file": "Page_ConceptRow__get_me_concepts__0.json",
+  "model": "Page[ConceptRow]",
+  "heading": "`GET /me/concepts`"
+ },
+ {
+  "file": "Journey__get_journey__0.json",
+  "model": "Journey",
+  "heading": "`GET /journey`"
+ },
+ {
+  "file": "Guide__get_units_unit_id_guide__0.json",
+  "model": "Guide",
+  "heading": "`GET /units/{unit_id}/guide`"
+ },
+ {
+  "file": "LessonRead__get_lessons_lesson_id__0.json",
+  "model": "LessonRead",
+  "heading": "`GET /lessons/{lesson_id}`"
+ },
+ {
+  "file": "SessionCreate__post_sessions__0.json",
+  "model": "SessionCreate",
+  "heading": "`POST /sessions`"
+ },
+ {
+  "file": "SessionCreate__post_sessions__1.json",
+  "model": "SessionCreate",
+  "heading": "`POST /sessions`"
+ },
+ {
+  "file": "SessionCreate__post_sessions__2.json",
+  "model": "SessionCreate",
+  "heading": "`POST /sessions`"
+ },
+ {
+  "file": "SessionCreate__post_sessions__3.json",
+  "model": "SessionCreate",
+  "heading": "`POST /sessions`"
+ },
+ {
+  "file": "Session__post_sessions__4.json",
+  "model": "Session",
+  "heading": "`POST /sessions`"
+ },
+ {
+  "file": "Block__post_sessions__5.json",
+  "model": "Block",
+  "heading": "`POST /sessions`"
+ },
+ {
+  "file": "AnswerSubmit__post_sessions_session_id_answers__0.json",
+  "model": "AnswerSubmit",
+  "heading": "`POST /sessions/{session_id}/answers`"
+ },
+ {
+  "file": "FinishReq__post_sessions_session_id_finish__0.json",
+  "model": "FinishReq",
+  "heading": "`POST /sessions/{session_id}/finish`"
+ },
+ {
+  "file": "SessionResult__post_sessions_session_id_finish__1.json",
+  "model": "SessionResult",
+  "heading": "`POST /sessions/{session_id}/finish`"
+ },
+ {
+  "file": "RecitationCheck__post_recitation_checks_multipart_form_data__0.json",
+  "model": "RecitationCheck",
+  "heading": "`POST /recitation/checks` (multipart/form-data)"
+ },
+ {
+  "file": "RecitationCheck__post_recitation_checks_multipart_form_data__1.json",
+  "model": "RecitationCheck",
+  "heading": "`POST /recitation/checks` (multipart/form-data)"
+ },
+ {
+  "file": "RecitationCheck__post_recitation_checks_multipart_form_data__2.json",
+  "model": "RecitationCheck",
+  "heading": "`POST /recitation/checks` (multipart/form-data)"
+ },
+ {
+  "file": "AnswerSubmit__post_recitation_checks_multipart_form_data__3.json",
+  "model": "AnswerSubmit",
+  "heading": "`POST /recitation/checks` (multipart/form-data)"
+ },
+ {
+  "file": "AnswerSubmit__post_recitation_checks_multipart_form_data__4.json",
+  "model": "AnswerSubmit",
+  "heading": "`POST /recitation/checks` (multipart/form-data)"
+ },
+ {
+  "file": "Page_TermCard__get_glossary_state_all_new_learning_mastered_cur__0.json",
+  "model": "Page[TermCard]",
+  "heading": "`GET /glossary?state=all|new|learning|mastered&cursor=&limit=`"
+ },
+ {
+  "file": "ConvCreate__post_raqeeb_conversations__0.json",
+  "model": "ConvCreate",
+  "heading": "`POST /raqeeb/conversations`"
+ },
+ {
+  "file": "Conversation__post_raqeeb_conversations__1.json",
+  "model": "Conversation",
+  "heading": "`POST /raqeeb/conversations`"
+ },
+ {
+  "file": "Page_ConvRow__get_raqeeb_conversations_cursor_limit__0.json",
+  "model": "Page[ConvRow]",
+  "heading": "`GET /raqeeb/conversations?cursor=&limit=`"
+ },
+ {
+  "file": "ConvDetail__get_raqeeb_conversations_conversation_id__0.json",
+  "model": "ConvDetail",
+  "heading": "`GET /raqeeb/conversations/{conversation_id}`"
+ },
+ {
+  "file": "PostMessageResp__post_raqeeb_conversations_conversation_id_messag__0.json",
+  "model": "PostMessageResp",
+  "heading": "`POST /raqeeb/conversations/{conversation_id}/messages` (multipart/form-data)"
+ },
+ {
+  "file": "AssistantProcessing__get_raqeeb_messages_message_id__0.json",
+  "model": "AssistantProcessing",
+  "heading": "`GET /raqeeb/messages/{message_id}`"
+ },
+ {
+  "file": "AssistantFailed__get_raqeeb_messages_message_id__1.json",
+  "model": "AssistantFailed",
+  "heading": "`GET /raqeeb/messages/{message_id}`"
+ },
+ {
+  "file": "Referral__get_raqeeb_messages_message_id__2.json",
+  "model": "Referral",
+  "heading": "`GET /raqeeb/messages/{message_id}`"
+ },
+ {
+  "file": "RaqeebCompleted__get_raqeeb_messages_message_id__3.json",
+  "model": "RaqeebCompleted",
+  "heading": "`GET /raqeeb/messages/{message_id}`"
+ },
+ {
+  "file": "RaqeebCompleted__get_raqeeb_messages_message_id__4.json",
+  "model": "RaqeebCompleted",
+  "heading": "`GET /raqeeb/messages/{message_id}`"
+ },
+ {
+  "file": "RaqeebCompleted__get_raqeeb_messages_message_id__5.json",
+  "model": "RaqeebCompleted",
+  "heading": "`GET /raqeeb/messages/{message_id}`"
+ },
+ {
+  "file": "RaqeebCompleted__get_raqeeb_messages_message_id__6.json",
+  "model": "RaqeebCompleted",
+  "heading": "`GET /raqeeb/messages/{message_id}`"
+ },
+ {
+  "file": "RaqeebCompleted__get_raqeeb_messages_message_id__7.json",
+  "model": "RaqeebCompleted",
+  "heading": "`GET /raqeeb/messages/{message_id}`"
+ },
+ {
+  "file": "RaqeebCompleted__get_raqeeb_messages_message_id__8.json",
+  "model": "RaqeebCompleted",
+  "heading": "`GET /raqeeb/messages/{message_id}`"
+ },
+ {
+  "file": "RaqeebCompleted__get_raqeeb_messages_message_id__9.json",
+  "model": "RaqeebCompleted",
+  "heading": "`GET /raqeeb/messages/{message_id}`"
+ },
+ {
+  "file": "RaqeebCompleted__get_raqeeb_messages_message_id__10.json",
+  "model": "RaqeebCompleted",
+  "heading": "`GET /raqeeb/messages/{message_id}`"
+ },
+ {
+  "file": "FeedbackReq__post_raqeeb_messages_message_id_feedback__0.json",
+  "model": "FeedbackReq",
+  "heading": "`POST /raqeeb/messages/{message_id}/feedback`"
+ },
+ {
+  "file": "League__get_leagues_current__0.json",
+  "model": "League",
+  "heading": "`GET /leagues/current`"
+ },
+ {
+  "file": "Page_Friend__get_friends__0.json",
+  "model": "Page[Friend]",
+  "heading": "`GET /friends`"
+ },
+ {
+  "file": "Invite__post_friends_invites_201__0.json",
+  "model": "Invite",
+  "heading": "`POST /friends/invites` → `201`"
+ },
+ {
+  "file": "InviteAccept__post_friends_invites_accept__0.json",
+  "model": "InviteAccept",
+  "heading": "`POST /friends/invites/accept`"
+ },
+ {
+  "file": "Duel__duel_object__0.json",
+  "model": "Duel",
+  "heading": "`Duel` object"
+ },
+ {
+  "file": "DuelResult__duel_object__1.json",
+  "model": "DuelResult",
+  "heading": "`Duel` object"
+ },
+ {
+  "file": "DuelCreate__post_duels__0.json",
+  "model": "DuelCreate",
+  "heading": "`POST /duels`"
+ },
+ {
+  "file": "DuelCreate__post_duels__1.json",
+  "model": "DuelCreate",
+  "heading": "`POST /duels`"
+ },
+ {
+  "file": "DuelCreate__post_duels__2.json",
+  "model": "DuelCreate",
+  "heading": "`POST /duels`"
+ },
+ {
+  "file": "Page_Invitation__get_duels_invitations__0.json",
+  "model": "Page[Invitation]",
+  "heading": "`GET /duels/invitations`"
+ },
+ {
+  "file": "AsyncNext__async_fallback__0.json",
+  "model": "AsyncNext",
+  "heading": "Async fallback"
+ },
+ {
+  "file": "AsyncAnswer__async_fallback__1.json",
+  "model": "AsyncAnswer",
+  "heading": "Async fallback"
+ },
+ {
+  "file": "AsyncAnswerResp__async_fallback__2.json",
+  "model": "AsyncAnswerResp",
+  "heading": "Async fallback"
+ },
+ {
+  "file": "RunCreate__post_admin_factory_runs__0.json",
+  "model": "RunCreate",
+  "heading": "`POST /admin/factory/runs`"
+ },
+ {
+  "file": "Page_RunRow__get_admin_factory_runs_status_cursor_limit__0.json",
+  "model": "Page[RunRow]",
+  "heading": "`GET /admin/factory/runs?status=&cursor=&limit=`"
+ },
+ {
+  "file": "FactoryRun__get_admin_factory_runs_run_id_factoryrun__0.json",
+  "model": "FactoryRun",
+  "heading": "`GET /admin/factory/runs/{run_id}` → `FactoryRun`"
+ },
+ {
+  "file": "Gate1__post_admin_factory_runs_run_id_gate1__0.json",
+  "model": "Gate1",
+  "heading": "`POST /admin/factory/runs/{run_id}/gate1`"
+ },
+ {
+  "file": "DraftFragment__gate_2_draft_status_awaiting_gate2__0.json",
+  "model": "DraftFragment",
+  "heading": "Gate 2 draft (`status = awaiting_gate2`)"
+ },
+ {
+  "file": "Gate2__post_admin_factory_runs_run_id_gate2__0.json",
+  "model": "Gate2",
+  "heading": "`POST /admin/factory/runs/{run_id}/gate2`"
+ },
+ {
+  "file": "BlindPair__get_admin_blind_test_next__0.json",
+  "model": "BlindPair",
+  "heading": "`GET /admin/blind-test/next`"
+ },
+ {
+  "file": "BlindAnswer__post_admin_blind_test_pair_id__0.json",
+  "model": "BlindAnswer",
+  "heading": "`POST /admin/blind-test/{pair_id}`"
+ },
+ {
+  "file": "Metrics__get_admin_metrics__0.json",
+  "model": "Metrics",
+  "heading": "`GET /admin/metrics`"
+ },
+ {
+  "file": "Payload_multiple_choice__7_1_multiple_choice__0.json",
+  "model": "Payload[multiple_choice]",
+  "heading": "7.1 `multiple_choice`"
+ },
+ {
+  "file": "Payload_true_false_reason__7_2_true_false_reason__0.json",
+  "model": "Payload[true_false_reason]",
+  "heading": "7.2 `true_false_reason`"
+ },
+ {
+  "file": "Payload_match_pairs__7_3_match_pairs__0.json",
+  "model": "Payload[match_pairs]",
+  "heading": "7.3 `match_pairs`"
+ },
+ {
+  "file": "Payload_flashcard__7_4_flashcard__0.json",
+  "model": "Payload[flashcard]",
+  "heading": "7.4 `flashcard`"
+ },
+ {
+  "file": "Payload_fill_blank__7_5_fill_blank__0.json",
+  "model": "Payload[fill_blank]",
+  "heading": "7.5 `fill_blank`"
+ },
+ {
+  "file": "Payload_categorize__7_6_categorize__0.json",
+  "model": "Payload[categorize]",
+  "heading": "7.6 `categorize`"
+ },
+ {
+  "file": "Payload_categorize__7_6_categorize__1.json",
+  "model": "Payload[categorize]",
+  "heading": "7.6 `categorize`"
+ },
+ {
+  "file": "AnswerEvaluation__7_6_categorize__2.json",
+  "model": "AnswerEvaluation",
+  "heading": "7.6 `categorize`"
+ },
+ {
+  "file": "AnswerEvaluation__7_6_categorize__3.json",
+  "model": "AnswerEvaluation",
+  "heading": "7.6 `categorize`"
+ },
+ {
+  "file": "Payload_which_evidence__7_8_which_evidence__0.json",
+  "model": "Payload[which_evidence]",
+  "heading": "7.8 `which_evidence`"
+ },
+ {
+  "file": "Payload_order_steps__7_9_order_steps__0.json",
+  "model": "Payload[order_steps]",
+  "heading": "7.9 `order_steps`"
+ },
+ {
+  "file": "Payload_scenario__7_10_scenario__0.json",
+  "model": "Payload[scenario]",
+  "heading": "7.10 `scenario`"
+ },
+ {
+  "file": "Payload_timeline_order__7_11_timeline_order__0.json",
+  "model": "Payload[timeline_order]",
+  "heading": "7.11 `timeline_order`"
+ },
+ {
+  "file": "Payload_map_place__7_12_map_place__0.json",
+  "model": "Payload[map_place]",
+  "heading": "7.12 `map_place`"
+ },
+ {
+  "file": "Payload_map_place__7_12_map_place__1.json",
+  "model": "Payload[map_place]",
+  "heading": "7.12 `map_place`"
+ },
+ {
+  "file": "Payload_verse_meaning__7_14_verse_meaning__0.json",
+  "model": "Payload[verse_meaning]",
+  "heading": "7.14 `verse_meaning`"
+ },
+ {
+  "file": "Payload_true_false__7_15_true_false_duels_only__0.json",
+  "model": "Payload[true_false]",
+  "heading": "7.15 `true_false` (duels only)"
+ },
+ {
+  "file": "WsClientMessage___8_1_client_server__0.json",
+  "model": "WsClientMessage[]",
+  "heading": "8.1 Client → server"
+ },
+ {
+  "file": "WsEvent___8_4_typical_event_sequence__0.json",
+  "model": "WsEvent[]",
+  "heading": "8.4 Typical event sequence"
+ },
+ {
+  "file": "WsEvent___8_5_group_example_4_players_3_10_s__0.json",
+  "model": "WsEvent[]",
+  "heading": "8.5 Group example (4 players, 3 × 10 s)"
+ }
+]
